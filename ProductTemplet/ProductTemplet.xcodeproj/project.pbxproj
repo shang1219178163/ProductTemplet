@@ -317,7 +317,6 @@
 		516969B320BCFCFF00BAA53D /* CompositeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 516969B220BCFCFF00BAA53D /* CompositeViewController.m */; };
 		516969B720BCFD4000BAA53D /* CompanyComponent.m in Sources */ = {isa = PBXBuildFile; fileRef = 516969B620BCFD4000BAA53D /* CompanyComponent.m */; };
 		516969BA20BCFD9B00BAA53D /* CompanyLeaf.m in Sources */ = {isa = PBXBuildFile; fileRef = 516969B920BCFD9B00BAA53D /* CompanyLeaf.m */; };
-		51698B8E21376E3B0069C2B2 /* WHKPinAnnotationModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 51698B5B21376E280069C2B2 /* WHKPinAnnotationModel.m */; };
 		51698C4021376F9E0069C2B2 /* BINAccountTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 51698BA721376F920069C2B2 /* BINAccountTool.m */; };
 		51698C4121376F9E0069C2B2 /* BN_FileHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 51698BA821376F930069C2B2 /* BN_FileHandler.m */; };
 		51698C4221376F9E0069C2B2 /* Utilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 51698BA921376F930069C2B2 /* Utilities.m */; };
@@ -1114,8 +1113,6 @@
 		516969B620BCFD4000BAA53D /* CompanyComponent.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CompanyComponent.m; sourceTree = "<group>"; };
 		516969B820BCFD9B00BAA53D /* CompanyLeaf.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CompanyLeaf.h; sourceTree = "<group>"; };
 		516969B920BCFD9B00BAA53D /* CompanyLeaf.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CompanyLeaf.m; sourceTree = "<group>"; };
-		51698B5B21376E280069C2B2 /* WHKPinAnnotationModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WHKPinAnnotationModel.m; sourceTree = "<group>"; };
-		51698B6121376E2C0069C2B2 /* WHKPinAnnotationModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WHKPinAnnotationModel.h; sourceTree = "<group>"; };
 		51698BA621376F920069C2B2 /* Utilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Utilities.h; sourceTree = "<group>"; };
 		51698BA721376F920069C2B2 /* BINAccountTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BINAccountTool.m; sourceTree = "<group>"; };
 		51698BA821376F930069C2B2 /* BN_FileHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BN_FileHandler.m; sourceTree = "<group>"; };
@@ -1779,8 +1776,6 @@
 		5136469E2086031D005A20E7 /* ProductTemplet */ = {
 			isa = PBXGroup;
 			children = (
-				51698B6121376E2C0069C2B2 /* WHKPinAnnotationModel.h */,
-				51698B5B21376E280069C2B2 /* WHKPinAnnotationModel.m */,
 				51364E0120860CA2005A20E7 /* Globle_Key.h */,
 				517D8B1320B2B52300DCA731 /* DBManager */,
 				515CC99320B6AD71004AE27C /* ClassBase */,
@@ -3900,7 +3895,6 @@
 				5162F6F720BF9604009A6253 /* ThreadCommunicationController.m in Sources */,
 				51B7AC6D211451CE001D671A /* PopoverViewCell.m in Sources */,
 				515CC9BE20B6AD72004AE27C /* BN_CollectionView.m in Sources */,
-				51698B8E21376E3B0069C2B2 /* WHKPinAnnotationModel.m in Sources */,
 				515C67E22137C55700D5EA94 /* LNSearchManager.m in Sources */,
 				51364C8020860822005A20E7 /* BN_Map.m in Sources */,
 				51364DE420860BE0005A20E7 /* ErrorInfoUtility.m in Sources */,
