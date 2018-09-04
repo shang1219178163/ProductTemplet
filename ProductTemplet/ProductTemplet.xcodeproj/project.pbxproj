@@ -376,6 +376,9 @@
 		517D8B2A20B2E09800DCA731 /* PersonCarsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 517D8B2720B2E09500DCA731 /* PersonCarsViewController.m */; };
 		517D8B2B20B2E09800DCA731 /* CarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 517D8B2920B2E09800DCA731 /* CarViewController.m */; };
 		517D8B2E20B2E0A200DCA731 /* FMViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 517D8B2D20B2E0A100DCA731 /* FMViewController.m */; };
+		5182440E213E2B2200071A9D /* BN_NetWorkService.m in Sources */ = {isa = PBXBuildFile; fileRef = 5182440A213E2B2200071A9D /* BN_NetWorkService.m */; };
+		5182440F213E2B2200071A9D /* BN_NetWorkTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 5182440B213E2B2200071A9D /* BN_NetWorkTool.m */; };
+		51824410213E2B2200071A9D /* BN_NetWorkCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 5182440C213E2B2200071A9D /* BN_NetWorkCache.m */; };
 		5184281B2091AD09007D7BAA /* loading.gif in Resources */ = {isa = PBXBuildFile; fileRef = 5184281A2091AD09007D7BAA /* loading.gif */; };
 		51862E5020BB908E0080BD4E /* DesignPatternsController.m in Sources */ = {isa = PBXBuildFile; fileRef = 51862E4E20BB908D0080BD4E /* DesignPatternsController.m */; };
 		51862E5F20BB94810080BD4E /* EOCEmployee.m in Sources */ = {isa = PBXBuildFile; fileRef = 51862E5E20BB94810080BD4E /* EOCEmployee.m */; };
@@ -1303,6 +1306,12 @@
 		517D8B2920B2E09800DCA731 /* CarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CarViewController.m; sourceTree = "<group>"; };
 		517D8B2C20B2E0A000DCA731 /* FMViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMViewController.h; sourceTree = "<group>"; };
 		517D8B2D20B2E0A100DCA731 /* FMViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMViewController.m; sourceTree = "<group>"; };
+		51824408213E2B2200071A9D /* BN_NetWorkTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BN_NetWorkTool.h; sourceTree = "<group>"; };
+		51824409213E2B2200071A9D /* BN_NetWorkCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BN_NetWorkCache.h; sourceTree = "<group>"; };
+		5182440A213E2B2200071A9D /* BN_NetWorkService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BN_NetWorkService.m; sourceTree = "<group>"; };
+		5182440B213E2B2200071A9D /* BN_NetWorkTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BN_NetWorkTool.m; sourceTree = "<group>"; };
+		5182440C213E2B2200071A9D /* BN_NetWorkCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BN_NetWorkCache.m; sourceTree = "<group>"; };
+		5182440D213E2B2200071A9D /* BN_NetWorkService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BN_NetWorkService.h; sourceTree = "<group>"; };
 		5184281A2091AD09007D7BAA /* loading.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = loading.gif; sourceTree = "<group>"; };
 		51862E4E20BB908D0080BD4E /* DesignPatternsController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DesignPatternsController.m; sourceTree = "<group>"; };
 		51862E4F20BB908D0080BD4E /* DesignPatternsController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DesignPatternsController.h; sourceTree = "<group>"; };
@@ -1780,6 +1789,7 @@
 				517D8B1320B2B52300DCA731 /* DBManager */,
 				515CC99320B6AD71004AE27C /* ClassBase */,
 				513649102086055E005A20E7 /* Classes */,
+				51824407213E2B2200071A9D /* BN_NetWorkService */,
 				51698C7D2137C0430069C2B2 /* Network */,
 				51364CC72086092D005A20E7 /* DataModel */,
 				518B5B712086CE56002FDD33 /* Expand */,
@@ -3112,11 +3122,11 @@
 		51698C7D2137C0430069C2B2 /* Network */ = {
 			isa = PBXGroup;
 			children = (
-				51698C7E2137C0430069C2B2 /* WHKRequestHelper.m */,
 				51698C7F2137C0430069C2B2 /* NSObject+Request.h */,
-				51698C802137C0430069C2B2 /* WHKReuestSevice.h */,
 				51698C812137C0430069C2B2 /* NSObject+Request.m */,
 				51698C822137C0430069C2B2 /* WHKRequestHelper.h */,
+				51698C7E2137C0430069C2B2 /* WHKRequestHelper.m */,
+				51698C802137C0430069C2B2 /* WHKReuestSevice.h */,
 				51698C832137C0430069C2B2 /* WHKReuestSevice.m */,
 			);
 			path = Network;
@@ -3139,6 +3149,19 @@
 				517D8B2720B2E09500DCA731 /* PersonCarsViewController.m */,
 			);
 			path = DBManager;
+			sourceTree = "<group>";
+		};
+		51824407213E2B2200071A9D /* BN_NetWorkService */ = {
+			isa = PBXGroup;
+			children = (
+				51824408213E2B2200071A9D /* BN_NetWorkTool.h */,
+				51824409213E2B2200071A9D /* BN_NetWorkCache.h */,
+				5182440A213E2B2200071A9D /* BN_NetWorkService.m */,
+				5182440B213E2B2200071A9D /* BN_NetWorkTool.m */,
+				5182440C213E2B2200071A9D /* BN_NetWorkCache.m */,
+				5182440D213E2B2200071A9D /* BN_NetWorkService.h */,
+			);
+			path = BN_NetWorkService;
 			sourceTree = "<group>";
 		};
 		51862E4D20BB907C0080BD4E /* DesignPatterns */ = {
@@ -3913,6 +3936,7 @@
 				519E89DF2136A50D002CCD86 /* WHKTableViewSixtyCell.m in Sources */,
 				515C67E52137C55700D5EA94 /* BCurrentCityCell.m in Sources */,
 				51B9CD1220A051AA0096A540 /* BN_RightViewController.m in Sources */,
+				51824410213E2B2200071A9D /* BN_NetWorkCache.m in Sources */,
 				519E89A52136A50D002CCD86 /* WHKTableViewEightyTwoCell.m in Sources */,
 				519E89E42136A50D002CCD86 /* WHKTableViewSixCell.m in Sources */,
 				519E89E12136A50D002CCD86 /* WHKTableViewFiveCell.m in Sources */,
@@ -4117,6 +4141,7 @@
 				515C69382137CA2600D5EA94 /* BN_TabBarView.m in Sources */,
 				518B5BDE2086CE57002FDD33 /* NSObject+ModelHelper.m in Sources */,
 				516969B720BCFD4000BAA53D /* CompanyComponent.m in Sources */,
+				5182440F213E2B2200071A9D /* BN_NetWorkTool.m in Sources */,
 				515C69672137CA2600D5EA94 /* BINShareDataModel.m in Sources */,
 				519E89A72136A50D002CCD86 /* WHKTableViewSixtySevenCell.m in Sources */,
 				51364DE820860BE0005A20E7 /* MANaviRoute.m in Sources */,
@@ -4198,6 +4223,7 @@
 				516969A020BCF11600BAA53D /* MediatorViewController.m in Sources */,
 				515C67DF2137C55700D5EA94 /* ChineseToPinyin.m in Sources */,
 				515C693D2137CA2600D5EA94 /* BN_AlertViewTwo.m in Sources */,
+				5182440E213E2B2200071A9D /* BN_NetWorkService.m in Sources */,
 				51862E5020BB908E0080BD4E /* DesignPatternsController.m in Sources */,
 				51698C5D21376F9E0069C2B2 /* APWebViewController.m in Sources */,
 				518B5BD42086CE57002FDD33 /* NSData+Helper.m in Sources */,
