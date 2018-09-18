@@ -29,7 +29,7 @@
     UIViewController * controllerLeft = [NSClassFromString(@"BN_LeftViewController") new];
     UIViewController * controllerRight = [NSClassFromString(@"BN_RightViewController") new];
     controller = [NSClassFromString(@"WHKGroupViewViewController") new];
-    
+    controller = [NSClassFromString(@"LiveLikeController") new];
     
     ZYSliderViewController * rootVC = [[ZYSliderViewController alloc]initWithMainViewController:controller leftViewController:controllerLeft rightViewController:controllerRight];
     self.window.rootViewController = rootVC;

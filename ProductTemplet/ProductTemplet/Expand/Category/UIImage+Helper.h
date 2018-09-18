@@ -11,6 +11,11 @@
 @interface UIImage (Helper)
 
 + (UIImage *)imageWithColor:(UIColor *)color;
+
++ (UIImage *)screenshotFromView:(UIView *)view;
+
+- (UIImage *)croppedImage:(CGRect)cropRect;
+    
 + (UIImage *)imageRotatedByDegrees:(CGFloat)degrees image:(UIImage *)image;
 
 - (UIImage *)normalizedImage;

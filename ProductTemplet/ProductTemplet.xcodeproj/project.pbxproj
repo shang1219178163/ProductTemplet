@@ -289,6 +289,10 @@
 		515CC9C620B6AD72004AE27C /* BN_SearchResultController.m in Sources */ = {isa = PBXBuildFile; fileRef = 515CC9B320B6AD71004AE27C /* BN_SearchResultController.m */; };
 		515CC9C720B6AD72004AE27C /* BN_BaseDataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 515CC9B520B6AD71004AE27C /* BN_BaseDataModel.m */; };
 		515CC9C820B6AD72004AE27C /* BN_HeaderFooterView.m in Sources */ = {isa = PBXBuildFile; fileRef = 515CC9B720B6AD71004AE27C /* BN_HeaderFooterView.m */; };
+		515D9D4B21508C6900318A4D /* NSBundle+Helper.m in Sources */ = {isa = PBXBuildFile; fileRef = 515D9D4A21508C6900318A4D /* NSBundle+Helper.m */; };
+		515D9D842150F77900318A4D /* BN_EmitterView.m in Sources */ = {isa = PBXBuildFile; fileRef = 515D9D7E2150F77800318A4D /* BN_EmitterView.m */; };
+		515D9D852150F77900318A4D /* LiveLikeController.m in Sources */ = {isa = PBXBuildFile; fileRef = 515D9D802150F77800318A4D /* LiveLikeController.m */; };
+		515D9D862150F77900318A4D /* BN_NetRootAppInfoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 515D9D812150F77800318A4D /* BN_NetRootAppInfoModel.m */; };
 		5162F6EE20BF8A2D009A6253 /* MultithreadingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5162F6ED20BF8A2D009A6253 /* MultithreadingViewController.m */; };
 		5162F6F120BF9110009A6253 /* ThreadViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5162F6F020BF9110009A6253 /* ThreadViewController.m */; };
 		5162F6F420BF9337009A6253 /* ThreadNormolController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5162F6F320BF9337009A6253 /* ThreadNormolController.m */; };
@@ -1051,6 +1055,14 @@
 		515CC9B520B6AD71004AE27C /* BN_BaseDataModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BN_BaseDataModel.m; sourceTree = "<group>"; };
 		515CC9B620B6AD71004AE27C /* BN_BaseNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BN_BaseNavigationController.h; sourceTree = "<group>"; };
 		515CC9B720B6AD71004AE27C /* BN_HeaderFooterView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BN_HeaderFooterView.m; sourceTree = "<group>"; };
+		515D9D4921508C6900318A4D /* NSBundle+Helper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSBundle+Helper.h"; sourceTree = "<group>"; };
+		515D9D4A21508C6900318A4D /* NSBundle+Helper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSBundle+Helper.m"; sourceTree = "<group>"; };
+		515D9D7E2150F77800318A4D /* BN_EmitterView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BN_EmitterView.m; sourceTree = "<group>"; };
+		515D9D7F2150F77800318A4D /* BN_NetRootAppInfoModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BN_NetRootAppInfoModel.h; sourceTree = "<group>"; };
+		515D9D802150F77800318A4D /* LiveLikeController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LiveLikeController.m; sourceTree = "<group>"; };
+		515D9D812150F77800318A4D /* BN_NetRootAppInfoModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BN_NetRootAppInfoModel.m; sourceTree = "<group>"; };
+		515D9D822150F77800318A4D /* BN_EmitterView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BN_EmitterView.h; sourceTree = "<group>"; };
+		515D9D832150F77800318A4D /* LiveLikeController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LiveLikeController.h; sourceTree = "<group>"; };
 		515ECE1E212E8B130043F5B0 /* NSObject+CashProtector.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSObject+CashProtector.m"; sourceTree = "<group>"; };
 		515ECE1F212E8B140043F5B0 /* NSObject+swizzling.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSObject+swizzling.m"; sourceTree = "<group>"; };
 		515ECE20212E8B150043F5B0 /* NSObject+CashProtector.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSObject+CashProtector.h"; sourceTree = "<group>"; };
@@ -2269,6 +2281,7 @@
 		51364BDD20860821005A20E7 /* Tool */ = {
 			isa = PBXGroup;
 			children = (
+				515D9D7D2150F77800318A4D /* Other */,
 				515CC87420B6A150004AE27C /* BN_AddPictureView.h */,
 				515CC87520B6A159004AE27C /* BN_AddPictureView.m */,
 				512E43402137D5F900272986 /* BN_AddPictureVC.h */,
@@ -2821,6 +2834,19 @@
 				515CC99D20B6AD71004AE27C /* BN_CTViewCellExcel.m */,
 			);
 			path = CTViewExcel;
+			sourceTree = "<group>";
+		};
+		515D9D7D2150F77800318A4D /* Other */ = {
+			isa = PBXGroup;
+			children = (
+				515D9D7F2150F77800318A4D /* BN_NetRootAppInfoModel.h */,
+				515D9D812150F77800318A4D /* BN_NetRootAppInfoModel.m */,
+				515D9D822150F77800318A4D /* BN_EmitterView.h */,
+				515D9D7E2150F77800318A4D /* BN_EmitterView.m */,
+				515D9D832150F77800318A4D /* LiveLikeController.h */,
+				515D9D802150F77800318A4D /* LiveLikeController.m */,
+			);
+			path = Other;
 			sourceTree = "<group>";
 		};
 		5162F6F820BF9C7F009A6253 /* Flyweight */ = {
@@ -3431,6 +3457,8 @@
 				518B5BAE2086CE56002FDD33 /* UIButton+EdgeInsets.m */,
 				518B5BAF2086CE56002FDD33 /* UIButton+Helper.h */,
 				518B5BB02086CE56002FDD33 /* UIButton+Helper.m */,
+				515D9D4921508C6900318A4D /* NSBundle+Helper.h */,
+				515D9D4A21508C6900318A4D /* NSBundle+Helper.m */,
 				518B5BB12086CE56002FDD33 /* UIDevice+Helper.h */,
 				518B5BB22086CE56002FDD33 /* UIDevice+Helper.m */,
 				518B5BB32086CE56002FDD33 /* UIImage+Helper.h */,
@@ -4022,6 +4050,7 @@
 				515CC9BD20B6AD72004AE27C /* BN_CTViewCellExcel.m in Sources */,
 				518B5BDC2086CE57002FDD33 /* NSObject+FaceDetect.m in Sources */,
 				518B5BDB2086CE57002FDD33 /* NSObject+ArchiveAndUnarchive.m in Sources */,
+				515D9D4B21508C6900318A4D /* NSBundle+Helper.m in Sources */,
 				515CC9C020B6AD72004AE27C /* BN_BaseCTReusableView.m in Sources */,
 				513647C9208604DE005A20E7 /* LocationTracker.m in Sources */,
 				519E89E72136A50D002CCD86 /* WHKTableViewNinetyCell.m in Sources */,
@@ -4199,6 +4228,7 @@
 				518B5BE32086CE57002FDD33 /* NSString+Regex.m in Sources */,
 				5175C93C20C13DF3009EA86E /* Teacher.m in Sources */,
 				51698C5921376F9E0069C2B2 /* APViewController.m in Sources */,
+				515D9D852150F77900318A4D /* LiveLikeController.m in Sources */,
 				51698C6121376F9E0069C2B2 /* UncaughtExceptionHandler.m in Sources */,
 				519E89D82136A50D002CCD86 /* WHKTableViewSenventyThreeCell.m in Sources */,
 				519E89BB2136A50D002CCD86 /* BN_TableViewHeaderFooterZeroView.m in Sources */,
@@ -4233,6 +4263,7 @@
 				51862E5020BB908E0080BD4E /* DesignPatternsController.m in Sources */,
 				51698C5D21376F9E0069C2B2 /* APWebViewController.m in Sources */,
 				518B5BD42086CE57002FDD33 /* NSData+Helper.m in Sources */,
+				515D9D862150F77900318A4D /* BN_NetRootAppInfoModel.m in Sources */,
 				515C694D2137CA2600D5EA94 /* BN_TurnView.m in Sources */,
 				519E89FD2136A50D002CCD86 /* WHKTableViewElevenCell.m in Sources */,
 				515CC9C720B6AD72004AE27C /* BN_BaseDataModel.m in Sources */,
@@ -4280,6 +4311,7 @@
 				51698C5421376F9E0069C2B2 /* WXApiRequestHandler.m in Sources */,
 				513646B720860332005A20E7 /* MainViewController.m in Sources */,
 				5169699B20BCED4000BAA53D /* LHService.m in Sources */,
+				515D9D842150F77900318A4D /* BN_EmitterView.m in Sources */,
 				518B5B432086C8FE002FDD33 /* FactoryDetailInfoModel.m in Sources */,
 				5162F70720BF9D6E009A6253 /* FlyweightView.m in Sources */,
 				519E89BA2136A50D002CCD86 /* WHKTableViewSeventeenCell.m in Sources */,

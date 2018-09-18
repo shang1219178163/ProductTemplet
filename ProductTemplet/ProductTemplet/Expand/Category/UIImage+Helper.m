@@ -27,6 +27,26 @@
     return image;
 }
 
++ (UIImage *)screenshotFromView:(UIView *)view{
+    CGFloat scale = UIScreen.mainScreen.scale;
+    CGFloat width = view.frame.size.width * scale;
+    CGFloat height = view.frame.size.height * scale;
+    UIGraphicsBeginImageContextWithOptions((CGSize){ width, height }, YES, 0.0);
+    [view.layer renderInContext:UIGraphicsGetCurrentContext()];
+    UIImage *fullScreenshot = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    
+    return fullScreenshot;
+}
+
+- (UIImage *)croppedImage:(CGRect)cropRect{
+    CGImageRef croppedCGImage = CGImageCreateWithImageInRect(self.CGImage ,cropRect);
+    UIImage *croppedImage = [UIImage imageWithCGImage:croppedCGImage scale:1 orientation:self.imageOrientation];
+    CGImageRelease(croppedCGImage);
+    
+    return croppedImage;
+}
+
 + (UIImage *)imageRotatedByDegrees:(CGFloat)degrees image:(UIImage *)image{
     
     CGFloat width = CGImageGetWidth(image.CGImage);
