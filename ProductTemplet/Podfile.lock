@@ -62,7 +62,16 @@ PODS:
   - YBAttributeTextTapAction (2.0.6)
   - YJBannerView (2.4.0)
   - YYCache (1.0.4)
+  - YYCategories (1.0.4):
+    - YYCategories/no-arc (= 1.0.4)
+  - YYCategories/no-arc (1.0.4)
+  - YYImage (1.0.4):
+    - YYImage/Core (= 1.0.4)
+  - YYImage/Core (1.0.4)
   - YYModel (1.0.4)
+  - YYWebImage (1.0.5):
+    - YYCache
+    - YYImage
   - YZPullDownMenu (1.0)
   - ZYCornerRadius (1.0.2)
 
@@ -103,7 +112,9 @@ DEPENDENCIES:
   - YBAttributeTextTapAction
   - YJBannerView
   - YYCache
+  - YYCategories
   - YYModel
+  - YYWebImage
   - YZPullDownMenu
   - ZYCornerRadius
 
@@ -146,7 +157,10 @@ SPEC REPOS:
     - YBAttributeTextTapAction
     - YJBannerView
     - YYCache
+    - YYCategories
+    - YYImage
     - YYModel
+    - YYWebImage
     - YZPullDownMenu
     - ZYCornerRadius
 
@@ -188,10 +202,13 @@ SPEC CHECKSUMS:
   YBAttributeTextTapAction: 650ff36251479f8cfc7b5dd8fb62587c538ce502
   YJBannerView: 0c81b7bda592cd23b10ceae8f53c514dcd77e4c6
   YYCache: 8105b6638f5e849296c71f331ff83891a4942952
+  YYCategories: 6bcd4314c6661a561410dce4a793379ebd306abd
+  YYImage: 1e1b62a9997399593e4b9c4ecfbbabbf1d3f3b54
   YYModel: 2a7fdd96aaa4b86a824e26d0c517de8928c04b30
+  YYWebImage: 5f7f36aee2ae293f016d418c7d6ba05c4863e928
   YZPullDownMenu: afc60c3fc4f7caedd9556d32da43ea1718e078e0
   ZYCornerRadius: f0af817be7805b5c63d793042ca7a03f81e14069
 
-PODFILE CHECKSUM: e6f7afd9a7947006e32c0509f032dfc3c87679e5
+PODFILE CHECKSUM: b0ff4132d8e073976469fd7035b10b0707bc6c13
 
 COCOAPODS: 1.5.0

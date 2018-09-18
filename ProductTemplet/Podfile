@@ -58,8 +58,12 @@ target 'ProductTemplet' do
   
   pod 'YBAttributeTextTapAction'
   pod 'YJBannerView'
+  
   pod ‘YYCache’
+  pod 'YYCategories'
+  pod ‘YYWebImage’
   pod ‘YYModel’
+  
   pod 'YZPullDownMenu'
   
   pod 'ZYCornerRadius'
