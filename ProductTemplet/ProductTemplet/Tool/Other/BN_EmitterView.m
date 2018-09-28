@@ -52,7 +52,7 @@
         [self.deletArray removeObject:shipLabyer];
     } else {
         shipLabyer = CALayer.layer;
-        shipLabyer.contents = (__bridge id _Nullable)([UIImage imageNamed:[NSString stringWithFormat:@"cell%u", arc4random() % 3 + 1]].CGImage);
+        shipLabyer.contents = (__bridge id _Nullable)([UIImage imageNamed:[NSString stringWithFormat:@"like%u", arc4random() % 3 + 1]].CGImage);
         shipLabyer.contentsScale = UIScreen.mainScreen.scale;
         shipLabyer.frame = CGRectMake(self.bounds.size.width / 2.0, self.bounds.size.height, 40, 40);
         shipLabyer.transform = CATransform3DMakeRotation(M_PI_2, 0, 0, 1);

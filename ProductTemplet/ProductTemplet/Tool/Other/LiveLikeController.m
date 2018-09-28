@@ -33,11 +33,11 @@
     self.view.backgroundColor = UIColor.whiteColor;
     self.title = self.controllerName;
     
-    UIImageView *backImage = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"test"]];
+    UIImageView *backImage = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"backView"]];
     backImage.frame = self.view.bounds;
     [self.view addSubview:backImage];
     
-    UIButton * btn = [UIButton createBtnWithRect:CGRectMake(300, 667.0 - 75, 40, 40) title:@"like" font:16 image:nil tag:100 patternType:@"0" target:self aSelector:@selector(handActionSender:)];
+    UIButton * btn = [UIButton createBtnWithRect:CGRectMake(300, 667.0 - 75, 40, 40) title:@"like" font:16 image:@"click" tag:100 patternType:@"0" target:self aSelector:@selector(handActionSender:)];
     [self.view addSubview:btn];
     
     [self.view addSubview:self.emitterVeiw];
