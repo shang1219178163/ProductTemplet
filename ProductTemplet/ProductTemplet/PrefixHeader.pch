@@ -13,46 +13,14 @@
 // You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
 
 #import <UIKit/UIKit.h>
+#import <Foundation/Foundation.h>
 
-#import "GeneralConst.h"
-
-#import "MacroBIN.h"
-#import "MacroUtilities.h"
-#import "Utilities.h"
-
-#import "GlobleConst.h"
-#import "GeneralConst.h"
-
-#import "BN_AttributedStringKey.h"
-
-#import "NSObject+Helper.h"
-#import "UIViewController+Helper.h"
-
-#import "UIView+AddView.h"
-#import "UIView+Helper.h"
-
-#import "UIImage+Helper.h"
-#import "UIImageView+Helper.h"
-
-#import "NSMutableDictionary+Helper.h"
-#import "NSMutableArray+Helper.h"
-
-#import "NSString+Helper.h"
-#import "NSArray+Helper.h"
-#import "NSDictionary+Helper.h"
-
-#import "NSMutableDictionary+Helper.h"
-#import "NSMutableArray+Helper.h"
-
-#import "MBProgressHUD+Helper.h"
-
-#import "NSObject+ModelHelper.h"
-#import "NSUserDefaults+Helper.h"
 
 #import <MJExtension/MJExtension.h>
 
 #import "AAGlobalMacro.h"//图表专用
 
+//#import "BN_Utils.h"
 
 #define MAS_SHORTHAND
 #define MAS_SHORTHAND_GLOBALS

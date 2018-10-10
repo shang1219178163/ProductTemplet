@@ -28,7 +28,7 @@
         // 清除图片缓存，便于测试
         [[SDWebImageManager sharedManager].imageCache clearMemory];
         
-        self.backgroundColor = [UIColor whiteColor];
+        self.backgroundColor = UIColor.whiteColor;
     }
     return self;
 }

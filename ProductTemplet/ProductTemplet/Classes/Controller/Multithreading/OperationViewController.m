@@ -10,6 +10,9 @@
 
 #import "BN_Operation.h"
 
+#import "BN_Globle.h"
+#import "UIView+Helper.h"
+
 @interface OperationViewController ()
 
 @property (nonatomic, strong) UIButton *hideImageViewButton;
@@ -41,7 +44,7 @@
         
     }];
     
-    containView.backgroundColor = [UIColor orangeColor];
+    containView.backgroundColor = UIColor.orangeColor;
     [self.view addSubview:containView];
     
     [self.view getViewLayer];

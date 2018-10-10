@@ -12,6 +12,9 @@
 
 #import <FMDB/FMDB.h>
 
+#import "BN_Globle.h"
+#import "NSObject+Helper.h"
+
 @interface DBHandler ()
 
 @property (nonatomic, strong)   FMDatabaseQueue *queue;

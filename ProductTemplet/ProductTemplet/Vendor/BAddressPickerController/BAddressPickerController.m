@@ -68,7 +68,7 @@
         [self.delegate beginSearch:searchBar];
 //        CGRect statusBarFrame = [[UIApplication sharedApplication] statusBarFrame];
         [UIView animateWithDuration:0.25 animations:^{
-            [self.view setBackgroundColor:UIColorFromRGBA(198, 198, 203, 1.0)];
+            [self.view setBackgroundColor:UIColorRGBA(198, 198, 203, 1.0)];
 //            for (UIView *subview in self.view.subviews){
 //                subview.transform = CGAffineTransformMakeTranslation(0, statusBarFrame.size.height);
 //            }
@@ -93,7 +93,7 @@
                     subview.transform = CGAffineTransformMakeTranslation(0, 0);
                 }
             } completion:^(BOOL finished) {
-                [self.view setBackgroundColor:[UIColor whiteColor]];
+                [self.view setBackgroundColor:UIColor.whiteColor];
             }];
         }
     }
@@ -243,7 +243,7 @@
 - (UIView*)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section{
     if (tableView == _tableView) {
         UIView *headerView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, ScreenWidth, 28)];
-        headerView.backgroundColor = UIColorFromRGBA(235, 235, 235, 1.0);
+        headerView.backgroundColor = UIColorRGBA(235, 235, 235, 1.0);
         UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(15, 0, ScreenWidth - 15, 28)];
         label.font = [UIFont systemFontOfSize:14.0];
         [headerView addSubview:label];
@@ -352,8 +352,8 @@
     _tableView.delegate = self;
     _tableView.dataSource = self;
     _tableView.showsVerticalScrollIndicator = NO;
-    _tableView.sectionIndexBackgroundColor = [UIColor clearColor];
-    _tableView.sectionIndexColor = [UIColor grayColor];
+    _tableView.sectionIndexBackgroundColor = UIColor.clearColor;
+    _tableView.sectionIndexColor = UIColor.grayColor;
     _tableView.tableFooterView = [[UIView alloc] init];
     [self.view addSubview:_tableView];
 }
@@ -363,7 +363,7 @@
     _searchBar = [[UISearchBar alloc] initWithFrame:CGRectMake(0, 0, ScreenWidth, 44)];
     _searchBar.placeholder = @"输入城市名或拼音";
     _searchBar.delegate = self;
-    _searchBar.layer.borderColor = [[UIColor clearColor] CGColor];
+    _searchBar.layer.borderColor = UIColor.clearColor.CGColor;
     _displayController = [[UISearchDisplayController alloc] initWithSearchBar:_searchBar contentsController:self];
     _displayController.delegate = self;
     _displayController.searchResultsDataSource = self;

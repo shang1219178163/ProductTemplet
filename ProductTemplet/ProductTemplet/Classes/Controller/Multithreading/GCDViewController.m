@@ -9,6 +9,8 @@
 
 #import "GCDViewController.h"
 
+#import "UIView+Helper.h"
+
 @interface GCDViewController ()
 
 @property (nonatomic, strong) UIButton *hideImageViewButton;
@@ -38,7 +40,7 @@
         
     }];
     
-    containView.backgroundColor = [UIColor orangeColor];
+    containView.backgroundColor = UIColor.orangeColor;
     [self.view addSubview:containView];
     
     [self.view getViewLayer];

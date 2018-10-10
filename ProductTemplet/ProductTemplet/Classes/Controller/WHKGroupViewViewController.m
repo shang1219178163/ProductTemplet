@@ -8,10 +8,11 @@
 
 #import "WHKGroupViewViewController.h"
 
+#import "BN_Globle.h"
+#import "UIView+Helper.h"
+
 #import "BN_RadioViewZero.h"
-
 #import "BN_RadioView.h"
-
 #import "BN_GroupView.h"
 
 @interface WHKGroupViewViewController ()
@@ -47,7 +48,7 @@
     //
     CGRect rect = CGRectMake(20, 20, kScreen_width - 20*2, 0);
     UIView * containView = [self createViewWithRect:rect elements:self.elementList numberOfRow:4 viewHeight:30 padding:15];
-    containView.backgroundColor = [UIColor greenColor];
+    containView.backgroundColor = UIColor.greenColor;
     [self.view addSubview:containView];
     
     for (UIView * view in containView.subviews) {
@@ -71,7 +72,7 @@
     //
     CGRect rectNew = CGRectMake(20, CGRectGetMidY(self.view.bounds), kScreen_width - 20*2, 0);
 //    UIView * containViewNew = [self createViewWithRectNew:rectNew elements:self.elementList numberOfRow:2 viewHeight:30 padding:10];
-//    containViewNew.backgroundColor = [UIColor greenColor];
+//    containViewNew.backgroundColor = UIColor.greenColor;
 //    [self.view addSubview:containViewNew];
     
 //    for (UIView * view in containViewNew.subviews) {
@@ -106,7 +107,7 @@
     NSInteger rowCount = elements.count % numberOfRow == 0 ? elements.count/numberOfRow : elements.count/numberOfRow + 1;
     //
     UIView * backgroudView = [[UIView alloc]initWithFrame:CGRectMake(CGRectGetMinX(rect), CGRectGetMinY(rect), CGRectGetWidth(rect), rowCount * viewHeight + (rowCount - 1) * padding)];
-    backgroudView.backgroundColor = [UIColor greenColor];
+    backgroudView.backgroundColor = UIColor.greenColor;
     
     CGSize viewSize = CGSizeMake((CGRectGetWidth(backgroudView.frame) - (numberOfRow-1)*padding)/numberOfRow, viewHeight);
     for (NSInteger i = 0; i< elements.count; i++) {
@@ -125,8 +126,8 @@
                                 kRadio_imageN : @"img_cir_normal.png",
                                 kRadio_imageH : @"img_cir_Selected.png",
 
-                                kRadio_textColorH : [UIColor redColor],
-                                kRadio_textColorN : [UIColor blackColor],
+                                kRadio_textColorH : UIColor.redColor,
+                                kRadio_textColorN : UIColor.blackColor,
                                 
                                 };
         BN_RadioView * view = [[BN_RadioView alloc]initWithFrame:btnRect attDict:dict isSelected:YES];
@@ -149,7 +150,7 @@
     NSInteger rowCount = elements.count % numberOfRow == 0 ? elements.count/numberOfRow : elements.count/numberOfRow + 1;
     //
     UIView * backgroudView = [[UIView alloc]initWithFrame:CGRectMake(CGRectGetMinX(rect), CGRectGetMinY(rect), CGRectGetWidth(rect), rowCount * viewHeight + (rowCount - 1) * padding)];
-    backgroudView.backgroundColor = [UIColor greenColor];
+    backgroudView.backgroundColor = UIColor.greenColor;
     
     CGSize viewSize = CGSizeMake((CGRectGetWidth(backgroudView.frame) - (numberOfRow-1)*padding)/numberOfRow, viewHeight);
     for (NSInteger i = 0; i < elements.count; i++) {
@@ -168,7 +169,7 @@
         radioView.isSelected = i%2 == 0 ? YES : NO;
         radioView.tag = kTAG_VIEW + i;
         CGRect labelRect = CGRectMake(x+30, y, w-30, 30);
-        UILabel * label = [UIView createLabelWithRect:labelRect text:title textColor:nil tag:kTAG_LABEL+i patternType:@"2" font:15 backgroudColor:[UIColor yellowColor] alignment:NSTextAlignmentCenter];
+        UILabel * label = [UIView createLabelWithRect:labelRect text:title textColor:nil tag:kTAG_LABEL+i patternType:@"2" font:15 backgroudColor:UIColor.yellowColor alignment:NSTextAlignmentCenter];
         
         [backgroudView addSubview:radioView];
         [backgroudView addSubview:label];

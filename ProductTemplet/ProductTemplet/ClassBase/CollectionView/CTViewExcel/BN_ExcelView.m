@@ -8,6 +8,11 @@
 
 #import "BN_ExcelView.h"
 
+#import "BN_Globle.h"
+#import "UIView+Helper.h"
+#import "UIColor+Helper.h"
+
+
 static NSString * const kTips = @"👈左滑查看更多信息";
 
 @interface BN_ExcelView()<UIScrollViewDelegate>
@@ -69,7 +74,7 @@ static NSString * const kTips = @"👈左滑查看更多信息";
             UICollectionView *collectionView = [[UICollectionView alloc]initWithFrame:rect collectionViewLayout:layout];
             collectionView = [[BN_CollectionView alloc]initWithFrame:rect collectionViewLayout:layout];
 
-            collectionView.backgroundColor = [UIColor whiteColor];
+            collectionView.backgroundColor = UIColor.whiteColor;
             collectionView.delegate = self;
             collectionView.dataSource = self;
             collectionView.scrollsToTop = NO;
@@ -98,9 +103,9 @@ static NSString * const kTips = @"👈左滑查看更多信息";
     if (!_label) {
         _label = [[UILabel alloc] initWithFrame:CGRectZero];
         _label.font = [UIFont systemFontOfSize:15];
-        _label.textColor = [UIColor redColor];
+        _label.textColor = UIColor.redColor;
         _label.textAlignment = NSTextAlignmentLeft;
-        _label.backgroundColor = [UIColor whiteColor];
+        _label.backgroundColor = UIColor.whiteColor;
         
         _label.numberOfLines = 1;
 
@@ -231,23 +236,20 @@ static NSString * const kTips = @"👈左滑查看更多信息";
     BN_CTViewCellExcel *cell = [BN_CTViewCellExcel viewWithCollectionView:collectionView indexPath:indexPath];
     //设置单元行颜色的间隔的控制
     if (indexPath.section == 0) {//整个报表最上面的那行
-//        if (indexPath.section == 0 || indexPath.row == 0) {//整个报表最上面的那行
-
-        cell.backgroundColor = kExcelColor;
-        cell.label.textColor = kC_ThemeCOLOR;
+        cell.backgroundColor = UIColor.excelColor;
+        cell.label.textColor = UIColor.themeColor;
+        
     }else{
-        cell.backgroundColor = [UIColor whiteColor];
-        cell.label.textColor = [UIColor blackColor];
+        cell.backgroundColor = UIColor.whiteColor;
+        cell.label.textColor = UIColor.blackColor;
         
     }
     cell.label.text = [NSString stringWithFormat:@"%@",array[indexPath.row]];
-//    cell.imgView.backgroundColor = [UIColor redColor];
+//    cell.imgView.backgroundColor = UIColor.redColor;
     
-    kWeakSelf(cell);
     [cell addActionHandler:^(id obj, id item, NSInteger idx) {
-//        [collectionView selectItemAtIndexPath:indexPath animated:YES scrollPosition:UICollectionViewScrollPositionNone];
         if (self.blockView) {
-            self.blockView(collectionView, weakcell, indexPath);
+            self.blockView(collectionView, item, indexPath);
         }
     }];
 

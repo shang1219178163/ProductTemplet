@@ -21,6 +21,10 @@
 #import "Teacher.h"
 #import "Lesson.h"
 
+#import "BN_Globle.h"
+#import "NSObject+Helper.h"
+#import "UIViewController+Helper.h"
+
 @interface FMBDViewController ()<UITableViewDataSource,UITableViewDelegate>
 
 @property(nonatomic,strong) NSMutableArray *dataArray;
@@ -52,13 +56,13 @@
         teacher.FLDBID = [NSString stringWithFormat:@"teacher_%zd",i];
 
         teacher.name = [@"tea_name_" stringByAppendingFormat:@"%@",@(i)];
-        teacher.age = [NSString getRandomNumber:20 to:50];
+        teacher.age = [NSString getRandomNum:20 to:50];
         
         Student * stu = [Student new];
         stu.FLDBID = [NSString stringWithFormat:@"stu_%zd",i];
 
         stu.name = @"stu_Li";
-        stu.age = [NSString getRandomNumber:15 to:20];
+        stu.age = [NSString getRandomNum:15 to:20];
 //
 //        NSMutableArray * marr = [NSMutableArray arrayWithCapacity:0];
 //        for (NSInteger j = 0; j < 3 ; j++) {

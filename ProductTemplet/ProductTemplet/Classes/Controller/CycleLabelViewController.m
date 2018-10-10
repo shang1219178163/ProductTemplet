@@ -9,7 +9,7 @@
 #import "CycleLabelViewController.h"
 
 #import "BN_CycleView.h"
-
+#import "UIView+Helper.h"
 
 @interface CycleLabelViewController ()
 

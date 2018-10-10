@@ -9,6 +9,7 @@
 #import "AbstractFactoryController.h"
 
 #import "EOCEmployee.h"
+#import "NSObject+Helper.h"
 
 @interface AbstractFactoryController ()
 
@@ -27,7 +28,7 @@
 -(void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
     
-    NSInteger randomIdx = [NSString getRandomNumber:0 to:2];
+    NSInteger randomIdx = [NSObject getRandomNum:0 to:2];
     EOCEmployee * employee = [EOCEmployee employeeWithType:(EOCEmployeeType)randomIdx];
     [employee doADaysWork];
     

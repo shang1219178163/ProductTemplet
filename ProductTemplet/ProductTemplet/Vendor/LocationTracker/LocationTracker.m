@@ -8,14 +8,11 @@
 
 #import "LocationTracker.h"
 
-#import "NSDate+Helper.h"
-#import "NSObject+Helper.h"
-#import "UIViewController+Helper.h"
-#import "NSTimer+Helper.h"
-
+#import "BN_Globle.h"
 #import "BN_Noti.h"
-#import "Utilities.h"
-#import "Utilities_DM.h"
+
+#import "UIApplication+Helper.h"
+#import "NSTimer+Helper.h"
 
 @interface LocationTracker ()
 
@@ -26,7 +23,7 @@
 
 @implementation LocationTracker
 
-+ (CLLocationManager *)sharedLocationManager {
++ (CLLocationManager *)shared {
 	static CLLocationManager *_locationManager;
     
     static dispatch_once_t onceToken;
@@ -43,7 +40,7 @@
 - (id)init {
 	if (self == [super init]) {
         //Get the share model and also initialize myLocationArray
-        self.shareModel = [LocationShareModel sharedModel];
+        self.shareModel = [LocationShareModel shared];
         self.shareModel.myLocationArray = [[NSMutableArray alloc]init];
         
         [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(applicationEnterBackground) name:UIApplicationDidEnterBackgroundNotification object:nil];
@@ -72,27 +69,23 @@
     self.isEnterBackgroud = YES;
 
     //Use the BackgroundTaskManager to manage all the background Task
-    NSLog(@"%@",NSStringFromSelector(_cmd));
 }
 
 -(void)applicationEnterForeground{
     [self locationMangerBegin];
 
     self.isEnterBackgroud = NO;
-    NSLog(@"%@",NSStringFromSelector(_cmd));
 }
 
 
 - (void)restartLocationUpdates{
-    NSLog(@"%@",NSStringFromSelector(_cmd));
-    
     [NSTimer stopTimer:self.shareModel.timer];
     
     [self locationMangerBegin];
 }
 
 - (void)locationMangerBegin{
-    CLLocationManager *locationManager = [LocationTracker sharedLocationManager];
+    CLLocationManager *locationManager = [LocationTracker shared];
     locationManager.delegate = self;
     locationManager.desiredAccuracy = kCLLocationAccuracyBestForNavigation;
     locationManager.distanceFilter = kCLDistanceFilterNone;
@@ -103,7 +96,6 @@
 }
 
 - (void)startLocationTracking {
-    NSLog(@"%@",NSStringFromSelector(_cmd));
 
     CLAuthorizationStatus authorizationStatus = [CLLocationManager authorizationStatus];
     if (authorizationStatus == kCLAuthorizationStatusAuthorizedAlways) {
@@ -111,18 +103,17 @@
         
     }
     else{
-        NSString *msg = [NSString stringWithFormat:@"请开启始终定位(设置->隐私->定位服务->选择%@->始终)",Utilities.getApp_Name];
-        [self.rootVC showAlertWithTitle:@"定位服务" msg:msg actionTitleList:@[kActionTitle_Sure] handler:nil];
+        NSString *msg = [NSString stringWithFormat:@"请开启始终定位(设置->隐私->定位服务->选择%@->始终)",UIApplication.app_Name];
+        [UIApplication.rootController showAlertWithTitle:@"定位服务" msg:msg actionTitleList:@[kActionTitle_Sure] handler:nil];
         
     }
 }
 
 - (void)stopLocationTracking {
-    NSLog(@"%@",NSStringFromSelector(_cmd));
     
     [NSTimer stopTimer:self.shareModel.timerDelay];
 
-	CLLocationManager *locationManager = [LocationTracker sharedLocationManager];
+	CLLocationManager *locationManager = [LocationTracker shared];
 	[locationManager stopUpdatingLocation];
     
 }
@@ -204,13 +195,13 @@
     {
         case kCLErrorNetwork: // general, network-related error
         {
-            [self.rootVC showAlertWithTitle:@"网络错误" msg:@"网络链接失败,请检查网络" actionTitleList:@[kActionTitle_Sure] handler:nil];
+            [UIApplication.rootController showAlertWithTitle:@"网络错误" msg:@"网络链接失败,请检查网络" actionTitleList:@[kActionTitle_Sure] handler:nil];
         }
             break;
         case kCLErrorDenied:
         {
-            NSString *msg = [NSString stringWithFormat:@"请开启始终定位(设置->隐私->定位服务->选择%@->始终)",[Utilities getApp_Name]];
-            [self.rootVC showAlertWithTitle:@"定位失败" msg:msg actionTitleList:@[kActionTitle_Sure] handler:nil];
+            NSString *msg = [NSString stringWithFormat:@"请开启始终定位(设置->隐私->定位服务->选择%@->始终)",UIApplication.app_Name];
+            [UIApplication.rootController showAlertWithTitle:@"定位失败" msg:msg actionTitleList:@[kActionTitle_Sure] handler:nil];
             
         }
             break;
@@ -286,6 +277,5 @@
     NSString *timeStr = [NSString stringWithFormat:@"%.0f", timeInterval];
     return timeStr;
 }
-
 
 @end

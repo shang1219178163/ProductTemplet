@@ -36,7 +36,7 @@
     
     CGRect tableFrame = (CGRect){10,260,120,200};
     UITableView *tableView = [[UITableView alloc] initWithFrame:tableFrame style:UITableViewStylePlain];
-    tableView.backgroundColor = [UIColor clearColor];
+    tableView.backgroundColor = UIColor.clearColor;
     tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     tableView.delegate = self;
     tableView.dataSource = self;
@@ -55,8 +55,8 @@
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:ID];
     }
     cell.textLabel.text = _dataSource[indexPath.row];
-    cell.textLabel.textColor = [UIColor whiteColor];
-    cell.backgroundColor = [UIColor clearColor];
+    cell.textLabel.textColor = UIColor.whiteColor;
+    cell.backgroundColor = UIColor.clearColor;
     return cell;
 }
 

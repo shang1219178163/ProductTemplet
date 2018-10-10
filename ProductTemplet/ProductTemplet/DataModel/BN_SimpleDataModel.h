@@ -49,6 +49,6 @@
 @property (nonatomic, copy) NSString * address;
 @property (nonatomic, copy) NSString * addressDetailInfo;
 
-@property (nonatomic, assign) CLLocationCoordinate2D coordinate;
+//@property (nonatomic, assign) CLLocationCoordinate2D coordinate;
 
 @end

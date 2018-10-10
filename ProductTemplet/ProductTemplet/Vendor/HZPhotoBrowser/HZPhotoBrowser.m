@@ -60,7 +60,7 @@
     // 1. 序标
     UILabel *indexLabel = [[UILabel alloc] init];
     indexLabel.textAlignment = NSTextAlignmentCenter;
-    indexLabel.textColor = [UIColor whiteColor];
+    indexLabel.textColor = UIColor.whiteColor;
     indexLabel.font = [UIFont boldSystemFontOfSize:20];
     indexLabel.backgroundColor = [UIColor colorWithRed:0.1f green:0.1f blue:0.1f alpha:0.3f];
     indexLabel.bounds = CGRectMake(0, 0, 80, 30);
@@ -76,9 +76,9 @@
     // 2.保存按钮
     UIButton *saveButton = [[UIButton alloc] init];
     [saveButton setTitle:@"保存" forState:UIControlStateNormal];
-    [saveButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+    [saveButton setTitleColor:UIColor.whiteColor forState:UIControlStateNormal];
     saveButton.layer.borderWidth = 0.1;
-    saveButton.layer.borderColor = [UIColor whiteColor].CGColor;
+    saveButton.layer.borderColor = UIColor.whiteColor.CGColor;
     saveButton.backgroundColor = [UIColor colorWithRed:0.1f green:0.1f blue:0.1f alpha:0.3f];
     saveButton.layer.cornerRadius = 2;
     saveButton.clipsToBounds = YES;
@@ -109,7 +109,7 @@
     [_indicatorView removeFromSuperview];
     
     UILabel *label = [[UILabel alloc] init];
-    label.textColor = [UIColor whiteColor];
+    label.textColor = UIColor.whiteColor;
     label.backgroundColor = [UIColor colorWithRed:0.1f green:0.1f blue:0.1f alpha:0.90f];
     label.layer.cornerRadius = 5;
     label.clipsToBounds = YES;
@@ -172,7 +172,7 @@
     [super layoutSubviews];
     
     CGRect rect = self.bounds;
-//    CGRect rect = [UIScreen mainScreen].bounds;
+//    CGRect rect = UIScreen.mainScreen.bounds;
     rect.size.width += HZPhotoBrowserImageViewMargin * 2;
     _scrollView.bounds = rect;
 //    _scrollView.center = self.center;
@@ -238,7 +238,7 @@
     [currentView.scrollview setZoomScale:1.0 animated:YES];//还原
     UIDeviceOrientation orientation = [UIDevice currentDevice].orientation;
     
-    CGRect screenBounds = [UIScreen mainScreen].bounds;
+    CGRect screenBounds = UIScreen.mainScreen.bounds;
 
     if (UIDeviceOrientationIsLandscape(orientation)) {
 //        NSLog(@"onDeviceOrientationChange");
@@ -388,7 +388,7 @@
     _indexLabel.hidden = YES;
     _saveButton.hidden = YES;
     UIDeviceOrientation orientation = [UIDevice currentDevice].orientation;
-    CGRect screenBounds = [UIScreen mainScreen].bounds;
+    CGRect screenBounds = UIScreen.mainScreen.bounds;
     if (UIDeviceOrientationIsLandscape(orientation)) {
         [UIView animateWithDuration:0.3f delay:0.0f options:UIViewAnimationOptionBeginFromCurrentState animations:^{
             [[UIApplication sharedApplication] setStatusBarOrientation:(UIInterfaceOrientation)UIDeviceOrientationPortrait];
@@ -430,8 +430,8 @@
     _saveButton.hidden = YES;
     _indexLabel.hidden = YES;
     _scrollView.hidden = YES;
-    self.backgroundColor = [UIColor clearColor];
-    _contentView.backgroundColor = [UIColor clearColor];
+    self.backgroundColor = UIColor.clearColor;
+    _contentView.backgroundColor = UIColor.clearColor;
     self.window.windowLevel = UIWindowLevelNormal;//显示状态栏
     [UIView animateWithDuration:HZPhotoBrowserHideImageAnimationDuration animations:^{
         tempImageView.frame = targetTemp;

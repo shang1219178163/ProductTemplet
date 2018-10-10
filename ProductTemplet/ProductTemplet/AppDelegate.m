@@ -10,7 +10,7 @@
 
 
 #import "UIApplication+Helper.h"
-#import "UIApplication+Share.h"
+#import "UIApplication+Other.h"
 
 
 #import "ZYSliderViewController.h"
@@ -23,18 +23,18 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
-    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    self.window = [[UIWindow alloc] initWithFrame:UIScreen.mainScreen.bounds];
 
     UIViewController * controller = [NSClassFromString(@"BN_HomeViewController") new];
     UIViewController * controllerLeft = [NSClassFromString(@"BN_LeftViewController") new];
     UIViewController * controllerRight = [NSClassFromString(@"BN_RightViewController") new];
-    controller = [NSClassFromString(@"WHKGroupViewViewController") new];
-    controller = [NSClassFromString(@"LiveLikeController") new];
+//    controller = [NSClassFromString(@"WHKGroupViewViewController") new];
+//    controller = [NSClassFromString(@"LiveLikeController") new];
     
     ZYSliderViewController * rootVC = [[ZYSliderViewController alloc]initWithMainViewController:controller leftViewController:controllerLeft rightViewController:controllerRight];
     self.window.rootViewController = rootVC;
 
-    self.window.backgroundColor = [UIColor whiteColor];
+    self.window.backgroundColor = UIColor.whiteColor;
     [self.window makeKeyAndVisible];
 
      [UIApplication setupAppearance];
@@ -44,7 +44,7 @@
 
 //- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
 //    // Override point for customization after application launch.
-//    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+//    self.window = [[UIWindow alloc] initWithFrame:UIScreen.mainScreen.bounds];
 //    UIViewController * controller = [NSClassFromString(@"MainViewController") new];
 ////    controller = [NSClassFromString(@"BN_TableViewController") new];
 ////    controller = [NSClassFromString(@"CircleViewController") new];
@@ -58,7 +58,7 @@
 //    UINavigationController * mainNav = [[UINavigationController alloc]initWithRootViewController:controller];
 //    self.window.rootViewController = mainNav;
 //
-//    self.window.backgroundColor = [UIColor whiteColor];
+//    self.window.backgroundColor = UIColor.whiteColor;
 //    [self.window makeKeyAndVisible];
 ///*
 //    if (DEBUG) InstallUncaughtExceptionHandler();

@@ -8,6 +8,7 @@
 
 #import "BN_ThirdViewController.h"
 
+#import "UIViewController+Helper.h"
 
 @interface BN_ThirdViewController ()
 

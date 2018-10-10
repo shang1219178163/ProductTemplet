@@ -9,11 +9,12 @@
 
 #import "BN_CenterViewController.h"
 
-#import "WHKTableViewOneCell.h"
-
+#import "UIViewController+Helper.h"
 #import "NSDate+Helper.h"
 
 #import "BN_FilterView.h"
+
+#import "WHKTableViewOneCell.h"
 
 @interface BN_CenterViewController ()<UITableViewDelegate,UITableViewDataSource>
 
@@ -95,7 +96,7 @@
     // Do any additional setup after loading the view.
     [self configureTableView];
     
-    self.view.backgroundColor = [UIColor yellowColor];
+    self.view.backgroundColor = UIColor.yellowColor;
     
     [self createBarBtnItemWithTitle:@"Tap" imageName:nil isLeft:NO isHidden:NO handler:^(id obj, id item, NSInteger idx) {
         BN_FilterView * view = [[BN_FilterView alloc]init];
@@ -157,7 +158,7 @@
     self.tableView.dataSource = self;
     [self.view addSubview:self.tableView];
     
-    self.tableView.backgroundColor = [UIColor whiteColor];
+    self.tableView.backgroundColor = UIColor.whiteColor;
     
 }
 
@@ -183,7 +184,7 @@
     WHKTableViewOneCell * cell = [WHKTableViewOneCell cellWithTableView:tableView];
     
     cell.textLabel.text = dict[kItem_title];
-    cell.textLabel.textColor = kC_ThemeCOLOR;
+    cell.textLabel.textColor = UIColor.themeColor;
     
     return cell;
 

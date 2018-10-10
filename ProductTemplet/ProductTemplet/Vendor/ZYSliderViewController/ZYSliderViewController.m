@@ -8,8 +8,8 @@
 
 #import "ZYSliderViewController.h"
 
-#define kZYDeviceWidth [UIScreen mainScreen].bounds.size.width
-#define kZYDeviceHeight [UIScreen mainScreen].bounds.size.height
+#define kZYDeviceWidth UIScreen.mainScreen.bounds.size.width
+#define kZYDeviceHeight UIScreen.mainScreen.bounds.size.height
 
 static NSTimeInterval const kAnimationDuration = 0.3;
 

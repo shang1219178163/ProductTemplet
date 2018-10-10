@@ -47,16 +47,6 @@ UIKIT_EXTERN NSString * const kAsterisk ;
 - (NSMutableArray *)arrayAtSection:(NSInteger)section dataList:(NSMutableArray *)dataList;
 - (id)itemAtIndexPath:(NSIndexPath *)indexPath dataList:(NSMutableArray *)dataList;
 
-- (void)handleRowIndexPaths:(NSArray *)indexPaths isInsert:(BOOL)isInsert;
 
-
-/**
- 选择列表扩展
-
- */
-
-- (id)itemForElement:(BNItemElement)element indexPath:(NSIndexPath *)indexPath;
-
-- (NSString *)getPlaceholder:(NSString *)placeHolder indexPath:(NSIndexPath *)indexPath;
 
 @end

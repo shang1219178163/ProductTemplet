@@ -8,6 +8,8 @@
 
 #import "BN_SecondViewController.h"
 
+#import "UIViewController+Helper.h"
+
 @interface BN_SecondViewController ()
 
 @end

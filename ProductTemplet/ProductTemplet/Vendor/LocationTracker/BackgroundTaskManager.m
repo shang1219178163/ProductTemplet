@@ -7,6 +7,8 @@
 
 #import "BackgroundTaskManager.h"
 
+#import "BN_Globle.h"
+
 @interface BackgroundTaskManager()
 
 @property (nonatomic, strong) NSMutableArray* bgTaskIdList;

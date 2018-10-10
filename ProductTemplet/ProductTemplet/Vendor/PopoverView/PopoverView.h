@@ -3,7 +3,7 @@
 #import <UIKit/UIKit.h>
 #import "PopoverAction.h"
 
-#import "GlobleConst.h"
+#import "BN_Globle.h"
 
 //#define kItem_title         @"kItem_title"
 //#define kItem_image         @"kItem_image"

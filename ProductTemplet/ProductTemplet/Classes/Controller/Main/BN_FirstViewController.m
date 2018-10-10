@@ -8,6 +8,9 @@
 
 #import "BN_FirstViewController.h"
 
+#import "UIViewController+Helper.h"
+#import "NSArray+Helper.h"
+
 #import "BN_SimpleDataModel.h"
 
 #import "BN_BtnView.h"
@@ -146,7 +149,7 @@
     CGSize viewSize = CGSizeMake(kScreen_width/rowCount, kScreen_width/rowCount);
     
     UIView * backgroudView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, kScreen_width,  viewSize.height* self.elementList.count/rowCount)];
-    backgroudView.backgroundColor = [UIColor whiteColor];
+    backgroudView.backgroundColor = UIColor.whiteColor;
     
     if (isHeader == YES) {
         UIView * cycleView = [self createCycleViewWithRect:CGRectMake(0, 0, kScreen_width, height) imageNames:self.imageList];
@@ -165,7 +168,7 @@
             
             rect = CGRectMake(x, y, w, h);
             
-            UIView * btnView = [UIView createBtnViewWithRect:rect imgName:array[1] imgHeight:CGRectGetHeight(rect)/2.0 title:array[0] titleColor:[UIColor blackColor] patternType:@"0"];
+            UIView * btnView = [UIView createBtnViewWithRect:rect imgName:array[1] imgHeight:CGRectGetHeight(rect)/2.0 title:array[0] titleColor:UIColor.blackColor patternType:@"0"];
             btnView.tag = kTAG_VIEW+i+50;
             [backgroudView addSubview:btnView];
             
@@ -193,7 +196,7 @@
     self.navigationItem.titleView = self.btnView;
     
     self.btnView.label.text = [menuList firstObject];
-    self.btnView.label.textColor = [UIColor whiteColor];
+    self.btnView.label.textColor = UIColor.whiteColor;
     self.btnView.block = ^(BN_BtnView *view) {
         [self handleActionBtnView:view];
         
@@ -334,7 +337,7 @@
     cycleScrollView.autoScrollTimeInterval = 3.0;
     cycleScrollView.backgroundColor = UIColor.blackColor;
     
-    //    cycleScrollView.layer.borderColor = [[UIColor blueColor]CGColor];
+    //    cycleScrollView.layer.borderColor = UIColor.blueColor.CGColor;
     //    cycleScrollView.layer.borderWidth = 1;
     [backgroudView addSubview:cycleScrollView];
     return backgroudView;

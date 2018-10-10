@@ -36,12 +36,12 @@
     
     //设置显示的颜色
     //    bar.barTintColor = [UIColor colorWithRed:62/255.0 green:173/255.0 blue:176/255.0 alpha:1.0];
-    bar.barTintColor = [UIColor orangeColor];
+    bar.barTintColor = UIColor.orangeColor;
     
     //设置字体颜色
-    bar.tintColor = [UIColor whiteColor];//左右两边字体颜色
+    bar.tintColor = UIColor.whiteColor;//左右两边字体颜色
     bar.titleTextAttributes = @{
-                                NSForegroundColorAttributeName : [UIColor whiteColor]
+                                NSForegroundColorAttributeName : UIColor.whiteColor
                                 
                                 };
     

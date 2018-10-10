@@ -68,7 +68,7 @@
     self.searchResultVC.dataList = self.dataList;
     
     //背景色修改
-//    [self.searchResultVC.searchBar setBackgroundImage:[UIImage imageWithColor:[UIColor orangeColor]] forBarPosition:UIBarPositionAny barMetrics:UIBarMetricsDefault];
+//    [self.searchResultVC.searchBar setBackgroundImage:UIImageFromColor(UIColor.orangeColor) forBarPosition:UIBarPositionAny barMetrics:UIBarMetricsDefault];
     
 }
 

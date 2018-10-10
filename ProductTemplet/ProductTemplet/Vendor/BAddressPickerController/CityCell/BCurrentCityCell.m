@@ -11,12 +11,9 @@
 
 #import "WHKUserDataModel.h"
 #import "NSUserDefaults+Helper.h"
+#import "NSObject+Helper.h"
 
 @implementation BCurrentCityCell
-
-- (void)awakeFromNib {
-    // Initialization code
-}
 
 - (instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier{
     self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
@@ -83,10 +80,10 @@
         _GPSButton.frame = CGRectMake(15, 15 , BUTTON_WIDTH, BUTTON_HEIGHT);
         [_GPSButton setTitle:@"" forState:UIControlStateNormal];
         _GPSButton.titleLabel.font = [UIFont systemFontOfSize:16.0];
-        _GPSButton.tintColor = [UIColor blackColor];
-        _GPSButton.backgroundColor = [UIColor whiteColor];
+        _GPSButton.tintColor = UIColor.blackColor;
+        _GPSButton.backgroundColor = UIColor.whiteColor;
         _GPSButton.alpha = 0.8;
-        _GPSButton.layer.borderColor = [UIColorFromRGBA(237, 237, 237, 1.0) CGColor];
+        _GPSButton.layer.borderColor = [UIColorRGBA(237, 237, 237, 1.0) CGColor];
         _GPSButton.layer.borderWidth = 1;
         _GPSButton.layer.cornerRadius = 3;
         [_GPSButton addTarget:self action:@selector(buttonClick:) forControlEvents:UIControlEventTouchUpInside];
@@ -98,7 +95,7 @@
     if (_activityIndicatorView == nil) {
         _activityIndicatorView = [[UIActivityIndicatorView alloc] initWithFrame:CGRectMake(15, 15, BUTTON_HEIGHT, BUTTON_HEIGHT)];
         _activityIndicatorView.activityIndicatorViewStyle = UIActivityIndicatorViewStyleGray;
-        _activityIndicatorView.color = [UIColor grayColor];
+        _activityIndicatorView.color = UIColor.grayColor;
         _activityIndicatorView.hidesWhenStopped = YES;
     }
     return _activityIndicatorView;

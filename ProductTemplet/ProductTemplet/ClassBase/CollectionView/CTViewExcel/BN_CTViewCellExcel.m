@@ -8,6 +8,8 @@
 
 #import "BN_CTViewCellExcel.h"
 
+#import "UIView+Helper.h"
+
 @interface BN_CTViewCellExcel ()
 
 
@@ -45,13 +47,10 @@
     self.label.frame = CGRectMake(0, 0, CGRectGetWidth(self.contentView.frame), CGRectGetHeight(self.contentView.frame));
 //    self.imgView.frame = CGRectMake(CGRectGetMaxX(self.label.frame) + 1, 0, 1, CGRectGetHeight(self.contentView.frame));
     
-//    UIColor * lineColor = [UIColor colorWithRed:238/255.0 green:238/255.0 blue:238/255.0 alpha:1];
-//    lineColor = [UIColor redColor];
-//    [self.label.layer addSublayer:[self.label createLayerType:@"2" color:kExcelColor width:kW_LayerBorderWidth]];
-//    [self.label.layer addSublayer:[self.label createLayerType:@"3" color:kExcelColor width:kW_LayerBorderWidth]];
-    
-    [self.label.layer addSublayer:[self.label createLayerType:@2 color:kExcelColor width:kW_LayerBorderWidth paddingScale:0]];
-    [self.label.layer addSublayer:[self.label createLayerType:@3 color:kExcelColor width:kW_LayerBorderWidth paddingScale:0]];
+    [self.label removeAllSubViews];
+    [self.label addSubview:[self.label createViewType:@2 color:UIColor.excelColor width:kW_LayerBorder paddingScale:0]];
+    [self.label addSubview:[self.label createViewType:@3 color:UIColor.excelColor width:kW_LayerBorder paddingScale:0]];
+
 
 }
 

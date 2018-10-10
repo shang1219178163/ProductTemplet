@@ -19,7 +19,7 @@ float const PopoverViewCellTitleLeftEdge = 8.f; ///< 标题左边边距
 #pragma mark - Life Cycle
 - (instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier {
     if (!(self = [super initWithStyle:style reuseIdentifier:reuseIdentifier])) return nil;
-    self.backgroundColor = [UIColor clearColor];
+    self.backgroundColor = UIColor.clearColor;
     self.contentView.backgroundColor = self.backgroundColor;
     self.selectionStyle = UITableViewCellSelectionStyleNone;
     // initialize
@@ -34,7 +34,7 @@ float const PopoverViewCellTitleLeftEdge = 8.f; ///< 标题左边边距
         self.backgroundColor = _style == PopoverViewStyleDefault ? [UIColor colorWithRed:0.90 green:0.90 blue:0.90 alpha:1.00] : [UIColor colorWithRed:0.23 green:0.23 blue:0.23 alpha:1.00];
     } else {
         [UIView animateWithDuration:0.3f animations:^{
-            self.backgroundColor = [UIColor clearColor];
+            self.backgroundColor = UIColor.clearColor;
         }];
     }
 }
@@ -73,7 +73,7 @@ float const PopoverViewCellTitleLeftEdge = 8.f; ///< 标题左边边距
     _bottomLine = bottomLine;
     // Constraint
     [self.contentView addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|[bottomLine]|" options:kNilOptions metrics:nil views:NSDictionaryOfVariableBindings(bottomLine)]];
-    [self.contentView addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:[bottomLine(lineHeight)]|" options:kNilOptions metrics:@{@"lineHeight" : @(1/[UIScreen mainScreen].scale)} views:NSDictionaryOfVariableBindings(bottomLine)]];
+    [self.contentView addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:[bottomLine(lineHeight)]|" options:kNilOptions metrics:@{@"lineHeight" : @(1/UIScreen.mainScreen.scale)} views:NSDictionaryOfVariableBindings(bottomLine)]];
 }
 
 #pragma mark - Public

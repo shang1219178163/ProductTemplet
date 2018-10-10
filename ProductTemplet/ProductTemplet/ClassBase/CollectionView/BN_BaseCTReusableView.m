@@ -54,12 +54,12 @@
         _label = ({
             UILabel * label = [[UILabel alloc] initWithFrame:CGRectZero];
             label.font = [UIFont systemFontOfSize:15];
-            //            label.textColor = [UIColor grayColor];
+            //            label.textColor = UIColor.grayColor;
             label.textAlignment = NSTextAlignmentCenter;
             
             label.numberOfLines = 0;
             label.userInteractionEnabled = YES;
-//            label.backgroundColor = [UIColor clearColor];
+//            label.backgroundColor = UIColor.clearColor;
             label;
         });
     }
@@ -71,12 +71,12 @@
         _labelSub = ({
             UILabel * label = [[UILabel alloc] initWithFrame:CGRectZero];
             label.font = [UIFont systemFontOfSize:15];
-            label.textColor = [UIColor grayColor];
+            label.textColor = UIColor.grayColor;
             label.textAlignment = NSTextAlignmentCenter;
             
             label.numberOfLines = 0;
             label.userInteractionEnabled = YES;
-            //        label.backgroundColor = [UIColor greenColor];
+            //        label.backgroundColor = UIColor.greenColor;
             label;
         });
     }
@@ -89,7 +89,7 @@
         _imgView = ({
             UIImageView *imgView = [[UIImageView alloc] initWithFrame:CGRectZero];
             imgView.userInteractionEnabled = YES;
-//            imgView.backgroundColor = [UIColor orangeColor];
+//            imgView.backgroundColor = UIColor.orangeColor;
             
             imgView;
         });

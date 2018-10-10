@@ -8,6 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
+#import "NSObject+Helper.h"
+#import "UIView+Helper.h"
+
 #import "BN_TextField.h"
 #import "BN_TextView.h"
 #import "BN_RadioViewZero.h"
@@ -29,8 +32,9 @@
 @property (nonatomic, strong) UILabel * labelLeftSub;
 @property (nonatomic, strong) UILabel * labelLeftSubMark;
 
-@property (nonatomic, strong) BN_TextField * textField;
 @property (nonatomic, strong) UIButton * btn;
+
+@property (nonatomic, strong) BN_TextField * textField;
 @property (nonatomic, strong) BN_TextView * textView;
 @property (nonatomic, strong) BN_RadioViewZero * radioView;
 

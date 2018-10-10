@@ -19,8 +19,8 @@
 + (instancetype)actionWithImage:(UIImage *)image title:(NSString *)title handler:(void (^)(PopoverAction *action))handler {
     PopoverAction *action = [[self alloc] init];
     action.image = image;
-    action.title = title ? : @"";
-    action.handler = handler ? : NULL;
+    action.title = title ?  : @"";
+    action.handler = handler ?  : nil;
     
     return action;
 }

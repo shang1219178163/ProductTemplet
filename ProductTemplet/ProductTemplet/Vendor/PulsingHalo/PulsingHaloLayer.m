@@ -22,7 +22,7 @@
     self = [super init];
     if (self) {
         
-        self.contentsScale = [UIScreen mainScreen].scale;
+        self.contentsScale = UIScreen.mainScreen.scale;
         self.opacity = 0;
         
         // default

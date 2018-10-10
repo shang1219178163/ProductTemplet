@@ -68,5 +68,7 @@ target 'ProductTemplet' do
   
   pod 'ZYCornerRadius'
 
+  pod 'UMengAnalytics-NO-IDFA'
+
 
 end

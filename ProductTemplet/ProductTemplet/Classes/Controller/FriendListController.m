@@ -8,14 +8,14 @@
 
 #import "FriendListController.h"
 
-#import "GlobleConst.h"
+#import "BN_Globle.h"
 
 #import "BN_SimpleDataModel.h"
 
 #import "BN_TabBarView.h"
 //#import "BN_SegmentView.h"
 
-#import "BINImgLabelView.h"
+#import "BN_ImgLabelView.h"
 
 #import "BN_FoldHeaderFooterView.h"
 #import "WHKHeaderFooterViewZero.h"
@@ -137,7 +137,6 @@
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     
     NSString * msg = NSStringFromIndexPath(indexPath);
-    [self showBINAlertTitle:@"提示信息" msg:msg image:@"bug.png"];
     
 }
 
@@ -154,9 +153,9 @@
     foldHeaderView.isCanOPen = YES;
     foldHeaderView.isOpen = foldModel.isOpen;
     foldHeaderView.labelLeft.text = foldModel.title;
-    foldHeaderView.labelLeft.textColor = kC_ThemeCOLOR;
+    foldHeaderView.labelLeft.textColor = UIColor.themeColor;
     foldHeaderView.labelLeftSub.text = [@(foldModel.dataList.count) stringValue];
-    foldHeaderView.labelLeftSub.textColor = kC_ThemeCOLOR;
+    foldHeaderView.labelLeftSub.textColor = UIColor.themeColor;
     //    foldHeaderView.imgViewLeft.image = [UIImage imageNamed:foldModel.image];
     //    foldHeaderView.blockView = ^(BN_HeaderFooterView *foldView, NSInteger index) {
     foldHeaderView.blockView = ^(UITableViewHeaderFooterView *foldView, NSInteger index) {
@@ -185,50 +184,6 @@
 
 #pragma mark - - alertView
 
-- (void)showBINAlertTitle:(NSString *)title msg:(NSString *)msg image:(NSString *)image{
-    UIView* view = [self createCustomeViewWithImage:image msg:msg];
-    
-    BN_AlertViewZero * alertView = [BN_AlertViewZero alertViewWithTitle:title message:nil customView:view btnTitles:@[@"取消",@"确认"]];
-    [alertView show];
-    alertView.block = ^(BN_AlertViewZero *alertView, NSInteger btnIndex) {
-        NSLog(@"%@====%@",alertView,@(btnIndex));
-        
-        if ([image isEqualToString:kIMAGE_update] && btnIndex == 1) {
-            DDLog(@"种猪录入数据");
-            
-        }
-        else if ([image isEqualToString:kIMAGE_inquiry]){
-            DDLog(@"种猪删除数据");
-            
-        }
-        else if ([title isEqualToString:kRemark]){
-            
-        }
-        
-    };
-    [alertView getViewLayer];
-
-}
-
-- (UIView *)createCustomeViewWithImage:(NSString *)image msg:(NSString *)msg{
-    UIView * view = [[UIView alloc]initWithFrame:CGRectMake(0, 0, kWidth_customView, 200)];
-    view.backgroundColor = [UIColor cyanColor];
-    
-    UIImageView * imgView = [UIView createImageViewWithRect:CGRectMake(0, 0, CGRectGetWidth(view.frame), 40) image:image tag:300 patternType:@"0"];
-    [view addSubview:imgView];
-    
-    NSString * text = msg;
-    CGSize size = [self sizeWithText:text font:@15 width:CGRectGetWidth(view.frame)];
-    
-    CGRect rect = CGRectMake(0, CGRectGetMaxY(imgView.frame)+kY_GAP, CGRectGetWidth(view.frame), size.height);
-    UILabel * label = [UIView createLabelWithRect:rect text:text textColor:nil tag:kTAG_LABEL patternType:@"0" font:15 backgroudColor:[UIColor greenColor] alignment:NSTextAlignmentCenter];
-    [view addSubview:label];
-    
-    [view setHeight:(CGRectGetHeight(label.frame) + CGRectGetHeight(imgView.frame) + kY_GAP*2)];
-    
-    return view;
-    
-}
 
 
 @end

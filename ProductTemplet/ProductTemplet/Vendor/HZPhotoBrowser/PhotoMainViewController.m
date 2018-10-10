@@ -32,7 +32,7 @@
     self.automaticallyAdjustsScrollViewInsets = NO;
     
     self.title = @"图片浏览";
-    self.view.backgroundColor = [UIColor whiteColor];
+    self.view.backgroundColor = UIColor.whiteColor;
     
     _imageStrArr = @[
                      @"http://ww2.sinaimg.cn/thumbnail/9ecab84ejw1emgd5nd6eaj20c80c8q4a.jpg",

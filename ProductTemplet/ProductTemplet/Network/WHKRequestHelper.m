@@ -8,31 +8,15 @@
 
 #import "WHKRequestHelper.h"
 
+#import "BN_Globle.h"
+#import "NSObject+Helper.h"
+#import "NSObject+Date.h"
+#import "NSString+Helper.h"
+
 #import "NSDate+Helper.h"
-#import "UIDevice+Helper.h"
+#import "NSData+Other.h"
+#import "UIDevice+FCUUID.h"
 
-//#if DevelopSever
-///** 接口前缀-开发服务器*/
-//NSString *const kApiPrefix = @"接口服务器的请求前缀 例: http://192.168.10.10:8080";
-//#elif TestSever
-///** 接口前缀-测试服务器*/
-//NSString *const kApiPrefix = @"https://www.baidu.com";
-//#elif ProductSever
-///** 接口前缀-生产服务器*/
-//NSString *const kApiPrefix = @"https://www.baidu.com";
-//#endif
-
-/** 登录*/
-NSString *const kLogin = @"/login";
-/** 平台会员退出*/
-NSString *const kExit = @"/exit";
-
-
-//WHB
-//NSString *const kHTTP_URLPreFix = @"http://www.weihouyunbao.cn:9999/app" ;
-//NSString *const kHTTP_URLPreFixNew = @"http://192.168.0.149/nonghuotong/app" ;
-
-//NSString *const kHTTP_URLMiddle = @"i=42&c=entry&do=fengmian&m=android";//通用参数
 NSString *const kHTTP_URLMiddle = @"i=42&c=entry&do=fengmian&m=android&source=ios";//通用参数
 
 //#define KIOS_TESTSERVER //测试服务器
@@ -73,7 +57,7 @@ NSString *const kHTTP_URLMiddle = @"i=42&c=entry&do=fengmian&m=android&source=io
     allAddresss = [allAddresss stringByAppendingFormat:@"&r=%@",messageName];
 
     //imei
-    NSString * imei = [[UIDevice currentDevice] uniqueDeviceIdentifier];
+    NSString * imei = UIDevice.currentDevice.uuid;
     allAddresss = [allAddresss stringByAppendingFormat:@"&imei=%@",imei];
     allAddresss = [allAddresss stringByAppendingFormat:@"&platform=%@",@"ios"];
 
@@ -116,7 +100,7 @@ NSString *const kHTTP_URLMiddle = @"i=42&c=entry&do=fengmian&m=android&source=io
 + (NSString *)getTokenRequestMessageName:(NSString *)messageName{
     //
     NSDate *now = [NSDate date];
-    NSString * dateStr = [NSString stringWithDate:now format:@"yyyyMMdd"];
+    NSString * dateStr = [self stringWithDate:now format:@"yyyyMMdd"];
     
     NSString * string = [dateStr stringByAppendingFormat:@"%@",messageName];
     NSString * md5String = [string md5Encode];

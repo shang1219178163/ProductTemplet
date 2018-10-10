@@ -9,11 +9,14 @@
 #import "BN_HomeViewController.h"
 
 #import "BN_BaseNavigationController.h"
-
-NSString *const CYLTabBarItemController = @"CYLTabBarItemController";
-
 #import "UIViewController+ZYSliderViewController.h"
 #import "ZYSliderViewController.h"
+
+#import "BN_Globle.h"
+#import "NSObject+Helper.h"
+#import "UIColor+Helper.h"
+
+NSString *const CYLTabBarItemController = @"CYLTabBarItemController";
 
 @interface BN_HomeViewController ()<UITabBarControllerDelegate>
 
@@ -28,10 +31,13 @@ NSString *const CYLTabBarItemController = @"CYLTabBarItemController";
         
         [self setupTabBarController];
         
-//        self.tabBar.unselectedItemTintColor = [UIColor blackColor];
-//        self.tabBar.tintColor = [UIColor redColor];
-        self.tabBar.unselectedItemTintColor = [UIColor grayColor];
-        self.tabBar.tintColor = kC_ThemeCOLOR;
+//        self.tabBar.unselectedItemTintColor = UIColor.blackColor;
+//        self.tabBar.tintColor = UIColor.redColor;
+        if (iOSVersion(10)) {
+            self.tabBar.unselectedItemTintColor = UIColor.grayColor;
+
+        }
+        self.tabBar.tintColor = UIColor.themeColor;
         //显示未读
 //        UINavigationController *firstNav = (UINavigationController *)[self.viewControllers firstObject];
 //        UITabBarItem *itemFirst = firstNav.tabBarItem;

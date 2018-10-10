@@ -8,6 +8,8 @@
 
 #import "FlyweightViewController.h"
 
+#import "BN_Globle.h"
+
 #import "FlowerView.h"
 #import "FlowerFactory.h"
 #import "ExtrinsicFlowerStateModel.h"

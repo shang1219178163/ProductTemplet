@@ -8,6 +8,10 @@
 
 #import "TestViewController.h"
 
+#import "BN_Globle.h"
+#import "UIView+Helper.h"
+#import "UIViewController+Helper.h"
+#import "UIColor+Helper.h"
 
 #import "WHKTableViewZeroCell.h"
 #import "WHKTableViewOneCell.h"
@@ -80,7 +84,7 @@
             //    cell.label.text = [NSString stringWithFormat:@"row_%@",@(indexPath.row)];
             
             UILabel * label = [[UILabel alloc]init];
-            label.backgroundColor = [UIColor yellowColor];
+            label.backgroundColor = UIColor.yellowColor;
             label.numberOfLines = 0;
             [cell.contentView addSubview:label];
             
@@ -104,7 +108,7 @@
         case 1:
         {
             WHKTableViewOneCell *cell = [WHKTableViewOneCell cellWithTableView:tableView];
-            cell.contentView.backgroundColor = [UIColor randomColor];
+            cell.contentView.backgroundColor = UIColor.randomColor;
             //
             UIView * backView = [[UIView alloc]init];
             [cell.contentView addSubview:backView];
@@ -116,7 +120,7 @@
                 label.textAlignment = NSTextAlignmentLeft;
                 
                 label.numberOfLines = 0;
-                label.backgroundColor = [UIColor randomColor];
+                label.backgroundColor = UIColor.randomColor;
                 [backView addSubview:label];
                 
                 [label makeConstraints:^(MASConstraintMaker *make) {

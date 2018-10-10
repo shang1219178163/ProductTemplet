@@ -8,29 +8,19 @@
 
 #import "WHKUserDataModel.h"
 
-#import "GlobleConst.h"
+#import "BN_Globle.h"
 
 @interface WHKUserDataModel ()
-
-@property (nonatomic, strong) NSUserDefaults * userDefaults;
 
 @end
 
 
 @implementation WHKUserDataModel
 
--(NSUserDefaults *)userDefaults{
-    if(!_userDefaults){
-        _userDefaults = [NSUserDefaults standardUserDefaults];
-    }
-    return _userDefaults;
-}
 
 -(instancetype)init{
-    
     if ([super init]) {
-        
-        NSUserDefaults * userDefaults =  [NSUserDefaults standardUserDefaults];
+        NSUserDefaults * userDefaults =  NSUserDefaults.standardUserDefaults;
 
         self.typeCar = [userDefaults objectForKey:KEY_typeCar];
         self.typeUser = [userDefaults objectForKey:KEY_typeUser];
@@ -84,181 +74,181 @@
 
 //下个版本启用
 //-(void)setIsJPush:(NSString *)isJPush{
-//    [self.userDefaults setObject:isJPush forKey:KEY_isJPush];
+//    [NSUserDefaults.standardUserDefaults setObject:isJPush forKey:KEY_isJPush];
 //
 //}
 //下个版本启用
 //- (void)defaultSynchronize{
-//    [self.userDefaults synchronize];
+//    [NSUserDefaults.standardUserDefaults synchronize];
 //    
 //}
 
 
 -(NSString *)isJPush{
-    return [self.userDefaults objectForKey:KEY_isJPush];
+    return [NSUserDefaults.standardUserDefaults objectForKey:KEY_isJPush];
 
 }
 
 -(NSString *)typeCar{
-    return [self.userDefaults objectForKey:KEY_typeCar];
+    return [NSUserDefaults.standardUserDefaults objectForKey:KEY_typeCar];
     
 }
 
 -(NSString *)typeUser{
-    return [self.userDefaults objectForKey:KEY_typeUser];
+    return [NSUserDefaults.standardUserDefaults objectForKey:KEY_typeUser];
     
 }
 
 -(NSString *)isLogin{
-    return [self.userDefaults objectForKey:KEY_isLogin];
+    return [NSUserDefaults.standardUserDefaults objectForKey:KEY_isLogin];
     
 }
 
 -(NSString *)loginFlag{
-    return [self.userDefaults objectForKey:KEY_loginFlag];
+    return [NSUserDefaults.standardUserDefaults objectForKey:KEY_loginFlag];
 
 }
 
 -(NSString *)userId{
-    return [self.userDefaults objectForKey:KEY_userID];
+    return [NSUserDefaults.standardUserDefaults objectForKey:KEY_userID];
     
 }
 
 
 -(NSString *)userLevel{
-    return [self.userDefaults objectForKey:KEY_userLevel];
+    return [NSUserDefaults.standardUserDefaults objectForKey:KEY_userLevel];
     
 }
 
 -(NSString *)authStatus{
-    return [self.userDefaults objectForKey:KEY_authStatus];
+    return [NSUserDefaults.standardUserDefaults objectForKey:KEY_authStatus];
     
 }
 
 -(NSString *)phone{
-    return [self.userDefaults objectForKey:KEY_phone];
+    return [NSUserDefaults.standardUserDefaults objectForKey:KEY_phone];
     
 }
 
 -(NSString *)phoneIemi{
-    return [self.userDefaults objectForKey:KEY_phoneIemi];
+    return [NSUserDefaults.standardUserDefaults objectForKey:KEY_phoneIemi];
     
 }
 
 -(NSString *)password{
-    return [self.userDefaults objectForKey:KEY_userPwd];
+    return [NSUserDefaults.standardUserDefaults objectForKey:KEY_userPwd];
     
 }
 
 -(NSString *)name{
-    return [self.userDefaults objectForKey:KEY_userName];
+    return [NSUserDefaults.standardUserDefaults objectForKey:KEY_userName];
     
 }
 
 
 -(NSString *)photoUrl{
-    return [self.userDefaults objectForKey:KEY_userPhotoUrl];
+    return [NSUserDefaults.standardUserDefaults objectForKey:KEY_userPhotoUrl];
     
 }
 
 -(NSString *)userType{
-    return [self.userDefaults objectForKey:KEY_userType];
+    return [NSUserDefaults.standardUserDefaults objectForKey:KEY_userType];
     
 }
 
 -(NSString *)city{
-    return [self.userDefaults objectForKey:KEY_userCity];
+    return [NSUserDefaults.standardUserDefaults objectForKey:KEY_userCity];
     
 }
 
 -(NSString *)IDCardNumber{
-    return [self.userDefaults objectForKey:KEY_IDCardNumber];
+    return [NSUserDefaults.standardUserDefaults objectForKey:KEY_IDCardNumber];
     
 }
 
 -(NSString *)vehicleType{
-    return [self.userDefaults objectForKey:KEY_vehicleType];
+    return [NSUserDefaults.standardUserDefaults objectForKey:KEY_vehicleType];
     
 }
 
 -(NSString *)vehicleLogo{
-    return [self.userDefaults objectForKey:KEY_vehicleLogo];
+    return [NSUserDefaults.standardUserDefaults objectForKey:KEY_vehicleLogo];
     
 }
 
 -(NSString *)vehiclebrand{
-    return [self.userDefaults objectForKey:KEY_vehicleBrand];
+    return [NSUserDefaults.standardUserDefaults objectForKey:KEY_vehicleBrand];
     
 }
 
 -(NSString *)plateNumber{
-    return [self.userDefaults objectForKey:KEY_plateNumber];
+    return [NSUserDefaults.standardUserDefaults objectForKey:KEY_plateNumber];
     
 }
 
 -(NSString *)userGrade{
-    return [self.userDefaults objectForKey:KEY_userGrade];
+    return [NSUserDefaults.standardUserDefaults objectForKey:KEY_userGrade];
     
 }
 
 -(NSString *)integralTotal{
-    return [self.userDefaults objectForKey:KEY_integralTotal];
+    return [NSUserDefaults.standardUserDefaults objectForKey:KEY_integralTotal];
     
 }
 
 -(NSString *)finishOrder{
-    return [self.userDefaults objectForKey:KEY_finishOrder];
+    return [NSUserDefaults.standardUserDefaults objectForKey:KEY_finishOrder];
     
 }
 
 -(NSString *)isDriver{
-    return [self.userDefaults objectForKey:KEY_isDriver];
+    return [NSUserDefaults.standardUserDefaults objectForKey:KEY_isDriver];
     
 }
 
 -(NSString *)isCompany{
-    return [self.userDefaults objectForKey:KEY_isCompany];
+    return [NSUserDefaults.standardUserDefaults objectForKey:KEY_isCompany];
     
 }
 
 -(NSString *)businessDesc{
-    return [self.userDefaults objectForKey:KEY_businessDesc];
+    return [NSUserDefaults.standardUserDefaults objectForKey:KEY_businessDesc];
     
 }
 
 
 -(NSString *)platformType{
-    return [self.userDefaults objectForKey:KEY_platformType];
+    return [NSUserDefaults.standardUserDefaults objectForKey:KEY_platformType];
     
 }
 
 -(NSString *)uidQQ{
-    return [self.userDefaults objectForKey:KEY_uidQQ];
+    return [NSUserDefaults.standardUserDefaults objectForKey:KEY_uidQQ];
     
 }
 
 -(NSString *)tokenQQ{
-    return [self.userDefaults objectForKey:KEY_tokenQQ];
+    return [NSUserDefaults.standardUserDefaults objectForKey:KEY_tokenQQ];
     
 }
 
 -(NSString *)nicknameQQ{
-    return [self.userDefaults objectForKey:KEY_nicknameQQ];
+    return [NSUserDefaults.standardUserDefaults objectForKey:KEY_nicknameQQ];
     
 }
 
 -(NSString *)uidWX{
-    return [self.userDefaults objectForKey:KEY_uidWX];
+    return [NSUserDefaults.standardUserDefaults objectForKey:KEY_uidWX];
     
 }
 
 -(NSString *)tokenWX{
-    return [self.userDefaults objectForKey:KEY_tokenWX];
+    return [NSUserDefaults.standardUserDefaults objectForKey:KEY_tokenWX];
     
 }
 
 -(NSString *)nicknameWX{
-    return [self.userDefaults objectForKey:KEY_nicknameWX];
+    return [NSUserDefaults.standardUserDefaults objectForKey:KEY_nicknameWX];
     
 }
 
@@ -322,10 +312,8 @@
 
 -(void)logOut{
     dispatch_async(dispatch_get_main_queue(), ^{
-        [[NSNotificationCenter defaultCenter]postNotificationName:kNotiPost_logOut object:nil userInfo:nil];
+        [NSNotificationCenter.defaultCenter postNotificationName:kNotiPost_logOut object:nil userInfo:nil];
         
-        UIViewController *rootController = [[[UIApplication sharedApplication]keyWindow]rootViewController];
-        [rootController goController:@"WHKMainNewViewController"  title:nil];
     });
 }
 

@@ -60,11 +60,11 @@ float PopoverViewDegreesToRadians(float angle)
 {
     _showShade = showShade;
     
-    _shadeView.backgroundColor = _showShade ? [UIColor colorWithWhite:0.f alpha:0.18f] : [UIColor clearColor];
+    _shadeView.backgroundColor = _showShade ? [UIColor colorWithWhite:0.f alpha:0.18f] : UIColor.clearColor;
     
     if (_borderLayer) {
         
-        _borderLayer.strokeColor = _showShade ? [UIColor clearColor].CGColor : _tableView.separatorColor.CGColor;
+        _borderLayer.strokeColor = _showShade ? UIColor.clearColor.CGColor : _tableView.separatorColor.CGColor;
     }
 }
 
@@ -76,7 +76,7 @@ float PopoverViewDegreesToRadians(float angle)
     
     if (_style == PopoverViewStyleDefault) {
         
-        self.backgroundColor = [UIColor whiteColor];
+        self.backgroundColor = UIColor.whiteColor;
     }
     else {
         
@@ -95,7 +95,7 @@ float PopoverViewDegreesToRadians(float angle)
     _arrowStyle = PopoverViewArrowStyleRound;
     
     // current view
-    self.backgroundColor = [UIColor whiteColor];
+    self.backgroundColor = UIColor.whiteColor;
     
     // keyWindow
     _keyWindow = [UIApplication sharedApplication].keyWindow;
@@ -116,7 +116,7 @@ float PopoverViewDegreesToRadians(float angle)
     _tableView.scrollEnabled = NO;
     _tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     _tableView.separatorColor = [PopoverViewCell bottomLineColorForStyle:_style];
-    _tableView.backgroundColor = [UIColor clearColor];
+    _tableView.backgroundColor = UIColor.clearColor;
     _tableView.estimatedRowHeight = 0.0;
     _tableView.showsVerticalScrollIndicator = NO;
     [_tableView registerClass:[PopoverViewCell class] forCellReuseIdentifier:kPopoverCellReuseId];
@@ -278,7 +278,7 @@ float PopoverViewDegreesToRadians(float angle)
         borderLayer.frame = self.bounds;
         borderLayer.path = maskPath.CGPath;
         borderLayer.lineWidth = 1;
-        borderLayer.fillColor = [UIColor clearColor].CGColor;
+        borderLayer.fillColor = UIColor.clearColor.CGColor;
         borderLayer.strokeColor = _tableView.separatorColor.CGColor;
         [self.layer addSublayer:borderLayer];
         _borderLayer = borderLayer;

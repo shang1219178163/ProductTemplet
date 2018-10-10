@@ -45,7 +45,7 @@
     
     CGFloat xCenter = rect.size.width * 0.5;
     CGFloat yCenter = rect.size.height * 0.5;
-    [[UIColor whiteColor] set];
+    [UIColor.whiteColor set];
     
     switch (self.mode) {
         case HZWaitingViewModePieDiagram:

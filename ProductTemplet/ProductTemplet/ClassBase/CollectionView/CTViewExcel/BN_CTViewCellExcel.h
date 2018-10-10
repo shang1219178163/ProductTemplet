@@ -8,7 +8,7 @@
 
 #import "BN_BaseCTViewCell.h"
 
-#define kExcelColor     [UIColor colorWithRed:238/255.0 green:238/255.0 blue:238/255.0 alpha:1]
+//#define kExcelColor     [UIColor colorWithRed:238/255.0 green:238/255.0 blue:238/255.0 alpha:1]
 
 @interface BN_CTViewCellExcel : BN_BaseCTViewCell
 

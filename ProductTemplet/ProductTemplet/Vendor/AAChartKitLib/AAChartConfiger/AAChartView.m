@@ -46,7 +46,7 @@
 #define AADetailLog(...)
 #endif
 
-#define kDevice_Is_iPhoneX ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? CGSizeEqualToSize(CGSizeMake(1125, 2436), [[UIScreen mainScreen] currentMode].size) : NO)
+#define kDevice_Is_iPhoneX ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? CGSizeEqualToSize(CGSizeMake(1125, 2436), [UIScreen.mainScreen currentMode].size) : NO)
 
 @interface AAChartView()<WKNavigationDelegate,UIWebViewDelegate> {
     UIWebView *_uiWebView;
@@ -80,14 +80,14 @@
     if (AASYSTEM_VERSION >= 9.0) {
         _wkWebView = [[WKWebView alloc] init];
         _wkWebView.navigationDelegate = self;
-        _wkWebView.backgroundColor = [UIColor whiteColor];
+        _wkWebView.backgroundColor = UIColor.whiteColor;
         [self addSubview:_wkWebView];
         _wkWebView.translatesAutoresizingMaskIntoConstraints = NO;
         [self addConstraints:[self configureTheConstraintArrayWithItem:_wkWebView toItem:self]];
     } else {
         _uiWebView = [[UIWebView alloc] init];
         _uiWebView.delegate = self;
-        _uiWebView.backgroundColor = [UIColor whiteColor];
+        _uiWebView.backgroundColor = UIColor.whiteColor;
         [self addSubview:_uiWebView];
         _uiWebView.translatesAutoresizingMaskIntoConstraints = NO;
         [self addConstraints:[self configureTheConstraintArrayWithItem:_uiWebView toItem:self]];
@@ -307,12 +307,12 @@
 - (void)setIsClearBackgroundColor:(BOOL)isClearBackgroundColor {
     _isClearBackgroundColor = isClearBackgroundColor;
     if (_isClearBackgroundColor == YES) {
-        self.backgroundColor = [UIColor clearColor];
+        self.backgroundColor = UIColor.clearColor;
         if (AASYSTEM_VERSION >= 9.0) {
-            [_wkWebView setBackgroundColor:[UIColor clearColor]];
+            [_wkWebView setBackgroundColor:UIColor.clearColor];
             [_wkWebView setOpaque:NO];
         } else {
-            [_uiWebView setBackgroundColor:[UIColor clearColor]];
+            [_uiWebView setBackgroundColor:UIColor.clearColor];
             [_uiWebView setOpaque:NO];
         }
     }

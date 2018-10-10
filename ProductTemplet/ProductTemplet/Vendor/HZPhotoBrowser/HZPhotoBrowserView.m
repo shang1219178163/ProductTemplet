@@ -149,7 +149,7 @@
             button.titleLabel.font = [UIFont systemFontOfSize:14];
             button.backgroundColor = [UIColor colorWithRed:0.1f green:0.1f blue:0.1f alpha:0.3f];
             [button setTitle:@"原图加载失败，点击重新加载" forState:UIControlStateNormal];
-            [button setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+            [button setTitleColor:UIColor.whiteColor forState:UIControlStateNormal];
             [button addTarget:strongSelf action:@selector(reloadImage) forControlEvents:UIControlEventTouchUpInside];
             
             [self addSubview:button];

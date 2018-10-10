@@ -9,6 +9,8 @@
 #import "FacadeViewController.h"
 #import "LH4SWaiter.h"
 
+#import "UIView+Helper.h"
+
 @interface FacadeViewController ()
 
 @property (nonatomic, strong) NSArray *itemList;
@@ -42,7 +44,7 @@
         [self handleActionBtn:item];
         
     }];
-    containView.backgroundColor = [UIColor orangeColor];
+    containView.backgroundColor = UIColor.orangeColor;
     [self.view addSubview:containView];
 
     

@@ -9,6 +9,8 @@
 #import "FlyweightView.h"
 #import "ExtrinsicFlowerStateModel.h"
 
+#import "BN_Globle.h"
+
 @implementation FlyweightView
 
 - (void)drawRect:(CGRect)rect{

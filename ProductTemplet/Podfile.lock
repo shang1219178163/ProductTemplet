@@ -58,6 +58,7 @@ PODS:
   - TZImagePickerController (2.2.3)
   - UICKeyChainStore (2.1.1)
   - "UITableView+FDTemplateLayoutCell (1.6)"
+  - UMengAnalytics-NO-IDFA (4.2.5)
   - WXSTransition (1.2.1)
   - YBAttributeTextTapAction (2.0.6)
   - YJBannerView (2.4.0)
@@ -108,6 +109,7 @@ DEPENDENCIES:
   - TZImagePickerController
   - UICKeyChainStore
   - "UITableView+FDTemplateLayoutCell"
+  - UMengAnalytics-NO-IDFA
   - WXSTransition
   - YBAttributeTextTapAction
   - YJBannerView
@@ -153,6 +155,7 @@ SPEC REPOS:
     - TZImagePickerController
     - UICKeyChainStore
     - "UITableView+FDTemplateLayoutCell"
+    - UMengAnalytics-NO-IDFA
     - WXSTransition
     - YBAttributeTextTapAction
     - YJBannerView
@@ -198,6 +201,7 @@ SPEC CHECKSUMS:
   TZImagePickerController: 5374a30df056b33428802c8112ed44011fe2596a
   UICKeyChainStore: 239558492fa260531a0774cfc611ea83a6eaff3a
   "UITableView+FDTemplateLayoutCell": 5c949b4a5059c404b442926c0e80f81d10a2d66f
+  UMengAnalytics-NO-IDFA: 16666e32edce5be44ae5b14aaaa7f3582e09d6ab
   WXSTransition: 0bd758aaa1f5869a908b1bb103c4a9e26ad1d3eb
   YBAttributeTextTapAction: 650ff36251479f8cfc7b5dd8fb62587c538ce502
   YJBannerView: 0c81b7bda592cd23b10ceae8f53c514dcd77e4c6
@@ -209,6 +213,6 @@ SPEC CHECKSUMS:
   YZPullDownMenu: afc60c3fc4f7caedd9556d32da43ea1718e078e0
   ZYCornerRadius: f0af817be7805b5c63d793042ca7a03f81e14069
 
-PODFILE CHECKSUM: b0ff4132d8e073976469fd7035b10b0707bc6c13
+PODFILE CHECKSUM: e9fb3f8e9ae04a16f9a862fb15889caa9d2996ad
 
 COCOAPODS: 1.5.0

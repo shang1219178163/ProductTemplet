@@ -8,6 +8,11 @@
 
 #import "BN_UserPwdChangeController.h"
 
+#import "BN_Globle.h"
+
+#import "UIView+Helper.h"
+#import "NSObject+Helper.h"
+
 @interface BN_UserPwdChangeController ()
 
 @property (nonatomic, strong) NSMutableArray * itemList;
@@ -65,11 +70,11 @@
     
     
     UIScrollView *scrollView = [UIScrollView new];
-    scrollView.backgroundColor = [UIColor whiteColor];
+    scrollView.backgroundColor = UIColor.whiteColor;
     [self.view addSubview:scrollView];
     
     [scrollView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.edges.equalTo(self.view).with.insets(UIEdgeInsetsMake(kXY_GAP,kXY_GAP,kXY_GAP,kXY_GAP));
+        make.edges.equalTo(self.view).with.insets(UIEdgeInsetsMake(kX_GAP,kX_GAP,kX_GAP,kX_GAP));
         
     }];
     
@@ -154,7 +159,7 @@
         _btnCode = ({
             UIButton *btn = [UIButton buttonWithType:UIButtonTypeCustom];
             [btn setTitle:@"获取验证码" forState:UIControlStateNormal];
-            [btn setTitleColor:kC_ThemeCOLOR forState:UIControlStateNormal];
+            [btn setTitleColor:UIColor.themeColor forState:UIControlStateNormal];
             btn.titleLabel.adjustsFontSizeToFitWidth = YES;
             
             btn;
@@ -168,8 +173,8 @@
         _btnSure = ({
             UIButton *btn = [UIButton buttonWithType:UIButtonTypeCustom];
             [btn setTitle:@"提交" forState:UIControlStateNormal];
-            [btn setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
-            [btn setBackgroundImage:[UIImage imageWithColor:kC_ThemeCOLOR] forState:UIControlStateNormal];
+            [btn setTitleColor:UIColor.whiteColor forState:UIControlStateNormal];
+            [btn setBackgroundImage:UIImageFromColor(UIColor.themeColor) forState:UIControlStateNormal];
             btn;
         });
     }

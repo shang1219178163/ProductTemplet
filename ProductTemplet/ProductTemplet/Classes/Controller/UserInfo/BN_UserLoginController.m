@@ -8,6 +8,9 @@
 
 #import "BN_UserLoginController.h"
 
+#import "NSObject+Helper.h"
+#import "UIView+Helper.h"
+#import "UIViewController+Helper.h"
 
 @interface BN_UserLoginController ()
 
@@ -106,7 +109,7 @@
     if (!_imgView) {
         _imgView = ({
             UIImageView * imgView = [[UIImageView alloc]init];
-            imgView.backgroundColor = [UIColor randomColor];
+            imgView.backgroundColor = UIColor.randomColor;
             
             imgView;
         });
@@ -119,7 +122,7 @@
         _textFieldName = ({
             UITextField * textField = [[UITextField alloc]init];
             textField.placeholder = @"请输入手机号";
-            textField.backgroundColor = kC_BackgroudColor;
+            textField.backgroundColor = UIColor.backgroudColor;
 
             textField;
         });
@@ -132,7 +135,7 @@
         _textFieldPwd = ({
             UITextField * textField = [[UITextField alloc]init];
             textField.placeholder = @"请输入密码";
-            textField.backgroundColor = kC_BackgroudColor;
+            textField.backgroundColor = UIColor.backgroudColor;
             
             textField;
         });
@@ -145,8 +148,8 @@
         _btnLogin = ({
             UIButton *btn = [UIButton buttonWithType:UIButtonTypeCustom];
             [btn setTitle:@"登录" forState:UIControlStateNormal];
-            [btn setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
-            [btn setBackgroundImage:[UIImage imageWithColor:kC_ThemeCOLOR] forState:UIControlStateNormal];
+            [btn setTitleColor:UIColor.whiteColor forState:UIControlStateNormal];
+            [btn setBackgroundImage:UIImageFromColor(UIColor.themeColor) forState:UIControlStateNormal];
             [btn addActionHandler:^(id obj, id item, NSInteger idx) {
 
                 
@@ -163,7 +166,7 @@
         _btnPwd = ({
             UIButton *btn = [UIButton buttonWithType:UIButtonTypeCustom];
             [btn setTitle:@"忘记密码?" forState:UIControlStateNormal];
-            [btn setTitleColor:kC_ThemeCOLOR forState:UIControlStateNormal];
+            [btn setTitleColor:UIColor.themeColor forState:UIControlStateNormal];
             [btn addActionHandler:^(id obj, id item, NSInteger idx) {
                 [self goController:@"BN_UserPwdChangeController" title:@"修改密码"];
                 
@@ -179,7 +182,7 @@
         _btnRegister = ({
             UIButton *btn = [UIButton buttonWithType:UIButtonTypeCustom];
             [btn setTitle:@"新用户?点击注册" forState:UIControlStateNormal];
-            [btn setTitleColor:kC_ThemeCOLOR forState:UIControlStateNormal];
+            [btn setTitleColor:UIColor.themeColor forState:UIControlStateNormal];
             [btn addActionHandler:^(id obj, id item, NSInteger idx) {
                 [self goController:@"BN_UserRegisterController" title:@"注册"];
 

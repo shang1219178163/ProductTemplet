@@ -17,6 +17,6 @@
 @property (nonatomic) BackgroundTaskManager * bgTask;
 @property (nonatomic) NSMutableArray *myLocationArray;
 
-+(id)sharedModel;
++(id)shared;
 
 @end

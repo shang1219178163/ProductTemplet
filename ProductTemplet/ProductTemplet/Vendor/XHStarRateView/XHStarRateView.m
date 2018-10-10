@@ -93,7 +93,7 @@ typedef void(^completeBlock)(CGFloat currentScore);
 - (UIView *)createStarViewWithImage:(NSString *)imageName {
     UIView *view = [[UIView alloc] initWithFrame:self.bounds];
     view.clipsToBounds = YES;
-    view.backgroundColor = [UIColor clearColor];
+    view.backgroundColor = UIColor.clearColor;
     for (NSInteger i = 0; i < self.numberOfStars; i ++)
     {
         UIImageView *imageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:imageName]];

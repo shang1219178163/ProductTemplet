@@ -32,7 +32,7 @@
 #import <UIKit/UIKit.h>
 #import "AAOptions.h"
 
-#define  kH_ChartView   [UIScreen mainScreen].bounds.size.width*0.66
+#define  kH_ChartView   UIScreen.mainScreen.bounds.size.width*0.66
 
 @protocol AAChartViewDidFinishLoadDelegate<NSObject>
 

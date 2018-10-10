@@ -18,7 +18,7 @@
     BOOL validationResult = [_inputValidator validateInput:self error:&error];
     
     if (!validationResult) {
-        DDLog(@"%@\n%@",error.localizedDescription,error.localizedFailureReason);
+        NSLog(@"%@\n%@",error.localizedDescription,error.localizedFailureReason);
 
     }
     return validationResult;

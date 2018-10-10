@@ -26,7 +26,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    self.view.backgroundColor = [UIColor greenColor];//测试阶段区分视图
+    self.view.backgroundColor = UIColor.greenColor;//测试阶段区分视图
     
 }
 

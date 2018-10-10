@@ -30,7 +30,7 @@
 @property (nonatomic) CLLocationCoordinate2D myLocation;
 @property (nonatomic) CLLocationAccuracy myLocationAccuracy;
 
-+ (CLLocationManager *)sharedLocationManager;
++ (CLLocationManager *)shared;
 
 - (void)startLocationTracking;
 - (void)stopLocationTracking;

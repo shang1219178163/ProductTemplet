@@ -8,6 +8,8 @@
 
 #import "LockCompareController.h"
 
+#import "UIView+Helper.h"
+
 #import <pthread.h>
 #import <libkern/OSAtomic.h>
 #import <QuartzCore/QuartzCore.h>
@@ -46,7 +48,7 @@ int TimeCount = 0;
         button.frame = CGRectMake(0, 0, 200, 50);
         button.center = CGPointMake(self.view.frame.size.width / 2, i * 60 + 160);
         button.tag = pow(10, i + 3);
-        [button setTitleColor:[UIColor redColor] forState:UIControlStateNormal];
+        [button setTitleColor:UIColor.redColor forState:UIControlStateNormal];
         [button setTitle:[NSString stringWithFormat:@"run (%d)",(int)button.tag] forState:UIControlStateNormal];
         [button addTarget:self action:@selector(tap:) forControlEvents:UIControlEventTouchUpInside];
         [self.view addSubview:button];

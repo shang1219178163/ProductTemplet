@@ -29,7 +29,7 @@
     // Do any additional setup after loading the view.
     [self configureTableView];
 
-    self.view.backgroundColor = [UIColor yellowColor];
+    self.view.backgroundColor = UIColor.yellowColor;
     
     for (NSInteger i = 0; i < 20; i++) {
         FactoryDetailInfoModel * model = [[FactoryDetailInfoModel alloc]init];
@@ -67,13 +67,13 @@
         WHKTableViewOneCell * cell = [WHKTableViewOneCell cellWithTableView:tableView];
         
         cell.textLabel.text = [self.dataList[indexPath.row] title];
-        cell.textLabel.textColor = [UIColor redColor];
+        cell.textLabel.textColor = UIColor.redColor;
         
         return cell;
     }else{
         WHKTableViewOneCell * cell = [WHKTableViewOneCell cellWithTableView:tableView identifier:@"cell"];
    
-        cell.textLabel.textColor = [UIColor redColor];
+        cell.textLabel.textColor = UIColor.redColor;
         cell.textLabel.text = @"没有符合条件的数据,去看看其他内容吧!";
         return cell;
     }

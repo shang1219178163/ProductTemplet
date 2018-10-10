@@ -8,6 +8,7 @@
 
 #import "BN_BaseViewController.h"
 
+#import "UIViewController+Helper.h"
 #import "UITableView+Helper.h"
 
 
@@ -40,7 +41,7 @@ NSString * const kAsterisk          = @"*";
             layout.footerReferenceSize = CGSizeMake(CGRectGetWidth(self.view.bounds), 20);
             
             UICollectionView *collectionView = [[UICollectionView alloc]initWithFrame:self.view.bounds collectionViewLayout:layout];
-            collectionView.backgroundColor = [UIColor whiteColor];
+            collectionView.backgroundColor = UIColor.whiteColor;
             collectionView.scrollsToTop = NO;
             collectionView.showsVerticalScrollIndicator = NO;
             collectionView.showsHorizontalScrollIndicator = NO;
@@ -63,9 +64,9 @@ NSString * const kAsterisk          = @"*";
             tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
             tableView.separatorInset = UIEdgeInsetsMake(0, 0, 0, 0);
             tableView.separatorStyle = UITableViewCellSeparatorStyleSingleLine;
-            //        tableView.separatorColor = kC_LineColor;
-            tableView.backgroundColor = [UIColor greenColor];
-            //        tableView.backgroundColor = kC_BackgroudColor;
+            //        tableView.separatorColor = UIColor.lineColor;
+            tableView.backgroundColor = UIColor.greenColor;
+            //        tableView.backgroundColor = UIColor.backgroudColor;
             
             tableView.estimatedRowHeight = 0.0;
             tableView.estimatedSectionHeaderHeight = 0.0;
@@ -74,7 +75,7 @@ NSString * const kAsterisk          = @"*";
             
             //背景视图
 //            UIView *view = [[UIView alloc]initWithFrame:tableView.bounds];
-//            view.backgroundColor = [UIColor cyanColor];
+//            view.backgroundColor = UIColor.cyanColor;
 //            tableView.backgroundView = view;
             
             tableView;
@@ -90,9 +91,9 @@ NSString * const kAsterisk          = @"*";
 //        _tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
 //        _tableView.separatorInset = UIEdgeInsetsMake(0, 0, 0, 0);
 //        _tableView.separatorStyle = UITableViewCellSeparatorStyleSingleLine;
-////        _tableView.separatorColor = kC_LineColor;
-//        _tableView.backgroundColor = [UIColor greenColor];
-////        _tableView.backgroundColor = kC_BackgroudColor;
+////        _tableView.separatorColor = UIColor.lineColor;
+//        _tableView.backgroundColor = UIColor.greenColor;
+////        _tableView.backgroundColor = UIColor.backgroudColor;
 //
 //        _tableView.estimatedRowHeight = 0.0;
 //        _tableView.estimatedSectionHeaderHeight = 0.0;
@@ -122,7 +123,7 @@ NSString * const kAsterisk          = @"*";
     self.tabBarController.tabBar.translucent = NO;
     self.navigationController.navigationBar.translucent = NO;
     
-    self.view.backgroundColor = [UIColor whiteColor];
+    self.view.backgroundColor = UIColor.whiteColor;
     
     self.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"" style:UIBarButtonItemStyleDone target:nil action:nil];
     
@@ -170,7 +171,6 @@ NSString * const kAsterisk          = @"*";
     return array;
 }
 
-
 /**
  模型获取
  
@@ -181,101 +181,5 @@ NSString * const kAsterisk          = @"*";
     return model;
 }
 
-
-#pragma --tableView增删
-- (void)handleRowIndexPaths:(NSArray *)indexPaths isInsert:(BOOL)isInsert{
-    if (isInsert == YES) {
-        [self.tableView insertIndexPaths:indexPaths rowAnimation:UITableViewRowAnimationFade];
-        
-    }else{
-        [self.tableView deleteRowsAtIndexPaths:indexPaths withRowAnimation:UITableViewRowAnimationFade];
-        
-    }
-}
-
-- (id)itemForElement:(BNItemElement)element indexPath:(NSIndexPath *)indexPath{
-    
-    NSDictionary * itemdict = self.dataList[indexPath.section][indexPath.row];
-    NSString * title = [itemdict.allKeys firstObject];//字典只有一个键值对
-    NSString * content = [itemdict.allValues firstObject];//字典只有一个键值对
-
-    NSArray * itemArray = [title componentsSeparatedByString:@","];
-
-    NSInteger index = (NSInteger)element;
-//    DDLog(@"index__%@",@(index));
-//    DDLog(@"BNItemElement__%@",@((BNItemElement)1));
-
-    NSMutableArray * marr = [NSMutableArray arrayWithCapacity:0];
-    id obj = @"";
-    switch (element) {
-        case BNItemElementTitle://NSAttributedString
-        {
-            BOOL isMust = ([itemArray[index] containsString:kAsterisk]) ? YES : NO;
-            obj = [self getAttringByPrefix:kAsterisk content:itemArray[index] must:@(isMust)];
-        }
-            break;
-        case BNItemElementCellSelectedStyle:
-        {
-           
-            NSString * string = itemArray[index];
-            obj = [string stringByReplacingOccurrencesOfString:@" " withString:@""];
-
-        }
-            break;
-        case BNItemElementRightViewHidden:
-        {
-            NSString * string = itemArray[index];
-            string = [string stringByReplacingOccurrencesOfString:@" " withString:@""];
-            obj = @([self stringToBool:string]);
-
-        }
-            break;
-        default://字符串
-            break;
-    }
-    
-    [marr addObject:obj];
-    [marr addObject:content];
-    
-//    return obj;
-    return marr;
-
-}
-
-- (NSString *)getPlaceholder:(NSString *)placeHolder indexPath:(NSIndexPath *)indexPath{
-    
-    NSString * string = @"";
-    
-    NSString *type = [[self itemForElement:BNItemElementCellSelectedStyle indexPath:indexPath] firstObject];
-    BNCellSelectedStyle style = (BNCellSelectedStyle)[type integerValue];
-    switch (style) {
-        case BNCellSelectedStyleEditNO:
-        {
-
-        }
-            break;
-        case BNCellSelectedStyleEditYES:
-        {
-            string = placeHolder;
-
-        }
-            break;
-        case BNCellSelectedStyleDatePicker:
-        {
-            string = @"请选择日期";
-
-        }
-            break;
-        case BNCellSelectedStylePickerView:
-        {
-            string = @"请选择";
-
-        }
-            break;
-        default:
-            break;
-    }
-    return string;
-}
 
 @end

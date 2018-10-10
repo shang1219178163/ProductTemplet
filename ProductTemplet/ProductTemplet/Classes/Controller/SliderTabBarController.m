@@ -8,6 +8,7 @@
 
 #import "SliderTabBarController.h"
 
+#import "BN_Globle.h"
 #import "BN_TabBarViewZero.h"
 
 #import "BN_Noti.h"
@@ -45,12 +46,12 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-    [self createBarBtnItemWithTitle:@"right" imageName:nil isLeft:NO isHidden:NO handler:^(id obj, id item, NSInteger idx) {
-        MBProgressHUD * hud = [MBProgressHUD showHUDAddedToView:nil animated:NO];
-        [hud hideAnimated:YES afterDelay:1];
-        
-        [hud getViewLayer];
-    }];
+//    [self createBarBtnItemWithTitle:@"right" imageName:nil isLeft:NO isHidden:NO handler:^(id obj, id item, NSInteger idx) {
+//        MBProgressHUD * hud = [MBProgressHUD showHUDAddedToView:nil animated:NO];
+//        [hud hideAnimated:YES afterDelay:1];
+//
+//        [hud getViewLayer];
+//    }];
     
     [self.view addSubview:self.tabBarView];
    
@@ -119,7 +120,7 @@
 
         cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:cellIdentifier];
     }
-    //    cell.backgroundColor = [UIColor orangeColor];
+    //    cell.backgroundColor = UIColor.orangeColor;
 
     if ([tableView isEqual:self.tabBarView.scrollTableViews[self.tabBarView.currentPage%2]]) {
         cell.textLabel.text = self.dataList[self.tabBarView.currentPage][indexPath.row];

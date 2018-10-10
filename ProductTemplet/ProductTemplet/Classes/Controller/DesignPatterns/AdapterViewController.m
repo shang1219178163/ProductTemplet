@@ -8,6 +8,9 @@
 
 #import "AdapterViewController.h"
 
+#import "NSArray+Helper.h"
+#import "UIView+Helper.h"
+
 #import "AVPlayerProtocol.h"
 #import "AVPlayer.h"
 #import "PlayerAdapter.h"
@@ -47,11 +50,11 @@
     }];
     
     
-    containView.backgroundColor = [UIColor orangeColor];
+    containView.backgroundColor = UIColor.orangeColor;
     [self.view addSubview:containView];
     
     rect = CGRectMake((kScreen_width - 200)/2.0, CGRectGetMaxY(containView.frame)+20, 200, 30);
-    UILabel * label = [UIView createLabelWithRect:rect text:@"tips" textColor:nil tag:0 patternType:@"0" font:16 backgroudColor:[UIColor greenColor] alignment:NSTextAlignmentCenter];
+    UILabel * label = [UIView createLabelWithRect:rect text:@"tips" textColor:nil tag:0 patternType:@"0" font:16 backgroudColor:UIColor.greenColor alignment:NSTextAlignmentCenter];
     [self.view addSubview:label];
     self.lbState = label;
     

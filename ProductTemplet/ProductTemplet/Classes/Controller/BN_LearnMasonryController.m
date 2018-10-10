@@ -186,7 +186,7 @@
     if (!_viewA) {
         _viewA  =  ({
             UIView *view = [[UIView alloc] init];
-            view.backgroundColor = [UIColor redColor];
+            view.backgroundColor = UIColor.redColor;
             
             view;
         });
@@ -198,7 +198,7 @@
     if (!_viewB) {
         _viewB  =  ({
             UIView *view = [[UIView alloc] init];
-            view.backgroundColor = [UIColor greenColor];
+            view.backgroundColor = UIColor.greenColor;
             
             view;
         });
@@ -210,7 +210,7 @@
     if (!_viewC) {
         _viewC  =  ({
             UIView *view = [[UIView alloc] init];
-            view.backgroundColor = [UIColor yellowColor];
+            view.backgroundColor = UIColor.yellowColor;
             
             view;
         });
@@ -222,7 +222,7 @@
     if (!_scrollView) {
         _scrollView = ({
             UIScrollView * scrollView = [[UIScrollView alloc] initWithFrame:CGRectZero];
-            scrollView.backgroundColor = [UIColor cyanColor];
+            scrollView.backgroundColor = UIColor.cyanColor;
             scrollView.pagingEnabled = YES;
             scrollView.delegate = self;
             
@@ -237,7 +237,7 @@
     if (!_containerView) {
         _containerView  =  ({
             UIView *view = [[UIView alloc] init];
-            view.backgroundColor = [UIColor orangeColor];
+            view.backgroundColor = UIColor.orangeColor;
             
             view;
         });

@@ -37,7 +37,7 @@
 //    imgView.animationRepeatCount = 0;
 //    [imgView startAnimating];
     
-    imgView.backgroundColor = [UIColor redColor];
+    imgView.backgroundColor = UIColor.redColor;
     
 //    [self.view addSubview:imgView];
 }

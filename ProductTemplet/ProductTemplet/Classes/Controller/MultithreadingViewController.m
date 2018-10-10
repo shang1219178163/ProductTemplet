@@ -8,6 +8,7 @@
 
 #import "MultithreadingViewController.h"
 
+#import "UIViewController+Helper.h"
 #import "WHKTableViewOneCell.h"
 
 @interface MultithreadingViewController ()<UITableViewDataSource,UITableViewDelegate>
@@ -89,7 +90,7 @@
     WHKTableViewOneCell * cell = [WHKTableViewOneCell cellWithTableView:tableView];
     
     cell.textLabel.text = dict[kItem_title];
-    cell.textLabel.textColor = kC_ThemeCOLOR;
+    cell.textLabel.textColor = UIColor.themeColor;
     
     return cell;
     
