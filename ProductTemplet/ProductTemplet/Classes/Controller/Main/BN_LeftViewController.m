@@ -11,9 +11,9 @@
 #import "ZYSliderViewController.h"
 
 @interface BN_LeftViewController () <UITableViewDelegate,UITableViewDataSource>
-{
-    NSArray *_dataSource;
-}
+
+@property (nonatomic, strong) NSArray *dataSource;
+
 @end
 
 @implementation BN_LeftViewController

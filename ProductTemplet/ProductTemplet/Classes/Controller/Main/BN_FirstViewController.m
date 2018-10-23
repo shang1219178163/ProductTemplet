@@ -8,6 +8,9 @@
 
 #import "BN_FirstViewController.h"
 
+#import "UIViewController+ZYSliderViewController.h"
+#import "ZYSliderViewController.h"
+
 #import "UIViewController+Helper.h"
 #import "NSArray+Helper.h"
 
@@ -110,7 +113,19 @@
     [self registerForKVO];
     
     [self bindData];
+    
+    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(showLeftAction)];
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemCompose target:self action:@selector(showRightAction)];
 }
+
+- (void)showLeftAction{
+    [[self sliderViewController] showLeft];
+}
+
+- (void)showRightAction{
+    [[self sliderViewController] showRight];
+}
+
 
 - (void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];

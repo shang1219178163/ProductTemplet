@@ -8,10 +8,8 @@
 
 #import "AppDelegate.h"
 
-
 #import "UIApplication+Helper.h"
 #import "UIApplication+Other.h"
-
 
 #import "ZYSliderViewController.h"
 
@@ -32,6 +30,7 @@
 //    controller = [NSClassFromString(@"LiveLikeController") new];
     
     ZYSliderViewController * rootVC = [[ZYSliderViewController alloc]initWithMainViewController:controller leftViewController:controllerLeft rightViewController:controllerRight];
+    
     self.window.rootViewController = rootVC;
 
     self.window.backgroundColor = UIColor.whiteColor;

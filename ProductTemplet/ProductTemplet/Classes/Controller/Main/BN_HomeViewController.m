@@ -9,8 +9,6 @@
 #import "BN_HomeViewController.h"
 
 #import "BN_BaseNavigationController.h"
-#import "UIViewController+ZYSliderViewController.h"
-#import "ZYSliderViewController.h"
 
 #import "BN_Globle.h"
 #import "NSObject+Helper.h"
@@ -24,11 +22,9 @@ NSString *const CYLTabBarItemController = @"CYLTabBarItemController";
 
 @implementation BN_HomeViewController
 
-- (instancetype)init
-{
+- (instancetype)init{
     self = [super init];
     if (self) {
-        
         [self setupTabBarController];
         
 //        self.tabBar.unselectedItemTintColor = UIColor.blackColor;
@@ -51,19 +47,8 @@ NSString *const CYLTabBarItemController = @"CYLTabBarItemController";
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    
-//    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(showLeftAction)];
-//    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemCompose target:self action:@selector(showRightAction)];
+   
 }
-
-- (void)showLeftAction{
-    [[self sliderViewController] showLeft];
-}
-
-- (void)showRightAction{
-    [[self sliderViewController] showRight];
-}
-
 
 - (void)setupTabBarController {
     /// 设置TabBar属性数组
