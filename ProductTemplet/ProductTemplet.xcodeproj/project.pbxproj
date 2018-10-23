@@ -159,9 +159,6 @@
 		51364C9D20860822005A20E7 /* PictureController.m in Sources */ = {isa = PBXBuildFile; fileRef = 51364C7420860821005A20E7 /* PictureController.m */; };
 		51364CA020860822005A20E7 /* Utilities_DM.m in Sources */ = {isa = PBXBuildFile; fileRef = 51364C7A20860821005A20E7 /* Utilities_DM.m */; };
 		51364CCA20860950005A20E7 /* BN_SimpleDataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 51364CC920860950005A20E7 /* BN_SimpleDataModel.m */; };
-		51364D5F20860B12005A20E7 /* b27_icon_star_gray@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 51364D5B20860B11005A20E7 /* b27_icon_star_gray@2x.png */; };
-		51364D6020860B12005A20E7 /* b27_icon_star_yellow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 51364D5C20860B11005A20E7 /* b27_icon_star_yellow@2x.png */; };
-		51364D6120860B12005A20E7 /* XHStarRateView.m in Sources */ = {isa = PBXBuildFile; fileRef = 51364D5E20860B11005A20E7 /* XHStarRateView.m */; };
 		51364DDF20860BE0005A20E7 /* MAMapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 51364DC520860BE0005A20E7 /* MAMapKit.framework */; };
 		51364DE020860BE0005A20E7 /* AMapFoundationKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 51364DC720860BE0005A20E7 /* AMapFoundationKit.framework */; };
 		51364DE120860BE0005A20E7 /* AMapLocationKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 51364DC920860BE0005A20E7 /* AMapLocationKit.framework */; };
@@ -463,7 +460,6 @@
 		518B5B532086C9FC002FDD33 /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 518B5B522086C9FC002FDD33 /* ImageIO.framework */; };
 		518B5B582086CA32002FDD33 /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 518B5B542086CA32002FDD33 /* libsqlite3.0.tbd */; };
 		518B5B592086CA32002FDD33 /* libstdc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 518B5B552086CA32002FDD33 /* libstdc++.tbd */; };
-		518B5B5A2086CA32002FDD33 /* libstdc++.6.0.9.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 518B5B562086CA32002FDD33 /* libstdc++.6.0.9.tbd */; };
 		518B5B5B2086CA32002FDD33 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 518B5B572086CA32002FDD33 /* libsqlite3.tbd */; };
 		518B5B5D2086CA3D002FDD33 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 518B5B5C2086CA3B002FDD33 /* libz.tbd */; };
 		518B5B5F2086CA49002FDD33 /* libicucore.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 518B5B5E2086CA49002FDD33 /* libicucore.tbd */; };
@@ -795,10 +791,6 @@
 		51364C7A20860821005A20E7 /* Utilities_DM.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Utilities_DM.m; sourceTree = "<group>"; };
 		51364CC820860950005A20E7 /* BN_SimpleDataModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BN_SimpleDataModel.h; sourceTree = "<group>"; };
 		51364CC920860950005A20E7 /* BN_SimpleDataModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BN_SimpleDataModel.m; sourceTree = "<group>"; };
-		51364D5B20860B11005A20E7 /* b27_icon_star_gray@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "b27_icon_star_gray@2x.png"; sourceTree = "<group>"; };
-		51364D5C20860B11005A20E7 /* b27_icon_star_yellow@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "b27_icon_star_yellow@2x.png"; sourceTree = "<group>"; };
-		51364D5D20860B11005A20E7 /* XHStarRateView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHStarRateView.h; sourceTree = "<group>"; };
-		51364D5E20860B11005A20E7 /* XHStarRateView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHStarRateView.m; sourceTree = "<group>"; };
 		51364DC520860BE0005A20E7 /* MAMapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = MAMapKit.framework; sourceTree = "<group>"; };
 		51364DC720860BE0005A20E7 /* AMapFoundationKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AMapFoundationKit.framework; sourceTree = "<group>"; };
 		51364DC920860BE0005A20E7 /* AMapLocationKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AMapLocationKit.framework; sourceTree = "<group>"; };
@@ -1376,7 +1368,6 @@
 		518B5B522086C9FC002FDD33 /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = System/Library/Frameworks/ImageIO.framework; sourceTree = SDKROOT; };
 		518B5B542086CA32002FDD33 /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
 		518B5B552086CA32002FDD33 /* libstdc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libstdc++.tbd"; path = "usr/lib/libstdc++.tbd"; sourceTree = SDKROOT; };
-		518B5B562086CA32002FDD33 /* libstdc++.6.0.9.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libstdc++.6.0.9.tbd"; path = "usr/lib/libstdc++.6.0.9.tbd"; sourceTree = SDKROOT; };
 		518B5B572086CA32002FDD33 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
 		518B5B5C2086CA3B002FDD33 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
 		518B5B5E2086CA49002FDD33 /* libicucore.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libicucore.tbd; path = usr/lib/libicucore.tbd; sourceTree = SDKROOT; };
@@ -1622,7 +1613,6 @@
 				518B5B5D2086CA3D002FDD33 /* libz.tbd in Frameworks */,
 				518B5B582086CA32002FDD33 /* libsqlite3.0.tbd in Frameworks */,
 				518B5B592086CA32002FDD33 /* libstdc++.tbd in Frameworks */,
-				518B5B5A2086CA32002FDD33 /* libstdc++.6.0.9.tbd in Frameworks */,
 				518B5B5B2086CA32002FDD33 /* libsqlite3.tbd in Frameworks */,
 				518B5B532086C9FC002FDD33 /* ImageIO.framework in Frameworks */,
 				518B5B512086C9F1002FDD33 /* JavaScriptCore.framework in Frameworks */,
@@ -1701,7 +1691,6 @@
 		513646EB208604DD005A20E7 /* Vendor */ = {
 			isa = PBXGroup;
 			children = (
-				51364D5A20860B11005A20E7 /* XHStarRateView */,
 				515C67C62137C55700D5EA94 /* BAddressPickerController */,
 				51B7AC64211451CE001D671A /* PopoverView */,
 				5167FF1220F5C0EC004A810C /* PulsingHalo */,
@@ -2243,17 +2232,6 @@
 				5175C93B20C13DF3009EA86E /* Teacher.m */,
 			);
 			path = DataModel;
-			sourceTree = "<group>";
-		};
-		51364D5A20860B11005A20E7 /* XHStarRateView */ = {
-			isa = PBXGroup;
-			children = (
-				51364D5B20860B11005A20E7 /* b27_icon_star_gray@2x.png */,
-				51364D5C20860B11005A20E7 /* b27_icon_star_yellow@2x.png */,
-				51364D5D20860B11005A20E7 /* XHStarRateView.h */,
-				51364D5E20860B11005A20E7 /* XHStarRateView.m */,
-			);
-			path = XHStarRateView;
 			sourceTree = "<group>";
 		};
 		51364DC320860BE0005A20E7 /* AMap */ = {
@@ -3231,7 +3209,6 @@
 				518B5B5C2086CA3B002FDD33 /* libz.tbd */,
 				518B5B542086CA32002FDD33 /* libsqlite3.0.tbd */,
 				518B5B572086CA32002FDD33 /* libsqlite3.tbd */,
-				518B5B562086CA32002FDD33 /* libstdc++.6.0.9.tbd */,
 				518B5B552086CA32002FDD33 /* libstdc++.tbd */,
 				518B5B522086C9FC002FDD33 /* ImageIO.framework */,
 				518B5B502086C9F0002FDD33 /* JavaScriptCore.framework */,
@@ -3396,11 +3373,9 @@
 				5136498420860655005A20E7 /* btn_selected_NO.png in Resources */,
 				513649C020860655005A20E7 /* img_houseOut_N.png in Resources */,
 				513649BD20860655005A20E7 /* img_houseCome_H.png in Resources */,
-				51364D5F20860B12005A20E7 /* b27_icon_star_gray@2x.png in Resources */,
 				513649B220860655005A20E7 /* img_home_currentState_98.png in Resources */,
 				513649A020860655005A20E7 /* img_dialog_update.png in Resources */,
 				513649D520860655005A20E7 /* img_report_animalChildbirth_estimated.png in Resources */,
-				51364D6020860B12005A20E7 /* b27_icon_star_yellow@2x.png in Resources */,
 				513649C520860655005A20E7 /* img_imm_settings.png in Resources */,
 				513649D420860655005A20E7 /* img_report_animalChildbirth.png in Resources */,
 				51B9CD1E20A0631F0096A540 /* img_arrowDown_orange.png in Resources */,
@@ -3708,7 +3683,6 @@
 				515CC9BC20B6AD72004AE27C /* BN_CTReusableViewZero.m in Sources */,
 				515C69592137CA2600D5EA94 /* BN_FoldHeaderFooterView.m in Sources */,
 				51364BD9208607E1005A20E7 /* BN_CTViewCellTwo.m in Sources */,
-				51364D6120860B12005A20E7 /* XHStarRateView.m in Sources */,
 				516F853A215DF482008E62B3 /* NSDictionary+Helper.m in Sources */,
 				516F8517215DF482008E62B3 /* UIApplication+Helper.m in Sources */,
 				515C695E2137CA2600D5EA94 /* BN_ItemsView.m in Sources */,
