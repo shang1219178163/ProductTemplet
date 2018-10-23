@@ -150,10 +150,10 @@ NSString * NSStringFromPlacemark(CLPlacemark *placemark) {
     self.locationManager.locationTimeout = 2;
     self.locationManager.reGeocodeTimeout = 2;
     // 带逆地理（返回坐标和地址信息）。将下面代码中的 YES 改成 NO ，则不会返回地址信息。
-    kWeakSelf(self);
+    @weakify(self);
     [self.locationManager requestLocationWithReGeocode:reGeocode completionBlock:^(CLLocation *location, AMapLocationReGeocode *regeocode, NSError *error) {
-        kStrongSelf(weakself);
-        if (strongSelf.locationHandler) strongSelf.locationHandler(location, regeocode, nil, error);
+        @strongify(self);
+        if (self.locationHandler) self.locationHandler(location, regeocode, nil, error);
         
         if (error){
             DDLog(@"locError:{%ld - %@};", (long)error.code, error.localizedDescription);
