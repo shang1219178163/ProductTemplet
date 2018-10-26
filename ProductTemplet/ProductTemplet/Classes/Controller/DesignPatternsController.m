@@ -63,7 +63,7 @@
                           
                           },
                       @{
-                          kItem_title       :   @"Flyweight/享元模式",
+                          kItem_title       :   @"Flyweight/享元",
                           kItem_controller  :   @"FlyweightViewController",
                           
                           },
