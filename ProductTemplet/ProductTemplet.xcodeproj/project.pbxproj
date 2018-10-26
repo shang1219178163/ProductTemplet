@@ -324,6 +324,8 @@
 		518B906D217F2110007E7343 /* left_slider_back@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 518B9069217F2110007E7343 /* left_slider_back@3x.png */; };
 		51954AB520A12DCC00B066C8 /* CycleLabelViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 51954AB420A12DCC00B066C8 /* CycleLabelViewController.m */; };
 		51A4A0092182AF9D00BA9923 /* SortViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 51A4A0082182AF9D00BA9923 /* SortViewController.m */; };
+		51A4A00C2182E1AB00BA9923 /* BlockViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 51A4A00B2182E1AB00BA9923 /* BlockViewController.m */; };
+		51A4A1272182FB7900BA9923 /* EntryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 51A4A1262182FB7900BA9923 /* EntryViewController.m */; };
 		51B7AC6B211451CE001D671A /* PopoverAction.m in Sources */ = {isa = PBXBuildFile; fileRef = 51B7AC68211451CE001D671A /* PopoverAction.m */; };
 		51B7AC6C211451CE001D671A /* PopoverView.m in Sources */ = {isa = PBXBuildFile; fileRef = 51B7AC69211451CE001D671A /* PopoverView.m */; };
 		51B7AC6D211451CE001D671A /* PopoverViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 51B7AC6A211451CE001D671A /* PopoverViewCell.m */; };
@@ -836,6 +838,10 @@
 		51954AB420A12DCC00B066C8 /* CycleLabelViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CycleLabelViewController.m; sourceTree = "<group>"; };
 		51A4A0072182AF9D00BA9923 /* SortViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SortViewController.h; sourceTree = "<group>"; };
 		51A4A0082182AF9D00BA9923 /* SortViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SortViewController.m; sourceTree = "<group>"; };
+		51A4A00A2182E1AB00BA9923 /* BlockViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BlockViewController.h; sourceTree = "<group>"; };
+		51A4A00B2182E1AB00BA9923 /* BlockViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BlockViewController.m; sourceTree = "<group>"; };
+		51A4A1252182FB7900BA9923 /* EntryViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EntryViewController.h; sourceTree = "<group>"; };
+		51A4A1262182FB7900BA9923 /* EntryViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EntryViewController.m; sourceTree = "<group>"; };
 		51B7AC65211451CE001D671A /* PopoverView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PopoverView.h; sourceTree = "<group>"; };
 		51B7AC66211451CE001D671A /* PopoverViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PopoverViewCell.h; sourceTree = "<group>"; };
 		51B7AC67211451CE001D671A /* PopoverAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PopoverAction.h; sourceTree = "<group>"; };
@@ -1065,6 +1071,10 @@
 				5162F6ED20BF8A2D009A6253 /* MultithreadingViewController.m */,
 				51A4A0072182AF9D00BA9923 /* SortViewController.h */,
 				51A4A0082182AF9D00BA9923 /* SortViewController.m */,
+				51A4A00A2182E1AB00BA9923 /* BlockViewController.h */,
+				51A4A00B2182E1AB00BA9923 /* BlockViewController.m */,
+				51A4A1252182FB7900BA9923 /* EntryViewController.h */,
+				51A4A1262182FB7900BA9923 /* EntryViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -2280,6 +2290,7 @@
 				515C67E52137C55700D5EA94 /* BCurrentCityCell.m in Sources */,
 				51B9CD1220A051AA0096A540 /* BN_RightViewController.m in Sources */,
 				51258C1A215E38FD009CDEE3 /* NSBundle+Language.m in Sources */,
+				51A4A1272182FB7900BA9923 /* EntryViewController.m in Sources */,
 				51698C862137C0440069C2B2 /* WHKReuestSevice.m in Sources */,
 				515CC98C20B6AAF2004AE27C /* AASeriesElement.m in Sources */,
 				515CC97920B6AAF2004AE27C /* AAYAxis.m in Sources */,
@@ -2310,6 +2321,7 @@
 				51698C4021376F9E0069C2B2 /* BINAccountTool.m in Sources */,
 				5169DF222088235900B025C3 /* BN_ReGeocodeAnnotation.m in Sources */,
 				51862E7020BB9E810080BD4E /* StrategyViewController.m in Sources */,
+				51A4A00C2182E1AB00BA9923 /* BlockViewController.m in Sources */,
 				515CC97020B6AAF2004AE27C /* AAAreaspline.m in Sources */,
 				51698C842137C0440069C2B2 /* WHKRequestHelper.m in Sources */,
 				5169DF0D208822B200B025C3 /* BN_FourthViewController.m in Sources */,

@@ -16,12 +16,13 @@ PODS:
   - AFNetworking/UIKit (3.2.1):
     - AFNetworking/NSURLSession
   - Aspects (1.4.1)
-  - BN_Category (1.2.6):
+  - BN_Category (1.2.7):
     - AESCrypt-ObjC
     - BN_Globle
     - BN_Kit
     - FLAnimatedImage
     - GTMBase64
+    - IQKeyboardManager
     - MBProgressHUD
     - MJExtension
     - SDWebImage
@@ -29,10 +30,10 @@ PODS:
     - YYModel
   - BN_CollectionView (1.1.4):
     - BN_Category
-  - BN_Globle (1.1.5)
-  - BN_Kit (1.1.9):
+  - BN_Globle (1.1.6)
+  - BN_Kit (1.2.0):
     - BN_Globle
-  - BN_TableViewCell (1.1.9):
+  - BN_TableViewCell (1.2.0):
     - BN_Category
     - BN_Globle
     - BN_Kit
@@ -45,7 +46,7 @@ PODS:
     - BN_TableViewCell
     - BN_View
     - BN_ViewHeight
-  - BN_View (1.2.1):
+  - BN_View (1.2.2):
     - BN_Category
     - BN_Globle
     - BN_Kit
@@ -219,13 +220,13 @@ SPEC CHECKSUMS:
   AESCrypt-ObjC: 6d930ff891a61b90505855e9447959a84be80715
   AFNetworking: b6f891fdfaed196b46c7a83cf209e09697b94057
   Aspects: 7595ba96a6727a58ebcbfc954497fc5d2fdde546
-  BN_Category: e6708663c107f8a14a23c99cc8c3af5c42d355d5
+  BN_Category: 8c89e32e2c70a3611d9ffd9e7da8b48a9b5f933f
   BN_CollectionView: f07450120cbbdd9aac723a6a96650d5fa6975e68
-  BN_Globle: 51266d54410fcd557bed0a76cc069f2f39fc9fa3
-  BN_Kit: 3901db4d520329ba9d7e2e29ff479095598aaca3
-  BN_TableViewCell: 467a8fd51793f0e2c7ac2b62d223d655d0e916eb
+  BN_Globle: c0f21f8e58fc83b75013f183430dfc53fc1a088d
+  BN_Kit: 8cc0855b3cb5037a487848e899129e07ea4d3ecf
+  BN_TableViewCell: 33e851463fb26d1a8f1c618a0b203c316b0eaca6
   BN_Utils: 75097780c96091770c0c4a3e5ff42c9b7ee32fea
-  BN_View: cc1f35bf0565379931dc657835597a226e11b361
+  BN_View: 60d55b3d935d1b27f66a5554bbae6235fe902eff
   BN_ViewHeight: bae541db5f0f33da70016c182f67d892beda38f6
   CTAssetsPickerController: b1d1d50ab87cf6b8b13531de5f4530482e7e53ed
   CYLTabBarController: ba33f518d5cc33dc4b6cd29103eda93317c0e40e

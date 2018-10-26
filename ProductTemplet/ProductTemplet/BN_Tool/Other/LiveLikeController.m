@@ -40,7 +40,7 @@
     backImage.frame = self.view.bounds;
     [self.view addSubview:backImage];
     
-    UIButton * btn = [UIView createBtnWithRect:CGRectMake(300, 667.0 - 75, 40, 40) title:@"like" font:16 image:@"click" tag:100 patternType:@"0" target:self aSelector:@selector(handActionSender:)];
+    UIButton * btn = [UIView createBtnWithRect:CGRectMake(300, 667.0 - 75, 40, 40) title:@"like" font:16 image:@"click" tag:100 type:@0 target:self aSelector:@selector(handActionSender:)];
     [self.view addSubview:btn];
     
     [self.view addSubview:self.emitterVeiw];

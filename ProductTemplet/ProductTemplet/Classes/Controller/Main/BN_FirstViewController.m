@@ -168,7 +168,7 @@
             
             rect = CGRectMake(x, y, w, h);
             
-            UIView * btnView = [UIView createBtnViewWithRect:rect imgName:array[1] imgHeight:CGRectGetHeight(rect)/2.0 title:array[0] titleColor:UIColor.blackColor patternType:@"0"];
+            UIView * btnView = [UIView createBtnViewWithRect:rect imgName:array[1] imgHeight:CGRectGetHeight(rect)/2.0 title:array[0] titleColor:UIColor.blackColor type:@0];
             btnView.tag = kTAG_VIEW+i+50;
             [backgroudView addSubview:btnView];
             

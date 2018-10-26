@@ -123,6 +123,17 @@
                           
                           },
                       @{
+                          kItem_title   :   @"block循环引用完美解决方案",
+                          kItem_controller  :   @"BlockViewController",
+                          
+                          },
+                      @{
+                          kItem_title   :   @"录入类界面封装",
+                          kItem_controller  :   @"EntryViewController",
+                          
+                          },
+                      
+                      @{
                           kItem_title   :   @"Sort",
                           kItem_controller  :   @"SortViewController",
                           
