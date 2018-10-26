@@ -104,7 +104,7 @@
     }
     else{
         NSString *msg = [NSString stringWithFormat:@"请开启始终定位(设置->隐私->定位服务->选择%@->始终)",UIApplication.app_Name];
-        [UIApplication.rootController showAlertWithTitle:@"定位服务" msg:msg actionTitleList:@[kActionTitle_Sure] handler:nil];
+        [UIApplication.rootController showAlertTitle:@"定位服务" msg:msg actionTitleList:@[kActionTitle_Sure] handler:nil];
         
     }
 }
@@ -195,13 +195,13 @@
     {
         case kCLErrorNetwork: // general, network-related error
         {
-            [UIApplication.rootController showAlertWithTitle:@"网络错误" msg:@"网络链接失败,请检查网络" actionTitleList:@[kActionTitle_Sure] handler:nil];
+            [UIApplication.rootController showAlertTitle:@"网络错误" msg:@"网络链接失败,请检查网络" actionTitleList:@[kActionTitle_Sure] handler:nil];
         }
             break;
         case kCLErrorDenied:
         {
             NSString *msg = [NSString stringWithFormat:@"请开启始终定位(设置->隐私->定位服务->选择%@->始终)",UIApplication.app_Name];
-            [UIApplication.rootController showAlertWithTitle:@"定位失败" msg:msg actionTitleList:@[kActionTitle_Sure] handler:nil];
+            [UIApplication.rootController showAlertTitle:@"定位失败" msg:msg actionTitleList:@[kActionTitle_Sure] handler:nil];
             
         }
             break;

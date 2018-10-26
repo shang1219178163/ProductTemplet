@@ -87,7 +87,7 @@ static const NSInteger kRoutePaddingEdge = 20;
     self.title = @"高德地图";
     self.view.backgroundColor = UIColor.whiteColor;
     
-    UIButton *rightBtn = [self createBarBtnItemWithTitle:@"Next" imageName:nil isLeft:NO isHidden:NO handler:^(id obj, UIButton *item, NSInteger idx) {
+    UIButton *rightBtn = [self createBarItemTitle:@"Next" imageName:nil isLeft:NO isHidden:NO handler:^(id obj, UIButton *item, NSInteger idx) {
         [self.navigationController popViewControllerAnimated:YES];
 
     }];

@@ -20,15 +20,10 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    self.title = @"test";
-    [self createBarBtnItemWithTitle:@"Timer" imageName:nil isLeft:NO isHidden:NO handler:^(id obj, id item, NSInteger idx) {
+    [self createBarItemTitle:@"Timer" imageName:nil isLeft:NO isHidden:NO handler:^(id obj, id item, NSInteger idx) {
         [self goController:@"TimerViewController" title:@"Timer"];
     }];
-    
-    [self createBarBtnItemWithTitle:@"Next" imageName:nil isLeft:YES isHidden:NO handler:^(id obj, id item, NSInteger idx) {
 
-        DDLog(@"asdfadsf");
-    }];
     
 //    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc]initWithTitle:@"tim" style:UIBarButtonItemStyleDone target:self action:@selector(handleActionBtn:)];
     

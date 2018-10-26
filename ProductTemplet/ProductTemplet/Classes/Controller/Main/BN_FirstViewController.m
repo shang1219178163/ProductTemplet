@@ -88,7 +88,7 @@
     self.view.backgroundColor = UIColor.whiteColor;
     
     
-    [self createBarBtnItemWithTitle:@"next" imageName:nil isLeft:NO isHidden:NO handler:^(id obj, id item, NSInteger idx) {
+    [self createBarItemTitle:@"next" imageName:nil isLeft:NO isHidden:NO handler:^(id obj, id item, NSInteger idx) {
         [self goController:@"BN_MenuListController" title:@"Menu"];
         
     }];

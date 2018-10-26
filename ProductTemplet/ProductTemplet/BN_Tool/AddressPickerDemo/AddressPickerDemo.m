@@ -30,7 +30,7 @@
     [self addChildViewController:addressPickerController];
     [self.view addSubview:addressPickerController.view];
     
-//    [self createBarBtnItemWithTitle:@"取消" imageName:nil isLeft:YES  target:self aSelector:@selector(btnClick) isHidden:NO];
+//    [self createBarItemTitle:@"取消" imageName:nil isLeft:YES  target:self aSelector:@selector(btnClick) isHidden:NO];
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc]initWithTitle:@"取消" style:UIBarButtonItemStyleDone target:self action:@selector(btnClick)];
 }
 

@@ -348,7 +348,7 @@ NSString * NSStringFromPlacemark(CLPlacemark *placemark) {
         return YES;
     } else {
         DDLog(@"请打开定位权限!");
-        [UIApplication.rootController showAlertWithTitle:@"" msg:@"请打开定位权限!"];
+        [UIApplication.rootController showAlertTitle:@"" msg:@"请打开定位权限!"];
    
         return NO;
     }

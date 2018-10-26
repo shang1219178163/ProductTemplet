@@ -19,7 +19,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-    [self createBarBtnItemWithTitle:@"label" imageName:nil isLeft:NO isHidden:NO handler:^(id obj, id item, NSInteger idx) {
+    [self createBarItemTitle:@"label" imageName:nil isLeft:NO isHidden:NO handler:^(id obj, id item, NSInteger idx) {
         [self goController:@"LabelViewController" title:@"滚动lab"];
 
     }];
