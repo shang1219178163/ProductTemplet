@@ -30,7 +30,6 @@
 		51258C21215E418F009CDEE3 /* BN_AnimationObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 51258C1F215E418E009CDEE3 /* BN_AnimationObject.m */; };
 		5129425820B424EC009FB70E /* LockCompareController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5129425720B424EC009FB70E /* LockCompareController.m */; };
 		512E433F2137CE5F00272986 /* BN_SegmentView.m in Sources */ = {isa = PBXBuildFile; fileRef = 512E433D2137CE5E00272986 /* BN_SegmentView.m */; };
-		512E43422137D5FB00272986 /* BN_AddPictureVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 512E43412137D5FA00272986 /* BN_AddPictureVC.m */; };
 		512E43452137DDBD00272986 /* WHKGroupViewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 512E43442137DDBC00272986 /* WHKGroupViewViewController.m */; };
 		512E43482137DF5B00272986 /* BN_RadioViewZero.m in Sources */ = {isa = PBXBuildFile; fileRef = 512E43462137DF5900272986 /* BN_RadioViewZero.m */; };
 		512E434B2137E3CF00272986 /* img_select_H.png in Resources */ = {isa = PBXBuildFile; fileRef = 512E43492137E3CE00272986 /* img_select_H.png */; };
@@ -229,7 +228,6 @@
 		515CC85E20B69DFC004AE27C /* BN_UserRegisterController.m in Sources */ = {isa = PBXBuildFile; fileRef = 515CC85920B69DF1004AE27C /* BN_UserRegisterController.m */; };
 		515CC85F20B69DFC004AE27C /* BN_UserPwdChangeController.m in Sources */ = {isa = PBXBuildFile; fileRef = 515CC85B20B69DF4004AE27C /* BN_UserPwdChangeController.m */; };
 		515CC86020B69DFC004AE27C /* BN_UserLoginController.m in Sources */ = {isa = PBXBuildFile; fileRef = 515CC85C20B69DFA004AE27C /* BN_UserLoginController.m */; };
-		515CC87820B6A16D004AE27C /* BN_AddPictureView.m in Sources */ = {isa = PBXBuildFile; fileRef = 515CC87520B6A159004AE27C /* BN_AddPictureView.m */; };
 		515CC87920B6A16D004AE27C /* BN_MenuListController.m in Sources */ = {isa = PBXBuildFile; fileRef = 515CC87720B6A16B004AE27C /* BN_MenuListController.m */; };
 		515CC96B20B6AAF2004AE27C /* AAHighchartsLib.js in Resources */ = {isa = PBXBuildFile; fileRef = 515CC92820B6AAF1004AE27C /* AAHighchartsLib.js */; };
 		515CC96C20B6AAF2004AE27C /* AAHighchartsMore.js in Resources */ = {isa = PBXBuildFile; fileRef = 515CC92920B6AAF1004AE27C /* AAHighchartsMore.js */; };
@@ -319,7 +317,6 @@
 		51698C4221376F9E0069C2B2 /* Utilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 51698BA921376F930069C2B2 /* Utilities.m */; };
 		51698C4321376F9E0069C2B2 /* AddressPickerDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = 51698BAE21376F950069C2B2 /* AddressPickerDemo.m */; };
 		51698C4921376F9E0069C2B2 /* WHKMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 51698BBF21376F9A0069C2B2 /* WHKMapViewController.m */; };
-		51698C4A21376F9E0069C2B2 /* AddPicturesVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 51698BC021376F9B0069C2B2 /* AddPicturesVC.m */; };
 		51698C4B21376F9E0069C2B2 /* KeychainTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 51698BC121376F9B0069C2B2 /* KeychainTool.m */; };
 		51698C6121376F9E0069C2B2 /* UncaughtExceptionHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 51698C3F21376F9E0069C2B2 /* UncaughtExceptionHandler.m */; };
 		51698C7C2137BD7A0069C2B2 /* AMap.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 51698C7B2137BD7A0069C2B2 /* AMap.bundle */; };
@@ -632,8 +629,6 @@
 		5129425720B424EC009FB70E /* LockCompareController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LockCompareController.m; sourceTree = "<group>"; };
 		512E433D2137CE5E00272986 /* BN_SegmentView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BN_SegmentView.m; sourceTree = "<group>"; };
 		512E433E2137CE5F00272986 /* BN_SegmentView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BN_SegmentView.h; sourceTree = "<group>"; };
-		512E43402137D5F900272986 /* BN_AddPictureVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BN_AddPictureVC.h; sourceTree = "<group>"; };
-		512E43412137D5FA00272986 /* BN_AddPictureVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BN_AddPictureVC.m; sourceTree = "<group>"; };
 		512E43432137DDBB00272986 /* WHKGroupViewViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WHKGroupViewViewController.h; sourceTree = "<group>"; };
 		512E43442137DDBC00272986 /* WHKGroupViewViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WHKGroupViewViewController.m; sourceTree = "<group>"; };
 		512E43462137DF5900272986 /* BN_RadioViewZero.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BN_RadioViewZero.m; sourceTree = "<group>"; };
@@ -928,8 +923,6 @@
 		515CC85B20B69DF4004AE27C /* BN_UserPwdChangeController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BN_UserPwdChangeController.m; sourceTree = "<group>"; };
 		515CC85C20B69DFA004AE27C /* BN_UserLoginController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BN_UserLoginController.m; sourceTree = "<group>"; };
 		515CC85D20B69DFB004AE27C /* BN_UserRegisterController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BN_UserRegisterController.h; sourceTree = "<group>"; };
-		515CC87420B6A150004AE27C /* BN_AddPictureView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BN_AddPictureView.h; sourceTree = "<group>"; };
-		515CC87520B6A159004AE27C /* BN_AddPictureView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BN_AddPictureView.m; sourceTree = "<group>"; };
 		515CC87620B6A162004AE27C /* BN_MenuListController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BN_MenuListController.h; sourceTree = "<group>"; };
 		515CC87720B6A16B004AE27C /* BN_MenuListController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BN_MenuListController.m; sourceTree = "<group>"; };
 		515CC92820B6AAF1004AE27C /* AAHighchartsLib.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = AAHighchartsLib.js; sourceTree = "<group>"; };
@@ -1101,7 +1094,6 @@
 		51698BA821376F930069C2B2 /* BN_FileHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BN_FileHandler.m; sourceTree = "<group>"; };
 		51698BA921376F930069C2B2 /* Utilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Utilities.m; sourceTree = "<group>"; };
 		51698BAA21376F940069C2B2 /* WHKMapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WHKMapViewController.h; sourceTree = "<group>"; };
-		51698BAB21376F950069C2B2 /* AddPicturesVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddPicturesVC.h; sourceTree = "<group>"; };
 		51698BAD21376F950069C2B2 /* AddressPickerDemo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddressPickerDemo.h; sourceTree = "<group>"; };
 		51698BAE21376F950069C2B2 /* AddressPickerDemo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddressPickerDemo.m; sourceTree = "<group>"; };
 		51698BAF21376F960069C2B2 /* UncaughtExceptionHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UncaughtExceptionHandler.h; sourceTree = "<group>"; };
@@ -1109,7 +1101,6 @@
 		51698BB821376F980069C2B2 /* BN_FileHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BN_FileHandler.h; sourceTree = "<group>"; };
 		51698BB921376F990069C2B2 /* BINAccountTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BINAccountTool.h; sourceTree = "<group>"; };
 		51698BBF21376F9A0069C2B2 /* WHKMapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WHKMapViewController.m; sourceTree = "<group>"; };
-		51698BC021376F9B0069C2B2 /* AddPicturesVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddPicturesVC.m; sourceTree = "<group>"; };
 		51698BC121376F9B0069C2B2 /* KeychainTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KeychainTool.m; sourceTree = "<group>"; };
 		51698C3F21376F9E0069C2B2 /* UncaughtExceptionHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UncaughtExceptionHandler.m; sourceTree = "<group>"; };
 		51698C7B2137BD7A0069C2B2 /* AMap.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = AMap.bundle; path = AMap3DMap/MAMapKit.framework/AMap.bundle; sourceTree = "<group>"; };
@@ -2176,12 +2167,6 @@
 				51258C18215E38FB009CDEE3 /* NSBundle+Language.h */,
 				51258C17215E38F9009CDEE3 /* NSBundle+Language.m */,
 				515D9D7D2150F77800318A4D /* Other */,
-				515CC87420B6A150004AE27C /* BN_AddPictureView.h */,
-				515CC87520B6A159004AE27C /* BN_AddPictureView.m */,
-				512E43402137D5F900272986 /* BN_AddPictureVC.h */,
-				512E43412137D5FA00272986 /* BN_AddPictureVC.m */,
-				51698BAB21376F950069C2B2 /* AddPicturesVC.h */,
-				51698BC021376F9B0069C2B2 /* AddPicturesVC.m */,
 				51698BAC21376F950069C2B2 /* AddressPickerDemo */,
 				51698BB921376F990069C2B2 /* BINAccountTool.h */,
 				51698BA721376F920069C2B2 /* BINAccountTool.m */,
@@ -3454,6 +3439,13 @@
 				"${BUILT_PRODUCTS_DIR}/AESCrypt-ObjC/AESCrypt_ObjC.framework",
 				"${BUILT_PRODUCTS_DIR}/AFNetworking/AFNetworking.framework",
 				"${BUILT_PRODUCTS_DIR}/Aspects/Aspects.framework",
+				"${BUILT_PRODUCTS_DIR}/BN_Category/BN_Category.framework",
+				"${BUILT_PRODUCTS_DIR}/BN_CollectionView/BN_CollectionView.framework",
+				"${BUILT_PRODUCTS_DIR}/BN_Globle/BN_Globle.framework",
+				"${BUILT_PRODUCTS_DIR}/BN_Kit/BN_Kit.framework",
+				"${BUILT_PRODUCTS_DIR}/BN_TableViewCell/BN_TableViewCell.framework",
+				"${BUILT_PRODUCTS_DIR}/BN_View/BN_View.framework",
+				"${BUILT_PRODUCTS_DIR}/BN_ViewHeight/BN_ViewHeight.framework",
 				"${BUILT_PRODUCTS_DIR}/CTAssetsPickerController/CTAssetsPickerController.framework",
 				"${BUILT_PRODUCTS_DIR}/CYLTabBarController/CYLTabBarController.framework",
 				"${BUILT_PRODUCTS_DIR}/FCUUID/FCUUID.framework",
@@ -3498,6 +3490,13 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AESCrypt_ObjC.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AFNetworking.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Aspects.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/BN_Category.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/BN_CollectionView.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/BN_Globle.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/BN_Kit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/BN_TableViewCell.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/BN_View.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/BN_ViewHeight.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CTAssetsPickerController.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CYLTabBarController.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FCUUID.framework",
@@ -3607,7 +3606,6 @@
 				515CC97320B6AAF2004AE27C /* AAXAxis.m in Sources */,
 				51894117209BF1A200A687E1 /* BN_LearnMasonryController.m in Sources */,
 				515CC97F20B6AAF2004AE27C /* AABar.m in Sources */,
-				515CC87820B6A16D004AE27C /* BN_AddPictureView.m in Sources */,
 				5169699C20BCED4000BAA53D /* LHFinance.m in Sources */,
 				5162F6FB20BF9C9B009A6253 /* FlyweightViewController.m in Sources */,
 				51862E6B20BB979A0080BD4E /* AbstractFactoryController.m in Sources */,
@@ -3664,7 +3662,6 @@
 				516F854D215DF483008E62B3 /* UIViewController+Helper.m in Sources */,
 				51862E8620BBA9400080BD4E /* CustomTextField.m in Sources */,
 				517D8B2E20B2E0A200DCA731 /* FMViewController.m in Sources */,
-				512E43422137D5FB00272986 /* BN_AddPictureVC.m in Sources */,
 				516F8538215DF482008E62B3 /* CATextLayer+Helper.m in Sources */,
 				51258C0B215E37D6009CDEE3 /* BN_CTReusableViewTwo.m in Sources */,
 				515C69342137CA2500D5EA94 /* BN_PickerViewAddress.m in Sources */,
@@ -3691,7 +3688,6 @@
 				519E89F32136A50D002CCD86 /* WHKTableViewSixtyOneCell.m in Sources */,
 				51698C4B21376F9E0069C2B2 /* KeychainTool.m in Sources */,
 				51B9CD1820A0520F0096A540 /* ZYSliderViewController.m in Sources */,
-				51698C4A21376F9E0069C2B2 /* AddPicturesVC.m in Sources */,
 				515C693E2137CA2600D5EA94 /* BN_GuideView.m in Sources */,
 				519E89D52136A50D002CCD86 /* WHKTableViewSevenCell.m in Sources */,
 				519E89B62136A50D002CCD86 /* WHKTableViewEightyFiveCell.m in Sources */,

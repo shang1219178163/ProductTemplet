@@ -48,7 +48,6 @@ target 'ProductTemplet' do
   pod 'SDCycleScrollView'
   pod 'SDWebImage'
   
-  pod ‘TZImagePickerController’
   pod 'Toast'
   
   pod ‘UITableView+FDTemplateLayoutCell’
@@ -69,6 +68,8 @@ target 'ProductTemplet' do
   pod 'ZYCornerRadius'
 
   pod 'UMengAnalytics-NO-IDFA'
+
+  pod 'BN_Utils'
 
 
 end
