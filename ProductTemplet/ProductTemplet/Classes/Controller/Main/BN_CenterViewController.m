@@ -123,6 +123,11 @@
                           
                           },
                       @{
+                          kItem_title   :   @"Sort",
+                          kItem_controller  :   @"SortViewController",
+                          
+                          },
+                      @{
                           kItem_title   :   @"Test",
                           kItem_controller  :   @"TestViewController",
                           

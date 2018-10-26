@@ -23,11 +23,13 @@
     // Override point for customization after application launch.
     self.window = [[UIWindow alloc] initWithFrame:UIScreen.mainScreen.bounds];
 
-    UIViewController * controller = [NSClassFromString(@"BN_HomeViewController") new];
-    UIViewController * controllerLeft = [NSClassFromString(@"BN_LeftViewController") new];
-    UIViewController * controllerRight = [NSClassFromString(@"BN_RightViewController") new];
-//    controller = [NSClassFromString(@"WHKGroupViewViewController") new];
-//    controller = [NSClassFromString(@"LiveLikeController") new];
+    UIViewController * controller = [[NSClassFromString(@"BN_HomeViewController") alloc]init];
+    UIViewController * controllerLeft = [[NSClassFromString(@"BN_LeftViewController") alloc]init];
+    UIViewController * controllerRight = [[NSClassFromString(@"BN_RightViewController") alloc]init];
+//    controller = [[NSClassFromString(@"WHKGroupViewViewController") alloc]init];
+//    controller = [[NSClassFromString(@"LiveLikeController") alloc]init];
+    controller = [[NSClassFromString(@"SortViewController") alloc]init];
+
     
     ZYSliderViewController * rootVC = [[ZYSliderViewController alloc]initWithMainViewController:controller leftViewController:controllerLeft rightViewController:controllerRight];
     
