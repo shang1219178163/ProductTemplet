@@ -28,7 +28,7 @@
     UIViewController * controllerRight = [[NSClassFromString(@"BN_RightViewController") alloc]init];
 //    controller = [[NSClassFromString(@"WHKGroupViewViewController") alloc]init];
 //    controller = [[NSClassFromString(@"LiveLikeController") alloc]init];
-    controller = [[NSClassFromString(@"SortViewController") alloc]init];
+//    controller = [[NSClassFromString(@"SortViewController") alloc]init];
 
     
     ZYSliderViewController * rootVC = [[ZYSliderViewController alloc]initWithMainViewController:controller leftViewController:controllerLeft rightViewController:controllerRight];
