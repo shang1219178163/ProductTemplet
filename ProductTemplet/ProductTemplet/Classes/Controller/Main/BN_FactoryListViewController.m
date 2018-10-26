@@ -8,18 +8,17 @@
 
 #import "BN_FactoryListViewController.h"
 
-#import "FactoryDetailInfoModel.h"
-#import "WHKTableViewOneCell.h"
+#import <BN_Utils.h>
 
-@interface BN_FactoryListViewController ()<UITableViewDelegate,UITableViewDataSource>
+#import "FactoryDetailInfoModel.h"
+
+@interface BN_FactoryListViewController ()
 
 @end
 
 @implementation BN_FactoryListViewController
 
 - (void)configureTableView{
-    self.tableView.delegate = self;
-    self.tableView.dataSource = self;
     [self.view addSubview:self.tableView];
     
 }

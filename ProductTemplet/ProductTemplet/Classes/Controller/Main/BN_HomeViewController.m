@@ -8,11 +8,6 @@
 
 #import "BN_HomeViewController.h"
 
-#import "BN_BaseNavigationController.h"
-
-#import "BN_Globle.h"
-#import "NSObject+Helper.h"
-#import "UIColor+Helper.h"
 
 NSString *const CYLTabBarItemController = @"CYLTabBarItemController";
 
@@ -70,7 +65,7 @@ NSString *const CYLTabBarItemController = @"CYLTabBarItemController";
     for (NSDictionary * dict in self.tabBarItemsAttributes) {
         UIViewController * controller = [NSClassFromString(dict[CYLTabBarItemController]) new];
         controller.title = dict[CYLTabBarItemTitle];
-        UINavigationController *navController = [[BN_BaseNavigationController alloc]
+        UINavigationController *navController = [[BNNavigationController alloc]
                                                  initWithRootViewController:controller];
         [marr addObject:navController];
     }

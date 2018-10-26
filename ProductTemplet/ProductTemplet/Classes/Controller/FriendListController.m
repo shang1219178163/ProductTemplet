@@ -8,37 +8,18 @@
 
 #import "FriendListController.h"
 
-#import "BN_Globle.h"
-
 #import "BN_SimpleDataModel.h"
 
-#import "BN_TabBarView.h"
-//#import "BN_SegmentView.h"
 
-#import "BN_ImgLabelView.h"
-
-#import "BN_FoldHeaderFooterView.h"
-#import "WHKHeaderFooterViewZero.h"
-
-#import "WHKTableViewOneCell.h"
-#import "WHKTableViewElevenCell.h"
-
-#import "WHKTableViewFiftyTwoCell.h"
-
-#import "WHKTableViewSixtyFiveCell.h"
-
-@interface FriendListController ()<UITableViewDataSource,UITableViewDelegate>
+@interface FriendListController ()
 
 @end
 
 @implementation FriendListController
 
-
 -(instancetype)init{
     self = [super init];
     if (self) {
-        self.tableView.delegate = self;
-        self.tableView.dataSource = self;
         [self.view addSubview:self.tableView];
         
     }
@@ -58,7 +39,7 @@
     //操作记录
     NSArray * array = @[@"分组0",@"分组1",@"分组2",@"分组3",@"分组4",@"分组5",@"分组6",@"分组7",@"分组8",@"分组9"];
     for (NSInteger i = 0; i < array.count; i++) {
-        FoldSectionModel * foldModel = [[FoldSectionModel alloc] init];
+        BN_FoldSectionModel * foldModel = [[BN_FoldSectionModel alloc] init];
         foldModel.title = array[i];
         foldModel.isOpen = NO;
         foldModel.image = @"img_vehicleTypeSedan_color.png";
@@ -73,8 +54,8 @@
     
 }
 
-- (FoldSectionModel *)itemAtSection:(NSInteger)section{
-    FoldSectionModel * foldModel = self.dataList[section];
+- (BN_FoldSectionModel *)itemAtSection:(NSInteger)section{
+    BN_FoldSectionModel * foldModel = self.dataList[section];
     return foldModel;
 }
 
@@ -84,7 +65,7 @@
 }
 
 -(NSInteger) tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    FoldSectionModel * foldModel = [self itemAtSection:section];
+    BN_FoldSectionModel * foldModel = [self itemAtSection:section];
     NSInteger count = foldModel.isOpen == YES ? foldModel.dataList.count : 0;
     return count;
     
@@ -98,7 +79,7 @@
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     
-    FoldSectionModel * foldModel = [self itemAtSection:indexPath.section];
+    BN_FoldSectionModel * foldModel = [self itemAtSection:indexPath.section];
     id obj = foldModel.dataList[indexPath.row];
     
     NSString * title = [obj isKindOfClass:[NSArray class]] ? [obj firstObject] : obj;
@@ -117,7 +98,7 @@
 
 //-(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
 //
-//    FoldSectionModel * foldModel = [self itemAtSection:indexPath.section];
+//    BN_FoldSectionModel * foldModel = [self itemAtSection:indexPath.section];
 //    id obj = foldModel.dataList[indexPath.row];
 //
 //    NSString * title = [obj isKindOfClass:[NSArray class]] ? [obj firstObject] : obj;
@@ -146,7 +127,7 @@
 
 -(UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section{
     
-    FoldSectionModel * foldModel = [self itemAtSection:section];
+    BN_FoldSectionModel * foldModel = [self itemAtSection:section];
     
     WHKHeaderFooterViewZero * foldHeaderView = [WHKHeaderFooterViewZero viewWithTableView:tableView];
     

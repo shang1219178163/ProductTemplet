@@ -9,14 +9,8 @@
 
 #import "BN_CenterViewController.h"
 
-#import "UIViewController+Helper.h"
-#import "NSDate+Helper.h"
 
-#import "BN_FilterView.h"
-
-#import "WHKTableViewOneCell.h"
-
-@interface BN_CenterViewController ()<UITableViewDelegate,UITableViewDataSource>
+@interface BN_CenterViewController ()
 
 @property (nonatomic, strong) NSArray * filterList;
 
@@ -90,7 +84,6 @@
 }
 
 
-
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
@@ -98,7 +91,7 @@
     
     self.view.backgroundColor = UIColor.yellowColor;
     
-    [self createBarBtnItemWithTitle:@"Tap" imageName:nil isLeft:NO isHidden:NO handler:^(id obj, id item, NSInteger idx) {
+    [self createBarBtnItemWithTitle:@"Tap" imageName:nil isLeft:NO isHidden:NO handler:^(id obj, UIButton * item, NSInteger idx) {
         BN_FilterView * view = [[BN_FilterView alloc]init];
         view.dataList = self.filterList;
         //            view.direction = @1;
@@ -130,6 +123,12 @@
                           
                           },
                       @{
+                          kItem_title   :   @"Test",
+                          kItem_controller  :   @"TestViewController",
+                          
+                          },
+                      
+                      @{
                           kItem_title   :   @"item3",
                           kItem_controller  :   @"",
                           
@@ -154,11 +153,9 @@
 }
 
 - (void)configureTableView{
-    self.tableView.delegate = self;
-    self.tableView.dataSource = self;
+    self.tableView.backgroundColor = UIColor.whiteColor;
     [self.view addSubview:self.tableView];
     
-    self.tableView.backgroundColor = UIColor.whiteColor;
     
 }
 

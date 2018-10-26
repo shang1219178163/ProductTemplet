@@ -6,8 +6,8 @@
 //  Copyright © 2018年 SouFun. All rights reserved.
 //
 
-#import "BN_BaseViewController.h"
+#import <UIKit/UIKit.h>
 
-@interface DesignPatternsController : BN_BaseViewController
+@interface DesignPatternsController : UIViewController
 
 @end

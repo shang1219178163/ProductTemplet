@@ -6,8 +6,8 @@
 //  Copyright © 2018年 WeiHouKeJi. All rights reserved.
 //
 
-#import "BN_BaseViewController.h"
+#import <UIKit/UIKit.h>
 
-@interface BN_FourthViewController : BN_BaseViewController
+@interface BN_FourthViewController : UIViewController
 
 @end

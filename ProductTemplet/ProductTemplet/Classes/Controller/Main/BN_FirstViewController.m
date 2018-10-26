@@ -11,29 +11,16 @@
 #import "UIViewController+ZYSliderViewController.h"
 #import "ZYSliderViewController.h"
 
-#import "UIViewController+Helper.h"
-#import "NSArray+Helper.h"
 
 #import "BN_SimpleDataModel.h"
-
-#import "BN_BtnView.h"
-#import "BN_MenuView.h"
-
-#import "BN_TurnView.h"
 
 #import "KVOController.h"
 #import "SDCycleScrollView.h"
 
-#import "NSUserDefaults+Helper.h"
-
 #import "FactoryDetailInfoModel.h"
 
-#import "WHKTableViewOneCell.h"
-#import "WHKTableViewEightyFiveCell.h"
-#import "WHKTableViewEightySixCell.h"
 
-
-@interface BN_FirstViewController ()<SDCycleScrollViewDelegate,UITableViewDelegate,UITableViewDataSource>
+@interface BN_FirstViewController ()<SDCycleScrollViewDelegate>
 
 @property (nonatomic, strong) BN_BtnView * btnView;
 @property (nonatomic, strong) BN_MenuView * menuView;
@@ -148,8 +135,6 @@
 }
 
 - (void)configureTableView{
-    self.tableView.delegate = self;
-    self.tableView.dataSource = self;
     [self.view addSubview:self.tableView];
     
     self.tableView.sectionFooterHeight = kScreen_width;

@@ -6,9 +6,9 @@
 //  Copyright © 2018年 WeiHouKeJi. All rights reserved.
 //
 
-#import "BN_BaseDataModel.h"
+#import <UIKit/UIKit.h>
 
-@interface FactoryDetailInfoModel : BN_BaseDataModel
+@interface FactoryDetailInfoModel : NSObject
 
 @property (nonatomic, strong) NSString * title;
 @property (nonatomic, strong) NSString * number;

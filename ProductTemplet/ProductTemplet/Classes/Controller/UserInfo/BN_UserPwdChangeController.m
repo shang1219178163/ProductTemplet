@@ -8,10 +8,7 @@
 
 #import "BN_UserPwdChangeController.h"
 
-#import "BN_Globle.h"
 
-#import "UIView+Helper.h"
-#import "NSObject+Helper.h"
 
 @interface BN_UserPwdChangeController ()
 

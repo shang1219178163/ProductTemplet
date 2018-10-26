@@ -87,9 +87,11 @@ static const NSInteger kRoutePaddingEdge = 20;
     self.title = @"高德地图";
     self.view.backgroundColor = UIColor.whiteColor;
     
-    [self createBarBtnItemWithTitle:nil imageName:kIMAGE_arrowBack isLeft:YES target:self aSelector:@selector(btnClick:) isHidden:NO];
-    UIButton *rightBtn = [self createBarBtnItemWithTitle:@"Next" imageName:nil isLeft:NO target:self aSelector:@selector(btnClick:) isHidden:NO];
-    rightBtn.tag = 22222;
+    UIButton *rightBtn = [self createBarBtnItemWithTitle:@"Next" imageName:nil isLeft:NO isHidden:NO handler:^(id obj, UIButton *item, NSInteger idx) {
+        [self.navigationController popViewControllerAnimated:YES];
+
+    }];
+    
     [rightBtn addActionHandler:^(id obj, id item, NSInteger idx) {
         DDLog(@"objc__%@",obj);
         
@@ -98,7 +100,6 @@ static const NSInteger kRoutePaddingEdge = 20;
     }];
     
   
-    
     [self registerForKVO];
     
 //    [self.view insertSubview:self.mapView atIndex:0];
@@ -106,24 +107,12 @@ static const NSInteger kRoutePaddingEdge = 20;
     [self.containView insertSubview:self.mapView atIndex:0];
     [self.view insertSubview:self.containView atIndex:0];
 
-    
 //    self.containView.frame = CGRectMake(0, 0, 300, 200);
 //    self.containView.frame = CGRectMake(0, 20, kScreen_width - 40, CGRectGetHeight(self.view.bounds) - 40);
 //    self.mapView.frame = CGRectMake(0, 0, CGRectGetWidth(self.containView.frame), CGRectGetHeight(self.containView.frame));
 
 //    [self setupMapView];
     
-}
-
-- (void)btnClick:(UIButton *)sender{
-    
-    if (sender.tag == kTAG_BTN_RightItem) {
-        
-    }
-    else{
-        [self.navigationController popViewControllerAnimated:YES];
-        
-    }
 }
 
 - (void)viewWillAppear:(BOOL)animated{

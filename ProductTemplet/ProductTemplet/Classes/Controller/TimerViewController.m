@@ -8,10 +8,8 @@
 
 #import "TimerViewController.h"
 
-#import "BN_Globle.h"
-#import "NSTimer+Helper.h"
-#import "BN_GCD.h"
 
+#import "BN_GCD.h"
 
 @interface TimerViewController ()
 

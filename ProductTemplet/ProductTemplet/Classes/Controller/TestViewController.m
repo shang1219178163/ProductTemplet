@@ -8,21 +8,10 @@
 
 #import "TestViewController.h"
 
-#import "BN_Globle.h"
-#import "UIView+Helper.h"
-#import "UIViewController+Helper.h"
-#import "UIColor+Helper.h"
 
-#import "WHKTableViewZeroCell.h"
-#import "WHKTableViewOneCell.h"
-#import "WHKTableViewTwoCell.h"
+@interface TestViewController ()
 
-@interface TestViewController ()<UITableViewDelegate,UITableViewDataSource>
-
-@property (nonatomic, strong) UITableView * tableView;
-@property (nonatomic, strong) NSMutableArray * dataList;
 @property (nonatomic, strong) UIScrollView * scrollView;
-
 
 @end
 
@@ -47,12 +36,6 @@
     self.dataList = [NSMutableArray arrayWithCapacity:0];
     self.dataList = @[@"",@"",@"",].mutableCopy;
 
-    self.tableView = [[UITableView alloc]initWithFrame:self.view.bounds style:UITableViewStylePlain];
-    self.tableView.estimatedRowHeight = 60;
-    self.tableView.rowHeight = UITableViewAutomaticDimension;
-
-    self.tableView.delegate = self;
-    self.tableView.dataSource = self;
     [self.view addSubview:self.tableView];
     
     [self.tableView mas_makeConstraints:^(MASConstraintMaker *make) {

@@ -8,7 +8,6 @@
 
 #import "BN_ThirdViewController.h"
 
-#import "UIViewController+Helper.h"
 
 @interface BN_ThirdViewController ()
 
@@ -20,7 +19,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-    [self BN_AddChildControllerView:@"SliderTabBarController"];
+    [self addChildControllerView:@"SliderTabBarController"];
     
 }
 

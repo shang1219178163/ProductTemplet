@@ -38,32 +38,32 @@
                           
                           },
                       @{
-                          kItem_title       :   @"Strategy",
+                          kItem_title       :   @"Strategy/策略",
                           kItem_controller  :   @"StrategyViewController",
                           
                           },
                       @{
-                          kItem_title       :   @"Adapter",
+                          kItem_title       :   @"Adapter/适配器",
                           kItem_controller  :   @"AdapterViewController",
                           
                           },
                       @{
-                          kItem_title       :   @"Facade",
+                          kItem_title       :   @"Facade/外观",
                           kItem_controller  :   @"FacadeViewController",
                           
                           },
                       @{
-                          kItem_title       :   @"Mediator",
+                          kItem_title       :   @"Mediator/中介者",
                           kItem_controller  :   @"MediatorViewController",
                           
                           },
                       @{
-                          kItem_title       :   @"Composite",
+                          kItem_title       :   @"Composite/组合",
                           kItem_controller  :   @"CompositeViewController",
                           
                           },
                       @{
-                          kItem_title       :   @"Flyweight",
+                          kItem_title       :   @"Flyweight/享元模式",
                           kItem_controller  :   @"FlyweightViewController",
                           
                           },

@@ -6,8 +6,8 @@
 //  Copyright © 2018年 BN. All rights reserved.
 //
 
-#import "BN_BaseViewController.h"
+#import <UIKit/UIKit.h>
 
-@interface ThreadNormolController : BN_BaseViewController
+@interface ThreadNormolController : UIViewController
 
 @end

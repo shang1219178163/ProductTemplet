@@ -8,8 +8,6 @@
 
 #import "BN_UserRegisterController.h"
 
-#import "NSObject+Helper.h"
-#import "UIView+Helper.h"
 
 @interface BN_UserRegisterController ()
 

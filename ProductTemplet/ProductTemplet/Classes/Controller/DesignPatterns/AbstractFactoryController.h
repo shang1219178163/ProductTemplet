@@ -6,8 +6,8 @@
 //  Copyright © 2018年 BN. All rights reserved.
 //
 
-#import "BN_BaseViewController.h"
+#import <UIKit/UIKit.h>
 
-@interface AbstractFactoryController : BN_BaseViewController
+@interface AbstractFactoryController : UIViewController
 
 @end

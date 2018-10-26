@@ -8,9 +8,8 @@
 
 #import "BN_LearnMasonryController.h"
 
-#import "WHKTableViewZeroCell.h"
 
-@interface BN_LearnMasonryController ()<UITableViewDelegate,UITableViewDataSource>
+@interface BN_LearnMasonryController ()
 
 @property (nonatomic, strong) UIScrollView * scrollView;
 @property (nonatomic, strong) UIView * viewA;
@@ -38,8 +37,6 @@
     self.tableView.estimatedRowHeight = 60;
     self.tableView.rowHeight = 80;
 
-    self.tableView.delegate = self;
-    self.tableView.dataSource = self;
     [self.view addSubview:self.tableView];
 
     [self.tableView mas_makeConstraints:^(MASConstraintMaker *make) {

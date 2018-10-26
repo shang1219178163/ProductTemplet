@@ -8,12 +8,6 @@
 
 #import "WHKGroupViewViewController.h"
 
-#import "BN_Globle.h"
-#import "UIView+Helper.h"
-
-#import "BN_RadioViewZero.h"
-#import "BN_RadioView.h"
-#import "BN_GroupView.h"
 
 @interface WHKGroupViewViewController ()
 
