@@ -38,7 +38,8 @@
     self.window.backgroundColor = UIColor.whiteColor;
     [self.window makeKeyAndVisible];
 
-     [UIApplication setupAppearance];
+    [UIApplication setupAppearance];
+    [UIApplication setupIQKeyboardManager];
 
     return YES;
 }
