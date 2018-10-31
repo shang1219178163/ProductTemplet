@@ -10,6 +10,7 @@
 
 #import "UIApplication+Helper.h"
 #import "UIApplication+Other.h"
+#import "BN_Category.h"
 
 #import "ZYSliderViewController.h"
 
@@ -21,23 +22,22 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
-    self.window = [[UIWindow alloc] initWithFrame:UIScreen.mainScreen.bounds];
+  
+    UIViewController * controller = UIViewCtrFromString(@"BN_HomeViewController");
+    UIViewController * controllerLeft = UIViewCtrFromString(@"BN_LeftViewController");
+    UIViewController * controllerRight = UIViewCtrFromString(@"BN_RightViewController");
 
-    UIViewController * controller = [[NSClassFromString(@"BN_HomeViewController") alloc]init];
-    UIViewController * controllerLeft = [[NSClassFromString(@"BN_LeftViewController") alloc]init];
-    UIViewController * controllerRight = [[NSClassFromString(@"BN_RightViewController") alloc]init];
-//    controller = [[NSClassFromString(@"WHKGroupViewViewController") alloc]init];
-//    controller = [[NSClassFromString(@"LiveLikeController") alloc]init];
-//    controller = [[NSClassFromString(@"SortViewController") alloc]init];
-
+//    controller = UIViewCtrFromString(@"WHKGroupViewViewController");
+//    controller = UIViewCtrFromString(@"LiveLikeController");
+//    controller = UIViewCtrFromString(@"SortViewController");
     
     ZYSliderViewController * rootVC = [[ZYSliderViewController alloc]initWithMainViewController:controller leftViewController:controllerLeft rightViewController:controllerRight];
     
-    self.window.rootViewController = rootVC;
+//    NSArray *list = @[@[@"BN_FirstViewController",@"首页",@"Item_first_N",@"Item_first_H",@"8"],@[@"BN_SecondViewController",@"圈子",@"Item_second_N",@"Item_second_H",@"11"]];
+//    UIViewController * rootVC = UITarBarCtrFromList(list);
+//    rootVC = UINaviCtrFromObj(@"BN_SecondViewController");
 
-    self.window.backgroundColor = UIColor.whiteColor;
-    [self.window makeKeyAndVisible];
-
+    [UIApplication setupRootController:rootVC isAdjust:NO];
     [UIApplication setupAppearance];
     [UIApplication setupIQKeyboardManager];
 

@@ -47,9 +47,9 @@
                 [AVCaptureDevice requestAccessForMediaType:AVMediaTypeVideo completionHandler:^(BOOL granted) {
                     if (granted) {
                         isHasRight = YES;
-                        DDLog(@"用户第一次同意了访问相机权限 - - %@", [NSThread currentThread]);
+                        DDLog(@"用户第一次同意了访问相机权限 - - %@", NSThread.currentThread);
                     } else {
-                        DDLog(@"用户第一次拒绝了访问相机权限 - - %@", [NSThread currentThread]);
+                        DDLog(@"用户第一次拒绝了访问相机权限 - - %@", NSThread.currentThread);
                     }
                 }];
                 break;

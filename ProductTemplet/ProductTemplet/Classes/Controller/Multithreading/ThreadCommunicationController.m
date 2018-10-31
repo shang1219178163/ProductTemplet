@@ -91,7 +91,7 @@
 
 #pragma mark - -NSPortMessage
 -(void)handlePortMessage:(id)message{
-    NSLog(@"收到消息了，线程为：%@",[NSThread currentThread]);
+    NSLog(@"收到消息了，线程为：%@",NSThread.currentThread);
     //只能用KVC的方式取值
     NSArray *array = [message valueForKeyPath:@"components"];
 

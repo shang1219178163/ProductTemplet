@@ -131,7 +131,7 @@ NSString *const kHTTP_URLMiddle = @"i=42&c=entry&do=fengmian&m=android&source=io
 + (NSString *)getInterfaceUrlWithParamDict:(NSDictionary *)paramDict{
     
     //    http://www.weihouyunbao.cn:9999/app/index.php?i=3&c=entry&do=goods&m=nonghuotongweihou&r=api.user.sendCode&&r=api.user.sendCode&phone=123456789663
-    //    NSDictionary * dicDomain = [NSDictionary dictionaryWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"InterfaceDomain" ofType:@"plist"]];
+    //    NSDictionary * dicDomain = [NSDictionary dictionaryWithContentsOfFile:[NSBundle.mainBundle pathForResource:@"InterfaceDomain" ofType:@"plist"]];
     NSString * domain = [NSString stringWithFormat:@"%@",kHTTP_URLPreFix];
     NSString * allAddresss = [domain stringByAppendingFormat:@"/index.php?"];
     

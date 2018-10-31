@@ -139,16 +139,17 @@
                           
                           },
                       @{
-                          kItem_title   :   @"Test",
-                          kItem_controller  :   @"TestViewController",
+                          kItem_title   :   @"广播重定向",
+                          kItem_controller  :   @"NotificationTreadController",
                           
                           },
                       
                       @{
-                          kItem_title   :   @"item3",
-                          kItem_controller  :   @"",
+                          kItem_title   :   @"Test",
+                          kItem_controller  :   @"TestViewController",
                           
                           },
+                   
                  
                       ].mutableCopy;
     

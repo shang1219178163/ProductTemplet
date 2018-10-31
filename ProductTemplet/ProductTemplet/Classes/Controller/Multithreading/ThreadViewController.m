@@ -49,13 +49,13 @@ NSThread *thread1 = [[NSThread alloc] initWithTarget:self selector:@selector(doS
 
 - (void)stopThread {
     CFRunLoopStop(CFRunLoopGetCurrent());
-    NSThread *thread = [NSThread currentThread];
+    NSThread *thread = NSThread.currentThread;
     [thread cancel];
 }
 
 - (void)run {
     @autoreleasepool {
-        NSLog(@"current thread = %@", [NSThread currentThread]);
+        NSLog(@"current thread = %@", NSThread.currentThread);
         NSRunLoop *runLoop = [NSRunLoop currentRunLoop];
         if (!self.port) {
             self.port = [NSMachPort port];

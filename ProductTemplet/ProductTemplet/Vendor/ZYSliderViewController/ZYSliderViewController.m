@@ -175,15 +175,19 @@ typedef NS_ENUM(NSUInteger, ZYDragDirection){
 - (UINavigationController *)sliderNavigationController
 {
     if (self.mainViewController) {
-        if ([self.mainViewController isKindOfClass:[UINavigationController class]]) {
+        if ([self.mainViewController isKindOfClass:[UITabBarController class]]) {
+            UINavigationController * navController = ((UITabBarController *)self.mainViewController).selectedViewController;
+            return navController;
+        }
+        else if ([self.mainViewController isKindOfClass:[UINavigationController class]]) {
             return (UINavigationController *)self.mainViewController;
         }
     }else if (self.mainViewController.navigationController){
         return self.mainViewController.navigationController;
     }
     return nil;
+    
 }
-
 
 #pragma mark -------------- gesture delegate -----------------------
 - (BOOL)gestureRecognizerShouldBegin:(UIGestureRecognizer *)gestureRecognizer

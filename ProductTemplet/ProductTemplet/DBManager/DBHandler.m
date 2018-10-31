@@ -646,7 +646,7 @@
         // 没有表的时候，先创建再插入
         
         // 此时有三步操作，第一步处理完不关闭数据库
-//        NSLog(@"-----------------%@",[NSThread currentThread]);
+//        NSLog(@"-----------------%@",NSThread.currentThread);
         if (![self fl_isExit:db table:[model class] autoCloseDB:NO]) {
             // 第二步处理完不关闭数据库
             BOOL success = [self fl_create:db table:[model class] autoCloseDB:NO];

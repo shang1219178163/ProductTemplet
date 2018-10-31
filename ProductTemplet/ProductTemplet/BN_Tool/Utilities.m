@@ -28,7 +28,7 @@ static NSString *const kACSEncrypt = @"mbqh1Gtpj9L8pJuv";
 
 + (id)readBoundleDataWithKey:(NSString *)key plistFileName:(NSString *)fileName{
     NSArray * array = [fileName componentsSeparatedByString:@"."];
-    NSString *path = [[NSBundle mainBundle] pathForResource:array[0] ofType:array[1]];// 找到plist文件
+    NSString *path = [NSBundle.mainBundle pathForResource:array[0] ofType:array[1]];// 找到plist文件
     
     NSDictionary *dict = [[NSDictionary alloc] initWithContentsOfFile:path];// 获取文件列表
     

@@ -25,5 +25,101 @@
             </Locations>
          </BreakpointContent>
       </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ProductTemplet/Classes/Controller/NotificationTreadController.m"
+            timestampString = "562665491.272112"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "59"
+            endingLineNumber = "59"
+            landmarkName = "-handleMachMessage:"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[NotificationTreadController handleMachMessage:]"
+                  moduleName = "ProductTemplet"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/hsf/Documents/GitHub/ProductTemplet/ProductTemplet/ProductTemplet/Classes/Controller/NotificationTreadController.m"
+                  timestampString = "562665491.425801"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "59"
+                  endingLineNumber = "59"
+                  offsetFromSymbolStart = "30">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[NotificationTreadController handleMachMessage:]"
+                  moduleName = "ProductTemplet"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/hsf/Documents/GitHub/ProductTemplet/ProductTemplet/ProductTemplet/Classes/Controller/NotificationTreadController.m"
+                  timestampString = "562665491.4304219"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "59"
+                  endingLineNumber = "59"
+                  offsetFromSymbolStart = "760">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ProductTemplet/Classes/Controller/NotificationTreadController.m"
+            timestampString = "562665491.272514"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "52"
+            endingLineNumber = "52"
+            landmarkName = "-handlePortMessage:"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[NotificationTreadController handlePortMessage:]"
+                  moduleName = "ProductTemplet"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/hsf/Documents/GitHub/ProductTemplet/ProductTemplet/ProductTemplet/Classes/Controller/NotificationTreadController.m"
+                  timestampString = "562665491.440502"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "52"
+                  endingLineNumber = "52"
+                  offsetFromSymbolStart = "49">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[NotificationTreadController handlePortMessage:]"
+                  moduleName = "ProductTemplet"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/hsf/Documents/GitHub/ProductTemplet/ProductTemplet/ProductTemplet/Classes/Controller/NotificationTreadController.m"
+                  timestampString = "562665491.4448"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "52"
+                  endingLineNumber = "52"
+                  offsetFromSymbolStart = "773">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
    </Breakpoints>
 </Bucket>

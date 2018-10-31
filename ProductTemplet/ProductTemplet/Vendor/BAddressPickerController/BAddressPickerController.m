@@ -390,7 +390,7 @@
 #pragma mark - Getter and Setter
 - (NSMutableDictionary*)dictionary{
     if (_dictionary == nil) {
-        NSString *path = [[NSBundle mainBundle] pathForResource:@"cities" ofType:@"plist"];
+        NSString *path = [NSBundle.mainBundle pathForResource:@"cities" ofType:@"plist"];
         _dictionary = [NSMutableDictionary dictionaryWithContentsOfFile:path];
     }
     return _dictionary;

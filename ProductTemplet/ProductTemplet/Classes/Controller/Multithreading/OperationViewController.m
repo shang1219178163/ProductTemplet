@@ -104,14 +104,14 @@
 }
 
 - (void)invocationOperation {
-    NSLog(@"NSInvocationOperation包含的任务，没有加入队列========%@", [NSThread currentThread]);
+    NSLog(@"NSInvocationOperation包含的任务，没有加入队列========%@", NSThread.currentThread);
 }
 
 /** NSBlockOperation的使用 */
 - (void)testNSBlockOperation {
     // 把任务放到block中
     NSBlockOperation *blockOperation = [NSBlockOperation blockOperationWithBlock:^{
-        NSLog(@"NSBlockOperation包含的任务，没有加入队列========%@", [NSThread currentThread]);
+        NSLog(@"NSBlockOperation包含的任务，没有加入队列========%@", NSThread.currentThread);
     }];
     
     [blockOperation start];
@@ -126,17 +126,17 @@
 /** addExecutionBlock:实现多线程 */
 - (void)testNSBlockOperationExecution {
     NSBlockOperation *blockOperation = [NSBlockOperation blockOperationWithBlock:^{
-        NSLog(@"NSBlockOperation运用addExecutionBlock========%@", [NSThread currentThread]);
+        NSLog(@"NSBlockOperation运用addExecutionBlock========%@", NSThread.currentThread);
     }];
     
     [blockOperation addExecutionBlock:^{
-        NSLog(@"addExecutionBlock方法添加任务1========%@", [NSThread currentThread]);
+        NSLog(@"addExecutionBlock方法添加任务1========%@", NSThread.currentThread);
     }];
     [blockOperation addExecutionBlock:^{
-        NSLog(@"addExecutionBlock方法添加任务2========%@", [NSThread currentThread]);
+        NSLog(@"addExecutionBlock方法添加任务2========%@", NSThread.currentThread);
     }];
     [blockOperation addExecutionBlock:^{
-        NSLog(@"addExecutionBlock方法添加任务3========%@", [NSThread currentThread]);
+        NSLog(@"addExecutionBlock方法添加任务3========%@", NSThread.currentThread);
     }];
     
     [blockOperation start];
@@ -152,7 +152,7 @@
     // 创建操作，NSBlockOperation
     NSBlockOperation *blockOperation = [NSBlockOperation blockOperationWithBlock:^{
         for (int i = 0; i < 3; i++) {
-            NSLog(@"addOperation把任务%@添加到队列======%@",@(i), [NSThread currentThread]);
+            NSLog(@"addOperation把任务%@添加到队列======%@",@(i), NSThread.currentThread);
         }
     }];
     
@@ -161,7 +161,7 @@
 }
 
 - (void)invocationOperationAddOperation {
-    NSLog(@"invocationOperation===addOperation把任务添加到队列==========%@", [NSThread currentThread]);
+    NSLog(@"invocationOperation===addOperation把任务添加到队列==========%@", NSThread.currentThread);
 }
 
 /** addOperationWithBlock把任务添加到队列 */
@@ -172,7 +172,7 @@
     // 添加操作到队列
     [queue addOperationWithBlock:^{
         for (int i = 0; i < 3; i++) {
-            NSLog(@"addOperationWithBlock把任务%@添加到队列======%@",@(i), [NSThread currentThread]);
+            NSLog(@"addOperationWithBlock把任务%@添加到队列======%@",@(i), NSThread.currentThread);
         }
     }];
 }
@@ -192,7 +192,7 @@
         UIImage *image = [UIImage imageNamed:@"test"];
         
         // 回到主线程进行UI操作
-        [[NSOperationQueue mainQueue] addOperationWithBlock:^{
+        [NSOperationQueue.mainQueue addOperationWithBlock:^{
             // 在主线程上添加图片
             self.imageView.image = image;
             
@@ -218,21 +218,21 @@
     // 添加操作到队列
     [queue addOperationWithBlock:^{
         for (int i = 0; i < 3; i++) {
-            NSLog(@"addOperationWithBlock把任务添加到队列1======%@", [NSThread currentThread]);
+            NSLog(@"addOperationWithBlock把任务添加到队列1======%@", NSThread.currentThread);
         }
     }];
     
     // 添加操作到队列
     [queue addOperationWithBlock:^{
         for (int i = 0; i < 3; i++) {
-            NSLog(@"addOperationWithBlock把任务添加到队列2======%@", [NSThread currentThread]);
+            NSLog(@"addOperationWithBlock把任务添加到队列2======%@", NSThread.currentThread);
         }
     }];
     
     // 添加操作到队列
     [queue addOperationWithBlock:^{
         for (int i = 0; i < 3; i++) {
-            NSLog(@"addOperationWithBlock把任务添加到队列3======%@", [NSThread currentThread]);
+            NSLog(@"addOperationWithBlock把任务添加到队列3======%@", NSThread.currentThread);
         }
     }];
 }
@@ -246,7 +246,7 @@
     // 操作1
     NSBlockOperation *operation1 = [NSBlockOperation blockOperationWithBlock:^{
         for (int i = 0; i < 3; i++) {
-            NSLog(@"operation1======%@", [NSThread  currentThread]);
+            NSLog(@"operation1======%@", NSThread.currentThread);
         }
     }];
     
@@ -254,7 +254,7 @@
     NSBlockOperation *operation2 = [NSBlockOperation blockOperationWithBlock:^{
         NSLog(@"****operation2依赖于operation1，只有当operation1执行完毕，operation2才会执行****");
         for (int i = 0; i < 3; i++) {
-            NSLog(@"operation2======%@", [NSThread  currentThread]);
+            NSLog(@"operation2======%@", NSThread.currentThread);
         }
     }];
     

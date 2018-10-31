@@ -117,17 +117,17 @@
     // 同步执行
     dispatch_sync(queue, ^{
         for (int i = 0; i < 3; i++) {
-            NSLog(@"串行同步1   %@",[NSThread currentThread]);
+            NSLog(@"串行同步1   %@",NSThread.currentThread);
         }
     });
     dispatch_sync(queue, ^{
         for (int i = 0; i < 3; i++) {
-            NSLog(@"串行同步2   %@",[NSThread currentThread]);
+            NSLog(@"串行同步2   %@",NSThread.currentThread);
         }
     });
     dispatch_sync(queue, ^{
         for (int i = 0; i < 3; i++) {
-            NSLog(@"串行同步3   %@",[NSThread currentThread]);
+            NSLog(@"串行同步3   %@",NSThread.currentThread);
         }
     });
 }
@@ -143,17 +143,17 @@
     // 同步执行
     dispatch_async(queue, ^{
         for (int i = 0; i < 3; i++) {
-            NSLog(@"串行异步1   %@",[NSThread currentThread]);
+            NSLog(@"串行异步1   %@",NSThread.currentThread);
         }
     });
     dispatch_async(queue, ^{
         for (int i = 0; i < 3; i++) {
-            NSLog(@"串行异步2   %@",[NSThread currentThread]);
+            NSLog(@"串行异步2   %@",NSThread.currentThread);
         }
     });
     dispatch_async(queue, ^{
         for (int i = 0; i < 3; i++) {
-            NSLog(@"串行异步3   %@",[NSThread currentThread]);
+            NSLog(@"串行异步3   %@",NSThread.currentThread);
         }
     });
 }
@@ -169,17 +169,17 @@
     // 同步执行
     dispatch_sync(queue, ^{
         for (int i = 0; i < 3; i++) {
-            NSLog(@"并发同步1   %@",[NSThread currentThread]);
+            NSLog(@"并发同步1   %@",NSThread.currentThread);
         }
     });
     dispatch_sync(queue, ^{
         for (int i = 0; i < 3; i++) {
-            NSLog(@"并发同步2   %@",[NSThread currentThread]);
+            NSLog(@"并发同步2   %@",NSThread.currentThread);
         }
     });
     dispatch_sync(queue, ^{
         for (int i = 0; i < 3; i++) {
-            NSLog(@"并发同步3   %@",[NSThread currentThread]);
+            NSLog(@"并发同步3   %@",NSThread.currentThread);
         }
     });
 }
@@ -195,17 +195,17 @@
     // 同步执行
     dispatch_async(queue, ^{
         for (int i = 0; i < 3; i++) {
-            NSLog(@"并发异步1   %@",[NSThread currentThread]);
+            NSLog(@"并发异步1   %@",NSThread.currentThread);
         }
     });
     dispatch_async(queue, ^{
         for (int i = 0; i < 3; i++) {
-            NSLog(@"并发异步2   %@",[NSThread currentThread]);
+            NSLog(@"并发异步2   %@",NSThread.currentThread);
         }
     });
     dispatch_async(queue, ^{
         for (int i = 0; i < 3; i++) {
-            NSLog(@"并发异步3   %@",[NSThread currentThread]);
+            NSLog(@"并发异步3   %@",NSThread.currentThread);
         }
     });
 }
@@ -219,17 +219,17 @@
     dispatch_queue_t queue = dispatch_get_main_queue();
     dispatch_sync(queue, ^{
         for (int i = 0; i < 3; i++) {
-            NSLog(@"主队列同步1   %@",[NSThread currentThread]);
+            NSLog(@"主队列同步1   %@",NSThread.currentThread);
         }
     });
     dispatch_sync(queue, ^{
         for (int i = 0; i < 3; i++) {
-            NSLog(@"主队列同步2   %@",[NSThread currentThread]);
+            NSLog(@"主队列同步2   %@",NSThread.currentThread);
         }
     });
     dispatch_sync(queue, ^{
         for (int i = 0; i < 3; i++) {
-            NSLog(@"主队列同步3   %@",[NSThread currentThread]);
+            NSLog(@"主队列同步3   %@",NSThread.currentThread);
         }
     });
 }
@@ -243,17 +243,17 @@
     dispatch_queue_t queue = dispatch_get_main_queue();
     dispatch_async(queue, ^{
         for (int i = 0; i < 3; i++) {
-            NSLog(@"主队列异步1   %@",[NSThread currentThread]);
+            NSLog(@"主队列异步1   %@",NSThread.currentThread);
         }
     });
     dispatch_async(queue, ^{
         for (int i = 0; i < 3; i++) {
-            NSLog(@"主队列异步2   %@",[NSThread currentThread]);
+            NSLog(@"主队列异步2   %@",NSThread.currentThread);
         }
     });
     dispatch_async(queue, ^{
         for (int i = 0; i < 3; i++) {
-            NSLog(@"主队列异步3   %@",[NSThread currentThread]);
+            NSLog(@"主队列异步3   %@",NSThread.currentThread);
         }
     });
 }
@@ -309,7 +309,7 @@
     
     // dispatch_apply几乎同时遍历多个数字
     dispatch_apply(7, queue, ^(size_t index) {
-        NSLog(@"dispatch_apply：%zd======%@",index, [NSThread currentThread]);
+        NSLog(@"dispatch_apply：%zd======%@",index, NSThread.currentThread);
     });
 }
 
@@ -320,28 +320,28 @@
     // 异步执行
     dispatch_async(queue, ^{
         for (int i = 0; i < 3; i++) {
-            NSLog(@"栅栏：并发异步1   %@",[NSThread currentThread]);
+            NSLog(@"栅栏：并发异步1   %@",NSThread.currentThread);
         }
     });
     dispatch_async(queue, ^{
         for (int i = 0; i < 3; i++) {
-            NSLog(@"栅栏：并发异步2   %@",[NSThread currentThread]);
+            NSLog(@"栅栏：并发异步2   %@",NSThread.currentThread);
         }
     });
     
     dispatch_barrier_async(queue, ^{
-        NSLog(@"------------barrier------------%@", [NSThread currentThread]);
+        NSLog(@"------------barrier------------%@", NSThread.currentThread);
         NSLog(@"******* 并发异步执行，但是34一定在12后面 *********");
     });
     
     dispatch_async(queue, ^{
         for (int i = 0; i < 3; i++) {
-            NSLog(@"栅栏：并发异步3   %@",[NSThread currentThread]);
+            NSLog(@"栅栏：并发异步3   %@",NSThread.currentThread);
         }
     });
     dispatch_async(queue, ^{
         for (int i = 0; i < 3; i++) {
-            NSLog(@"栅栏：并发异步4   %@",[NSThread currentThread]);
+            NSLog(@"栅栏：并发异步4   %@",NSThread.currentThread);
         }
     });
 }

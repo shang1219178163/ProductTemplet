@@ -322,6 +322,8 @@
 		518B906B217F2110007E7343 /* right_slider_back@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 518B9067217F2110007E7343 /* right_slider_back@3x.png */; };
 		518B906C217F2110007E7343 /* left_slider_back@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 518B9068217F2110007E7343 /* left_slider_back@2x.png */; };
 		518B906D217F2110007E7343 /* left_slider_back@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 518B9069217F2110007E7343 /* left_slider_back@3x.png */; };
+		51900DD7218953C20038A178 /* NotificationTreadController.m in Sources */ = {isa = PBXBuildFile; fileRef = 51900DD6218953C20038A178 /* NotificationTreadController.m */; };
+		51900DD921895B9B0038A178 /* img_home_immune_147.png in Resources */ = {isa = PBXBuildFile; fileRef = 51900DD821895B9A0038A178 /* img_home_immune_147.png */; };
 		51954AB520A12DCC00B066C8 /* CycleLabelViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 51954AB420A12DCC00B066C8 /* CycleLabelViewController.m */; };
 		51A4A0092182AF9D00BA9923 /* SortViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 51A4A0082182AF9D00BA9923 /* SortViewController.m */; };
 		51A4A00C2182E1AB00BA9923 /* BlockViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 51A4A00B2182E1AB00BA9923 /* BlockViewController.m */; };
@@ -834,6 +836,9 @@
 		518B9067217F2110007E7343 /* right_slider_back@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "right_slider_back@3x.png"; sourceTree = "<group>"; };
 		518B9068217F2110007E7343 /* left_slider_back@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "left_slider_back@2x.png"; sourceTree = "<group>"; };
 		518B9069217F2110007E7343 /* left_slider_back@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "left_slider_back@3x.png"; sourceTree = "<group>"; };
+		51900DD5218953C20038A178 /* NotificationTreadController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NotificationTreadController.h; sourceTree = "<group>"; };
+		51900DD6218953C20038A178 /* NotificationTreadController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NotificationTreadController.m; sourceTree = "<group>"; };
+		51900DD821895B9A0038A178 /* img_home_immune_147.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = img_home_immune_147.png; sourceTree = "<group>"; };
 		51954AB320A12DCC00B066C8 /* CycleLabelViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CycleLabelViewController.h; sourceTree = "<group>"; };
 		51954AB420A12DCC00B066C8 /* CycleLabelViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CycleLabelViewController.m; sourceTree = "<group>"; };
 		51A4A0072182AF9D00BA9923 /* SortViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SortViewController.h; sourceTree = "<group>"; };
@@ -1075,6 +1080,8 @@
 				51A4A00B2182E1AB00BA9923 /* BlockViewController.m */,
 				51A4A1252182FB7900BA9923 /* EntryViewController.h */,
 				51A4A1262182FB7900BA9923 /* EntryViewController.m */,
+				51900DD5218953C20038A178 /* NotificationTreadController.h */,
+				51900DD6218953C20038A178 /* NotificationTreadController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -1111,6 +1118,7 @@
 		5136492420860655005A20E7 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				51900DD821895B9A0038A178 /* img_home_immune_147.png */,
 				512E43492137E3CE00272986 /* img_select_H.png */,
 				512E434A2137E3CE00272986 /* img_select_N.png */,
 				515CC81120B6844E004AE27C /* img_btnBack.png */,
@@ -1986,6 +1994,7 @@
 				513649AD20860655005A20E7 /* img_home_animamalSell_147.png in Resources */,
 				513649B320860655005A20E7 /* img_home_dataEntry_147.png in Resources */,
 				513649C920860655005A20E7 /* img_popAddBatch@2x.png in Resources */,
+				51900DD921895B9B0038A178 /* img_home_immune_147.png in Resources */,
 				5136498720860655005A20E7 /* img_Ablactation_N.png in Resources */,
 				5169DF242088254400B025C3 /* Public.xcassets in Resources */,
 				513649CE20860655005A20E7 /* img_remark.png in Resources */,
@@ -2331,6 +2340,7 @@
 				51364DE720860BE0005A20E7 /* MANaviPolyline.m in Sources */,
 				513647BE208604DE005A20E7 /* HZPhotoBrowserView.m in Sources */,
 				51364C8220860822005A20E7 /* BN_Num.m in Sources */,
+				51900DD7218953C20038A178 /* NotificationTreadController.m in Sources */,
 				5129425820B424EC009FB70E /* LockCompareController.m in Sources */,
 				51862E8320BBA8B90080BD4E /* AlphaInputValidator.m in Sources */,
 				512E43452137DDBD00272986 /* WHKGroupViewViewController.m in Sources */,

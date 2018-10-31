@@ -58,7 +58,7 @@
 
 - (void)subThreadEnter{
     @autoreleasepool {
-        [[NSThread currentThread] setName:@"AFNetworking"];
+        [NSThread.currentThread setName:@"AFNetworking"];
         
         NSRunLoop *runLoop = [NSRunLoop currentRunLoop];
         //如果注释了下面这一行，子线程中的任务并不能正常执行
@@ -75,13 +75,13 @@
 - (void)handleThreadAction{
     
     NSLog(@"启动RunLoop后--%@",[NSRunLoop currentRunLoop].currentMode);
-    NSLog(@"%@----子线程任务开始",[NSThread currentThread]);
+    NSLog(@"%@----子线程任务开始",NSThread.currentThread);
     
     for (int i=0; i<30; i++){
         [NSThread sleepForTimeInterval:1.0];
         NSLog(@"----子线程任务 %ld",(long)i);
     }
-    NSLog(@"%@----子线程任务结束",[NSThread currentThread]);
+    NSLog(@"%@----子线程任务结束",NSThread.currentThread);
 }
 
 

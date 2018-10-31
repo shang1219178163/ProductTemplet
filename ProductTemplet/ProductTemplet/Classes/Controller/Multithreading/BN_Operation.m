@@ -12,7 +12,7 @@
 
 - (void)main {
     for (int i = 0; i < 3; i++) {
-        NSLog(@"NSOperation的子类Operation======%@",[NSThread currentThread]);
+        NSLog(@"NSOperation的子类Operation======%@",NSThread.currentThread);
     }
 }
 
