@@ -34,13 +34,16 @@
     ZYSliderViewController * rootVC = [[ZYSliderViewController alloc]initWithMainViewController:controller leftViewController:controllerLeft rightViewController:controllerRight];
     
 //    NSArray *list = @[@[@"BN_FirstViewController",@"首页",@"Item_first_N",@"Item_first_H",@"8"],@[@"BN_SecondViewController",@"圈子",@"Item_second_N",@"Item_second_H",@"11"]];
-//    UIViewController * rootVC = UITarBarCtrFromList(list);
+//    UITabBarController * rootVC = UITarBarCtrFromList(list);
 //    rootVC = UINaviCtrFromObj(@"BN_SecondViewController");
+//    rootVC.tabBar.tintColor = UIColor.themeColor;
+//    if (iOSVersion(10)) rootVC.tabBar.unselectedItemTintColor = UIColor.grayColor;
+//    rootVC.tabBar.tintColor = UIColor.themeColor;
+//    rootVC.selectedViewController = rootVC.viewControllers[2];
 
     [UIApplication setupRootController:rootVC isAdjust:NO];
     [UIApplication setupAppearance];
     [UIApplication setupIQKeyboardManager];
-
     return YES;
 }
 
