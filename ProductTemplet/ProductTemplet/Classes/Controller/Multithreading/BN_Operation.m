@@ -11,9 +11,15 @@
 @implementation BN_Operation
 
 - (void)main {
-    for (int i = 0; i < 3; i++) {
-        NSLog(@"NSOperation的子类Operation======%@",NSThread.currentThread);
-    }
+    //自己创建自动释放池（因为如果是异步操作，无法访问主线程的自动释放池）
+    @autoreleasepool {
+        for (int i = 0; i < 3; i++) {
+            NSLog(@"NSOperation的子类Operation======%@",NSThread.currentThread);
+        }
+        
+    };
+    
+   
 }
 
 @end

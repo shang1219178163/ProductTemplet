@@ -65,12 +65,11 @@
     threadPort.delegate = self;
     
     //给主线程runloop加一个端口
-    [[NSRunLoop currentRunLoop]addPort:mainPort forMode:NSDefaultRunLoopMode];
+    [NSRunLoop.currentRunLoop addPort:mainPort forMode:NSDefaultRunLoopMode];
     dispatch_async(dispatch_get_global_queue(0, 0), ^{
-        
         //添加一个Port
-        [[NSRunLoop currentRunLoop]addPort:threadPort forMode:NSDefaultRunLoopMode];
-        [[NSRunLoop currentRunLoop]runMode:NSDefaultRunLoopMode beforeDate:[NSDate distantFuture]];
+        [NSRunLoop.currentRunLoop addPort:threadPort forMode:NSDefaultRunLoopMode];
+        [NSRunLoop.currentRunLoop runMode:NSDefaultRunLoopMode beforeDate:NSDate.distantFuture];
         
     });
     
@@ -83,7 +82,7 @@
         NSMutableArray *array = [NSMutableArray arrayWithArray:@[mainPort,data]];
         //过2秒向threadPort发送一条消息，第一个参数：发送时间。msgid 消息标识。
         //components，发送消息附带参数。reserved：为头部预留的字节数（从官方文档上看到的，猜测可能是类似请求头的东西...）
-        [threadPort sendBeforeDate:[NSDate date] msgid:1000 components:array from:mainPort reserved:0];
+        [threadPort sendBeforeDate:NSDate.date msgid:1000 components:array from:mainPort reserved:0];
     });
 
 }

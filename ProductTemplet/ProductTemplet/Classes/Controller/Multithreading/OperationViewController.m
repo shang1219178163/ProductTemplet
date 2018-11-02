@@ -6,6 +6,16 @@
 //  Copyright © 2018年 BN. All rights reserved.
 //
 
+/*
+ NSOperationQueue.mainQueue
+- 凡是添加到主队列中的任务（NSOperation），都会放到主线程中执行
+
+ [[NSOperationQueue alloc] init]
+ 非主队列（其他队列）
+ 同时包含了：串行、并发功能
+ - 添加到这种队列中的任务（NSOperation），就会自动放到子线程中执行
+ */
+
 #import "OperationViewController.h"
 
 #import "BN_Operation.h"
@@ -98,9 +108,15 @@
 /** NSInvocationOperation的使用 */
 - (void)testNSInvocationOperation {
     // 创建NSInvocationOperation
-    NSInvocationOperation *invocationOperation = [[NSInvocationOperation alloc] initWithTarget:self selector:@selector(invocationOperation) object:nil];
+    /*
+     注意：
+     默认情况下，调用了start方法后并不会开一条新线程去执行操作，而是在当前线程同步执行操作
+     只有将NSOperation放到一个NSOperationQueue中，才会异步执行操作
+     此类仅当了解，在开发中并不常用
+    */
+     NSInvocationOperation *invoOperation = [[NSInvocationOperation alloc] initWithTarget:self selector:@selector(invocationOperation) object:nil];
     // 开始执行操作
-    [invocationOperation start];
+    [invoOperation start];
 }
 
 - (void)invocationOperation {
@@ -110,6 +126,10 @@
 /** NSBlockOperation的使用 */
 - (void)testNSBlockOperation {
     // 把任务放到block中
+    /*
+     注意：
+     只要NSBlockOperation封装的操作数 >1，就会异步执行操作
+     */
     NSBlockOperation *blockOperation = [NSBlockOperation blockOperationWithBlock:^{
         NSLog(@"%@任务[NSBlockOperation blockOperationWithBlock],%@",NSStringFromSelector(_cmd), NSThread.currentThread);
     }];
@@ -148,7 +168,7 @@
     NSOperationQueue *queue = [[NSOperationQueue alloc] init];
     
     // 创建操作，NSInvocationOperation
-    NSInvocationOperation *invocationOperation = [[NSInvocationOperation alloc] initWithTarget:self selector:@selector(invocationOperationAddOperation) object:nil];
+    NSInvocationOperation *invoOperation = [[NSInvocationOperation alloc] initWithTarget:self selector:@selector(invocationOperationAddOperation) object:nil];
     // 创建操作，NSBlockOperation
     NSBlockOperation *blockOperation = [NSBlockOperation blockOperationWithBlock:^{
         for (int i = 0; i < 3; i++) {
@@ -156,8 +176,9 @@
         }
     }];
     
-    [queue addOperation:invocationOperation];
+    [queue addOperation:invoOperation];
     [queue addOperation:blockOperation];
+    
 }
 
 - (void)invocationOperationAddOperation {
@@ -232,6 +253,8 @@
             NSLog(@"addOperationWithBlock把任务添加到队列3===%@", NSThread.currentThread);
         }
     }];
+    
+    
 }
 
 /** 操作依赖 */
@@ -261,6 +284,7 @@
     // 把操作加入队列
     [queue addOperation:operation1];
     [queue addOperation:operation2];
+    
 }
 
 

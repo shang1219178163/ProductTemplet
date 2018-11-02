@@ -8,12 +8,12 @@
 
 #import "NotificationTreadController.h"
 
-@interface NotificationTreadController ()<NSMachPortDelegate,NSPortDelegate>
+@interface NotificationTreadController ()<NSMachPortDelegate>
 
-@property (nonatomic) NSMutableArray    *notifications;         // 通知队列
-@property (nonatomic) NSThread          *notificationThread;    // 期望线程
-@property (nonatomic) NSLock            *notificationLock;      // 用于对通知队列加锁的锁对象，避免线程冲突
-@property (nonatomic) NSMachPort        *notificationPort;      // 用于向期望线程发送信号的通信端口
+@property (nonatomic) NSMutableArray    *notiList;         // 通知队列
+@property (nonatomic) NSThread          *notiThread;    // 期望线程
+@property (nonatomic) NSLock            *notiLock;      // 用于对通知队列加锁的锁对象，避免线程冲突
+@property (nonatomic) NSMachPort        *notiPort;      // 用于向期望线程发送信号的通信端口
 
 
 @end
@@ -28,75 +28,60 @@
     NSLog(@"current thread = %@", NSThread.currentThread);
     
     // 初始化
-    self.notifications = [NSMutableArray array];
-    self.notificationLock = [[NSLock alloc] init];
+    self.notiList = [NSMutableArray array];
+    self.notiLock = [[NSLock alloc] init];
     
-    self.notificationThread = NSThread.currentThread;
-    self.notificationPort = [[NSMachPort alloc] init];
-    self.notificationPort.delegate = self;
+    self.notiThread = NSThread.currentThread;
+    self.notiPort = [[NSMachPort alloc] init];
+    self.notiPort.delegate = self;
     
     // 往当前线程的run loop添加端口源
     // 当Mach消息到达而接收线程的run loop没有运行时，则内核会保存这条消息，直到下一次进入run loop
-    [NSRunLoop.currentRunLoop addPort:self.notificationPort forMode:(__bridge NSString *)kCFRunLoopCommonModes];
+    [NSRunLoop.currentRunLoop addPort:self.notiPort forMode:(__bridge NSString *)kCFRunLoopCommonModes];
     
-    [NSNotificationCenter.defaultCenter addObserver:self selector:@selector(processNotification:) name:@"TestNotification" object:nil];
+    [NSNotificationCenter.defaultCenter addObserver:self selector:@selector(processNotification:) name:@"kNoti_fication" object:nil];
     
     dispatch_async(dispatch_get_global_queue(0, 0), ^{
-        [NSNotificationCenter.defaultCenter postNotificationName:@"TEST_NOTIFICATION" object:nil userInfo:nil];
-        
+        [NSNotificationCenter.defaultCenter postNotificationName:@"kNoti_fication" object:nil userInfo:nil];
+
     });
     
 }
 
 - (void)handlePortMessage:(NSPortMessage *)message{
-    DDLog(@"%@",message);
-    
-}
-
-
-- (void)handleMachMessage:(void *)msg {
-    
-    DDLog(@"%@",msg);
-//    //1. 消息id
-//    NSUInteger msgId = [[msg valueForKeyPath:@"msgid"] integerValue];
-//
-//    //2. 当前主线程的port
-//    NSPort *localPort = [msg valueForKeyPath:@"localPort"];
-//
-//    //3. 接收到消息的port（来自其他线程）
-//    NSPort *remotePort = [msg valueForKeyPath:@"remotePort"];
-
-    
-    [self.notificationLock lock];
-    
-    while (self.notifications.count) {
-        NSNotification *notification = self.notifications[0];
-        [self.notifications removeObjectAtIndex:0];
-        [self.notificationLock unlock];
+    [self.notiLock lock];
+    while (self.notiList.count) {
+        NSNotification *notification = self.notiList[0];
+        [self.notiList removeObjectAtIndex:0];
+        [self.notiLock unlock];
         [self processNotification:notification];
-        [self.notificationLock lock];
+        [self.notiLock lock];
     };
     
-    [self.notificationLock unlock];
+    [self.notiLock unlock];
 }
 
 - (void)processNotification:(NSNotification *)notification {
-    
-    if (NSThread.currentThread != _notificationThread) {
+    if (NSThread.currentThread != _notiThread) {
         // Forward the notification to the correct thread.
-        [self.notificationLock lock];
-        [self.notifications addObject:notification];
-        [self.notificationLock unlock];
-        [self.notificationPort sendBeforeDate:NSDate.date
-                                   components:nil
-                                         from:nil
-                                     reserved:0];
+        [self.notiLock lock];
+        [self.notiList addObject:notification];
+        [self.notiLock unlock];
+        [self.notiPort sendBeforeDate:NSDate.date components:nil from:nil reserved:0];
     }
     else {
         // Process the notification here;
         NSLog(@"current thread = %@", NSThread.currentThread);
         NSLog(@"process notification");
     }
+}
+
+
+- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
+    dispatch_async(dispatch_get_global_queue(0, 0), ^{
+        [NSNotificationCenter.defaultCenter postNotificationName:@"kNoti_fication" object:nil userInfo:nil];
+        
+    });
 }
 
 
