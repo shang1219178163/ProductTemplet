@@ -14,7 +14,6 @@
 #import "NSString+Helper.h"
 
 #import "NSDate+Helper.h"
-#import "NSData+Other.h"
 #import "UIDevice+FCUUID.h"
 
 NSString *const kHTTP_URLMiddle = @"i=42&c=entry&do=fengmian&m=android&source=ios";//通用参数

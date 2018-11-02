@@ -11,7 +11,6 @@ target 'ProductTemplet' do
   pod ‘AFNetworking’
   pod 'Aspects'
 
-  pod ‘CTAssetsPickerController’
   pod 'CYLTabBarController'
   
   pod 'FCUUID'
@@ -23,25 +22,18 @@ target 'ProductTemplet' do
   pod 'IQKeyboardManager'
   pod ‘iCarousel’
   
-  pod 'JCore'
   pod 'JPush'
   pod 'JZLocationConverter'
   
   pod 'KVOController'
   
   pod 'MBProgressHUD'
-  pod 'MGSwipeTableCell'
 
   pod 'MJExtension'
   pod 'MJRefresh'
-  pod 'MMPlaceHolder'
   pod 'Masonry'
 
-  pod ‘NJKWebViewProgress’
-  
   pod 'PopoverView'
-  pod 'Reachability'
-  pod 'ReactiveObjC'
   
   pod 'PPNumberButton'
   
@@ -50,13 +42,9 @@ target 'ProductTemplet' do
   
   pod 'Toast'
   
-  pod ‘UITableView+FDTemplateLayoutCell’
   pod 'UICKeyChainStore'
 
-  pod ‘WXSTransition’
-  
   pod 'YBAttributeTextTapAction'
-  pod 'YJBannerView'
   
   pod ‘YYCache’
   pod 'YYCategories'

@@ -13,7 +13,7 @@
 #import "AESCrypt.h"
 #import "Utilities_DM.h"
 
-#import "NSData+Other.h"
+#import "NSData+Helper.h"
 #import "NSString+Other.h"
 
 static NSString *const kACSEncrypt = @"mbqh1Gtpj9L8pJuv";
