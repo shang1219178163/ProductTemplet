@@ -328,9 +328,6 @@
 		51A4A0092182AF9D00BA9923 /* SortViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 51A4A0082182AF9D00BA9923 /* SortViewController.m */; };
 		51A4A00C2182E1AB00BA9923 /* BlockViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 51A4A00B2182E1AB00BA9923 /* BlockViewController.m */; };
 		51A4A1272182FB7900BA9923 /* EntryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 51A4A1262182FB7900BA9923 /* EntryViewController.m */; };
-		51B7AC6B211451CE001D671A /* PopoverAction.m in Sources */ = {isa = PBXBuildFile; fileRef = 51B7AC68211451CE001D671A /* PopoverAction.m */; };
-		51B7AC6C211451CE001D671A /* PopoverView.m in Sources */ = {isa = PBXBuildFile; fileRef = 51B7AC69211451CE001D671A /* PopoverView.m */; };
-		51B7AC6D211451CE001D671A /* PopoverViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 51B7AC6A211451CE001D671A /* PopoverViewCell.m */; };
 		51B9CCFC209FE2B00096A540 /* TimerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 51B9CCFB209FE2B00096A540 /* TimerViewController.m */; };
 		51B9CD0920A038360096A540 /* BN_GCD.m in Sources */ = {isa = PBXBuildFile; fileRef = 51B9CD0820A038360096A540 /* BN_GCD.m */; };
 		51B9CD1120A051AA0096A540 /* BN_LeftViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 51B9CD0E20A051A80096A540 /* BN_LeftViewController.m */; };
@@ -847,12 +844,6 @@
 		51A4A00B2182E1AB00BA9923 /* BlockViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BlockViewController.m; sourceTree = "<group>"; };
 		51A4A1252182FB7900BA9923 /* EntryViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EntryViewController.h; sourceTree = "<group>"; };
 		51A4A1262182FB7900BA9923 /* EntryViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EntryViewController.m; sourceTree = "<group>"; };
-		51B7AC65211451CE001D671A /* PopoverView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PopoverView.h; sourceTree = "<group>"; };
-		51B7AC66211451CE001D671A /* PopoverViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PopoverViewCell.h; sourceTree = "<group>"; };
-		51B7AC67211451CE001D671A /* PopoverAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PopoverAction.h; sourceTree = "<group>"; };
-		51B7AC68211451CE001D671A /* PopoverAction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PopoverAction.m; sourceTree = "<group>"; };
-		51B7AC69211451CE001D671A /* PopoverView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PopoverView.m; sourceTree = "<group>"; };
-		51B7AC6A211451CE001D671A /* PopoverViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PopoverViewCell.m; sourceTree = "<group>"; };
 		51B9CCFA209FE2B00096A540 /* TimerViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TimerViewController.h; sourceTree = "<group>"; };
 		51B9CCFB209FE2B00096A540 /* TimerViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TimerViewController.m; sourceTree = "<group>"; };
 		51B9CD0720A038360096A540 /* BN_GCD.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BN_GCD.h; sourceTree = "<group>"; };
@@ -969,7 +960,6 @@
 			isa = PBXGroup;
 			children = (
 				515C67C62137C55700D5EA94 /* BAddressPickerController */,
-				51B7AC64211451CE001D671A /* PopoverView */,
 				5167FF1220F5C0EC004A810C /* PulsingHalo */,
 				515CC92620B6AAF1004AE27C /* AAChartKitLib */,
 				51B9CD1320A0520F0096A540 /* ZYSliderViewController */,
@@ -1859,19 +1849,6 @@
 			path = Resource;
 			sourceTree = "<group>";
 		};
-		51B7AC64211451CE001D671A /* PopoverView */ = {
-			isa = PBXGroup;
-			children = (
-				51B7AC65211451CE001D671A /* PopoverView.h */,
-				51B7AC66211451CE001D671A /* PopoverViewCell.h */,
-				51B7AC67211451CE001D671A /* PopoverAction.h */,
-				51B7AC68211451CE001D671A /* PopoverAction.m */,
-				51B7AC69211451CE001D671A /* PopoverView.m */,
-				51B7AC6A211451CE001D671A /* PopoverViewCell.m */,
-			);
-			path = PopoverView;
-			sourceTree = "<group>";
-		};
 		51B9CD1320A0520F0096A540 /* ZYSliderViewController */ = {
 			isa = PBXGroup;
 			children = (
@@ -2240,7 +2217,6 @@
 				515C67E62137C55700D5EA94 /* BRecentCityCell.m in Sources */,
 				51862E9520BBB2150080BD4E /* AdapterViewController.m in Sources */,
 				51364DE320860BE0005A20E7 /* CommonUtility.m in Sources */,
-				51B7AC6B211451CE001D671A /* PopoverAction.m in Sources */,
 				515CC98220B6AAF2004AE27C /* AAAnimation.m in Sources */,
 				515CC98920B6AAF2004AE27C /* AAChartView.m in Sources */,
 				513647C0208604DE005A20E7 /* HZPhotoItem.m in Sources */,
@@ -2267,7 +2243,6 @@
 				51862E7A20BBA1B50080BD4E /* StrategyFinancyAlipay.m in Sources */,
 				513647BD208604DE005A20E7 /* HZPhotoBrowser.m in Sources */,
 				5162F6F720BF9604009A6253 /* ThreadCommunicationController.m in Sources */,
-				51B7AC6D211451CE001D671A /* PopoverViewCell.m in Sources */,
 				515C67E22137C55700D5EA94 /* LNSearchManager.m in Sources */,
 				51364C8020860822005A20E7 /* BN_Map.m in Sources */,
 				51364DE420860BE0005A20E7 /* ErrorInfoUtility.m in Sources */,
@@ -2333,7 +2308,6 @@
 				515CC97A20B6AAF2004AE27C /* AACrosshair.m in Sources */,
 				515CC97720B6AAF2004AE27C /* AATooltip.m in Sources */,
 				51234B32215E326400F45FD2 /* WHKNetInfoFeedModel.m in Sources */,
-				51B7AC6C211451CE001D671A /* PopoverView.m in Sources */,
 				51862E5F20BB94810080BD4E /* EOCEmployee.m in Sources */,
 				5162F70420BF9D5F009A6253 /* ExtrinsicFlowerStateModel.m in Sources */,
 				51954AB520A12DCC00B066C8 /* CycleLabelViewController.m in Sources */,
