@@ -65,7 +65,7 @@ NSString *const CYLTabBarItemController = @"CYLTabBarItemController";
     for (NSDictionary * dict in self.tabBarItemsAttributes) {
         UIViewController * controller = [NSClassFromString(dict[CYLTabBarItemController]) new];
         controller.title = dict[CYLTabBarItemTitle];
-        controller.hidesBottomBarWhenPushed = YES;
+//        controller.hidesBottomBarWhenPushed = YES;//必须屏蔽
         UINavigationController *navController = [[UINavigationController alloc]
                                                  initWithRootViewController:controller];
         [marr addObject:navController];
