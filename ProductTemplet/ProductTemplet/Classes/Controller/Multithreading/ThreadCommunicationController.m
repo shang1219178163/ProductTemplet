@@ -57,10 +57,10 @@
 //    NSPort *port1 = [[NSPort alloc]init];
 //    NSPort *port2 = [[NSMachPort alloc]init];
 //    NSPort *port3 = [NSPort port];
-//    NSPort *port4 = [NSMachPort port];
+//    NSPort *port4 = NSMachPort.port;
     //声明两个端口 随便怎么写创建方法，返回的总是一个NSMachPort实例
     NSMachPort *mainPort = [[NSMachPort alloc]init];
-    NSPort *threadPort = [NSMachPort port];
+    NSPort *threadPort = NSMachPort.port;
     //设置线程的端口的代理回调为自己
     threadPort.delegate = self;
     

@@ -56,9 +56,9 @@ NSThread *thread1 = [[NSThread alloc] initWithTarget:self selector:@selector(doS
 - (void)run {
     @autoreleasepool {
         NSLog(@"current thread = %@", NSThread.currentThread);
-        NSRunLoop *runLoop = [NSRunLoop currentRunLoop];
+        NSRunLoop *runLoop = NSRunLoop.currentRunLoop;
         if (!self.port) {
-            self.port = [NSMachPort port];
+            self.port = NSMachPort.port;
         }
         [runLoop addPort:self.port forMode:NSDefaultRunLoopMode];
         CFRunLoopRun();
