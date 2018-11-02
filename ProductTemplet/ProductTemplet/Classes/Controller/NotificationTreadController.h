@@ -6,12 +6,14 @@
 //  Copyright © 2018年 BN. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+/*
+ 不同线程的通知重定向
+ */
 
-NS_ASSUME_NONNULL_BEGIN
+#import <UIKit/UIKit.h>
 
 @interface NotificationTreadController : UIViewController
 
 @end
 
-NS_ASSUME_NONNULL_END
+
