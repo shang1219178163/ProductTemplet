@@ -9,7 +9,7 @@
 #import "MultithreadingViewController.h"
 
 #import "UIViewController+Helper.h"
-#import "WHKTableViewOneCell.h"
+#import "UITableViewOneCell.h"
 
 @interface MultithreadingViewController ()<UITableViewDataSource,UITableViewDelegate>
 
@@ -87,7 +87,7 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     NSDictionary * dict = self.dataList[indexPath.row];
     
-    WHKTableViewOneCell * cell = [WHKTableViewOneCell cellWithTableView:tableView];
+    UITableViewOneCell * cell = [UITableViewOneCell cellWithTableView:tableView];
     
     cell.textLabel.text = dict[kItem_title];
     cell.textLabel.textColor = UIColor.themeColor;

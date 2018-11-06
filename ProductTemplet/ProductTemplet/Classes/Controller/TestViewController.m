@@ -57,7 +57,7 @@
     switch (indexPath.row) {
         case 0:
         {
-            WHKTableViewZeroCell *cell = [WHKTableViewZeroCell cellWithTableView:tableView];
+            UITableViewZeroCell *cell = [UITableViewZeroCell cellWithTableView:tableView];
             //    cell.imgView.image = [UIImage imageNamed:@"bug.png"];
             //    cell.label.text = [NSString stringWithFormat:@"row_%@",@(indexPath.row)];
             
@@ -85,7 +85,7 @@
             break;
         case 1:
         {
-            WHKTableViewOneCell *cell = [WHKTableViewOneCell cellWithTableView:tableView];
+            UITableViewOneCell *cell = [UITableViewOneCell cellWithTableView:tableView];
             cell.contentView.backgroundColor = UIColor.randomColor;
             //
             UIView * backView = [[UIView alloc]init];
@@ -128,7 +128,7 @@
             break;
         case 2:
         {
-            WHKTableViewTwoCell *cell = [WHKTableViewTwoCell cellWithTableView:tableView];
+            UITableViewTwoCell *cell = [UITableViewTwoCell cellWithTableView:tableView];
             [cell getViewLayer];
             return cell;
 

@@ -9,7 +9,7 @@
 #import "DesignPatternsController.h"
 
 #import "UIViewController+Helper.h"
-#import "WHKTableViewOneCell.h"
+#import "UITableViewOneCell.h"
 
 @interface DesignPatternsController ()<UITableViewDataSource,UITableViewDelegate>
 
@@ -97,7 +97,7 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     NSDictionary * dict = self.dataList[indexPath.row];
     
-    WHKTableViewOneCell * cell = [WHKTableViewOneCell cellWithTableView:tableView];
+    UITableViewOneCell * cell = [UITableViewOneCell cellWithTableView:tableView];
     
     cell.textLabel.text = dict[kItem_title];
     cell.textLabel.textColor = UIColor.themeColor;

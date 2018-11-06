@@ -86,7 +86,7 @@
     NSString * textSub = [@(foldModel.dataList.count) stringValue];;
     
     
-    WHKTableViewElevenCell * cell = [WHKTableViewElevenCell cellWithTableView:tableView];
+    UITableViewElevenCell * cell = [UITableViewElevenCell cellWithTableView:tableView];
     
     cell.labelLeft.text = title;
     cell.labelRight.text = textSub;
@@ -105,7 +105,7 @@
 //    NSString * textSub = [@(foldModel.dataList.count) stringValue];;
 //
 //
-//    WHKTableViewSixtyFiveCell * cell = [WHKTableViewSixtyFiveCell cellWithTableView:tableView];
+//    UITableViewSixtyFiveCell * cell = [UITableViewSixtyFiveCell cellWithTableView:tableView];
 //
 //    cell.labelLeft.text = title;
 //    cell.labelRight.text = textSub;
@@ -129,8 +129,9 @@
     
     BN_FoldSectionModel * foldModel = [self itemAtSection:section];
     
-    WHKHeaderFooterViewZero * foldHeaderView = [WHKHeaderFooterViewZero viewWithTableView:tableView];
-    
+//    WHKHeaderFooterViewZero * foldHeaderView = [WHKHeaderFooterViewZero viewWithTableView:tableView];
+    UITableHeaderFooterViewOne * foldHeaderView = [UITableHeaderFooterViewOne viewWithTableView:tableView];
+
     foldHeaderView.isCanOPen = YES;
     foldHeaderView.isOpen = foldModel.isOpen;
     foldHeaderView.labelLeft.text = foldModel.title;

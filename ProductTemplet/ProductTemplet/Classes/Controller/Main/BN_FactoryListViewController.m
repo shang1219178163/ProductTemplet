@@ -63,14 +63,14 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     
     if (self.dataList.count > 0) {
-        WHKTableViewOneCell * cell = [WHKTableViewOneCell cellWithTableView:tableView];
+        UITableViewOneCell * cell = [UITableViewOneCell cellWithTableView:tableView];
         
         cell.textLabel.text = [self.dataList[indexPath.row] title];
         cell.textLabel.textColor = UIColor.redColor;
         
         return cell;
     }else{
-        WHKTableViewOneCell * cell = [WHKTableViewOneCell cellWithTableView:tableView identifier:@"cell"];
+        UITableViewOneCell * cell = [UITableViewOneCell cellWithTableView:tableView identifier:@"cell"];
    
         cell.textLabel.textColor = UIColor.redColor;
         cell.textLabel.text = @"没有符合条件的数据,去看看其他内容吧!";

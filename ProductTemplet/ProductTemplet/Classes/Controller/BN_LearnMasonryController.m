@@ -53,7 +53,7 @@
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    WHKTableViewZeroCell *cell = [WHKTableViewZeroCell cellWithTableView:tableView];
+    UITableViewZeroCell *cell = [UITableViewZeroCell cellWithTableView:tableView];
     cell.imgViewLeft.image = [UIImage imageNamed:@"bug.png"];
     cell.labelLeft.text = [NSString stringWithFormat:@"row_%@",@(indexPath.row)];
 

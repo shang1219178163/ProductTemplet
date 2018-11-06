@@ -28,13 +28,11 @@ target 'ProductTemplet' do
   pod 'KVOController'
   
   pod 'MBProgressHUD'
-
   pod 'MJExtension'
   pod 'MJRefresh'
   pod 'Masonry'
 
   pod 'PopoverView'
-  
   pod 'PPNumberButton'
   
   pod 'SDCycleScrollView'
@@ -50,7 +48,6 @@ target 'ProductTemplet' do
   pod 'YYCategories'
   pod ‘YYWebImage’
   pod ‘YYModel’
-  
   pod 'YZPullDownMenu'
   
   pod 'ZYCornerRadius'

@@ -270,8 +270,8 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     
     if (self.dataList.count > 0) {
-        //        WHKTableViewOneCell * cell = [WHKTableViewOneCell cellWithTableView:tableView];
-        WHKTableViewEightySixCell * cell = [WHKTableViewEightySixCell cellWithTableView:tableView];
+        //        UITableViewOneCell * cell = [UITableViewOneCell cellWithTableView:tableView];
+        UITableViewEightySixCell * cell = [UITableViewEightySixCell cellWithTableView:tableView];
         
         cell.cycleView.list = @[@"昨天，天津发布了新的人才引进政策——“海河英才”行动计划，新政策大幅放宽人才落户条件、自主选择落户地点、简化落户办理程序。",@"在这之前，其实天津也有人才计划，只不过门槛比较高，办理落户的手续也比较复杂，比如本科学历需要在当地缴纳半年社保等。",@"这次放开，说白了就是之前的门槛太高了，可能没有达到预期效果。所以“海河英才”计划有点像之前人才政策的升级版。",@"444444444444",@"555555555",@"西安人才计划也搞了两轮，第一轮门槛很高，第二轮低降到大学生只要学生证和身份证就能落户。后来的效果大家也看到了，西安房子供不应求，房价大涨。天津会不会成为第二个西安呢？",];
         [cell.cycleView start];
@@ -279,7 +279,7 @@
         [cell getViewLayer];
         return cell;
     }else{
-        WHKTableViewOneCell * cell = [WHKTableViewOneCell cellWithTableView:tableView];
+        UITableViewOneCell * cell = [UITableViewOneCell cellWithTableView:tableView];
         
         cell.textLabel.text = @"没有符合条件的数据,去看看其他内容吧!";
         
