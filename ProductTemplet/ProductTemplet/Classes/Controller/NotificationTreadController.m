@@ -51,10 +51,10 @@
 - (void)handlePortMessage:(NSPortMessage *)message{
     [self.notiLock lock];
     while (self.notiList.count) {
-        NSNotification *notification = self.notiList[0];
+        NSNotification *noti = self.notiList[0];
         [self.notiList removeObjectAtIndex:0];
         [self.notiLock unlock];
-        [self processNotification:notification];
+        [self processNotification:noti];
         [self.notiLock lock];
     };
     
