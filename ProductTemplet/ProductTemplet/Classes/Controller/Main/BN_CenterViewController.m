@@ -143,7 +143,11 @@
                           kItem_controller  :   @"NotificationTreadController",
                           
                           },
-                      
+                      @{
+                          kItem_title   :   @"定时器列表",
+                          kItem_controller  :   @"CountDownListController",
+                          
+                          },
                       @{
                           kItem_title   :   @"Test",
                           kItem_controller  :   @"TestViewController",

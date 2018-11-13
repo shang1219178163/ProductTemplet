@@ -328,6 +328,10 @@
 		51A4A0092182AF9D00BA9923 /* SortViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 51A4A0082182AF9D00BA9923 /* SortViewController.m */; };
 		51A4A00C2182E1AB00BA9923 /* BlockViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 51A4A00B2182E1AB00BA9923 /* BlockViewController.m */; };
 		51A4A1272182FB7900BA9923 /* EntryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 51A4A1262182FB7900BA9923 /* EntryViewController.m */; };
+		51AA002321991646002EB259 /* CountDownListController.m in Sources */ = {isa = PBXBuildFile; fileRef = 51AA002221991646002EB259 /* CountDownListController.m */; };
+		51AA00332199295A002EB259 /* CounterListGroupController.m in Sources */ = {isa = PBXBuildFile; fileRef = 51AA003021992952002EB259 /* CounterListGroupController.m */; };
+		51AA00342199295A002EB259 /* CounterListController.m in Sources */ = {isa = PBXBuildFile; fileRef = 51AA003121992956002EB259 /* CounterListController.m */; };
+		51AA0037219929C3002EB259 /* BNCounter.m in Sources */ = {isa = PBXBuildFile; fileRef = 51AA0035219929C2002EB259 /* BNCounter.m */; };
 		51B9CCFC209FE2B00096A540 /* TimerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 51B9CCFB209FE2B00096A540 /* TimerViewController.m */; };
 		51B9CD0920A038360096A540 /* BN_GCD.m in Sources */ = {isa = PBXBuildFile; fileRef = 51B9CD0820A038360096A540 /* BN_GCD.m */; };
 		51B9CD1120A051AA0096A540 /* BN_LeftViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 51B9CD0E20A051A80096A540 /* BN_LeftViewController.m */; };
@@ -844,6 +848,14 @@
 		51A4A00B2182E1AB00BA9923 /* BlockViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BlockViewController.m; sourceTree = "<group>"; };
 		51A4A1252182FB7900BA9923 /* EntryViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EntryViewController.h; sourceTree = "<group>"; };
 		51A4A1262182FB7900BA9923 /* EntryViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EntryViewController.m; sourceTree = "<group>"; };
+		51AA002121991646002EB259 /* CountDownListController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CountDownListController.h; sourceTree = "<group>"; };
+		51AA002221991646002EB259 /* CountDownListController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CountDownListController.m; sourceTree = "<group>"; };
+		51AA002F21992951002EB259 /* CounterListController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CounterListController.h; sourceTree = "<group>"; };
+		51AA003021992952002EB259 /* CounterListGroupController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CounterListGroupController.m; sourceTree = "<group>"; };
+		51AA003121992956002EB259 /* CounterListController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CounterListController.m; sourceTree = "<group>"; };
+		51AA003221992959002EB259 /* CounterListGroupController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CounterListGroupController.h; sourceTree = "<group>"; };
+		51AA0035219929C2002EB259 /* BNCounter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BNCounter.m; sourceTree = "<group>"; };
+		51AA0036219929C3002EB259 /* BNCounter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BNCounter.h; sourceTree = "<group>"; };
 		51B9CCFA209FE2B00096A540 /* TimerViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TimerViewController.h; sourceTree = "<group>"; };
 		51B9CCFB209FE2B00096A540 /* TimerViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TimerViewController.m; sourceTree = "<group>"; };
 		51B9CD0720A038360096A540 /* BN_GCD.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BN_GCD.h; sourceTree = "<group>"; };
@@ -1072,6 +1084,12 @@
 				51A4A1262182FB7900BA9923 /* EntryViewController.m */,
 				51900DD5218953C20038A178 /* NotificationTreadController.h */,
 				51900DD6218953C20038A178 /* NotificationTreadController.m */,
+				51AA002121991646002EB259 /* CountDownListController.h */,
+				51AA002221991646002EB259 /* CountDownListController.m */,
+				51AA002F21992951002EB259 /* CounterListController.h */,
+				51AA003121992956002EB259 /* CounterListController.m */,
+				51AA003221992959002EB259 /* CounterListGroupController.h */,
+				51AA003021992952002EB259 /* CounterListGroupController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -1219,6 +1237,8 @@
 			isa = PBXGroup;
 			children = (
 				51258C15215E38C2009CDEE3 /* BN_Tool.h */,
+				51AA0036219929C3002EB259 /* BNCounter.h */,
+				51AA0035219929C2002EB259 /* BNCounter.m */,
 				51258C1D215E3969009CDEE3 /* BN_AccountTool.h */,
 				51258C1C215E3968009CDEE3 /* BN_AccountTool.m */,
 				51258C16215E38F8009CDEE3 /* BN_Language.h */,
@@ -2252,6 +2272,7 @@
 				517D8B1220B2B36E00DCA731 /* FMBDViewController.m in Sources */,
 				517D8B2420B2C66800DCA731 /* Car.m in Sources */,
 				515C67E52137C55700D5EA94 /* BCurrentCityCell.m in Sources */,
+				51AA00342199295A002EB259 /* CounterListController.m in Sources */,
 				51B9CD1220A051AA0096A540 /* BN_RightViewController.m in Sources */,
 				51258C1A215E38FD009CDEE3 /* NSBundle+Language.m in Sources */,
 				51A4A1272182FB7900BA9923 /* EntryViewController.m in Sources */,
@@ -2280,6 +2301,7 @@
 				515CC97D20B6AAF2004AE27C /* AAOptions3d.m in Sources */,
 				513646AF2086031D005A20E7 /* main.m in Sources */,
 				515CC98120B6AAF2004AE27C /* AAArea.m in Sources */,
+				51AA0037219929C3002EB259 /* BNCounter.m in Sources */,
 				513647C9208604DE005A20E7 /* LocationTracker.m in Sources */,
 				51BB931820B5013600EB43A1 /* DBEntity.m in Sources */,
 				51698C4021376F9E0069C2B2 /* BINAccountTool.m in Sources */,
@@ -2313,6 +2335,7 @@
 				51954AB520A12DCC00B066C8 /* CycleLabelViewController.m in Sources */,
 				5169699A20BCED4000BAA53D /* LH4SWaiter.m in Sources */,
 				513647C7208604DE005A20E7 /* BackgroundTaskManager.m in Sources */,
+				51AA00332199295A002EB259 /* CounterListGroupController.m in Sources */,
 				5162F6F120BF9110009A6253 /* ThreadViewController.m in Sources */,
 				515CC97220B6AAF2004AE27C /* AASeries.m in Sources */,
 				517D8B2520B2C66800DCA731 /* Person.m in Sources */,
@@ -2343,6 +2366,7 @@
 				51698C4321376F9E0069C2B2 /* AddressPickerDemo.m in Sources */,
 				5169698E20BCED2200BAA53D /* FacadeViewController.m in Sources */,
 				5162F6F420BF9337009A6253 /* ThreadNormolController.m in Sources */,
+				51AA002321991646002EB259 /* CountDownListController.m in Sources */,
 				51364DE620860BE0005A20E7 /* MANaviAnnotation.m in Sources */,
 				517D8B2A20B2E09800DCA731 /* PersonCarsViewController.m in Sources */,
 				51862E6820BB94E40080BD4E /* EOCEmployeeFinance.m in Sources */,
