@@ -33,6 +33,7 @@
         [self.view addSubview:button];
     }
     [self.view getViewLayer];
+    
 }
 
 - (void)tap:(UIButton *)sender {

@@ -12,7 +12,7 @@
 
 #import <Foundation/Foundation.h>
 
-static NSString *const InputValidationErrorDomain = @"InputValidationErrorDomain";
+FOUNDATION_EXPORT NSString *const InputValidationErrorDomain = @"InputValidationErrorDomain";
 
 @interface InputValidator : NSObject
 

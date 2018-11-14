@@ -22,9 +22,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
-    self.view.backgroundColor = UIColor.whiteColor;
-    
+        
     NSLog(@"current thread = %@", NSThread.currentThread);
     
     // 初始化
@@ -75,7 +73,6 @@
         NSLog(@"process notification");
     }
 }
-
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
     dispatch_async(dispatch_get_global_queue(0, 0), ^{

@@ -139,7 +139,7 @@
                           
                           },
                       @{
-                          kItem_title   :   @"广播重定向",
+                          kItem_title   :   @"(不同线程)广播重定向",
                           kItem_controller  :   @"NotificationTreadController",
                           
                           },

@@ -224,10 +224,10 @@ NSString * NSStringFromPlacemark(CLPlacemark *placemark) {
     
     if ([annotation isKindOfClass:[MAPointAnnotation class]])
     {
-        static NSString *pointReuseIdentifier = @"pointReuseIdentifier";
-        MAPinAnnotationView *annotationView = (MAPinAnnotationView*)[mapView dequeueReusableAnnotationViewWithIdentifier:pointReuseIdentifier];
+        static NSString *pointIdentifier = @"pointIdentifier";
+        MAPinAnnotationView *annotationView = (MAPinAnnotationView*)[mapView dequeueReusableAnnotationViewWithIdentifier:pointIdentifier];
         if (annotationView == nil){
-            annotationView = [[MAPinAnnotationView alloc] initWithAnnotation:annotation reuseIdentifier:pointReuseIdentifier];
+            annotationView = [[MAPinAnnotationView alloc] initWithAnnotation:annotation reuseIdentifier:pointIdentifier];
             annotationView.canShowCallout            = YES;
             annotationView.draggable                 = NO;
         }

@@ -248,6 +248,7 @@
 		5169DF212088235900B025C3 /* BN_GeocodeAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 5169DF1E2088235900B025C3 /* BN_GeocodeAnnotation.m */; };
 		5169DF222088235900B025C3 /* BN_ReGeocodeAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 5169DF1F2088235900B025C3 /* BN_ReGeocodeAnnotation.m */; };
 		5169DF242088254400B025C3 /* Public.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5169DF232088254300B025C3 /* Public.xcassets */; };
+		516CCFD3219BFC5E007D3F80 /* KVC_Controller.m in Sources */ = {isa = PBXBuildFile; fileRef = 516CCFD2219BFC5E007D3F80 /* KVC_Controller.m */; };
 		516F8562215DF8F5008E62B3 /* SuspendButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 516F8561215DF8F4008E62B3 /* SuspendButton.m */; };
 		5175C93620C122B1009EA86E /* DBHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 5175C93520C122B1009EA86E /* DBHandler.m */; };
 		5175C93920C13DE1009EA86E /* Student.m in Sources */ = {isa = PBXBuildFile; fileRef = 5175C93820C13DE1009EA86E /* Student.m */; };
@@ -721,6 +722,8 @@
 		5169DF1F2088235900B025C3 /* BN_ReGeocodeAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BN_ReGeocodeAnnotation.m; sourceTree = "<group>"; };
 		5169DF202088235900B025C3 /* BN_GeocodeAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BN_GeocodeAnnotation.h; sourceTree = "<group>"; };
 		5169DF232088254300B025C3 /* Public.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Public.xcassets; sourceTree = "<group>"; };
+		516CCFD1219BFC5E007D3F80 /* KVC_Controller.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KVC_Controller.h; sourceTree = "<group>"; };
+		516CCFD2219BFC5E007D3F80 /* KVC_Controller.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KVC_Controller.m; sourceTree = "<group>"; };
 		516F8560215DF8F2008E62B3 /* SuspendButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SuspendButton.h; sourceTree = "<group>"; };
 		516F8561215DF8F4008E62B3 /* SuspendButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SuspendButton.m; sourceTree = "<group>"; };
 		5175C93420C122B1009EA86E /* DBHandler.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DBHandler.h; sourceTree = "<group>"; };
@@ -1090,6 +1093,8 @@
 				51AA003121992956002EB259 /* CounterListController.m */,
 				51AA003221992959002EB259 /* CounterListGroupController.h */,
 				51AA003021992952002EB259 /* CounterListGroupController.m */,
+				516CCFD1219BFC5E007D3F80 /* KVC_Controller.h */,
+				516CCFD2219BFC5E007D3F80 /* KVC_Controller.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -2354,6 +2359,7 @@
 				513647E0208604DE005A20E7 /* PPNetworkHelper.m in Sources */,
 				516969B720BCFD4000BAA53D /* CompanyComponent.m in Sources */,
 				51364DE820860BE0005A20E7 /* MANaviRoute.m in Sources */,
+				516CCFD3219BFC5E007D3F80 /* KVC_Controller.m in Sources */,
 				51698C4121376F9E0069C2B2 /* BN_FileHandler.m in Sources */,
 				516969AD20BCF9A800BAA53D /* Buyer.m in Sources */,
 				51862E6520BB94D40080BD4E /* EOCEmployeeDesigner.m in Sources */,
