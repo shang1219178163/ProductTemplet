@@ -16,7 +16,7 @@
 #import "NSData+Helper.h"
 #import "NSString+Other.h"
 
-FOUNDATION_EXPORT NSString *const kACSEncrypt = @"mbqh1Gtpj9L8pJuv";
+static NSString *const kACSEncrypt = @"mbqh1Gtpj9L8pJuv";
 
 @interface Utilities ()
 

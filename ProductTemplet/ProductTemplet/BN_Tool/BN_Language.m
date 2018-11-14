@@ -8,8 +8,8 @@
 
 #import "BN_Language.h"
 
-FOUNDATION_EXPORT NSString *const kAppleLanguages = @"AppleLanguages";
-FOUNDATION_EXPORT NSString *const kUserLanguage = @"KeyUserLanguage";
+static NSString *const kAppleLanguages = @"AppleLanguages";
+static NSString *const kUserLanguage = @"KeyUserLanguage";
 
 #define kDefault  [NSUserDefaults standardUserDefaults]
 

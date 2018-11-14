@@ -113,7 +113,7 @@
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
 
-    FOUNDATION_EXPORT NSString * cellIdentifier = @"cell";
+    static NSString * cellIdentifier = @"cell";
     UITableViewCell * cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
 
     if (cell == nil) {

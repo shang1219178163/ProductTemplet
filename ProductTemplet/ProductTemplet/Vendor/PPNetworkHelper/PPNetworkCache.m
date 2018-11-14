@@ -11,7 +11,7 @@
 #import <YYCache/YYCache.h>
 
 @implementation PPNetworkCache
-FOUNDATION_EXPORT NSString *const NetworkResponseCache = @"PPNetworkResponseCache";
+static NSString *const NetworkResponseCache = @"PPNetworkResponseCache";
 static YYCache *_dataCache;
 
 

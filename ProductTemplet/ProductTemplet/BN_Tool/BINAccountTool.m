@@ -11,9 +11,9 @@
 
 @implementation BINAccountTool
 
-FOUNDATION_EXPORT NSString * const KEY_KeyChainUserAccount = @"com.whkj.whb.account";
-FOUNDATION_EXPORT NSString * const KEY_KeyChainUserName= @"com.whkj.whb.userid";
-FOUNDATION_EXPORT NSString * const KEY_KeyChainUserPwd = @"com.whkj.whb.password";
+static NSString * const KEY_KeyChainUserAccount = @"com.whkj.whb.account";
+static NSString * const KEY_KeyChainUserName= @"com.whkj.whb.userid";
+static NSString * const KEY_KeyChainUserPwd = @"com.whkj.whb.password";
 
 +(void)saveUserName:(NSString *)name
 {

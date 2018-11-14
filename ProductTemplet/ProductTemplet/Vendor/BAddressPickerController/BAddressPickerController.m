@@ -138,7 +138,7 @@
 }
 
 - (UITableViewCell*)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
-    FOUNDATION_EXPORT NSString *Identifier = @"Cell";
+    static NSString *Identifier = @"Cell";
     if (tableView == _tableView) {
         if (indexPath.section == 0) {
             BCurrentCityCell *currentCityCell = [tableView dequeueReusableCellWithIdentifier:@"currentCityCell"];
@@ -175,7 +175,7 @@
             return cell;
         }
     }else{
-        FOUNDATION_EXPORT NSString *Identifier = @"Cell";
+        static NSString *Identifier = @"Cell";
         UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:Identifier];
         if (cell == nil) {
             cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:Identifier];
