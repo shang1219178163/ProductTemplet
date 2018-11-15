@@ -26,6 +26,13 @@
     // 1.初始化 传入当前视图和数据数组
     self.countDown = [[BNCounter alloc] initWithTable:self.tableView];
 
+    
+//    DDLog(@"_%p_",BNCounter.shared);
+//    [BNCounter destoryShared];
+//    NSInteger a = 9;
+//    DDLog(@"__%p_",BNCounter.shared);
+
+    
 }
 
 -(void)viewWillAppear:(BOOL)animated{

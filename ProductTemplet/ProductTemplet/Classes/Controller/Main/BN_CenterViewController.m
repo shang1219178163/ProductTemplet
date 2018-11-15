@@ -149,6 +149,11 @@
                           
                           },
                       @{
+                          kItem_title   :   @"UIViewPropertyAnimator(iOS10)",
+                          kItem_controller  :   @"UIViewPropertyAnimatorController",
+                          
+                          },
+                      @{
                           kItem_title   :   @"Test",
                           kItem_controller  :   @"TestViewController",
                           

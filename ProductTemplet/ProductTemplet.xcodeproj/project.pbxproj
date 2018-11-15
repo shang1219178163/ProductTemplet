@@ -323,6 +323,7 @@
 		518B906B217F2110007E7343 /* right_slider_back@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 518B9067217F2110007E7343 /* right_slider_back@3x.png */; };
 		518B906C217F2110007E7343 /* left_slider_back@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 518B9068217F2110007E7343 /* left_slider_back@2x.png */; };
 		518B906D217F2110007E7343 /* left_slider_back@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 518B9069217F2110007E7343 /* left_slider_back@3x.png */; };
+		518CD324219D5A24003CE348 /* UIViewPropertyAnimatorController.m in Sources */ = {isa = PBXBuildFile; fileRef = 518CD323219D5A24003CE348 /* UIViewPropertyAnimatorController.m */; };
 		51900DD7218953C20038A178 /* NotificationTreadController.m in Sources */ = {isa = PBXBuildFile; fileRef = 51900DD6218953C20038A178 /* NotificationTreadController.m */; };
 		51900DD921895B9B0038A178 /* img_home_immune_147.png in Resources */ = {isa = PBXBuildFile; fileRef = 51900DD821895B9A0038A178 /* img_home_immune_147.png */; };
 		51954AB520A12DCC00B066C8 /* CycleLabelViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 51954AB420A12DCC00B066C8 /* CycleLabelViewController.m */; };
@@ -840,6 +841,8 @@
 		518B9067217F2110007E7343 /* right_slider_back@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "right_slider_back@3x.png"; sourceTree = "<group>"; };
 		518B9068217F2110007E7343 /* left_slider_back@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "left_slider_back@2x.png"; sourceTree = "<group>"; };
 		518B9069217F2110007E7343 /* left_slider_back@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "left_slider_back@3x.png"; sourceTree = "<group>"; };
+		518CD322219D5A24003CE348 /* UIViewPropertyAnimatorController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UIViewPropertyAnimatorController.h; sourceTree = "<group>"; };
+		518CD323219D5A24003CE348 /* UIViewPropertyAnimatorController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UIViewPropertyAnimatorController.m; sourceTree = "<group>"; };
 		51900DD5218953C20038A178 /* NotificationTreadController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NotificationTreadController.h; sourceTree = "<group>"; };
 		51900DD6218953C20038A178 /* NotificationTreadController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NotificationTreadController.m; sourceTree = "<group>"; };
 		51900DD821895B9A0038A178 /* img_home_immune_147.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = img_home_immune_147.png; sourceTree = "<group>"; };
@@ -1069,8 +1072,8 @@
 				510BC9A2208F3B6A00CF48C5 /* SliderTabBarController.m */,
 				51954AB320A12DCC00B066C8 /* CycleLabelViewController.h */,
 				51954AB420A12DCC00B066C8 /* CycleLabelViewController.m */,
-				51036F4E20A17B3B009D8B7B /* WeiboLisController.h */,
 				51036F4F20A17B3B009D8B7B /* WeiboLisController.m */,
+				51036F4E20A17B3B009D8B7B /* WeiboLisController.h */,
 				517D8B1020B2B36E00DCA731 /* FMBDViewController.h */,
 				517D8B1120B2B36E00DCA731 /* FMBDViewController.m */,
 				5129425620B424EC009FB70E /* LockCompareController.h */,
@@ -1095,6 +1098,8 @@
 				51AA003021992952002EB259 /* CounterListGroupController.m */,
 				516CCFD1219BFC5E007D3F80 /* KVC_Controller.h */,
 				516CCFD2219BFC5E007D3F80 /* KVC_Controller.m */,
+				518CD322219D5A24003CE348 /* UIViewPropertyAnimatorController.h */,
+				518CD323219D5A24003CE348 /* UIViewPropertyAnimatorController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -2298,6 +2303,7 @@
 				51B9CD0920A038360096A540 /* BN_GCD.m in Sources */,
 				51698C4B21376F9E0069C2B2 /* KeychainTool.m in Sources */,
 				51B9CD1820A0520F0096A540 /* ZYSliderViewController.m in Sources */,
+				518CD324219D5A24003CE348 /* UIViewPropertyAnimatorController.m in Sources */,
 				51B9CD1920A0520F0096A540 /* UIViewController+ZYSliderViewController.m in Sources */,
 				5169DF0B208822B200B025C3 /* BN_ThirdViewController.m in Sources */,
 				51CD3B4A2160A59D00A99F37 /* WHKLeftMenuView.m in Sources */,

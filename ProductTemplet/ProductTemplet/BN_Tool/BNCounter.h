@@ -31,4 +31,8 @@ static NSInteger kCounterLabTag = 3600;
 
 @property (nonatomic,assign)BOOL isPlusTime;
 
+//+(instancetype)shared;
+//
+//+(void)destoryShared;
+
 @end

@@ -119,4 +119,18 @@
     
 }
 
+//static BNCounter * _instance = nil;
+//static dispatch_once_t onceToken;
+//+(instancetype)shared{
+//    dispatch_once(&onceToken, ^{
+//        _instance = [[self alloc]init];
+//    });
+//    return _instance;
+//}
+//+(void)destoryShared{
+//    _instance = nil;
+//    onceToken = 0;
+//    
+//}
+
 @end
