@@ -102,63 +102,56 @@
     }];
 
     self.dataList = @[
-                      @{
-                          kItem_title   :   @"FMDB",
-                          kItem_controller  :   @"FMBDViewController",
+                      @[
+                          @"FMDB",@"FMBDViewController",
 
-                          },
-                      @{
-                          kItem_title   :   @"iOS锁性能对比",
-                          kItem_controller  :   @"LockCompareController",
+                          ],
+                      @[
+                          @"iOS锁性能对比",@"LockCompareController",
                           
-                          },
-                      @{
-                          kItem_title   :   @"DesignPatterns",
-                          kItem_controller  :   @"DesignPatternsController",
+                          ],
+                      @[
+                          @"DesignPatterns",@"DesignPatternsController",
                           
-                          },
-                      @{
-                          kItem_title   :   @"Multithreading",
-                          kItem_controller  :   @"MultithreadingViewController",
+                          ],
+                      @[
+                          @"Multithreading",@"MultithreadingViewController",
                           
-                          },
-                      @{
-                          kItem_title   :   @"block循环引用完美解决方案",
-                          kItem_controller  :   @"BlockViewController",
+                          ],
+                      @[
+                          @"block循环引用完美解决方案",@"BlockViewController",
                           
-                          },
-                      @{
-                          kItem_title   :   @"录入类界面封装",
-                          kItem_controller  :   @"EntryViewController",
+                          ],
+                      @[
+                          @"录入类界面封装",@"EntryViewController",
                           
-                          },
+                          ],
                       
-                      @{
-                          kItem_title   :   @"Sort",
-                          kItem_controller  :   @"SortViewController",
+                      @[
+                          @"Sort",@"SortViewController",
                           
-                          },
-                      @{
-                          kItem_title   :   @"(不同线程)广播重定向",
-                          kItem_controller  :   @"NotificationTreadController",
+                          ],
+                      @[
+                          @"(不同线程)广播重定向",@"NotificationTreadController",
                           
-                          },
-                      @{
-                          kItem_title   :   @"定时器列表",
-                          kItem_controller  :   @"CountDownListController",
+                          ],
+                      @[
+                          @"定时器列表",@"CountDownListController",
                           
-                          },
-                      @{
-                          kItem_title   :   @"UIViewPropertyAnimator(iOS10)",
-                          kItem_controller  :   @"UIViewPropertyAnimatorController",
+                          ],
+                      @[
+                          @"UIViewPropertyAnimator(iOS10)",@"UIViewPropertyAnimatorController",
                           
-                          },
-                      @{
-                          kItem_title   :   @"Test",
-                          kItem_controller  :   @"TestViewController",
+                          ],
+                      @[
+                          @"SugerAlert",@"SugerAlertController",
                           
-                          },
-                   
+                          ],
+                      
+                      @[
+                          @"Test",@"TestViewController",
+                          
+                          ],
                  
                       ].mutableCopy;
     
@@ -166,6 +159,7 @@
 
     
     NSDictionary * dic = @{
+                              
                            @1 :@"11111111",
                            @2   : @"222222222",
                            };
@@ -202,11 +196,11 @@
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
-    NSDictionary * dict = self.dataList[indexPath.row];
+    NSArray * list = self.dataList[indexPath.row];
     
     UITableViewOneCell * cell = [UITableViewOneCell cellWithTableView:tableView];
     
-    cell.textLabel.text = dict[kItem_title];
+    cell.textLabel.text = list.firstObject;
     cell.textLabel.textColor = UIColor.themeColor;
     
     return cell;
@@ -214,8 +208,8 @@
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-    NSDictionary * dict = self.dataList[indexPath.row];
-    [self goController:dict[kItem_controller] title:dict[kItem_title]];
+    NSArray * list = self.dataList[indexPath.row];
+    [self goController:list.lastObject title:list.firstObject];
     
 }
 

@@ -324,6 +324,8 @@
 		518B906C217F2110007E7343 /* left_slider_back@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 518B9068217F2110007E7343 /* left_slider_back@2x.png */; };
 		518B906D217F2110007E7343 /* left_slider_back@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 518B9069217F2110007E7343 /* left_slider_back@3x.png */; };
 		518CD324219D5A24003CE348 /* UIViewPropertyAnimatorController.m in Sources */ = {isa = PBXBuildFile; fileRef = 518CD323219D5A24003CE348 /* UIViewPropertyAnimatorController.m */; };
+		518CD32A219D787F003CE348 /* SugerAlertController.m in Sources */ = {isa = PBXBuildFile; fileRef = 518CD329219D787F003CE348 /* SugerAlertController.m */; };
+		518CD32D219D78B6003CE348 /* BNActionSheet.m in Sources */ = {isa = PBXBuildFile; fileRef = 518CD32B219D78B5003CE348 /* BNActionSheet.m */; };
 		51900DD7218953C20038A178 /* NotificationTreadController.m in Sources */ = {isa = PBXBuildFile; fileRef = 51900DD6218953C20038A178 /* NotificationTreadController.m */; };
 		51900DD921895B9B0038A178 /* img_home_immune_147.png in Resources */ = {isa = PBXBuildFile; fileRef = 51900DD821895B9A0038A178 /* img_home_immune_147.png */; };
 		51954AB520A12DCC00B066C8 /* CycleLabelViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 51954AB420A12DCC00B066C8 /* CycleLabelViewController.m */; };
@@ -843,6 +845,10 @@
 		518B9069217F2110007E7343 /* left_slider_back@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "left_slider_back@3x.png"; sourceTree = "<group>"; };
 		518CD322219D5A24003CE348 /* UIViewPropertyAnimatorController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UIViewPropertyAnimatorController.h; sourceTree = "<group>"; };
 		518CD323219D5A24003CE348 /* UIViewPropertyAnimatorController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UIViewPropertyAnimatorController.m; sourceTree = "<group>"; };
+		518CD328219D787F003CE348 /* SugerAlertController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SugerAlertController.h; sourceTree = "<group>"; };
+		518CD329219D787F003CE348 /* SugerAlertController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SugerAlertController.m; sourceTree = "<group>"; };
+		518CD32B219D78B5003CE348 /* BNActionSheet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BNActionSheet.m; sourceTree = "<group>"; };
+		518CD32C219D78B5003CE348 /* BNActionSheet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BNActionSheet.h; sourceTree = "<group>"; };
 		51900DD5218953C20038A178 /* NotificationTreadController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NotificationTreadController.h; sourceTree = "<group>"; };
 		51900DD6218953C20038A178 /* NotificationTreadController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NotificationTreadController.m; sourceTree = "<group>"; };
 		51900DD821895B9A0038A178 /* img_home_immune_147.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = img_home_immune_147.png; sourceTree = "<group>"; };
@@ -1100,6 +1106,10 @@
 				516CCFD2219BFC5E007D3F80 /* KVC_Controller.m */,
 				518CD322219D5A24003CE348 /* UIViewPropertyAnimatorController.h */,
 				518CD323219D5A24003CE348 /* UIViewPropertyAnimatorController.m */,
+				518CD328219D787F003CE348 /* SugerAlertController.h */,
+				518CD329219D787F003CE348 /* SugerAlertController.m */,
+				518CD32C219D78B5003CE348 /* BNActionSheet.h */,
+				518CD32B219D78B5003CE348 /* BNActionSheet.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -2272,6 +2282,7 @@
 				513647C1208604DE005A20E7 /* HZWaitingView.m in Sources */,
 				51862E7A20BBA1B50080BD4E /* StrategyFinancyAlipay.m in Sources */,
 				513647BD208604DE005A20E7 /* HZPhotoBrowser.m in Sources */,
+				518CD32D219D78B6003CE348 /* BNActionSheet.m in Sources */,
 				5162F6F720BF9604009A6253 /* ThreadCommunicationController.m in Sources */,
 				515C67E22137C55700D5EA94 /* LNSearchManager.m in Sources */,
 				51364C8020860822005A20E7 /* BN_Map.m in Sources */,
@@ -2347,6 +2358,7 @@
 				5169699A20BCED4000BAA53D /* LH4SWaiter.m in Sources */,
 				513647C7208604DE005A20E7 /* BackgroundTaskManager.m in Sources */,
 				51AA00332199295A002EB259 /* CounterListGroupController.m in Sources */,
+				518CD32A219D787F003CE348 /* SugerAlertController.m in Sources */,
 				5162F6F120BF9110009A6253 /* ThreadViewController.m in Sources */,
 				515CC97220B6AAF2004AE27C /* AASeries.m in Sources */,
 				517D8B2520B2C66800DCA731 /* Person.m in Sources */,
