@@ -147,6 +147,10 @@
                           @"SugerAlert",@"SugerAlertController",
                           
                           ],
+                      @[
+                          @"同一界面多网络请求",@"MutiRequestController",
+                          
+                          ],
                       
                       @[
                           @"Test",@"TestViewController",

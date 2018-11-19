@@ -263,6 +263,7 @@
 		517D8B2B20B2E09800DCA731 /* CarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 517D8B2920B2E09800DCA731 /* CarViewController.m */; };
 		517D8B2E20B2E0A200DCA731 /* FMViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 517D8B2D20B2E0A100DCA731 /* FMViewController.m */; };
 		5184281B2091AD09007D7BAA /* loading.gif in Resources */ = {isa = PBXBuildFile; fileRef = 5184281A2091AD09007D7BAA /* loading.gif */; };
+		5185FDDC21A248E900FFA730 /* MutiRequestController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5185FDDB21A248E900FFA730 /* MutiRequestController.m */; };
 		51862E5020BB908E0080BD4E /* DesignPatternsController.m in Sources */ = {isa = PBXBuildFile; fileRef = 51862E4E20BB908D0080BD4E /* DesignPatternsController.m */; };
 		51862E5F20BB94810080BD4E /* EOCEmployee.m in Sources */ = {isa = PBXBuildFile; fileRef = 51862E5E20BB94810080BD4E /* EOCEmployee.m */; };
 		51862E6220BB94C40080BD4E /* EOCEmployeeDeveloper.m in Sources */ = {isa = PBXBuildFile; fileRef = 51862E6120BB94C40080BD4E /* EOCEmployeeDeveloper.m */; };
@@ -754,6 +755,8 @@
 		517D8B2C20B2E0A000DCA731 /* FMViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMViewController.h; sourceTree = "<group>"; };
 		517D8B2D20B2E0A100DCA731 /* FMViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMViewController.m; sourceTree = "<group>"; };
 		5184281A2091AD09007D7BAA /* loading.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = loading.gif; sourceTree = "<group>"; };
+		5185FDDA21A248E900FFA730 /* MutiRequestController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MutiRequestController.h; sourceTree = "<group>"; };
+		5185FDDB21A248E900FFA730 /* MutiRequestController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MutiRequestController.m; sourceTree = "<group>"; };
 		51862E4E20BB908D0080BD4E /* DesignPatternsController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DesignPatternsController.m; sourceTree = "<group>"; };
 		51862E4F20BB908D0080BD4E /* DesignPatternsController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DesignPatternsController.h; sourceTree = "<group>"; };
 		51862E5D20BB94810080BD4E /* EOCEmployee.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EOCEmployee.h; sourceTree = "<group>"; };
@@ -1110,6 +1113,8 @@
 				518CD329219D787F003CE348 /* SugerAlertController.m */,
 				518CD32C219D78B5003CE348 /* BNActionSheet.h */,
 				518CD32B219D78B5003CE348 /* BNActionSheet.m */,
+				5185FDDA21A248E900FFA730 /* MutiRequestController.h */,
+				5185FDDB21A248E900FFA730 /* MutiRequestController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -2294,6 +2299,7 @@
 				517D8B2420B2C66800DCA731 /* Car.m in Sources */,
 				515C67E52137C55700D5EA94 /* BCurrentCityCell.m in Sources */,
 				51AA00342199295A002EB259 /* CounterListController.m in Sources */,
+				5185FDDC21A248E900FFA730 /* MutiRequestController.m in Sources */,
 				51B9CD1220A051AA0096A540 /* BN_RightViewController.m in Sources */,
 				51258C1A215E38FD009CDEE3 /* NSBundle+Language.m in Sources */,
 				51A4A1272182FB7900BA9923 /* EntryViewController.m in Sources */,
