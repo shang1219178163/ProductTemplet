@@ -23,17 +23,23 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
   
-    UIViewController * controller = UIViewCtrFromString(@"BN_HomeViewController");
-    UIViewController * controllerLeft = UIViewCtrFromString(@"BN_LeftViewController");
-    UIViewController * controllerRight = UIViewCtrFromString(@"BN_RightViewController");
+    UIViewController * controller = UICtrFromString(@"BN_HomeViewController");
+    UIViewController * controllerLeft = UICtrFromString(@"BN_LeftViewController");
+    UIViewController * controllerRight = UICtrFromString(@"BN_RightViewController");
 
-//    controller = UIViewCtrFromString(@"WHKGroupViewViewController");
-//    controller = UIViewCtrFromString(@"LiveLikeController");
-//    controller = UIViewCtrFromString(@"SortViewController");
+//    controller = UICtrFromString(@"WHKGroupViewViewController");
+//    controller = UICtrFromString(@"LiveLikeController");
+//    controller = UICtrFromString(@"SortViewController");
     
     ZYSliderViewController * rootVC = [[ZYSliderViewController alloc]initWithMainViewController:controller leftViewController:controllerLeft rightViewController:controllerRight];
     
-//    NSArray *list = @[@[@"BN_FirstViewController",@"首页",@"Item_first_N",@"Item_first_H",@"8"],@[@"BN_SecondViewController",@"圈子",@"Item_second_N",@"Item_second_H",@"11"]];
+//    NSArray *list = @[@[@"BN_FirstViewController",@"首页",@"Item_first_N",@"Item_first_H",@"8",],
+//                      @[@"BN_SecondViewController",@"圈子",@"Item_second_N",@"Item_second_H",@"11",],
+//                      @[@"BN_CenterViewController",@"总览",@"Item_center_N",@"Item_center_H",@"10",],
+//                      @[@"BN_ThirdViewController",@"消息",@"Item_third_N",@"Item_third_H",@"12",],
+//                      @[@"BN_FourthViewController",@"我的",@"Item_fourth_N",@"Item_fourth_H",@"13",],
+//
+//                      ];
 //    UITabBarController * rootVC = UITarBarCtrFromList(list);
 //    rootVC = UINaviCtrFromObj(@"BN_SecondViewController");
 //    rootVC.tabBar.tintColor = UIColor.themeColor;
@@ -44,6 +50,9 @@
     [UIApplication setupRootController:rootVC isAdjust:NO];
     [UIApplication setupAppearance];
     [UIApplication setupIQKeyboardManager];
+    
+    UIApplication.tabBarController.selectedIndex = 3;
+
     return YES;
 }
 

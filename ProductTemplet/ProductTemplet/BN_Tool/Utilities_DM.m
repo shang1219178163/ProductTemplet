@@ -59,7 +59,7 @@
                 break;
             }
             case AVAuthorizationStatusDenied: {
-                NSString * msg = [NSString stringWithFormat:@"请去-> [设置 - 隐私 - 相机 - %@] 打开访问开关",UIApplication.app_Name];
+                NSString * msg = [NSString stringWithFormat:@"请去-> [设置 - 隐私 - 相机 - %@] 打开访问开关",UIApplication.appName];
                [UIWindow showToastWithTips:msg place:@1];
 
                 break;

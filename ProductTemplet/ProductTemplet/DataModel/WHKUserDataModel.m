@@ -284,7 +284,7 @@
 //    NSUserDefaults * userDefaults = [NSUserDefaults standardUserDefaults];
 //    NSDictionary * dict = [userDefaults dictionaryRepresentation];
 //    for(id key in dict) {
-//        if (![key isEqualToString:@"appVersion"]) {
+//        if (![key isEqualToString:@"appVer"]) {
 //            [userDefaults removeObjectForKey:key];
 ////        [userDefaults setValue:@"" forKey:key];
 //            

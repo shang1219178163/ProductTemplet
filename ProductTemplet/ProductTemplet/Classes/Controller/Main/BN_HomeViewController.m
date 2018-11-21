@@ -35,6 +35,7 @@ NSString *const CYLTabBarItemController = @"CYLTabBarItemController";
 //        itemFirst.badgeValue = @"2";
         
         self.selectedViewController = self.viewControllers[2];
+        
     }
     return self;
 }

@@ -103,7 +103,7 @@
         
     }
     else{
-        NSString *msg = [NSString stringWithFormat:@"请开启始终定位(设置->隐私->定位服务->选择%@->始终)",UIApplication.app_Name];
+        NSString *msg = [NSString stringWithFormat:@"请开启始终定位(设置->隐私->定位服务->选择%@->始终)",UIApplication.appName];
         [UIApplication.rootController showAlertTitle:@"定位服务" msg:msg actionTitleList:@[kActionTitle_Sure] handler:nil];
         
     }
@@ -200,7 +200,7 @@
             break;
         case kCLErrorDenied:
         {
-            NSString *msg = [NSString stringWithFormat:@"请开启始终定位(设置->隐私->定位服务->选择%@->始终)",UIApplication.app_Name];
+            NSString *msg = [NSString stringWithFormat:@"请开启始终定位(设置->隐私->定位服务->选择%@->始终)",UIApplication.appName];
             [UIApplication.rootController showAlertTitle:@"定位失败" msg:msg actionTitleList:@[kActionTitle_Sure] handler:nil];
             
         }

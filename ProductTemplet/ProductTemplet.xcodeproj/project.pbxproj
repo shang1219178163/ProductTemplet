@@ -282,6 +282,8 @@
 		51862E9120BBB1D50080BD4E /* Ijkplayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 51862E8B20BBB1D50080BD4E /* Ijkplayer.m */; };
 		51862E9220BBB1D50080BD4E /* AVPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 51862E8F20BBB1D50080BD4E /* AVPlayer.m */; };
 		51862E9520BBB2150080BD4E /* AdapterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 51862E9420BBB2150080BD4E /* AdapterViewController.m */; };
+		5186F1C121A3A43900663707 /* BNImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5186F1C021A3A43900663707 /* BNImageView.m */; };
+		5186F1C421A3A95500663707 /* TableViewListController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5186F1C321A3A95500663707 /* TableViewListController.m */; };
 		51894117209BF1A200A687E1 /* BN_LearnMasonryController.m in Sources */ = {isa = PBXBuildFile; fileRef = 51894116209BF1A100A687E1 /* BN_LearnMasonryController.m */; };
 		51894140209C27E000A687E1 /* TestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5189413F209C27E000A687E1 /* TestViewController.m */; };
 		518B5B2E2086C414002FDD33 /* MOBFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 518B5B022086C413002FDD33 /* MOBFoundation.framework */; };
@@ -796,6 +798,10 @@
 		51862E8F20BBB1D50080BD4E /* AVPlayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AVPlayer.m; sourceTree = "<group>"; };
 		51862E9320BBB2150080BD4E /* AdapterViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AdapterViewController.h; sourceTree = "<group>"; };
 		51862E9420BBB2150080BD4E /* AdapterViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AdapterViewController.m; sourceTree = "<group>"; };
+		5186F1BF21A3A43900663707 /* BNImageView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BNImageView.h; sourceTree = "<group>"; };
+		5186F1C021A3A43900663707 /* BNImageView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BNImageView.m; sourceTree = "<group>"; };
+		5186F1C221A3A95500663707 /* TableViewListController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TableViewListController.h; sourceTree = "<group>"; };
+		5186F1C321A3A95500663707 /* TableViewListController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TableViewListController.m; sourceTree = "<group>"; };
 		51894115209BF1A100A687E1 /* BN_LearnMasonryController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BN_LearnMasonryController.h; sourceTree = "<group>"; };
 		51894116209BF1A100A687E1 /* BN_LearnMasonryController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BN_LearnMasonryController.m; sourceTree = "<group>"; };
 		5189413E209C27E000A687E1 /* TestViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestViewController.h; sourceTree = "<group>"; };
@@ -1115,6 +1121,10 @@
 				518CD32B219D78B5003CE348 /* BNActionSheet.m */,
 				5185FDDA21A248E900FFA730 /* MutiRequestController.h */,
 				5185FDDB21A248E900FFA730 /* MutiRequestController.m */,
+				5186F1C221A3A95500663707 /* TableViewListController.h */,
+				5186F1C321A3A95500663707 /* TableViewListController.m */,
+				5186F1BF21A3A43900663707 /* BNImageView.h */,
+				5186F1C021A3A43900663707 /* BNImageView.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -2279,6 +2289,7 @@
 				51894117209BF1A200A687E1 /* BN_LearnMasonryController.m in Sources */,
 				515CC97F20B6AAF2004AE27C /* AABar.m in Sources */,
 				5169699C20BCED4000BAA53D /* LHFinance.m in Sources */,
+				5186F1C121A3A43900663707 /* BNImageView.m in Sources */,
 				5162F6FB20BF9C9B009A6253 /* FlyweightViewController.m in Sources */,
 				51862E6B20BB979A0080BD4E /* AbstractFactoryController.m in Sources */,
 				51862E7D20BBA8270080BD4E /* InputValidator.m in Sources */,
@@ -2337,6 +2348,7 @@
 				51862E7020BB9E810080BD4E /* StrategyViewController.m in Sources */,
 				51A4A00C2182E1AB00BA9923 /* BlockViewController.m in Sources */,
 				515CC97020B6AAF2004AE27C /* AAAreaspline.m in Sources */,
+				5186F1C421A3A95500663707 /* TableViewListController.m in Sources */,
 				51698C842137C0440069C2B2 /* WHKRequestHelper.m in Sources */,
 				5169DF0D208822B200B025C3 /* BN_FourthViewController.m in Sources */,
 				516F8562215DF8F5008E62B3 /* SuspendButton.m in Sources */,
