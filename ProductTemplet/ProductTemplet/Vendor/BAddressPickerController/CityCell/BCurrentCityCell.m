@@ -29,8 +29,8 @@
 }
 
 - (void)setUp{
-    if ([[NSUserDefaults BN_objectForKey:KEY_userCity] validObject]) {
-        NSString * city = [NSUserDefaults BN_objectForKey:KEY_userCity];
+    if ([[NSUserDefaults objectForKey:KEY_userCity] validObject]) {
+        NSString * city = [NSUserDefaults objectForKey:KEY_userCity];
         NSLog(@"city_%@",city);
         [self.label setHidden:YES];
         NSString *title = [city stringByReplacingOccurrencesOfString:@"市" withString:@""];

@@ -358,10 +358,10 @@
 
 
 - (void)aboutUserDeaults:(id)obj{
-    [NSUserDefaults BN_setObject:obj forKey:@"FactoryDetailInfoModel"];
-    [NSUserDefaults defaultsSynchronize];
+    [NSUserDefaults setObject:obj forKey:@"FactoryDetailInfoModel"];
+    [NSUserDefaults synchronize];
     
-    obj = [NSUserDefaults BN_objectForKey:@"FactoryDetailInfoModel"];
+    obj = [NSUserDefaults objectForKey:@"FactoryDetailInfoModel"];
     DDLog(@"obj__%@",obj);
     
 }
