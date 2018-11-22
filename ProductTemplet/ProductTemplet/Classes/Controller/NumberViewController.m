@@ -9,6 +9,7 @@
 #import "NumberViewController.h"
 
 #import "BN_Category.h"
+//#import "NSDecimalNumber+Helper.h"
 
 @interface NumberViewController ()
 
@@ -38,6 +39,11 @@
     DDLog(@"_%@_",string8);
     DDLog(@"_%@_",string9);
     DDLog(@"_%@_",string10);
+    
+    NSDecimalNumber * number = [@"0.35".decNumer decimalNumberByAdding:@"0.15".decNumer];
+    DDLog(@"_%@_",number);
+
+    
 
 }
 
