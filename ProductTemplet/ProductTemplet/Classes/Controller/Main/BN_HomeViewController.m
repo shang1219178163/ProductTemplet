@@ -24,7 +24,7 @@ NSString *const CYLTabBarItemController = @"CYLTabBarItemController";
         
 //        self.tabBar.unselectedItemTintColor = UIColor.blackColor;
 //        self.tabBar.tintColor = UIColor.redColor;
-        if (iOSVersion(10)) {
+        if (iOSVer(10)) {
             self.tabBar.unselectedItemTintColor = UIColor.grayColor;
 
         }

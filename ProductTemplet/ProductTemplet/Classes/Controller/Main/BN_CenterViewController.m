@@ -151,6 +151,10 @@
                           @"同一界面多网络请求",@"MutiRequestController",
                           
                           ],
+                      @[
+                          @"NSNumberFormatter",@"NumberViewController",
+                          
+                          ],
                       
                       @[
                           @"Test",@"TestViewController",

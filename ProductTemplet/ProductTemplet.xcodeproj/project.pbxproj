@@ -213,6 +213,7 @@
 		5162F70D20BFB934009A6253 /* OperationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5162F70C20BFB934009A6253 /* OperationViewController.m */; };
 		5162F71020BFBBB4009A6253 /* BN_Operation.m in Sources */ = {isa = PBXBuildFile; fileRef = 5162F70F20BFBBB4009A6253 /* BN_Operation.m */; };
 		5167FF1520F5C0EC004A810C /* PulsingHaloLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 5167FF1420F5C0EC004A810C /* PulsingHaloLayer.m */; };
+		5168C8E521A6401F00850687 /* NumberViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5168C8E421A6401F00850687 /* NumberViewController.m */; };
 		5169698E20BCED2200BAA53D /* FacadeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5169698D20BCED2200BAA53D /* FacadeViewController.m */; };
 		5169699920BCED4000BAA53D /* LHSales.m in Sources */ = {isa = PBXBuildFile; fileRef = 5169699120BCED3F00BAA53D /* LHSales.m */; };
 		5169699A20BCED4000BAA53D /* LH4SWaiter.m in Sources */ = {isa = PBXBuildFile; fileRef = 5169699220BCED3F00BAA53D /* LH4SWaiter.m */; };
@@ -659,6 +660,8 @@
 		5162F70F20BFBBB4009A6253 /* BN_Operation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BN_Operation.m; sourceTree = "<group>"; };
 		5167FF1320F5C0EC004A810C /* PulsingHaloLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PulsingHaloLayer.h; sourceTree = "<group>"; };
 		5167FF1420F5C0EC004A810C /* PulsingHaloLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PulsingHaloLayer.m; sourceTree = "<group>"; };
+		5168C8E321A6401F00850687 /* NumberViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NumberViewController.h; sourceTree = "<group>"; };
+		5168C8E421A6401F00850687 /* NumberViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NumberViewController.m; sourceTree = "<group>"; };
 		5169698C20BCED2200BAA53D /* FacadeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FacadeViewController.h; sourceTree = "<group>"; };
 		5169698D20BCED2200BAA53D /* FacadeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FacadeViewController.m; sourceTree = "<group>"; };
 		5169699120BCED3F00BAA53D /* LHSales.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LHSales.m; sourceTree = "<group>"; };
@@ -1123,6 +1126,8 @@
 				5185FDDB21A248E900FFA730 /* MutiRequestController.m */,
 				5186F1C221A3A95500663707 /* TableViewListController.h */,
 				5186F1C321A3A95500663707 /* TableViewListController.m */,
+				5168C8E321A6401F00850687 /* NumberViewController.h */,
+				5168C8E421A6401F00850687 /* NumberViewController.m */,
 				5186F1BF21A3A43900663707 /* BNImageView.h */,
 				5186F1C021A3A43900663707 /* BNImageView.m */,
 			);
@@ -2322,6 +2327,7 @@
 				51862E8620BBA9400080BD4E /* CustomTextField.m in Sources */,
 				517D8B2E20B2E0A200DCA731 /* FMViewController.m in Sources */,
 				515CC97820B6AAF2004AE27C /* AASubtitle.m in Sources */,
+				5168C8E521A6401F00850687 /* NumberViewController.m in Sources */,
 				513647DF208604DE005A20E7 /* PPNetworkCache.m in Sources */,
 				516969AB20BCF9A800BAA53D /* MediatorLJ.m in Sources */,
 				513647C2208604DE005A20E7 /* PhotoMainViewController.m in Sources */,

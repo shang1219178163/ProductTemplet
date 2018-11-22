@@ -711,7 +711,7 @@ NSString * NSStringFromPlacemark(CLPlacemark *placemark) {
 
         //iOS 9（不包含iOS 9） 之前设置允许后台定位参数，保持不会被系统挂起
         _locationManager.pausesLocationUpdatesAutomatically = NO;
-        if (iOSVersion(9)) {
+        if (iOSVer(9)) {
             _locationManager.allowsBackgroundLocationUpdates = NO;
 
         }
