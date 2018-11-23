@@ -20,7 +20,7 @@
 
 #import "HZPhotoBrowserConfig.h"
 //  =============================================
-#define kAnimationDuration 0.35f
+#define kAnimDuration 0.35f
 
 @implementation HZPhotoBrowser 
 {
@@ -242,7 +242,7 @@
 
     if (UIDeviceOrientationIsLandscape(orientation)) {
 //        NSLog(@"onDeviceOrientationChange");
-        [UIView animateWithDuration:kAnimationDuration delay:0.0f options:UIViewAnimationOptionBeginFromCurrentState animations:^{
+        [UIView animateWithDuration:kAnimDuration delay:0.0f options:UIViewAnimationOptionBeginFromCurrentState animations:^{
             [[UIApplication sharedApplication] setStatusBarOrientation:(UIInterfaceOrientation)orientation];
             self.transform = (orientation==UIDeviceOrientationLandscapeRight)?CGAffineTransformMakeRotation(M_PI*1.5):CGAffineTransformMakeRotation(M_PI/2);
             self.bounds = CGRectMake(0, 0, screenBounds.size.height, screenBounds.size.width);
@@ -250,7 +250,7 @@
             [self layoutIfNeeded];
         } completion:nil];
     }else if (orientation==UIDeviceOrientationPortrait){
-        [UIView animateWithDuration:kAnimationDuration delay:0.0f options:UIViewAnimationOptionBeginFromCurrentState animations:^{
+        [UIView animateWithDuration:kAnimDuration delay:0.0f options:UIViewAnimationOptionBeginFromCurrentState animations:^{
             [[UIApplication sharedApplication] setStatusBarOrientation:(UIInterfaceOrientation)orientation];
             self.transform = (orientation==UIDeviceOrientationPortrait)?CGAffineTransformIdentity:CGAffineTransformMakeRotation(M_PI);
             self.bounds = screenBounds;

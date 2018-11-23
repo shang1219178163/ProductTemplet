@@ -11,7 +11,7 @@
 #define kZYDeviceWidth UIScreen.mainScreen.bounds.size.width
 #define kZYDeviceHeight UIScreen.mainScreen.bounds.size.height
 
-static NSTimeInterval const kAnimationDuration = 0.3;
+static NSTimeInterval const kAnimDurationShow = 0.3;
 
 #pragma mark ---------- left config -----------
 static CGFloat const leftShowWidth = 240.f;
@@ -477,24 +477,24 @@ typedef NS_ENUM(NSUInteger, ZYDragDirection){
     CGFloat right_x = _rightContainerView.frame.origin.x;
     
     if (main_x==0||left_x==0||right_x==0) {
-        return kAnimationDuration;
+        return kAnimDurationShow;
     }
     
     if (main_x>0) {
         // left
         CGFloat left_scale = _leftContainerView.frame.size.width/kZYDeviceWidth;
         if (isShow) {
-            timeInterval = (1-(left_scale-leftScale)/(1-leftScale))*kAnimationDuration;
+            timeInterval = (1-(left_scale-leftScale)/(1-leftScale))*kAnimDurationShow;
         } else {
-            timeInterval = ((left_scale-leftScale)/(1-leftScale))*kAnimationDuration;
+            timeInterval = ((left_scale-leftScale)/(1-leftScale))*kAnimDurationShow;
         }
     } else {
         // right
         CGFloat right_scale = _rightContainerView.frame.size.width/kZYDeviceWidth;
         if (isShow) {
-            timeInterval = (1-(right_scale-rightScale)/(1-rightScale))*kAnimationDuration;
+            timeInterval = (1-(right_scale-rightScale)/(1-rightScale))*kAnimDurationShow;
         } else {
-            timeInterval = ((right_scale-rightScale)/(1-rightScale))*kAnimationDuration;
+            timeInterval = ((right_scale-rightScale)/(1-rightScale))*kAnimDurationShow;
         }
     }
     return timeInterval;

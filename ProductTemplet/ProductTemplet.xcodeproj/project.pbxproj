@@ -212,6 +212,7 @@
 		5162F70A20BFB7CB009A6253 /* GCDViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5162F70920BFB7CB009A6253 /* GCDViewController.m */; };
 		5162F70D20BFB934009A6253 /* OperationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5162F70C20BFB934009A6253 /* OperationViewController.m */; };
 		5162F71020BFBBB4009A6253 /* BN_Operation.m in Sources */ = {isa = PBXBuildFile; fileRef = 5162F70F20BFBBB4009A6253 /* BN_Operation.m */; };
+		5167E22F21A7AA7D006650F3 /* UITextFieldController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5167E22E21A7AA7D006650F3 /* UITextFieldController.m */; };
 		5167FF1520F5C0EC004A810C /* PulsingHaloLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 5167FF1420F5C0EC004A810C /* PulsingHaloLayer.m */; };
 		5168C8E521A6401F00850687 /* NumberViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5168C8E421A6401F00850687 /* NumberViewController.m */; };
 		5169698E20BCED2200BAA53D /* FacadeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5169698D20BCED2200BAA53D /* FacadeViewController.m */; };
@@ -658,6 +659,8 @@
 		5162F70C20BFB934009A6253 /* OperationViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OperationViewController.m; sourceTree = "<group>"; };
 		5162F70E20BFBBB4009A6253 /* BN_Operation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BN_Operation.h; sourceTree = "<group>"; };
 		5162F70F20BFBBB4009A6253 /* BN_Operation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BN_Operation.m; sourceTree = "<group>"; };
+		5167E22D21A7AA7D006650F3 /* UITextFieldController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UITextFieldController.h; sourceTree = "<group>"; };
+		5167E22E21A7AA7D006650F3 /* UITextFieldController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UITextFieldController.m; sourceTree = "<group>"; };
 		5167FF1320F5C0EC004A810C /* PulsingHaloLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PulsingHaloLayer.h; sourceTree = "<group>"; };
 		5167FF1420F5C0EC004A810C /* PulsingHaloLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PulsingHaloLayer.m; sourceTree = "<group>"; };
 		5168C8E321A6401F00850687 /* NumberViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NumberViewController.h; sourceTree = "<group>"; };
@@ -1128,6 +1131,8 @@
 				5186F1C321A3A95500663707 /* TableViewListController.m */,
 				5168C8E321A6401F00850687 /* NumberViewController.h */,
 				5168C8E421A6401F00850687 /* NumberViewController.m */,
+				5167E22D21A7AA7D006650F3 /* UITextFieldController.h */,
+				5167E22E21A7AA7D006650F3 /* UITextFieldController.m */,
 				5186F1BF21A3A43900663707 /* BNImageView.h */,
 				5186F1C021A3A43900663707 /* BNImageView.m */,
 			);
@@ -2361,6 +2366,7 @@
 				515C67E12137C55700D5EA94 /* LNLocationGeocoder.m in Sources */,
 				5169DF09208822B200B025C3 /* BN_FirstViewController.m in Sources */,
 				51364DE720860BE0005A20E7 /* MANaviPolyline.m in Sources */,
+				5167E22F21A7AA7D006650F3 /* UITextFieldController.m in Sources */,
 				513647BE208604DE005A20E7 /* HZPhotoBrowserView.m in Sources */,
 				51364C8220860822005A20E7 /* BN_Num.m in Sources */,
 				51900DD7218953C20038A178 /* NotificationTreadController.m in Sources */,

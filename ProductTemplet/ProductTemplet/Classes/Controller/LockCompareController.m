@@ -361,7 +361,7 @@ int TimeCount = 0;
  void *_priv;
  }
  - (instancetype)initWithCondition:(NSInteger)condition NS_DESIGNATED_INITIALIZER;
- @property (readonly) NSInteger condition;
+ @property (nonatomic, readonly) NSInteger condition;
  - (void)lockWhenCondition:(NSInteger)condition;
  - (BOOL)tryLock;
  - (BOOL)tryLockWhenCondition:(NSInteger)condition;

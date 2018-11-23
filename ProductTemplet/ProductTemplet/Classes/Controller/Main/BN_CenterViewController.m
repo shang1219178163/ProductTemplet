@@ -155,7 +155,10 @@
                           @"NSNumberFormatter",@"NumberViewController",
                           
                           ],
-                      
+                      @[
+                          @"UITextField",@"UITextFieldController",
+                          
+                          ],
                       @[
                           @"Test",@"TestViewController",
                           

@@ -34,7 +34,7 @@
         [self.maskView addGestureRecognizer:tap];
         
         
-        CGFloat menuWidth = CGRectGetWidth(window.frame)* kLeftMenuRatio;
+        CGFloat menuWidth = CGRectGetWidth(window.frame)* kRatio_LeftMenu;
         self.frame = CGRectMake(-menuWidth, 0, menuWidth, CGRectGetHeight(window.frame));
         self.backgroundColor = [UIColor whiteColor];
 
