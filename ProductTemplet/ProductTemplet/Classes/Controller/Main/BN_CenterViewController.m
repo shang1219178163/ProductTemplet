@@ -160,6 +160,11 @@
                           
                           ],
                       @[
+                          @"UITextView",@"TextViewController",
+                          
+                          ],
+                      
+                      @[
                           @"Test",@"TestViewController",
                           
                           ],

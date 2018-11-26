@@ -334,6 +334,8 @@
 		51900DD7218953C20038A178 /* NotificationTreadController.m in Sources */ = {isa = PBXBuildFile; fileRef = 51900DD6218953C20038A178 /* NotificationTreadController.m */; };
 		51900DD921895B9B0038A178 /* img_home_immune_147.png in Resources */ = {isa = PBXBuildFile; fileRef = 51900DD821895B9A0038A178 /* img_home_immune_147.png */; };
 		51954AB520A12DCC00B066C8 /* CycleLabelViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 51954AB420A12DCC00B066C8 /* CycleLabelViewController.m */; };
+		51A4354621ABEC8C000D9840 /* UITextView+Helper.m in Sources */ = {isa = PBXBuildFile; fileRef = 51A4354521ABEC8B000D9840 /* UITextView+Helper.m */; };
+		51A4354921ABECAE000D9840 /* TextViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 51A4354821ABECAE000D9840 /* TextViewController.m */; };
 		51A4A0092182AF9D00BA9923 /* SortViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 51A4A0082182AF9D00BA9923 /* SortViewController.m */; };
 		51A4A00C2182E1AB00BA9923 /* BlockViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 51A4A00B2182E1AB00BA9923 /* BlockViewController.m */; };
 		51A4A1272182FB7900BA9923 /* EntryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 51A4A1262182FB7900BA9923 /* EntryViewController.m */; };
@@ -869,6 +871,10 @@
 		51900DD821895B9A0038A178 /* img_home_immune_147.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = img_home_immune_147.png; sourceTree = "<group>"; };
 		51954AB320A12DCC00B066C8 /* CycleLabelViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CycleLabelViewController.h; sourceTree = "<group>"; };
 		51954AB420A12DCC00B066C8 /* CycleLabelViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CycleLabelViewController.m; sourceTree = "<group>"; };
+		51A4354421ABEC8A000D9840 /* UITextView+Helper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UITextView+Helper.h"; sourceTree = "<group>"; };
+		51A4354521ABEC8B000D9840 /* UITextView+Helper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UITextView+Helper.m"; sourceTree = "<group>"; };
+		51A4354721ABECAE000D9840 /* TextViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TextViewController.h; sourceTree = "<group>"; };
+		51A4354821ABECAE000D9840 /* TextViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TextViewController.m; sourceTree = "<group>"; };
 		51A4A0072182AF9D00BA9923 /* SortViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SortViewController.h; sourceTree = "<group>"; };
 		51A4A0082182AF9D00BA9923 /* SortViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SortViewController.m; sourceTree = "<group>"; };
 		51A4A00A2182E1AB00BA9923 /* BlockViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BlockViewController.h; sourceTree = "<group>"; };
@@ -985,6 +991,8 @@
 				513646B620860332005A20E7 /* MainViewController.m */,
 				516F8560215DF8F2008E62B3 /* SuspendButton.h */,
 				516F8561215DF8F4008E62B3 /* SuspendButton.m */,
+				51A4354421ABEC8A000D9840 /* UITextView+Helper.h */,
+				51A4354521ABEC8B000D9840 /* UITextView+Helper.m */,
 				513646A82086031D005A20E7 /* Assets.xcassets */,
 				5169DF232088254300B025C3 /* Public.xcassets */,
 				5136492420860655005A20E7 /* Resources */,
@@ -1133,6 +1141,8 @@
 				5168C8E421A6401F00850687 /* NumberViewController.m */,
 				5167E22D21A7AA7D006650F3 /* UITextFieldController.h */,
 				5167E22E21A7AA7D006650F3 /* UITextFieldController.m */,
+				51A4354721ABECAE000D9840 /* TextViewController.h */,
+				51A4354821ABECAE000D9840 /* TextViewController.m */,
 				5186F1BF21A3A43900663707 /* BNImageView.h */,
 				5186F1C021A3A43900663707 /* BNImageView.m */,
 			);
@@ -2393,6 +2403,7 @@
 				515CC97220B6AAF2004AE27C /* AASeries.m in Sources */,
 				517D8B2520B2C66800DCA731 /* Person.m in Sources */,
 				515CC98320B6AAF2004AE27C /* AALegend.m in Sources */,
+				51A4354621ABEC8C000D9840 /* UITextView+Helper.m in Sources */,
 				515CC97620B6AAF2004AE27C /* AALine.m in Sources */,
 				51258C1E215E3969009CDEE3 /* BN_AccountTool.m in Sources */,
 				513647C8208604DE005A20E7 /* LocationShareModel.m in Sources */,
@@ -2401,6 +2412,7 @@
 				51862E7620BBA1110080BD4E /* StrategyFinancyYouLi.m in Sources */,
 				515CC98A20B6AAF2004AE27C /* AAChartModel.m in Sources */,
 				51B9CCFC209FE2B00096A540 /* TimerViewController.m in Sources */,
+				51A4354921ABECAE000D9840 /* TextViewController.m in Sources */,
 				5175C93620C122B1009EA86E /* DBHandler.m in Sources */,
 				515CC98720B6AAF2004AE27C /* AAPie.m in Sources */,
 				51862E9120BBB1D50080BD4E /* Ijkplayer.m in Sources */,
