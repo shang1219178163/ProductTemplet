@@ -8,8 +8,6 @@
 
 #import "BN_FactoryListViewController.h"
 
-#import <BN_Utils.h>
-
 #import "FactoryDetailInfoModel.h"
 
 @interface BN_FactoryListViewController ()

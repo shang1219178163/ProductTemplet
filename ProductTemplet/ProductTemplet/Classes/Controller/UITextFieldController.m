@@ -13,10 +13,6 @@
 
 #import "BN_ViewHeight.h"
 
-#import "UIBarButtonItem+Helper.h"
-
-#import "NSURLSession+Helper.h"
-#import "NSMutableURLRequest+Helper.h"
 
 @interface UITextFieldController ()
 
