@@ -13,6 +13,11 @@
 
 #import "BN_ViewHeight.h"
 
+#import "UIBarButtonItem+Helper.h"
+
+#import "NSURLSession+Helper.h"
+#import "NSMutableURLRequest+Helper.h"
+
 @interface UITextFieldController ()
 
 //@property (strong, nonatomic) UITextField *textField;
@@ -26,6 +31,11 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc]initWithTitle:@"Right" style:UIBarButtonItemStyleDone target:nil action:nil];
+    [self.navigationItem.rightBarButtonItem setActionBlock:^{
+        DDLog(@"%@",@"111");
+
+    }];
     
     self.textField = [[BN_TextFieldOne alloc]initWithFrame:CGRectMake(10, 20, kScreen_width - 20, 40)];
     self.textField.backgroundColor = UIColor.greenColor;
@@ -91,6 +101,13 @@
         
 }
 
+-(void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+    
+    [self checkVersion];
+    
+}
+
 - (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary<NSKeyValueChangeKey,id> *)change context:(void *)context{
     
     NSDictionary * dic = [NSUserDefaults.standardUserDefaults objectForKey:kDeafult_textFieldHistory];
@@ -98,6 +115,24 @@
     
     self.textFieldPwd.text = data[self.textField.text];
 }
+
+
+- (BOOL)checkVersion {
+    __block BOOL isUpdate = NO;
+    
+    NSString *path = [NSString stringWithFormat:@"http://itunes.apple.com/cn/lookup?id=%@",kID_AppStoreConnect];
+    NSMutableURLRequest *request = [NSMutableURLRequest requestPostURL:path body:nil];
+    
+    NSURLSessionDataTask *dataTask = [NSURLSession sendAsynRequest:request handler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
+        if (data) {
+            NSDictionary *dic = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableLeaves error:nil];
+            DDLog(@"%@",dic.allKeys);
+        }
+    }];
+    [dataTask resume];
+    return isUpdate;
+}
+
 
 
 @end

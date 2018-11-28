@@ -265,6 +265,10 @@
 		517D8B2B20B2E09800DCA731 /* CarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 517D8B2920B2E09800DCA731 /* CarViewController.m */; };
 		517D8B2E20B2E0A200DCA731 /* FMViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 517D8B2D20B2E0A100DCA731 /* FMViewController.m */; };
 		5182044221AE2AB200EEE04B /* NSBundle+Helper.m in Sources */ = {isa = PBXBuildFile; fileRef = 5182044121AE2AB200EEE04B /* NSBundle+Helper.m */; };
+		5182044F21AE52CC00EEE04B /* UIBarButtonItem+Helper.m in Sources */ = {isa = PBXBuildFile; fileRef = 5182044D21AE52CB00EEE04B /* UIBarButtonItem+Helper.m */; };
+		5182045F21AE70F000EEE04B /* NSURLSession+Helper.m in Sources */ = {isa = PBXBuildFile; fileRef = 5182045B21AE70EC00EEE04B /* NSURLSession+Helper.m */; };
+		5182046021AE70F000EEE04B /* NSMutableURLRequest+Helper.m in Sources */ = {isa = PBXBuildFile; fileRef = 5182045C21AE70EC00EEE04B /* NSMutableURLRequest+Helper.m */; };
+		5182046321AE74B800EEE04B /* NSInvocation+Helper.m in Sources */ = {isa = PBXBuildFile; fileRef = 5182046221AE74B800EEE04B /* NSInvocation+Helper.m */; };
 		5184281B2091AD09007D7BAA /* loading.gif in Resources */ = {isa = PBXBuildFile; fileRef = 5184281A2091AD09007D7BAA /* loading.gif */; };
 		5185FDDC21A248E900FFA730 /* MutiRequestController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5185FDDB21A248E900FFA730 /* MutiRequestController.m */; };
 		51862E5020BB908E0080BD4E /* DesignPatternsController.m in Sources */ = {isa = PBXBuildFile; fileRef = 51862E4E20BB908D0080BD4E /* DesignPatternsController.m */; };
@@ -767,6 +771,14 @@
 		517D8B2D20B2E0A100DCA731 /* FMViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMViewController.m; sourceTree = "<group>"; };
 		5182044021AE2AB200EEE04B /* NSBundle+Helper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSBundle+Helper.h"; sourceTree = "<group>"; };
 		5182044121AE2AB200EEE04B /* NSBundle+Helper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSBundle+Helper.m"; sourceTree = "<group>"; };
+		5182044D21AE52CB00EEE04B /* UIBarButtonItem+Helper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIBarButtonItem+Helper.m"; sourceTree = "<group>"; };
+		5182044E21AE52CC00EEE04B /* UIBarButtonItem+Helper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIBarButtonItem+Helper.h"; sourceTree = "<group>"; };
+		5182045421AE61F300EEE04B /* NSURLSession+Helper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSURLSession+Helper.h"; sourceTree = "<group>"; };
+		5182045B21AE70EC00EEE04B /* NSURLSession+Helper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSURLSession+Helper.m"; sourceTree = "<group>"; };
+		5182045C21AE70EC00EEE04B /* NSMutableURLRequest+Helper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSMutableURLRequest+Helper.m"; sourceTree = "<group>"; };
+		5182045D21AE70EE00EEE04B /* NSMutableURLRequest+Helper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSMutableURLRequest+Helper.h"; sourceTree = "<group>"; };
+		5182046121AE74B800EEE04B /* NSInvocation+Helper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSInvocation+Helper.h"; sourceTree = "<group>"; };
+		5182046221AE74B800EEE04B /* NSInvocation+Helper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSInvocation+Helper.m"; sourceTree = "<group>"; };
 		5184281A2091AD09007D7BAA /* loading.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = loading.gif; sourceTree = "<group>"; };
 		5185FDDA21A248E900FFA730 /* MutiRequestController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MutiRequestController.h; sourceTree = "<group>"; };
 		5185FDDB21A248E900FFA730 /* MutiRequestController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MutiRequestController.m; sourceTree = "<group>"; };
@@ -998,6 +1010,14 @@
 				51A4354521ABEC8B000D9840 /* UITextView+Helper.m */,
 				5182044021AE2AB200EEE04B /* NSBundle+Helper.h */,
 				5182044121AE2AB200EEE04B /* NSBundle+Helper.m */,
+				5182044E21AE52CC00EEE04B /* UIBarButtonItem+Helper.h */,
+				5182044D21AE52CB00EEE04B /* UIBarButtonItem+Helper.m */,
+				5182045D21AE70EE00EEE04B /* NSMutableURLRequest+Helper.h */,
+				5182045C21AE70EC00EEE04B /* NSMutableURLRequest+Helper.m */,
+				5182045421AE61F300EEE04B /* NSURLSession+Helper.h */,
+				5182045B21AE70EC00EEE04B /* NSURLSession+Helper.m */,
+				5182046121AE74B800EEE04B /* NSInvocation+Helper.h */,
+				5182046221AE74B800EEE04B /* NSInvocation+Helper.m */,
 				513646A82086031D005A20E7 /* Assets.xcassets */,
 				5169DF232088254300B025C3 /* Public.xcassets */,
 				5136492420860655005A20E7 /* Resources */,
@@ -2302,6 +2322,7 @@
 				515CC98220B6AAF2004AE27C /* AAAnimation.m in Sources */,
 				515CC98920B6AAF2004AE27C /* AAChartView.m in Sources */,
 				513647C0208604DE005A20E7 /* HZPhotoItem.m in Sources */,
+				5182046321AE74B800EEE04B /* NSInvocation+Helper.m in Sources */,
 				51862E7320BB9FA70080BD4E /* StrategyFinancy.m in Sources */,
 				51698C4921376F9E0069C2B2 /* WHKMapViewController.m in Sources */,
 				5182044221AE2AB200EEE04B /* NSBundle+Helper.m in Sources */,
@@ -2419,6 +2440,7 @@
 				516969AC20BCF9A800BAA53D /* AbstractMediator.m in Sources */,
 				51862E7620BBA1110080BD4E /* StrategyFinancyYouLi.m in Sources */,
 				515CC98A20B6AAF2004AE27C /* AAChartModel.m in Sources */,
+				5182046021AE70F000EEE04B /* NSMutableURLRequest+Helper.m in Sources */,
 				51B9CCFC209FE2B00096A540 /* TimerViewController.m in Sources */,
 				51A4354921ABECAE000D9840 /* TextViewController.m in Sources */,
 				5175C93620C122B1009EA86E /* DBHandler.m in Sources */,
@@ -2448,6 +2470,7 @@
 				515D9D852150F77900318A4D /* LiveLikeController.m in Sources */,
 				51698C6121376F9E0069C2B2 /* UncaughtExceptionHandler.m in Sources */,
 				51A4A0092182AF9D00BA9923 /* SortViewController.m in Sources */,
+				5182044F21AE52CC00EEE04B /* UIBarButtonItem+Helper.m in Sources */,
 				515C67E42137C55700D5EA94 /* BHotCityCell.m in Sources */,
 				513647BF208604DE005A20E7 /* HZPhotoGroup.m in Sources */,
 				51862E6220BB94C40080BD4E /* EOCEmployeeDeveloper.m in Sources */,
@@ -2473,6 +2496,7 @@
 				5169DF0C208822B200B025C3 /* BN_FactoryListViewController.m in Sources */,
 				51364CCA20860950005A20E7 /* BN_SimpleDataModel.m in Sources */,
 				515CC98620B6AAF2004AE27C /* AAItemStyle.m in Sources */,
+				5182045F21AE70F000EEE04B /* NSURLSession+Helper.m in Sources */,
 				5162F6EE20BF8A2D009A6253 /* MultithreadingViewController.m in Sources */,
 				515CC85E20B69DFC004AE27C /* BN_UserRegisterController.m in Sources */,
 				51B9CD1C20A0538F0096A540 /* BN_TempViewController.m in Sources */,
