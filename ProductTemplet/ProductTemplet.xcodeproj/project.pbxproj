@@ -149,6 +149,7 @@
 		51364DE720860BE0005A20E7 /* MANaviPolyline.m in Sources */ = {isa = PBXBuildFile; fileRef = 51364DD620860BE0005A20E7 /* MANaviPolyline.m */; };
 		51364DE820860BE0005A20E7 /* MANaviRoute.m in Sources */ = {isa = PBXBuildFile; fileRef = 51364DD820860BE0005A20E7 /* MANaviRoute.m */; };
 		51364DEB20860BE0005A20E7 /* AMapSearchKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 51364DDE20860BE0005A20E7 /* AMapSearchKit.framework */; };
+		51451CD821AE8BD800BB5EC6 /* area.plist in Resources */ = {isa = PBXBuildFile; fileRef = 51451CD721AE8BD800BB5EC6 /* area.plist */; };
 		515C67DD2137C55700D5EA94 /* BAddressPickerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 515C67C72137C55700D5EA94 /* BAddressPickerController.m */; };
 		515C67DE2137C55700D5EA94 /* cities.plist in Resources */ = {isa = PBXBuildFile; fileRef = 515C67C82137C55700D5EA94 /* cities.plist */; };
 		515C67DF2137C55700D5EA94 /* ChineseToPinyin.m in Sources */ = {isa = PBXBuildFile; fileRef = 515C67CA2137C55700D5EA94 /* ChineseToPinyin.m */; };
@@ -539,6 +540,7 @@
 		51364DD720860BE0005A20E7 /* MANaviRoute.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MANaviRoute.h; sourceTree = "<group>"; };
 		51364DD820860BE0005A20E7 /* MANaviRoute.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MANaviRoute.m; sourceTree = "<group>"; };
 		51364DDE20860BE0005A20E7 /* AMapSearchKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AMapSearchKit.framework; sourceTree = "<group>"; };
+		51451CD721AE8BD800BB5EC6 /* area.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = area.plist; sourceTree = "<group>"; };
 		515C67C72137C55700D5EA94 /* BAddressPickerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BAddressPickerController.m; sourceTree = "<group>"; };
 		515C67C82137C55700D5EA94 /* cities.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = cities.plist; sourceTree = "<group>"; };
 		515C67CA2137C55700D5EA94 /* ChineseToPinyin.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChineseToPinyin.m; sourceTree = "<group>"; };
@@ -988,6 +990,7 @@
 				513646B620860332005A20E7 /* MainViewController.m */,
 				516F8560215DF8F2008E62B3 /* SuspendButton.h */,
 				516F8561215DF8F4008E62B3 /* SuspendButton.m */,
+				51451CD721AE8BD800BB5EC6 /* area.plist */,
 				513646A82086031D005A20E7 /* Assets.xcassets */,
 				5169DF232088254300B025C3 /* Public.xcassets */,
 				5136492420860655005A20E7 /* Resources */,
@@ -2138,6 +2141,7 @@
 				515CC96F20B6AAF2004AE27C /* AAChartView.html in Resources */,
 				5136498520860655005A20E7 /* btn_selected_YES.png in Resources */,
 				5136498D20860655005A20E7 /* img_Add_AnimalFeed.png in Resources */,
+				51451CD821AE8BD800BB5EC6 /* area.plist in Resources */,
 				513649C320860655005A20E7 /* img_imm_recordEmergency.png in Resources */,
 				513649D120860655005A20E7 /* img_remind_farrowing.png in Resources */,
 				518B5B3B2086C414002FDD33 /* WeiboSDK.bundle in Resources */,
