@@ -53,7 +53,7 @@
 
 -(void)dealloc{
     for (NSString *name in self.notiMdict.allKeys) {
-        [[NSNotificationCenter defaultCenter] removeObserver:self name:name object:nil];
+        [NSNotificationCenter.defaultCenter removeObserver:self name:name object:nil];
         
     }
 }
@@ -62,7 +62,7 @@
     if (![self.notiMdict.allKeys containsObject:name]) {
         [self.notiMdict setObject:handler forKey:name];
         
-        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(didReceiveNotification:) name:name object:object];
+        [NSNotificationCenter.defaultCenter addObserver:self selector:@selector(didReceiveNotification:) name:name object:object];
         
     }
 }
@@ -77,7 +77,7 @@
 }
 
 - (void)removeNotiName:(NSString *)notiName{
-    [[NSNotificationCenter defaultCenter] removeObserver:self name:notiName object:nil];
+    [NSNotificationCenter.defaultCenter removeObserver:self name:notiName object:nil];
     
     [self.notiMdict.allKeys enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
         if ([obj isEqualToString:notiName]) {

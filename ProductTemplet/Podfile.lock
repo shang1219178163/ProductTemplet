@@ -30,7 +30,7 @@ PODS:
     - YYModel
   - BN_CollectionView (1.1.6):
     - BN_Category
-  - BN_Globle (1.2.2)
+  - BN_Globle (1.2.3)
   - BN_Kit (1.2.2):
     - BN_Globle
   - BN_TableViewCell (1.2.9):
@@ -60,6 +60,7 @@ PODS:
     - BN_Kit
     - BN_View
   - CYLTabBarController (1.17.21)
+  - EveryThing (3.5.2)
   - FCUUID (1.3.1):
     - UICKeyChainStore (~> 2.1.0)
   - FLAnimatedImage (1.0.12)
@@ -86,7 +87,7 @@ PODS:
     - SDWebImage/Core (= 4.4.2)
   - SDWebImage/Core (4.4.2)
   - Toast (4.0.0)
-  - TZImagePickerController (3.1.3)
+  - TZImagePickerController (3.1.4)
   - UICKeyChainStore (2.1.2)
   - UMengAnalytics-NO-IDFA (4.2.5)
   - YBAttributeTextTapAction (3.0.0)
@@ -110,6 +111,7 @@ DEPENDENCIES:
   - Aspects
   - BN_Utils
   - CYLTabBarController
+  - EveryThing
   - FCUUID
   - FLAnimatedImage
   - FMDB
@@ -152,6 +154,7 @@ SPEC REPOS:
     - BN_View
     - BN_ViewHeight
     - CYLTabBarController
+    - EveryThing
     - FCUUID
     - FLAnimatedImage
     - FMDB
@@ -189,13 +192,14 @@ SPEC CHECKSUMS:
   Aspects: 7595ba96a6727a58ebcbfc954497fc5d2fdde546
   BN_Category: 52617282c39847306a7dc36591b1ce60fe19cdc5
   BN_CollectionView: cd6f35db007fb5bfc73b264910905930c54d4891
-  BN_Globle: 5df5fc17b201b9a83b2a96e410569e7f185a258e
+  BN_Globle: ac9f4c0f7517e91ab8a6d5c7ee6e6f2a362ca468
   BN_Kit: d2c0a7324275e9845ddd4ff6f35a2a14ee09d57c
   BN_TableViewCell: c6779caa9b9f0a39137be550532f3dfba7742464
   BN_Utils: f582cc161b336cf9e1f7224668503f4e21a24e70
   BN_View: f143cd90be5f09339b65bd615d1e237b427ad4a0
   BN_ViewHeight: 0da95afd5c10387f195d29e0063801b4d4bb2d3d
   CYLTabBarController: 56cd8b03847c6beb81184601df6a7933cd94be82
+  EveryThing: 9565f4df28ebdf9da6f3d6351a6d1bd46a55387b
   FCUUID: bb054fc90cd7cd99320f9f6ff8e130fe607fba05
   FLAnimatedImage: 4a0b56255d9b05f18b6dd7ee06871be5d3b89e31
   FMDB: 2ce00b547f966261cd18927a3ddb07cb6f3db82a
@@ -215,7 +219,7 @@ SPEC CHECKSUMS:
   SDCycleScrollView: 884b88f0266dd4708a0e1934975c69cb971707b1
   SDWebImage: 624d6e296c69b244bcede364c72ae0430ac14681
   Toast: 91b396c56ee72a5790816f40d3a94dd357abc196
-  TZImagePickerController: 3f1fea61ac4a7ecc7f4ef5213375c00b020d5b9b
+  TZImagePickerController: c5d08f4f79ef3a4aa5af70c199009f59dac978a3
   UICKeyChainStore: 85db518bb1d294366d15ec9b92a416c4e670518f
   UMengAnalytics-NO-IDFA: 16666e32edce5be44ae5b14aaaa7f3582e09d6ab
   YBAttributeTextTapAction: 6e1e8b913b168898a50cb780e5b5c9e6f6a37131
@@ -227,6 +231,6 @@ SPEC CHECKSUMS:
   YZPullDownMenu: afc60c3fc4f7caedd9556d32da43ea1718e078e0
   ZYCornerRadius: f0af817be7805b5c63d793042ca7a03f81e14069
 
-PODFILE CHECKSUM: 428b07313a03bf9d1a1efaa5d5d13b3d7412fd3b
+PODFILE CHECKSUM: 0e2d3a59e3271625414889d197a4faeffff5342f
 
 COCOAPODS: 1.5.0

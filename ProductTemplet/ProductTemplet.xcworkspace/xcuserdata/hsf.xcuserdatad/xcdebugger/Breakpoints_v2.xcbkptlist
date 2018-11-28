@@ -48,7 +48,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Pods/BN_Category/BN_Category/UIView+Helper.m"
-            timestampString = "564652658.6655689"
+            timestampString = "564918892.030821"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "42"
@@ -64,7 +64,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Pods/BN_Category/BN_Category/UIView+Helper.m"
-            timestampString = "564652658.6656671"
+            timestampString = "564918892.0314389"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "52"
@@ -118,6 +118,22 @@
             startingLineNumber = "33"
             endingLineNumber = "33"
             landmarkName = "-width"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Pods/BN_View/BN_View/BN_PickerViewAddress.m"
+            timestampString = "565063239.639797"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "393"
+            endingLineNumber = "393"
+            landmarkName = "-bindData"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

@@ -45,6 +45,10 @@
                       ].mutableCopy;
     
     [self.view addSubview:self.tableView];
+
+    NSLog(@"\n%@",NSHomeDirectory());
+
+
 }
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
     if (indexPath.row == self.dataList.count - 1) {
@@ -127,6 +131,8 @@
         {
             UITableViewTextViewCell * cell = [UITableViewTextViewCell cellWithTableView:tableView];
             cell.labelLeft.text = @"备注信息:";
+            
+            [cell getViewLayer];
             
             return cell;
         }

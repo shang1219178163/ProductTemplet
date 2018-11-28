@@ -264,6 +264,7 @@
 		517D8B2A20B2E09800DCA731 /* PersonCarsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 517D8B2720B2E09500DCA731 /* PersonCarsViewController.m */; };
 		517D8B2B20B2E09800DCA731 /* CarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 517D8B2920B2E09800DCA731 /* CarViewController.m */; };
 		517D8B2E20B2E0A200DCA731 /* FMViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 517D8B2D20B2E0A100DCA731 /* FMViewController.m */; };
+		5182044221AE2AB200EEE04B /* NSBundle+Helper.m in Sources */ = {isa = PBXBuildFile; fileRef = 5182044121AE2AB200EEE04B /* NSBundle+Helper.m */; };
 		5184281B2091AD09007D7BAA /* loading.gif in Resources */ = {isa = PBXBuildFile; fileRef = 5184281A2091AD09007D7BAA /* loading.gif */; };
 		5185FDDC21A248E900FFA730 /* MutiRequestController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5185FDDB21A248E900FFA730 /* MutiRequestController.m */; };
 		51862E5020BB908E0080BD4E /* DesignPatternsController.m in Sources */ = {isa = PBXBuildFile; fileRef = 51862E4E20BB908D0080BD4E /* DesignPatternsController.m */; };
@@ -764,6 +765,8 @@
 		517D8B2920B2E09800DCA731 /* CarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CarViewController.m; sourceTree = "<group>"; };
 		517D8B2C20B2E0A000DCA731 /* FMViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMViewController.h; sourceTree = "<group>"; };
 		517D8B2D20B2E0A100DCA731 /* FMViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMViewController.m; sourceTree = "<group>"; };
+		5182044021AE2AB200EEE04B /* NSBundle+Helper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSBundle+Helper.h"; sourceTree = "<group>"; };
+		5182044121AE2AB200EEE04B /* NSBundle+Helper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSBundle+Helper.m"; sourceTree = "<group>"; };
 		5184281A2091AD09007D7BAA /* loading.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = loading.gif; sourceTree = "<group>"; };
 		5185FDDA21A248E900FFA730 /* MutiRequestController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MutiRequestController.h; sourceTree = "<group>"; };
 		5185FDDB21A248E900FFA730 /* MutiRequestController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MutiRequestController.m; sourceTree = "<group>"; };
@@ -993,6 +996,8 @@
 				516F8561215DF8F4008E62B3 /* SuspendButton.m */,
 				51A4354421ABEC8A000D9840 /* UITextView+Helper.h */,
 				51A4354521ABEC8B000D9840 /* UITextView+Helper.m */,
+				5182044021AE2AB200EEE04B /* NSBundle+Helper.h */,
+				5182044121AE2AB200EEE04B /* NSBundle+Helper.m */,
 				513646A82086031D005A20E7 /* Assets.xcassets */,
 				5169DF232088254300B025C3 /* Public.xcassets */,
 				5136492420860655005A20E7 /* Resources */,
@@ -2190,6 +2195,7 @@
 				"${BUILT_PRODUCTS_DIR}/BN_View/BN_View.framework",
 				"${BUILT_PRODUCTS_DIR}/BN_ViewHeight/BN_ViewHeight.framework",
 				"${BUILT_PRODUCTS_DIR}/CYLTabBarController/CYLTabBarController.framework",
+				"${BUILT_PRODUCTS_DIR}/EveryThing/EveryThing.framework",
 				"${BUILT_PRODUCTS_DIR}/FCUUID/FCUUID.framework",
 				"${BUILT_PRODUCTS_DIR}/FLAnimatedImage/FLAnimatedImage.framework",
 				"${BUILT_PRODUCTS_DIR}/FMDB/FMDB.framework",
@@ -2231,6 +2237,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/BN_View.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/BN_ViewHeight.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CYLTabBarController.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/EveryThing.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FCUUID.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FLAnimatedImage.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FMDB.framework",
@@ -2297,6 +2304,7 @@
 				513647C0208604DE005A20E7 /* HZPhotoItem.m in Sources */,
 				51862E7320BB9FA70080BD4E /* StrategyFinancy.m in Sources */,
 				51698C4921376F9E0069C2B2 /* WHKMapViewController.m in Sources */,
+				5182044221AE2AB200EEE04B /* NSBundle+Helper.m in Sources */,
 				51862E9220BBB1D50080BD4E /* AVPlayer.m in Sources */,
 				51698C4221376F9E0069C2B2 /* Utilities.m in Sources */,
 				51698C892137C0800069C2B2 /* WHKUserDataModel.m in Sources */,

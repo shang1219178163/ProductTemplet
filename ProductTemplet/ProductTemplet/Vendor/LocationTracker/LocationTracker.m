@@ -43,8 +43,8 @@
         self.shareModel = [LocationShareModel shared];
         self.shareModel.myLocationArray = [[NSMutableArray alloc]init];
         
-        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(applicationEnterBackground) name:UIApplicationDidEnterBackgroundNotification object:nil];
-        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(applicationEnterForeground) name:UIApplicationWillEnterForegroundNotification object:nil];
+        [NSNotificationCenter.defaultCenter addObserver:self selector:@selector(applicationEnterBackground) name:UIApplicationDidEnterBackgroundNotification object:nil];
+        [NSNotificationCenter.defaultCenter addObserver:self selector:@selector(applicationEnterForeground) name:UIApplicationWillEnterForegroundNotification object:nil];
 
 	}
 	return self;
@@ -214,7 +214,7 @@
 //Send the location to Server
 - (void)updateLocationToServer {
     
-    NSLog(@"%@",NSStringFromSelector(_cmd));
+//    NSLog(@"%@",NSStringFromSelector(_cmd));
     NSArray * array = [NSArray arrayWithArray:self.shareModel.myLocationArray];
 //    DDLog(@"locationArrayCount__%@__array__%@",@(self.shareModel.myLocationArray.count),array);
     
@@ -259,7 +259,7 @@
                             kLocation_timeStamp : [self currentTimeStamp]
                             };
     
-    [[NSNotificationCenter defaultCenter]postNotificationName:kNoti_location_UploadCoordinate object:nil userInfo:dict];
+    [NSNotificationCenter.defaultCenter postNotificationName:kNoti_location_UploadCoordinate object:nil userInfo:dict];
 
     //TODO: Your code to send the self.myLocation and self.myLocationAccuracy to your server
     

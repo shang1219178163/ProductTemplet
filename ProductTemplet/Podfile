@@ -56,5 +56,6 @@ target 'ProductTemplet' do
 
   pod 'BN_Utils'
 
+  pod 'EveryThing'
 
 end
