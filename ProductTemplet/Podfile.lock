@@ -16,7 +16,7 @@ PODS:
   - AFNetworking/UIKit (3.2.1):
     - AFNetworking/NSURLSession
   - Aspects (1.4.1)
-  - BN_Category (1.4.8):
+  - BN_Category (1.4.9):
     - AESCrypt-ObjC
     - BN_Globle
     - BN_Kit
@@ -38,14 +38,6 @@ PODS:
     - BN_Globle
     - BN_Kit
     - BN_View
-  - BN_Utils (1.2.3):
-    - BN_Category
-    - BN_CollectionView
-    - BN_Globle
-    - BN_Kit
-    - BN_TableViewCell
-    - BN_View
-    - BN_ViewHeight
   - BN_View (1.2.8):
     - BN_Category
     - BN_Globle
@@ -109,7 +101,12 @@ DEPENDENCIES:
   - AESCrypt-ObjC
   - AFNetworking
   - Aspects
-  - BN_Utils
+  - BN_CollectionView
+  - BN_Globle
+  - BN_Kit
+  - BN_TableViewCell
+  - BN_View
+  - BN_ViewHeight
   - CYLTabBarController
   - EveryThing
   - FCUUID
@@ -150,7 +147,6 @@ SPEC REPOS:
     - BN_Globle
     - BN_Kit
     - BN_TableViewCell
-    - BN_Utils
     - BN_View
     - BN_ViewHeight
     - CYLTabBarController
@@ -190,12 +186,11 @@ SPEC CHECKSUMS:
   AESCrypt-ObjC: 6d930ff891a61b90505855e9447959a84be80715
   AFNetworking: b6f891fdfaed196b46c7a83cf209e09697b94057
   Aspects: 7595ba96a6727a58ebcbfc954497fc5d2fdde546
-  BN_Category: 52617282c39847306a7dc36591b1ce60fe19cdc5
+  BN_Category: ded74ca076521a4471ca6dc69734aa84dea70de8
   BN_CollectionView: cd6f35db007fb5bfc73b264910905930c54d4891
   BN_Globle: ac9f4c0f7517e91ab8a6d5c7ee6e6f2a362ca468
   BN_Kit: d2c0a7324275e9845ddd4ff6f35a2a14ee09d57c
   BN_TableViewCell: c6779caa9b9f0a39137be550532f3dfba7742464
-  BN_Utils: f582cc161b336cf9e1f7224668503f4e21a24e70
   BN_View: f143cd90be5f09339b65bd615d1e237b427ad4a0
   BN_ViewHeight: 0da95afd5c10387f195d29e0063801b4d4bb2d3d
   CYLTabBarController: 56cd8b03847c6beb81184601df6a7933cd94be82
@@ -231,6 +226,6 @@ SPEC CHECKSUMS:
   YZPullDownMenu: afc60c3fc4f7caedd9556d32da43ea1718e078e0
   ZYCornerRadius: f0af817be7805b5c63d793042ca7a03f81e14069
 
-PODFILE CHECKSUM: 0e2d3a59e3271625414889d197a4faeffff5342f
+PODFILE CHECKSUM: 496d4ef2ef53c63910506850c9f1d46e395624c7
 
 COCOAPODS: 1.5.0
