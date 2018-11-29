@@ -83,7 +83,6 @@
     return _filterList;
 }
 
-
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
@@ -185,7 +184,6 @@
 -(void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
     
-
 }
 
 - (void)configureTableView{

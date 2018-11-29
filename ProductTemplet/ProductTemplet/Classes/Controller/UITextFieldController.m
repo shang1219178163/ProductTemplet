@@ -102,6 +102,11 @@
     
     [self checkVersion];
     
+    
+    UIImageView * imgView = [[UIImageView alloc]initWithFrame:CGRectMake(10, 200, 100, 100)];
+    imgView.image = [UIImage imageNamed:@"btn_add"];
+    imgView.backgroundColor = UIColor.redColor;
+    [self.view addSubview:imgView];
 }
 
 - (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary<NSKeyValueChangeKey,id> *)change context:(void *)context{

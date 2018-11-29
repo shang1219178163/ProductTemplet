@@ -61,8 +61,5 @@ target 'ProductTemplet' do
   pod 'BN_TableViewCell'
   pod 'BN_CollectionView'
   pod 'BN_ViewHeight'
-  
-  
-  pod 'EveryThing'
 
 end
