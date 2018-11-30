@@ -16,7 +16,7 @@ PODS:
   - AFNetworking/UIKit (3.2.1):
     - AFNetworking/NSURLSession
   - Aspects (1.4.1)
-  - BN_Category (1.5.1):
+  - BN_Category (1.5.5):
     - AESCrypt-ObjC
     - BN_Globle
     - BN_Kit
@@ -30,29 +30,28 @@ PODS:
     - YYModel
   - BN_CollectionView (1.1.6):
     - BN_Category
-  - BN_Globle (1.2.4)
+  - BN_Globle (1.2.5)
   - BN_Kit (1.2.2):
     - BN_Globle
-  - BN_TableViewCell (1.2.9):
+  - BN_TableViewCell (1.3.2):
     - BN_Category
     - BN_Globle
     - BN_Kit
     - BN_View
-  - BN_View (1.3.0):
+  - BN_View (1.3.3):
     - BN_Category
     - BN_Globle
     - BN_Kit
     - PPNumberButton
     - SDCycleScrollView
     - TZImagePickerController
-  - BN_ViewHeight (1.1.8):
+  - BN_ViewHeight (1.1.9):
     - BN_Category
     - BN_CollectionView
     - BN_Globle
     - BN_Kit
     - BN_View
   - CYLTabBarController (1.17.22)
-  - EveryThing (3.5.4)
   - FCUUID (1.3.1):
     - UICKeyChainStore (~> 2.1.0)
   - FLAnimatedImage (1.0.12)
@@ -79,7 +78,7 @@ PODS:
     - SDWebImage/Core (= 4.4.2)
   - SDWebImage/Core (4.4.2)
   - Toast (4.0.0)
-  - TZImagePickerController (3.1.4)
+  - TZImagePickerController (3.1.5)
   - UICKeyChainStore (2.1.2)
   - UMengAnalytics-NO-IDFA (4.2.5)
   - YBAttributeTextTapAction (3.0.0)
@@ -109,7 +108,6 @@ DEPENDENCIES:
   - BN_View
   - BN_ViewHeight
   - CYLTabBarController
-  - EveryThing
   - FCUUID
   - FLAnimatedImage
   - FMDB
@@ -151,7 +149,6 @@ SPEC REPOS:
     - BN_View
     - BN_ViewHeight
     - CYLTabBarController
-    - EveryThing
     - FCUUID
     - FLAnimatedImage
     - FMDB
@@ -187,15 +184,14 @@ SPEC CHECKSUMS:
   AESCrypt-ObjC: 6d930ff891a61b90505855e9447959a84be80715
   AFNetworking: b6f891fdfaed196b46c7a83cf209e09697b94057
   Aspects: 7595ba96a6727a58ebcbfc954497fc5d2fdde546
-  BN_Category: f0ed728c9e80cf4b8ec8eae4bf7364f0e96f77cc
+  BN_Category: 7d81bdc20f724522a78ce89864206e4362584939
   BN_CollectionView: cd6f35db007fb5bfc73b264910905930c54d4891
-  BN_Globle: 6046d870625af732feec498e06cd63822cd7f98e
+  BN_Globle: 3395dd0e76c601306f48337f3a1c5ced4f280cbe
   BN_Kit: d2c0a7324275e9845ddd4ff6f35a2a14ee09d57c
-  BN_TableViewCell: c6779caa9b9f0a39137be550532f3dfba7742464
-  BN_View: 14c5ffbfa6eed2579dbedcf23e8dd7c8497f022a
-  BN_ViewHeight: 0da95afd5c10387f195d29e0063801b4d4bb2d3d
+  BN_TableViewCell: c5bc06986b51dbceb2b5539a3dd647e4407b2ae2
+  BN_View: 1039f21c4a686eb0c38accbe7e48e1cc28f45451
+  BN_ViewHeight: 720f24087f98337e9fce6ff098be479432278c66
   CYLTabBarController: 35784c2969383583d11cc56ff5abce078f19d94a
-  EveryThing: d00c1e6d24afd53eefe9df5674e9b7401454c12e
   FCUUID: bb054fc90cd7cd99320f9f6ff8e130fe607fba05
   FLAnimatedImage: 4a0b56255d9b05f18b6dd7ee06871be5d3b89e31
   FMDB: 2ce00b547f966261cd18927a3ddb07cb6f3db82a
@@ -215,7 +211,7 @@ SPEC CHECKSUMS:
   SDCycleScrollView: 884b88f0266dd4708a0e1934975c69cb971707b1
   SDWebImage: 624d6e296c69b244bcede364c72ae0430ac14681
   Toast: 91b396c56ee72a5790816f40d3a94dd357abc196
-  TZImagePickerController: c5d08f4f79ef3a4aa5af70c199009f59dac978a3
+  TZImagePickerController: 6cc6e9c1a73bb8e62cfef98fd40af2d90634dcf5
   UICKeyChainStore: 85db518bb1d294366d15ec9b92a416c4e670518f
   UMengAnalytics-NO-IDFA: 16666e32edce5be44ae5b14aaaa7f3582e09d6ab
   YBAttributeTextTapAction: 6e1e8b913b168898a50cb780e5b5c9e6f6a37131
@@ -227,6 +223,6 @@ SPEC CHECKSUMS:
   YZPullDownMenu: afc60c3fc4f7caedd9556d32da43ea1718e078e0
   ZYCornerRadius: f0af817be7805b5c63d793042ca7a03f81e14069
 
-PODFILE CHECKSUM: 09ef66dc8634c49b38d85863fbd7e95d2b3bf3d2
+PODFILE CHECKSUM: ecb92de8966817daf57fe31d579f0dbf61a3cd2f
 
 COCOAPODS: 1.5.0

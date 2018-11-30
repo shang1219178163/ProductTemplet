@@ -42,7 +42,7 @@
         BN_FoldSectionModel * foldModel = [[BN_FoldSectionModel alloc] init];
         foldModel.title = array[i];
         foldModel.isOpen = NO;
-        foldModel.image = @"img_vehicleTypeSedan_color.png";
+        foldModel.image = @"bug.png";
         
         for (NSInteger j = 0; j <= i; j++) {
             NSString * modelString = [NSString stringWithFormat:@"%@_%@",foldModel.title,@(j)];
@@ -72,7 +72,6 @@
 }
 
 -(CGFloat) tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
-    
     return 50;
     
 }
@@ -138,7 +137,7 @@
     foldHeaderView.labelLeft.textColor = UIColor.themeColor;
     foldHeaderView.labelLeftSub.text = [@(foldModel.dataList.count) stringValue];
     foldHeaderView.labelLeftSub.textColor = UIColor.themeColor;
-    //    foldHeaderView.imgViewLeft.image = [UIImage imageNamed:foldModel.image];
+    foldHeaderView.imgViewLeft.image = [UIImage imageNamed:foldModel.image];
     //    foldHeaderView.blockView = ^(BN_HeaderFooterView *foldView, NSInteger index) {
     foldHeaderView.blockView = ^(UITableViewHeaderFooterView *foldView, NSInteger index) {
         foldModel.isOpen = !foldModel.isOpen;

@@ -21,7 +21,8 @@
     // Do any additional setup after loading the view.
     
 
-//    [self BN_AddChildControllerView:@"FontListController"];
+//    [self addChildControllerView:@"FontListController"];
+    [self addChildControllerView:@"FriendListController"];
 
 }
 
