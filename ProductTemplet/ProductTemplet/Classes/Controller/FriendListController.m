@@ -78,11 +78,9 @@
     
     
     UITableViewElevenCell * cell = [UITableViewElevenCell cellWithTableView:tableView];
-    
     cell.labelLeft.text = title;
-    cell.labelRight.text = textSub;
-    cell.labelRight.textColor = UIColor.redColor;
-    cell.labelRight.text = @"textSub";
+    cell.labelLeftSub.text = textSub;
+    cell.labelLeftSub.textColor = UIColor.redColor;
     [cell getViewLayer];
     return cell;
     
