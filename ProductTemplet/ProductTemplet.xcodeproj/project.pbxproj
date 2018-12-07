@@ -735,13 +735,6 @@
 		5169DF232088254300B025C3 /* Public.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Public.xcassets; sourceTree = "<group>"; };
 		516CCFD1219BFC5E007D3F80 /* KVC_Controller.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KVC_Controller.h; sourceTree = "<group>"; };
 		516CCFD2219BFC5E007D3F80 /* KVC_Controller.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KVC_Controller.m; sourceTree = "<group>"; };
-		516EADFD21AF8D290060078B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		516EAE0721AF8D7B0060078B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		516EAE1121AF8D9A0060078B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		516EAE1521AF8E7A0060078B /* area.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = area.plist; sourceTree = "<group>"; };
-		516EAE1621AF8E7B0060078B /* b27_icon_star_yellow@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "b27_icon_star_yellow@2x.png"; sourceTree = "<group>"; };
-		516EAE1721AF8E7C0060078B /* b27_icon_star_gray@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "b27_icon_star_gray@2x.png"; sourceTree = "<group>"; };
-		516EAE2321AFA06C0060078B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		516F8560215DF8F2008E62B3 /* SuspendButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SuspendButton.h; sourceTree = "<group>"; };
 		516F8561215DF8F4008E62B3 /* SuspendButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SuspendButton.m; sourceTree = "<group>"; };
 		5175C93420C122B1009EA86E /* DBHandler.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DBHandler.h; sourceTree = "<group>"; };
@@ -963,14 +956,7 @@
 		513646932086031D005A20E7 = {
 			isa = PBXGroup;
 			children = (
-				516EAE1521AF8E7A0060078B /* area.plist */,
-				516EAE1721AF8E7C0060078B /* b27_icon_star_gray@2x.png */,
-				516EAE1621AF8E7B0060078B /* b27_icon_star_yellow@2x.png */,
 				5136469E2086031D005A20E7 /* ProductTemplet */,
-				516EADFC21AF8D290060078B /* BN_View */,
-				516EAE0621AF8D7B0060078B /* BN_View */,
-				516EAE1021AF8D9A0060078B /* BN_View */,
-				516EAE2221AFA06C0060078B /* EveryThing */,
 				5136469D2086031D005A20E7 /* Products */,
 				7DBEAB1433023084F3DAA136 /* Pods */,
 				FA5A66B59426CEAD1CF3700D /* Frameworks */,
@@ -1719,38 +1705,6 @@
 				51698C832137C0430069C2B2 /* WHKReuestSevice.m */,
 			);
 			path = Network;
-			sourceTree = "<group>";
-		};
-		516EADFC21AF8D290060078B /* BN_View */ = {
-			isa = PBXGroup;
-			children = (
-				516EADFD21AF8D290060078B /* Info.plist */,
-			);
-			path = BN_View;
-			sourceTree = "<group>";
-		};
-		516EAE0621AF8D7B0060078B /* BN_View */ = {
-			isa = PBXGroup;
-			children = (
-				516EAE0721AF8D7B0060078B /* Info.plist */,
-			);
-			path = BN_View;
-			sourceTree = "<group>";
-		};
-		516EAE1021AF8D9A0060078B /* BN_View */ = {
-			isa = PBXGroup;
-			children = (
-				516EAE1121AF8D9A0060078B /* Info.plist */,
-			);
-			path = BN_View;
-			sourceTree = "<group>";
-		};
-		516EAE2221AFA06C0060078B /* EveryThing */ = {
-			isa = PBXGroup;
-			children = (
-				516EAE2321AFA06C0060078B /* Info.plist */,
-			);
-			path = EveryThing;
 			sourceTree = "<group>";
 		};
 		517D8B1320B2B52300DCA731 /* DBManager */ = {
@@ -2631,7 +2585,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = J6N2BU2FVC;
+				DEVELOPMENT_TEAM = 2JZLEXVN7E;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/ProductTemplet/Vendor/AMap/AMap3DMap",
@@ -2754,7 +2708,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = BIN.ProductTemplet;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = 1;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -2765,7 +2719,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = J6N2BU2FVC;
+				DEVELOPMENT_TEAM = 2JZLEXVN7E;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/ProductTemplet/Vendor/AMap/AMap3DMap",
@@ -2888,7 +2842,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = BIN.ProductTemplet;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = 1;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};

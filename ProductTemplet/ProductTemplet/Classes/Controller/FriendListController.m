@@ -17,22 +17,14 @@
 
 @implementation FriendListController
 
--(instancetype)init{
-    self = [super init];
-    if (self) {
-        [self.view addSubview:self.tableView];
-        
-    }
-    return self;
-}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    
+    [self.view addSubview:self.tableView];
+
     [self initDataSource];
 }
-
 
 -(void)initDataSource{
     
@@ -89,7 +81,8 @@
     
     cell.labelLeft.text = title;
     cell.labelRight.text = textSub;
-    
+    cell.labelRight.textColor = UIColor.redColor;
+    cell.labelRight.text = @"textSub";
     [cell getViewLayer];
     return cell;
     
@@ -128,8 +121,7 @@
     
     BN_FoldSectionModel * foldModel = [self itemAtSection:section];
     
-//    WHKHeaderFooterViewZero * foldHeaderView = [WHKHeaderFooterViewZero viewWithTableView:tableView];
-    UITableHeaderFooterViewOne * foldHeaderView = [UITableHeaderFooterViewOne viewWithTableView:tableView];
+    UITableHeaderFooterViewZero * foldHeaderView = [UITableHeaderFooterViewZero viewWithTableView:tableView];
 
     foldHeaderView.isCanOPen = YES;
     foldHeaderView.isOpen = foldModel.isOpen;
@@ -144,6 +136,9 @@
         [self.tableView reloadSections:[NSIndexSet indexSetWithIndex:section] withRowAnimation:UITableViewRowAnimationNone];
         
     };
+
+    [foldHeaderView getViewLayer];
+    
     return foldHeaderView;
     
 }

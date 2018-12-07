@@ -26,7 +26,7 @@ NSString *const kHTTP_URLMiddle = @"i=42&c=entry&do=fengmian&m=android&source=io
 //通用
 #define kHTTP_URLPreFix  @"https://www.huizhubang.com/app"
 //图片前缀
-#define kImage_URLPrefix  @"https://www.huizhubang.com/attachment/"
+#define kIMG_URLPrefix  @"https://www.huizhubang.com/attachment/"
 
 #else
 
@@ -36,7 +36,7 @@ NSString *const kHTTP_URLMiddle = @"i=42&c=entry&do=fengmian&m=android&source=io
 #define kHTTP_URLPreFix  @"http://192.168.0.149/huizhubang/app"
 
 //图片前缀
-#define kImage_URLPrefix  @"http://192.168.0.149/huizhubang/attachment/"
+#define kIMG_URLPrefix  @"http://192.168.0.149/huizhubang/attachment/"
 
 #endif
 
@@ -173,10 +173,10 @@ NSString *const kHTTP_URLMiddle = @"i=42&c=entry&do=fengmian&m=android&source=io
 
 //拼接图片
 + (NSString *)getImageUrlWithImageName:(NSString *)imageName{
-    if ([imageName containsString:kImage_URLPrefix]) {
+    if ([imageName containsString:kIMG_URLPrefix]) {
         return imageName;
     }
-    NSString * domain = [NSString stringWithFormat:@"%@",kImage_URLPrefix];
+    NSString * domain = [NSString stringWithFormat:@"%@",kIMG_URLPrefix];
     NSString * allAddresss = [domain stringByAppendingFormat:@"%@",imageName];
     
     return allAddresss;
