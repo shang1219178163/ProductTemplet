@@ -162,7 +162,14 @@
                           @"UITextView",@"TextViewController",
                           
                           ],
-                      
+                      @[
+                          @"FriendList",@"FriendListController",
+                          
+                          ],
+                      @[
+                          @"FontList",@"FontListController",
+                          
+                          ],
                       @[
                           @"Test",@"TestViewController",
                           
@@ -170,7 +177,7 @@
                  
                       ].mutableCopy;
     
-    NSLog(@"%@",[NSDate date]);
+    NSLog(@"%@",NSDate.date);
 
     
     NSDictionary * dic = @{

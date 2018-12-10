@@ -9,6 +9,7 @@
 #import "FontListController.h"
 
 @interface FontListController ()
+
 @property (strong, nonatomic) NSMutableArray *fontList;
 
 @end
@@ -18,27 +19,6 @@
 - (void)viewDidLoad{
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
-    
-    NSArray *familyNames = [NSArray arrayWithArray:UIFont.familyNames];
-
-    self.fontList = [NSMutableArray array];
-    
-    for (id familyName in familyNames) {
-        NSLog(@"family: %@", familyName);
-        NSMutableDictionary *family = [NSMutableDictionary dictionary];
-        [family setObject:familyName forKey:@"name"];
-        NSArray *fontNames = [NSArray arrayWithArray:[UIFont fontNamesForFamilyName:familyName]];
-        NSMutableArray *fonts = [NSMutableArray arrayWithCapacity:[fontNames count]];
-        for (id fontName in fontNames) {
-            NSLog(@"name: %@", fontName);
-            NSDictionary *font = [NSDictionary dictionaryWithObjectsAndKeys:fontName, @"name", [UIFont fontWithName:fontName size:14.0], @"font", nil];
-            [fonts addObject:font];
-        }
-        
-        [family setObject:fonts forKey:@"fonts"];
-        
-        [self.fontList addObject:family];
-    }
     
     [self.view addSubview:self.tableView];
     
@@ -50,9 +30,9 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    id fontDict = self.fontList[section];
-    id font = fontDict[@"fonts"];
-    return [font count];
+    NSDictionary *fontDict = self.fontList[section];
+    NSArray *fonts = fontDict[@"fonts"];
+    return fonts.count;
 }
 
 - (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section{
@@ -68,15 +48,43 @@
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:cellId];
     }
     
-    id fontDict = self.fontList[indexPath.section];
-    id fonts = fontDict[@"fonts"];
+    NSDictionary *fontDict = self.fontList[indexPath.section];
+    NSArray *fonts = fontDict[@"fonts"];
     id font = fonts[indexPath.row];
     
-    cell.textLabel.text = [NSString stringWithFormat:@"%@ 这是中文字体！English.", font[@"name"]];
+    cell.textLabel.text = [NSString stringWithFormat:@"%@ 中文效果！English.", font[@"name"]];
     cell.textLabel.font = font[@"font"];
     
     return cell;
 }
 
+#pragma mark -- layz
+-(NSMutableArray *)fontList{
+    if (!_fontList) {
+        _fontList = [NSMutableArray array];
+        
+        for (id familyName in UIFont.familyNames) {
+            NSLog(@"family: %@", familyName);
+            NSMutableDictionary *family = [NSMutableDictionary dictionary];
+            [family setObject:familyName forKey:@"name"];
+            NSArray *fontNames = [UIFont fontNamesForFamilyName:familyName];
+            NSMutableArray *fonts = [NSMutableArray array];
+            for (id fontName in fontNames) {
+                NSLog(@"name: %@", fontName);
+                NSDictionary *font = @{
+                                       @"name"    :   fontName,
+                                       @"font"    :   [UIFont fontWithName:fontName size:17.0],
+                                       
+                                       };
+                
+                [fonts addObject:font];
+            }
+            [family setObject:fonts forKey:@"fonts"];
+            
+            [_fontList addObject:family];
+        }
+    }
+    return _fontList;
+}
 
 @end

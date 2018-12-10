@@ -30,8 +30,8 @@
 //    controller = UICtrFromString(@"WHKGroupViewViewController");
 //    controller = UICtrFromString(@"LiveLikeController");
 //    controller = UICtrFromString(@"SortViewController");
-    controller = UICtrFromString(@"FriendListController");
-    controller = UICtrFromString(@"FontListController");
+//    controller = UICtrFromString(@"FriendListController");
+//    controller = UICtrFromString(@"FontListController");
     
     ZYSliderViewController * rootVC = [[ZYSliderViewController alloc]initWithMainViewController:controller leftViewController:controllerLeft rightViewController:controllerRight];
     
