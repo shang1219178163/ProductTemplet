@@ -351,6 +351,7 @@
 		51B9CD1E20A0631F0096A540 /* img_arrowDown_orange.png in Resources */ = {isa = PBXBuildFile; fileRef = 51B9CD1D20A0631F0096A540 /* img_arrowDown_orange.png */; };
 		51BB931820B5013600EB43A1 /* DBEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = 51BB931720B5013600EB43A1 /* DBEntity.m */; };
 		51CD3B4A2160A59D00A99F37 /* WHKLeftMenuView.m in Sources */ = {isa = PBXBuildFile; fileRef = 51CD3B482160A59C00A99F37 /* WHKLeftMenuView.m */; };
+		D7EDEAB221BDF5930048CCDA /* FontListController.m in Sources */ = {isa = PBXBuildFile; fileRef = D7EDEAB121BDF5930048CCDA /* FontListController.m */; };
 		F6E48B295C01C814BB50B948 /* Pods_ProductTemplet.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C34CC0C3E9585460E15F2766 /* Pods_ProductTemplet.framework */; };
 /* End PBXBuildFile section */
 
@@ -905,6 +906,8 @@
 		51CD3B492160A59D00A99F37 /* WHKLeftMenuView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WHKLeftMenuView.h; sourceTree = "<group>"; };
 		B05B2DDF1BAF1B07A785248B /* Pods-ProductTemplet.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ProductTemplet.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ProductTemplet/Pods-ProductTemplet.debug.xcconfig"; sourceTree = "<group>"; };
 		C34CC0C3E9585460E15F2766 /* Pods_ProductTemplet.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ProductTemplet.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D7EDEAB021BDF5930048CCDA /* FontListController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FontListController.h; sourceTree = "<group>"; };
+		D7EDEAB121BDF5930048CCDA /* FontListController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FontListController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1136,6 +1139,8 @@
 				5167E22E21A7AA7D006650F3 /* UITextFieldController.m */,
 				51A4354721ABECAE000D9840 /* TextViewController.h */,
 				51A4354821ABECAE000D9840 /* TextViewController.m */,
+				D7EDEAB021BDF5930048CCDA /* FontListController.h */,
+				D7EDEAB121BDF5930048CCDA /* FontListController.m */,
 				5186F1BF21A3A43900663707 /* BNImageView.h */,
 				5186F1C021A3A43900663707 /* BNImageView.m */,
 			);
@@ -2355,6 +2360,7 @@
 				515CC98120B6AAF2004AE27C /* AAArea.m in Sources */,
 				51AA0037219929C3002EB259 /* BNCounter.m in Sources */,
 				513647C9208604DE005A20E7 /* LocationTracker.m in Sources */,
+				D7EDEAB221BDF5930048CCDA /* FontListController.m in Sources */,
 				51BB931820B5013600EB43A1 /* DBEntity.m in Sources */,
 				51698C4021376F9E0069C2B2 /* BINAccountTool.m in Sources */,
 				5169DF222088235900B025C3 /* BN_ReGeocodeAnnotation.m in Sources */,

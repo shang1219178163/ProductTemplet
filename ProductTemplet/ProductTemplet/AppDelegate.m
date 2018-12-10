@@ -31,7 +31,8 @@
 //    controller = UICtrFromString(@"LiveLikeController");
 //    controller = UICtrFromString(@"SortViewController");
     controller = UICtrFromString(@"FriendListController");
-
+    controller = UICtrFromString(@"FontListController");
+    
     ZYSliderViewController * rootVC = [[ZYSliderViewController alloc]initWithMainViewController:controller leftViewController:controllerLeft rightViewController:controllerRight];
     
 //    NSArray *list = @[@[@"BN_FirstViewController",@"首页",@"Item_first_N",@"Item_first_H",@"8",],
