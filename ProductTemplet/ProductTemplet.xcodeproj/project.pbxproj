@@ -351,6 +351,7 @@
 		51B9CD1E20A0631F0096A540 /* img_arrowDown_orange.png in Resources */ = {isa = PBXBuildFile; fileRef = 51B9CD1D20A0631F0096A540 /* img_arrowDown_orange.png */; };
 		51BB931820B5013600EB43A1 /* DBEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = 51BB931720B5013600EB43A1 /* DBEntity.m */; };
 		51CD3B4A2160A59D00A99F37 /* WHKLeftMenuView.m in Sources */ = {isa = PBXBuildFile; fileRef = 51CD3B482160A59C00A99F37 /* WHKLeftMenuView.m */; };
+		D7C0AFD821BE40BF00C95048 /* UIControl+Helper.m in Sources */ = {isa = PBXBuildFile; fileRef = D7C0AFD721BE40BF00C95048 /* UIControl+Helper.m */; };
 		D7EDEAB221BDF5930048CCDA /* FontListController.m in Sources */ = {isa = PBXBuildFile; fileRef = D7EDEAB121BDF5930048CCDA /* FontListController.m */; };
 		F6E48B295C01C814BB50B948 /* Pods_ProductTemplet.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C34CC0C3E9585460E15F2766 /* Pods_ProductTemplet.framework */; };
 /* End PBXBuildFile section */
@@ -906,6 +907,8 @@
 		51CD3B492160A59D00A99F37 /* WHKLeftMenuView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WHKLeftMenuView.h; sourceTree = "<group>"; };
 		B05B2DDF1BAF1B07A785248B /* Pods-ProductTemplet.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ProductTemplet.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ProductTemplet/Pods-ProductTemplet.debug.xcconfig"; sourceTree = "<group>"; };
 		C34CC0C3E9585460E15F2766 /* Pods_ProductTemplet.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ProductTemplet.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D7C0AFD621BE40BF00C95048 /* UIControl+Helper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIControl+Helper.h"; sourceTree = "<group>"; };
+		D7C0AFD721BE40BF00C95048 /* UIControl+Helper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIControl+Helper.m"; sourceTree = "<group>"; };
 		D7EDEAB021BDF5930048CCDA /* FontListController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FontListController.h; sourceTree = "<group>"; };
 		D7EDEAB121BDF5930048CCDA /* FontListController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FontListController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -1142,6 +1145,8 @@
 				D7EDEAB021BDF5930048CCDA /* FontListController.h */,
 				D7EDEAB121BDF5930048CCDA /* FontListController.m */,
 				5186F1BF21A3A43900663707 /* BNImageView.h */,
+				D7C0AFD621BE40BF00C95048 /* UIControl+Helper.h */,
+				D7C0AFD721BE40BF00C95048 /* UIControl+Helper.m */,
 				5186F1C021A3A43900663707 /* BNImageView.m */,
 			);
 			path = Controller;
@@ -2429,6 +2434,7 @@
 				51698C4321376F9E0069C2B2 /* AddressPickerDemo.m in Sources */,
 				5169698E20BCED2200BAA53D /* FacadeViewController.m in Sources */,
 				5162F6F420BF9337009A6253 /* ThreadNormolController.m in Sources */,
+				D7C0AFD821BE40BF00C95048 /* UIControl+Helper.m in Sources */,
 				51AA002321991646002EB259 /* CountDownListController.m in Sources */,
 				51364DE620860BE0005A20E7 /* MANaviAnnotation.m in Sources */,
 				517D8B2A20B2E09800DCA731 /* PersonCarsViewController.m in Sources */,
