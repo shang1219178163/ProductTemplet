@@ -11,11 +11,9 @@
 
 @implementation UIControl (Helper)
 
-
 - (void)addActionHandler:(void(^)(UIControl *obj))handler forControlEvents:(UIControlEvents)controlEvents{
     [self addTarget:self action:@selector(handleActionBtn:) forControlEvents:controlEvents];
     objc_setAssociatedObject(self, _cmd, handler, OBJC_ASSOCIATION_COPY_NONATOMIC);
-
 }
 
 - (void)handleActionBtn:(id)sender{
