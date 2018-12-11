@@ -58,7 +58,7 @@
 
 -(NSInteger) tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
     BN_FoldSectionModel * foldModel = [self itemAtSection:section];
-    NSInteger count = foldModel.isOpen == YES ? foldModel.dataList.count : 0;
+    NSInteger count = foldModel.isOpen  ? foldModel.dataList.count : 0;
     return count;
     
 }

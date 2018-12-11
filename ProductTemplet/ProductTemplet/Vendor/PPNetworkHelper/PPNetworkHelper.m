@@ -377,7 +377,7 @@ static AFHTTPSessionManager *_sessionManager;
  *  json转字符串
  */
 + (NSString *)jsonToString:(id)data {
-    if(data == nil) { return nil; }
+    if(!data) { return nil; }
     NSData *jsonData = [NSJSONSerialization dataWithJSONObject:data options:NSJSONWritingPrettyPrinted error:nil];
     return [[NSString alloc] initWithData:jsonData encoding:NSUTF8StringEncoding];
 }

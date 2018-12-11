@@ -75,7 +75,7 @@
 
 #pragma mark - Getter and Setter
 - (UIButton*)GPSButton{
-    if (_GPSButton == nil) {
+    if (!_GPSButton) {
         _GPSButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
         _GPSButton.frame = CGRectMake(15, 15 , BUTTON_WIDTH, BUTTON_HEIGHT);
         [_GPSButton setTitle:@"" forState:UIControlStateNormal];
@@ -92,7 +92,7 @@
 }
 
 - (UIActivityIndicatorView*)activityIndicatorView{
-    if (_activityIndicatorView == nil) {
+    if (!_activityIndicatorView) {
         _activityIndicatorView = [[UIActivityIndicatorView alloc] initWithFrame:CGRectMake(15, 15, BUTTON_HEIGHT, BUTTON_HEIGHT)];
         _activityIndicatorView.activityIndicatorViewStyle = UIActivityIndicatorViewStyleGray;
         _activityIndicatorView.color = UIColor.grayColor;
@@ -102,7 +102,7 @@
 }
 
 - (UILabel*)label{
-    if (_label == nil) {
+    if (!_label) {
         _label = [[UILabel alloc] initWithFrame:CGRectMake(15 + BUTTON_HEIGHT, 15, BUTTON_WIDTH, BUTTON_HEIGHT)];
         _label.text = @"定位中...";
         _label.font = [UIFont systemFontOfSize:16.0f];
@@ -111,7 +111,7 @@
 }
 
 - (LNLocationManager*)locationManager{
-    if (_locationManager == nil) {
+    if (!_locationManager) {
         _locationManager = [[LNLocationManager alloc] init];
     }
     return _locationManager;

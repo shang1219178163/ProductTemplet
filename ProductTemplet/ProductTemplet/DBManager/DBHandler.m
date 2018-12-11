@@ -379,7 +379,7 @@
 }
 
 - (id)fl_string2ID:(NSString *)str{
-    if (str == nil) {
+    if (!str == nil) {
         return nil;
     }
     NSData *jsonData = [str dataUsingEncoding:NSUTF8StringEncoding];

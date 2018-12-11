@@ -5820,7 +5820,7 @@ char pinyinFirstLetter(unsigned short hanzi) {
 	int iLen = [gb2312_data length];
 	char *gb2312_string = (char *)[gb2312_data bytes];
     for (int i = 0; i < iLen; i++) {
-        if ((unsigned char)gb2312_string[i] < 0x80 ) {
+        if ((unsigned char)gb2312_string[i] < 0x80) {
 			strValue = [strValue stringByAppendingFormat:@"%c", gb2312_string[i] > 95 ? gb2312_string[i] - 32 : gb2312_string[i]];
             continue;
 		}
@@ -5846,7 +5846,7 @@ char pinyinFirstLetter(unsigned short hanzi) {
 		cLetter = '#';
 	else {	
 		if(([string characterAtIndex:0] > 64 && [string characterAtIndex:0] < 91) || 
-		   ([string characterAtIndex:0] > 96 && [string characterAtIndex:0] < 123) ) {
+		   ([string characterAtIndex:0] > 96 && [string characterAtIndex:0] < 123)) {
 			cLetter = [string characterAtIndex:0];
 		} else
 			cLetter = pinyinFirstLetter((unsigned short)[string characterAtIndex:0]);

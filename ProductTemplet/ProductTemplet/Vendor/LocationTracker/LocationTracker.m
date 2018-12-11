@@ -160,7 +160,7 @@
         return;
     }
     
-//    if (self.isEnterBackgroud == YES) {
+//    if (self.isEnterBackgroud) {
         self.shareModel.bgTask = [BackgroundTaskManager sharedBackgroundTaskManager];
         [self.shareModel.bgTask beginNewBackgroundTask];
         
@@ -168,7 +168,7 @@
     
     
     NSTimeInterval timeInterval = kTimer_Interval_Foreground - kLocation_Duration;
-    if (self.isEnterBackgroud == YES) {
+    if (self.isEnterBackgroud) {
         timeInterval = kTimer_Interval - kLocation_Duration;
         
     }
@@ -251,7 +251,7 @@
         self.myLocationAccuracy = [myBestLocation[kLocation_accuracy] floatValue];
     }
     
-//    DDLog(@"Send to Server: Latitude(%f) Longitude(%f) Accuracy(%f)   %@",self.myLocation.latitude, self.myLocation.longitude,self.myLocationAccuracy,self.isEnterBackgroud == YES? @"后台定位":@"前台定位");
+//    DDLog(@"Send to Server: Latitude(%f) Longitude(%f) Accuracy(%f)   %@",self.myLocation.latitude, self.myLocation.longitude,self.myLocationAccuracy,self.isEnterBackgroud ? @"后台定位":@"前台定位");
     NSDictionary * dict = @{
                             kLocation_latitude : @(self.myLocation.latitude),
                             kLocation_longitude : @(self.myLocation.longitude),

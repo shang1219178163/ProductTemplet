@@ -281,7 +281,7 @@
  */
 //- (void)resetUserDefaultData{
 //    
-//    NSUserDefaults * userDefaults = [NSUserDefaults standardUserDefaults];
+//    NSUserDefaults * userDefaults = NSUserDefaults.standardUserDefaults;
 //    NSDictionary * dict = [userDefaults dictionaryRepresentation];
 //    for(id key in dict) {
 //        if (![key isEqualToString:@"appVer"]) {
@@ -298,7 +298,7 @@
 + (void)resetUserDefaultData{
     NSArray *array = @[@"appVersion",KEY_phone];
     
-    NSUserDefaults * userDefaults = [NSUserDefaults standardUserDefaults];
+    NSUserDefaults * userDefaults = NSUserDefaults.standardUserDefaults;
     NSDictionary * dict = [userDefaults dictionaryRepresentation];
     for(id key in dict) {
         if (![array containsObject:key]) {

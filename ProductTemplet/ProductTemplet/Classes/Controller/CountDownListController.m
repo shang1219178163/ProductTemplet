@@ -53,7 +53,7 @@
         case 2:
         {
             self.isPlusTime = !self.isPlusTime;
-            NSString *title = self.isPlusTime == YES ? @"时间 +" : @"时间 -";
+            NSString *title = self.isPlusTime  ? @"时间 +" : @"时间 -";
             [sender setTitle:title forState:UIControlStateNormal];
         }
             break;

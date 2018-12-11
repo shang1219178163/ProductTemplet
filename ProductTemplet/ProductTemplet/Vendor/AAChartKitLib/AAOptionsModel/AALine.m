@@ -36,7 +36,7 @@
 
 -(instancetype)init{
     self = [super init];
-    if (self ) {
+    if (self) {
 //        self.lineWidth = @5;
 //        self.dashStyle = @"ShortDash";
         

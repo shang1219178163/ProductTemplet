@@ -55,7 +55,7 @@
 
 #pragma mark - Getter and Setter
 - (UIButton*)firstButton{
-    if (_firstButton == nil) {
+    if (!_firstButton) {
         _firstButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
         _firstButton.frame = CGRectMake(15, 15, BUTTON_WIDTH, BUTTON_HEIGHT);
         [_firstButton setTitle:@"" forState:UIControlStateNormal];
@@ -71,7 +71,7 @@
 }
 
 - (UIButton*)secondButton{
-    if (_secondButton == nil) {
+    if (!_secondButton) {
         _secondButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
         _secondButton.frame = CGRectMake(self.firstButton.frame.size.width + 30, 15, BUTTON_WIDTH, BUTTON_HEIGHT);
         [_secondButton setTitle:@"" forState:UIControlStateNormal];
@@ -89,7 +89,7 @@
 
 - (NSMutableArray*)currentArray{
     if (_currentArray == nil) {
-        _currentArray = [[NSUserDefaults standardUserDefaults] objectForKey:currentCity];
+        _currentArray = [NSUserDefaults.standardUserDefaults objectForKey:currentCity];
     }
     return _currentArray;
 }

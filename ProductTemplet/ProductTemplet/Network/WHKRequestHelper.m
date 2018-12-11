@@ -143,7 +143,7 @@ NSString *const kHTTP_URLMiddle = @"i=42&c=entry&do=fengmian&m=android&source=io
         //获取参数
         NSArray *keyArr = [paramDict allKeys];
         //r=api.user.sendCode暂时不支持加密
-        if (![keyArr containsObject:rKey] ) {
+        if (![keyArr containsObject:rKey]) {
             NSAssert(![keyArr containsObject:rKey], @"messageName不能为空!");
             
         }else{

@@ -11,7 +11,7 @@
 static NSString *const kAppleLanguages = @"AppleLanguages";
 static NSString *const kUserLanguage = @"KeyUserLanguage";
 
-#define kDefault  [NSUserDefaults standardUserDefaults]
+#define kDefault  NSUserDefaults.standardUserDefaults
 
 @implementation BN_Language
 
@@ -50,7 +50,7 @@ static NSString *const kUserLanguage = @"KeyUserLanguage";
 
 + (NSNumber *)languageType{
     NSString * name = [self userLanguage];
-    if (name == nil) {
+    if (!name) {
         return @(0);
     }
     

@@ -59,7 +59,7 @@
 - (NSMutableArray *)sortSelectionArray:(NSMutableArray *)list isAscending:(BOOL)isAscending{
     for (NSInteger i = 0; i < list.count; i++) {
         for (NSInteger j = i + 1; j < list.count; j++) {
-            if (isAscending == YES) {
+            if (isAscending) {
                 if ([list[i] integerValue] > [list[j] integerValue]) {
                     NSNumber * tmp = list[i];
                     list[i] = list[j];
@@ -96,7 +96,7 @@
 - (NSMutableArray *)sortBubbleArray:(NSMutableArray *)list isAscending:(BOOL)isAscending{
     for (NSInteger i = 0; i < list.count; i++) {
         for (NSInteger j = 0; j < list.count - 1 - i; j++) {
-            if (isAscending == YES) {
+            if (isAscending) {
                 if ([list[j] integerValue] > [list[j + 1] integerValue]) {
                     NSNumber *tmp = list[j + 1];
                     list[j + 1] = list[j];

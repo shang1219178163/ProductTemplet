@@ -129,7 +129,7 @@
 //1.自动缩放到指定大小
 + (UIImage *)thumbnailWithImage:(UIImage *)image size:(CGSize)asize{
     UIImage *newimage;
-    if (image == nil) {
+    if (!image) {
         newimage = nil;
         
     }
@@ -144,11 +144,9 @@
 }
 
 //2.保持原来的长宽比，生成一个缩略图
-+ (UIImage *)thumbnailWithImageWithoutScale:(UIImage *)image size:(CGSize)asize
-{
++ (UIImage *)thumbnailWithImageWithoutScale:(UIImage *)image size:(CGSize)asize{
     UIImage *newimage;
-    
-    if (image == nil) {
+    if (!image) {
         newimage = nil;
         
     }

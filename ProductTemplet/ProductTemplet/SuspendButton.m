@@ -94,7 +94,7 @@ static CGFloat kSuspendBtnWidth = 50;
  */
 - (void)handleActionPan:(UIPanGestureRecognizer *)recognizer
 {
-    if (_isLock == YES) {
+    if (_isLock) {
         return;
     }
     //移动状态
@@ -183,7 +183,7 @@ static CGFloat kSuspendBtnWidth = 50;
 /*
 - (void)handleActionPan:(UIPanGestureRecognizer *)recognizer
 {
-    if (_isLock == YES) {
+    if (_isLock) {
         return;
     }
     //移动状态

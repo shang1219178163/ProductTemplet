@@ -67,7 +67,7 @@
     cell.tag = indexPath.row;
     cell.textLabel.tag = kCounterLabTag;
     cell.textLabel.text = [self.countDown countDownWithPerSec:indexPath];
-    if (self.countDown.isPlusTime == YES) {
+    if (self.countDown.isPlusTime) {
         cell.textLabel.textColor = UIColor.redColor;
     }
     return cell;
@@ -79,7 +79,7 @@
     NSInteger nowInteger = (int)NSDate.date.timeIntervalSince1970;
     
     for (int i = 0; i < 20; i ++) {
-        if (isPlus == YES) {
+        if (isPlus) {
             NSString *str = [NSString stringWithFormat:@"%zd",nowInteger - arc4random()%100000];
             NSString *str1 = [NSString stringWithFormat:@"%zd",nowInteger - arc4random()%1000];
             NSString *str2 = [NSString stringWithFormat:@"%zd",nowInteger + arc4random()%50];

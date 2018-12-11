@@ -324,7 +324,7 @@ AAPropSetFuncImplementation(AAOptions, NSString      *, zoomResetButtonText); //
                               //.groupPaddingSet(@0.05)
                               .borderRadiusSet(aaChartModel.borderRadius)
                               .dataLabelsSet(aaDataLabels));
-        if (aaChartModel.polar == YES) {
+        if (aaChartModel.polar) {
             aaColumn.pointPaddingSet(@0)
             .groupPaddingSet(@0.005);
         }
@@ -335,7 +335,7 @@ AAPropSetFuncImplementation(AAOptions, NSString      *, zoomResetButtonText); //
                         //.groupPaddingSet(@0.1)
                         .borderRadiusSet(aaChartModel.borderRadius)
                         .dataLabelsSet(aaDataLabels));
-        if (aaChartModel.polar == YES) {
+        if (aaChartModel.polar) {
             aaBar.pointPaddingSet(@0)
             .groupPaddingSet(@0.005);
         }

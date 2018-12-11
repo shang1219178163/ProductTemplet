@@ -199,7 +199,7 @@ static const NSInteger kRoutePaddingEdge = 20;
     {
         static NSString *pointIdentifier = @"pointIdentifier";
         MAPinAnnotationView *annotationView = (MAPinAnnotationView*)[mapView dequeueReusableAnnotationViewWithIdentifier:pointIdentifier];
-        if (annotationView == nil)
+        if (!annotationView)
         {
             annotationView = [[MAPinAnnotationView alloc] initWithAnnotation:annotation reuseIdentifier:pointIdentifier];
             annotationView.canShowCallout   = YES;
@@ -324,7 +324,7 @@ static const NSInteger kRoutePaddingEdge = 20;
         
     }
     
-    if (isBegin == YES) {
+    if (isBegin) {
         self.coordinateBegin = pointAnnotation.coordinate;
         
 //        self.mapView.centerCoordinate = self.coordinateBegin;

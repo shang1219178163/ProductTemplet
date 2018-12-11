@@ -81,7 +81,7 @@
         [self handleActionBtnView:self.btnView];
         
         [UIView animateWithDuration:kAnimDuration_Drop animations:^{
-            self.btnView.imageView.transform = view.isShow == YES ? CGAffineTransformMakeRotation(M_PI) : CGAffineTransformIdentity;
+            self.btnView.imageView.transform = view.isShow  ? CGAffineTransformMakeRotation(M_PI) : CGAffineTransformIdentity;
             
         }];
         

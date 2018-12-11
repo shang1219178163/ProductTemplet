@@ -73,7 +73,7 @@ NSString * NSStringFromPlacemark(CLPlacemark *placemark) {
 -(NSUserDefaults *)userDefaults{
     
     if (!_userDefaults) {
-        _userDefaults = [NSUserDefaults standardUserDefaults];
+        _userDefaults = NSUserDefaults.standardUserDefaults;
     }
     return _userDefaults;
 }
@@ -226,7 +226,7 @@ NSString * NSStringFromPlacemark(CLPlacemark *placemark) {
     {
         static NSString *pointIdentifier = @"pointIdentifier";
         MAPinAnnotationView *annotationView = (MAPinAnnotationView*)[mapView dequeueReusableAnnotationViewWithIdentifier:pointIdentifier];
-        if (annotationView == nil){
+        if (!annotationView){
             annotationView = [[MAPinAnnotationView alloc] initWithAnnotation:annotation reuseIdentifier:pointIdentifier];
             annotationView.canShowCallout            = YES;
             annotationView.draggable                 = NO;
@@ -568,7 +568,7 @@ NSString * NSStringFromPlacemark(CLPlacemark *placemark) {
 //路线解析
 + (NSArray *)polylinesForPath:(AMapPath *)path
 {
-    if (path == nil || path.steps.count == 0) return nil;
+    if (!path || path.steps.count == 0) return nil;
     
     NSMutableArray *polylines = [NSMutableArray array];
     [path.steps enumerateObjectsUsingBlock:^(AMapStep *step, NSUInteger idx, BOOL *stop) {
@@ -615,16 +615,15 @@ NSString * NSStringFromPlacemark(CLPlacemark *placemark) {
                                  coordinateCount:(NSUInteger *)coordinateCount
                                       parseToken:(NSString *)token
 {
-    if (string == nil) return NULL;
-    if (token == nil) token = @",";
+    if (!string) return NULL;
+    if (!token) token = @",";
     
     NSString *str = @"";
     if (![token isEqualToString:@","])
     {
         str = [string stringByReplacingOccurrencesOfString:token withString:@","];
     }
-    else
-    {
+    else {
         str = [NSString stringWithString:string];
     }
     
@@ -633,8 +632,7 @@ NSString * NSStringFromPlacemark(CLPlacemark *placemark) {
     if (coordinateCount != NULL)  *coordinateCount = count;
     
     CLLocationCoordinate2D *coordinates = (CLLocationCoordinate2D*)malloc(count * sizeof(CLLocationCoordinate2D));
-    for (NSInteger i = 0; i < count; i++)
-    {
+    for (NSInteger i = 0; i < count; i++) {
         coordinates[i].longitude = [[components objectAtIndex:2 * i]     doubleValue];
         coordinates[i].latitude  = [[components objectAtIndex:2 * i + 1] doubleValue];
     }

@@ -372,7 +372,7 @@
 + (id)getObjectInternal:(id)obj {
     if (   [obj isKindOfClass:[NSString class]]
         || [obj isKindOfClass:[NSNumber class]]
-        || [obj isKindOfClass:[NSNull   class]] ) {
+        || [obj isKindOfClass:[NSNull   class]]) {
         return obj;
     }
     

@@ -24,7 +24,7 @@
 }
 
 - (void)startReverseGeocode:(CLLocation *)location{
-    [[NSUserDefaults standardUserDefaults] setObject:[NSArray arrayWithObjects:@"zh-hans",nil] forKey:@"AppleLanguages"];
+    [NSUserDefaults.standardUserDefaults setObject:[NSArray arrayWithObjects:@"zh-hans",nil] forKey:@"AppleLanguages"];
     [self.gecoder reverseGeocodeLocation:location completionHandler:^(NSArray<CLPlacemark *> * _Nullable placemarks, NSError * _Nullable error) {
         if (error || placemarks.count == 0) {
             self.completionBlock(nil,error);
@@ -46,7 +46,7 @@
 
 #pragma mark - Getter and Setter
 - (CLGeocoder*)gecoder{
-    if (_gecoder == nil) {
+    if (!_gecoder) {
         _gecoder = [[CLGeocoder alloc] init];
     }
     return _gecoder;

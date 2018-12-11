@@ -169,7 +169,7 @@
 }
 
 - (NSSet *)notiCategories:(id)obj{
-    if (obj == nil) {
+    if (!obj) {
         return [NSSet set];
     }
     

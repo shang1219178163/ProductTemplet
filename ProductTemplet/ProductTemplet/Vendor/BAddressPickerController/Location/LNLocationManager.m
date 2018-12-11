@@ -62,7 +62,7 @@ static CLLocation *oldLocation;
 
 #pragma mark - Getter and Setter
 - (CLLocationManager*)loactionManager{
-    if (_loactionManager == nil) {
+    if (!_loactionManager) {
         _loactionManager = [[CLLocationManager alloc] init];
     }
     return _loactionManager;

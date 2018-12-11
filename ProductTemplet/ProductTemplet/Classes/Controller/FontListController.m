@@ -43,8 +43,7 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     static NSString *cellId = @"FontCell";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellId];
-    
-    if (cell == nil) {
+    if (!cell) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:cellId];
     }
     

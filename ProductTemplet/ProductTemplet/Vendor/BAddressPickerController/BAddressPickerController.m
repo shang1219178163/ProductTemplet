@@ -44,7 +44,7 @@
         [self initData];
         [self initSearchBar];
         [self initTableView];
-//        [[NSUserDefaults standardUserDefaults] removeObjectForKey:currentCity];
+//        [NSUserDefaults.standardUserDefaults removeObjectForKey:currentCity];
     }
     return self;
 }
@@ -142,33 +142,33 @@
     if (tableView == _tableView) {
         if (indexPath.section == 0) {
             BCurrentCityCell *currentCityCell = [tableView dequeueReusableCellWithIdentifier:@"currentCityCell"];
-            if (currentCityCell == nil) {
+            if (!currentCityCell) {
                 currentCityCell = [[BCurrentCityCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"currentCityCell"];
             }
             currentCityCell.selectionStyle = UITableViewCellSelectionStyleNone;
             return currentCityCell;
         }else if (indexPath.section == 1){
             BRecentCityCell *recentCityCell = [tableView dequeueReusableCellWithIdentifier:@"recentCityCell"];
-            if (recentCityCell == nil) {
+            if (!recentCityCell) {
                 recentCityCell = [[BRecentCityCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"recentCityCell"];
             }
             recentCityCell.selectionStyle = UITableViewCellSelectionStyleNone;
             //如果第一次使用没有最近访问的城市则赢该行
-            if (![[NSUserDefaults standardUserDefaults] objectForKey:currentCity]) {
+            if (![NSUserDefaults.standardUserDefaults objectForKey:currentCity]) {
                 recentCityCell.frame = CGRectMake(0, 0, 0, 0);
                 [recentCityCell setHidden:YES];
             }
             return recentCityCell;
         }else if (indexPath.section == 2){
             BHotCityCell *hotCell = [tableView dequeueReusableCellWithIdentifier:@"hotCityCell"];
-            if (hotCell == nil) {
+            if (!hotCell) {
                 hotCell = [[BHotCityCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"hotCityCell" array:hotCities];
             }
             hotCell.selectionStyle = UITableViewCellSelectionStyleNone;
             return hotCell;
         }else{
             UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:Identifier];
-            if (cell == nil) {
+            if (!cell) {
                 cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:Identifier];
             }
             cell.selectionStyle = UITableViewCellSelectionStyleNone;
@@ -177,7 +177,7 @@
     }else{
         static NSString *Identifier = @"Cell";
         UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:Identifier];
-        if (cell == nil) {
+        if (!cell) {
             cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:Identifier];
         }
         cell.selectionStyle = UITableViewCellSelectionStyleNone;
@@ -251,7 +251,7 @@
             label.text = @"当前城市";
         }else if (section == 1){
             //如果第一次使用没有最近访问的城市则赢该行
-            if (![[NSUserDefaults standardUserDefaults] objectForKey:currentCity]) {
+            if (![NSUserDefaults.standardUserDefaults objectForKey:currentCity]) {
                 return nil;
             }
             label.text = @"最近访问城市";
@@ -270,7 +270,7 @@
     if (tableView == _tableView) {
         if (section == 1) {
             //如果第一次使用没有最近访问的城市则赢该行
-            if (![[NSUserDefaults standardUserDefaults] objectForKey:currentCity]) {
+            if (![NSUserDefaults.standardUserDefaults objectForKey:currentCity]) {
                 return 0.01;
             }
         }
@@ -283,7 +283,7 @@
 - (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section{
     if (section == 1) {
         //如果第一次使用没有最近访问的城市则赢该行
-        if (![[NSUserDefaults standardUserDefaults] objectForKey:currentCity]) {
+        if (![NSUserDefaults.standardUserDefaults objectForKey:currentCity]) {
             return 0.01;
         }
     }
@@ -298,7 +298,7 @@
             return 42;
         }else if (indexPath.section == 1){
             //如果第一次使用没有最近访问的城市则赢该行
-            if (![[NSUserDefaults standardUserDefaults] objectForKey:currentCity]) {
+            if (![NSUserDefaults.standardUserDefaults objectForKey:currentCity]) {
                 return 0;
             }
         }
@@ -330,8 +330,8 @@
 
 //保存访问过的城市
 - (void)saveCurrentCity:(NSString*)city{
-    NSMutableArray *currentArray = [[NSMutableArray alloc] initWithArray:[[NSUserDefaults standardUserDefaults] objectForKey:currentCity]];
-    if (currentArray == nil) {
+    NSMutableArray *currentArray = [[NSMutableArray alloc] initWithArray:[NSUserDefaults.standardUserDefaults objectForKey:currentCity]];
+    if (!currentArray) {
         currentArray = [NSMutableArray array];
     }
     if ([currentArray count] < 2 && ![currentArray containsObject:city]) {
@@ -342,7 +342,7 @@
             currentArray[0] = city;
         }
     }
-    [[NSUserDefaults standardUserDefaults] setObject:currentArray forKey:currentCity];
+    [NSUserDefaults.standardUserDefaults setObject:currentArray forKey:currentCity];
 }
 
 
@@ -389,7 +389,7 @@
 
 #pragma mark - Getter and Setter
 - (NSMutableDictionary*)dictionary{
-    if (_dictionary == nil) {
+    if (!_dictionary) {
         NSString *path = [NSBundle.mainBundle pathForResource:@"cities" ofType:@"plist"];
         _dictionary = [NSMutableDictionary dictionaryWithContentsOfFile:path];
     }

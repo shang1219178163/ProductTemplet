@@ -115,9 +115,7 @@
 
     static NSString * cellIdentifier = @"cell";
     UITableViewCell * cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
-
-    if (cell == nil) {
-
+    if (!cell) {
         cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:cellIdentifier];
     }
     //    cell.backgroundColor = UIColor.orangeColor;

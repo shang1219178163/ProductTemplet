@@ -151,7 +151,7 @@
     UIView * backgroudView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, kScreen_width,  viewSize.height* self.elementList.count/rowCount)];
     backgroudView.backgroundColor = UIColor.whiteColor;
     
-    if (isHeader == YES) {
+    if (isHeader) {
         UIView * cycleView = [self createCycleViewWithRect:CGRectMake(0, 0, kScreen_width, height) imageNames:self.imageList];
         [backgroudView addSubview:cycleView];
         
@@ -211,7 +211,7 @@
         [self handleActionBtnView:self.btnView];
         
         [UIView animateWithDuration:kAnimDuration_Drop animations:^{
-            self.btnView.imageView.transform = view.isShow == YES ? CGAffineTransformMakeRotation(M_PI) : CGAffineTransformIdentity;
+            self.btnView.imageView.transform = view.isShow  ? CGAffineTransformMakeRotation(M_PI) : CGAffineTransformIdentity;
             
         }];
         

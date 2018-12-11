@@ -76,7 +76,7 @@
     cell.tag = indexPath.section * 100 + indexPath.row;
     cell.textLabel.tag = kCounterLabTag;
     cell.textLabel.text = [self.countDown countDownWithPerSec:indexPath];
-    if (self.countDown.isPlusTime == YES) {
+    if (self.countDown.isPlusTime) {
         cell.textLabel.textColor = UIColor.redColor;
     }
     return cell;

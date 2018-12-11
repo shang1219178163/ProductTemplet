@@ -20,14 +20,13 @@
     __block UIView *flowerView = flowerPool[@(type)];
     
         //如果请求的类型不存在，那么就创建一个，并添加到池里
-    if (flowerView == nil) {
+    if (!flowerView) {
         NSString * imgName = [@"flower" stringByAppendingFormat:@"%@",@(type)];
         UIImage *flowerImage = [UIImage imageNamed:imgName];
         flowerView = [[FlowerView alloc] initWithImage:flowerImage];
         [flowerPool setObject:flowerView forKey:@(type)];
         
     }
-    
     return flowerView;
 }
 
@@ -40,7 +39,7 @@
 //    UIView *flowerView = flowerPool[@(type)];
 //
 //    //如果请求的类型不存在，那么就创建一个，并添加到池里
-//    if (flowerView == nil) {
+//    if (!flowerView) {
 //
 //        UIImage *flowerImage;
 //        switch (type) {
