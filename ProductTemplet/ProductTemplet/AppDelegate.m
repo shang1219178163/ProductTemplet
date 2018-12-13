@@ -23,34 +23,21 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
   
-    UIViewController * controller = UICtrFromString(@"BN_HomeViewController");
+    UIViewController * controller = UICtrFromString(@"HomeViewController");
     UIViewController * controllerLeft = UICtrFromString(@"BN_LeftViewController");
     UIViewController * controllerRight = UICtrFromString(@"BN_RightViewController");
 
+    ZYSliderViewController * rootVC = [[ZYSliderViewController alloc]initWithMainViewController:controller leftViewController:controllerLeft rightViewController:controllerRight];
+    
 //    controller = UICtrFromString(@"WHKGroupViewViewController");
 //    controller = UICtrFromString(@"LiveLikeController");
 //    controller = UICtrFromString(@"SortViewController");
 //    controller = UICtrFromString(@"FriendListController");
-//    controller = UICtrFromString(@"FontListController");
-    
-//    ZYSliderViewController * rootVC = [[ZYSliderViewController alloc]initWithMainViewController:controller leftViewController:controllerLeft rightViewController:controllerRight];
-    
-//    NSArray *list = @[@[@"BN_FirstViewController",@"首页",@"Item_first_N",@"Item_first_H",@"0",],
-//                      @[@"BN_SecondViewController",@"圈子",@"Item_second_N",@"Item_second_H",@"11",],
-//                      @[@"BN_CenterViewController",@"总览",@"Item_center_N",@"Item_center_H",@"10",],
-//                      @[@"BN_ThirdViewController",@"消息",@"Item_third_N",@"Item_third_H",@"12",],
-//                      @[@"BN_FourthViewController",@"我的",@"Item_fourth_N",@"Item_fourth_H",@"13",],
-//
-//                      ];
-//    UITabBarController * rootVC = UITarBarCtrFromList(list);
-//    rootVC = UINaviCtrFromObj(@"BN_SecondViewController");
-//    rootVC.tabBar.tintColor = UIColor.themeColor;
-//    if (iOSVersion(10)) rootVC.tabBar.unselectedItemTintColor = UIColor.grayColor;
-//    rootVC.tabBar.tintColor = UIColor.themeColor;
-//    rootVC.selectedViewController = rootVC.viewControllers[2];
+    controller = UICtrFromString(@"HomeViewController");
 
-    UIViewController *rootVC = [[NSClassFromString(@"HomeViewController") alloc]init];
-    [UIApplication setupRootController:rootVC isAdjust:NO];
+//    [UIApplication setupRootController:rootVC isAdjust:NO];
+    [UIApplication setupRootController:controller isAdjust:YES];
+
     [UIApplication setupAppearance];
     [UIApplication setupIQKeyboardManager];
     
