@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		14E8692D21C251BA009CE33E /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 14E8692C21C251BA009CE33E /* HomeViewController.m */; };
 		51036F4720A16298009D8B7B /* img_notice.png in Resources */ = {isa = PBXBuildFile; fileRef = 51036F4620A16297009D8B7B /* img_notice.png */; };
 		51036F5020A17B3B009D8B7B /* WeiboLisController.m in Sources */ = {isa = PBXBuildFile; fileRef = 51036F4F20A17B3B009D8B7B /* WeiboLisController.m */; };
 		510BC99B208F2F0400CF48C5 /* FriendListController.m in Sources */ = {isa = PBXBuildFile; fileRef = 510BC99A208F2F0400CF48C5 /* FriendListController.m */; };
@@ -356,6 +357,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		14E8692B21C251BA009CE33E /* HomeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
+		14E8692C21C251BA009CE33E /* HomeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
 		48DCCC545F7DD72A25BB7579 /* Pods-ProductTemplet.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ProductTemplet.release.xcconfig"; path = "Pods/Target Support Files/Pods-ProductTemplet/Pods-ProductTemplet.release.xcconfig"; sourceTree = "<group>"; };
 		51036F4620A16297009D8B7B /* img_notice.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = img_notice.png; sourceTree = "<group>"; };
 		51036F4E20A17B3B009D8B7B /* WeiboLisController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WeiboLisController.h; sourceTree = "<group>"; };
@@ -1152,6 +1155,8 @@
 			children = (
 				51CD3B492160A59D00A99F37 /* WHKLeftMenuView.h */,
 				51CD3B482160A59C00A99F37 /* WHKLeftMenuView.m */,
+				14E8692B21C251BA009CE33E /* HomeViewController.h */,
+				14E8692C21C251BA009CE33E /* HomeViewController.m */,
 				5169DF07208822B100B025C3 /* BN_HomeViewController.h */,
 				5169DF01208822B000B025C3 /* BN_HomeViewController.m */,
 				51B9CD0D20A051A70096A540 /* BN_LeftViewController.h */,
@@ -2417,6 +2422,7 @@
 				516969B720BCFD4000BAA53D /* CompanyComponent.m in Sources */,
 				51364DE820860BE0005A20E7 /* MANaviRoute.m in Sources */,
 				516CCFD3219BFC5E007D3F80 /* KVC_Controller.m in Sources */,
+				14E8692D21C251BA009CE33E /* HomeViewController.m in Sources */,
 				51698C4121376F9E0069C2B2 /* BN_FileHandler.m in Sources */,
 				516969AD20BCF9A800BAA53D /* Buyer.m in Sources */,
 				51862E6520BB94D40080BD4E /* EOCEmployeeDesigner.m in Sources */,

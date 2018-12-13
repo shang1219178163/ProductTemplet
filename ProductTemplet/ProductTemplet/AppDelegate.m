@@ -33,9 +33,9 @@
 //    controller = UICtrFromString(@"FriendListController");
 //    controller = UICtrFromString(@"FontListController");
     
-    ZYSliderViewController * rootVC = [[ZYSliderViewController alloc]initWithMainViewController:controller leftViewController:controllerLeft rightViewController:controllerRight];
+//    ZYSliderViewController * rootVC = [[ZYSliderViewController alloc]initWithMainViewController:controller leftViewController:controllerLeft rightViewController:controllerRight];
     
-//    NSArray *list = @[@[@"BN_FirstViewController",@"首页",@"Item_first_N",@"Item_first_H",@"8",],
+//    NSArray *list = @[@[@"BN_FirstViewController",@"首页",@"Item_first_N",@"Item_first_H",@"0",],
 //                      @[@"BN_SecondViewController",@"圈子",@"Item_second_N",@"Item_second_H",@"11",],
 //                      @[@"BN_CenterViewController",@"总览",@"Item_center_N",@"Item_center_H",@"10",],
 //                      @[@"BN_ThirdViewController",@"消息",@"Item_third_N",@"Item_third_H",@"12",],
@@ -49,6 +49,7 @@
 //    rootVC.tabBar.tintColor = UIColor.themeColor;
 //    rootVC.selectedViewController = rootVC.viewControllers[2];
 
+    UIViewController *rootVC = [[NSClassFromString(@"HomeViewController") alloc]init];
     [UIApplication setupRootController:rootVC isAdjust:NO];
     [UIApplication setupAppearance];
     [UIApplication setupIQKeyboardManager];

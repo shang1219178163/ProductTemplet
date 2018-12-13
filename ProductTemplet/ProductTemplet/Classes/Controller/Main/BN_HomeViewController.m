@@ -25,10 +25,10 @@ NSString *const CYLTabBarItemController = @"CYLTabBarItemController";
 //        self.tabBar.unselectedItemTintColor = UIColor.blackColor;
 //        self.tabBar.tintColor = UIColor.redColor;
         if (iOSVer(10)) {
-            self.tabBar.unselectedItemTintColor = UIColor.grayColor;
+//            self.tabBar.unselectedItemTintColor = UIColor.grayColor;
 
         }
-        self.tabBar.tintColor = UIColor.themeColor;
+//        self.tabBar.tintColor = UIColor.themeColor;
         //显示未读
 //        UINavigationController *firstNav = (UINavigationController *)[self.viewControllers firstObject];
 //        UITabBarItem *itemFirst = firstNav.tabBarItem;
