@@ -242,7 +242,6 @@
 		51698C892137C0800069C2B2 /* WHKUserDataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 51698C882137C07F0069C2B2 /* WHKUserDataModel.m */; };
 		5169DF08208822B200B025C3 /* BN_SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5169DEFF208822B000B025C3 /* BN_SecondViewController.m */; };
 		5169DF09208822B200B025C3 /* BN_FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5169DF00208822B000B025C3 /* BN_FirstViewController.m */; };
-		5169DF0A208822B200B025C3 /* BN_HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5169DF01208822B000B025C3 /* BN_HomeViewController.m */; };
 		5169DF0B208822B200B025C3 /* BN_ThirdViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5169DF03208822B100B025C3 /* BN_ThirdViewController.m */; };
 		5169DF0C208822B200B025C3 /* BN_FactoryListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5169DF05208822B100B025C3 /* BN_FactoryListViewController.m */; };
 		5169DF0D208822B200B025C3 /* BN_FourthViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5169DF06208822B100B025C3 /* BN_FourthViewController.m */; };
@@ -723,13 +722,11 @@
 		5169DEFE208822B000B025C3 /* BN_SecondViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BN_SecondViewController.h; sourceTree = "<group>"; };
 		5169DEFF208822B000B025C3 /* BN_SecondViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BN_SecondViewController.m; sourceTree = "<group>"; };
 		5169DF00208822B000B025C3 /* BN_FirstViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BN_FirstViewController.m; sourceTree = "<group>"; };
-		5169DF01208822B000B025C3 /* BN_HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BN_HomeViewController.m; sourceTree = "<group>"; };
 		5169DF02208822B000B025C3 /* BN_ThirdViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BN_ThirdViewController.h; sourceTree = "<group>"; };
 		5169DF03208822B100B025C3 /* BN_ThirdViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BN_ThirdViewController.m; sourceTree = "<group>"; };
 		5169DF04208822B100B025C3 /* BN_FourthViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BN_FourthViewController.h; sourceTree = "<group>"; };
 		5169DF05208822B100B025C3 /* BN_FactoryListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BN_FactoryListViewController.m; sourceTree = "<group>"; };
 		5169DF06208822B100B025C3 /* BN_FourthViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BN_FourthViewController.m; sourceTree = "<group>"; };
-		5169DF07208822B100B025C3 /* BN_HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BN_HomeViewController.h; sourceTree = "<group>"; };
 		5169DF0E2088230C00B025C3 /* BN_NetRootShareModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BN_NetRootShareModel.m; sourceTree = "<group>"; };
 		5169DF0F2088230D00B025C3 /* BN_NetRootShareModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BN_NetRootShareModel.h; sourceTree = "<group>"; };
 		5169DF1D2088235900B025C3 /* BN_ReGeocodeAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BN_ReGeocodeAnnotation.h; sourceTree = "<group>"; };
@@ -1157,8 +1154,6 @@
 				51CD3B482160A59C00A99F37 /* WHKLeftMenuView.m */,
 				14E8692B21C251BA009CE33E /* HomeViewController.h */,
 				14E8692C21C251BA009CE33E /* HomeViewController.m */,
-				5169DF07208822B100B025C3 /* BN_HomeViewController.h */,
-				5169DF01208822B000B025C3 /* BN_HomeViewController.m */,
 				51B9CD0D20A051A70096A540 /* BN_LeftViewController.h */,
 				51B9CD0E20A051A80096A540 /* BN_LeftViewController.m */,
 				51B9CD0F20A051A90096A540 /* BN_RightViewController.h */,
@@ -2191,7 +2186,6 @@
 				"${BUILT_PRODUCTS_DIR}/BN_TableViewCell/BN_TableViewCell.framework",
 				"${BUILT_PRODUCTS_DIR}/BN_View/BN_View.framework",
 				"${BUILT_PRODUCTS_DIR}/BN_ViewHeight/BN_ViewHeight.framework",
-				"${BUILT_PRODUCTS_DIR}/CYLTabBarController/CYLTabBarController.framework",
 				"${BUILT_PRODUCTS_DIR}/FCUUID/FCUUID.framework",
 				"${BUILT_PRODUCTS_DIR}/FLAnimatedImage/FLAnimatedImage.framework",
 				"${BUILT_PRODUCTS_DIR}/FMDB/FMDB.framework",
@@ -2232,7 +2226,6 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/BN_TableViewCell.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/BN_View.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/BN_ViewHeight.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CYLTabBarController.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FCUUID.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FLAnimatedImage.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FMDB.framework",
@@ -2464,7 +2457,6 @@
 				516969AF20BCF9A800BAA53D /* AbstractClient.m in Sources */,
 				51364CA020860822005A20E7 /* Utilities_DM.m in Sources */,
 				5175C93F20C13E30009EA86E /* Lesson.m in Sources */,
-				5169DF0A208822B200B025C3 /* BN_HomeViewController.m in Sources */,
 				5169DF0C208822B200B025C3 /* BN_FactoryListViewController.m in Sources */,
 				51364CCA20860950005A20E7 /* BN_SimpleDataModel.m in Sources */,
 				515CC98620B6AAF2004AE27C /* AAItemStyle.m in Sources */,
@@ -2652,8 +2644,6 @@
 					"-framework",
 					"\"CFNetwork\"",
 					"-framework",
-					"\"CYLTabBarController\"",
-					"-framework",
 					"\"CoreFoundation\"",
 					"-framework",
 					"\"CoreGraphics\"",
@@ -2785,8 +2775,6 @@
 					"\"Aspects\"",
 					"-framework",
 					"\"CFNetwork\"",
-					"-framework",
-					"\"CYLTabBarController\"",
 					"-framework",
 					"\"CoreFoundation\"",
 					"-framework",

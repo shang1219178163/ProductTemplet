@@ -11,8 +11,6 @@ target 'ProductTemplet' do
   pod ‘AFNetworking’
   pod 'Aspects'
 
-  pod 'CYLTabBarController'
-  
   pod 'FCUUID'
   pod 'FLAnimatedImage'
   pod 'FMDB'

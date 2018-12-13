@@ -51,7 +51,6 @@ PODS:
     - BN_Globle
     - BN_Kit
     - BN_View
-  - CYLTabBarController (1.17.22)
   - FCUUID (1.3.1):
     - UICKeyChainStore (~> 2.1.0)
   - FLAnimatedImage (1.0.12)
@@ -107,7 +106,6 @@ DEPENDENCIES:
   - BN_TableViewCell
   - BN_View
   - BN_ViewHeight
-  - CYLTabBarController
   - FCUUID
   - FLAnimatedImage
   - FMDB
@@ -148,7 +146,6 @@ SPEC REPOS:
     - BN_TableViewCell
     - BN_View
     - BN_ViewHeight
-    - CYLTabBarController
     - FCUUID
     - FLAnimatedImage
     - FMDB
@@ -191,7 +188,6 @@ SPEC CHECKSUMS:
   BN_TableViewCell: 7b9b4d3a0953c84a074365545b4b13ac4ea0a8fd
   BN_View: 83b7a8665b821b5bce5a37d79a598a00b7595444
   BN_ViewHeight: c2a355dbc602184ce87a2cd9faaa7c17bf50d35f
-  CYLTabBarController: 35784c2969383583d11cc56ff5abce078f19d94a
   FCUUID: bb054fc90cd7cd99320f9f6ff8e130fe607fba05
   FLAnimatedImage: 4a0b56255d9b05f18b6dd7ee06871be5d3b89e31
   FMDB: 2ce00b547f966261cd18927a3ddb07cb6f3db82a
@@ -223,6 +219,6 @@ SPEC CHECKSUMS:
   YZPullDownMenu: afc60c3fc4f7caedd9556d32da43ea1718e078e0
   ZYCornerRadius: f0af817be7805b5c63d793042ca7a03f81e14069
 
-PODFILE CHECKSUM: ecb92de8966817daf57fe31d579f0dbf61a3cd2f
+PODFILE CHECKSUM: 0d1677c035d79a954f3acc4f58cb31c250a5eb61
 
 COCOAPODS: 1.5.3
