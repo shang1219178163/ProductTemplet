@@ -35,8 +35,8 @@
 //    controller = UICtrFromString(@"FriendListController");
     controller = UICtrFromString(@"HomeViewController");
 
-//    [UIApplication setupRootController:rootVC isAdjust:NO];
-    [UIApplication setupRootController:controller isAdjust:YES];
+    [UIApplication setupRootController:rootVC isAdjust:NO];
+//    [UIApplication setupRootController:controller isAdjust:YES];
 
     [UIApplication setupAppearance];
     [UIApplication setupIQKeyboardManager];
