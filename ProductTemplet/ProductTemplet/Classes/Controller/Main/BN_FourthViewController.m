@@ -22,7 +22,7 @@
     
 
 //    [self addChildControllerView:@"FontListController"];
-    [self addChildControllerView:@"FriendListController"];
+//    [self addChildControllerView:@"FriendListController"];
 
 }
 
@@ -40,7 +40,11 @@
     
     imgView.backgroundColor = UIColor.redColor;
     
-//    [self.view addSubview:imgView];
+    [self.view addSubview:imgView];
+    
+    DDLog(@"%.2f,%.2f,%.2f,%.2f,",imgView.x,imgView.y,imgView.width,imgView.height);
+    DDLog(@"%.2f,%.2f,%.2f,%.2f,",imgView.minY,imgView.minX,imgView.maxY,imgView.maxX);
+
 }
 
 - (void)didReceiveMemoryWarning {
