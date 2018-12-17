@@ -34,9 +34,9 @@
 //    controller = UICtrFromString(@"SortViewController");
 //    controller = UICtrFromString(@"FriendListController");
     controller = UICtrFromString(@"HomeViewController");
-
     [UIApplication setupRootController:rootVC isAdjust:NO];
-//    [UIApplication setupRootController:controller isAdjust:YES];
+    
+//    [UIApplication setupRootController:UICtrFromString(@"MoneyDisplayController") isAdjust:YES];
 
     [UIApplication setupAppearance];
     [UIApplication setupIQKeyboardManager];

@@ -171,6 +171,11 @@
                           
                           ],
                       @[
+                          @"金额跳动",@"MoneyDisplayController",
+                          
+                          ],
+                      
+                      @[
                           @"Test",@"TestViewController",
                           
                           ],
