@@ -31,6 +31,7 @@
     [self createControls];
     
     [self.view getViewLayer];
+    
 }
 
 - (void)createControls{
