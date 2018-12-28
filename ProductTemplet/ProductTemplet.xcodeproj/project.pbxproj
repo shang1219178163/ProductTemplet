@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		144920AA21C7BAA700C3C2F6 /* MoneyDisplayController.m in Sources */ = {isa = PBXBuildFile; fileRef = 144920A921C7BAA700C3C2F6 /* MoneyDisplayController.m */; };
 		14E793C421D62E0B003230C8 /* bug1.png in Resources */ = {isa = PBXBuildFile; fileRef = 14E793C321D62E0B003230C8 /* bug1.png */; };
-		14E793C721D62FA6003230C8 /* UIImageView+swizzing.m in Sources */ = {isa = PBXBuildFile; fileRef = 14E793C621D62FA6003230C8 /* UIImageView+swizzing.m */; };
 		14E8692D21C251BA009CE33E /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 14E8692C21C251BA009CE33E /* HomeViewController.m */; };
 		51036F4720A16298009D8B7B /* img_notice.png in Resources */ = {isa = PBXBuildFile; fileRef = 51036F4620A16297009D8B7B /* img_notice.png */; };
 		51036F5020A17B3B009D8B7B /* WeiboLisController.m in Sources */ = {isa = PBXBuildFile; fileRef = 51036F4F20A17B3B009D8B7B /* WeiboLisController.m */; };
@@ -362,8 +361,6 @@
 		144920A821C7BAA700C3C2F6 /* MoneyDisplayController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MoneyDisplayController.h; sourceTree = "<group>"; };
 		144920A921C7BAA700C3C2F6 /* MoneyDisplayController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MoneyDisplayController.m; sourceTree = "<group>"; };
 		14E793C321D62E0B003230C8 /* bug1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bug1.png; sourceTree = "<group>"; };
-		14E793C521D62FA6003230C8 /* UIImageView+swizzing.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIImageView+swizzing.h"; sourceTree = "<group>"; };
-		14E793C621D62FA6003230C8 /* UIImageView+swizzing.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+swizzing.m"; sourceTree = "<group>"; };
 		14E8692B21C251BA009CE33E /* HomeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
 		14E8692C21C251BA009CE33E /* HomeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
 		48DCCC545F7DD72A25BB7579 /* Pods-ProductTemplet.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ProductTemplet.release.xcconfig"; path = "Pods/Target Support Files/Pods-ProductTemplet/Pods-ProductTemplet.release.xcconfig"; sourceTree = "<group>"; };
@@ -995,8 +992,6 @@
 				513646A02086031D005A20E7 /* AppDelegate.m */,
 				513646B520860332005A20E7 /* MainViewController.h */,
 				513646B620860332005A20E7 /* MainViewController.m */,
-				14E793C521D62FA6003230C8 /* UIImageView+swizzing.h */,
-				14E793C621D62FA6003230C8 /* UIImageView+swizzing.m */,
 				516F8560215DF8F2008E62B3 /* SuspendButton.h */,
 				516F8561215DF8F4008E62B3 /* SuspendButton.m */,
 				513646A82086031D005A20E7 /* Assets.xcassets */,
@@ -2423,7 +2418,6 @@
 				51B9CCFC209FE2B00096A540 /* TimerViewController.m in Sources */,
 				51A4354921ABECAE000D9840 /* TextViewController.m in Sources */,
 				5175C93620C122B1009EA86E /* DBHandler.m in Sources */,
-				14E793C721D62FA6003230C8 /* UIImageView+swizzing.m in Sources */,
 				515CC98720B6AAF2004AE27C /* AAPie.m in Sources */,
 				51862E9120BBB1D50080BD4E /* Ijkplayer.m in Sources */,
 				513647E0208604DE005A20E7 /* PPNetworkHelper.m in Sources */,
