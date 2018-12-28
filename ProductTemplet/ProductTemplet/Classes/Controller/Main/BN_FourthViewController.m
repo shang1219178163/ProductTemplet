@@ -12,6 +12,8 @@
 
 @interface BN_FourthViewController ()
 
+@property (nonatomic, strong) UIImageView *imgView;
+
 @end
 
 @implementation BN_FourthViewController
@@ -23,6 +25,15 @@
 
 //    [self addChildControllerView:@"FontListController"];
 //    [self addChildControllerView:@"FriendListController"];
+    
+    
+    [self.view addSubview:self.imgView];
+    
+    [self.imgView addActionHandler:^(id obj, id item, NSInteger idx) {
+       
+        self.imgView.tintColor = UIColor.randomColor;
+    }];
+//    self.imgView.image = [self.imgView.image imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate];
 
 }
 
@@ -52,14 +63,17 @@
     // Dispose of any resources that can be recreated.
 }
 
-/*
-#pragma mark - Navigation
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+
+-(UIImageView *)imgView{
+    if (!_imgView) {
+        _imgView = ({
+            UIImageView *view = [[UIImageView alloc]initWithFrame:CGRectMake(20, 20, 100, 100)];
+            view.image = [UIImage imageNamed:@"bug1"];
+            view;
+        });
+    }
+    return _imgView;
 }
-*/
 
 @end
