@@ -25,7 +25,7 @@
 
 -(BN_TabBarViewZero *)tabBarView{
     if (!_tabBarView) {
-        _tabBarView = [BN_TabBarViewZero viewWithRect:self.view.bounds items:self.itemList];
+        _tabBarView = [BN_TabBarViewZero viewRect:self.view.bounds items:self.itemList];
     }
     return _tabBarView;
 }

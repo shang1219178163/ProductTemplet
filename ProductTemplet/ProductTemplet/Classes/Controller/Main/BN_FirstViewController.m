@@ -152,7 +152,7 @@
     backgroudView.backgroundColor = UIColor.whiteColor;
     
     if (isHeader) {
-        UIView * cycleView = [self createCycleViewWithRect:CGRectMake(0, 0, kScreen_width, height) imageNames:self.imageList];
+        UIView * cycleView = [self createCycleViewRect:CGRectMake(0, 0, kScreen_width, height) imageNames:self.imageList];
         [backgroudView addSubview:cycleView];
         
     }else{
@@ -168,7 +168,7 @@
             
             rect = CGRectMake(x, y, w, h);
             
-            UIView * btnView = [UIView createBtnViewWithRect:rect imgName:array[1] imgHeight:CGRectGetHeight(rect)/2.0 title:array[0] titleColor:UIColor.blackColor type:@0];
+            UIView * btnView = [UIView createBtnViewRect:rect imgName:array[1] imgHeight:CGRectGetHeight(rect)/2.0 title:array[0] titleColor:UIColor.blackColor type:@0];
             btnView.tag = kTAG_VIEW+i+50;
             [backgroudView addSubview:btnView];
             
@@ -323,7 +323,7 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (UIView *)createCycleViewWithRect:(CGRect)rect imageNames:(NSArray *)imageNames{
+- (UIView *)createCycleViewRect:(CGRect)rect imageNames:(NSArray *)imageNames{
     
     UIView * backgroudView = [[UIView alloc]initWithFrame:rect];
     

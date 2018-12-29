@@ -34,7 +34,21 @@
         self.imgView.tintColor = UIColor.randomColor;
     }];
 //    self.imgView.image = [self.imgView.image imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate];
-
+    UIView *headerView = [[UIView alloc] initWithFrame:CGRectMake(0, 240, self.view.frame.size.width-100, 100)];
+    headerView.autoresizingMask = UIViewAutoresizingFlexibleWidth;
+    UISlider *slider = [[UISlider alloc] initWithFrame:CGRectMake(0, 0, headerView.frame.size.width - 100, 100)];
+    //    slider.autoresizingMask = UIViewAutoresizingFlexibleWidth;
+    //    slider.maximumValue = 100;
+    //    slider.minimumValue = 10;
+    //    //    slider.themeMap = @{kThemeMapKeyMinTrackTintColorName : @"slider_min",
+    //    //                        kThemeMapKeyMaxTrackTintColorName : @"slider_max",};
+    //    slider.minimumTrackTintColor = UIColor.greenColor;
+    //    slider.maximumTrackTintColor = UIColor.redColor;
+    //    slider.thumbTintColor = UIColor.yellowColor;
+    
+    slider = [UIView createSliderRect:CGRectMake(0, 0, headerView.frame.size.width - 100, 100) value:70 minValue:10 maxValue:110];
+    [headerView addSubview:slider];
+    [self.view addSubview:headerView];
 }
 
 -(void)viewWillAppear:(BOOL)animated{

@@ -48,7 +48,7 @@
 
     NSLog(@"\n%@",NSHomeDirectory());
 
-//    UISwitch *view = [UIView createSwitchWithRect:CGRectMake(0, 0, 80, 30) isOn:YES];
+//    UISwitch *view = [UIView createSwitchRect:CGRectMake(0, 0, 80, 30) isOn:YES];
     UIButton * view = [UIButton buttonWithType:UIButtonTypeCustom];
     view.frame = CGRectMake(0, 0, 80, 30);
     [view setTitle:@"button" forState:UIControlStateNormal];

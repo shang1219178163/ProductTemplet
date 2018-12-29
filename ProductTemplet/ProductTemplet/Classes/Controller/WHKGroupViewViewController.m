@@ -41,7 +41,7 @@
     
     //
     CGRect rect = CGRectMake(20, 20, kScreen_width - 20*2, 0);
-    UIView * containView = [self createViewWithRect:rect elements:self.elementList numberOfRow:4 viewHeight:30 padding:15];
+    UIView * containView = [self createViewRect:rect elements:self.elementList numberOfRow:4 viewHeight:30 padding:15];
     containView.backgroundColor = UIColor.greenColor;
     [self.view addSubview:containView];
     
@@ -78,7 +78,7 @@
 //        }];
 //    }
  
-    BN_GroupView * groupView = [BN_GroupView viewWithRect:rectNew items:self.elementList numberOfRow:2 itemHeight:30 padding:10 selectedList:@[@1,@3,@6]];
+    BN_GroupView * groupView = [BN_GroupView viewRect:rectNew items:self.elementList numberOfRow:2 itemHeight:30 padding:10 selectedList:@[@1,@3,@6]];
     [self.view addSubview:groupView];
     
     groupView.groupBlock = ^(BN_GroupView *groupView, NSArray* selectedItems, NSInteger idx, BOOL isOnlyOne) {
@@ -113,7 +113,7 @@
         
         NSString * title = elements[i];
         CGRect btnRect = CGRectMake(x, y, w, h);
-//        UIButton * btn = [UIView createBtnWithRect:btnRect title:title font:15 image:nil tag:kTAG_BTN+i type:@0 target:nil aSelector:nil];
+//        UIButton * btn = [UIView createBtnRect:btnRect title:title font:15 image:nil tag:kTAG_BTN+i type:@0 target:nil aSelector:nil];
 //
         NSDictionary * dict = @{
                                 kRadio_title : title,
@@ -136,7 +136,7 @@
     return backgroudView;
 }
 
-- (UIView *)createViewWithRect:(CGRect)rect elements:(NSArray *)elements numberOfRow:(NSInteger)numberOfRow viewHeight:(CGFloat)viewHeight padding:(CGFloat)padding{
+- (UIView *)createViewRect:(CGRect)rect elements:(NSArray *)elements numberOfRow:(NSInteger)numberOfRow viewHeight:(CGFloat)viewHeight padding:(CGFloat)padding{
     
     //    CGFloat padding = 15;
     //    CGFloat viewHeight = 30;
@@ -156,14 +156,14 @@
         
         NSString * title = elements[i];
         CGRect btnRect = CGRectMake(x, y, w, h);
-        //        UIButton * btn = [UIView createBtnWithRect:btnRect title:title font:15 image:nil tag:kTAG_BTN+i type:@0 target:nil aSelector:nil];
+        //        UIButton * btn = [UIView createBtnRect:btnRect title:title font:15 image:nil tag:kTAG_BTN+i type:@0 target:nil aSelector:nil];
         //
         CGRect radioViewRect = CGRectMake(x, y, 30, 30);
         BN_RadioViewZero * radioView = [[BN_RadioViewZero alloc]initWithFrame:radioViewRect imgName_N:@"img_select_N" imgName_H:@"img_select_H"];
         radioView.isSelected = i%2 == 0 ? YES : NO;
         radioView.tag = kTAG_VIEW + i;
         CGRect labelRect = CGRectMake(x+30, y, w-30, 30);
-        UILabel * label = [UIView createLabelWithRect:labelRect text:title textColor:nil tag:kTAG_LABEL+i type:@2 font:15 backgroudColor:UIColor.yellowColor alignment:NSTextAlignmentCenter];
+        UILabel * label = [UIView createLabelRect:labelRect text:title textColor:nil tag:kTAG_LABEL+i type:@2 font:15 backgroudColor:UIColor.yellowColor alignment:NSTextAlignmentCenter];
         
         [backgroudView addSubview:radioView];
         [backgroudView addSubview:label];

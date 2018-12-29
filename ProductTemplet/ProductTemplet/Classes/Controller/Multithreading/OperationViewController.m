@@ -49,7 +49,7 @@
     // Do any additional setup after loading the view.
     
     CGRect rect = CGRectMake(20, 20, kScreen_width - 20*2, 0);
-    UIView * containView = [UIView createViewWithRect:rect items:self.itemList numberOfRow:1 itemHeight:30 padding:10 type:@0 handler:^(id obj, id item, NSInteger idx) {
+    UIView * containView = [UIView createViewRect:rect items:self.itemList numberOfRow:1 itemHeight:30 padding:10 type:@0 handler:^(id obj, id item, NSInteger idx) {
         [self handleActionBtn:item];
         
     }];

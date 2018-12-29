@@ -30,7 +30,7 @@
     
     
     CGRect rect = CGRectMake(10, 10, kScreen_width - 20, kScreen_width - 20);
-    UILabel * label = [UIView createLabelWithRect:rect text:text textColor:UIColor.redColor tag:kTAG_LABEL type:@0 font:16 backgroudColor:UIColor.whiteColor alignment:NSTextAlignmentLeft];
+    UILabel * label = [UIView createLabelRect:rect text:text textColor:UIColor.redColor tag:kTAG_LABEL type:@0 font:16 backgroudColor:UIColor.whiteColor alignment:NSTextAlignmentLeft];
     [self.view addSubview:label];
     
     
