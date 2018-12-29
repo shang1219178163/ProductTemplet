@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		144920AA21C7BAA700C3C2F6 /* MoneyDisplayController.m in Sources */ = {isa = PBXBuildFile; fileRef = 144920A921C7BAA700C3C2F6 /* MoneyDisplayController.m */; };
+		1495DB2221D74663001C2C46 /* UITabBar+swizzing.m in Sources */ = {isa = PBXBuildFile; fileRef = 1495DB2121D74663001C2C46 /* UITabBar+swizzing.m */; };
 		14E793C421D62E0B003230C8 /* bug1.png in Resources */ = {isa = PBXBuildFile; fileRef = 14E793C321D62E0B003230C8 /* bug1.png */; };
 		14E8692D21C251BA009CE33E /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 14E8692C21C251BA009CE33E /* HomeViewController.m */; };
 		51036F4720A16298009D8B7B /* img_notice.png in Resources */ = {isa = PBXBuildFile; fileRef = 51036F4620A16297009D8B7B /* img_notice.png */; };
@@ -360,6 +361,8 @@
 /* Begin PBXFileReference section */
 		144920A821C7BAA700C3C2F6 /* MoneyDisplayController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MoneyDisplayController.h; sourceTree = "<group>"; };
 		144920A921C7BAA700C3C2F6 /* MoneyDisplayController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MoneyDisplayController.m; sourceTree = "<group>"; };
+		1495DB2021D74663001C2C46 /* UITabBar+swizzing.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UITabBar+swizzing.h"; sourceTree = "<group>"; };
+		1495DB2121D74663001C2C46 /* UITabBar+swizzing.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UITabBar+swizzing.m"; sourceTree = "<group>"; };
 		14E793C321D62E0B003230C8 /* bug1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bug1.png; sourceTree = "<group>"; };
 		14E8692B21C251BA009CE33E /* HomeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
 		14E8692C21C251BA009CE33E /* HomeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
@@ -992,6 +995,8 @@
 				513646A02086031D005A20E7 /* AppDelegate.m */,
 				513646B520860332005A20E7 /* MainViewController.h */,
 				513646B620860332005A20E7 /* MainViewController.m */,
+				1495DB2021D74663001C2C46 /* UITabBar+swizzing.h */,
+				1495DB2121D74663001C2C46 /* UITabBar+swizzing.m */,
 				516F8560215DF8F2008E62B3 /* SuspendButton.h */,
 				516F8561215DF8F4008E62B3 /* SuspendButton.m */,
 				513646A82086031D005A20E7 /* Assets.xcassets */,
@@ -2341,6 +2346,7 @@
 				51698C862137C0440069C2B2 /* WHKReuestSevice.m in Sources */,
 				515CC98C20B6AAF2004AE27C /* AASeriesElement.m in Sources */,
 				515CC97920B6AAF2004AE27C /* AAYAxis.m in Sources */,
+				1495DB2221D74663001C2C46 /* UITabBar+swizzing.m in Sources */,
 				517D8B2B20B2E09800DCA731 /* CarViewController.m in Sources */,
 				51364DE520860BE0005A20E7 /* LineDashPolyline.m in Sources */,
 				51862E8620BBA9400080BD4E /* CustomTextField.m in Sources */,

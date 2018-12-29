@@ -21,7 +21,7 @@
     // Do any additional setup after loading the view.
 //    self.tabBar.tintColor = UIColor.themeColor;
 //    self.tabBar.barTintColor = UIColor.whiteColor;
-    
+  
     NSArray *list = @[@[@"BN_FirstViewController",@"首页",@"Item_first_N",@"Item_first_H",@"0",],
                       @[@"BN_SecondViewController",@"圈子",@"Item_second_N",@"Item_second_H",@"11",],
                       @[@"BN_CenterViewController",@"总览",@"Item_center_N",@"Item_center_H",@"10",],
