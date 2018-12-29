@@ -10,7 +10,11 @@
 
 #import "BN_Category.h"
 
+#import "UITabBarController+Helper.h"
+
 @interface HomeViewController ()<UITabBarControllerDelegate>
+
+@property (nonatomic, strong) NSArray *btnList;
 
 @end
 
@@ -39,6 +43,7 @@
 #pragma mark - UITabBarControllerDelegate
 
 - (BOOL)tabBarController:(UITabBarController*)tabBarController shouldSelectViewController:(UINavigationController*)viewController {
+
     //    /// 特殊处理 - 是否需要登录
     //    BOOL isBaiDuService = [viewController.topViewController isKindOfClass:[MPDiscoveryViewController class]];
     //    if (isBaiDuService) {
@@ -46,5 +51,26 @@
     //    }
     return YES;
 }
+
+-(void)tabBar:(UITabBar *)tabBar didSelectItem:(UITabBarItem *)item{
+//    NSInteger idx = [self.tabBar.items indexOfObject:item];
+//    UIView * view = self.btnList[idx];
+//    [UIView animateWithDuration:0.15 animations:^{
+//        view.transform = CGAffineTransformScale(view.transform, 1.2, 1.2);
+//
+//    } completion:^(BOOL finished) {
+//        view.transform = CGAffineTransformIdentity;
+//
+//    }];
+}
+
+-(NSArray *)btnList {
+    if (!_btnList){
+        _btnList = [self getSubviewsForName:kUITabBarButton];
+    }
+    return _btnList;
+}
+
+
 
 @end

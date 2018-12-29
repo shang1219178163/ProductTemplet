@@ -35,7 +35,8 @@
     
     [self.imgView addActionHandler:^(id obj, id item, NSInteger idx) {
         self.imgView.tintColor = UIColor.randomColor;
-        
+        self.imgView.image = [self.imgView.image imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate];
+
         UIColor.themeColor = self.imgView.tintColor;
         
         self.sliderView.backgroundColor = UIColor.themeColor;
@@ -51,10 +52,15 @@
     UIImageView *imgView = [UIView createImgViewRect:rect image:@"Item_first_N" tag:100 type:@0];
     [self.view addSubview:imgView];
     
-    imgView.backgroundColor = UIColor.randomColor;
-    imgView.tintColor = UIColor.whiteColor;
-    imgView.image = [imgView.image imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate];
+    imgView.tintColor = UIColor.themeColor;
+
+    CGRect rect1 = CGRectMake(UIScreen.width/2.0 + 120, 20, 100, 100);
+    UIImageView *imgView1 = [UIView createImgViewRect:rect1 image:@"Item_first_H" tag:101 type:@0];
+    [self.view addSubview:imgView1];
     
+    imgView1.tintColor = UIColor.grayColor;
+//    self.image = [self.image imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate];
+
     
     UIButton * btn = [UIButton buttonWithType:UIButtonTypeCustom];
     btn.frame = CGRectMake(20, CGRectGetMaxY(self.imgView.frame) + 20, 100, 100);
