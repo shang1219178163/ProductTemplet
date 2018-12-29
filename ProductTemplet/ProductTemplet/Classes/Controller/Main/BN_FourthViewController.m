@@ -82,7 +82,6 @@
     
     [self.view addSubview:imgView];
     
-    DDLog(@"%.2f,%.2f,%.2f,%.2f,",imgView.x,imgView.y,imgView.width,imgView.height);
     DDLog(@"%.2f,%.2f,%.2f,%.2f,",imgView.minY,imgView.minX,imgView.maxY,imgView.maxX);
 
     [self.view getViewLayer];
