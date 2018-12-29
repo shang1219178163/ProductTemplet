@@ -1,9 +1,9 @@
 //
 //  Utilities_DM.h
-//  HuiZhuBang
+//  
 //
 //  Created by BIN on 2017/12/13.
-//  Copyright © 2017年 WeiHouKeJi. All rights reserved.
+//  Copyright © 2017年 SHANG. All rights reserved.
 //
 
 //Utilities_DM

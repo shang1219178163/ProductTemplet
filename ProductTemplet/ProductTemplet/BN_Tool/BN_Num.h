@@ -1,9 +1,9 @@
 //
 //  BN_Num.h
-//  HuiZhuBang
+//  
 //
 //  Created by BIN on 2017/12/21.
-//  Copyright © 2017年 WeiHouKeJi. All rights reserved.
+//  Copyright © 2017年 SHANG. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>

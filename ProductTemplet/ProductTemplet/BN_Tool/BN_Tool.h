@@ -1,9 +1,9 @@
 //
 //  BN_Tool.h
-//  HuiZhuBang
+//  
 //
-//  Created by hsf on 2018/9/26.
-//  Copyright © 2018年 WeiHouKeJi. All rights reserved.
+//  Created by BIN on 2018/9/26.
+//  Copyright © 2018年 SHANG. All rights reserved.
 //
 
 #ifndef BN_Tool_h

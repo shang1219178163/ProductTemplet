@@ -1,9 +1,9 @@
 //
 //  Utilities.m
-//  HuiZhuBang
+//  
 //
 //  Created by 晁进 on 17-7-25.
-//  Copyright (c) 2017年 WeiHouKeJi. All rights reserved.
+//  Copyright (c) 2017年 SHANG. All rights reserved.
 //
 
 #import "Utilities.h"

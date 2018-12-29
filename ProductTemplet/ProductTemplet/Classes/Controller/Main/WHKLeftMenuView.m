@@ -1,10 +1,10 @@
 
 //
 //  WHKLeftMenuView.m
-//  HuiZhuBang
+//  
 //
 //  Created by BIN on 2017/9/16.
-//  Copyright © 2017年 WeiHouKeJi. All rights reserved.
+//  Copyright © 2017年 SHANG. All rights reserved.
 //
 
 #import "WHKLeftMenuView.h"

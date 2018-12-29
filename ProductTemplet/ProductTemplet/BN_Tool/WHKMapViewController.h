@@ -1,9 +1,9 @@
 //
 //  WHKMapViewController.h
-//  HuiZhuBang
+//  
 //
 //  Created by BIN on 2017/9/7.
-//  Copyright © 2017年 WeiHouKeJi. All rights reserved.
+//  Copyright © 2017年 SHANG. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>

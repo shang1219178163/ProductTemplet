@@ -3,7 +3,7 @@
 //  WeiHouBao
 //
 //  Created by BIN on 2017/8/16.
-//  Copyright © 2017年 WeiHouKeJi. All rights reserved.
+//  Copyright © 2017年 SHANG. All rights reserved.
 //
 
 #import "WHKUserDataModel.h"

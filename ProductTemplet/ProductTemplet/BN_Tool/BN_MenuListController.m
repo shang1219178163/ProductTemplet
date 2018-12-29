@@ -1,10 +1,10 @@
 
 //
 //  BN_BaseMenuListController.m
-//  HuiZhuBang
+//  
 //
-//  Created by hsf on 2018/5/16.
-//  Copyright © 2018年 WeiHouKeJi. All rights reserved.
+//  Created by BIN on 2018/5/16.
+//  Copyright © 2018年 SHANG. All rights reserved.
 //
 
 #import "BN_MenuListController.h"

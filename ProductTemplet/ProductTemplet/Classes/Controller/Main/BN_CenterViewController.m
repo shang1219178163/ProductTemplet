@@ -3,7 +3,7 @@
 //  BN_CenterViewController.m
 //  ProductTemplet
 //
-//  Created by hsf on 2018/5/21.
+//  Created by BIN on 2018/5/21.
 //  Copyright © 2018年 BN. All rights reserved.
 //
 

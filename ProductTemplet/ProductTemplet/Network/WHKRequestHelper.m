@@ -1,9 +1,9 @@
 //
 //  WHKRequestHelper.m
-//  HuiZhuBang
+//  
 //
 //  Created by BIN on 2017/8/9.
-//  Copyright © 2017年 WeiHouKeJi. All rights reserved.
+//  Copyright © 2017年 SHANG. All rights reserved.
 //
 
 #import "WHKRequestHelper.h"
@@ -22,21 +22,21 @@ NSString *const kHTTP_URLMiddle = @"i=42&c=entry&do=fengmian&m=android&source=io
 #ifndef KIOS_TESTSERVER //正式服务器
 
 //HTML
-#define kHTTP_URLPreFix_HTML  @"https://www.huizhubang.com/app"
+#define kHTTP_URLPreFix_HTML  @"https://www..com/app"
 //通用
-#define kHTTP_URLPreFix  @"https://www.huizhubang.com/app"
+#define kHTTP_URLPreFix  @"https://www..com/app"
 //图片前缀
-#define kIMG_URLPrefix  @"https://www.huizhubang.com/attachment/"
+#define kIMG_URLPrefix  @"https://www..com/attachment/"
 
 #else
 
 //HTML
-#define kHTTP_URLPreFix_HTML  @"http://192.168.0.149/huizhubang/app"
+#define kHTTP_URLPreFix_HTML  @"http://192.168.0.149//app"
 //通用
-#define kHTTP_URLPreFix  @"http://192.168.0.149/huizhubang/app"
+#define kHTTP_URLPreFix  @"http://192.168.0.149//app"
 
 //图片前缀
-#define kIMG_URLPrefix  @"http://192.168.0.149/huizhubang/attachment/"
+#define kIMG_URLPrefix  @"http://192.168.0.149//attachment/"
 
 #endif
 

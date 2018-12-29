@@ -1,9 +1,9 @@
 //
 //  BN_Language.m
-//  HuiZhuBang
+//  
 //
 //  Created by BIN on 2018/9/11.
-//  Copyright © 2018年 WeiHouKeJi. All rights reserved.
+//  Copyright © 2018年 SHANG. All rights reserved.
 //
 
 #import "BN_Language.h"
