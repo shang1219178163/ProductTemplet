@@ -58,8 +58,9 @@
     UIImageView *imgView1 = [UIView createImgViewRect:rect1 image:@"Item_first_H" tag:101 type:@0];
     [self.view addSubview:imgView1];
     
-    imgView1.tintColor = UIColor.grayColor;
-//    self.image = [self.image imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate];
+//    imgView1.tintColor = UIColor.grayColor;
+    imgView1.tintColor = UIColor.themeColor;
+//    imgView1.image = [imgView1.image imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate];
 
     
     UIButton * btn = [UIButton buttonWithType:UIButtonTypeCustom];
