@@ -16,7 +16,7 @@ PODS:
   - AFNetworking/UIKit (3.2.1):
     - AFNetworking/NSURLSession
   - Aspects (1.4.1)
-  - BN_Category (1.8.2.2):
+  - BN_Category (1.8.3):
     - AESCrypt-ObjC
     - BN_Globle
     - BN_Kit
@@ -38,7 +38,7 @@ PODS:
     - BN_Globle
     - BN_Kit
     - BN_View
-  - BN_View (1.3.8.2):
+  - BN_View (1.3.8.3):
     - BN_Category
     - BN_Globle
     - BN_Kit
@@ -181,12 +181,12 @@ SPEC CHECKSUMS:
   AESCrypt-ObjC: 6d930ff891a61b90505855e9447959a84be80715
   AFNetworking: b6f891fdfaed196b46c7a83cf209e09697b94057
   Aspects: 7595ba96a6727a58ebcbfc954497fc5d2fdde546
-  BN_Category: c4ab362a2bda1189bf608cc88c5ab2990c3452b1
+  BN_Category: 63fb9b8eb2214262bb9ad6b838b0b92b69fc5aa7
   BN_CollectionView: e50b4fc2144637e591631e13ee6ccec560ea5f69
   BN_Globle: 92bb643677ca9b195200200e51df4634f1c21443
   BN_Kit: 97d27b8e7351f486e184a7b988ad3e3013e222b5
   BN_TableViewCell: 9ade0f5256a9cb11f8e02e795742e280897ffab7
-  BN_View: 899e895501f5d47cca9daa256fa52d5714a70606
+  BN_View: e2cc20580dffee22d46728f62d0b79c6d82ef78a
   BN_ViewHeight: cae42cfd0b778fa49796a7bf7889db9f0229e479
   FCUUID: bb054fc90cd7cd99320f9f6ff8e130fe607fba05
   FLAnimatedImage: 4a0b56255d9b05f18b6dd7ee06871be5d3b89e31
