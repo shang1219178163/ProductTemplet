@@ -10,8 +10,6 @@
 
 #import "BN_Category.h"
 
-#import "UITabBarController+Helper.h"
-
 @interface HomeViewController ()<UITabBarControllerDelegate>
 
 @property (nonatomic, strong) NSArray *btnList;
