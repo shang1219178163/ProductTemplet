@@ -66,8 +66,8 @@
     UIButton * btn = [UIButton buttonWithType:UIButtonTypeCustom];
     btn.frame = CGRectMake(20, CGRectGetMaxY(self.imgView.frame) + 20, 100, 100);
     
-    [btn setBackgroundImage:UIImageFromName(@"Item_first_N") forState:UIControlStateNormal];
-    [btn setBackgroundImage:UIImageFromName(@"Item_first_H") forState:UIControlStateHighlighted];
+    [btn setBackgroundImage:UIImageNamed(@"Item_first_N") forState:UIControlStateNormal];
+    [btn setBackgroundImage:UIImageNamed(@"Item_first_H") forState:UIControlStateHighlighted];
     [self.view addSubview:btn];
     
     

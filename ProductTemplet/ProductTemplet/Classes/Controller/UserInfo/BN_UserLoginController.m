@@ -147,7 +147,7 @@
             UIButton *btn = [UIButton buttonWithType:UIButtonTypeCustom];
             [btn setTitle:@"登录" forState:UIControlStateNormal];
             [btn setTitleColor:UIColor.whiteColor forState:UIControlStateNormal];
-            [btn setBackgroundImage:UIImageFromColor(UIColor.themeColor) forState:UIControlStateNormal];
+            [btn setBackgroundImage:UIImageColor(UIColor.themeColor) forState:UIControlStateNormal];
             [btn addActionHandler:^(id obj, id item, NSInteger idx) {
 
                 
