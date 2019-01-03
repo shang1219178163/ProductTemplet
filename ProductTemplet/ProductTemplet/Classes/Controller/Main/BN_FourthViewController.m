@@ -29,6 +29,9 @@
 
 //    [self addChildControllerView:@"FontListController"];
 //    [self addChildControllerView:@"FriendListController"];
+    [self createBarItemTitle:nil imageName:@"Item_fourth_H" isLeft:NO isHidden:NO handler:^(id obj, UIButton *item, NSInteger idx) {
+        DDLog(@"%@",item);
+    }];
     
     
     [self.view addSubview:self.imgView];
@@ -39,6 +42,9 @@
 
         UIColor.themeColor = self.imgView.tintColor;
         
+        UIViewController * ctr = UIApplication.tabBarController.viewControllers.firstObject;
+        ctr.tabBarItem.image = self.imgView.image;
+        [ctr.tabBarItem setValue:self.imgView.image forKey:@"image"];
         self.sliderView.backgroundColor = UIColor.themeColor;
     }];
 //    self.imgView.image = [self.imgView.image imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate];
