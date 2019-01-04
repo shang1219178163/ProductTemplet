@@ -92,7 +92,7 @@
         NSString *str2;
         if (_isPlusTime) {
             str2 = [NSString stringWithFormat:@"%zd",nowInteger - arc4random()%50];
-        }else {
+        } else {
             str2 = [NSString stringWithFormat:@"%zd",nowInteger + arc4random()%500];
         }
         

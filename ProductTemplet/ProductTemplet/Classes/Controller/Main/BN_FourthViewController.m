@@ -12,6 +12,9 @@
 
 #import "BN_Category.h"
 
+
+#import "UILabel+Helper.h"
+
 @interface BN_FourthViewController ()
 
 @property (nonatomic, strong) UIImageView *imgView;
@@ -70,13 +73,35 @@
 
     
     UIButton * btn = [UIButton buttonWithType:UIButtonTypeCustom];
-    btn.frame = CGRectMake(20, CGRectGetMaxY(self.imgView.frame) + 20, 100, 100);
+    btn.frame = CGRectMake(20, CGRectGetMaxY(self.imgView.frame) + 20, 150, 100);
     
-    [btn setBackgroundImage:UIImageNamed(@"Item_first_N") forState:UIControlStateNormal];
-    [btn setBackgroundImage:UIImageNamed(@"Item_first_H") forState:UIControlStateHighlighted];
+//    [btn setBackgroundImage:UIImageNamed(@"Item_first_N") forState:UIControlStateNormal];
+//    [btn setBackgroundImage:UIImageNamed(@"Item_first_H") forState:UIControlStateHighlighted];
+    [btn setTitle:@"按钮点击事件" forState:UIControlStateNormal];
+    [btn setTitleColor:UIColor.themeColor forState:UIControlStateNormal];
     [self.view addSubview:btn];
+    [btn addActionHandler:^(UIControl * _Nonnull obj) {
+        DDLog(btn.titleLabel.text)
+        
+    } forControlEvents:UIControlEventTouchUpInside];
+    btn.titleLabel.numberOfLines = 0;
+
     
+    NSMutableAttributedString * attStr_N = [btn.titleLabel setContent:@"钮点击事" attDic:AttributeDict(@5)];
+    NSMutableAttributedString * attStr_H = [btn.titleLabel setContent:@"钮点击事" attDic:AttributeDict(@2)];
+    [btn setAttributedTitle:attStr_N forState:UIControlStateNormal];
+    [btn setAttributedTitle:attStr_H forState:UIControlStateHighlighted];
     
+    UILabel * label = [[UILabel alloc]init];
+    label.frame = CGRectMake(btn.maxX+20, btn.minY, 100, 100);
+    label.text = @"这是一串富文本";
+//    label.numberOfLines = label.text.length;
+    [self.view addSubview:label];
+    
+//    [label setContent:label.text attDic:dic];
+
+
+    [self.view getViewLayer];
 }
 
 -(void)viewWillAppear:(BOOL)animated{

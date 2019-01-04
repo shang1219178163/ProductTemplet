@@ -85,7 +85,7 @@
     if (format) {
         self.numFormatter.positiveFormat = format;
 
-    }else{
+    } else {
         self.numFormatter.minimumFractionDigits = 2;
         self.numFormatter.roundingMode = NSNumberFormatterRoundCeiling;
         

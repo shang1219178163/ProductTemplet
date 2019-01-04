@@ -41,7 +41,9 @@
     [UIApplication setupAppearance];
     [UIApplication setupIQKeyboardManager];
     
-    UIApplication.tabBarController.selectedIndex = 3;
+    //因为左右侧滑栏失效
+//    UIApplication.tabBarController.selectedIndex = 3;
+//    UIApplication.tabBarController.selectedIndex = 4;
 
     return YES;
 }

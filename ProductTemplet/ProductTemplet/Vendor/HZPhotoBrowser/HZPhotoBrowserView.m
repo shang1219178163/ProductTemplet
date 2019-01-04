@@ -189,7 +189,7 @@
                 CGFloat ratio = frame.size.width/imageFrame.size.width;
                 imageFrame.size.height = imageFrame.size.height*ratio;
                 imageFrame.size.width = frame.size.width;
-            }else{ //横屏的时候
+            } else { //横屏的时候
                 CGFloat ratio = frame.size.height/imageFrame.size.height;
                 imageFrame.size.width = imageFrame.size.width*ratio;
                 imageFrame.size.height = frame.size.height;
@@ -212,7 +212,7 @@
         self.scrollview.minimumZoomScale = kMinZoomScale;
         self.scrollview.maximumZoomScale = maxScale;
         self.scrollview.zoomScale = 1.0f;
-    }else{
+    } else {
         frame.origin = CGPointZero;
         self.imageview.frame = frame;
         //重置内容大小

@@ -32,7 +32,7 @@
                       
                       ];
     self.viewControllers = UINavListFromList(list);
-    self.selectedIndex = 2;
+    self.selectedIndex = 4;
     
     self.delegate = self;
     self.moreNavigationController.navigationBarHidden = YES;

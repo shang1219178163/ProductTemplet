@@ -116,7 +116,7 @@ NSString *const kHTTP_URLMiddle = @"i=42&c=entry&do=fengmian&m=android&source=io
         md5String = [md5String stringByReplacingCharacterIndex:4 withString:@"*"];
         md5String = [md5String stringByReplacingCharacterIndex:16 withString:@"*"];
         
-    }else{
+    } else {
         md5String = [md5String stringByReplacingCharacterIndex:3 withString:@"*"];
         md5String = [md5String stringByReplacingCharacterIndex:6 withString:@"*"];
         md5String = [md5String stringByReplacingCharacterIndex:18 withString:@"*"];
@@ -146,7 +146,7 @@ NSString *const kHTTP_URLMiddle = @"i=42&c=entry&do=fengmian&m=android&source=io
         if (![keyArr containsObject:rKey]) {
             NSAssert(![keyArr containsObject:rKey], @"messageName不能为空!");
             
-        }else{
+        } else {
 //            allAddresss = [allAddresss stringByAppendingFormat:@"%@%@%@%@",@"&",rKey,@"=",[Utilities encodeTheString:paramDict[rKey]]];
             
         }

@@ -53,7 +53,7 @@
         [sales provideCar];
         [self gift];
         [self service];
-    }else{
+    } else {
         NSLog(@"贷款审批未通过！");
     }
 }

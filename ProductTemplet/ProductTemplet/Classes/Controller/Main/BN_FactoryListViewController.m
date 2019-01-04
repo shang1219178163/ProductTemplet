@@ -67,7 +67,7 @@
         cell.textLabel.textColor = UIColor.redColor;
         
         return cell;
-    }else{
+    } else {
         UITableViewOneCell * cell = [UITableViewOneCell cellWithTableView:tableView identifier:@"cell"];
    
         cell.textLabel.textColor = UIColor.redColor;

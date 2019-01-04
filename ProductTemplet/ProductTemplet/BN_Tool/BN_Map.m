@@ -655,7 +655,7 @@ NSString * NSStringFromPlacemark(CLPlacemark *placemark) {
                        regeocode.addressComponent.streetNumber.number
                        ];
         
-    }else if ([obj isKindOfClass:[AMapLocationReGeocode class]]) {
+    } else if ([obj isKindOfClass:[AMapLocationReGeocode class]]) {
         AMapLocationReGeocode *regeocode = (AMapLocationReGeocode *)obj;
         addressInfo = [NSString stringWithFormat:@"province:%@,city:%@,district:%@,street:%@,streetNumber:%@",
                        regeocode.province,

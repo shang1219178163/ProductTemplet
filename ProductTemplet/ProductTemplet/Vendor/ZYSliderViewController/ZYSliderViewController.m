@@ -182,7 +182,7 @@ typedef NS_ENUM(NSUInteger, ZYDragDirection){
         else if ([self.mainViewController isKindOfClass:[UINavigationController class]]) {
             return (UINavigationController *)self.mainViewController;
         }
-    }else if (self.mainViewController.navigationController){
+    } else if (self.mainViewController.navigationController){
         return self.mainViewController.navigationController;
     }
     return nil;
@@ -197,7 +197,7 @@ typedef NS_ENUM(NSUInteger, ZYDragDirection){
         if (_mainViewController.childViewControllers.count>1) {
             return NO;
         }
-    }else{
+    } else {
         for (UIViewController *controller in _mainViewController.childViewControllers) {
             if ([controller isKindOfClass:[UINavigationController class]]) {
                 if (controller.childViewControllers.count>1) {
@@ -236,21 +236,21 @@ typedef NS_ENUM(NSUInteger, ZYDragDirection){
             if (!_isLeftShow&&!_isRightShow) {
                 if (point.x<leftDragbleWidth||point.x>kZYDeviceWidth-rightDragbleWidth) {
                     _canDrag = YES;
-                }else{
+                } else {
                     _canDrag = NO;
                 }
-            }else if (_isLeftShow){
+            } else if (_isLeftShow){
                 CGPoint curPoint = [gesture locationInView:_mainContainerView];
                 if (curPoint.x>0&&curPoint.y>0) {
                     _canDrag = YES;
-                }else{
+                } else {
                     _canDrag = NO;
                 }
-            }else if (_isRightShow){
+            } else if (_isRightShow){
                 CGPoint curPoint = [gesture locationInView:_mainContainerView];
                 if (curPoint.x>=0&&curPoint.y>=0) {
                     _canDrag = YES;
-                }else{
+                } else {
                     _canDrag = NO;
                 }
             }
@@ -276,7 +276,7 @@ typedef NS_ENUM(NSUInteger, ZYDragDirection){
                         _dragDirection = ZYDragDirectionLeft;
                         _leftContainerView.hidden = NO;
                         _rightContainerView.hidden = YES;
-                    }else{
+                    } else {
                         _dragDirection = ZYDragDirectionRight;
                         _leftContainerView.hidden = YES;
                         _rightContainerView.hidden = NO;
@@ -342,7 +342,7 @@ typedef NS_ENUM(NSUInteger, ZYDragDirection){
                         break;
                 }
                 
-            }else if (_isLeftShow){
+            } else if (_isLeftShow){
                 
                 if (_dragDirection == ZYDragDirectionNone) {
                     _dragDirection = ZYDragDirectionLeft;
@@ -362,7 +362,7 @@ typedef NS_ENUM(NSUInteger, ZYDragDirection){
                 _leftContainerView.transform = CGAffineTransformTranslate(_leftContainerView.transform, move_length, 0);
                 _leftContainerView.transform = CGAffineTransformScale(_leftContainerView.transform, left_scale, left_scale);
                 
-            }else if (_isRightShow){
+            } else if (_isRightShow){
                 
                 if (_dragDirection == ZYDragDirectionNone) {
                     _dragDirection = ZYDragDirectionRight;
@@ -408,13 +408,13 @@ typedef NS_ENUM(NSUInteger, ZYDragDirection){
                     if (move_length>leftMinDragLength) {
                         if (_isLeftShow) {
                             [self hideLeft];
-                        }else{
+                        } else {
                             [self showLeft];
                         }
-                    }else{
+                    } else {
                         if (_isLeftShow) {
                             [self showLeft];
-                        }else{
+                        } else {
                             [self hideLeft];
                         }
                     }
@@ -435,13 +435,13 @@ typedef NS_ENUM(NSUInteger, ZYDragDirection){
                     if (move_length>rightMinDragLength) {
                         if (_isRightShow) {
                             [self hideRight];
-                        }else{
+                        } else {
                             [self showRight];
                         }
-                    }else{
+                    } else {
                         if (_isRightShow) {
                             [self showRight];
-                        }else{
+                        } else {
                             [self hideRight];
                         }
                     }

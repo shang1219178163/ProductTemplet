@@ -41,7 +41,7 @@
     
     if ([[UIApplication sharedApplication] openURL:url]) {
         
-    }else{
+    } else {
         DDLog(@"____________________________________________________________邮件发送失败!!!");
     }
 }
@@ -52,7 +52,7 @@
     if ([attachmentDict.allKeys containsObject:kEmail_attachMineType]) {
         mimeType = attachmentDict[kEmail_attachMineType];
         
-    }else{
+    } else {
         NSArray * fileNameArray = [attachmentDict[kEmail_attachFilName] componentsSeparatedByString:@"."];
         mimeType = [fileNameArray lastObject];
 

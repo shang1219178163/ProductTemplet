@@ -77,7 +77,7 @@ static CGFloat kSuspendBtnWidth = 50;
     if (stopPoint.y - _viewSize.height/2.0 <= 0) {
         if ([self.parController isKindOfClass:[UINavigationController class]]) {
             stopPoint = CGPointMake(stopPoint.x, 64 + _viewSize.height/2.0 + _padding);
-        }else{
+        } else {
             stopPoint = CGPointMake(stopPoint.x, _viewSize.height/2.0 + _padding);
             
         }
@@ -119,30 +119,30 @@ static CGFloat kSuspendBtnWidth = 50;
                     //左上
                     if (recognizer.view.center.x >= recognizer.view.center.y) {
                         stopPoint = CGPointMake(recognizer.view.center.x, _viewSize.height/2.0);
-                    }else{
+                    } else {
                         stopPoint = CGPointMake(_viewSize.height/2.0, recognizer.view.center.y);
                     }
-                }else{
+                } else {
                     //左下
                     if (recognizer.view.center.x >= kScreen_height - recognizer.view.center.y) {
                         stopPoint = CGPointMake(recognizer.view.center.x, kScreen_height - _viewSize.height/2.0);
-                    }else{
+                    } else {
                         stopPoint = CGPointMake(_viewSize.height/2.0, recognizer.view.center.y);
                     }
                 }
-            }else{
+            } else {
                 if (recognizer.view.center.y <= kScreen_height/2.0) {
                     //右上
                     if (kScreen_width - recognizer.view.center.x  >= recognizer.view.center.y) {
                         stopPoint = CGPointMake(recognizer.view.center.x, _viewSize.height/2.0);
-                    }else{
+                    } else {
                         stopPoint = CGPointMake(kScreen_width - _viewSize.height/2.0, recognizer.view.center.y);
                     }
-                }else{
+                } else {
                     //右下
                     if (kScreen_width - recognizer.view.center.x  >= kScreen_height - recognizer.view.center.y) {
                         stopPoint = CGPointMake(recognizer.view.center.x, kScreen_height - _viewSize.height/2.0);
-                    }else{
+                    } else {
                         stopPoint = CGPointMake(kScreen_width - _viewSize.height/2.0,recognizer.view.center.y);
                     }
                 }
@@ -159,7 +159,7 @@ static CGFloat kSuspendBtnWidth = 50;
             if (stopPoint.y - _viewSize.height/2.0 <= 0) {
                 if ([self.parController isKindOfClass:[UINavigationController class]]) {
                     stopPoint = CGPointMake(stopPoint.x, 64 + _viewSize.height/2.0 + _padding);
-                }else{
+                } else {
                     stopPoint = CGPointMake(stopPoint.x, _viewSize.height/2.0 + _padding);
                     
                 }
@@ -208,30 +208,30 @@ static CGFloat kSuspendBtnWidth = 50;
                     //左上
                     if (recognizer.view.center.x >= recognizer.view.center.y) {
                         stopPoint = CGPointMake(recognizer.view.center.x, kSuspendBtnWidth/2.0);
-                    }else{
+                    } else {
                         stopPoint = CGPointMake(kSuspendBtnWidth/2.0, recognizer.view.center.y);
                     }
-                }else{
+                } else {
                     //左下
                     if (recognizer.view.center.x >= kScreen_height - recognizer.view.center.y) {
                         stopPoint = CGPointMake(recognizer.view.center.x, kScreen_height - kSuspendBtnWidth/2.0);
-                    }else{
+                    } else {
                         stopPoint = CGPointMake(kSuspendBtnWidth/2.0, recognizer.view.center.y);
                     }
                 }
-            }else{
+            } else {
                 if (recognizer.view.center.y <= kScreen_height/2.0) {
                     //右上
                     if (kScreen_width - recognizer.view.center.x  >= recognizer.view.center.y) {
                         stopPoint = CGPointMake(recognizer.view.center.x, kSuspendBtnWidth/2.0);
-                    }else{
+                    } else {
                         stopPoint = CGPointMake(kScreen_width - kSuspendBtnWidth/2.0, recognizer.view.center.y);
                     }
-                }else{
+                } else {
                     //右下
                     if (kScreen_width - recognizer.view.center.x  >= kScreen_height - recognizer.view.center.y) {
                         stopPoint = CGPointMake(recognizer.view.center.x, kScreen_height - kSuspendBtnWidth/2.0);
-                    }else{
+                    } else {
                         stopPoint = CGPointMake(kScreen_width - kSuspendBtnWidth/2.0,recognizer.view.center.y);
                     }
                 }
@@ -248,7 +248,7 @@ static CGFloat kSuspendBtnWidth = 50;
             if (stopPoint.y - kSuspendBtnWidth/2.0 <= 0) {
                 if ([self.parController isKindOfClass:[UINavigationController class]]) {
                     stopPoint = CGPointMake(stopPoint.x, 64 + kSuspendBtnWidth/2.0 + _padding);
-                }else{
+                } else {
                     stopPoint = CGPointMake(stopPoint.x, kSuspendBtnWidth/2.0 + _padding);
 
                 }

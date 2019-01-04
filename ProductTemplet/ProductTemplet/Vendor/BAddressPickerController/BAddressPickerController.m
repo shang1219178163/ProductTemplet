@@ -119,7 +119,7 @@
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
     if (tableView == _tableView) {
         return [[self.dictionary allKeys] count] + 3;
-    }else{
+    } else {
         return 1;
     }
 }
@@ -132,7 +132,7 @@
             return [array count];
         }
         return 1;
-    }else{
+    } else {
         return [resultArray count];
     }
 }
@@ -147,7 +147,7 @@
             }
             currentCityCell.selectionStyle = UITableViewCellSelectionStyleNone;
             return currentCityCell;
-        }else if (indexPath.section == 1){
+        } else if (indexPath.section == 1){
             BRecentCityCell *recentCityCell = [tableView dequeueReusableCellWithIdentifier:@"recentCityCell"];
             if (!recentCityCell) {
                 recentCityCell = [[BRecentCityCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"recentCityCell"];
@@ -159,14 +159,14 @@
                 [recentCityCell setHidden:YES];
             }
             return recentCityCell;
-        }else if (indexPath.section == 2){
+        } else if (indexPath.section == 2){
             BHotCityCell *hotCell = [tableView dequeueReusableCellWithIdentifier:@"hotCityCell"];
             if (!hotCell) {
                 hotCell = [[BHotCityCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"hotCityCell" array:hotCities];
             }
             hotCell.selectionStyle = UITableViewCellSelectionStyleNone;
             return hotCell;
-        }else{
+        } else {
             UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:Identifier];
             if (!cell) {
                 cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:Identifier];
@@ -174,7 +174,7 @@
             cell.selectionStyle = UITableViewCellSelectionStyleNone;
             return cell;
         }
-    }else{
+    } else {
         static NSString *Identifier = @"Cell";
         UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:Identifier];
         if (!cell) {
@@ -194,28 +194,28 @@
                     [self.delegate addressPicker:self didSelectedCity:button.titleLabel.text];
                 }
             }];
-        }else if ([cell isKindOfClass:[BRecentCityCell class]]){
+        } else if ([cell isKindOfClass:[BRecentCityCell class]]){
             [(BRecentCityCell*)cell buttonWhenClick:^(UIButton *button) {
                 if ([self.delegate respondsToSelector:@selector(addressPicker:didSelectedCity:)]) {
                     [self saveCurrentCity:button.titleLabel.text];
                     [self.delegate addressPicker:self didSelectedCity:button.titleLabel.text];
                 }
             }];
-        }else if([cell isKindOfClass:[BHotCityCell class]]){
+        } else if([cell isKindOfClass:[BHotCityCell class]]){
             [(BHotCityCell*)cell buttonWhenClick:^(UIButton *button) {
                 if ([self.delegate respondsToSelector:@selector(addressPicker:didSelectedCity:)]) {
                     [self saveCurrentCity:button.titleLabel.text];
                     [self.delegate addressPicker:self didSelectedCity:button.titleLabel.text];
                 }
             }];
-        }else{
+        } else {
             NSString *cityKey = [titleArray objectAtIndex:indexPath.section - 3];
             NSArray *array = [self.dictionary objectForKey:cityKey];
             cell.textLabel.text = [array objectAtIndex:indexPath.row];
             cell.textLabel.font = [UIFont systemFontOfSize:16.0];
         }
 
-    }else{
+    } else {
         cell.textLabel.text = [resultArray objectAtIndex:indexPath.row];
         cell.textLabel.font = [UIFont systemFontOfSize:16.0];
     }
@@ -230,7 +230,7 @@
             [titleSectionArray addObject:title];
         }
         return titleSectionArray;
-    }else{
+    } else {
         return nil;
     }
     
@@ -249,19 +249,19 @@
         [headerView addSubview:label];
         if (section == 0) {
             label.text = @"当前城市";
-        }else if (section == 1){
+        } else if (section == 1){
             //如果第一次使用没有最近访问的城市则赢该行
             if (![NSUserDefaults.standardUserDefaults objectForKey:currentCity]) {
                 return nil;
             }
             label.text = @"最近访问城市";
-        }else if (section == 2){
+        } else if (section == 2){
             label.text = @"热门城市";
-        }else{
+        } else {
             label.text = [titleArray objectAtIndex:section - 3];
         }
         return headerView;
-    }else{
+    } else {
         return nil;
     }
 }
@@ -275,7 +275,7 @@
             }
         }
         return 28;
-    }else{
+    } else {
         return 0.01;
     }
 }
@@ -294,16 +294,16 @@
     if (tableView == _tableView) {
         if (indexPath.section == 2) {
             return ceil((float)[hotCities count] / 3) * (BUTTON_HEIGHT + 15) + 15;
-        }else if (indexPath.section > 2){
+        } else if (indexPath.section > 2){
             return 42;
-        }else if (indexPath.section == 1){
+        } else if (indexPath.section == 1){
             //如果第一次使用没有最近访问的城市则赢该行
             if (![NSUserDefaults.standardUserDefaults objectForKey:currentCity]) {
                 return 0;
             }
         }
         return BUTTON_HEIGHT + 30;
-    }else{
+    } else {
         return 42;
     }
     
@@ -320,7 +320,7 @@
                 [self.delegate addressPicker:self didSelectedCity:[array objectAtIndex:indexPath.row]];
             }
         }
-    }else{
+    } else {
         if ([self.delegate respondsToSelector:@selector(addressPicker:didSelectedCity:)]) {
             [self saveCurrentCity:[resultArray objectAtIndex:indexPath.row]];
             [self.delegate addressPicker:self didSelectedCity:[resultArray objectAtIndex:indexPath.row]];
@@ -336,7 +336,7 @@
     }
     if ([currentArray count] < 2 && ![currentArray containsObject:city]) {
         [currentArray addObject:city];
-    }else{
+    } else {
         if (![currentArray containsObject:city]) {
             currentArray[1] = currentArray[0];
             currentArray[0] = city;

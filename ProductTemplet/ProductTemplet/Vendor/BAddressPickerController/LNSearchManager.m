@@ -28,7 +28,7 @@
     [self.gecoder reverseGeocodeLocation:location completionHandler:^(NSArray<CLPlacemark *> * _Nullable placemarks, NSError * _Nullable error) {
         if (error || placemarks.count == 0) {
             self.completionBlock(nil,error);
-        }else{
+        } else {
             LNLocationGeocoder *locationGeocoder = [[LNLocationGeocoder alloc] init];
             CLPlacemark *placemark = [placemarks firstObject];
             NSDictionary *dictionary = [[placemarks objectAtIndex:0] addressDictionary];

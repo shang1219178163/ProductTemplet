@@ -20,7 +20,7 @@
     NSLog(@"申请贷款...");
     if ([self auditLoan]) {
         return [self getLoad];
-    }else{
+    } else {
         return NO;
     }
 }

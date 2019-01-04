@@ -112,7 +112,7 @@
 
                 }];
             }];
-        }else{
+        } else {
             [subv updateConstraints:^(MASConstraintMaker *make) {
                 make.right.equalTo(self.view).offset(0);
         

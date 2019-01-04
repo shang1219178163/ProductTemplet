@@ -122,7 +122,7 @@
 
     if ([tableView isEqual:self.tabBarView.scrollTableViews[self.tabBarView.currentPage%2]]) {
         cell.textLabel.text = self.dataList[self.tabBarView.currentPage][indexPath.row];
-    }else{
+    } else {
         cell.textLabel.text = @"111111";
     }
 
@@ -133,7 +133,7 @@
     if (indexPath.row % 2 == 0) {
         [NSNotificationCenter.defaultCenter postNotificationName:kNotiPost_logOut object:@"aaa"];
 
-    }else{
+    } else {
         [NSNotificationCenter.defaultCenter postNotificationName:kNotiPost_backgroudUploadLocation object:@"bbb"];
 
     }

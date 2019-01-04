@@ -249,7 +249,7 @@
             [self setNeedsLayout];
             [self layoutIfNeeded];
         } completion:nil];
-    }else if (orientation==UIDeviceOrientationPortrait){
+    } else if (orientation==UIDeviceOrientationPortrait){
         [UIView animateWithDuration:kAnimDuration delay:0.0f options:UIViewAnimationOptionBeginFromCurrentState animations:^{
             [[UIApplication sharedApplication] setStatusBarOrientation:(UIInterfaceOrientation)orientation];
             self.transform = (orientation==UIDeviceOrientationPortrait)?CGAffineTransformIdentity:CGAffineTransformMakeRotation(M_PI);

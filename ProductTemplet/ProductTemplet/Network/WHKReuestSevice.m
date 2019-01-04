@@ -174,7 +174,7 @@
                                                        if (error) {
                                                            failure(error);
                                                            
-                                                       }else{
+                                                       } else {
                                                            success(bodyString);
                                                            
                                                        }

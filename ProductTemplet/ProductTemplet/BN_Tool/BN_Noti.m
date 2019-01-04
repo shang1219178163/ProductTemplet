@@ -177,7 +177,7 @@
     if ([obj isKindOfClass:[UNTextInputNotificationAction class]]) {
         notiCategory = [UNNotificationCategory categoryWithIdentifier:@"locationCategory" actions:@[obj] intentIdentifiers:@[] options:UNNotificationCategoryOptionCustomDismissAction];
         
-    }else{
+    } else {
         if ([obj isKindOfClass:[NSArray class]]) {
             NSArray * actions = [self actionsBylist:obj];
             notiCategory = [UNNotificationCategory categoryWithIdentifier:@"locationCategory" actions:actions intentIdentifiers:@[] options:UNNotificationCategoryOptionCustomDismissAction];

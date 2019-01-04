@@ -162,7 +162,7 @@
         if ([key isEqualToString:[keys lastObject]]) {
             sql = [sql stringByAppendingFormat:@"%@ %@ %@",key,middle,dic[key]];
             
-        }else{
+        } else {
             sql = [sql stringByAppendingFormat:@"%@ %@ %@,",key,middle,dic[key]];
             
         }
@@ -215,7 +215,7 @@
                 if ([key isEqualToString:[keys lastObject]]) {
                     sql = [sql stringByAppendingFormat:@"%@",key];
 
-                }else{
+                } else {
                     sql = [sql stringByAppendingFormat:@"%@,",key];
 
                 }
@@ -301,7 +301,7 @@
         if ([where isEqualToString:[wheres lastObject]]) {
             sql = [sql stringByAppendingFormat:@"%@ ",where];
             
-        }else{
+        } else {
             sql = [sql stringByAppendingFormat:@"%@ and ",where];
             
         }
@@ -330,7 +330,7 @@
         if ([where isEqualToString:[wheres lastObject]]) {
             sql = [sql stringByAppendingFormat:@"%@ ",where];
 
-        }else{
+        } else {
             sql = [sql stringByAppendingFormat:@"%@ and ",where];
             
         }
@@ -349,7 +349,7 @@
         if ([where isEqualToString:[wheres lastObject]]) {
             sql = [sql stringByAppendingFormat:@"%@ ",where];
             
-        }else{
+        } else {
             sql = [sql stringByAppendingFormat:@"%@ and ",where];
             
         }

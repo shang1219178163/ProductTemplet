@@ -155,7 +155,7 @@
         UIView * cycleView = [self createCycleViewRect:CGRectMake(0, 0, kScreen_width, height) imageNames:self.imageList];
         [backgroudView addSubview:cycleView];
         
-    }else{
+    } else {
         CGRect rect = CGRectZero;
         //    按钮
         for (NSInteger i = 0; i < self.elementList.count; i++) {
@@ -278,7 +278,7 @@
         
         [cell getViewLayer];
         return cell;
-    }else{
+    } else {
         UITableViewOneCell * cell = [UITableViewOneCell cellWithTableView:tableView];
         
         cell.textLabel.text = @"没有符合条件的数据,去看看其他内容吧!";

@@ -64,7 +64,7 @@
     Person *person = self.dataArray[indexPath.row];
     if (person.number == 0) {
         cell.textLabel.text = person.name;
-    }else{
+    } else {
         cell.textLabel.text = [NSString stringWithFormat:@"%@(第%ld次更新)",person.name,person.number];
     }
     

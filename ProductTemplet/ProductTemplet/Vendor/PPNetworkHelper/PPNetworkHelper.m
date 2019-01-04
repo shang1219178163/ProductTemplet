@@ -260,7 +260,7 @@ static AFHTTPSessionManager *_sessionManager;
             [formData appendPartWithFormData:parametersData name:@"data"];
             
             DDLog(@"formData________字符串");
-        }else if([parameters isKindOfClass:[NSData class]]){
+        } else if([parameters isKindOfClass:[NSData class]]){
             [formData appendPartWithFormData:parameters name:@"data"];
             
             DDLog(@"formData________字符串");
@@ -303,10 +303,10 @@ static AFHTTPSessionManager *_sessionManager;
             NSData *parametersData = [parameters dataUsingEncoding:NSUTF8StringEncoding];
             [formData appendPartWithFormData:parametersData name:@"data"];
             
-        }else if([parameters isKindOfClass:[NSData class]]){
+        } else if([parameters isKindOfClass:[NSData class]]){
             [formData appendPartWithFormData:parameters name:@"data"];
             
-        }else{
+        } else {
             NSAssert([parameters isKindOfClass:[NSString class]] || [parameters isKindOfClass:[NSData class]], @"parameters目前只支持NSString和NSData格式");
         }
         

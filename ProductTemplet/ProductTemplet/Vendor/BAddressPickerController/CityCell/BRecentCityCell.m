@@ -30,7 +30,7 @@
         if ([self.currentArray count] > 1) {
             [self.firstButton setTitle:self.currentArray[0] forState:UIControlStateNormal];
             [self.secondButton setTitle:self.currentArray[1] forState:UIControlStateNormal];
-        }else if ([self.currentArray count] > 0){
+        } else if ([self.currentArray count] > 0){
             [self.firstButton setTitle:self.currentArray[0] forState:UIControlStateNormal];
             [self.secondButton setHidden:YES];
         }

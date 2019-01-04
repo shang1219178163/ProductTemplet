@@ -336,7 +336,7 @@ static const NSInteger kRoutePaddingEdge = 20;
         if (CLLocationCoordinate2DIsValid(self.coordinateBegin) && CLLocationCoordinate2DIsValid(self.coordinateEnd)) {
             [self handleSearchRoutePlanningDrive];
 
-        }else{
+        } else {
             DDLog(@"______________起止点:%@-->%@",NSStringFromCoordinate(self.coordinateBegin),NSStringFromCoordinate(self.coordinateEnd));
 
         }
@@ -382,7 +382,7 @@ static const NSInteger kRoutePaddingEdge = 20;
         if (error) {
             DDLog(@"error:%@",error);
             
-        }else{
+        } else {
             [self presentDriveRouteWithResponse:response];
 
         }
@@ -489,7 +489,7 @@ static const NSInteger kRoutePaddingEdge = 20;
 //        if (iOSVersion(9)) {
 //            _locationManager.allowsBackgroundLocationUpdates = YES;
 //            
-//        }else{
+//        } else {
 //            _locationManager.pausesLocationUpdatesAutomatically = NO;//允许后台定位参数，保持不会被系统挂起
 //        }
 //    }

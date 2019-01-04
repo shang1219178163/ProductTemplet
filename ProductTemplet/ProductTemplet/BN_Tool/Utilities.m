@@ -73,7 +73,7 @@ static NSString *const kACSEncrypt = @"mbqh1Gtpj9L8pJuv";
     if (isSuccess) {
         DDLog(@"isSuccess");
         
-    }else{
+    } else {
         DDLog(@"isFail");
         
     }
