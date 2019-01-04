@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1404FADC21DF40D700122E22 /* RecognizerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1404FADB21DF40D700122E22 /* RecognizerController.m */; };
+		1404FADF21DF45AE00122E22 /* UIScreenEdgePanView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1404FADE21DF45AE00122E22 /* UIScreenEdgePanView.m */; };
+		1404FAE521DF4A5F00122E22 /* UIRecognizerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1404FAE421DF4A5F00122E22 /* UIRecognizerController.m */; };
 		144920AA21C7BAA700C3C2F6 /* MoneyDisplayController.m in Sources */ = {isa = PBXBuildFile; fileRef = 144920A921C7BAA700C3C2F6 /* MoneyDisplayController.m */; };
 		14E793C421D62E0B003230C8 /* bug1.png in Resources */ = {isa = PBXBuildFile; fileRef = 14E793C321D62E0B003230C8 /* bug1.png */; };
 		14E8692D21C251BA009CE33E /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 14E8692C21C251BA009CE33E /* HomeViewController.m */; };
@@ -358,6 +361,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1404FADA21DF40D700122E22 /* RecognizerController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RecognizerController.h; sourceTree = "<group>"; };
+		1404FADB21DF40D700122E22 /* RecognizerController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RecognizerController.m; sourceTree = "<group>"; };
+		1404FADD21DF45AE00122E22 /* UIScreenEdgePanView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UIScreenEdgePanView.h; sourceTree = "<group>"; };
+		1404FADE21DF45AE00122E22 /* UIScreenEdgePanView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UIScreenEdgePanView.m; sourceTree = "<group>"; };
+		1404FAE321DF4A5F00122E22 /* UIRecognizerController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UIRecognizerController.h; sourceTree = "<group>"; };
+		1404FAE421DF4A5F00122E22 /* UIRecognizerController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UIRecognizerController.m; sourceTree = "<group>"; };
 		144920A821C7BAA700C3C2F6 /* MoneyDisplayController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MoneyDisplayController.h; sourceTree = "<group>"; };
 		144920A921C7BAA700C3C2F6 /* MoneyDisplayController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MoneyDisplayController.m; sourceTree = "<group>"; };
 		14E793C321D62E0B003230C8 /* bug1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bug1.png; sourceTree = "<group>"; };
@@ -1014,19 +1023,11 @@
 				51B9CD1320A0520F0096A540 /* ZYSliderViewController */,
 				518B5B002086C413002FDD33 /* MobSDK */,
 				51364DC320860BE0005A20E7 /* AMap */,
-				5136472D208604DD005A20E7 /* GYZChooseCity */,
 				5136472E208604DD005A20E7 /* HZPhotoBrowser */,
 				51364744208604DD005A20E7 /* LocationTracker */,
 				51364775208604DD005A20E7 /* PPNetworkHelper */,
 			);
 			path = Vendor;
-			sourceTree = "<group>";
-		};
-		5136472D208604DD005A20E7 /* GYZChooseCity */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = GYZChooseCity;
 			sourceTree = "<group>";
 		};
 		5136472E208604DD005A20E7 /* HZPhotoBrowser */ = {
@@ -1149,8 +1150,14 @@
 				D7EDEAB121BDF5930048CCDA /* FontListController.m */,
 				144920A821C7BAA700C3C2F6 /* MoneyDisplayController.h */,
 				144920A921C7BAA700C3C2F6 /* MoneyDisplayController.m */,
+				1404FADA21DF40D700122E22 /* RecognizerController.h */,
+				1404FADB21DF40D700122E22 /* RecognizerController.m */,
+				1404FAE321DF4A5F00122E22 /* UIRecognizerController.h */,
+				1404FAE421DF4A5F00122E22 /* UIRecognizerController.m */,
 				5186F1BF21A3A43900663707 /* BNImageView.h */,
 				5186F1C021A3A43900663707 /* BNImageView.m */,
+				1404FADD21DF45AE00122E22 /* UIScreenEdgePanView.h */,
+				1404FADE21DF45AE00122E22 /* UIScreenEdgePanView.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -2350,6 +2357,7 @@
 				513647DF208604DE005A20E7 /* PPNetworkCache.m in Sources */,
 				516969AB20BCF9A800BAA53D /* MediatorLJ.m in Sources */,
 				513647C2208604DE005A20E7 /* PhotoMainViewController.m in Sources */,
+				1404FADC21DF40D700122E22 /* RecognizerController.m in Sources */,
 				516969B320BCFCFF00BAA53D /* CompositeViewController.m in Sources */,
 				515CC98820B6AAF2004AE27C /* AAChart.m in Sources */,
 				51B9CD1120A051AA0096A540 /* BN_LeftViewController.m in Sources */,
@@ -2453,6 +2461,7 @@
 				5169699920BCED4000BAA53D /* LHSales.m in Sources */,
 				5169DF102088230D00B025C3 /* BN_NetRootShareModel.m in Sources */,
 				516969BA20BCFD9B00BAA53D /* CompanyLeaf.m in Sources */,
+				1404FAE521DF4A5F00122E22 /* UIRecognizerController.m in Sources */,
 				515C67DD2137C55700D5EA94 /* BAddressPickerController.m in Sources */,
 				510BC9A3208F3B6A00CF48C5 /* SliderTabBarController.m in Sources */,
 				516969A020BCF11600BAA53D /* MediatorViewController.m in Sources */,
@@ -2463,6 +2472,7 @@
 				51364C9D20860822005A20E7 /* PictureController.m in Sources */,
 				5169DF212088235900B025C3 /* BN_GeocodeAnnotation.m in Sources */,
 				5162F71020BFBBB4009A6253 /* BN_Operation.m in Sources */,
+				1404FADF21DF45AE00122E22 /* UIScreenEdgePanView.m in Sources */,
 				515CC97C20B6AAF2004AE27C /* AAPlotLinesElement.m in Sources */,
 				516969AF20BCF9A800BAA53D /* AbstractClient.m in Sources */,
 				51364CA020860822005A20E7 /* Utilities_DM.m in Sources */,

@@ -36,8 +36,9 @@
     controller = UICtrFromString(@"HomeViewController");
     [UIApplication setupRootController:rootVC isAdjust:NO];
     
-//    [UIApplication setupRootController:UICtrFromString(@"MoneyDisplayController") isAdjust:YES];
-
+//    [UIApplication setupRootController:UICtrFromString(@"RecognizerController") isAdjust:YES];
+    [UIApplication setupRootController:UICtrFromString(@"UIRecognizerController") isAdjust:YES];
+    
     [UIApplication setupAppearance];
     [UIApplication setupIQKeyboardManager];
     
