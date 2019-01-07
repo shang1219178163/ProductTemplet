@@ -10,6 +10,7 @@
 		1404FADC21DF40D700122E22 /* RecognizerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1404FADB21DF40D700122E22 /* RecognizerController.m */; };
 		1404FADF21DF45AE00122E22 /* UIScreenEdgePanView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1404FADE21DF45AE00122E22 /* UIScreenEdgePanView.m */; };
 		1404FAE521DF4A5F00122E22 /* UIRecognizerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1404FAE421DF4A5F00122E22 /* UIRecognizerController.m */; };
+		1404FAF921E0A1BB00122E22 /* Skull.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1404FAF821E0A1BA00122E22 /* Skull.jpg */; };
 		144920AA21C7BAA700C3C2F6 /* MoneyDisplayController.m in Sources */ = {isa = PBXBuildFile; fileRef = 144920A921C7BAA700C3C2F6 /* MoneyDisplayController.m */; };
 		14E793C421D62E0B003230C8 /* bug1.png in Resources */ = {isa = PBXBuildFile; fileRef = 14E793C321D62E0B003230C8 /* bug1.png */; };
 		14E8692D21C251BA009CE33E /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 14E8692C21C251BA009CE33E /* HomeViewController.m */; };
@@ -367,6 +368,7 @@
 		1404FADE21DF45AE00122E22 /* UIScreenEdgePanView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UIScreenEdgePanView.m; sourceTree = "<group>"; };
 		1404FAE321DF4A5F00122E22 /* UIRecognizerController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UIRecognizerController.h; sourceTree = "<group>"; };
 		1404FAE421DF4A5F00122E22 /* UIRecognizerController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UIRecognizerController.m; sourceTree = "<group>"; };
+		1404FAF821E0A1BA00122E22 /* Skull.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Skull.jpg; sourceTree = "<group>"; };
 		144920A821C7BAA700C3C2F6 /* MoneyDisplayController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MoneyDisplayController.h; sourceTree = "<group>"; };
 		144920A921C7BAA700C3C2F6 /* MoneyDisplayController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MoneyDisplayController.m; sourceTree = "<group>"; };
 		14E793C321D62E0B003230C8 /* bug1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bug1.png; sourceTree = "<group>"; };
@@ -1008,6 +1010,7 @@
 				5136492420860655005A20E7 /* Resources */,
 				513646AD2086031D005A20E7 /* Info.plist */,
 				14E793C321D62E0B003230C8 /* bug1.png */,
+				1404FAF821E0A1BA00122E22 /* Skull.jpg */,
 				513646AE2086031D005A20E7 /* main.m */,
 				513649E320860683005A20E7 /* PrefixHeader.pch */,
 			);
@@ -2130,6 +2133,7 @@
 				513649DD20860655005A20E7 /* img_Tupping_H.png in Resources */,
 				513649D620860655005A20E7 /* img_report_animalout.png in Resources */,
 				513649CB20860655005A20E7 /* img_popAddOriAnimal@2x.png in Resources */,
+				1404FAF921E0A1BB00122E22 /* Skull.jpg in Resources */,
 				5136498B20860655005A20E7 /* img_Add_AnimalChildbirth.png in Resources */,
 				513649D820860655005A20E7 /* img_semenCollect_H.png in Resources */,
 				513649BE20860655005A20E7 /* img_houseCome_N.png in Resources */,
