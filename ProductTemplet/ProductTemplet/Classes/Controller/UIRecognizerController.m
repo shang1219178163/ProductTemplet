@@ -116,8 +116,12 @@
 
 //一个视图同时响应多个手势需要实现的方法
 -(BOOL)gestureRecognizer:(UIGestureRecognizer *)gestureRecognizer shouldRecognizeSimultaneouslyWithGestureRecognizer:(UIGestureRecognizer *)otherGestureRecognizer{
-    
-    return YES;
+    if ([gestureRecognizer isKindOfClass:[UIPanGestureRecognizer class]] && [otherGestureRecognizer isKindOfClass:[UIScreenEdgePanGestureRecognizer class]]) {
+        return YES;
+    } else {
+        return NO;
+    }
+//    return YES;
 }
 
 @end

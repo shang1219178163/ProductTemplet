@@ -78,7 +78,8 @@
         case 0:
         {
             UITableViewDatePickerCell * cell = [UITableViewDatePickerCell cellWithTableView:tableView];
-            cell.labelLeft.text = @"日期选择:";
+            cell.labelLeft.text = @"*日期选择:";
+            cell.labelLeft.attributedText = [cell.labelLeft.text toAsterisk];
             return cell;
             
         }
