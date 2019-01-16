@@ -33,7 +33,7 @@
 
     }];
     
-    self.textField = [[BN_TextFieldOne alloc]initWithFrame:CGRectMake(10, 20, kScreen_width - 20, 40)];
+    self.textField = [[BN_TextFieldOne alloc]initWithFrame:CGRectMake(10, 20, kScreenWidth - 20, 40)];
     self.textField.backgroundColor = UIColor.greenColor;
     self.textField.clearButtonMode = UITextFieldViewModeAlways;
     [self.view addSubview:self.textField];
@@ -46,7 +46,7 @@
     }];
     
     //
-    self.textFieldPwd = [[BN_TextFieldOne alloc]initWithFrame:CGRectMake(CGRectGetMinX(self.textField.frame), CGRectGetMaxY(self.textField.frame) + 10, kScreen_width - 20, 40)];
+    self.textFieldPwd = [[BN_TextFieldOne alloc]initWithFrame:CGRectMake(CGRectGetMinX(self.textField.frame), CGRectGetMaxY(self.textField.frame) + 10, kScreenWidth - 20, 40)];
     self.textFieldPwd.backgroundColor = UIColor.greenColor;
     self.textFieldPwd.clearButtonMode = UITextFieldViewModeAlways;
     [self.view addSubview:self.textFieldPwd];

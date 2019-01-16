@@ -22,7 +22,7 @@
 - (UITextView *)textView{
     if (!_textView) {
         _textView = ({
-            UITextView * view = [[UITextView alloc]initWithFrame:CGRectMake(10, 10, kScreen_width - 20, 180)];
+            UITextView * view = [[UITextView alloc]initWithFrame:CGRectMake(10, 10, kScreenWidth - 20, 180)];
             view.placeHolderTextView.text = @"11111";
             view;
         });

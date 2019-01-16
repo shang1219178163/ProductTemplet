@@ -28,7 +28,7 @@
 -(BN_BtnView *)btnView{
     if (!_btnView) {
         _btnView = ({
-            BN_BtnView * btnView = [[BN_BtnView alloc]initWithFrame:CGRectMake(10, 10, kScreen_width/4.0, 50)];
+            BN_BtnView * btnView = [[BN_BtnView alloc]initWithFrame:CGRectMake(10, 10, kScreenWidth/4.0, 50)];
             btnView.imageView.image = [UIImage imageNamed:@"img_arrowDown_orange.png"];
             btnView.label.text = @"测试数据";
             btnView.type = @3;
@@ -72,7 +72,7 @@
         
     };
     
-    BN_MenuView * menuView = [[BN_MenuView alloc]initWithFrame:CGRectMake(0, 0, kScreen_width, 0.0)];
+    BN_MenuView * menuView = [[BN_MenuView alloc]initWithFrame:CGRectMake(0, 0, kScreenWidth, 0.0)];
     menuView.dataList = menuList;
     menuView.block = ^(BN_MenuView *view, NSIndexPath *indexPath) {
         

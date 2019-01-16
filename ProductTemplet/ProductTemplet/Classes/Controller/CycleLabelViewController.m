@@ -28,7 +28,7 @@
     
     self.dataList = @[@"aaaaaaaaaaaaaaaaaaaaaaaaaaa",@"bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",@"ccccccccccccccccccccccccccc",];
 
-    self.cycleView = [[BN_CycleView alloc]initWithFrame:CGRectMake(20, 60, kScreen_width*0.8, 40)];
+    self.cycleView = [[BN_CycleView alloc]initWithFrame:CGRectMake(20, 60, kScreenWidth*0.8, 40)];
     self.cycleView.list = self.dataList;
     [self.view addSubview:self.cycleView];
     [self.cycleView start];

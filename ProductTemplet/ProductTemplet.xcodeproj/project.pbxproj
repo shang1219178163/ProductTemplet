@@ -12,6 +12,7 @@
 		1404FAE521DF4A5F00122E22 /* UIRecognizerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1404FAE421DF4A5F00122E22 /* UIRecognizerController.m */; };
 		1404FAF921E0A1BB00122E22 /* Skull.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1404FAF821E0A1BA00122E22 /* Skull.jpg */; };
 		144920AA21C7BAA700C3C2F6 /* MoneyDisplayController.m in Sources */ = {isa = PBXBuildFile; fileRef = 144920A921C7BAA700C3C2F6 /* MoneyDisplayController.m */; };
+		147B971F21EF005B000F5294 /* UICollectionDisplayController.m in Sources */ = {isa = PBXBuildFile; fileRef = 147B971E21EF005B000F5294 /* UICollectionDisplayController.m */; };
 		14E793C421D62E0B003230C8 /* bug1.png in Resources */ = {isa = PBXBuildFile; fileRef = 14E793C321D62E0B003230C8 /* bug1.png */; };
 		14E8692D21C251BA009CE33E /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 14E8692C21C251BA009CE33E /* HomeViewController.m */; };
 		51036F4720A16298009D8B7B /* img_notice.png in Resources */ = {isa = PBXBuildFile; fileRef = 51036F4620A16297009D8B7B /* img_notice.png */; };
@@ -371,6 +372,8 @@
 		1404FAF821E0A1BA00122E22 /* Skull.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Skull.jpg; sourceTree = "<group>"; };
 		144920A821C7BAA700C3C2F6 /* MoneyDisplayController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MoneyDisplayController.h; sourceTree = "<group>"; };
 		144920A921C7BAA700C3C2F6 /* MoneyDisplayController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MoneyDisplayController.m; sourceTree = "<group>"; };
+		147B971D21EF005B000F5294 /* UICollectionDisplayController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UICollectionDisplayController.h; sourceTree = "<group>"; };
+		147B971E21EF005B000F5294 /* UICollectionDisplayController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UICollectionDisplayController.m; sourceTree = "<group>"; };
 		14E793C321D62E0B003230C8 /* bug1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bug1.png; sourceTree = "<group>"; };
 		14E8692B21C251BA009CE33E /* HomeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
 		14E8692C21C251BA009CE33E /* HomeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
@@ -1157,6 +1160,8 @@
 				1404FADB21DF40D700122E22 /* RecognizerController.m */,
 				1404FAE321DF4A5F00122E22 /* UIRecognizerController.h */,
 				1404FAE421DF4A5F00122E22 /* UIRecognizerController.m */,
+				147B971D21EF005B000F5294 /* UICollectionDisplayController.h */,
+				147B971E21EF005B000F5294 /* UICollectionDisplayController.m */,
 				5186F1BF21A3A43900663707 /* BNImageView.h */,
 				5186F1C021A3A43900663707 /* BNImageView.m */,
 				1404FADD21DF45AE00122E22 /* UIScreenEdgePanView.h */,
@@ -2372,6 +2377,7 @@
 				51B9CD1920A0520F0096A540 /* UIViewController+ZYSliderViewController.m in Sources */,
 				5169DF0B208822B200B025C3 /* BN_ThirdViewController.m in Sources */,
 				51CD3B4A2160A59D00A99F37 /* WHKLeftMenuView.m in Sources */,
+				147B971F21EF005B000F5294 /* UICollectionDisplayController.m in Sources */,
 				5162F70120BF9D10009A6253 /* FlowerView.m in Sources */,
 				5162F70D20BFB934009A6253 /* OperationViewController.m in Sources */,
 				515CC97D20B6AAF2004AE27C /* AAOptions3d.m in Sources */,

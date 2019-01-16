@@ -38,7 +38,7 @@
             if ([action.title isEqualToString:list[0]]) {
                 if (@available(iOS 10.0, *)) {
                     self.animator = [[UIViewPropertyAnimator alloc]initWithDuration:1.5 curve:UIViewAnimationCurveLinear animations:^{
-                        self.circleView.transform = CGAffineTransformMakeTranslation(kScreen_width-2*self.circleRadius, 0);
+                        self.circleView.transform = CGAffineTransformMakeTranslation(kScreenWidth-2*self.circleRadius, 0);
                         
                     }];
                     DDLog(@"_%@_",@(self.animator.state));
@@ -54,7 +54,7 @@
             else if ([action.title isEqualToString:list[1]]) {
                 if (@available(iOS 10.0, *)) {
                     self.animator = [[UIViewPropertyAnimator alloc]initWithDuration:3 controlPoint1:CGPointMake(0.2, 0.8) controlPoint2:CGPointMake(0.2, 0.8) animations:^{
-                        self.circleView.transform = CGAffineTransformMakeTranslation(kScreen_width-2*self.circleRadius, 0);
+                        self.circleView.transform = CGAffineTransformMakeTranslation(kScreenWidth-2*self.circleRadius, 0);
                         
                     }];
                     [self.animator startAnimation];
@@ -75,7 +75,7 @@
                     }];
                     [self.animator addAnimations:^{
                         @strongify(self);
-                        self.circleView.transform = CGAffineTransformMakeTranslation(kScreen_width-2*self.circleRadius, 0);
+                        self.circleView.transform = CGAffineTransformMakeTranslation(kScreenWidth-2*self.circleRadius, 0);
                     }];
                     [self.animator startAnimation];
                 }
@@ -125,7 +125,7 @@
     
 //    if (@available(iOS 10.0, *)) {
 //        self.animator = [[UIViewPropertyAnimator alloc] initWithDuration:2.f curve:UIViewAnimationCurveLinear animations:^{
-//            self.circleView.frame = CGRectMake(kScreen_width - 100, 200, 100, 100);
+//            self.circleView.frame = CGRectMake(kScreenWidth - 100, 200, 100, 100);
 //        }];
 //        [self.animator startAnimation];
 //    }

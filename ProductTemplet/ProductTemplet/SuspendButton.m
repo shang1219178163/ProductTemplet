@@ -28,7 +28,7 @@ static CGFloat kSuspendBtnWidth = 50;
     spBtn.parController = parController;
     if ([image isKindOfClass:[NSString class]]) image = [UIImage imageNamed:image];
     if (CGRectEqualToRect(rect, CGRectZero)){
-        spBtn.frame = CGRectMake(kScreen_width - kSuspendBtnWidth, 200, kSuspendBtnWidth, kSuspendBtnWidth);
+        spBtn.frame = CGRectMake(kScreenWidth - kSuspendBtnWidth, 200, kSuspendBtnWidth, kSuspendBtnWidth);
 
     }
     else{
@@ -70,8 +70,8 @@ static CGFloat kSuspendBtnWidth = 50;
         stopPoint = CGPointMake(_viewSize.width/2.0 + _padding, stopPoint.y);
     }
     
-    if (stopPoint.x + kSuspendBtnWidth/2.0 >= kScreen_width) {
-        stopPoint = CGPointMake(kScreen_width - _viewSize.width/2.0 - _padding, stopPoint.y);
+    if (stopPoint.x + kSuspendBtnWidth/2.0 >= kScreenWidth) {
+        stopPoint = CGPointMake(kScreenWidth - _viewSize.width/2.0 - _padding, stopPoint.y);
     }
     
     if (stopPoint.y - _viewSize.height/2.0 <= 0) {
@@ -83,8 +83,8 @@ static CGFloat kSuspendBtnWidth = 50;
         }
     }
     
-    if (stopPoint.y + _viewSize.height/2.0 >= kScreen_height) {
-        stopPoint = CGPointMake(stopPoint.x, kScreen_height - _viewSize.height/2.0 - _padding);
+    if (stopPoint.y + _viewSize.height/2.0 >= kScreenHeight) {
+        stopPoint = CGPointMake(stopPoint.x, kScreenHeight - _viewSize.height/2.0 - _padding);
     }
     self.center = stopPoint;
 }
@@ -112,10 +112,10 @@ static CGFloat kSuspendBtnWidth = 50;
             break;
         case UIGestureRecognizerStateEnded:
         {
-            CGPoint stopPoint = CGPointMake(0, kScreen_height / 2.0);
+            CGPoint stopPoint = CGPointMake(0, kScreenHeight / 2.0);
             
-            if (recognizer.view.center.x < kScreen_width / 2.0) {
-                if (recognizer.view.center.y <= kScreen_height/2.0) {
+            if (recognizer.view.center.x < kScreenWidth / 2.0) {
+                if (recognizer.view.center.y <= kScreenHeight/2.0) {
                     //左上
                     if (recognizer.view.center.x >= recognizer.view.center.y) {
                         stopPoint = CGPointMake(recognizer.view.center.x, _viewSize.height/2.0);
@@ -124,26 +124,26 @@ static CGFloat kSuspendBtnWidth = 50;
                     }
                 } else {
                     //左下
-                    if (recognizer.view.center.x >= kScreen_height - recognizer.view.center.y) {
-                        stopPoint = CGPointMake(recognizer.view.center.x, kScreen_height - _viewSize.height/2.0);
+                    if (recognizer.view.center.x >= kScreenHeight - recognizer.view.center.y) {
+                        stopPoint = CGPointMake(recognizer.view.center.x, kScreenHeight - _viewSize.height/2.0);
                     } else {
                         stopPoint = CGPointMake(_viewSize.height/2.0, recognizer.view.center.y);
                     }
                 }
             } else {
-                if (recognizer.view.center.y <= kScreen_height/2.0) {
+                if (recognizer.view.center.y <= kScreenHeight/2.0) {
                     //右上
-                    if (kScreen_width - recognizer.view.center.x  >= recognizer.view.center.y) {
+                    if (kScreenWidth - recognizer.view.center.x  >= recognizer.view.center.y) {
                         stopPoint = CGPointMake(recognizer.view.center.x, _viewSize.height/2.0);
                     } else {
-                        stopPoint = CGPointMake(kScreen_width - _viewSize.height/2.0, recognizer.view.center.y);
+                        stopPoint = CGPointMake(kScreenWidth - _viewSize.height/2.0, recognizer.view.center.y);
                     }
                 } else {
                     //右下
-                    if (kScreen_width - recognizer.view.center.x  >= kScreen_height - recognizer.view.center.y) {
-                        stopPoint = CGPointMake(recognizer.view.center.x, kScreen_height - _viewSize.height/2.0);
+                    if (kScreenWidth - recognizer.view.center.x  >= kScreenHeight - recognizer.view.center.y) {
+                        stopPoint = CGPointMake(recognizer.view.center.x, kScreenHeight - _viewSize.height/2.0);
                     } else {
-                        stopPoint = CGPointMake(kScreen_width - _viewSize.height/2.0,recognizer.view.center.y);
+                        stopPoint = CGPointMake(kScreenWidth - _viewSize.height/2.0,recognizer.view.center.y);
                     }
                 }
             }
@@ -152,8 +152,8 @@ static CGFloat kSuspendBtnWidth = 50;
                 stopPoint = CGPointMake(_viewSize.width/2.0 + _padding, stopPoint.y);
             }
             
-            if (stopPoint.x + kSuspendBtnWidth/2.0 >= kScreen_width) {
-                stopPoint = CGPointMake(kScreen_width - _viewSize.width/2.0 - _padding, stopPoint.y);
+            if (stopPoint.x + kSuspendBtnWidth/2.0 >= kScreenWidth) {
+                stopPoint = CGPointMake(kScreenWidth - _viewSize.width/2.0 - _padding, stopPoint.y);
             }
             
             if (stopPoint.y - _viewSize.height/2.0 <= 0) {
@@ -165,8 +165,8 @@ static CGFloat kSuspendBtnWidth = 50;
                 }
             }
             
-            if (stopPoint.y + _viewSize.height/2.0 >= kScreen_height) {
-                stopPoint = CGPointMake(stopPoint.x, kScreen_height - _viewSize.height/2.0 - _padding);
+            if (stopPoint.y + _viewSize.height/2.0 >= kScreenHeight) {
+                stopPoint = CGPointMake(stopPoint.x, kScreenHeight - _viewSize.height/2.0 - _padding);
             }
             
             [UIView animateWithDuration:0.35 animations:^{
@@ -201,10 +201,10 @@ static CGFloat kSuspendBtnWidth = 50;
             break;
         case UIGestureRecognizerStateEnded:
         {
-            CGPoint stopPoint = CGPointMake(0, kScreen_height / 2.0);
+            CGPoint stopPoint = CGPointMake(0, kScreenHeight / 2.0);
             
-            if (recognizer.view.center.x < kScreen_width / 2.0) {
-                if (recognizer.view.center.y <= kScreen_height/2.0) {
+            if (recognizer.view.center.x < kScreenWidth / 2.0) {
+                if (recognizer.view.center.y <= kScreenHeight/2.0) {
                     //左上
                     if (recognizer.view.center.x >= recognizer.view.center.y) {
                         stopPoint = CGPointMake(recognizer.view.center.x, kSuspendBtnWidth/2.0);
@@ -213,26 +213,26 @@ static CGFloat kSuspendBtnWidth = 50;
                     }
                 } else {
                     //左下
-                    if (recognizer.view.center.x >= kScreen_height - recognizer.view.center.y) {
-                        stopPoint = CGPointMake(recognizer.view.center.x, kScreen_height - kSuspendBtnWidth/2.0);
+                    if (recognizer.view.center.x >= kScreenHeight - recognizer.view.center.y) {
+                        stopPoint = CGPointMake(recognizer.view.center.x, kScreenHeight - kSuspendBtnWidth/2.0);
                     } else {
                         stopPoint = CGPointMake(kSuspendBtnWidth/2.0, recognizer.view.center.y);
                     }
                 }
             } else {
-                if (recognizer.view.center.y <= kScreen_height/2.0) {
+                if (recognizer.view.center.y <= kScreenHeight/2.0) {
                     //右上
-                    if (kScreen_width - recognizer.view.center.x  >= recognizer.view.center.y) {
+                    if (kScreenWidth - recognizer.view.center.x  >= recognizer.view.center.y) {
                         stopPoint = CGPointMake(recognizer.view.center.x, kSuspendBtnWidth/2.0);
                     } else {
-                        stopPoint = CGPointMake(kScreen_width - kSuspendBtnWidth/2.0, recognizer.view.center.y);
+                        stopPoint = CGPointMake(kScreenWidth - kSuspendBtnWidth/2.0, recognizer.view.center.y);
                     }
                 } else {
                     //右下
-                    if (kScreen_width - recognizer.view.center.x  >= kScreen_height - recognizer.view.center.y) {
-                        stopPoint = CGPointMake(recognizer.view.center.x, kScreen_height - kSuspendBtnWidth/2.0);
+                    if (kScreenWidth - recognizer.view.center.x  >= kScreenHeight - recognizer.view.center.y) {
+                        stopPoint = CGPointMake(recognizer.view.center.x, kScreenHeight - kSuspendBtnWidth/2.0);
                     } else {
-                        stopPoint = CGPointMake(kScreen_width - kSuspendBtnWidth/2.0,recognizer.view.center.y);
+                        stopPoint = CGPointMake(kScreenWidth - kSuspendBtnWidth/2.0,recognizer.view.center.y);
                     }
                 }
             }
@@ -241,8 +241,8 @@ static CGFloat kSuspendBtnWidth = 50;
                 stopPoint = CGPointMake(kSuspendBtnWidth/2.0 + _padding, stopPoint.y);
             }
             
-            if (stopPoint.x + kSuspendBtnWidth/2.0 >= kScreen_width) {
-                stopPoint = CGPointMake(kScreen_width - kSuspendBtnWidth/2.0 - _padding, stopPoint.y);
+            if (stopPoint.x + kSuspendBtnWidth/2.0 >= kScreenWidth) {
+                stopPoint = CGPointMake(kScreenWidth - kSuspendBtnWidth/2.0 - _padding, stopPoint.y);
             }
             
             if (stopPoint.y - kSuspendBtnWidth/2.0 <= 0) {
@@ -254,8 +254,8 @@ static CGFloat kSuspendBtnWidth = 50;
                 }
             }
             
-            if (stopPoint.y + kSuspendBtnWidth/2.0 >= kScreen_height) {
-                stopPoint = CGPointMake(stopPoint.x, kScreen_height - kSuspendBtnWidth/2.0 - _padding);
+            if (stopPoint.y + kSuspendBtnWidth/2.0 >= kScreenHeight) {
+                stopPoint = CGPointMake(stopPoint.x, kScreenHeight - kSuspendBtnWidth/2.0 - _padding);
             }
             
             [UIView animateWithDuration:0.35 animations:^{

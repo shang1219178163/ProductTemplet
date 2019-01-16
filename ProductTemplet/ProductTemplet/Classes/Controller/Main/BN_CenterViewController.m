@@ -125,7 +125,10 @@
                           @"录入类界面封装",@"EntryViewController",
                           
                           ],
-                      
+                      @[
+                          @"UICollectionView",@"UICollectionDisplayController",
+                          
+                          ],                      
                       @[
                           @"Sort",@"SortViewController",
                           

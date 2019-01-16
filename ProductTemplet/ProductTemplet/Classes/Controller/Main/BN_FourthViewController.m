@@ -10,16 +10,12 @@
 
 #import <FLAnimatedImage/FLAnimatedImage.h>
 
-#import "BN_Category.h"
-
-
-#import "UILabel+Helper.h"
-
 @interface BN_FourthViewController ()
 
 @property (nonatomic, strong) UIImageView *imgView;
 @property (nonatomic, strong) UIView *sliderView;
 @property (nonatomic, strong) UITabBarItem *tabBarItem;
+@property (nonatomic, strong) BNSegmentView * segmentView;
 
 @end
 
@@ -39,7 +35,9 @@
     
     [self.view addSubview:self.imgView];
     
+    @weakify(self)
     [self.imgView addActionHandler:^(id obj, id item, NSInteger idx) {
+        @strongify(self)
         self.imgView.tintColor = UIColor.randomColor;
         self.imgView.image = [self.imgView.image imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate];
 
@@ -100,8 +98,13 @@
     
 //    [label setContent:label.text attDic:dic];
 
-
-    [self.view getViewLayer];
+    //
+    self.segmentView.frame = CGRectMake(20, self.sliderView.maxY + 20, kScreenWidth - 40, 40);
+    [self.view addSubview:self.segmentView];
+    self.segmentView.layer.borderWidth = kW_LayerBorder;
+    self.segmentView.layer.borderColor = UIColor.blueColor.CGColor;
+    
+//    [self.view getViewLayer];
 }
 
 -(void)viewWillAppear:(BOOL)animated{
@@ -169,5 +172,15 @@
     return _sliderView;
 }
 
+-(BNSegmentView *)segmentView{
+    if (!_segmentView) {
+        _segmentView = [[BNSegmentView alloc]initWithFrame: CGRectZero];
+        _segmentView.segmentCtl.itemList = @[@"one",@"two",@"three",@"four"];
+        _segmentView.indicatorHeight = 1;
+        _segmentView.type = 2;
+        
+    }
+    return _segmentView;
+}
 
 @end

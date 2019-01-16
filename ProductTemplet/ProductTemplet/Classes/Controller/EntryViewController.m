@@ -36,6 +36,7 @@
                       @"UITableViewDatePickerCell",
                       @"UITableViewDateRangeCell",
                       @"UITableViewSegmentCell",
+                      @"UITableViewSwitchCell",
                       @"UITableViewStepCell",
                       @"UITableViewPickerListCell",
                       @"UITableViewAddressPickerCell",
@@ -162,7 +163,6 @@
         {
             UITableViewTextViewCell * cell = [UITableViewTextViewCell cellWithTableView:tableView];
             cell.labelLeft.text = @"备注信息:";
-            
             [cell getViewLayer];
             
             return cell;

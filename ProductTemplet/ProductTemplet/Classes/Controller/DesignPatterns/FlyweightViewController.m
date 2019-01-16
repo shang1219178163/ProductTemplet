@@ -73,7 +73,7 @@
         //把内在花朵状态添加到花朵列表
         [flowerList addObject:flowerView];
     }
-    FlyweightView *view = [[FlyweightView alloc] initWithFrame:CGRectMake(0, 0, kScreen_width, kScreen_height)];
+    FlyweightView *view = [[FlyweightView alloc] initWithFrame:CGRectMake(0, 0, kScreenWidth, kScreenHeight)];
     view.backgroundColor = [UIColor colorWithRed:10/255.0 green:80/255.0 blue:10/255.0 alpha:1.0];
     [view setFlowerList:flowerList];
     [self.view addSubview:view];

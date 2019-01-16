@@ -16,7 +16,7 @@ PODS:
   - AFNetworking/UIKit (3.2.1):
     - AFNetworking/NSURLSession
   - Aspects (1.4.1)
-  - BN_Category (1.8.4.5):
+  - BN_Category (1.8.5):
     - AESCrypt-ObjC
     - BN_Globle
     - BN_Kit
@@ -28,24 +28,24 @@ PODS:
     - SDWebImage
     - Toast
     - YYModel
-  - BN_CollectionView (1.1.9.1):
+  - BN_CollectionView (1.1.9.2):
     - BN_Category
-  - BN_Globle (1.3.1.1)
-  - BN_Kit (1.2.8.2):
+  - BN_Globle (1.3.2)
+  - BN_Kit (1.2.9):
     - BN_Globle
-  - BN_TableViewCell (1.4.0.1):
+  - BN_TableViewCell (1.4.0.4):
     - BN_Category
     - BN_Globle
     - BN_Kit
     - BN_View
-  - BN_View (1.3.8.4):
+  - BN_View (1.3.8.7):
     - BN_Category
     - BN_Globle
     - BN_Kit
     - PPNumberButton
     - SDCycleScrollView
     - TZImagePickerController
-  - BN_ViewHeight (1.2.1.1):
+  - BN_ViewHeight (1.2.2):
     - BN_Category
     - BN_CollectionView
     - BN_Globle
@@ -77,7 +77,7 @@ PODS:
     - SDWebImage/Core (= 4.4.3)
   - SDWebImage/Core (4.4.3)
   - Toast (4.0.0)
-  - TZImagePickerController (3.1.7)
+  - TZImagePickerController (3.1.9)
   - UICKeyChainStore (2.1.2)
   - UMengAnalytics-NO-IDFA (4.2.5)
   - YBAttributeTextTapAction (3.0.3)
@@ -181,13 +181,13 @@ SPEC CHECKSUMS:
   AESCrypt-ObjC: 6d930ff891a61b90505855e9447959a84be80715
   AFNetworking: b6f891fdfaed196b46c7a83cf209e09697b94057
   Aspects: 7595ba96a6727a58ebcbfc954497fc5d2fdde546
-  BN_Category: 203ff8fc446c8b587278d652fee985b2c52a3390
-  BN_CollectionView: 5d3a3f80c1087ccc63c590e609f563fb79eca25f
-  BN_Globle: 435ff6f8be9ae7a109600e9bc97135d83d13ae31
-  BN_Kit: 91f883282176247b8580bd1d122e15e5ee8148fe
-  BN_TableViewCell: b5414d3fe35101a952f48a5fa21d70adc184afc8
-  BN_View: a7002ff922696df20a37165cc5cd5ddf94575318
-  BN_ViewHeight: cae42cfd0b778fa49796a7bf7889db9f0229e479
+  BN_Category: e5f722e601dc9a927040de8332476f08c40399aa
+  BN_CollectionView: cf73be3c184a3af70b9078497ee8df2f5124df5c
+  BN_Globle: d9f957d96e95cd00c9c089f3a0216f4086ba545e
+  BN_Kit: 5dc15cc671dea4aa5ad3687019cd0fc3b9fd861f
+  BN_TableViewCell: 193503eac35a751ff0985ddbd0a1437388cb3f48
+  BN_View: 12ede48e343b4ceb88ac01213f575edbf8cd7480
+  BN_ViewHeight: a780ee21e34dce6029781bce7ae01cef9c3401e3
   FCUUID: bb054fc90cd7cd99320f9f6ff8e130fe607fba05
   FLAnimatedImage: 4a0b56255d9b05f18b6dd7ee06871be5d3b89e31
   FMDB: 2ce00b547f966261cd18927a3ddb07cb6f3db82a
@@ -207,7 +207,7 @@ SPEC CHECKSUMS:
   SDCycleScrollView: 884b88f0266dd4708a0e1934975c69cb971707b1
   SDWebImage: c5594f1a19c48d526d321e548902b56b479cd508
   Toast: 91b396c56ee72a5790816f40d3a94dd357abc196
-  TZImagePickerController: 3027e1e2029c830186c6a167c88c933b8556fdc7
+  TZImagePickerController: c3f7c505d23281e21e98df6dbeae372946caa28f
   UICKeyChainStore: 85db518bb1d294366d15ec9b92a416c4e670518f
   UMengAnalytics-NO-IDFA: 16666e32edce5be44ae5b14aaaa7f3582e09d6ab
   YBAttributeTextTapAction: b7e61f0265b5673e7ce7bad7319e8eff9e209a2b
@@ -219,6 +219,6 @@ SPEC CHECKSUMS:
   YZPullDownMenu: afc60c3fc4f7caedd9556d32da43ea1718e078e0
   ZYCornerRadius: f0af817be7805b5c63d793042ca7a03f81e14069
 
-PODFILE CHECKSUM: 20f0d96b88b94e1b03c63f9bf40401e5e201f637
+PODFILE CHECKSUM: cb0dc1c133261da0726cf1c1669debf0f13e32d6
 
 COCOAPODS: 1.5.3

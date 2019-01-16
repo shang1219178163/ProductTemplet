@@ -673,7 +673,7 @@ NSString * NSStringFromPlacemark(CLPlacemark *placemark) {
 #pragma mark - layz
 - (MAMapView *)mapView{
     if (!_mapView) {
-        _mapView = [[MAMapView alloc] initWithFrame:CGRectMake(0, 0, kScreen_width, kScreen_height - kH_NaviagtionBar)];
+        _mapView = [[MAMapView alloc] initWithFrame:CGRectMake(0, 0, kScreenWidth, kScreenHeight - kH_NaviagtionBar)];
         _mapView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
         _mapView.desiredAccuracy = kCLLocationAccuracyHundredMeters;
         _mapView.distanceFilter = kCLLocationAccuracyKilometer;

@@ -37,7 +37,7 @@
 -(BN_BtnView *)btnView{
     if (!_btnView) {
         _btnView = ({
-            BN_BtnView * btnView = [[BN_BtnView alloc]initWithFrame:CGRectMake(10, 10, kScreen_width/4.0, 50)];
+            BN_BtnView * btnView = [[BN_BtnView alloc]initWithFrame:CGRectMake(10, 10, kScreenWidth/4.0, 50)];
             btnView.imageView.image = [UIImage imageNamed:@"img_arrowDown_orange.png"];
             btnView.label.text = @"测试数据";
             btnView.type = @3;
@@ -137,22 +137,22 @@
 - (void)configureTableView{
     [self.view addSubview:self.tableView];
     
-    self.tableView.sectionFooterHeight = kScreen_width;
+    self.tableView.sectionFooterHeight = kScreenWidth;
     //    self.tableView.sectionHeaderHeight = CGRectGetHeight(self.view.bounds) - self.tableView.sectionFooterHeight - self.tableView.rowHeight;
-    self.tableView.sectionHeaderHeight = kScreen_height - kH_StatusBar - kH_NaviagtionBar - kH_TabBar - self.tableView.sectionFooterHeight - self.tableView.rowHeight;
+    self.tableView.sectionHeaderHeight = kScreenHeight - kH_StatusBar - kH_NaviagtionBar - kH_TabBar - self.tableView.sectionFooterHeight - self.tableView.rowHeight;
     
 }
 
 - (UIView *)getViewWithHeight:(CGFloat)height isHeader:(BOOL)isHeader{
     
     NSInteger rowCount = 3;
-    CGSize viewSize = CGSizeMake(kScreen_width/rowCount, kScreen_width/rowCount);
+    CGSize viewSize = CGSizeMake(kScreenWidth/rowCount, kScreenWidth/rowCount);
     
-    UIView * backgroudView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, kScreen_width,  viewSize.height* self.elementList.count/rowCount)];
+    UIView * backgroudView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, kScreenWidth,  viewSize.height* self.elementList.count/rowCount)];
     backgroudView.backgroundColor = UIColor.whiteColor;
     
     if (isHeader) {
-        UIView * cycleView = [self createCycleViewRect:CGRectMake(0, 0, kScreen_width, height) imageNames:self.imageList];
+        UIView * cycleView = [self createCycleViewRect:CGRectMake(0, 0, kScreenWidth, height) imageNames:self.imageList];
         [backgroudView addSubview:cycleView];
         
     } else {
@@ -202,7 +202,7 @@
         
     };
     
-    BN_MenuView * menuView = [[BN_MenuView alloc]initWithFrame:CGRectMake(0, 0, kScreen_width, 0.0)];
+    BN_MenuView * menuView = [[BN_MenuView alloc]initWithFrame:CGRectMake(0, 0, kScreenWidth, 0.0)];
     menuView.dataList = menuList;
     menuView.block = ^(BN_MenuView *view, NSIndexPath *indexPath) {
         

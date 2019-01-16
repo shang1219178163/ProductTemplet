@@ -40,7 +40,7 @@
     [super viewWillAppear:animated];
     
     //
-    CGRect rect = CGRectMake(20, 20, kScreen_width - 20*2, 0);
+    CGRect rect = CGRectMake(20, 20, kScreenWidth - 20*2, 0);
     UIView * containView = [self createViewRect:rect elements:self.elementList numberOfRow:4 viewHeight:30 padding:15];
     containView.backgroundColor = UIColor.greenColor;
     [self.view addSubview:containView];
@@ -64,7 +64,7 @@
     }
     
     //
-    CGRect rectNew = CGRectMake(20, CGRectGetMidY(self.view.bounds), kScreen_width - 20*2, 0);
+    CGRect rectNew = CGRectMake(20, CGRectGetMidY(self.view.bounds), kScreenWidth - 20*2, 0);
 //    UIView * containViewNew = [self createViewWithRectNew:rectNew elements:self.elementList numberOfRow:2 viewHeight:30 padding:10];
 //    containViewNew.backgroundColor = UIColor.greenColor;
 //    [self.view addSubview:containViewNew];

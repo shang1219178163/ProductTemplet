@@ -108,7 +108,7 @@ static const NSInteger kRoutePaddingEdge = 20;
     [self.view insertSubview:self.containView atIndex:0];
 
 //    self.containView.frame = CGRectMake(0, 0, 300, 200);
-//    self.containView.frame = CGRectMake(0, 20, kScreen_width - 40, CGRectGetHeight(self.view.bounds) - 40);
+//    self.containView.frame = CGRectMake(0, 20, kScreenWidth - 40, CGRectGetHeight(self.view.bounds) - 40);
 //    self.mapView.frame = CGRectMake(0, 0, CGRectGetWidth(self.containView.frame), CGRectGetHeight(self.containView.frame));
 
 //    [self setupMapView];

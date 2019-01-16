@@ -27,8 +27,8 @@
     for (UIView *obj in _flowerList) {
         UIView *flowerView = obj;
         //设置花朵的显示位置和大小
-        CGFloat x = (arc4random()%(NSInteger)kScreen_width);
-        CGFloat y = (arc4random()%(NSInteger)kScreen_height);
+        CGFloat x = (arc4random()%(NSInteger)kScreenWidth);
+        CGFloat y = (arc4random()%(NSInteger)kScreenHeight);
         NSInteger minSize = 10;
         NSInteger maxSize = 50;
         CGFloat size = (arc4random() % (maxSize - minSize + 1)) + minSize;

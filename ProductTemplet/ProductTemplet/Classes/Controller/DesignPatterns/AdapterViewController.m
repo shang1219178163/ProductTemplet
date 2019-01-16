@@ -43,7 +43,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-    CGRect rect = CGRectMake(20, 20, kScreen_width - 20*2, 0);
+    CGRect rect = CGRectMake(20, 20, kScreenWidth - 20*2, 0);
     UIView * containView = [UIView createViewRect:rect items:self.itemList numberOfRow:4 itemHeight:30 padding:10 type:@0 handler:^(id obj, id item, NSInteger idx) {
         [self handleActionBtn:item];
         
@@ -53,7 +53,7 @@
     containView.backgroundColor = UIColor.orangeColor;
     [self.view addSubview:containView];
     
-    rect = CGRectMake((kScreen_width - 200)/2.0, CGRectGetMaxY(containView.frame)+20, 200, 30);
+    rect = CGRectMake((kScreenWidth - 200)/2.0, CGRectGetMaxY(containView.frame)+20, 200, 30);
     UILabel * label = [UIView createLabelRect:rect text:@"tips" textColor:nil tag:0 type:@0 font:16 backgroudColor:UIColor.greenColor alignment:NSTextAlignmentCenter];
     [self.view addSubview:label];
     self.lbState = label;
