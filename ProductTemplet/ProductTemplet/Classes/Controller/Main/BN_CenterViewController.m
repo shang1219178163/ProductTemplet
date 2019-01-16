@@ -194,6 +194,9 @@
                            @2   : @"222222222",
                            };
     DDLog(@"%@",dic[@2]);
+    DDLog(@"%@",NSStringFromCGRect(self.view.frame));
+
+    DDLog(@"_%.2f_%.2f_%.2f_%.2f_",self.view.originX,self.view.originY,self.view.sizeWidth,self.view.sizeHeight);
 }
 
 -(void)viewWillAppear:(BOOL)animated{
