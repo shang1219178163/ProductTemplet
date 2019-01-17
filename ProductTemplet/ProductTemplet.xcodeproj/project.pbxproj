@@ -12,6 +12,7 @@
 		1404FAE521DF4A5F00122E22 /* UIRecognizerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1404FAE421DF4A5F00122E22 /* UIRecognizerController.m */; };
 		1404FAF921E0A1BB00122E22 /* Skull.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1404FAF821E0A1BA00122E22 /* Skull.jpg */; };
 		144920AA21C7BAA700C3C2F6 /* MoneyDisplayController.m in Sources */ = {isa = PBXBuildFile; fileRef = 144920A921C7BAA700C3C2F6 /* MoneyDisplayController.m */; };
+		1460727A21F01F7F003AE810 /* UIAlertController+Helper.m in Sources */ = {isa = PBXBuildFile; fileRef = 1460727921F01F7F003AE810 /* UIAlertController+Helper.m */; };
 		147B971F21EF005B000F5294 /* UICollectionDisplayController.m in Sources */ = {isa = PBXBuildFile; fileRef = 147B971E21EF005B000F5294 /* UICollectionDisplayController.m */; };
 		14E793C421D62E0B003230C8 /* bug1.png in Resources */ = {isa = PBXBuildFile; fileRef = 14E793C321D62E0B003230C8 /* bug1.png */; };
 		14E8692D21C251BA009CE33E /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 14E8692C21C251BA009CE33E /* HomeViewController.m */; };
@@ -372,6 +373,8 @@
 		1404FAF821E0A1BA00122E22 /* Skull.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Skull.jpg; sourceTree = "<group>"; };
 		144920A821C7BAA700C3C2F6 /* MoneyDisplayController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MoneyDisplayController.h; sourceTree = "<group>"; };
 		144920A921C7BAA700C3C2F6 /* MoneyDisplayController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MoneyDisplayController.m; sourceTree = "<group>"; };
+		1460727821F01F7F003AE810 /* UIAlertController+Helper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIAlertController+Helper.h"; sourceTree = "<group>"; };
+		1460727921F01F7F003AE810 /* UIAlertController+Helper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIAlertController+Helper.m"; sourceTree = "<group>"; };
 		147B971D21EF005B000F5294 /* UICollectionDisplayController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UICollectionDisplayController.h; sourceTree = "<group>"; };
 		147B971E21EF005B000F5294 /* UICollectionDisplayController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UICollectionDisplayController.m; sourceTree = "<group>"; };
 		14E793C321D62E0B003230C8 /* bug1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bug1.png; sourceTree = "<group>"; };
@@ -1166,6 +1169,8 @@
 				5186F1C021A3A43900663707 /* BNImageView.m */,
 				1404FADD21DF45AE00122E22 /* UIScreenEdgePanView.h */,
 				1404FADE21DF45AE00122E22 /* UIScreenEdgePanView.m */,
+				1460727821F01F7F003AE810 /* UIAlertController+Helper.h */,
+				1460727921F01F7F003AE810 /* UIAlertController+Helper.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -2337,6 +2342,7 @@
 				515CC85F20B69DFC004AE27C /* BN_UserPwdChangeController.m in Sources */,
 				513647C1208604DE005A20E7 /* HZWaitingView.m in Sources */,
 				51862E7A20BBA1B50080BD4E /* StrategyFinancyAlipay.m in Sources */,
+				1460727A21F01F7F003AE810 /* UIAlertController+Helper.m in Sources */,
 				513647BD208604DE005A20E7 /* HZPhotoBrowser.m in Sources */,
 				518CD32D219D78B6003CE348 /* BNActionSheet.m in Sources */,
 				5162F6F720BF9604009A6253 /* ThreadCommunicationController.m in Sources */,

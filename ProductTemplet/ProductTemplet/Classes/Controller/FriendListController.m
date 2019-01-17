@@ -27,7 +27,6 @@
 }
 
 -(void)initDataSource{
-    
     //操作记录
     NSArray * array = @[@"分组0",@"分组1",@"分组2",@"分组3",@"分组4",@"分组5",@"分组6",@"分组7",@"分组8",@"分组9"];
     for (NSInteger i = 0; i < array.count; i++) {
