@@ -14,7 +14,7 @@
 		144920AA21C7BAA700C3C2F6 /* MoneyDisplayController.m in Sources */ = {isa = PBXBuildFile; fileRef = 144920A921C7BAA700C3C2F6 /* MoneyDisplayController.m */; };
 		1460727A21F01F7F003AE810 /* UIAlertController+Helper.m in Sources */ = {isa = PBXBuildFile; fileRef = 1460727921F01F7F003AE810 /* UIAlertController+Helper.m */; };
 		147B971F21EF005B000F5294 /* UICollectionDisplayController.m in Sources */ = {isa = PBXBuildFile; fileRef = 147B971E21EF005B000F5294 /* UICollectionDisplayController.m */; };
-		14E793C421D62E0B003230C8 /* bug1.png in Resources */ = {isa = PBXBuildFile; fileRef = 14E793C321D62E0B003230C8 /* bug1.png */; };
+		14E793C421D62E0B003230C8 /* bug.png in Resources */ = {isa = PBXBuildFile; fileRef = 14E793C321D62E0B003230C8 /* bug.png */; };
 		14E8692D21C251BA009CE33E /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 14E8692C21C251BA009CE33E /* HomeViewController.m */; };
 		51036F4720A16298009D8B7B /* img_notice.png in Resources */ = {isa = PBXBuildFile; fileRef = 51036F4620A16297009D8B7B /* img_notice.png */; };
 		51036F5020A17B3B009D8B7B /* WeiboLisController.m in Sources */ = {isa = PBXBuildFile; fileRef = 51036F4F20A17B3B009D8B7B /* WeiboLisController.m */; };
@@ -377,7 +377,7 @@
 		1460727921F01F7F003AE810 /* UIAlertController+Helper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIAlertController+Helper.m"; sourceTree = "<group>"; };
 		147B971D21EF005B000F5294 /* UICollectionDisplayController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UICollectionDisplayController.h; sourceTree = "<group>"; };
 		147B971E21EF005B000F5294 /* UICollectionDisplayController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UICollectionDisplayController.m; sourceTree = "<group>"; };
-		14E793C321D62E0B003230C8 /* bug1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bug1.png; sourceTree = "<group>"; };
+		14E793C321D62E0B003230C8 /* bug.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bug.png; sourceTree = "<group>"; };
 		14E8692B21C251BA009CE33E /* HomeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
 		14E8692C21C251BA009CE33E /* HomeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
 		48DCCC545F7DD72A25BB7579 /* Pods-ProductTemplet.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ProductTemplet.release.xcconfig"; path = "Pods/Target Support Files/Pods-ProductTemplet/Pods-ProductTemplet.release.xcconfig"; sourceTree = "<group>"; };
@@ -1015,7 +1015,7 @@
 				5169DF232088254300B025C3 /* Public.xcassets */,
 				5136492420860655005A20E7 /* Resources */,
 				513646AD2086031D005A20E7 /* Info.plist */,
-				14E793C321D62E0B003230C8 /* bug1.png */,
+				14E793C321D62E0B003230C8 /* bug.png */,
 				1404FAF821E0A1BA00122E22 /* Skull.jpg */,
 				513646AE2086031D005A20E7 /* main.m */,
 				513649E320860683005A20E7 /* PrefixHeader.pch */,
@@ -2094,7 +2094,7 @@
 				513649D720860655005A20E7 /* img_scan.png in Resources */,
 				513649A520860655005A20E7 /* img_feed_H.png in Resources */,
 				513649CC20860655005A20E7 /* img_PregnancyTest_H.png in Resources */,
-				14E793C421D62E0B003230C8 /* bug1.png in Resources */,
+				14E793C421D62E0B003230C8 /* bug.png in Resources */,
 				513649B520860655005A20E7 /* img_home_immunization_147.png in Resources */,
 				515C67DE2137C55700D5EA94 /* cities.plist in Resources */,
 				513649AE20860655005A20E7 /* img_home_animamalSell_98.png in Resources */,

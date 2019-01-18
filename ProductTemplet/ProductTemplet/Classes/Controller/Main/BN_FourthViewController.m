@@ -139,7 +139,7 @@
     if (!_imgView) {
         _imgView = ({
             UIImageView *view = [[UIImageView alloc]initWithFrame:CGRectMake(20, 20, 100, 100)];
-            view.image = [UIImage imageNamed:@"bug1"];
+            view.image = [UIImage imageNamed:@"bug.png"];
             view;
         });
     }
