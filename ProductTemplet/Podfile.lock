@@ -16,7 +16,7 @@ PODS:
   - AFNetworking/UIKit (3.2.1):
     - AFNetworking/NSURLSession
   - Aspects (1.4.1)
-  - BN_Category (1.8.5.2):
+  - BN_Category (1.8.5.4):
     - AESCrypt-ObjC
     - BN_Globle
     - BN_Kit
@@ -181,7 +181,7 @@ SPEC CHECKSUMS:
   AESCrypt-ObjC: 6d930ff891a61b90505855e9447959a84be80715
   AFNetworking: b6f891fdfaed196b46c7a83cf209e09697b94057
   Aspects: 7595ba96a6727a58ebcbfc954497fc5d2fdde546
-  BN_Category: e47a4f9cec0decea38c66a1b9b39b8b52066cde2
+  BN_Category: 51ba123fe7ec9113322db0e7e5662ae172c89577
   BN_CollectionView: cf73be3c184a3af70b9078497ee8df2f5124df5c
   BN_Globle: d9f957d96e95cd00c9c089f3a0216f4086ba545e
   BN_Kit: 5dc15cc671dea4aa5ad3687019cd0fc3b9fd861f

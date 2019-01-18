@@ -241,8 +241,9 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     NSArray * list = self.dataList[indexPath.row];
-    [self goController:list.lastObject title:list.firstObject];
-    
+//    [self goController:list.lastObject title:list.firstObject];
+    UITableViewCell * cell = [tableView cellForRowAtIndexPath:indexPath];
+    [self pushController:list.lastObject item:cell type:@0];
 }
 
 //-(NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section{

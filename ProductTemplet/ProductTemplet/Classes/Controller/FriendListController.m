@@ -107,6 +107,7 @@
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     
     NSString * msg = NSStringFromIndexPath(indexPath);
+    [self goController:@"BN_TempViewController" title:@"tmp"];
     
 }
 
