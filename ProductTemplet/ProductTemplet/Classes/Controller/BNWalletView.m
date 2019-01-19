@@ -13,6 +13,8 @@
 @property (nonatomic, strong) NSMutableArray *itemList;
 @property (nonatomic, assign) CGPoint origin;
 
+@property (nonatomic, assign) NSTimeInterval duration;
+
 @end
 
 @implementation BNWalletView
@@ -22,6 +24,7 @@
     if (self) {
         _padding = 20;
         _numberOfRow = 3;
+        _duration = 0.05;
         
         for (NSInteger i = 0; i < 3; i++) {
             UIView * view = [[NSClassFromString(@"UILabel") alloc]init];
@@ -51,16 +54,12 @@
     
     switch (self.type.integerValue) {
         case 1:
-        {
             [self setupConstraintDefault];
 
-        }
             break;
         case 2:
-        {
             [self setupConstraintReverse];
 
-        }
             break;
         default:
             [self setupConstraintFromBottom];
@@ -75,8 +74,8 @@
         if (idx == 0) {
             obj.frame = CGRectMake(_padding*(_itemList.count - 1), _padding*(_itemList.count - 1), width, height);
         }
-        [UIView animateWithDuration:0.5 animations:^{
-            //            obj.frame = CGRectMake(_padding*idx, _padding*idx, width, height);
+        [UIView animateWithDuration:_duration animations:^{
+//            obj.frame = CGRectMake(_padding*idx, _padding*idx, width, height);
             obj.frame = CGRectMake(_padding*(_itemList.count - 1 - idx), _padding*(_itemList.count - 1 - idx), width + _padding*idx*2, height);
             
         }];
@@ -90,7 +89,7 @@
         if (idx == 0) {
             obj.frame = CGRectMake(_padding*(_itemList.count - 1), _padding*(_itemList.count - 1), width, height);
         }
-        [UIView animateWithDuration:0.5 animations:^{
+        [UIView animateWithDuration:_duration animations:^{
             obj.frame = CGRectMake(_padding*(_itemList.count - 1 - idx), _padding*(_itemList.count - 1 - idx), width, height);
 
         }];
@@ -104,7 +103,7 @@
         if (idx == 0) {
             obj.frame = CGRectMake(0, 0, width, height);
         }
-        [UIView animateWithDuration:0.5 animations:^{
+        [UIView animateWithDuration:_duration animations:^{
             obj.frame = CGRectMake(_padding*idx, _padding*idx, width, height);
 
         }];
@@ -135,8 +134,8 @@
             case UIGestureRecognizerStateEnded:
             case UIGestureRecognizerStateCancelled:
             {
-               
-                if (sender.view.center.x > CGRectGetMinX(recognizer.view.superview.frame) && sender.view.center.x < CGRectGetMaxX(recognizer.view.superview.frame)) {
+//                if (sender.view.center.x > CGRectGetMinX(recognizer.view.superview.frame) && sender.view.center.x < CGRectGetMaxX(recognizer.view.superview.frame)) {
+                if (fabs(sender.view.center.x - CGRectGetMidX(recognizer.view.superview.frame)) < 50) {
                     [UIView animateWithDuration:0.5 animations:^{
                         sender.view.center = self.origin;
                         

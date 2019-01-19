@@ -44,7 +44,6 @@
 
     self.walletView.frame = CGRectMake(20, 20, kScreenWidth - 40, kScreenWidth - 40);
     [self.view addSubview: self.walletView];
-    self.walletView.type = @2;
     [self.view getViewLayer];
 }
 
@@ -63,6 +62,7 @@
 - (BNWalletView *)walletView{
     if (!_walletView) {
         _walletView = [[BNWalletView alloc]initWithFrame:CGRectZero];
+//        _walletView.type = @2;
         _walletView.block = ^(BNWalletView * _Nonnull walletView, UIView * _Nonnull view) {
             DDLog(@"_%@",@(view.tag));
         };
