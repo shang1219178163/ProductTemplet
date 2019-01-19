@@ -11,6 +11,9 @@
 		1404FADF21DF45AE00122E22 /* UIScreenEdgePanView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1404FADE21DF45AE00122E22 /* UIScreenEdgePanView.m */; };
 		1404FAE521DF4A5F00122E22 /* UIRecognizerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1404FAE421DF4A5F00122E22 /* UIRecognizerController.m */; };
 		1404FAF921E0A1BB00122E22 /* Skull.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1404FAF821E0A1BA00122E22 /* Skull.jpg */; };
+		1421D5CA21F3040400635582 /* BNItemsView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1421D5C921F3040400635582 /* BNItemsView.m */; };
+		1421D5CD21F307F700635582 /* CustomViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1421D5CC21F307F700635582 /* CustomViewController.m */; };
+		1421D5D021F3177700635582 /* BNWalletView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1421D5CF21F3177700635582 /* BNWalletView.m */; };
 		144920AA21C7BAA700C3C2F6 /* MoneyDisplayController.m in Sources */ = {isa = PBXBuildFile; fileRef = 144920A921C7BAA700C3C2F6 /* MoneyDisplayController.m */; };
 		1460727A21F01F7F003AE810 /* UIAlertController+Helper.m in Sources */ = {isa = PBXBuildFile; fileRef = 1460727921F01F7F003AE810 /* UIAlertController+Helper.m */; };
 		147B971F21EF005B000F5294 /* UICollectionDisplayController.m in Sources */ = {isa = PBXBuildFile; fileRef = 147B971E21EF005B000F5294 /* UICollectionDisplayController.m */; };
@@ -371,6 +374,12 @@
 		1404FAE321DF4A5F00122E22 /* UIRecognizerController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UIRecognizerController.h; sourceTree = "<group>"; };
 		1404FAE421DF4A5F00122E22 /* UIRecognizerController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UIRecognizerController.m; sourceTree = "<group>"; };
 		1404FAF821E0A1BA00122E22 /* Skull.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Skull.jpg; sourceTree = "<group>"; };
+		1421D5C821F3040400635582 /* BNItemsView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BNItemsView.h; sourceTree = "<group>"; };
+		1421D5C921F3040400635582 /* BNItemsView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BNItemsView.m; sourceTree = "<group>"; };
+		1421D5CB21F307F700635582 /* CustomViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CustomViewController.h; sourceTree = "<group>"; };
+		1421D5CC21F307F700635582 /* CustomViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CustomViewController.m; sourceTree = "<group>"; };
+		1421D5CE21F3177700635582 /* BNWalletView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BNWalletView.h; sourceTree = "<group>"; };
+		1421D5CF21F3177700635582 /* BNWalletView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BNWalletView.m; sourceTree = "<group>"; };
 		144920A821C7BAA700C3C2F6 /* MoneyDisplayController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MoneyDisplayController.h; sourceTree = "<group>"; };
 		144920A921C7BAA700C3C2F6 /* MoneyDisplayController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MoneyDisplayController.m; sourceTree = "<group>"; };
 		1460727821F01F7F003AE810 /* UIAlertController+Helper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIAlertController+Helper.h"; sourceTree = "<group>"; };
@@ -1169,6 +1178,12 @@
 				5186F1C021A3A43900663707 /* BNImageView.m */,
 				1404FADD21DF45AE00122E22 /* UIScreenEdgePanView.h */,
 				1404FADE21DF45AE00122E22 /* UIScreenEdgePanView.m */,
+				1421D5C821F3040400635582 /* BNItemsView.h */,
+				1421D5C921F3040400635582 /* BNItemsView.m */,
+				1421D5CE21F3177700635582 /* BNWalletView.h */,
+				1421D5CF21F3177700635582 /* BNWalletView.m */,
+				1421D5CB21F307F700635582 /* CustomViewController.h */,
+				1421D5CC21F307F700635582 /* CustomViewController.m */,
 				1460727821F01F7F003AE810 /* UIAlertController+Helper.h */,
 				1460727921F01F7F003AE810 /* UIAlertController+Helper.m */,
 			);
@@ -2436,6 +2451,7 @@
 				51258C1E215E3969009CDEE3 /* BN_AccountTool.m in Sources */,
 				513647C8208604DE005A20E7 /* LocationShareModel.m in Sources */,
 				515CC97420B6AAF2004AE27C /* AAPlotOptions.m in Sources */,
+				1421D5CA21F3040400635582 /* BNItemsView.m in Sources */,
 				516969AC20BCF9A800BAA53D /* AbstractMediator.m in Sources */,
 				51862E7620BBA1110080BD4E /* StrategyFinancyYouLi.m in Sources */,
 				515CC98A20B6AAF2004AE27C /* AAChartModel.m in Sources */,
@@ -2457,6 +2473,7 @@
 				515CC86020B69DFC004AE27C /* BN_UserLoginController.m in Sources */,
 				144920AA21C7BAA700C3C2F6 /* MoneyDisplayController.m in Sources */,
 				515CC98020B6AAF2004AE27C /* AATitle.m in Sources */,
+				1421D5D021F3177700635582 /* BNWalletView.m in Sources */,
 				515CC97E20B6AAF2004AE27C /* AAStyle.m in Sources */,
 				510BC99B208F2F0400CF48C5 /* FriendListController.m in Sources */,
 				51698C4321376F9E0069C2B2 /* AddressPickerDemo.m in Sources */,
@@ -2504,6 +2521,7 @@
 				5175C93920C13DE1009EA86E /* Student.m in Sources */,
 				513646B720860332005A20E7 /* MainViewController.m in Sources */,
 				5169699B20BCED4000BAA53D /* LHService.m in Sources */,
+				1421D5CD21F307F700635582 /* CustomViewController.m in Sources */,
 				515D9D842150F77900318A4D /* BN_EmitterView.m in Sources */,
 				518B5B432086C8FE002FDD33 /* FactoryDetailInfoModel.m in Sources */,
 				5162F70720BF9D6E009A6253 /* FlyweightView.m in Sources */,

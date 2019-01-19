@@ -105,6 +105,7 @@
     self.segmentView.layer.borderColor = UIColor.blueColor.CGColor;
     
 //    [self.view getViewLayer];
+    
 }
 
 -(void)viewWillAppear:(BOOL)animated{
@@ -126,6 +127,13 @@
     DDLog(@"%.2f,%.2f,%.2f,%.2f,",imgView.minY,imgView.minX,imgView.maxY,imgView.maxX);
 
     [self.view getViewLayer];
+}
+
+-(void)viewDidAppear:(BOOL)animated{
+    [super viewDidAppear:animated];
+    
+    [self goController:@"CustomViewController" title:@"Custom"];
+
 }
 
 - (void)didReceiveMemoryWarning {

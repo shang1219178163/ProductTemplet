@@ -126,6 +126,11 @@
                           
                           ],
                       @[
+                          @"View自定义",@"CustomViewController",
+                          
+                          ],
+                      
+                      @[
                           @"UICollectionView",@"UICollectionDisplayController",
                           
                           ],                      
