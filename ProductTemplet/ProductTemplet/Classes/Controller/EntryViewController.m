@@ -52,11 +52,10 @@
 //    UISwitch *view = [UIView createSwitchRect:CGRectMake(0, 0, 80, 30) isOn:YES];
     UIButton * view = [UIButton buttonWithType:UIButtonTypeCustom];
     view.frame = CGRectMake(0, 0, 80, 30);
-    [view setTitle:@"button" forState:UIControlStateNormal];
+    [view setTitle:@"BTN" forState:UIControlStateNormal];
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc]initWithCustomView:view];
 
     [view addActionHandler:^(id obj, id item, NSInteger idx) {
-       
         DDLog(@"%@",item);
     }];
 }

@@ -37,7 +37,7 @@
 
 - (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section{
     id fontDict = self.fontList[section];
-    return fontDict[@"name"];
+    return [@"   " stringByAppendingString:fontDict[@"name"]];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{

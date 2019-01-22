@@ -132,7 +132,7 @@
 -(void)viewDidAppear:(BOOL)animated{
     [super viewDidAppear:animated];
     
-    [self goController:@"CustomViewController" title:@"Custom"];
+//    [self goController:@"CustomViewController" title:@"Custom"];
 
 }
 

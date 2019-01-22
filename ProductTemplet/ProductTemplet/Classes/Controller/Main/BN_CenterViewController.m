@@ -102,92 +102,78 @@
 
     self.dataList = @[
                       @[
+                          @"字符串映射研究",@"RuntimeController",
+                          ],
+                      @[
+                          @"iOS字体大全",@"FontListController",
+                          ],
+                      @[
                           @"FMDB",@"FMBDViewController",
-
                           ],
                       @[
                           @"iOS锁性能对比",@"LockCompareController",
-                          
                           ],
                       @[
                           @"DesignPatterns",@"DesignPatternsController",
-                          
                           ],
                       @[
                           @"Multithreading",@"MultithreadingViewController",
-                          
                           ],
                       @[
                           @"block循环引用完美解决方案",@"BlockViewController",
+                          ],
+                      @[
+                          @"通用列表类展示封装",@"ShowListController",
                           
                           ],
                       @[
                           @"录入类界面封装",@"EntryViewController",
-                          
                           ],
                       @[
                           @"View自定义",@"CustomViewController",
-                          
                           ],
-                      
                       @[
                           @"UICollectionView",@"UICollectionDisplayController",
-                          
-                          ],                      
+                          ],
                       @[
                           @"Sort",@"SortViewController",
-                          
                           ],
                       @[
                           @"(不同线程)广播重定向",@"NotificationTreadController",
-                          
                           ],
                       @[
                           @"定时器列表",@"CountDownListController",
-                          
                           ],
                       @[
                           @"UIViewPropertyAnimator(iOS10)",@"UIViewPropertyAnimatorController",
-                          
                           ],
                       @[
                           @"SugerAlert",@"SugerAlertController",
-                          
                           ],
                       @[
                           @"同一界面多网络请求",@"MutiRequestController",
-                          
                           ],
                       @[
                           @"NSNumberFormatter",@"NumberViewController",
-                          
                           ],
                       @[
                           @"UITextField",@"UITextFieldController",
-                          
                           ],
                       @[
                           @"UITextView",@"TextViewController",
-                          
                           ],
-                      @[
-                          @"FriendList",@"FriendListController",
-                          
-                          ],
-                      @[
-                          @"FontList",@"FontListController",
-                          
-                          ],
+//                      @[
+//                          @"FriendList",@"FriendListController",
+//                          ],
                       @[
                           @"金额跳动",@"MoneyDisplayController",
-                          
                           ],
                       
                       @[
                           @"Test",@"TestViewController",
                           
                           ],
-                 
+         
                       ].mutableCopy;
     
     NSLog(@"%@",NSDate.date);
@@ -211,9 +197,7 @@
 
 - (void)configureTableView{
     self.tableView.backgroundColor = UIColor.whiteColor;
-    [self.view addSubview:self.tableView];
-    
-    
+    [self.view addSubview:self.tableView];    
 }
 
 #pragma mark - -UITableView

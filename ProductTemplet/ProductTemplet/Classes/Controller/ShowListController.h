@@ -1,5 +1,5 @@
 //
-//  TableViewListController.h
+//  ShowListController.h
 //  ProductTemplet
 //
 //  Created by BIN on 2018/11/20.
@@ -10,7 +10,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface TableViewListController : UIViewController
+@interface ShowListController : UIViewController
 
 @end
 

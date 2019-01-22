@@ -8,17 +8,16 @@
 
 /* Begin PBXBuildFile section */
 		1404FADC21DF40D700122E22 /* RecognizerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1404FADB21DF40D700122E22 /* RecognizerController.m */; };
-		1404FADF21DF45AE00122E22 /* UIScreenEdgePanView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1404FADE21DF45AE00122E22 /* UIScreenEdgePanView.m */; };
 		1404FAE521DF4A5F00122E22 /* UIRecognizerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1404FAE421DF4A5F00122E22 /* UIRecognizerController.m */; };
 		1404FAF921E0A1BB00122E22 /* Skull.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1404FAF821E0A1BA00122E22 /* Skull.jpg */; };
 		1421D5CA21F3040400635582 /* BNItemsView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1421D5C921F3040400635582 /* BNItemsView.m */; };
 		1421D5CD21F307F700635582 /* CustomViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1421D5CC21F307F700635582 /* CustomViewController.m */; };
 		1421D5D021F3177700635582 /* BNWalletView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1421D5CF21F3177700635582 /* BNWalletView.m */; };
 		144920AA21C7BAA700C3C2F6 /* MoneyDisplayController.m in Sources */ = {isa = PBXBuildFile; fileRef = 144920A921C7BAA700C3C2F6 /* MoneyDisplayController.m */; };
-		1460727A21F01F7F003AE810 /* UIAlertController+Helper.m in Sources */ = {isa = PBXBuildFile; fileRef = 1460727921F01F7F003AE810 /* UIAlertController+Helper.m */; };
 		147B971F21EF005B000F5294 /* UICollectionDisplayController.m in Sources */ = {isa = PBXBuildFile; fileRef = 147B971E21EF005B000F5294 /* UICollectionDisplayController.m */; };
 		14E793C421D62E0B003230C8 /* bug.png in Resources */ = {isa = PBXBuildFile; fileRef = 14E793C321D62E0B003230C8 /* bug.png */; };
 		14E8692D21C251BA009CE33E /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 14E8692C21C251BA009CE33E /* HomeViewController.m */; };
+		14E8F74F21F5E1ED004317B5 /* RuntimeController.m in Sources */ = {isa = PBXBuildFile; fileRef = 14E8F74E21F5E1ED004317B5 /* RuntimeController.m */; };
 		51036F4720A16298009D8B7B /* img_notice.png in Resources */ = {isa = PBXBuildFile; fileRef = 51036F4620A16297009D8B7B /* img_notice.png */; };
 		51036F5020A17B3B009D8B7B /* WeiboLisController.m in Sources */ = {isa = PBXBuildFile; fileRef = 51036F4F20A17B3B009D8B7B /* WeiboLisController.m */; };
 		510BC99B208F2F0400CF48C5 /* FriendListController.m in Sources */ = {isa = PBXBuildFile; fileRef = 510BC99A208F2F0400CF48C5 /* FriendListController.m */; };
@@ -295,7 +294,7 @@
 		51862E9220BBB1D50080BD4E /* AVPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 51862E8F20BBB1D50080BD4E /* AVPlayer.m */; };
 		51862E9520BBB2150080BD4E /* AdapterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 51862E9420BBB2150080BD4E /* AdapterViewController.m */; };
 		5186F1C121A3A43900663707 /* BNImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5186F1C021A3A43900663707 /* BNImageView.m */; };
-		5186F1C421A3A95500663707 /* TableViewListController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5186F1C321A3A95500663707 /* TableViewListController.m */; };
+		5186F1C421A3A95500663707 /* ShowListController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5186F1C321A3A95500663707 /* ShowListController.m */; };
 		51894117209BF1A200A687E1 /* BN_LearnMasonryController.m in Sources */ = {isa = PBXBuildFile; fileRef = 51894116209BF1A100A687E1 /* BN_LearnMasonryController.m */; };
 		51894140209C27E000A687E1 /* TestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5189413F209C27E000A687E1 /* TestViewController.m */; };
 		518B5B2E2086C414002FDD33 /* MOBFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 518B5B022086C413002FDD33 /* MOBFoundation.framework */; };
@@ -369,8 +368,6 @@
 /* Begin PBXFileReference section */
 		1404FADA21DF40D700122E22 /* RecognizerController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RecognizerController.h; sourceTree = "<group>"; };
 		1404FADB21DF40D700122E22 /* RecognizerController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RecognizerController.m; sourceTree = "<group>"; };
-		1404FADD21DF45AE00122E22 /* UIScreenEdgePanView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UIScreenEdgePanView.h; sourceTree = "<group>"; };
-		1404FADE21DF45AE00122E22 /* UIScreenEdgePanView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UIScreenEdgePanView.m; sourceTree = "<group>"; };
 		1404FAE321DF4A5F00122E22 /* UIRecognizerController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UIRecognizerController.h; sourceTree = "<group>"; };
 		1404FAE421DF4A5F00122E22 /* UIRecognizerController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UIRecognizerController.m; sourceTree = "<group>"; };
 		1404FAF821E0A1BA00122E22 /* Skull.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Skull.jpg; sourceTree = "<group>"; };
@@ -382,13 +379,13 @@
 		1421D5CF21F3177700635582 /* BNWalletView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BNWalletView.m; sourceTree = "<group>"; };
 		144920A821C7BAA700C3C2F6 /* MoneyDisplayController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MoneyDisplayController.h; sourceTree = "<group>"; };
 		144920A921C7BAA700C3C2F6 /* MoneyDisplayController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MoneyDisplayController.m; sourceTree = "<group>"; };
-		1460727821F01F7F003AE810 /* UIAlertController+Helper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIAlertController+Helper.h"; sourceTree = "<group>"; };
-		1460727921F01F7F003AE810 /* UIAlertController+Helper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIAlertController+Helper.m"; sourceTree = "<group>"; };
 		147B971D21EF005B000F5294 /* UICollectionDisplayController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UICollectionDisplayController.h; sourceTree = "<group>"; };
 		147B971E21EF005B000F5294 /* UICollectionDisplayController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UICollectionDisplayController.m; sourceTree = "<group>"; };
 		14E793C321D62E0B003230C8 /* bug.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bug.png; sourceTree = "<group>"; };
 		14E8692B21C251BA009CE33E /* HomeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
 		14E8692C21C251BA009CE33E /* HomeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
+		14E8F74D21F5E1EC004317B5 /* RuntimeController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RuntimeController.h; sourceTree = "<group>"; };
+		14E8F74E21F5E1ED004317B5 /* RuntimeController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RuntimeController.m; sourceTree = "<group>"; };
 		48DCCC545F7DD72A25BB7579 /* Pods-ProductTemplet.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ProductTemplet.release.xcconfig"; path = "Pods/Target Support Files/Pods-ProductTemplet/Pods-ProductTemplet.release.xcconfig"; sourceTree = "<group>"; };
 		51036F4620A16297009D8B7B /* img_notice.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = img_notice.png; sourceTree = "<group>"; };
 		51036F4E20A17B3B009D8B7B /* WeiboLisController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WeiboLisController.h; sourceTree = "<group>"; };
@@ -837,8 +834,8 @@
 		51862E9420BBB2150080BD4E /* AdapterViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AdapterViewController.m; sourceTree = "<group>"; };
 		5186F1BF21A3A43900663707 /* BNImageView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BNImageView.h; sourceTree = "<group>"; };
 		5186F1C021A3A43900663707 /* BNImageView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BNImageView.m; sourceTree = "<group>"; };
-		5186F1C221A3A95500663707 /* TableViewListController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TableViewListController.h; sourceTree = "<group>"; };
-		5186F1C321A3A95500663707 /* TableViewListController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TableViewListController.m; sourceTree = "<group>"; };
+		5186F1C221A3A95500663707 /* ShowListController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ShowListController.h; sourceTree = "<group>"; };
+		5186F1C321A3A95500663707 /* ShowListController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ShowListController.m; sourceTree = "<group>"; };
 		51894115209BF1A100A687E1 /* BN_LearnMasonryController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BN_LearnMasonryController.h; sourceTree = "<group>"; };
 		51894116209BF1A100A687E1 /* BN_LearnMasonryController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BN_LearnMasonryController.m; sourceTree = "<group>"; };
 		5189413E209C27E000A687E1 /* TestViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestViewController.h; sourceTree = "<group>"; };
@@ -1156,8 +1153,8 @@
 				518CD32B219D78B5003CE348 /* BNActionSheet.m */,
 				5185FDDA21A248E900FFA730 /* MutiRequestController.h */,
 				5185FDDB21A248E900FFA730 /* MutiRequestController.m */,
-				5186F1C221A3A95500663707 /* TableViewListController.h */,
-				5186F1C321A3A95500663707 /* TableViewListController.m */,
+				5186F1C221A3A95500663707 /* ShowListController.h */,
+				5186F1C321A3A95500663707 /* ShowListController.m */,
 				5168C8E321A6401F00850687 /* NumberViewController.h */,
 				5168C8E421A6401F00850687 /* NumberViewController.m */,
 				5167E22D21A7AA7D006650F3 /* UITextFieldController.h */,
@@ -1176,16 +1173,14 @@
 				147B971E21EF005B000F5294 /* UICollectionDisplayController.m */,
 				5186F1BF21A3A43900663707 /* BNImageView.h */,
 				5186F1C021A3A43900663707 /* BNImageView.m */,
-				1404FADD21DF45AE00122E22 /* UIScreenEdgePanView.h */,
-				1404FADE21DF45AE00122E22 /* UIScreenEdgePanView.m */,
 				1421D5C821F3040400635582 /* BNItemsView.h */,
 				1421D5C921F3040400635582 /* BNItemsView.m */,
 				1421D5CE21F3177700635582 /* BNWalletView.h */,
 				1421D5CF21F3177700635582 /* BNWalletView.m */,
 				1421D5CB21F307F700635582 /* CustomViewController.h */,
 				1421D5CC21F307F700635582 /* CustomViewController.m */,
-				1460727821F01F7F003AE810 /* UIAlertController+Helper.h */,
-				1460727921F01F7F003AE810 /* UIAlertController+Helper.m */,
+				14E8F74D21F5E1EC004317B5 /* RuntimeController.h */,
+				14E8F74E21F5E1ED004317B5 /* RuntimeController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -2343,6 +2338,7 @@
 				517D8B1F20B2C4C100DCA731 /* DBManager.m in Sources */,
 				515CC98520B6AAF2004AE27C /* AASpline.m in Sources */,
 				51862E9020BBB1D50080BD4E /* PlayerAdapter.m in Sources */,
+				14E8F74F21F5E1ED004317B5 /* RuntimeController.m in Sources */,
 				51894140209C27E000A687E1 /* TestViewController.m in Sources */,
 				515CC98B20B6AAF2004AE27C /* AAOptions.m in Sources */,
 				515CC97320B6AAF2004AE27C /* AAXAxis.m in Sources */,
@@ -2357,7 +2353,6 @@
 				515CC85F20B69DFC004AE27C /* BN_UserPwdChangeController.m in Sources */,
 				513647C1208604DE005A20E7 /* HZWaitingView.m in Sources */,
 				51862E7A20BBA1B50080BD4E /* StrategyFinancyAlipay.m in Sources */,
-				1460727A21F01F7F003AE810 /* UIAlertController+Helper.m in Sources */,
 				513647BD208604DE005A20E7 /* HZPhotoBrowser.m in Sources */,
 				518CD32D219D78B6003CE348 /* BNActionSheet.m in Sources */,
 				5162F6F720BF9604009A6253 /* ThreadCommunicationController.m in Sources */,
@@ -2413,7 +2408,7 @@
 				51862E7020BB9E810080BD4E /* StrategyViewController.m in Sources */,
 				51A4A00C2182E1AB00BA9923 /* BlockViewController.m in Sources */,
 				515CC97020B6AAF2004AE27C /* AAAreaspline.m in Sources */,
-				5186F1C421A3A95500663707 /* TableViewListController.m in Sources */,
+				5186F1C421A3A95500663707 /* ShowListController.m in Sources */,
 				51698C842137C0440069C2B2 /* WHKRequestHelper.m in Sources */,
 				5169DF0D208822B200B025C3 /* BN_FourthViewController.m in Sources */,
 				516F8562215DF8F5008E62B3 /* SuspendButton.m in Sources */,
@@ -2505,7 +2500,6 @@
 				51364C9D20860822005A20E7 /* PictureController.m in Sources */,
 				5169DF212088235900B025C3 /* BN_GeocodeAnnotation.m in Sources */,
 				5162F71020BFBBB4009A6253 /* BN_Operation.m in Sources */,
-				1404FADF21DF45AE00122E22 /* UIScreenEdgePanView.m in Sources */,
 				515CC97C20B6AAF2004AE27C /* AAPlotLinesElement.m in Sources */,
 				516969AF20BCF9A800BAA53D /* AbstractClient.m in Sources */,
 				51364CA020860822005A20E7 /* Utilities_DM.m in Sources */,

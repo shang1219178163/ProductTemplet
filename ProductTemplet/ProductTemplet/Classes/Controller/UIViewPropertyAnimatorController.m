@@ -10,6 +10,8 @@
 
 #import "BN_Category.h"
 
+#import "UIAlertController+Helper.h"
+
 @interface UIViewPropertyAnimatorController ()
 
 @property (nonatomic, strong) UIViewPropertyAnimator *animator;
@@ -31,10 +33,12 @@
     [self.view addSubview:self.circleView];
     
 
+    
+    @weakify(self);
     [self.circleView addActionHandler:^(id obj, id item, NSInteger idx) {
-        
+        @strongify(self);
         NSArray * list = @[@"bezierSystemAnimation",@"bezierCustomAnimation1",@"bezierCustomAnimation2",@"dampingSystemAnimation",@"dampingCustomeAnimation",];
-        [self showSheetWithTitle:@"请选择" msgList:list handler:^(UIAlertController * _Nonnull alertVC, UIAlertAction * _Nullable action) {
+        [UIAlertController showSheetTitle:@"请选择" msg:@"提示信息" actionTitles:list handler:^(UIAlertController * _Nonnull alertVC, UIAlertAction * _Nullable action) {
             if ([action.title isEqualToString:list[0]]) {
                 if (@available(iOS 10.0, *)) {
                     self.animator = [[UIViewPropertyAnimator alloc]initWithDuration:1.5 curve:UIViewAnimationCurveLinear animations:^{
@@ -87,34 +91,41 @@
                 if (@available(iOS 10.0, *)) {
                     self.animator = [[UIViewPropertyAnimator alloc]initWithDuration:3 dampingRatio:0.1 animations:^{
                         self.circleView.transform = CGAffineTransformMakeTranslation(self.view.center.x-self.circleRadius, 0);
-
+                        
                     }];
                     [self.animator startAnimation];
-
+                    
                 }
                 else {
                     // Fallback on earlier versions
                 }
             }
             else if ([action.title isEqualToString:list[4]]) {
-                UICubicTimingParameters * bezierParams = [[UISpringTimingParameters alloc]initWithDampingRatio:1 initialVelocity:CGVectorMake(1, 1)];
-                self.animator = [[UIViewPropertyAnimator alloc]initWithDuration:0.5 timingParameters:bezierParams];
+                if (@available(iOS 10.0, *)) {
+                    UICubicTimingParameters * bezierParams = [[UISpringTimingParameters alloc]initWithDampingRatio:1 initialVelocity:CGVectorMake(1, 1)];
+                    self.animator = [[UIViewPropertyAnimator alloc]initWithDuration:0.5 timingParameters:bezierParams];
+                } else {
+                    // Fallback on earlier versions
+                }
                 
                 self.circleView.center = self.view.center;
-
+                
                 [self.animator addAnimations:^{
                     self.circleView.transform = CGAffineTransformMakeScale(3, 3);
                     self.circleView.alpha = 0.2;
                 }];
                 [self.animator startAnimation];
                 
-                [self.animator addCompletion:^(UIViewAnimatingPosition finalPosition) {
-                    self.circleView.alpha = 1.0;
+                if (@available(iOS 10.0, *)) {
+                    [self.animator addCompletion:^(UIViewAnimatingPosition finalPosition) {
+                        self.circleView.alpha = 1.0;
 //                    self.circleView.center = CGPointMake(self.circleRadius, self.circleView.center.y);
-                    self.circleView.transform = CGAffineTransformMakeScale(1, 1);
-                }];
+                        self.circleView.transform = CGAffineTransformMakeScale(1, 1);
+                    }];
+                } else {
+                    // Fallback on earlier versions
+                }
             }
-            
         }];
     }];
 
