@@ -133,7 +133,8 @@
     [super viewDidAppear:animated];
     
 //    [self goController:@"CustomViewController" title:@"Custom"];
-
+    [self goController:@"EntryViewController" title:@"entry"];
+    
 }
 
 - (void)didReceiveMemoryWarning {

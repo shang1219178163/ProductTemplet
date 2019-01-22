@@ -29,7 +29,6 @@
 
 #define MAS_SHORTHAND
 #define MAS_SHORTHAND_GLOBALS
-
 #import "Masonry.h"
 
 #endif /* PrefixHeader_pch */

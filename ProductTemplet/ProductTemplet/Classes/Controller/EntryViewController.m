@@ -33,6 +33,7 @@
     // Do any additional setup after loading the view.
     
     self.dataList = @[
+                      @"UITableViewTextFieldCell",
                       @"UITableViewDatePickerCell",
                       @"UITableViewDateRangeCell",
                       @"UITableViewSegmentCell",
@@ -40,7 +41,6 @@
                       @"UITableViewStepCell",
                       @"UITableViewPickerListCell",
                       @"UITableViewAddressPickerCell",
-                      @"UITableViewTextFieldCell",
                       @"UITableViewTextViewCell",
                       
                       ].mutableCopy;
@@ -80,6 +80,7 @@
             UITableViewDatePickerCell * cell = [UITableViewDatePickerCell cellWithTableView:tableView];
             cell.labelLeft.text = @"*日期选择:";
             cell.labelLeft.attributedText = [cell.labelLeft.text toAsterisk];
+            [cell getViewLayer];
             return cell;
             
         }
@@ -89,6 +90,7 @@
             UITableViewDateRangeCell * cell = [UITableViewDateRangeCell cellWithTableView:tableView];
             cell.labelLeft.text = @"日期选择:";
             
+              [cell getViewLayer];
             return cell;
         }
             break;
@@ -104,6 +106,7 @@
 //                DDLog(@"%@,%ld,%ld",item,item.selectedSegmentIndex,idx)
                 
             }];
+              [cell getViewLayer];
             return cell;
         }
             break;
@@ -118,6 +121,7 @@
                 //                DDLog(@"%@,%ld,%ld",item,item.selectedSegmentIndex,idx)
                 
             }];
+              [cell getViewLayer];
             return cell;
         }
             break;
@@ -126,6 +130,7 @@
             UITableViewStepCell * cell = [UITableViewStepCell cellWithTableView:tableView];
             cell.labelLeft.text = @"商品名称:";
             
+              [cell getViewLayer];
             return cell;
         }
             break;
@@ -136,6 +141,7 @@
             cell.labelLeft.text = @"商品分类:";
             cell.dic = self.dic;
             
+              [cell getViewLayer];
             return cell;
         }
             break;
@@ -146,6 +152,7 @@
             cell.labelLeft.text = @"商家地址:";
             
             
+              [cell getViewLayer];
             return cell;
         }
             break;
@@ -154,6 +161,7 @@
             UITableViewTextFieldCell * cell = [UITableViewTextFieldCell cellWithTableView:tableView];
             cell.labelLeft.text = @"输入姓名:";
             
+              [cell getViewLayer];
             return cell;
         }
             break;
@@ -164,6 +172,7 @@
             cell.labelLeft.text = @"备注信息:";
             [cell getViewLayer];
             
+              [cell getViewLayer];
             return cell;
         }
             break;

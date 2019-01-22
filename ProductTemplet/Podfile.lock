@@ -33,12 +33,12 @@ PODS:
   - BN_Globle (1.3.4)
   - BN_Kit (1.2.9):
     - BN_Globle
-  - BN_TableViewCell (1.4.0.5):
+  - BN_TableViewCell (1.4.0.6):
     - BN_Category
     - BN_Globle
     - BN_Kit
     - BN_View
-  - BN_View (1.3.9.1):
+  - BN_View (1.3.9.4):
     - BN_Category
     - BN_Globle
     - BN_Kit
@@ -185,8 +185,8 @@ SPEC CHECKSUMS:
   BN_CollectionView: cf73be3c184a3af70b9078497ee8df2f5124df5c
   BN_Globle: a28891ed8d1e766e414e0d4d5dbd71b573f9ebbe
   BN_Kit: 5dc15cc671dea4aa5ad3687019cd0fc3b9fd861f
-  BN_TableViewCell: 88129eb62d39f0ec4aa68c6a475988704da2a99b
-  BN_View: 26b69af919d32c21637ebb075956e3d19e98e536
+  BN_TableViewCell: af95a9e4bd1d90f3886ad5d265b43ff7af043541
+  BN_View: 7a9ed6510907fdfd5469ae9b224698f9705b1180
   BN_ViewHeight: a780ee21e34dce6029781bce7ae01cef9c3401e3
   FCUUID: bb054fc90cd7cd99320f9f6ff8e130fe607fba05
   FLAnimatedImage: 4a0b56255d9b05f18b6dd7ee06871be5d3b89e31
