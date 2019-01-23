@@ -9,7 +9,6 @@
 
 #import "BN_CenterViewController.h"
 
-
 @interface BN_CenterViewController ()
 
 @property (nonatomic, strong) NSArray * filterList;

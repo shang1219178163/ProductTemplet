@@ -8,6 +8,9 @@
 
 #import "TestViewController.h"
 
+#define MAS_SHORTHAND
+#define MAS_SHORTHAND_GLOBALS
+#import "Masonry.h"
 
 @interface TestViewController ()
 

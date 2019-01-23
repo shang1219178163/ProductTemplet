@@ -8,6 +8,9 @@
 
 #import "BN_UserRegisterController.h"
 
+#define MAS_SHORTHAND
+#define MAS_SHORTHAND_GLOBALS
+#import "Masonry.h"
 
 @interface BN_UserRegisterController ()
 

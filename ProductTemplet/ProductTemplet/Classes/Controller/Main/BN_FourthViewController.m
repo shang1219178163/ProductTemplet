@@ -133,7 +133,7 @@
     [super viewDidAppear:animated];
     
 //    [self goController:@"CustomViewController" title:@"Custom"];
-    [self goController:@"EntryViewController" title:@"entry"];
+    [self goController:@"EntryViewController" title:@"录入界面封装"];
     
 }
 

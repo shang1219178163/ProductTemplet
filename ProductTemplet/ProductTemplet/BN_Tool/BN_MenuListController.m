@@ -80,7 +80,7 @@
         self.btnView.label.text = string;
         [self handleActionBtnView:self.btnView];
         
-        [UIView animateWithDuration:kAnimDuration_Drop animations:^{
+        [UIView animateWithDuration:kDurationDrop animations:^{
             self.btnView.imageView.transform = view.isShow  ? CGAffineTransformMakeRotation(M_PI) : CGAffineTransformIdentity;
             
         }];
@@ -98,7 +98,7 @@
 - (void)handleActionBtnView:(BN_BtnView *)sender{
     self.menuView.isShow = CGAffineTransformIsIdentity(sender.imageView.transform) ? YES : NO;
 
-    [UIView animateWithDuration:kAnimDuration_Drop animations:^{
+    [UIView animateWithDuration:kDurationDrop animations:^{
         sender.imageView.transform = CGAffineTransformIsIdentity(sender.imageView.transform) ? CGAffineTransformMakeRotation(M_PI) : CGAffineTransformIdentity;
         
     }];

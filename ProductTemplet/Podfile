@@ -56,7 +56,7 @@ target 'ProductTemplet' do
   pod 'BN_Kit'
   pod 'BN_Category'
   pod 'BN_View'
-  pod 'BN_TableViewCell'
+#  pod 'BN_TableViewCell'
   pod 'BN_CollectionView'
   pod 'BN_ViewHeight'
 

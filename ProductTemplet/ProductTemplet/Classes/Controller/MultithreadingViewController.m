@@ -9,7 +9,6 @@
 #import "MultithreadingViewController.h"
 
 #import "UIViewController+Helper.h"
-#import "UITableViewOneCell.h"
 
 @interface MultithreadingViewController ()<UITableViewDataSource,UITableViewDelegate>
 

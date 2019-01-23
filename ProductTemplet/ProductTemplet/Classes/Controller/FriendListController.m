@@ -10,6 +10,7 @@
 
 #import "BN_SimpleDataModel.h"
 
+#import "BN_TableViewCell.h"
 
 @interface FriendListController ()
 

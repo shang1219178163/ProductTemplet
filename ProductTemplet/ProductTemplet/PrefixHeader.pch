@@ -19,7 +19,7 @@
 #import "BN_Kit.h"
 #import "BN_Category.h"
 #import "BN_View.h"
-#import "BN_TableViewCell.h"
+//#import "BN_TableViewCell.h"
 #import "BN_CollectionView.h"
 #import "BN_ViewHeight.h"
 
@@ -27,8 +27,10 @@
 
 #import "AAGlobalMacro.h"//图表专用
 
-#define MAS_SHORTHAND
-#define MAS_SHORTHAND_GLOBALS
-#import "Masonry.h"
+//#define MAS_SHORTHAND
+//#define MAS_SHORTHAND_GLOBALS
+//#import "Masonry.h"
+
+#import "BN_TableViewCell.h"
 
 #endif /* PrefixHeader_pch */

@@ -9,7 +9,6 @@
 #import "DesignPatternsController.h"
 
 #import "UIViewController+Helper.h"
-#import "UITableViewOneCell.h"
 
 @interface DesignPatternsController ()<UITableViewDataSource,UITableViewDelegate>
 
