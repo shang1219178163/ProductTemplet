@@ -89,7 +89,7 @@
     
     self.view.backgroundColor = UIColor.yellowColor;
     
-    [self createBarItemTitle:@"Tap" imageName:nil isLeft:NO isHidden:NO handler:^(id obj, UIButton * item, NSInteger idx) {
+    [self createBarItemTitle:@"Tap" imgName:nil isLeft:NO isHidden:NO handler:^(id obj, UIButton * item, NSInteger idx) {
         BN_FilterView * view = [[BN_FilterView alloc]init];
         view.dataList = self.filterList;
         //            view.direction = @1;

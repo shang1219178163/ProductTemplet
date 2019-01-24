@@ -8,15 +8,15 @@
 #import <UIKit/UIKit.h>
 #import "UITableViewCell+AddView.h"
 
-NS_ASSUME_NONNULL_BEGIN
+#import "BNSwitchView.h"
 
 /**
  cell - 开关
  */
 @interface UITableViewSwitchCell : UITableViewCell
 
-@property (nonatomic, strong) UISwitch *switchCtrl;
+@property (nonatomic, strong) BNSwitchView *switchView;
 
 @end
 
-NS_ASSUME_NONNULL_END
+

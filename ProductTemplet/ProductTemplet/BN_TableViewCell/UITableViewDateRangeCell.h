@@ -9,15 +9,15 @@
 #import <UIKit/UIKit.h>
 
 #import "UITableViewCell+AddView.h"
+#import "BNDateRangeView.h"
 
 /**
  时间选择(开始-截止)
  */
 @interface UITableViewDateRangeCell : UITableViewCell<UITextFieldDelegate>
 
-@property (nonatomic, strong) BN_TextField * textFieldLeft;
-@property (nonatomic, strong) BN_TextField * textFieldRight;
+@property (nonatomic, strong) BNDateRangeView * dateRangeView;
 
-@property (nonatomic, strong) void(^block)(UITableViewDateRangeCell *view, NSString * dateStart, NSString * dateEnd, id obj, NSInteger idx);
+//@property (nonatomic, strong) void(^block)(UITableViewDateRangeCell *view, NSString * dateStart, NSString * dateEnd, id obj, NSInteger idx);
 
 @end

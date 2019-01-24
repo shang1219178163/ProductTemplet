@@ -15,7 +15,9 @@
  */
 @interface UITableViewSegmentCell : UITableViewCell
 
-@property (nonatomic, strong) UISegmentedControl * segmentCtrl;
+@property (nonatomic, strong) UISegmentedControl * segmentCtl;
+@property (nonatomic, assign) NSTextAlignment ctlAlignment;
+
 
 @end
 

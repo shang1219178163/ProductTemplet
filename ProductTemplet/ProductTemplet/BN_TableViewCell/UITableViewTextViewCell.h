@@ -14,8 +14,9 @@
 /**
  UTextView
  */
-@interface UITableViewTextViewCell : UITableViewCell
+@interface UITableViewTextViewCell : UITableViewCell<UITextViewDelegate>
 
+@property (nonatomic, assign) NSInteger wordCount;
 @property (nonatomic, strong) NSNumber *type;
 @property (nonatomic, strong) void(^block)(UITableViewTextViewCell *view, UITextView * textView);
 

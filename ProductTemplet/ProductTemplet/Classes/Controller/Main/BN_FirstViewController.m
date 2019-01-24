@@ -86,7 +86,7 @@
     self.view.backgroundColor = UIColor.whiteColor;
     
     
-    [self createBarItemTitle:@"next" imageName:nil isLeft:NO isHidden:NO handler:^(id obj, id item, NSInteger idx) {
+    [self createBarItemTitle:@"next" imgName:nil isLeft:NO isHidden:NO handler:^(id obj, id item, NSInteger idx) {
         [self goController:@"BN_MenuListController" title:@"Menu"];
         
     }];
@@ -189,7 +189,7 @@
 }
 
 - (void)configureMenuList{
-    NSArray * menuList = [NSArray arrayWithItemPrefix:@"工厂_" startIndex:1 count:10 type:@0];
+    NSArray * menuList = [NSArray arrayItemPrefix:@"工厂_" startIndex:1 count:10 type:@0];
     
     self.navigationItem.titleView = self.btnView;
     

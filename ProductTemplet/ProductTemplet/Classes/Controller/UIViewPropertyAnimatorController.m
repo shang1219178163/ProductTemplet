@@ -38,7 +38,7 @@
     [self.circleView addActionHandler:^(id obj, id item, NSInteger idx) {
         @strongify(self);
         NSArray * list = @[@"bezierSystemAnimation",@"bezierCustomAnimation1",@"bezierCustomAnimation2",@"dampingSystemAnimation",@"dampingCustomeAnimation",];
-        [UIAlertController showSheetTitle:@"请选择" msg:@"提示信息" actionTitles:list handler:^(UIAlertController * _Nonnull alertVC, UIAlertAction * _Nullable action) {
+        [UIAlertController createSheetTitle:@"请选择" msg:@"提示信息" actionTitles:list handler:^(UIAlertController * _Nonnull alertVC, UIAlertAction * _Nullable action) {
             if ([action.title isEqualToString:list[0]]) {
                 if (@available(iOS 10.0, *)) {
                     self.animator = [[UIViewPropertyAnimator alloc]initWithDuration:1.5 curve:UIViewAnimationCurveLinear animations:^{

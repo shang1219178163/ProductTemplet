@@ -8,10 +8,13 @@
 
 #import <UIKit/UIKit.h>
 
-NS_ASSUME_NONNULL_BEGIN
+#import "UITableViewCell+AddView.h"
+#import "BNListChooseView.h"
 
 @interface UITableViewPickerViewCell : UITableViewCell
 
+@property (nonatomic, strong) BNListChooseView * chooseView;
+
 @end
 
-NS_ASSUME_NONNULL_END
+

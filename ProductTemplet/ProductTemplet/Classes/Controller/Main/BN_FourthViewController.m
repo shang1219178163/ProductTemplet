@@ -28,7 +28,7 @@
 
 //    [self addChildControllerView:@"FontListController"];
 //    [self addChildControllerView:@"FriendListController"];
-    [self createBarItemTitle:nil imageName:@"Item_fourth_H" isLeft:NO isHidden:NO handler:^(id obj, UIButton *item, NSInteger idx) {
+    [self createBarItemTitle:nil imgName:@"Item_fourth_H" isLeft:NO isHidden:NO handler:^(id obj, UIButton *item, NSInteger idx) {
         DDLog(@"%@",item);
     }];
     

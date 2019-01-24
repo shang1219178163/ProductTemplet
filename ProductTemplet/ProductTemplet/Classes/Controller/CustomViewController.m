@@ -10,11 +10,28 @@
 
 #import "BNItemsView.h"
 #import "BNWalletView.h"
+#import "BNSearchView.h"
+
+#import "BNCellDefaultView.h"
+#import "BNDateRangeView.h"
+#import "BNSliderView.h"
+#import "BNSheetView.h"
+#import "BNSwitchView.h"
+#import "BNListChooseView.h"
+
 
 @interface CustomViewController ()
 
 @property (nonatomic, strong) BNItemsView * itemsView;
 @property (nonatomic, strong) BNWalletView * walletView;
+@property (nonatomic, strong) BNSearchView * searchView;
+
+@property (nonatomic, strong) BNCellDefaultView * defaultView;
+@property (nonatomic, strong) BNDateRangeView * dateRangeView;
+@property (nonatomic, strong) BNSliderView * sliderView;
+@property (nonatomic, strong) BNSheetView * sheetView;
+@property (nonatomic, strong) BNSwitchView * switchView;
+@property (nonatomic, strong) BNListChooseView * chooseView;
 
 @end
 
@@ -23,30 +40,45 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    
-    NSMutableArray * list = [NSMutableArray array];
-    for (NSInteger i = 0; i < 16; i++) {
-        NSString * title = [NSString stringWithFormat:@"item_%@",@(i)];
-        [list addObject:title];
-    }
-    
-    list = [NSArray arrayWithItemPrefix:@"item_" startIndex:0 count:16 type:@0];
-    self.itemsView.frame = CGRectMake(20, 20, kScreenWidth - 40, kScreenWidth - 40);
-    self.itemsView.items = list;
-//    [self.view addSubview: self.itemsView];
-    
-    NSMutableArray * listNew = [NSMutableArray array];
-    for (NSInteger i = 0; i < 12; i++) {
-        NSString * title = [NSString stringWithFormat:@"item_%@",@(i)];
-        [listNew addObject:title];
-    }
-    self.itemsView.items = listNew;
+    NSInteger idx = 2;
+    switch (idx) {
+        case 0:
+        {
+            NSArray * list = [NSArray arrayItemPrefix:@"item_" startIndex:0 count:16 type:@0];
+            self.itemsView.frame = CGRectMake(20, 20, kScreenWidth - 40, kScreenWidth - 40);
+            self.itemsView.items = list;
+            //    [self.view addSubview: self.itemsView];
+            
+            self.itemsView.items = list = [NSArray arrayItemPrefix:@"item_" startIndex:0 count:12 type:@0];;
 
-    self.walletView.frame = CGRectMake(20, 20, kScreenWidth - 40, kScreenWidth - 40);
-    [self.view addSubview: self.walletView];
+        }
+            break;
+        case 1:
+        {
+            self.walletView.frame = CGRectMake(20, 20, kScreenWidth - 40, kScreenWidth - 40);
+            //    [self.view addSubview: self.walletView];
+        }
+            break;
+        case 2:
+        {
+            self.defaultView.frame = CGRectMake(0, 0, kScreenWidth, 60);
+            [self.view addSubview:self.defaultView];
+
+            NSArray * list = @[self.dateRangeView, self.sliderView, self.switchView, self.sheetView, self.chooseView,self.searchView];
+            CGRect rect = self.defaultView.frame;
+            for (UIView * view in list) {
+                rect = CGRectMake(0, CGRectGetMaxY(rect), kScreenWidth, 60);
+                view.frame = rect;
+                [self.view addSubview:view];
+            }
+        }
+            break;
+        default:
+            break;
+    }
+    
     [self.view getViewLayer];
 }
-
 
 - (BNItemsView *)itemsView{
     if (!_itemsView) {
@@ -54,7 +86,6 @@
         _itemsView.block = ^(BNItemsView * _Nonnull itemsView, UIButton * _Nonnull btn) {
             DDLog(@"%@",btn.currentTitle);
         };
-        
     }
     return _itemsView;
 }
@@ -70,6 +101,60 @@
     return _walletView;
 }
 
+-(BNSearchView *)searchView{
+    if (!_searchView) {
+        _searchView = [[BNSearchView alloc]initWithFrame:CGRectZero];
+        [_searchView.btn addActionHandler:^(UIControl * _Nonnull control) {
+            DDLog(@"%@",_searchView.queryStr);
+            
+        } forControlEvents:UIControlEventTouchUpInside];
+    }
+    return _searchView;
+}
 
+-(BNCellDefaultView *)defaultView{
+    if (!_defaultView) {
+        _defaultView = [[BNCellDefaultView alloc]initWithFrame:CGRectZero];
+        _defaultView.labelLeft.text = @"显示标题:";
+        _defaultView.labelRight.text = @"11111";
+        _defaultView.imgViewRight.hidden = false;
+    }
+    return _defaultView;
+}
+
+-(BNDateRangeView *)dateRangeView{
+    if (!_dateRangeView) {
+        _dateRangeView = [[BNDateRangeView alloc]initWithFrame:CGRectZero];
+    }
+    return _dateRangeView;
+}
+
+-(BNSliderView *)sliderView{
+    if (!_sliderView) {
+        _sliderView = [[BNSliderView alloc]initWithFrame:CGRectZero];
+    }
+    return _sliderView;
+}
+
+-(BNSheetView *)sheetView{
+    if (!_sheetView) {
+        _sheetView = [[BNSheetView alloc]initWithFrame:CGRectZero];
+    }
+    return _sheetView;
+}
+
+-(BNSwitchView *)switchView{
+    if (!_switchView) {
+        _switchView = [[BNSwitchView alloc]initWithFrame:CGRectZero];
+    }
+    return _switchView;
+}
+
+- (BNListChooseView *)chooseView{
+    if (!_chooseView) {
+        _chooseView = [[BNListChooseView alloc]initWithFrame:CGRectZero];
+    }
+    return _chooseView;
+}
 
 @end

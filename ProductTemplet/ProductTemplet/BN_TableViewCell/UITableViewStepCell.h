@@ -16,7 +16,7 @@
  */
 @interface UITableViewStepCell : UITableViewCell
 
-@property (nonatomic, strong) PPNumberButton * numberBtnLeft;
+@property (nonatomic, strong) PPNumberButton * ppBtn;
 
 @end
 

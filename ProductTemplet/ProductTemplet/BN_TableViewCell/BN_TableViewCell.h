@@ -113,6 +113,7 @@
 #import "UITableHeaderFooterViewTwo.h"
 
 
+#import "UITableViewCellDefault.h"
 #import "UITableViewSheetCell.h"
 #import "UITableViewPickerViewCell.h"
 #import "UITableViewSliderCell.h"

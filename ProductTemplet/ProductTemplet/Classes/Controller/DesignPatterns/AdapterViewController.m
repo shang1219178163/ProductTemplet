@@ -33,7 +33,7 @@
 
 -(NSArray *)itemList{
     if (!_itemList) {
-        _itemList = [NSArray arrayWithItemPrefix:@"btn_" startIndex:0 count:6 type:@0];
+        _itemList = [NSArray arrayItemPrefix:@"btn_" startIndex:0 count:6 type:@0];
         _itemList = @[@"AV",@"IJ",@"tip",@"...",@"...",@"...",];
     }
     return _itemList;

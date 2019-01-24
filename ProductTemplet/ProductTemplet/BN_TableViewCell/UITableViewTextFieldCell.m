@@ -10,93 +10,90 @@
 
 #import "BN_Globle.h"
 #import "BN_TextField.h"
-#import "NSObject+Helper.h"
+//#import "NSObject+Helper.h"
+#import "UIView+Helper.h"
 
-@interface UITableViewTextFieldCell ()
+#define MAS_SHORTHAND
+#define MAS_SHORTHAND_GLOBALS
+#import "Masonry.h"
 
- 
-@end
 
+/**
+文字+文字(textField)
+ */
 @implementation UITableViewTextFieldCell
 
--(void)dealloc{
-    [self.textField removeObserver:self forKeyPath:@"enabled" context:nil];
-    
+- (void)dealloc{
+    [self.labelLeft removeObserver:self forKeyPath:@"text"];
+    [self.textField removeObserver:self forKeyPath:@"enabled"];
 }
 
 - (instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier{
     self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
     if (self) {
-        [self createControls];
+        [self.contentView addSubview:self.labelLeft];
+        [self.contentView addSubview:self.textField];
+        
+        [self.labelLeft addObserver:self forKeyPath:@"text" options: NSKeyValueObservingOptionNew context:nil];
+        [self.textField addObserver:self forKeyPath:@"enabled" options: NSKeyValueObservingOptionNew context:nil];
+        self.textField.placeholder = @"请输入";
+        self.textField.textAlignment = NSTextAlignmentCenter;
+        self.textField.delegate = self;
         
     }
     return self;
 }
 
--(void)createControls{
-    //文字+文字(textField)
-    [self.contentView addSubview:self.labelLeft];
-    [self.contentView addSubview:self.textField];
-    
-    
-    self.textField.placeholder = @"请输入";
-    self.textField.textAlignment = NSTextAlignmentCenter;
-    self.textField.delegate = self;
-    
-    [self.textField addObserver:self forKeyPath:@"enabled" options:NSKeyValueObservingOptionNew context:nil];
-}
-
 -(void)layoutSubviews{
     [super layoutSubviews];
     
-    //文字+文字
-    CGSize labLeftSize = [self sizeWithText:self.labelLeft.text font:self.labelLeft.font width:CGFLOAT_MAX];
-    if (self.labelLeft.attributedText) {
-        labLeftSize = [self sizeWithText:self.labelLeft.attributedText font:self.labelLeft.font width:CGFLOAT_MAX];
-    }
+    [self setupConstraint];
+}
+
+-(void)setupConstraint{
+    [self.labelLeft sizeToFit];
+    [self.labelLeft makeConstraints:^(MASConstraintMaker *make) {
+        make.centerY.equalTo(self.contentView);
+        make.left.equalTo(self.contentView).offset(kX_GAP);
+        make.size.equalTo(CGSizeMake(self.labelLeft.sizeWidth, 35));
+    }];
     
-    CGFloat textFieldH = 30;
-    CGFloat lableLeftH = textFieldH;
-    
-    //控件1
-    self.labelLeft.frame = CGRectMake(kX_GAP, CGRectGetMidY(self.contentView.frame) - lableLeftH/2.0, labLeftSize.width, lableLeftH);
-    //控件2
-    self.textField.frame = CGRectMake(CGRectGetMaxX(self.labelLeft.frame) + kPadding, CGRectGetMidY(self.contentView.frame) - textFieldH/2.0, CGRectGetWidth(self.contentView.frame) - CGRectGetMaxX(self.labelLeft.frame) - kPadding - kX_GAP, textFieldH);
-    if (!self.labelLeft.text && !self.labelLeft.attributedText) {
-        self.textField.frame = CGRectMake(kX_GAP, CGRectGetMidY(self.contentView.frame) - textFieldH/2.0, CGRectGetWidth(self.contentView.frame) - kX_GAP*2, textFieldH);
-        
-    }
-    
+     [self.textField makeConstraints:^(MASConstraintMaker *make) {
+        make.top.equalTo(self.labelLeft);
+         make.left.equalTo(self.labelLeft.right).offset(kPadding);
+         make.right.equalTo(self.contentView).offset(-kX_GAP);
+        make.height.equalTo(self.labelLeft);
+     }];
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
     [super setSelected:selected animated:animated];
-    
-    // Configure the view for the selected state
 }
-
 
 #pragma mark - -UITextField
 - (BOOL)textFieldShouldBeginEditing:(UITextField *)textField{
-    //    [[[self superview] superview] endEditing:YES];
     return YES;
-    
 }
 
 - (void)textFieldDidEndEditing:(UITextField *)textField{
-    self.string = textField.text;
-    
+    if (self.block) {
+        self.block(self, textField);
+    }
 }
 
 - (BOOL)textFieldShouldReturn:(UITextField *)textField{
-    [[[self superview] superview] endEditing:YES];
+    [textField resignFirstResponder];
     return YES;
 }
 
 #pragma mark - -
 
 -(void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary<NSKeyValueChangeKey,id> *)change context:(void *)context{
+    if ([keyPath isEqualToString:@"text"]) {
+        self.labelLeft.attributedText = [self.labelLeft.text toAsterisk];
+    }
     if ([keyPath isEqualToString:@"enabled"]) {
+        
         if ([change[NSKeyValueChangeNewKey] boolValue]) {
             self.textField.placeholder = @"请输入";
             
@@ -112,17 +109,6 @@
         }
     }
 }
-
-
-#pragma mark - -other
-
--(void)setString:(NSString *)string{
-    _string = string;
-    if (self.block) {
-        self.block(self, string);
-    }
-}
-
 
 #pragma mark - -layz
 

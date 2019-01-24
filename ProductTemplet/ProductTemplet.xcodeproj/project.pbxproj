@@ -14,6 +14,7 @@
 		1421D5D021F3177700635582 /* BNWalletView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1421D5CF21F3177700635582 /* BNWalletView.m */; };
 		144920AA21C7BAA700C3C2F6 /* MoneyDisplayController.m in Sources */ = {isa = PBXBuildFile; fileRef = 144920A921C7BAA700C3C2F6 /* MoneyDisplayController.m */; };
 		147B971F21EF005B000F5294 /* UICollectionDisplayController.m in Sources */ = {isa = PBXBuildFile; fileRef = 147B971E21EF005B000F5294 /* UICollectionDisplayController.m */; };
+		149E827121F9B89A0092E202 /* BNSearchView.m in Sources */ = {isa = PBXBuildFile; fileRef = 149E827021F9B89A0092E202 /* BNSearchView.m */; };
 		14E793C421D62E0B003230C8 /* bug.png in Resources */ = {isa = PBXBuildFile; fileRef = 14E793C321D62E0B003230C8 /* bug.png */; };
 		14E8692D21C251BA009CE33E /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 14E8692C21C251BA009CE33E /* HomeViewController.m */; };
 		14E8F74F21F5E1ED004317B5 /* RuntimeController.m in Sources */ = {isa = PBXBuildFile; fileRef = 14E8F74E21F5E1ED004317B5 /* RuntimeController.m */; };
@@ -104,6 +105,14 @@
 		14E8FA2221F80472004317B5 /* UITableViewPickerViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 14E8FA2121F80472004317B5 /* UITableViewPickerViewCell.m */; };
 		14E8FA2521F8049C004317B5 /* UITableViewSheetCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 14E8FA2421F8049C004317B5 /* UITableViewSheetCell.m */; };
 		14E8FA2821F80570004317B5 /* UITableViewSliderCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 14E8FA2721F80570004317B5 /* UITableViewSliderCell.m */; };
+		14E8FA2B21F84513004317B5 /* BNDateRangeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 14E8FA2A21F84513004317B5 /* BNDateRangeView.m */; };
+		14E8FA2E21F8545D004317B5 /* BNSliderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 14E8FA2D21F8545D004317B5 /* BNSliderView.m */; };
+		14E8FA3121F86941004317B5 /* BNSwitchView.m in Sources */ = {isa = PBXBuildFile; fileRef = 14E8FA3021F86941004317B5 /* BNSwitchView.m */; };
+		14E8FA3421F877BF004317B5 /* BNSheetView.m in Sources */ = {isa = PBXBuildFile; fileRef = 14E8FA3321F877BF004317B5 /* BNSheetView.m */; };
+		14E8FA3721F87C35004317B5 /* BNCellDefaultView.m in Sources */ = {isa = PBXBuildFile; fileRef = 14E8FA3621F87C35004317B5 /* BNCellDefaultView.m */; };
+		14E8FA3A21F87F51004317B5 /* UITableViewCellDefault.m in Sources */ = {isa = PBXBuildFile; fileRef = 14E8FA3921F87F51004317B5 /* UITableViewCellDefault.m */; };
+		14E8FA3D21F943DE004317B5 /* BNPickerListView.m in Sources */ = {isa = PBXBuildFile; fileRef = 14E8FA3C21F943DE004317B5 /* BNPickerListView.m */; };
+		14E8FA4021F94464004317B5 /* BNListChooseView.m in Sources */ = {isa = PBXBuildFile; fileRef = 14E8FA3F21F94464004317B5 /* BNListChooseView.m */; };
 		51036F4720A16298009D8B7B /* img_notice.png in Resources */ = {isa = PBXBuildFile; fileRef = 51036F4620A16297009D8B7B /* img_notice.png */; };
 		51036F5020A17B3B009D8B7B /* WeiboLisController.m in Sources */ = {isa = PBXBuildFile; fileRef = 51036F4F20A17B3B009D8B7B /* WeiboLisController.m */; };
 		510BC99B208F2F0400CF48C5 /* FriendListController.m in Sources */ = {isa = PBXBuildFile; fileRef = 510BC99A208F2F0400CF48C5 /* FriendListController.m */; };
@@ -465,6 +474,8 @@
 		144920A921C7BAA700C3C2F6 /* MoneyDisplayController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MoneyDisplayController.m; sourceTree = "<group>"; };
 		147B971D21EF005B000F5294 /* UICollectionDisplayController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UICollectionDisplayController.h; sourceTree = "<group>"; };
 		147B971E21EF005B000F5294 /* UICollectionDisplayController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UICollectionDisplayController.m; sourceTree = "<group>"; };
+		149E826F21F9B89A0092E202 /* BNSearchView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BNSearchView.h; sourceTree = "<group>"; };
+		149E827021F9B89A0092E202 /* BNSearchView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BNSearchView.m; sourceTree = "<group>"; };
 		14E793C321D62E0B003230C8 /* bug.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bug.png; sourceTree = "<group>"; };
 		14E8692B21C251BA009CE33E /* HomeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
 		14E8692C21C251BA009CE33E /* HomeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
@@ -645,6 +656,22 @@
 		14E8FA2421F8049C004317B5 /* UITableViewSheetCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UITableViewSheetCell.m; sourceTree = "<group>"; };
 		14E8FA2621F80570004317B5 /* UITableViewSliderCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UITableViewSliderCell.h; sourceTree = "<group>"; };
 		14E8FA2721F80570004317B5 /* UITableViewSliderCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UITableViewSliderCell.m; sourceTree = "<group>"; };
+		14E8FA2921F84513004317B5 /* BNDateRangeView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BNDateRangeView.h; sourceTree = "<group>"; };
+		14E8FA2A21F84513004317B5 /* BNDateRangeView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BNDateRangeView.m; sourceTree = "<group>"; };
+		14E8FA2C21F8545D004317B5 /* BNSliderView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BNSliderView.h; sourceTree = "<group>"; };
+		14E8FA2D21F8545D004317B5 /* BNSliderView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BNSliderView.m; sourceTree = "<group>"; };
+		14E8FA2F21F86941004317B5 /* BNSwitchView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BNSwitchView.h; sourceTree = "<group>"; };
+		14E8FA3021F86941004317B5 /* BNSwitchView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BNSwitchView.m; sourceTree = "<group>"; };
+		14E8FA3221F877BF004317B5 /* BNSheetView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BNSheetView.h; sourceTree = "<group>"; };
+		14E8FA3321F877BF004317B5 /* BNSheetView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BNSheetView.m; sourceTree = "<group>"; };
+		14E8FA3521F87C34004317B5 /* BNCellDefaultView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BNCellDefaultView.h; sourceTree = "<group>"; };
+		14E8FA3621F87C35004317B5 /* BNCellDefaultView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BNCellDefaultView.m; sourceTree = "<group>"; };
+		14E8FA3821F87F51004317B5 /* UITableViewCellDefault.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UITableViewCellDefault.h; sourceTree = "<group>"; };
+		14E8FA3921F87F51004317B5 /* UITableViewCellDefault.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UITableViewCellDefault.m; sourceTree = "<group>"; };
+		14E8FA3B21F943DE004317B5 /* BNPickerListView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BNPickerListView.h; sourceTree = "<group>"; };
+		14E8FA3C21F943DE004317B5 /* BNPickerListView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BNPickerListView.m; sourceTree = "<group>"; };
+		14E8FA3E21F94464004317B5 /* BNListChooseView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BNListChooseView.h; sourceTree = "<group>"; };
+		14E8FA3F21F94464004317B5 /* BNListChooseView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BNListChooseView.m; sourceTree = "<group>"; };
 		48DCCC545F7DD72A25BB7579 /* Pods-ProductTemplet.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ProductTemplet.release.xcconfig"; path = "Pods/Target Support Files/Pods-ProductTemplet/Pods-ProductTemplet.release.xcconfig"; sourceTree = "<group>"; };
 		51036F4620A16297009D8B7B /* img_notice.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = img_notice.png; sourceTree = "<group>"; };
 		51036F4E20A17B3B009D8B7B /* WeiboLisController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WeiboLisController.h; sourceTree = "<group>"; };
@@ -1247,6 +1274,8 @@
 			isa = PBXGroup;
 			children = (
 				14E8F98821F7F59C004317B5 /* BN_TableViewCell.h */,
+				14E8FA3821F87F51004317B5 /* UITableViewCellDefault.h */,
+				14E8FA3921F87F51004317B5 /* UITableViewCellDefault.m */,
 				14E8FA2621F80570004317B5 /* UITableViewSliderCell.h */,
 				14E8FA2721F80570004317B5 /* UITableViewSliderCell.m */,
 				14E8FA2321F8049C004317B5 /* UITableViewSheetCell.h */,
@@ -1454,11 +1483,27 @@
 				513646EB208604DD005A20E7 /* Vendor */,
 				5136469F2086031D005A20E7 /* AppDelegate.h */,
 				513646A02086031D005A20E7 /* AppDelegate.m */,
-				14E8F82521F7F44A004317B5 /* BN_TableViewCell */,
 				513646B520860332005A20E7 /* MainViewController.h */,
 				513646B620860332005A20E7 /* MainViewController.m */,
 				516F8560215DF8F2008E62B3 /* SuspendButton.h */,
 				516F8561215DF8F4008E62B3 /* SuspendButton.m */,
+				14E8FA2921F84513004317B5 /* BNDateRangeView.h */,
+				14E8FA2A21F84513004317B5 /* BNDateRangeView.m */,
+				14E8FA2C21F8545D004317B5 /* BNSliderView.h */,
+				14E8FA2D21F8545D004317B5 /* BNSliderView.m */,
+				14E8FA2F21F86941004317B5 /* BNSwitchView.h */,
+				14E8FA3021F86941004317B5 /* BNSwitchView.m */,
+				14E8FA3221F877BF004317B5 /* BNSheetView.h */,
+				14E8FA3321F877BF004317B5 /* BNSheetView.m */,
+				14E8FA3521F87C34004317B5 /* BNCellDefaultView.h */,
+				14E8FA3621F87C35004317B5 /* BNCellDefaultView.m */,
+				14E8FA3B21F943DE004317B5 /* BNPickerListView.h */,
+				14E8FA3C21F943DE004317B5 /* BNPickerListView.m */,
+				14E8FA3E21F94464004317B5 /* BNListChooseView.h */,
+				14E8FA3F21F94464004317B5 /* BNListChooseView.m */,
+				149E826F21F9B89A0092E202 /* BNSearchView.h */,
+				149E827021F9B89A0092E202 /* BNSearchView.m */,
+				14E8F82521F7F44A004317B5 /* BN_TableViewCell */,
 				513646A82086031D005A20E7 /* Assets.xcassets */,
 				5169DF232088254300B025C3 /* Public.xcassets */,
 				5136492420860655005A20E7 /* Resources */,
@@ -2788,6 +2833,7 @@
 				14E8F9D921F7F5A7004317B5 /* UITableViewThirtyNineCell.m in Sources */,
 				51862E9020BBB1D50080BD4E /* PlayerAdapter.m in Sources */,
 				14E8F9E921F7F5A7004317B5 /* UITableViewThirtyEightCell.m in Sources */,
+				14E8FA3121F86941004317B5 /* BNSwitchView.m in Sources */,
 				14E8F9D621F7F5A7004317B5 /* UITableViewTwentyOneCell.m in Sources */,
 				14E8F74F21F5E1ED004317B5 /* RuntimeController.m in Sources */,
 				51894140209C27E000A687E1 /* TestViewController.m in Sources */,
@@ -2796,6 +2842,7 @@
 				51894117209BF1A200A687E1 /* BN_LearnMasonryController.m in Sources */,
 				515CC97F20B6AAF2004AE27C /* AABar.m in Sources */,
 				14E8FA1321F7F5A7004317B5 /* UITableViewTwentySixCell.m in Sources */,
+				14E8FA3D21F943DE004317B5 /* BNPickerListView.m in Sources */,
 				5169699C20BCED4000BAA53D /* LHFinance.m in Sources */,
 				5186F1C121A3A43900663707 /* BNImageView.m in Sources */,
 				5162F6FB20BF9C9B009A6253 /* FlyweightViewController.m in Sources */,
@@ -2819,12 +2866,14 @@
 				51364C8020860822005A20E7 /* BN_Map.m in Sources */,
 				51364DE420860BE0005A20E7 /* ErrorInfoUtility.m in Sources */,
 				51862E8020BBA8800080BD4E /* NumberInputValidator.m in Sources */,
+				14E8FA3421F877BF004317B5 /* BNSheetView.m in Sources */,
 				515CC97120B6AAF2004AE27C /* AALabels.m in Sources */,
 				14E8F9DA21F7F5A7004317B5 /* UITableViewFourCell.m in Sources */,
 				515CC97520B6AAF2004AE27C /* AADataLabels.m in Sources */,
 				517D8B1220B2B36E00DCA731 /* FMBDViewController.m in Sources */,
 				517D8B2420B2C66800DCA731 /* Car.m in Sources */,
 				515C67E52137C55700D5EA94 /* BCurrentCityCell.m in Sources */,
+				14E8FA2E21F8545D004317B5 /* BNSliderView.m in Sources */,
 				51AA00342199295A002EB259 /* CounterListController.m in Sources */,
 				5185FDDC21A248E900FFA730 /* MutiRequestController.m in Sources */,
 				51B9CD1220A051AA0096A540 /* BN_RightViewController.m in Sources */,
@@ -2843,6 +2892,7 @@
 				14E8F9D021F7F5A7004317B5 /* UITableViewSenventyThreeCell.m in Sources */,
 				517D8B2E20B2E0A200DCA731 /* FMViewController.m in Sources */,
 				515CC97820B6AAF2004AE27C /* AASubtitle.m in Sources */,
+				14E8FA3721F87C35004317B5 /* BNCellDefaultView.m in Sources */,
 				5168C8E521A6401F00850687 /* NumberViewController.m in Sources */,
 				513647DF208604DE005A20E7 /* PPNetworkCache.m in Sources */,
 				516969AB20BCF9A800BAA53D /* MediatorLJ.m in Sources */,
@@ -2851,6 +2901,7 @@
 				516969B320BCFCFF00BAA53D /* CompositeViewController.m in Sources */,
 				14E8F9EC21F7F5A7004317B5 /* UITableViewFiftyOneCell.m in Sources */,
 				515CC98820B6AAF2004AE27C /* AAChart.m in Sources */,
+				14E8FA2B21F84513004317B5 /* BNDateRangeView.m in Sources */,
 				14E8FA1E21F7F5A7004317B5 /* UITableViewNineCell.m in Sources */,
 				14E8F9E121F7F5A7004317B5 /* UITableViewThirtyFourCell.m in Sources */,
 				51B9CD1120A051AA0096A540 /* BN_LeftViewController.m in Sources */,
@@ -2903,6 +2954,7 @@
 				14E8F9D721F7F5A7004317B5 /* UITableViewFourteenCell.m in Sources */,
 				14E8FA0C21F7F5A7004317B5 /* UITableViewFiveCell.m in Sources */,
 				513647BE208604DE005A20E7 /* HZPhotoBrowserView.m in Sources */,
+				149E827121F9B89A0092E202 /* BNSearchView.m in Sources */,
 				14E8F9D321F7F5A7004317B5 /* UITableViewFiftyNineCell.m in Sources */,
 				14E8F9F921F7F5A7004317B5 /* UITableViewEightCell.m in Sources */,
 				51364C8220860822005A20E7 /* BN_Num.m in Sources */,
@@ -3006,10 +3058,12 @@
 				5169DF102088230D00B025C3 /* BN_NetRootShareModel.m in Sources */,
 				516969BA20BCFD9B00BAA53D /* CompanyLeaf.m in Sources */,
 				1404FAE521DF4A5F00122E22 /* UIRecognizerController.m in Sources */,
+				14E8FA3A21F87F51004317B5 /* UITableViewCellDefault.m in Sources */,
 				515C67DD2137C55700D5EA94 /* BAddressPickerController.m in Sources */,
 				510BC9A3208F3B6A00CF48C5 /* SliderTabBarController.m in Sources */,
 				14E8FA1C21F7F5A7004317B5 /* UITableViewThirtyThreeCell.m in Sources */,
 				516969A020BCF11600BAA53D /* MediatorViewController.m in Sources */,
+				14E8FA4021F94464004317B5 /* BNListChooseView.m in Sources */,
 				515C67DF2137C55700D5EA94 /* ChineseToPinyin.m in Sources */,
 				14E8F9CC21F7F5A7004317B5 /* UITableViewThirtyFiveCell.m in Sources */,
 				51862E5020BB908E0080BD4E /* DesignPatternsController.m in Sources */,

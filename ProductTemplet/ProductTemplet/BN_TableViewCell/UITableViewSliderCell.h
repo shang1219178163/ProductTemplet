@@ -8,10 +8,14 @@
 
 #import <UIKit/UIKit.h>
 
-NS_ASSUME_NONNULL_BEGIN
+#import "UITableViewCell+AddView.h"
+#import "BNSliderView.h"
 
 @interface UITableViewSliderCell : UITableViewCell
 
+@property (nonatomic, strong) BNSliderView * sliderView;
+
+
 @end
 
-NS_ASSUME_NONNULL_END
+

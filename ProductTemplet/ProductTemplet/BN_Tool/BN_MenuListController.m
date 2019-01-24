@@ -61,7 +61,7 @@
 }
 
 - (void)configureMenuList{
-    NSArray * menuList = [NSArray arrayWithItemPrefix:@"工厂_" startIndex:1 count:10 type:@0];
+    NSArray * menuList = [NSArray arrayItemPrefix:@"工厂_" startIndex:1 count:10 type:@0];
     
     self.navigationItem.titleView = self.btnView;
     

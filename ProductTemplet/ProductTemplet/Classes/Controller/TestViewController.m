@@ -23,7 +23,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    [self createBarItemTitle:@"Timer" imageName:nil isLeft:NO isHidden:NO handler:^(id obj, id item, NSInteger idx) {
+    [self createBarItemTitle:@"Timer" imgName:nil isLeft:NO isHidden:NO handler:^(id obj, id item, NSInteger idx) {
         [self goController:@"TimerViewController" title:@"Timer"];
     }];
 

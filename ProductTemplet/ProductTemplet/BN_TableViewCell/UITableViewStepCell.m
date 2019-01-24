@@ -11,52 +11,60 @@
 #import "NSObject+Helper.h"
 #import "UIView+AddView.h"
 
-@interface UITableViewStepCell ()
- 
-@end
+#define MAS_SHORTHAND
+#define MAS_SHORTHAND_GLOBALS
+#import "Masonry.h"
 
+/**
+ 文字+btn
+ */
 @implementation UITableViewStepCell
+
+- (void)dealloc
+{
+    [self.labelLeft removeObserver:self forKeyPath:@"text"];
+}
 
 - (instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier{
     self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
     if (self) {
-        [self createControls];
+        [self.contentView addSubview:self.labelLeft];
+        [self.contentView addSubview:self.ppBtn];
         
+        [self.labelLeft addObserver:self forKeyPath:@"text" options: NSKeyValueObservingOptionNew context:nil];
+
     }
     return self;
 }
 
-- (void)createControls{
-    //文字+btn
-    [self.contentView addSubview:self.labelLeft];
-    [self.contentView addSubview:self.numberBtnLeft];
-    
+#pragma mark -observe
+-(void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary<NSKeyValueChangeKey,id> *)change context:(void *)context{
+    if ([keyPath isEqualToString:@"text"]) {
+        self.labelLeft.attributedText = [self.labelLeft.text toAsterisk];
+    }
 }
 
 -(void)layoutSubviews{
     [super layoutSubviews];
     
-   
-    //文字+btn
-    CGSize labLeftSize = [self sizeWithText:self.labelLeft.text font:self.labelLeft.font width:CGFLOAT_MAX];
-    if (self.labelLeft.attributedText) {
-        labLeftSize = [self sizeWithText:self.labelLeft.attributedText font:self.labelLeft.font width:CGFLOAT_MAX];
-    }
+    [self setupConstraint];
+}
+
+-(void)setupConstraint{
+    [self.labelLeft sizeToFit];
+    self.labelLeft.size = CGSizeMake(self.labelLeft.sizeWidth, 35);
+    [self.labelLeft makeConstraints:^(MASConstraintMaker *make) {
+        make.centerY.equalTo(self.contentView);
+        make.left.equalTo(self.contentView).offset(kX_GAP);
+        make.size.equalTo(self.labelLeft.size);
+    }];
     
-    //控件
-    CGFloat XGap = kX_GAP;
-    //    CGFloat YGap = kY_GAP;
-    //    CGFloat padding = 10;
-    CGFloat height = 35;
-    
-    CGFloat lableLeftH = kH_LABEL;
-    CGSize numBtnSize = CGSizeMake(130, height);
-    
-    self.labelLeft.frame = CGRectMake(XGap, CGRectGetMidY(self.contentView.frame) - lableLeftH/2.0, labLeftSize.width, lableLeftH);
-    //    self.numberBtnLeft.frame = CGRectMake(CGRectGetMaxX(self.labelLeft.frame)+50, CGRectGetMidY(self.contentView.frame) - height/2.0, numBtnSize.width, numBtnSize.height);
-    
-    self.numberBtnLeft.frame = CGRectMake(CGRectGetWidth(self.contentView.frame) - numBtnSize.width -60, CGRectGetMidY(self.contentView.frame) - height/2.0, numBtnSize.width, numBtnSize.height);
-    
+    [self.ppBtn makeConstraints:^(MASConstraintMaker *make) {
+        make.centerY.equalTo(self.contentView);
+        make.top.equalTo(self.labelLeft);
+        make.right.equalTo(self.contentView).offset(-kX_GAP);
+        make.width.equalTo(120);
+    }];
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
@@ -67,19 +75,19 @@
 
 #pragma mark - -layz
 
--(PPNumberButton *)numberBtnLeft{
-    if (!_numberBtnLeft) {
-        _numberBtnLeft = [PPNumberButton numberButtonWithFrame:CGRectZero];
-        //        _numberBtnLeft.delegate = self;
+-(PPNumberButton *)ppBtn{
+    if (!_ppBtn) {
+        _ppBtn = [PPNumberButton numberButtonWithFrame:CGRectZero];
+        //        _ppBtn.delegate = self;
         // 初始化时隐藏减按钮
-        //        _numberBtnLeft.decreaseHide = YES;
-        _numberBtnLeft.increaseImage = [UIImage imageNamed:kIMG_elemetInc];
-        _numberBtnLeft.decreaseImage = [UIImage imageNamed:kIMG_elemetDec];
+        //        _ppBtn.decreaseHide = YES;
+        _ppBtn.increaseImage = [UIImage imageNamed:kIMG_elemetInc];
+        _ppBtn.decreaseImage = [UIImage imageNamed:kIMG_elemetDec];
 
-        _numberBtnLeft.shakeAnimation = YES;
-        _numberBtnLeft.tag = kTAG_BTN;
+        _ppBtn.shakeAnimation = YES;
+        _ppBtn.tag = kTAG_BTN;
     }
-    return _numberBtnLeft;
+    return _ppBtn;
 }
 
 

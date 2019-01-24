@@ -14,9 +14,8 @@
 /**
  日期选择(默认)
  */
-@interface UITableViewDatePickerCell : UITableViewCell<UITextFieldDelegate>
+@interface UITableViewDatePickerCell : UITableViewCell
 
-@property (nonatomic, strong) NSString * dateStr;
 @property (nonatomic, strong) BN_DatePicker * datePicker;
 
 @property (nonatomic, strong) void(^block)(UITableViewDatePickerCell *view, NSString * dateStr);

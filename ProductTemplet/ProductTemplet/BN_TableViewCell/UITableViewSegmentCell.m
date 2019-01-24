@@ -11,40 +11,103 @@
 #import "NSObject+Helper.h"
 #import "UIView+AddView.h"
 
+#define MAS_SHORTHAND
+#define MAS_SHORTHAND_GLOBALS
+#import "Masonry.h"
+
+
+/**
+ 文字+segment
+ */
 @implementation UITableViewSegmentCell
+
+- (void)dealloc
+{
+    [self.labelLeft removeObserver:self forKeyPath:@"text"];
+}
 
 - (instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier{
     self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
     if (self) {
-        [self createControls];
+        [self.contentView addSubview:self.labelLeft];
+        [self.contentView addSubview:self.segmentCtl];
+        self.ctlAlignment = NSTextAlignmentCenter;
         
+        [self.labelLeft addObserver:self forKeyPath:@"text" options: NSKeyValueObservingOptionNew context:nil];
+
     }
     return self;
 }
- 
-- (void)createControls{
-    //文字+segment
-    [self.contentView addSubview:self.labelLeft];
-    [self.contentView addSubview:self.segmentCtrl];
-    
+
+#pragma mark -observe
+-(void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary<NSKeyValueChangeKey,id> *)change context:(void *)context{
+    if ([keyPath isEqualToString:@"text"]) {
+        self.labelLeft.attributedText = [self.labelLeft.text toAsterisk];
+    }
 }
 
 -(void)layoutSubviews{
     [super layoutSubviews];
     
-    //
-    CGSize labLeftSize = [self sizeWithText:self.labelLeft.text font:self.labelLeft.font width:CGFLOAT_MAX];
-    if (self.labelLeft.attributedText) {
-        labLeftSize = [self sizeWithText:self.labelLeft.attributedText font:self.labelLeft.font width:CGFLOAT_MAX];
+    [self setupConstraint];
+}
+
+-(void)setupConstraint{
+    [self.labelLeft sizeToFit];
+    self.labelLeft.size = CGSizeMake(self.labelLeft.sizeWidth, 35);
+    [self.labelLeft makeConstraints:^(MASConstraintMaker *make) {
+        make.centerY.equalTo(self.contentView);
+        make.left.equalTo(self.contentView).offset(kX_GAP);
+        make.size.equalTo(self.labelLeft.size);
+    }];
+    
+    CGFloat width = self.contentView.sizeWidth - self.labelLeft.maxX - kX_GAP;
+    CGFloat ctlWidth = width*0.7;
+    switch (self.ctlAlignment) {
+        case NSTextAlignmentLeft:
+        {
+            [self.segmentCtl makeConstraints:^(MASConstraintMaker *make) {
+                make.top.equalTo(self.labelLeft);
+                make.left.equalTo(self.labelLeft.right).offset(kPadding);
+                make.width.equalTo(ctlWidth);
+                make.height.equalTo(self.labelLeft);
+            }];
+        }
+            break;
+
+        case NSTextAlignmentRight:
+        {
+            [self.segmentCtl makeConstraints:^(MASConstraintMaker *make) {
+                make.top.equalTo(self.labelLeft);
+                make.right.equalTo(self.contentView).offset(-kX_GAP);
+                make.width.equalTo(ctlWidth);
+                make.height.equalTo(self.labelLeft);
+            }];
+        }
+            break;
+            
+        case NSTextAlignmentJustified:
+        {
+            [self.segmentCtl makeConstraints:^(MASConstraintMaker *make) {
+                make.top.equalTo(self.labelLeft);
+                make.left.equalTo(self.labelLeft.right).offset(kPadding);
+                make.right.equalTo(self.contentView).offset(-kX_GAP);
+                make.height.equalTo(self.labelLeft);
+            }];
+        }
+            break;
+            
+        default:
+        {
+            [self.segmentCtl makeConstraints:^(MASConstraintMaker *make) {
+                make.top.equalTo(self.labelLeft);
+                make.left.equalTo(self.labelLeft.right).offset((width - ctlWidth)*0.5);
+                make.width.equalTo(ctlWidth);
+                make.height.equalTo(self.labelLeft);
+            }];
+        }
+            break;
     }
-    //控件
-    CGFloat XGap = kX_GAP;
-    CGFloat height = 35;
-    
-    CGFloat lableLeftH = kH_LABEL;
-    self.labelLeft.frame = CGRectMake(XGap, CGRectGetMidY(self.contentView.frame) - lableLeftH/2.0, labLeftSize.width, lableLeftH);
-    self.segmentCtrl.frame = CGRectMake(CGRectGetMaxX(self.labelLeft.frame)+30, CGRectGetMidY(self.contentView.frame) - height/2.0, CGRectGetWidth(self.contentView.frame) - CGRectGetMaxX(self.labelLeft.frame) -30*2, height);
-    
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
@@ -55,13 +118,13 @@
 
 #pragma mark - -layz
 
--(UISegmentedControl *)segmentCtrl{
-    if (!_segmentCtrl) {
-        _segmentCtrl = [UIView createSegmentRect:CGRectMake(0, 0, kScreenWidth, 44) items:@[@"是",@"否"] selectedIndex:0 type:@0];
-        _segmentCtrl.selectedSegmentIndex = 0;
+-(UISegmentedControl *)segmentCtl{
+    if (!_segmentCtl) {
+        _segmentCtl = [UIView createSegmentRect:CGRectZero items:@[@"是",@"否"] selectedIndex:0 type:@0];
+        _segmentCtl.selectedSegmentIndex = 0;
         
     }
-    return _segmentCtrl;
+    return _segmentCtl;
 }
 
 @end

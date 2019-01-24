@@ -84,7 +84,7 @@
 
 - (void)setupConstraintReverse{
     CGFloat width = CGRectGetWidth(self.bounds) - _padding*(_itemList.count - 1);
-    CGFloat height = CGRectGetHeight(self.bounds) - _padding*(_itemList.count - 1);
+    CGFloat height = CGRectGetHeight(self.bounds) - _padding*(_numberOfRow - 1);
     [_itemList enumerateObjectsWithOptions:NSEnumerationReverse usingBlock:^(UIView * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
         if (idx == 0) {
             obj.frame = CGRectMake(_padding*(_itemList.count - 1), _padding*(_itemList.count - 1), width, height);

@@ -15,8 +15,7 @@
  */
 @interface UITableViewTextFieldCell : UITableViewCell<UITextFieldDelegate>
 
-@property (nonatomic, strong) NSString * string;
-@property (nonatomic, strong) void(^block)(UITableViewTextFieldCell *view, NSString * string);
+@property (nonatomic, strong) void(^block)(UITableViewTextFieldCell *view, UITextField * textField);
 
 @end
 

@@ -12,65 +12,52 @@
 #import "NSObject+Helper.h"
 #import "UIView+Helper.h"
 
+/**
+ 开关
+ */
 @implementation UITableViewSwitchCell
+
+-(void)dealloc{
+    [self.switchView.labelLeft removeObserver:self forKeyPath:@"text" context:nil];
+    
+}
 
 - (instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier{
     self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
     if (self) {
-        [self createControls];
+        [self.contentView addSubview:self.switchView];
+        
+        [self.switchView.labelLeft addObserver:self forKeyPath:@"text" options:NSKeyValueObservingOptionNew context:nil];
         
     }
     return self;
 }
 
-- (void)createControls{
-    //文字+地址选择器
-    [self.contentView addSubview:self.labelLeft];
-    
-    [self.contentView addSubview:self.switchCtrl];
-    
+-(void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary<NSKeyValueChangeKey,id> *)change context:(void *)context{
+    if ([keyPath isEqualToString:@"text"]) {
+        self.switchView.labelLeft.attributedText = [self.switchView.labelLeft.text toAsterisk];;
+        
+    }
 }
 
 -(void)layoutSubviews{
     [super layoutSubviews];
     
-    //
-    CGSize labLeftSize = [self sizeWithText:self.labelLeft.text font:self.labelLeft.font width:CGFLOAT_MAX];
-    if (self.labelLeft.attributedText) {
-        labLeftSize = [self sizeWithText:self.labelLeft.attributedText font:self.labelLeft.font width:CGFLOAT_MAX];
-    }
-    //控件
-    CGFloat XGap = kX_GAP;
-    CGFloat height = 35;
-    
-    CGFloat lableLeftH = kH_LABEL;
-    self.labelLeft.frame = CGRectMake(XGap, CGRectGetMidY(self.contentView.frame) - lableLeftH/2.0, labLeftSize.width, lableLeftH);
-    self.switchCtrl.frame = CGRectMake(CGRectGetWidth(self.contentView.frame) - kX_GAP - CGRectGetWidth(self.switchCtrl.frame), CGRectGetMidY(self.contentView.frame) - CGRectGetHeight(self.switchCtrl.frame)/2.0, CGRectGetWidth(self.switchCtrl.frame), CGRectGetHeight(self.switchCtrl.frame));
-    
+    self.switchView.frame = self.contentView.bounds;
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
     [super setSelected:selected animated:animated];
-    
     // Configure the view for the selected state
 }
 
-#pragma mark - -layz
+- (BNSwitchView *)switchView{
+    if (!_switchView) {
+        _switchView = [[BNSwitchView alloc]initWithFrame:self.bounds];
+        _switchView.autoresizingMask = UIViewAutoresizingFlexibleWidth|UIViewAutoresizingFlexibleHeight;
 
--(UISwitch *)switchCtrl{
-    if (!_switchCtrl) {
-        _switchCtrl = ({
-            UISwitch *view = [[UISwitch alloc]init];
-            view.on = YES;//设置初始为ON的一边
-            view.onTintColor = UIColor.themeColor;
-            view.tintColor = UIColor.whiteColor;
-            view;
-        });
     }
-    return _switchCtrl;
+    return _switchView;
 }
 
-
-
 @end
-
