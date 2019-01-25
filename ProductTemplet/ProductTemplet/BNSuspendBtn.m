@@ -20,6 +20,7 @@
         self.layer.zPosition = 1;//置顶（只是显示置顶，但响应事件会被后来者覆盖！）
         self.backgroundColor = UIColor.clearColor;
         self.imageView.contentMode = UIViewContentModeScaleAspectFit;
+        [self setBackgroundImage:[UIImage imageNamed:@"btn_add"] forState:UIControlStateNormal];
 
         //创建移动手势事件
         UIPanGestureRecognizer *pan = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(handleActionPan:)];

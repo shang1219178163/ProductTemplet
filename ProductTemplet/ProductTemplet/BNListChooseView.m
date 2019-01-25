@@ -38,8 +38,6 @@
         }];
         
         [self setupConstraint];
-        
-        self.backgroundColor = UIColor.randomColor;
     }
     return self;
 }

@@ -22,7 +22,6 @@
     if (!_suspendBtn) {
         _suspendBtn = [[BNSuspendBtn alloc]initWithFrame:CGRectMake(kScreenWidth - 60, 80, 60, 60)];
         _suspendBtn.insets = UIEdgeInsetsMake(40, 60, 80, 100);
-        [_suspendBtn setBackgroundImage:UIImageNamed(@"Item_first_H") forState:UIControlStateNormal];
         _suspendBtn.parController = self;
         [_suspendBtn addActionHandler:^(UIControl * _Nonnull control) {
             DDLog(@"%@",@(control.center));
