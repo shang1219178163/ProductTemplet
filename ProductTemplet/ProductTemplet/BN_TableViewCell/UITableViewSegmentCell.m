@@ -101,8 +101,8 @@
         {
             [self.segmentCtl makeConstraints:^(MASConstraintMaker *make) {
                 make.top.equalTo(self.labelLeft);
-                make.left.equalTo(self.labelLeft.right).offset((width - ctlWidth)*0.5);
-                make.width.equalTo(ctlWidth);
+                make.left.lessThanOrEqualTo(self.labelLeft.right).offset((width - ctlWidth)*0.5);
+                make.width.greaterThanOrEqualTo(ctlWidth);
                 make.height.equalTo(self.labelLeft);
             }];
         }
