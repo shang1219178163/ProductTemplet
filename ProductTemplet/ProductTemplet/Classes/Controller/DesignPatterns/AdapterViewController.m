@@ -54,7 +54,8 @@
     [self.view addSubview:containView];
     
     rect = CGRectMake((kScreenWidth - 200)/2.0, CGRectGetMaxY(containView.frame)+20, 200, 30);
-    UILabel * label = [UIView createLabelRect:rect text:@"tips" textColor:nil tag:0 type:@0 font:16 backgroudColor:UIColor.greenColor alignment:NSTextAlignmentCenter];
+    UILabel * label = [UIView createLabelRect:rect text:@"tips" font:16 tag:0 type:@0];
+    label.textAlignment = NSTextAlignmentCenter;
     [self.view addSubview:label];
     self.lbState = label;
     

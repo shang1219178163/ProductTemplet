@@ -63,28 +63,32 @@
 
 -(UILabel *)labTitle{
     if (!_labTitle) {
-        _labTitle = [UIView createLabelRect:CGRectZero text:@"" textColor:UIColor.blackColor tag:kTAG_LABEL type:@2 font:15 backgroudColor:UIColor.whiteColor alignment:NSTextAlignmentCenter];
+        _labTitle = [UIView createLabelRect:CGRectZero text:@"" font:15 tag:kTAG_LABEL type:@2];
+        _labTitle.textAlignment = NSTextAlignmentCenter;
     }
     return _labTitle;
 }
 
 -(UILabel *)labLeft{
     if (!_labLeft) {
-        _labLeft = [UIView createLabelRect:CGRectZero text:@"" textColor:UIColor.blackColor tag:kTAG_LABEL+1 type:@2 font:15 backgroudColor:UIColor.whiteColor alignment:NSTextAlignmentCenter];
+        _labLeft = [UIView createLabelRect:CGRectZero text:@"" font:15 tag:kTAG_LABEL+1 type:@2 ];
+        _labLeft.textAlignment = NSTextAlignmentCenter;
     }
     return _labLeft;
 }
 
 -(UILabel *)labCenter{
     if (!_labCenter) {
-        _labCenter = [UIView createLabelRect:CGRectZero text:@"" textColor:UIColor.blackColor tag:kTAG_LABEL+2 type:@2 font:15 backgroudColor:UIColor.whiteColor alignment:NSTextAlignmentCenter];
+        _labCenter = [UIView createLabelRect:CGRectZero text:@"" font:15 tag:kTAG_LABEL+2 type:@2];
+        _labCenter.textAlignment = NSTextAlignmentCenter;
     }
     return _labCenter;
 }
 
 -(UILabel *)labRight{
     if (!_labRight) {
-        _labRight = [UIView createLabelRect:CGRectZero text:@"" textColor:UIColor.blackColor tag:kTAG_LABEL+2 type:@0 font:14 backgroudColor:UIColor.whiteColor alignment:NSTextAlignmentCenter];
+        _labRight = [UIView createLabelRect:CGRectZero text:@"" font:15 tag:kTAG_LABEL+2 type:@0];
+        _labRight.textAlignment = NSTextAlignmentCenter;
     }
     return _labRight;
 }

@@ -22,6 +22,7 @@
         [self addSubview:self.textField];
         [self addSubview:self.btn];
       
+        self.queryStr = @"";
         self.textField.placeholder = @"请输入关键字";
         self.textField.delegate = self;
     }
@@ -77,14 +78,14 @@
 
 -(UIButton *)btn{
     if (!_btn) {
-        _btn = [UIView createBtnRect:CGRectZero title:@"搜索" font:kFZ_Second image:nil tag:kTAG_BTN type:@7 target:nil aSelector:nil];
+        _btn = [UIView createBtnRect:CGRectZero title:@"搜索" font:16 image:nil tag:kTAG_BTN type:@7];
     }
     return _btn;
 }
 
 -(UITextField *)textField{
     if (!_textField) {
-        _textField = [UIView createTextFieldRect:CGRectZero text:@"" placeholder:nil font:kFZ_Second textAlignment:NSTextAlignmentLeft keyboardType:UIKeyboardTypeDefault];
+        _textField = [UIView createTextFieldRect:CGRectZero text:@"" tag:kTAG_TEXTFIELD];
         _textField.returnKeyType = UIReturnKeySearch;
 
     }

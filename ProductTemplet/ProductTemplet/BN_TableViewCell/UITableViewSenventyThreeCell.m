@@ -59,21 +59,27 @@
 
 -(UILabel *)labelOne{
     if (!_labelOne) {
-        _labelOne = [UIView createLabelRect:CGRectZero text:@"" textColor:nil tag:kTAG_LABEL type:@0 font:kFZ_Third backgroudColor:UIColor.whiteColor alignment:NSTextAlignmentCenter];
+        _labelOne = [UIView createLabelRect:CGRectZero text:@"" font:16 tag:kTAG_LABEL type:@0];
+        _labelThree.textColor = UIColor.redColor;
+   
     }
     return _labelOne;
 }
 
 -(UILabel *)labelTwo{
     if (!_labelTwo) {
-        _labelTwo = [UIView createLabelRect:CGRectZero text:@"" textColor:nil tag:kTAG_LABEL+1 type:@0 font:kFZ_Third backgroudColor:UIColor.whiteColor alignment:NSTextAlignmentCenter];
+        _labelTwo = [UIView createLabelRect:CGRectZero text:@"" font:16 tag:kTAG_LABEL+1 type:@0 ];
+        _labelThree.textColor = UIColor.redColor;
+    
     }
     return _labelTwo;
 }
 
 -(UILabel *)labelThree{
     if (!_labelThree) {
-        _labelThree = [UIView createLabelRect:CGRectZero text:@"" textColor:nil tag:kTAG_LABEL+2 type:@0 font:kFZ_Third backgroudColor:UIColor.whiteColor alignment:NSTextAlignmentCenter];
+        _labelThree = [UIView createLabelRect:CGRectZero text:@"" font:16 tag:kTAG_LABEL+2 type:@0 ];
+        _labelThree.textColor = UIColor.redColor;
+    
     }
     return _labelThree;
 }

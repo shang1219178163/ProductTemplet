@@ -28,7 +28,9 @@
     NSString * text = @"@weakify 将当前对象声明为weak.. 这样block内部引用当前对象,就不会造成引用计数+1可以破解循环引用;\n@strongify 相当于声明一个局部的strong对象,等于当前对象.可以保证block调用的时候,内部的对象不会释放";
     
     CGRect rect = CGRectMake(10, 10, kScreenWidth - 20, kScreenWidth - 20);
-    UILabel * label = [UIView createLabelRect:rect text:text textColor:UIColor.redColor tag:kTAG_LABEL type:@0 font:16 backgroudColor:UIColor.whiteColor alignment:NSTextAlignmentLeft];
+    UILabel * label = [UIView createLabelRect:rect text:text font:16 tag:kTAG_LABEL type:@0];
+    label.textColor = UIColor.redColor;
+    label.backgroundColor = UIColor.whiteColor;
     [self.view addSubview:label];
     
     

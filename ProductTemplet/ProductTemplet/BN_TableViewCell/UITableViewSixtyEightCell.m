@@ -65,33 +65,33 @@
 
 -(UILabel *)labelOne{
     if (!_labelOne) {
-        _labelOne = [UIView createLabelRect:CGRectZero text:@"" textColor:nil tag:kTAG_LABEL type:@0 font:kFZ_Third backgroudColor:UIColor.whiteColor alignment:NSTextAlignmentCenter];
+        _labelOne = [UIView createLabelRect:CGRectZero text:@"" font:16 tag:kTAG_LABEL type:@0 ];
     }
     return _labelOne;
 }
 
 -(UILabel *)labelTwo{
     if (!_labelTwo) {
-        _labelTwo = [UIView createLabelRect:CGRectZero text:@"" textColor:nil tag:kTAG_LABEL+1 type:@0 font:kFZ_Third backgroudColor:UIColor.whiteColor alignment:NSTextAlignmentCenter];
+        _labelTwo = [UIView createLabelRect:CGRectZero text:@"" font:16 tag:kTAG_LABEL+1 type:@0 ];
     }
     return _labelTwo;
 }
 
 -(UILabel *)labelThree{
     if (!_labelThree) {
-        _labelThree = [UIView createLabelRect:CGRectZero text:@"" textColor:nil tag:kTAG_LABEL+2 type:@0 font:kFZ_Third backgroudColor:UIColor.whiteColor alignment:NSTextAlignmentCenter];
+        _labelThree = [UIView createLabelRect:CGRectZero text:@"" font:16 tag:kTAG_LABEL+2 type:@0 ];
     }
     return _labelThree;
 }
 -(UILabel *)labelFour{
     if (!_labelFour) {
-        _labelFour = [UIView createLabelRect:CGRectZero text:@"" textColor:nil tag:kTAG_LABEL+3 type:@0 font:kFZ_Third backgroudColor:UIColor.whiteColor alignment:NSTextAlignmentCenter];
+        _labelFour = [UIView createLabelRect:CGRectZero text:@"" font:16 tag:kTAG_LABEL+3 type:@0 ];
     }
     return _labelFour;
 }
 -(UILabel *)labelFive{
     if (!_labelFive) {
-        _labelFive = [UIView createLabelRect:CGRectZero text:@"" textColor:nil tag:kTAG_LABEL+4 type:@0 font:kFZ_Third backgroudColor:UIColor.whiteColor alignment:NSTextAlignmentCenter];
+        _labelFive = [UIView createLabelRect:CGRectZero text:@"" font:16 tag:kTAG_LABEL+4 type:@0 ];
     }
     return _labelFive;
 }

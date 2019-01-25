@@ -95,7 +95,8 @@
 
 -(UILabel *)labelRightSub{
     if (!_labelRightSub) {
-        _labelRightSub = [UIView createLabelRect:CGRectZero text:@"" textColor:nil tag:kTAG_LABEL+5 type:@2 font:kFZ_Third backgroudColor:UIColor.whiteColor alignment:NSTextAlignmentRight];
+        _labelRightSub = [UIView createLabelRect:CGRectZero text:@"" font:16 tag:kTAG_LABEL+5 type:@2];
+        _labelRightSub.textAlignment = NSTextAlignmentRight;
     }
     return _labelRightSub;
 }

@@ -358,14 +358,22 @@
 
 -(UILabel *)labelLeft{
     if (!_labelLeft) {
-        _labelLeft = [UIView createLabelRect:CGRectZero text:@"" textColor:nil tag:kTAG_LABEL type:@2 font:kFZ_Second backgroudColor:UIColor.whiteColor alignment:NSTextAlignmentLeft];
+        _labelLeft = ({
+            UILabel * view = [UIView createLabelRect:CGRectZero text:@"" font:16 tag:kTAG_LABEL type:@2];
+            view.textAlignment = NSTextAlignmentLeft;
+            view;
+        });
     }
     return _labelLeft;
 }
 
 -(UILabel *)labelRight{
     if (!_labelRight) {
-        _labelRight = [UIView createLabelRect:CGRectZero text:@"" textColor:nil tag:kTAG_LABEL+4 type:@2 font:kFZ_Second backgroudColor:UIColor.whiteColor alignment:NSTextAlignmentRight];
+        _labelRight = ({
+            UILabel * view = [UIView createLabelRect:CGRectZero text:@"" font:16 tag:kTAG_LABEL+4 type:@2];
+            view.textAlignment = NSTextAlignmentLeft;
+            view;
+        });
     }
     return _labelRight;
 }

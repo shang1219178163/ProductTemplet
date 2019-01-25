@@ -7,14 +7,30 @@
 //
 
 #import "EntryViewController.h"
+#import "BNSuspendBtn.h"
 
 @interface EntryViewController ()
 
 @property(nonatomic, strong) NSDictionary * dic;
+@property(nonatomic, strong) BNSuspendBtn * suspendBtn;
 
 @end
 
 @implementation EntryViewController
+
+-(BNSuspendBtn *)suspendBtn{
+    if (!_suspendBtn) {
+        _suspendBtn = [[BNSuspendBtn alloc]initWithFrame:CGRectMake(kScreenWidth - 60, 80, 60, 60)];
+        _suspendBtn.insets = UIEdgeInsetsMake(40, 60, 80, 100);
+        [_suspendBtn setBackgroundImage:UIImageNamed(@"Item_first_H") forState:UIControlStateNormal];
+        _suspendBtn.parController = self;
+        [_suspendBtn addActionHandler:^(UIControl * _Nonnull control) {
+            DDLog(@"%@",@(control.center));
+            
+        } forControlEvents:UIControlEventTouchUpInside];
+    }
+    return _suspendBtn;
+}
 
 -(NSDictionary *)dic{
     if (!_dic) {
@@ -33,6 +49,8 @@
     // Do any additional setup after loading the view.
     [self.view addSubview:self.tableView];
 
+    [self.view addSubview: self.suspendBtn];
+    
     self.dataList = @[
                       @[@"*起止时间:", @"108", @"60.0", @"", @"recharge", ],
                       @[@"*商品名称:", @"1", @"60.0", @"", @"cardName", ],

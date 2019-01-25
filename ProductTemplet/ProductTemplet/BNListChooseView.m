@@ -36,8 +36,10 @@
 
             [self.pickerView show];
         }];
+        
         [self setupConstraint];
         
+        self.backgroundColor = UIColor.randomColor;
     }
     return self;
 }
@@ -68,7 +70,7 @@
 
 -(UILabel *)labelLeft{
     if (!_labelLeft) {
-        _labelLeft = [self createLabelRect:CGRectZero text:@"修改名称:" tag:0];
+        _labelLeft = [self createLabelRect:CGRectZero text:@"修改名称:" font:16 tag:0];
     }
     return _labelLeft;
 }
@@ -93,10 +95,10 @@
     return _pickerView;
 }
 
-- (UILabel *)createLabelRect:(CGRect)rect text:(NSString *)text tag:(NSInteger)tag{
+- (UILabel *)createLabelRect:(CGRect)rect text:(NSString *)text font:(CGFloat)font tag:(NSInteger)tag{
     UILabel * view = [[UILabel alloc] initWithFrame:CGRectZero];
     view.autoresizingMask = UIViewAutoresizingFlexibleWidth|UIViewAutoresizingFlexibleHeight;
-    view.font = [UIFont systemFontOfSize:16];
+    view.font = [UIFont systemFontOfSize:font];
     view.textAlignment = NSTextAlignmentCenter;
     view.userInteractionEnabled = true;
     view.numberOfLines = 1;

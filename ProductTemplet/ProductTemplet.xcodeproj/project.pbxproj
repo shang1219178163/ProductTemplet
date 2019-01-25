@@ -15,6 +15,7 @@
 		144920AA21C7BAA700C3C2F6 /* MoneyDisplayController.m in Sources */ = {isa = PBXBuildFile; fileRef = 144920A921C7BAA700C3C2F6 /* MoneyDisplayController.m */; };
 		147B971F21EF005B000F5294 /* UICollectionDisplayController.m in Sources */ = {isa = PBXBuildFile; fileRef = 147B971E21EF005B000F5294 /* UICollectionDisplayController.m */; };
 		149E827121F9B89A0092E202 /* BNSearchView.m in Sources */ = {isa = PBXBuildFile; fileRef = 149E827021F9B89A0092E202 /* BNSearchView.m */; };
+		149E827621FAEFB10092E202 /* BNSuspendBtn.m in Sources */ = {isa = PBXBuildFile; fileRef = 149E827521FAEFB10092E202 /* BNSuspendBtn.m */; };
 		14E793C421D62E0B003230C8 /* bug.png in Resources */ = {isa = PBXBuildFile; fileRef = 14E793C321D62E0B003230C8 /* bug.png */; };
 		14E8692D21C251BA009CE33E /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 14E8692C21C251BA009CE33E /* HomeViewController.m */; };
 		14E8F74F21F5E1ED004317B5 /* RuntimeController.m in Sources */ = {isa = PBXBuildFile; fileRef = 14E8F74E21F5E1ED004317B5 /* RuntimeController.m */; };
@@ -476,6 +477,8 @@
 		147B971E21EF005B000F5294 /* UICollectionDisplayController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UICollectionDisplayController.m; sourceTree = "<group>"; };
 		149E826F21F9B89A0092E202 /* BNSearchView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BNSearchView.h; sourceTree = "<group>"; };
 		149E827021F9B89A0092E202 /* BNSearchView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BNSearchView.m; sourceTree = "<group>"; };
+		149E827421FAEFB10092E202 /* BNSuspendBtn.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BNSuspendBtn.h; sourceTree = "<group>"; };
+		149E827521FAEFB10092E202 /* BNSuspendBtn.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BNSuspendBtn.m; sourceTree = "<group>"; };
 		14E793C321D62E0B003230C8 /* bug.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bug.png; sourceTree = "<group>"; };
 		14E8692B21C251BA009CE33E /* HomeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
 		14E8692C21C251BA009CE33E /* HomeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
@@ -1487,6 +1490,8 @@
 				513646B620860332005A20E7 /* MainViewController.m */,
 				516F8560215DF8F2008E62B3 /* SuspendButton.h */,
 				516F8561215DF8F4008E62B3 /* SuspendButton.m */,
+				149E827421FAEFB10092E202 /* BNSuspendBtn.h */,
+				149E827521FAEFB10092E202 /* BNSuspendBtn.m */,
 				14E8FA2921F84513004317B5 /* BNDateRangeView.h */,
 				14E8FA2A21F84513004317B5 /* BNDateRangeView.m */,
 				14E8FA2C21F8545D004317B5 /* BNSliderView.h */,
@@ -3074,6 +3079,7 @@
 				14E8F9D121F7F5A7004317B5 /* UITableViewSenventyTwoCell.m in Sources */,
 				14E8F9DC21F7F5A7004317B5 /* UITableViewFifteenCell.m in Sources */,
 				5169DF212088235900B025C3 /* BN_GeocodeAnnotation.m in Sources */,
+				149E827621FAEFB10092E202 /* BNSuspendBtn.m in Sources */,
 				5162F71020BFBBB4009A6253 /* BN_Operation.m in Sources */,
 				515CC97C20B6AAF2004AE27C /* AAPlotLinesElement.m in Sources */,
 				516969AF20BCF9A800BAA53D /* AbstractClient.m in Sources */,
