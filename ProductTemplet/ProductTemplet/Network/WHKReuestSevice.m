@@ -24,12 +24,8 @@
  *
  *  @param URL        请求地址
  *  @param parameters 请求参数
- *  @param name       图片对应服务器上的字段
  *  @param images     图片数组
  *  @param fileNames  图片文件名数组, 可以为nil, 数组内的文件名默认为当前日期时间"yyyyMMddHHmmss"
- *  @param imageScale 图片文件压缩比 范围 (0.f ~ 1.f)
- *  @param imageType  图片文件的类型,例:png、jpg(默认类型)....
- *  @param progress   上传进度信息
  *  @param success    请求成功的回调
  *  @param failure    请求失败的回调
  *
@@ -45,14 +41,7 @@
     // 设置请求头
     NSString * name = @"image";
     CGFloat imageScale = 1.0;
-    
     NSString * imageType = @"jpeg";
-
-//    NSString * imageType = [Utilities_DM contentTypeForImageData:data];
-//    if (!imageType) {
-//        imageType = @"jpeg";
-//
-//    }
 
     return [PPNetworkHelper uploadImagesWithURL:URL parameters:parameters name:name images:images fileNames:fileNames imageScale:imageScale imageType:imageType progress:^(NSProgress *progress) {
         //上传进度
@@ -76,14 +65,7 @@
     // 设置请求头
     NSString * name = @"image";
     CGFloat imageScale = 1.0;
-    
     NSString * imageType = @"jpeg";
-    
-    //    NSString * imageType = [Utilities_DM contentTypeForImageData:data];
-    //    if (!imageType) {
-    //        imageType = @"jpeg";
-    //
-    //    }
     
     return [PPNetworkHelper uploadImagesWithURL:URL parameters:parameters name:name images:images fileNames:fileNames imageScale:imageScale imageType:imageType progress:^(NSProgress *progress) {
         progressRate(progress);//上传进度
@@ -183,23 +165,5 @@
     [task resume];
 }
 
-//数据处理
-+ (id)handleResponseObject:(id)responseObject{
-    
-    if ([NSJSONSerialization isValidJSONObject:responseObject]) {
-        NSError * error = nil;
-        responseObject = [NSJSONSerialization JSONObjectWithData:responseObject options:kNilOptions error:&error];
-        if (error) {
-            DDLog(@"error:_%@",error);
-
-        }
-    }
-    else{
-        responseObject = [[NSString alloc]initWithData:responseObject encoding:NSUTF8StringEncoding];
-        
-    }
-//    DDLog(@"responseStr %@",responseStr);
-    return responseObject;
-}
 
 @end

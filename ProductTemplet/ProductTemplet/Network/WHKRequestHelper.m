@@ -10,7 +10,6 @@
 
 #import "BN_Globle.h"
 #import "NSObject+Helper.h"
-#import "NSObject+Date.h"
 #import "NSString+Helper.h"
 
 #import "NSDate+Helper.h"
@@ -87,20 +86,10 @@ NSString *const kHTTP_URLMiddle = @"i=42&c=entry&do=fengmian&m=android&source=io
     return urlString;
 }
 
-//+ (NSString *)getInterfaceUrlWithMessageNameAboutAppInfo:(NSString *)messageName{
-//    
-//    NSString * domain = @"http://www.weihouyunbao.cn:9999/app/index.php?i=3&c=entry&do=goods&m=nonghuotongweihou&source=1";
-//    NSString * allAddresss = [domain stringByAppendingFormat:@"&r=%@",messageName];
-//    
-//    //token
-//    return allAddresss;
-//}
-
 + (NSString *)getTokenRequestMessageName:(NSString *)messageName{
     //
-    NSDate *now = [NSDate date];
-    NSString * dateStr = [self stringWithDate:now format:@"yyyyMMdd"];
-    
+    NSDate * now = NSDate.date;
+    NSString * dateStr = [NSDateFormatter stringFromDate:now format:@"yyyyMMdd"];
     NSString * string = [dateStr stringByAppendingFormat:@"%@",messageName];
     NSString * md5String = [string md5Encode];
     

@@ -35,7 +35,7 @@
         [self addSubview:self.labEnd];
         [self addSubview:self.labLine];
         
-        self.dateStart = self.dateEnd = [[NSDateFormatter format:kFormatDate date:NSDate.date] toDateShort];
+        self.dateStart = self.dateEnd = [[NSDateFormatter stringFromDate:NSDate.date format:kFormatDate] toDateShort];
                 
     }
     return self;
@@ -143,7 +143,7 @@
             view.maximumDate = NSDate.distantFuture;
             view.title = @"请选择时间";
             view.block = ^(UIDatePicker *datePicker, NSInteger btnIndex) {
-                NSString * dateStr = [NSDateFormatter format:kFormatDate date:datePicker.date];
+                NSString * dateStr = [NSDateFormatter stringFromDate:datePicker.date format:kFormatDate];
                 self.dateStart = dateStr;
                 if (self.block) {
                     self.block(self);
@@ -163,7 +163,7 @@
             view.maximumDate = NSDate.distantFuture;
             view.title = @"请选择时间";
             view.block = ^(UIDatePicker *datePicker, NSInteger btnIndex) {
-                NSString * dateStr = [NSDateFormatter format:kFormatDate date:datePicker.date];
+                NSString * dateStr = [NSDateFormatter stringFromDate:datePicker.date format:kFormatDate];
                 self.dateEnd = dateStr;
                 if (self.block) {
                     self.block(self);

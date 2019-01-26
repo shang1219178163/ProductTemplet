@@ -13,6 +13,7 @@
 		1421D5CD21F307F700635582 /* CustomViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1421D5CC21F307F700635582 /* CustomViewController.m */; };
 		1421D5D021F3177700635582 /* BNWalletView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1421D5CF21F3177700635582 /* BNWalletView.m */; };
 		144920AA21C7BAA700C3C2F6 /* MoneyDisplayController.m in Sources */ = {isa = PBXBuildFile; fileRef = 144920A921C7BAA700C3C2F6 /* MoneyDisplayController.m */; };
+		1476F78D21FC36B10088C137 /* WHKBaseRequestApi.m in Sources */ = {isa = PBXBuildFile; fileRef = 1476F78C21FC36B10088C137 /* WHKBaseRequestApi.m */; };
 		147B971F21EF005B000F5294 /* UICollectionDisplayController.m in Sources */ = {isa = PBXBuildFile; fileRef = 147B971E21EF005B000F5294 /* UICollectionDisplayController.m */; };
 		149E827121F9B89A0092E202 /* BNSearchView.m in Sources */ = {isa = PBXBuildFile; fileRef = 149E827021F9B89A0092E202 /* BNSearchView.m */; };
 		149E827621FAEFB10092E202 /* BNSuspendBtn.m in Sources */ = {isa = PBXBuildFile; fileRef = 149E827521FAEFB10092E202 /* BNSuspendBtn.m */; };
@@ -473,6 +474,8 @@
 		1421D5CF21F3177700635582 /* BNWalletView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BNWalletView.m; sourceTree = "<group>"; };
 		144920A821C7BAA700C3C2F6 /* MoneyDisplayController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MoneyDisplayController.h; sourceTree = "<group>"; };
 		144920A921C7BAA700C3C2F6 /* MoneyDisplayController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MoneyDisplayController.m; sourceTree = "<group>"; };
+		1476F78B21FC36B10088C137 /* WHKBaseRequestApi.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WHKBaseRequestApi.h; sourceTree = "<group>"; };
+		1476F78C21FC36B10088C137 /* WHKBaseRequestApi.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WHKBaseRequestApi.m; sourceTree = "<group>"; };
 		147B971D21EF005B000F5294 /* UICollectionDisplayController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UICollectionDisplayController.h; sourceTree = "<group>"; };
 		147B971E21EF005B000F5294 /* UICollectionDisplayController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UICollectionDisplayController.m; sourceTree = "<group>"; };
 		149E826F21F9B89A0092E202 /* BNSearchView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BNSearchView.h; sourceTree = "<group>"; };
@@ -2236,6 +2239,8 @@
 				51698C7E2137C0430069C2B2 /* WHKRequestHelper.m */,
 				51698C802137C0430069C2B2 /* WHKReuestSevice.h */,
 				51698C832137C0430069C2B2 /* WHKReuestSevice.m */,
+				1476F78B21FC36B10088C137 /* WHKBaseRequestApi.h */,
+				1476F78C21FC36B10088C137 /* WHKBaseRequestApi.m */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -3093,6 +3098,7 @@
 				51B9CD1C20A0538F0096A540 /* BN_TempViewController.m in Sources */,
 				14E8FA1921F7F5A7004317B5 /* UITableViewSegmentCell.m in Sources */,
 				51258C1B215E38FD009CDEE3 /* BN_Language.m in Sources */,
+				1476F78D21FC36B10088C137 /* WHKBaseRequestApi.m in Sources */,
 				14E8F9EA21F7F5A7004317B5 /* UITableViewTwentyFourCell.m in Sources */,
 				513646A12086031D005A20E7 /* AppDelegate.m in Sources */,
 				5175C93920C13DE1009EA86E /* Student.m in Sources */,

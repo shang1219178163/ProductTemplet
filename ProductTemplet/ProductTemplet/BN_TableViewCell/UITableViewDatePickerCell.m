@@ -34,7 +34,7 @@
         [self.contentView addSubview:self.labelLeft];
         [self.contentView addSubview:self.textField];
         
-        self.textField.text = [[NSDateFormatter format:kFormatDate date:NSDate.date] toDateShort];
+        self.textField.text = [[NSDateFormatter stringFromDate:NSDate.date format:kFormatDate] toDateShort];
         self.textField.placeholder = @"请选择";
         self.textField.textAlignment = NSTextAlignmentCenter;
         
@@ -100,7 +100,7 @@
             view.title = @"请选择时间";
             view.block = ^(UIDatePicker *datePicker, NSInteger btnIndex) {
                 
-                NSString * dateStr = [NSDateFormatter format:kFormatDate date:datePicker.date];
+                NSString * dateStr = [NSDateFormatter stringFromDate:datePicker.date format:kFormatDate];
                 DDLog(@"dateStr_%@_%ld",dateStr,btnIndex);
                 if (btnIndex == 1) {
                     self.textField.text = [dateStr toDateShort];
