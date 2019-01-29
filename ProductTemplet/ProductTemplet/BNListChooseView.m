@@ -8,6 +8,7 @@
 
 #import "BNListChooseView.h"
 
+#import "BNGloble.h"
 #import "UIView+Helper.h"
 
 #define MAS_SHORTHAND
@@ -73,7 +74,7 @@
     return _labelLeft;
 }
 
--(BN_TextField *)textField{
+-(BNTextField *)textField{
     if (!_textField) {
         _textField = [UIView createTextFieldRect:CGRectZero text:@"" placeholder:nil font:kFZ_Second textAlignment:NSTextAlignmentLeft keyboardType:UIKeyboardTypeDefault];
         _textField.tag = kTAG_TEXTFIELD;

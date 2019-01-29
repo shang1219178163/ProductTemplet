@@ -9,7 +9,7 @@
 
 #import "PPNetworkHelper.h"
 
-#import "BN_Globle.h"
+#import "BNGloble.h"
 #import "AFNetworking.h"
 #import "AFNetworkActivityIndicatorManager.h"
 

@@ -8,7 +8,7 @@
 
 #import "WHKRequestHelper.h"
 
-#import "BN_Globle.h"
+#import "BNGloble.h"
 #import "NSObject+Helper.h"
 #import "NSString+Helper.h"
 
@@ -64,8 +64,8 @@ NSString *const kHTTP_URLMiddle = @"i=42&c=entry&do=fengmian&m=android&source=io
     allAddresss = [allAddresss stringByAppendingFormat:@"&psw=%@",tokenRequest];
     
     //userID
-//    WHKNetInfoCheckLoginModel *userModel = [BN_FileHandler UnarchiveObjectFilName:kAir_UserModel];
-//    WHKNetHogpenInfoModel * factoryModel = [BN_FileHandler UnarchiveObjectFilName:kAir_FacoryModel];
+//    WHKNetInfoCheckLoginModel *userModel = [BNFileHandler UnarchiveObjectFilName:kAir_UserModel];
+//    WHKNetHogpenInfoModel * factoryModel = [BNFileHandler UnarchiveObjectFilName:kAir_FacoryModel];
 //    allAddresss = [allAddresss stringByAppendingFormat:@"&uid=%@",userModel.uid];
 //    allAddresss = [allAddresss stringByAppendingFormat:@"&uniacid=%@",factoryModel.uniacid];
     

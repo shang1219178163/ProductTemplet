@@ -27,13 +27,13 @@
     self.collectionView.dictClass = @{
                                       
                                       UICollectionElementKindSectionItem       :   @[
-                                              @"BN_CTViewCellOne"
+                                              @"BNCTViewCellOne"
                                               ],
                                        UICollectionElementKindSectionHeader :   @[
-                                                                                 @"BN_CTReusableViewZero",
+                                                                                 @"BNCTReusableViewZero",
                                                                                  ],
                                        UICollectionElementKindSectionFooter :   @[
-                                                                                 @"BN_CTReusableViewZero",
+                                                                                 @"BNCTReusableViewZero",
                                                                                  ],
 
                                       };
@@ -71,7 +71,7 @@
 //}
 
 -(UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath{
-    BN_CTViewCellOne * cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"BN_CTViewCellOne" forIndexPath:indexPath];
+    BNCTViewCellOne * cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"BNCTViewCellOne" forIndexPath:indexPath];
     //    cell.layer.masksToBounds = YES;
     //    cell.layer.cornerRadius = 25;
     cell.backgroundColor = [UIColor colorWithRed:arc4random()%255/255.0 green:arc4random()%255/255.0 blue:arc4random()%255/255.0 alpha:1];
@@ -82,7 +82,7 @@
 
 //点击item方法
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
-    BN_CTViewCellOne *cell = (BN_CTViewCellOne *)[collectionView cellForItemAtIndexPath:indexPath];
+    BNCTViewCellOne *cell = (BNCTViewCellOne *)[collectionView cellForItemAtIndexPath:indexPath];
     NSLog(@"%@",cell.label.text);
 }
 
@@ -97,7 +97,7 @@
 //}
 
 - (UICollectionReusableView *)collectionView:(UICollectionView *)collectionView viewForSupplementaryElementOfKind:(NSString *)kind atIndexPath:(NSIndexPath *)indexPath{
-    BN_CTReusableViewZero * view = [BN_CTReusableViewZero viewWithCollectionView:collectionView indexPath:indexPath kind:kind];
+    BNCTReusableViewZero * view = [BNCTReusableViewZero viewWithCollectionView:collectionView indexPath:indexPath kind:kind];
     view.label.text = [kind isEqualToString:UICollectionElementKindSectionHeader]  ? @"headerView": @"footerView";
     view.label.backgroundColor = [kind isEqualToString:UICollectionElementKindSectionHeader]  ? [UIColor greenColor] : [UIColor yellowColor];
     return view;

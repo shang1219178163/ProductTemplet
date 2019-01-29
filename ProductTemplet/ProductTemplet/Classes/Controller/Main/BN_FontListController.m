@@ -6,19 +6,17 @@
 //  Copyright © 2018年 BN. All rights reserved.
 //
 
-#import "BN_FontListController.h"
+#import "BNFontListController.h"
 
-#import "BN_SimpleDataModel.h"
+#import "BNSimpleDataModel.h"
 #import "FactoryDetailInfoModel.h"
 
-#import "BN_TableViewZeroCell.h"
 
-
-@interface BN_FontListController ()<UITableViewDelegate,UITableViewDataSource>
+@interface BNFontListController ()<UITableViewDelegate,UITableViewDataSource>
 
 @end
 
-@implementation BN_FontListController
+@implementation BNFontListController
 
 - (void)configureTableView{
     self.tableView.delegate = self;

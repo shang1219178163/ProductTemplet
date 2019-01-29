@@ -274,7 +274,7 @@
 
 //- (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath{
 //
-//    BN_CTViewCellOne * cell = [BN_CTViewCellOne viewWithCollectionView:collectionView indexPath:indexPath];
+//    BNCTViewCellOne * cell = [BNCTViewCellOne viewWithCollectionView:collectionView indexPath:indexPath];
 //
 //
 //    return cell;

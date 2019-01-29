@@ -8,7 +8,9 @@
 
 #import "BNPickerListView.h"
 
+#import "BNGloble.h"
 #import "UIView+Helper.h"
+#import "UIScreen+Helper.h"
 
 #define MAS_SHORTHAND
 #define MAS_SHORTHAND_GLOBALS
@@ -188,7 +190,7 @@
             view.separatorInset = UIEdgeInsetsZero;
             view.separatorStyle = UITableViewCellSeparatorStyleSingleLine;
             view.rowHeight = 60;
-            view.backgroundColor = UIColor.backgroudColor;
+           
             //        table.keyboardDismissMode = UIScrollViewKeyboardDismissModeOnDrag;
             [view registerClass:[UITableViewCell class] forCellReuseIdentifier:@"UITableViewCell"];
             if ([self conformsToProtocol:@protocol(UITableViewDataSource)]) view.dataSource = self;

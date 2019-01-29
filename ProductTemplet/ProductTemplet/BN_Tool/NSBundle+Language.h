@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-#import "BN_Language.h"
+#import "BNLanguage.h"
 
 @interface NSBundle (Language)
 

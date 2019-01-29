@@ -51,13 +51,13 @@ target 'ProductTemplet' do
   pod 'ZYCornerRadius'
 
   pod 'UMengAnalytics-NO-IDFA'
-
-  pod 'BN_Globle'
-  pod 'BN_Kit'
-  pod 'BN_Category'
-  pod 'BN_View'
-#  pod 'BN_TableViewCell'
-  pod 'BN_CollectionView'
-  pod 'BN_ViewHeight'
+ 
+  pod 'BNGloble'
+  pod 'BNKit'
+  pod 'BNCategory'
+  pod 'BNView'
+  pod 'BNTableViewCell'
+  pod 'BNCollectionView'
+  pod 'BNViewHeight'
 
 end

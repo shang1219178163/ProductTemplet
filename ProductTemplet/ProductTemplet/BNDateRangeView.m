@@ -8,9 +8,10 @@
 
 #import "BNDateRangeView.h"
 
-#import "BN_Globle.h"
+#import "BNGloble.h"
 #import "NSDateFormatter+Helper.h"
 #import "UIView+Helper.h"
+#import "NSString+Helper.h"
 
 #define MAS_SHORTHAND
 #define MAS_SHORTHAND_GLOBALS
@@ -135,10 +136,10 @@
     return _labLine;
 }
 
--(BN_DatePicker *)datePicker{
+-(BNDatePicker *)datePicker{
     if (!_datePicker) {
         _datePicker = ({
-            BN_DatePicker *view = [[BN_DatePicker alloc] initWithCancelBtnTitle:@"取消" confirmBtnTitle:@"确认"];
+            BNDatePicker *view = [[BNDatePicker alloc] initWithCancelBtnTitle:@"取消" confirmBtnTitle:@"确认"];
             view.minimumDate = NSDate.distantPast;
             view.maximumDate = NSDate.distantFuture;
             view.title = @"请选择时间";
@@ -155,10 +156,10 @@
     return _datePicker;
 }
 
--(BN_DatePicker *)datePickerEnd{
+-(BNDatePicker *)datePickerEnd{
     if (!_datePickerEnd) {
         _datePickerEnd = ({
-            BN_DatePicker *view = [[BN_DatePicker alloc] initWithCancelBtnTitle:@"取消" confirmBtnTitle:@"确认"];
+            BNDatePicker *view = [[BNDatePicker alloc] initWithCancelBtnTitle:@"取消" confirmBtnTitle:@"确认"];
             view.minimumDate = NSDate.distantPast;
             view.maximumDate = NSDate.distantFuture;
             view.title = @"请选择时间";

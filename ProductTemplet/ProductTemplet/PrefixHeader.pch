@@ -15,13 +15,13 @@
 #import <UIKit/UIKit.h>
 #import <Foundation/Foundation.h>
 
-#import "BN_Globle.h"
-#import "BN_Kit.h"
-#import "BN_Category.h"
-#import "BN_View.h"
-//#import "BN_TableViewCell.h"
-#import "BN_CollectionView.h"
-#import "BN_ViewHeight.h"
+#import "BNGloble.h"
+#import "BNKit.h"
+#import "BNCategory.h"
+#import "BNView.h"
+#import "BNTableViewCell.h"
+#import "BNCollectionView.h"
+#import "BNViewHeight.h"
 
 #import <MJExtension/MJExtension.h>
 
@@ -29,8 +29,6 @@
 
 //#define MAS_SHORTHAND
 //#define MAS_SHORTHAND_GLOBALS
-//#import "Masonry.h"
-
-#import "BN_TableViewCell.h"
+#import "Masonry.h"
 
 #endif /* PrefixHeader_pch */

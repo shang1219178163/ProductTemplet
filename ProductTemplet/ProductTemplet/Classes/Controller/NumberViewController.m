@@ -8,9 +8,9 @@
 
 #import "NumberViewController.h"
 
-#import "BN_Category.h"
+#import "BNCategory.h"
 //#import "NSDecimalNumber+Helper.h"
-#import "BN_GeneralConst.h"
+#import "BNGeneralConst.h"
 
 @interface NumberViewController ()
 

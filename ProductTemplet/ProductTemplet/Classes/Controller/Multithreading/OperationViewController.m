@@ -18,9 +18,9 @@
 
 #import "OperationViewController.h"
 
-#import "BN_Operation.h"
+#import "BNOperation.h"
 
-#import "BN_Globle.h"
+#import "BNGloble.h"
 #import "UIView+Helper.h"
 
 @interface OperationViewController ()
@@ -139,7 +139,7 @@
 
 /** 运用继承自NSOperation的子类 */
 - (void)testWHOperation {
-    BN_Operation *operation = [[BN_Operation alloc] init];
+    BNOperation *operation = [[BNOperation alloc] init];
     [operation start];
 }
 

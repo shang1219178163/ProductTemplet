@@ -8,7 +8,7 @@
 
 #import "HomeViewController.h"
 
-#import "BN_Category.h"
+#import "BNCategory.h"
 
 @interface HomeViewController ()<UITabBarControllerDelegate>
 
@@ -24,11 +24,11 @@
 //    self.tabBar.tintColor = UIColor.themeColor;
 //    self.tabBar.barTintColor = UIColor.whiteColor;
   
-    NSArray *list = @[@[@"BN_FirstViewController",@"首页",@"Item_first_N",@"Item_first_H",@"0",],
-                      @[@"BN_SecondViewController",@"圈子",@"Item_second_N",@"Item_second_H",@"11",],
-                      @[@"BN_CenterViewController",@"总览",@"Item_center_N",@"Item_center_H",@"10",],
-                      @[@"BN_ThirdViewController",@"消息",@"Item_third_N",@"Item_third_H",@"12",],
-                      @[@"BN_FourthViewController",@"我的",@"Item_fourth_N",@"Item_fourth_H",@"13",],
+    NSArray *list = @[@[@"BNFirstViewController",@"首页",@"Item_first_N",@"Item_first_H",@"0",],
+                      @[@"BNSecondViewController",@"圈子",@"Item_second_N",@"Item_second_H",@"11",],
+                      @[@"BNCenterViewController",@"总览",@"Item_center_N",@"Item_center_H",@"10",],
+                      @[@"BNThirdViewController",@"消息",@"Item_third_N",@"Item_third_H",@"12",],
+                      @[@"BNFourthViewController",@"我的",@"Item_fourth_N",@"Item_fourth_H",@"13",],
                       
                       ];
     self.viewControllers = UINavListFromList(list);

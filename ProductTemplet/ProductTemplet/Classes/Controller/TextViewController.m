@@ -8,7 +8,7 @@
 
 #import "TextViewController.h"
 
-#import "BN_Category.h"
+#import "BNCategory.h"
 #import "UITextView+Helper.h"
 
 @interface TextViewController ()

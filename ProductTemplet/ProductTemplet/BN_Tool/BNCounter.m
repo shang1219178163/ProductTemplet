@@ -8,7 +8,7 @@
 
 #import "BNCounter.h"
 
-#import "BN_Category.h"
+#import "BNCategory.h"
 
 @implementation BNCounter 
 

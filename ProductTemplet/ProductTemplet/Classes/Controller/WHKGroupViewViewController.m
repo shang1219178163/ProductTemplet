@@ -51,12 +51,12 @@
             if ([item isKindOfClass:[UILabel class]]) {
                 UILabel * label = (UILabel *)item;
                 DDLog(@"__%@",@(label.tag));
-                BN_RadioViewZero * radioView = [containView viewWithTag:(label.tag - kTAG_LABEL + kTAG_VIEW)];
+                BNRadioView * radioView = [containView viewWithTag:(label.tag - kTAG_LABEL + kTAG_VIEW)];
                 radioView.isSelected = !radioView.isSelected;
                 
             }
             else if ([item isKindOfClass:[UIView class]]) {
-                BN_RadioViewZero * radioView = item;
+                BNRadioView * radioView = item;
                 DDLog(@"__%@",@(radioView.tag));
                 radioView.isSelected = !radioView.isSelected;
             }
@@ -72,16 +72,16 @@
 //    for (UIView * view in containViewNew.subviews) {
 //        [view addActionHandler:^(id obj, id item, NSInteger idx) {
 //            DDLog(@"%@",item);
-//            BN_RadioView * radioView = item;
+//            BNRadioView * radioView = item;
 //            radioView.isSelected = !radioView.isSelected;
 //
 //        }];
 //    }
  
-    BN_GroupView * groupView = [BN_GroupView viewRect:rectNew items:self.elementList numberOfRow:2 itemHeight:30 padding:10 selectedList:@[@1,@3,@6]];
+    BNGroupView * groupView = [BNGroupView viewRect:rectNew items:self.elementList numberOfRow:2 itemHeight:30 padding:10 selectedList:@[@1,@3,@6]];
     [self.view addSubview:groupView];
     
-    groupView.groupBlock = ^(BN_GroupView *groupView, NSArray* selectedItems, NSInteger idx, BOOL isOnlyOne) {
+    groupView.groupBlock = ^(BNGroupView *groupView, NSArray* selectedItems, NSInteger idx, BOOL isOnlyOne) {
         DDLog(@"_%@_%@_%@",@(selectedItems.count),@(idx),@(isOnlyOne));
     };
     
@@ -124,11 +124,11 @@
                                 kRadio_textColorN : UIColor.blackColor,
                                 
                                 };
-        BN_RadioView * view = [[BN_RadioView alloc]initWithFrame:btnRect attDict:dict isSelected:YES];
+        BNRadioView * view = [[BNRadioView alloc]initWithFrame:btnRect attDict:dict isSelected:YES];
         view.tag = kTAG_VIEW + i;
         
         [backgroudView addSubview:view];
-        view.block = ^(BN_RadioView *radioView, UIView *itemView, BOOL isSelected) {
+        view.block = ^(BNRadioView *radioView, UIView *itemView, BOOL isSelected) {
             DDLog(@"_%@_%@",@(itemView.tag),@(isSelected));
         };
         
@@ -158,8 +158,12 @@
         CGRect btnRect = CGRectMake(x, y, w, h);
         //        UIButton * btn = [UIView createBtnRect:btnRect title:title font:16 image:nil tag:kTAG_BTN+i type:@0];
         
+        NSDictionary * dict = @{
+                                kRadio_imageH : @"img_select_H",
+                                kRadio_imageN : @"img_select_N",
+                                };
         CGRect radioViewRect = CGRectMake(x, y, 30, 30);
-        BN_RadioViewZero * radioView = [[BN_RadioViewZero alloc]initWithFrame:radioViewRect imgName_N:@"img_select_N" imgName_H:@"img_select_H"];
+        BNRadioView * radioView = [[BNRadioView alloc]initWithFrame:radioViewRect attDict:dict isSelected:false];
         radioView.isSelected = i%2 == 0 ? YES : NO;
         radioView.tag = kTAG_VIEW + i;
         CGRect labelRect = CGRectMake(x+30, y, w-30, 30);

@@ -9,10 +9,10 @@
 
 #import "WHKMapViewController.h"
 
-#import "BN_Globle.h"
-#import "BN_Category.h"
+#import "BNGloble.h"
+#import "BNCategory.h"
 
-#import "BN_GeocodeAnnotation.h"
+#import "BNGeocodeAnnotation.h"
 
 
 #import "KVOController.h"
@@ -95,7 +95,7 @@ static const NSInteger kRoutePaddingEdge = 20;
     [rightBtn addActionHandler:^(id obj, id item, NSInteger idx) {
         DDLog(@"objc__%@",obj);
         
-        UIViewController * viewController  = [NSClassFromString(@"BN_ViewController") new];
+        UIViewController * viewController  = [NSClassFromString(@"BNViewController") new];
         [self.navigationController pushViewController:viewController animated:YES];
     }];
     
@@ -299,7 +299,7 @@ static const NSInteger kRoutePaddingEdge = 20;
 
 - (void)mapView:(MAMapView *)mapView didSingleTappedAtCoordinate:(CLLocationCoordinate2D)coordinate{
 
-    DDLog(@"distance___%@",[BN_Map distanceBetweenBeginPoint:self.coordinateBegin endPoint:self.coordinateEnd type:@"0"]);
+    DDLog(@"distance___%@",[BNMap distanceBetweenBeginPoint:self.coordinateBegin endPoint:self.coordinateEnd type:@"0"]);
     [self addAnnotionCoordinate:coordinate title:kMapAddressEnd isBegin:NO];
 }
 
@@ -312,8 +312,8 @@ static const NSInteger kRoutePaddingEdge = 20;
     pointAnnotation.title      = title;
     pointAnnotation.subtitle   = [NSString stringWithFormat:@"{%f, %f}", coordinate.latitude, coordinate.longitude];
     
-    if ([BN_Map getPointAnnotationTitle:title mapView:self.mapView]) {
-        pointAnnotation = [BN_Map getPointAnnotationTitle:title mapView:self.mapView];
+    if ([BNMap getPointAnnotationTitle:title mapView:self.mapView]) {
+        pointAnnotation = [BNMap getPointAnnotationTitle:title mapView:self.mapView];
         pointAnnotation.coordinate = coordinate;
 //        [self.mapView selectAnnotation:pointAnnotation animated:YES];
 
@@ -349,7 +349,7 @@ static const NSInteger kRoutePaddingEdge = 20;
     request.location                    = [AMapGeoPoint locationWithLatitude:coordinate.latitude longitude:coordinate.longitude];
     request.requireExtension            = YES;
     
-    BN_Map * binMap = [BN_Map sharedInstance];
+    BNMap * binMap = [BNMap sharedInstance];
     [binMap reGeocodeSearchWithRequest:request handler:^(AMapReGeocodeSearchRequest *request, AMapReGeocodeSearchResponse *response, NSError *error) {
         if (error) {
             DDLog(@"error:%@",error);
@@ -362,7 +362,7 @@ static const NSInteger kRoutePaddingEdge = 20;
 }
 
 - (void)handleMapGeocodeAddress:(NSString *)address city:(NSString *)city{
-    BN_Map * binMap = [BN_Map sharedInstance];
+    BNMap * binMap = [BNMap sharedInstance];
     [binMap geocodeSearchWithAddress:address city:city handler:^(AMapGeocodeSearchRequest *request, AMapGeocodeSearchResponse *response, NSError *error) {
         if (error) {
             DDLog(@"error:%@",error);
@@ -376,7 +376,7 @@ static const NSInteger kRoutePaddingEdge = 20;
 }
 
 - (void)handleSearchRoutePlanningDrive{
-    BN_Map * binMap = [BN_Map sharedInstance];
+    BNMap * binMap = [BNMap sharedInstance];
     [binMap routeSearchBeginPoint:self.coordinateBegin endPoint:self.coordinateEnd strategy:5 type:@"0" handler:^(AMapRouteSearchBaseRequest *request, AMapRouteSearchResponse *response, NSError *error) {
         
         if (error) {
@@ -398,7 +398,7 @@ static const NSInteger kRoutePaddingEdge = 20;
     self.pathPolylines = nil;
     
     // 只显⽰示第⼀条 规划的路径
-    self.pathPolylines = [BN_Map polylinesForPath:response.route.paths[0]];
+    self.pathPolylines = [BNMap polylinesForPath:response.route.paths[0]];
     DDLog(@"steps_%@",response.route.paths[0]);
     //添加新的遮盖，然后会触发代理方法进行绘制
     [self.mapView addOverlays:self.pathPolylines];

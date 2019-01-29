@@ -8,7 +8,7 @@
 
 #import "FlyweightViewController.h"
 
-#import "BN_Globle.h"
+#import "BNGloble.h"
 
 #import "FlowerView.h"
 #import "FlowerFactory.h"

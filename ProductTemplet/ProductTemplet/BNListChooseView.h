@@ -8,12 +8,13 @@
 
 #import <UIKit/UIKit.h>
 
+#import "BNTextField.h"
 #import "BNPickerListView.h"
 
 @interface BNListChooseView : UIView
 
 @property (nonatomic, strong) UILabel * labelLeft;
-@property (nonatomic, strong) BN_TextField * textField;
+@property (nonatomic, strong) BNTextField * textField;
 
 @property (nonatomic, strong) BNPickerListView * pickerView;
 

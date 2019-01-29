@@ -11,19 +11,19 @@
 #import "UIView+Helper.h"
 #import "UIViewController+Helper.h"
 
-#import "BN_EmitterView.h"
+#import "BNEmitterView.h"
 
 @interface LiveLikeController ()
 
-@property (nonatomic, strong) BN_EmitterView *emitterVeiw;
+@property (nonatomic, strong) BNEmitterView *emitterVeiw;
 
 @end
 
 @implementation LiveLikeController
 
--(BN_EmitterView *)emitterVeiw{
+-(BNEmitterView *)emitterVeiw{
     if (!_emitterVeiw) {
-        _emitterVeiw = [[BN_EmitterView alloc] initWithFrame:CGRectMake(300, 667.0 - 60 - 400, 80, 400)];
+        _emitterVeiw = [[BNEmitterView alloc] initWithFrame:CGRectMake(300, 667.0 - 60 - 400, 80, 400)];
         
     }
     return _emitterVeiw;

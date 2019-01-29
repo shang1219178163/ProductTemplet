@@ -12,7 +12,7 @@
 
 #import "Person.h"
 #import "Car.h"
-#import "BN_Globle.h"
+#import "BNGloble.h"
 
 @interface DBManager()
 

@@ -8,7 +8,9 @@
 
 #import "BNSheetView.h"
 
+#import "BNGloble.h"
 #import "UIView+Helper.h"
+#import "UIAlertController+Helper.h"
 
 #define MAS_SHORTHAND
 #define MAS_SHORTHAND_GLOBALS
@@ -74,7 +76,7 @@
     return _labelLeft;
 }
 
--(BN_TextField *)textField{
+-(BNTextField *)textField{
     if (!_textField) {
         _textField = [UIView createTextFieldRect:CGRectZero text:@"" placeholder:nil font:kFZ_Second textAlignment:NSTextAlignmentLeft keyboardType:UIKeyboardTypeDefault];
         _textField.tag = kTAG_TEXTFIELD;

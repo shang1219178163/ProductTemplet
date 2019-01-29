@@ -23,7 +23,7 @@
 }
 
 + (NSString *)currentLanguage{
-    return BN_Language.userLanguage ? : NSLocale.preferredLanguages.firstObject;
+    return BNLanguage.userLanguage ? : NSLocale.preferredLanguages.firstObject;
     
 }
 

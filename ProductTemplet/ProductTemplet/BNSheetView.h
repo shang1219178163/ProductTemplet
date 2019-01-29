@@ -8,12 +8,14 @@
 
 #import <UIKit/UIKit.h>
 
+#import "BNTextField.h"
+
 NS_ASSUME_NONNULL_BEGIN
 
 @interface BNSheetView : UIView
 
 @property (nonatomic, strong) UILabel * labelLeft;
-@property (nonatomic, strong) BN_TextField * textField;
+@property (nonatomic, strong) BNTextField * textField;
 
 @property (nonatomic, strong) UIAlertController * alertCtrl;
 

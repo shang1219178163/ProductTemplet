@@ -16,10 +16,10 @@ PODS:
   - AFNetworking/UIKit (3.2.1):
     - AFNetworking/NSURLSession
   - Aspects (1.4.1)
-  - BN_Category (1.8.6.3):
+  - BNCategory (1.8.7):
     - AESCrypt-ObjC
-    - BN_Globle
-    - BN_Kit
+    - BNGloble
+    - BNKit
     - FLAnimatedImage
     - GTMBase64
     - IQKeyboardManager
@@ -28,24 +28,32 @@ PODS:
     - SDWebImage
     - Toast
     - YYModel
-  - BN_CollectionView (1.1.9.2):
-    - BN_Category
-  - BN_Globle (1.3.4.2)
-  - BN_Kit (1.2.9):
-    - BN_Globle
-  - BN_View (1.4.0):
-    - BN_Category
-    - BN_Globle
-    - BN_Kit
+  - BNCollectionView (1.2.0):
+    - BNCategory
+  - BNGloble (1.3.5.1)
+  - BNKit (1.3.3):
+    - BNGloble
+  - BNTableViewCell (1.4.3.1):
+    - BNCategory
+    - BNGloble
+    - BNKit
+    - BNView
+    - Masonry
+  - BNView (1.4.3.2):
+    - BNCategory
+    - BNGloble
+    - BNKit
+    - Masonry
     - PPNumberButton
     - SDCycleScrollView
     - TZImagePickerController
-  - BN_ViewHeight (1.2.2):
-    - BN_Category
-    - BN_CollectionView
-    - BN_Globle
-    - BN_Kit
-    - BN_View
+  - BNViewHeight (1.2.6):
+    - BNCategory
+    - BNCollectionView
+    - BNGloble
+    - BNKit
+    - BNView
+    - Masonry
   - FCUUID (1.3.1):
     - UICKeyChainStore (~> 2.1.0)
   - FLAnimatedImage (1.0.12)
@@ -68,9 +76,9 @@ PODS:
   - PPNumberButton (0.8.0)
   - SDCycleScrollView (1.75):
     - SDWebImage (>= 4.0.0)
-  - SDWebImage (4.4.3):
-    - SDWebImage/Core (= 4.4.3)
-  - SDWebImage/Core (4.4.3)
+  - SDWebImage (4.4.4):
+    - SDWebImage/Core (= 4.4.4)
+  - SDWebImage/Core (4.4.4)
   - Toast (4.0.0)
   - TZImagePickerController (3.1.9)
   - UICKeyChainStore (2.1.2)
@@ -94,12 +102,13 @@ DEPENDENCIES:
   - AESCrypt-ObjC
   - AFNetworking
   - Aspects
-  - BN_Category
-  - BN_CollectionView
-  - BN_Globle
-  - BN_Kit
-  - BN_View
-  - BN_ViewHeight
+  - BNCategory
+  - BNCollectionView
+  - BNGloble
+  - BNKit
+  - BNTableViewCell
+  - BNView
+  - BNViewHeight
   - FCUUID
   - FLAnimatedImage
   - FMDB
@@ -133,12 +142,13 @@ SPEC REPOS:
     - AESCrypt-ObjC
     - AFNetworking
     - Aspects
-    - BN_Category
-    - BN_CollectionView
-    - BN_Globle
-    - BN_Kit
-    - BN_View
-    - BN_ViewHeight
+    - BNCategory
+    - BNCollectionView
+    - BNGloble
+    - BNKit
+    - BNTableViewCell
+    - BNView
+    - BNViewHeight
     - FCUUID
     - FLAnimatedImage
     - FMDB
@@ -174,12 +184,13 @@ SPEC CHECKSUMS:
   AESCrypt-ObjC: 6d930ff891a61b90505855e9447959a84be80715
   AFNetworking: b6f891fdfaed196b46c7a83cf209e09697b94057
   Aspects: 7595ba96a6727a58ebcbfc954497fc5d2fdde546
-  BN_Category: f8c99be1ee21de8c41015aed200d4163f01a02af
-  BN_CollectionView: cf73be3c184a3af70b9078497ee8df2f5124df5c
-  BN_Globle: ddaaf197bdc43d473fdb9904d3d4450fa69d2475
-  BN_Kit: 5dc15cc671dea4aa5ad3687019cd0fc3b9fd861f
-  BN_View: f6309f60c2cd31e547d62c986f5144ca27e431ec
-  BN_ViewHeight: a780ee21e34dce6029781bce7ae01cef9c3401e3
+  BNCategory: e3d879df16b17bfbf53c52aedf99de5e6a4fed59
+  BNCollectionView: 0c6be9c6da86b4314e4e7221fa8aebc0dc6856d4
+  BNGloble: 989845a6ccd5b581865034dcb6134e69e78acabd
+  BNKit: 0d8caba583620f33c6f14da13617ed3dc6d3b17f
+  BNTableViewCell: 6d11f270d89a773ee67d87f0224d8cd8724ecc58
+  BNView: fa735bf2c537cdd63c1b73ad94f1107c8d02f74b
+  BNViewHeight: 2ba42b040196f2fd1165df22f329eefa33ee46bc
   FCUUID: bb054fc90cd7cd99320f9f6ff8e130fe607fba05
   FLAnimatedImage: 4a0b56255d9b05f18b6dd7ee06871be5d3b89e31
   FMDB: 2ce00b547f966261cd18927a3ddb07cb6f3db82a
@@ -197,7 +208,7 @@ SPEC CHECKSUMS:
   PopoverView: 62e83ffda75944d6cf2de9c6593489f3097dc1a3
   PPNumberButton: 4442ff64c21d91733057ca1b3dc05fb4df55f2c0
   SDCycleScrollView: 884b88f0266dd4708a0e1934975c69cb971707b1
-  SDWebImage: c5594f1a19c48d526d321e548902b56b479cd508
+  SDWebImage: c00ec18ab25d10e5ffac109b0f78d1b4341c9691
   Toast: 91b396c56ee72a5790816f40d3a94dd357abc196
   TZImagePickerController: c3f7c505d23281e21e98df6dbeae372946caa28f
   UICKeyChainStore: 85db518bb1d294366d15ec9b92a416c4e670518f
@@ -211,6 +222,6 @@ SPEC CHECKSUMS:
   YZPullDownMenu: afc60c3fc4f7caedd9556d32da43ea1718e078e0
   ZYCornerRadius: f0af817be7805b5c63d793042ca7a03f81e14069
 
-PODFILE CHECKSUM: 8ac40dcd7ea9e6dfde485fcf75e0d6f6b91d07f5
+PODFILE CHECKSUM: 4b5f14a4ca8a42bf92f65c5c5b806f777e987bd6
 
 COCOAPODS: 1.5.3

@@ -9,7 +9,7 @@
 #import "TimerViewController.h"
 
 
-#import "BN_GCD.h"
+#import "BNGCD.h"
 
 @interface TimerViewController ()
 
@@ -29,12 +29,12 @@
     // Do any additional setup after loading the view.
     
     __block NSInteger i = 0;
-    _timer = [NSTimer BN_timeInterval:1 block:^(NSTimer *timer) {
+    _timer = [NSTimer BNtimeInterval:1 block:^(NSTimer *timer) {
         i++;
         DDLog(@"__%@",@(i));
     } repeats:YES];
       
-    BN_dispatchTimer(self, 1, ^(dispatch_source_t timer) {
+    BNdispatchTimer(self, 1, ^(dispatch_source_t timer) {
         i++;
         DDLog(@"%@",@(i));
     });

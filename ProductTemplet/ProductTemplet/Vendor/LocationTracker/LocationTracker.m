@@ -8,8 +8,8 @@
 
 #import "LocationTracker.h"
 
-#import "BN_Globle.h"
-#import "BN_Noti.h"
+#import "BNGloble.h"
+#import "BNNoti.h"
 
 #import "UIApplication+Helper.h"
 #import "NSTimer+Helper.h"

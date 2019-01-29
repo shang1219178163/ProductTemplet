@@ -10,7 +10,7 @@
 
 #import "UIApplication+Helper.h"
 #import "UIApplication+Other.h"
-#import "BN_Category.h"
+#import "BNCategory.h"
 
 #import "ZYSliderViewController.h"
 
@@ -24,8 +24,8 @@
     // Override point for customization after application launch.
   
     UIViewController * controller = UICtrFromString(@"HomeViewController");
-    UIViewController * controllerLeft = UICtrFromString(@"BN_LeftViewController");
-    UIViewController * controllerRight = UICtrFromString(@"BN_RightViewController");
+    UIViewController * controllerLeft = UICtrFromString(@"BNLeftViewController");
+    UIViewController * controllerRight = UICtrFromString(@"BNRightViewController");
 
     ZYSliderViewController * rootVC = [[ZYSliderViewController alloc]initWithMainViewController:controller leftViewController:controllerLeft rightViewController:controllerRight];
     
@@ -53,13 +53,13 @@
 //    // Override point for customization after application launch.
 //    self.window = [[UIWindow alloc] initWithFrame:UIScreen.mainScreen.bounds];
 //    UIViewController * controller = [NSClassFromString(@"MainViewController") new];
-////    controller = [NSClassFromString(@"BN_TableViewController") new];
+////    controller = [NSClassFromString(@"BNTableViewController") new];
 ////    controller = [NSClassFromString(@"CircleViewController") new];
 ////    controller = [NSClassFromString(@"SphereViewController") new];
 ////    controller = [NSClassFromString(@"PickerViewController") new];
 ////    controller = [NSClassFromString(@"SectionListViewController") new];
-//    controller = [NSClassFromString(@"BN_UserLoginController") new];
-////    controller = [NSClassFromString(@"BN_LearnMasonryController") new];
+//    controller = [NSClassFromString(@"BNUserLoginController") new];
+////    controller = [NSClassFromString(@"BNLearnMasonryController") new];
 //    controller = [NSClassFromString(@"TestViewController") new];
 //
 //    UINavigationController * mainNav = [[UINavigationController alloc]initWithRootViewController:controller];
@@ -69,7 +69,7 @@
 //    [self.window makeKeyAndVisible];
 ///*
 //    if (DEBUG) InstallUncaughtExceptionHandler();
-//    NSString * controlName = @"BN_HomeViewController";
+//    NSString * controlName = @"BNHomeViewController";
 //    [UIApplication setupRootControllerName:controlName];
 // */
 //    [UIApplication setupAppearance];

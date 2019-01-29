@@ -8,14 +8,14 @@
 
 #import <UIKit/UIKit.h>
 
-#import "BN_DatePicker.h"
+#import "BNDatePicker.h"
 
 @interface BNDateRangeView : UIView
 
 @property (nonatomic, copy) NSString *dateStart;
 @property (nonatomic, copy) NSString *dateEnd;
-@property (nonatomic, strong) BN_DatePicker * datePicker;
-@property (nonatomic, strong) BN_DatePicker * datePickerEnd;
+@property (nonatomic, strong) BNDatePicker * datePicker;
+@property (nonatomic, strong) BNDatePicker * datePickerEnd;
 
 @property (nonatomic, strong, readonly) UILabel * labelLeft;
 @property (nonatomic, strong) void(^block)(BNDateRangeView *view);

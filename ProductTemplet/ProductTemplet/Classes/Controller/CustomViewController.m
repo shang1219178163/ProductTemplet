@@ -8,6 +8,12 @@
 
 #import "CustomViewController.h"
 
+#import "BNGloble.h"
+#import "NSArray+Helper.h"
+#import "NSString+Helper.h"
+#import "UIView+Helper.h"
+#import "UIControl+Helper.h"
+
 #import "BNItemsView.h"
 #import "BNWalletView.h"
 #import "BNSearchView.h"

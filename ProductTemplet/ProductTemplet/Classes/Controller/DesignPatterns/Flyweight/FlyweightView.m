@@ -9,7 +9,7 @@
 #import "FlyweightView.h"
 #import "ExtrinsicFlowerStateModel.h"
 
-#import "BN_Globle.h"
+#import "BNGloble.h"
 
 @implementation FlyweightView
 

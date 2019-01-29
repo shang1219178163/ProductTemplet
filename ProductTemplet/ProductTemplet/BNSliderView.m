@@ -8,6 +8,7 @@
 
 #import "BNSliderView.h"
 
+#import "BNGloble.h"
 #import "UIView+Helper.h"
 
 #define MAS_SHORTHAND
