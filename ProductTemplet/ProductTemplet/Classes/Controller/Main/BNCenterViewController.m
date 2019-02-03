@@ -196,7 +196,6 @@
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
     return 60;
-    
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
@@ -231,23 +230,18 @@
 
 -(CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section{
     return 0.01;
-    
 }
 
 //-(UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section{
-//
-////    UILabel * label = [[UILabel alloc]initWithFrame:CGRectZero];
-////    return label;
-//
+//    UILabel * label = [[UILabel alloc]initWithFrame:CGRectZero];
+//    return label;
 //}
 
 -(CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section{
     return 0.01;
-    
 }
 
 //-(UIView *)tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section{
-//
 //    return [UIView new];
 //}
 

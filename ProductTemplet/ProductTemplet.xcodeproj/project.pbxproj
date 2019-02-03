@@ -19,7 +19,7 @@
 		14E42CDA2200040200606AD0 /* BNUserLoginController.m in Sources */ = {isa = PBXBuildFile; fileRef = 14E42CD62200040200606AD0 /* BNUserLoginController.m */; };
 		14E42CDB2200040200606AD0 /* BNUserPwdChangeController.m in Sources */ = {isa = PBXBuildFile; fileRef = 14E42CD72200040200606AD0 /* BNUserPwdChangeController.m */; };
 		14E42CDC2200040200606AD0 /* BNUserRegisterController.m in Sources */ = {isa = PBXBuildFile; fileRef = 14E42CD92200040200606AD0 /* BNUserRegisterController.m */; };
-		14E42CF12200040F00606AD0 /* BN_FontListController.m in Sources */ = {isa = PBXBuildFile; fileRef = 14E42CDE2200040C00606AD0 /* BN_FontListController.m */; };
+		14E42CF12200040F00606AD0 /* BNFontListController.m in Sources */ = {isa = PBXBuildFile; fileRef = 14E42CDE2200040C00606AD0 /* BNFontListController.m */; };
 		14E42CF22200040F00606AD0 /* BNSecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 14E42CE22200040D00606AD0 /* BNSecondViewController.m */; };
 		14E42CF32200040F00606AD0 /* BNRightViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 14E42CE32200040D00606AD0 /* BNRightViewController.m */; };
 		14E42CF42200040F00606AD0 /* BNCenterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 14E42CE52200040D00606AD0 /* BNCenterViewController.m */; };
@@ -391,7 +391,7 @@
 		14E42CD82200040200606AD0 /* BNUserRegisterController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BNUserRegisterController.h; sourceTree = "<group>"; };
 		14E42CD92200040200606AD0 /* BNUserRegisterController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BNUserRegisterController.m; sourceTree = "<group>"; };
 		14E42CDD2200040C00606AD0 /* BNFourthViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BNFourthViewController.h; sourceTree = "<group>"; };
-		14E42CDE2200040C00606AD0 /* BN_FontListController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BN_FontListController.m; sourceTree = "<group>"; };
+		14E42CDE2200040C00606AD0 /* BNFontListController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BNFontListController.m; sourceTree = "<group>"; };
 		14E42CDF2200040C00606AD0 /* BNLeftViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BNLeftViewController.h; sourceTree = "<group>"; };
 		14E42CE02200040C00606AD0 /* BNFirstViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BNFirstViewController.h; sourceTree = "<group>"; };
 		14E42CE12200040C00606AD0 /* BNRightViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BNRightViewController.h; sourceTree = "<group>"; };
@@ -1012,7 +1012,7 @@
 				513649102086055E005A20E7 /* Classes */,
 				51698C7D2137C0430069C2B2 /* Network */,
 				51364CC72086092D005A20E7 /* DataModel */,
-				51364BDD20860821005A20E7 /* BN_Tool */,
+				51364BDD20860821005A20E7 /* BNTool */,
 				513646EB208604DD005A20E7 /* Vendor */,
 				5136469F2086031D005A20E7 /* AppDelegate.h */,
 				513646A02086031D005A20E7 /* AppDelegate.m */,
@@ -1192,7 +1192,7 @@
 				14E8692B21C251BA009CE33E /* HomeViewController.h */,
 				14E8692C21C251BA009CE33E /* HomeViewController.m */,
 				14E42CE42200040D00606AD0 /* BNFontListController.h */,
-				14E42CDE2200040C00606AD0 /* BN_FontListController.m */,
+				14E42CDE2200040C00606AD0 /* BNFontListController.m */,
 				14E42CEF2200040F00606AD0 /* BNCenterViewController.h */,
 				14E42CE52200040D00606AD0 /* BNCenterViewController.m */,
 				14E42CEE2200040F00606AD0 /* BNFactoryListViewController.h */,
@@ -1324,7 +1324,7 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
-		51364BDD20860821005A20E7 /* BN_Tool */ = {
+		51364BDD20860821005A20E7 /* BNTool */ = {
 			isa = PBXGroup;
 			children = (
 				51AA0036219929C3002EB259 /* BNCounter.h */,
@@ -1369,7 +1369,7 @@
 				51364C7920860821005A20E7 /* Utilities_DM.h */,
 				51364C7A20860821005A20E7 /* Utilities_DM.m */,
 			);
-			path = BN_Tool;
+			path = BNTool;
 			sourceTree = "<group>";
 		};
 		51364CC72086092D005A20E7 /* DataModel */ = {
@@ -2450,7 +2450,7 @@
 				513647C7208604DE005A20E7 /* BackgroundTaskManager.m in Sources */,
 				51AA00332199295A002EB259 /* CounterListGroupController.m in Sources */,
 				518CD32A219D787F003CE348 /* SugerAlertController.m in Sources */,
-				14E42CF12200040F00606AD0 /* BN_FontListController.m in Sources */,
+				14E42CF12200040F00606AD0 /* BNFontListController.m in Sources */,
 				5162F6F120BF9110009A6253 /* ThreadViewController.m in Sources */,
 				515CC97220B6AAF2004AE27C /* AASeries.m in Sources */,
 				517D8B2520B2C66800DCA731 /* Person.m in Sources */,

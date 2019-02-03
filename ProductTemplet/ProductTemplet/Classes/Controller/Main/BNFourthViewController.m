@@ -8,6 +8,8 @@
 
 #import "BNFourthViewController.h"
 
+#import "ZYSliderViewController.h"
+
 #import <FLAnimatedImage/FLAnimatedImage.h>
 
 @interface BNFourthViewController ()
@@ -43,9 +45,22 @@
 
         UIColor.themeColor = self.imgView.tintColor;
         
-        UIViewController * ctr = UIApplication.tabBarController.viewControllers.firstObject;
-        ctr.tabBarItem.image = self.imgView.image;
-        [ctr.tabBarItem setValue:self.imgView.image forKey:@"image"];
+        ZYSliderViewController * rootVC = UIApplication.rootController;
+        UITabBarController * tabBarController = rootVC.mainViewController;
+        tabBarController.tabBar.tintColor = UIColor.themeColor;
+        
+        
+//        UITabBarItem *tabBarItem = [UIView createTabBarItem:@"title" image:@"Item_third_H" selectedImage:@"Item_first_H"];
+//        tabBarController.viewControllers.firstObject.tabBarItem = tabBarItem;
+
+        NSArray *list = @[@[@"BNFirstViewController",@"首页",@"Item_third_N",@"Item_third_H",@"0",],
+                          @[@"BNSecondViewController",@"圈子",@"Item_second_N",@"Item_second_H",@"11",],
+                          @[@"BNCenterViewController",@"总览",@"Item_center_N",@"Item_center_H",@"10",],
+                          @[@"BNThirdViewController",@"消息",@"Item_third_N",@"Item_third_H",@"12",],
+                          @[@"BNFourthViewController",@"我的",@"Item_fourth_N",@"Item_fourth_H",@"13",],
+                          
+                          ];
+        [tabBarController reloadTabarItems:list];
         self.sliderView.backgroundColor = UIColor.themeColor;
     }];
 //    self.imgView.image = [self.imgView.image imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate];
@@ -133,7 +148,7 @@
     [super viewDidAppear:animated];
     
 //    [self goController:@"CustomViewController" title:@"Custom"];
-    [self goController:@"EntryViewController" title:@"录入界面封装"];
+//    [self goController:@"EntryViewController" title:@"录入界面封装"];
     
 }
 
