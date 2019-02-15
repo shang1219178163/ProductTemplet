@@ -267,7 +267,6 @@
     CGFloat orignImageDataSize = [orginImageData length]/1024;
     CGFloat yasuolv = fileSize/orignImageDataSize;//压缩到fileSize
     
-    
     if (yasuolv<0.1) {
         yasuolv = 0.1;
     }

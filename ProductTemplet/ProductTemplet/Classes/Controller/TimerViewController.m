@@ -29,7 +29,7 @@
     // Do any additional setup after loading the view.
     
     __block NSInteger i = 0;
-    _timer = [NSTimer BNtimeInterval:1 block:^(NSTimer *timer) {
+    _timer = [NSTimer scheduledTimer:1 block:^(NSTimer *timer) {
         i++;
         DDLog(@"__%@",@(i));
     } repeats:YES];

@@ -65,6 +65,17 @@
     }];
 //    self.imgView.image = [self.imgView.image imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate];
 
+    [self.imgView addGestureTap:^(UIGestureRecognizer *sender) {
+        [sender.view imageToSavedPhotosAlbum:^(NSError *error) {
+            if (error) {
+                DDLog(@"%@",error.description);
+
+            } else {
+                DDLog(@"保存图像成功!");
+                
+            }
+        }];
+    }];
     
     [self.view addSubview:self.sliderView];
     self.sliderView.layer.borderColor = UIColor.blueColor.CGColor;
@@ -121,6 +132,10 @@
     
 //    [self.view getViewLayer];
     
+    [NSUserDefaults.standardUserDefaults setObject:@"nil" forKey:@"1111"];
+    [NSUserDefaults.standardUserDefaults setObject:nil forKey:@"1111"];
+
+    DDLog(@"%@", NSHomeDirectory())
 }
 
 -(void)viewWillAppear:(BOOL)animated{

@@ -15,10 +15,10 @@
 #import "PPNetworkHelper.h"
 #import "WHKRequestHelper.h"
 
-typedef NS_ENUM(NSInteger,WHKRequestServiceType) {
-    
+typedef NS_ENUM(NSInteger, WHKRequestServiceType) {
     WHKRequestServiceTypeGet = 0,
     WHKRequestServiceTypePost
+    
 };
 
 /**

@@ -21,7 +21,22 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    NSArray *array3 = @[@"JinYiPang", @"JinErPang", @"JinSanPang", @"JinYiPang", @"JinErPang",@"JinZhengEn"];
+    NSLog(@"array3 = %@", [array3 valueForKeyPath:@"@distinctUnionOfObjects.self"]);
     
+    NSArray *array4 = @[@{@"name" : @"JinYiPang", @"code" : @"123"},
+                        @{@"name" : @"JinSanPang", @"code" :  @"90"},
+                        @{@"name" : @"JinErPang", @"code" : @"80"},
+                        @{@"name" : @"JinSanPang", @"code" : @"100"}];
+    NSLog(@"array4 = %@", [array4 valueForKeyPath:@"name"]);
+    NSLog(@"array4 = %@", [array4 valueForKeyPath:@"@distinctUnionOfObjects.name"]);
+    
+    NSArray *temp1 = @[@111, @222, @333, @444];
+    NSArray *temp2 = @[@333, @444, @555];
+    NSLog(@"temp  \n%@",[@[temp1, temp2] valueForKeyPath:@"@distinctUnionOfArrays.self"]);
+    NSLog(@"temp  \n%@",[@[temp1, temp2] valueForKeyPath:@"@unionOfArrays.self"]);
+    
+    return;
     
     CGFloat money = 123456.78401;
     money = 0.123456;
