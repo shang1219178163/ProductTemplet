@@ -12,6 +12,10 @@
 		1404FAF921E0A1BB00122E22 /* Skull.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1404FAF821E0A1BA00122E22 /* Skull.jpg */; };
 		1421D5CD21F307F700635582 /* CustomViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1421D5CC21F307F700635582 /* CustomViewController.m */; };
 		1421D5D021F3177700635582 /* BNWalletView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1421D5CF21F3177700635582 /* BNWalletView.m */; };
+		142A76D022263F080016D3DA /* icon_operation_busy@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 142A76CE22263F080016D3DA /* icon_operation_busy@2x.png */; };
+		142A76D122263F080016D3DA /* 完成@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 142A76CF22263F080016D3DA /* 完成@2x.png */; };
+		142A76D72226708D0016D3DA /* BNSliderControlView.m in Sources */ = {isa = PBXBuildFile; fileRef = 142A76D62226708D0016D3DA /* BNSliderControlView.m */; };
+		142A77102227B30E0016D3DA /* UITableViewPickerCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 142A770F2227B30E0016D3DA /* UITableViewPickerCell.m */; };
 		144920AA21C7BAA700C3C2F6 /* MoneyDisplayController.m in Sources */ = {isa = PBXBuildFile; fileRef = 144920A921C7BAA700C3C2F6 /* MoneyDisplayController.m */; };
 		1476F78D21FC36B10088C137 /* WHKBaseRequestApi.m in Sources */ = {isa = PBXBuildFile; fileRef = 1476F78C21FC36B10088C137 /* WHKBaseRequestApi.m */; };
 		147B971F21EF005B000F5294 /* UICollectionDisplayController.m in Sources */ = {isa = PBXBuildFile; fileRef = 147B971E21EF005B000F5294 /* UICollectionDisplayController.m */; };
@@ -376,6 +380,12 @@
 		1421D5CC21F307F700635582 /* CustomViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CustomViewController.m; sourceTree = "<group>"; };
 		1421D5CE21F3177700635582 /* BNWalletView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BNWalletView.h; sourceTree = "<group>"; };
 		1421D5CF21F3177700635582 /* BNWalletView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BNWalletView.m; sourceTree = "<group>"; };
+		142A76CE22263F080016D3DA /* icon_operation_busy@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_operation_busy@2x.png"; sourceTree = "<group>"; };
+		142A76CF22263F080016D3DA /* 完成@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "完成@2x.png"; sourceTree = "<group>"; };
+		142A76D52226708D0016D3DA /* BNSliderControlView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BNSliderControlView.h; sourceTree = "<group>"; };
+		142A76D62226708D0016D3DA /* BNSliderControlView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BNSliderControlView.m; sourceTree = "<group>"; };
+		142A770E2227B30E0016D3DA /* UITableViewPickerCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UITableViewPickerCell.h; sourceTree = "<group>"; };
+		142A770F2227B30E0016D3DA /* UITableViewPickerCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UITableViewPickerCell.m; sourceTree = "<group>"; };
 		144920A821C7BAA700C3C2F6 /* MoneyDisplayController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MoneyDisplayController.h; sourceTree = "<group>"; };
 		144920A921C7BAA700C3C2F6 /* MoneyDisplayController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MoneyDisplayController.m; sourceTree = "<group>"; };
 		1476F78B21FC36B10088C137 /* WHKBaseRequestApi.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WHKBaseRequestApi.h; sourceTree = "<group>"; };
@@ -1020,12 +1030,16 @@
 				513646B620860332005A20E7 /* MainViewController.m */,
 				516F8560215DF8F2008E62B3 /* SuspendButton.h */,
 				516F8561215DF8F4008E62B3 /* SuspendButton.m */,
+				142A76D52226708D0016D3DA /* BNSliderControlView.h */,
+				142A76D62226708D0016D3DA /* BNSliderControlView.m */,
 				513646A82086031D005A20E7 /* Assets.xcassets */,
 				5169DF232088254300B025C3 /* Public.xcassets */,
 				5136492420860655005A20E7 /* Resources */,
 				513646AD2086031D005A20E7 /* Info.plist */,
 				14E793C321D62E0B003230C8 /* bug.png */,
 				1404FAF821E0A1BA00122E22 /* Skull.jpg */,
+				142A76CF22263F080016D3DA /* 完成@2x.png */,
+				142A76CE22263F080016D3DA /* icon_operation_busy@2x.png */,
 				513646AE2086031D005A20E7 /* main.m */,
 				513649E320860683005A20E7 /* PrefixHeader.pch */,
 			);
@@ -1180,6 +1194,8 @@
 				1421D5CC21F307F700635582 /* CustomViewController.m */,
 				14E8F74D21F5E1EC004317B5 /* RuntimeController.h */,
 				14E8F74E21F5E1ED004317B5 /* RuntimeController.m */,
+				142A770E2227B30E0016D3DA /* UITableViewPickerCell.h */,
+				142A770F2227B30E0016D3DA /* UITableViewPickerCell.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -2122,6 +2138,7 @@
 				518B5B3C2086C414002FDD33 /* ShareSDK.bundle in Resources */,
 				513649AB20860655005A20E7 /* img_home_animamalOrigin_147.png in Resources */,
 				5136498620860655005A20E7 /* img_Ablactation_H.png in Resources */,
+				142A76D022263F080016D3DA /* icon_operation_busy@2x.png in Resources */,
 				513649DA20860655005A20E7 /* img_standard_animalOut.png in Resources */,
 				513649B920860655005A20E7 /* img_home_remind_147.png in Resources */,
 				513649BF20860655005A20E7 /* img_houseOut_H.png in Resources */,
@@ -2183,6 +2200,7 @@
 				513649B620860655005A20E7 /* img_home_immunization_98.png in Resources */,
 				513649D220860655005A20E7 /* img_remind_pregnancyTest.png in Resources */,
 				513649D320860655005A20E7 /* img_report_animalBaby.png in Resources */,
+				142A76D122263F080016D3DA /* 完成@2x.png in Resources */,
 				5136498920860655005A20E7 /* img_Add_AnimalAblactation.png in Resources */,
 				513649A620860655005A20E7 /* img_feed_N.png in Resources */,
 				513649E020860655005A20E7 /* img_warning_exception.png in Resources */,
@@ -2441,6 +2459,7 @@
 				14E42D1B2200042800606AD0 /* BNNum.m in Sources */,
 				515CC97B20B6AAF2004AE27C /* AAColumn.m in Sources */,
 				5162F70020BF9D10009A6253 /* FlowerFactory.m in Sources */,
+				142A76D72226708D0016D3DA /* BNSliderControlView.m in Sources */,
 				14E42CF82200040F00606AD0 /* BNThirdViewController.m in Sources */,
 				14E42D152200042800606AD0 /* BNLanguage.m in Sources */,
 				14E42CF62200040F00606AD0 /* BNLeftViewController.m in Sources */,
@@ -2508,6 +2527,7 @@
 				510BC9A3208F3B6A00CF48C5 /* SliderTabBarController.m in Sources */,
 				516969A020BCF11600BAA53D /* MediatorViewController.m in Sources */,
 				515C67DF2137C55700D5EA94 /* ChineseToPinyin.m in Sources */,
+				142A77102227B30E0016D3DA /* UITableViewPickerCell.m in Sources */,
 				51862E5020BB908E0080BD4E /* DesignPatternsController.m in Sources */,
 				516969AE20BCF9A800BAA53D /* Seller.m in Sources */,
 				515C67E02137C55700D5EA94 /* LNLocationManager.m in Sources */,

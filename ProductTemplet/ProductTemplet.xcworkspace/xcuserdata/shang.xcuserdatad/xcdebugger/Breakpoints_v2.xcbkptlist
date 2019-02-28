@@ -92,53 +92,5 @@
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "ProductTemplet/Classes/Controller/Main/BNFourthViewController.m"
-            timestampString = "571914529.159817"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "138"
-            endingLineNumber = "138"
-            landmarkName = "-viewDidLoad"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "-[BNFourthViewController viewDidLoad]"
-                  moduleName = "ProductTemplet"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/shang/Documents/GitHub/ProductTemplet/ProductTemplet/ProductTemplet/Classes/Controller/Main/BNFourthViewController.m"
-                  timestampString = "571820173.561638"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "136"
-                  endingLineNumber = "136"
-                  offsetFromSymbolStart = "6033">
-               </Location>
-               <Location
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "-[BNFourthViewController viewDidLoad]"
-                  moduleName = "ProductTemplet"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/shang/Documents/GitHub/ProductTemplet/ProductTemplet/ProductTemplet/Classes/Controller/Main/BNFourthViewController.m"
-                  timestampString = "571820173.564636"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "136"
-                  endingLineNumber = "136"
-                  offsetFromSymbolStart = "7246">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
    </Breakpoints>
 </Bucket>

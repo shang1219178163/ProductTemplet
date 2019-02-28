@@ -16,7 +16,7 @@ PODS:
   - AFNetworking/UIKit (3.2.1):
     - AFNetworking/NSURLSession
   - Aspects (1.4.1)
-  - BNCategory (1.8.7.2):
+  - BNCategory (1.8.7.3):
     - AESCrypt-ObjC
     - BNGloble
     - BNKit
@@ -39,7 +39,7 @@ PODS:
     - BNKit
     - BNView
     - Masonry
-  - BNView (1.4.5):
+  - BNView (1.4.6):
     - BNCategory
     - BNGloble
     - BNKit
@@ -76,9 +76,9 @@ PODS:
   - PPNumberButton (0.8.0)
   - SDCycleScrollView (1.75):
     - SDWebImage (>= 4.0.0)
-  - SDWebImage (4.4.5):
-    - SDWebImage/Core (= 4.4.5)
-  - SDWebImage/Core (4.4.5)
+  - SDWebImage (4.4.6):
+    - SDWebImage/Core (= 4.4.6)
+  - SDWebImage/Core (4.4.6)
   - Toast (4.0.0)
   - TZImagePickerController (3.1.9)
   - UICKeyChainStore (2.1.2)
@@ -184,12 +184,12 @@ SPEC CHECKSUMS:
   AESCrypt-ObjC: 6d930ff891a61b90505855e9447959a84be80715
   AFNetworking: b6f891fdfaed196b46c7a83cf209e09697b94057
   Aspects: 7595ba96a6727a58ebcbfc954497fc5d2fdde546
-  BNCategory: 8497458d57ccd220d5ea558425e85add6a55e194
+  BNCategory: 4cba1000a4f17b419d586dad1af05ed187b477fd
   BNCollectionView: 0c6be9c6da86b4314e4e7221fa8aebc0dc6856d4
   BNGloble: 989845a6ccd5b581865034dcb6134e69e78acabd
   BNKit: 0d8caba583620f33c6f14da13617ed3dc6d3b17f
   BNTableViewCell: 6d11f270d89a773ee67d87f0224d8cd8724ecc58
-  BNView: 171e3649379166cc817ab57017eb2d8309e0f9e2
+  BNView: 4a43719eaeece72abd79776e40fedd4b41bbb65a
   BNViewHeight: 2ba42b040196f2fd1165df22f329eefa33ee46bc
   FCUUID: bb054fc90cd7cd99320f9f6ff8e130fe607fba05
   FLAnimatedImage: 4a0b56255d9b05f18b6dd7ee06871be5d3b89e31
@@ -208,7 +208,7 @@ SPEC CHECKSUMS:
   PopoverView: 62e83ffda75944d6cf2de9c6593489f3097dc1a3
   PPNumberButton: 4442ff64c21d91733057ca1b3dc05fb4df55f2c0
   SDCycleScrollView: 884b88f0266dd4708a0e1934975c69cb971707b1
-  SDWebImage: ecc03494e973b93b80213649d32175f8d2d17d4d
+  SDWebImage: 3f3f0c02f09798048c47a5ed0a13f17b063572d8
   Toast: 91b396c56ee72a5790816f40d3a94dd357abc196
   TZImagePickerController: c3f7c505d23281e21e98df6dbeae372946caa28f
   UICKeyChainStore: 85db518bb1d294366d15ec9b92a416c4e670518f

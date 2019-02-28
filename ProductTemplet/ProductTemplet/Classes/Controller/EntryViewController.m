@@ -9,10 +9,13 @@
 #import "EntryViewController.h"
 #import "BNSuspendBtn.h"
 
+#import "UITableViewPickerCell.h"
+
 @interface EntryViewController ()
 
 @property(nonatomic, strong) NSDictionary * dic;
 @property(nonatomic, strong) BNSuspendBtn * suspendBtn;
+@property(nonatomic, strong) BNPickerView * pickerView;
 
 @end
 
@@ -63,7 +66,8 @@
                       @[@"生产厂家:", @"112", @"60.0", @"", @"recharge", ],
                       @[@"*备注信息:", @"107", @"160.0", @"", @"recharge", ],
                       @[@"*default:", @"150", @"60.0", @"", @"recharge", ],
-                      
+                      @[@"*Picker:", @"113", @"60.0", @"", @"recharge", ],
+
                       ].mutableCopy;
     
 
@@ -217,6 +221,20 @@
             return cell;
         }
             break;
+        case 113:
+        {
+            UITableViewPickerCell* cell = [UITableViewPickerCell cellWithTableView:tableView];
+//            cell.labelLeft.text = value0;
+            
+            [cell addGestureTap:^(UIGestureRecognizer *sender) {
+                [self.pickerView show];
+                
+            }];
+       
+            [cell getViewLayer];
+            return cell;
+        }
+            break;
         case 200:
         {
             
@@ -284,6 +302,17 @@
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+-(BNPickerView *)pickerView{
+    if (!_pickerView) {
+        _pickerView = [[BNPickerView alloc]initWithFrame:CGRectZero];
+        _pickerView.block = ^(UIPickerView *pickerView, NSInteger btnIndex) {
+           DDLog(@"_%@_",@(btnIndex))
+            
+        };
+    }
+    return _pickerView;
 }
 
 

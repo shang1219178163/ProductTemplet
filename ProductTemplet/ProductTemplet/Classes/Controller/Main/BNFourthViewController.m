@@ -12,12 +12,19 @@
 
 #import <FLAnimatedImage/FLAnimatedImage.h>
 
+#import "BNSliderControlView.h"
+#import "BNPickerView.h"
+
 @interface BNFourthViewController ()
 
 @property (nonatomic, strong) UIImageView *imgView;
 @property (nonatomic, strong) UIView *sliderView;
 @property (nonatomic, strong) UITabBarItem *tabBarItem;
 @property (nonatomic, strong) BNSegmentView * segmentView;
+@property (nonatomic, strong) BNSliderControlView * sliderControlView;
+@property(nonatomic, strong) BNPickerView * pickerView;
+
+@property (nonatomic, strong) UILabel *label;
 
 @end
 
@@ -27,11 +34,11 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-
 //    [self addChildControllerView:@"FontListController"];
 //    [self addChildControllerView:@"FriendListController"];
     [self createBarItemTitle:nil imgName:@"Item_fourth_H" isLeft:NO isHidden:NO handler:^(id obj, UIButton *item, NSInteger idx) {
-        DDLog(@"%@",item);
+        [self.pickerView show];
+
     }];
     
     
@@ -130,6 +137,16 @@
     self.segmentView.layer.borderWidth = kW_LayerBorder;
     self.segmentView.layer.borderColor = UIColor.blueColor.CGColor;
     
+    self.label.text = @"滑动开始运客";
+    self.label.frame = CGRectMake(kX_GAP, CGRectGetMaxY(self.segmentView.frame)+kY_GAP, kScreenWidth - kX_GAP*2, 30);
+    [self.view addSubview:self.label];
+    
+    [self.label sizeToFit];
+    [self flashAnimationMask:self.label];
+
+    self.sliderControlView.frame = CGRectMake(kX_GAP, CGRectGetMaxY(self.label.frame), kScreenWidth - kX_GAP*2, 40);
+    [self.view addSubview:self.sliderControlView];
+    
 //    [self.view getViewLayer];
     
     [NSUserDefaults.standardUserDefaults setObject:@"nil" forKey:@"1111"];
@@ -172,7 +189,28 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (void)flashAnimationMask:(UILabel *)label{
+    CAGradientLayer *graLayer = CAGradientLayer.layer;
+    graLayer.frame = label.bounds;
+    graLayer.colors = @[(__bridge id)[UIColor.greenColor colorWithAlphaComponent:0.3].CGColor,
+                        (__bridge id)UIColor.yellowColor.CGColor,
+                        (__bridge id)[UIColor.yellowColor colorWithAlphaComponent:0.3].CGColor];
 
+    graLayer.startPoint = CGPointMake(0, 0);//设置渐变方向起点
+    graLayer.endPoint = CGPointMake(1, 0);  //设置渐变方向终点
+    graLayer.locations = @[@(0.0), @(0.0), @(0.1)]; //colors中各颜色对应的初始渐变点
+
+    // 第二步：通过设置颜色渐变点(locations)动画，达到预期效果
+    CABasicAnimation *anim = [CABasicAnimation animationWithKeyPath:@"locations"];
+    anim.duration = 3.0f;
+    anim.toValue = @[@(0.9), @(1.0), @(1.0)];
+    anim.removedOnCompletion = NO;
+    anim.repeatCount = HUGE_VALF;
+    anim.fillMode = kCAFillModeForwards;
+    [graLayer addAnimation:anim forKey:@"xindong"];
+    
+    label.layer.mask = graLayer;
+}
 
 -(UIImageView *)imgView{
     if (!_imgView) {
@@ -184,7 +222,6 @@
     }
     return _imgView;
 }
-
 
 -(UIView *)sliderView{
     if (!_sliderView) {
@@ -220,6 +257,46 @@
         
     }
     return _segmentView;
+}
+
+-(UILabel *)label{
+    if (!_label) {
+        _label = ({
+            UILabel * label = [[UILabel alloc] initWithFrame:CGRectZero];
+            label.font = [UIFont systemFontOfSize:17];
+            //            label.textColor = UIColor.grayColor;
+            label.textAlignment = NSTextAlignmentLeft;
+            
+            label.numberOfLines = 0;
+            label.userInteractionEnabled = YES;
+            //        label.backgroundColor = UIColor.greenColor;
+            label;
+        });
+    }
+    return _label;
+}
+
+-(BNSliderControlView *)sliderControlView{
+    if (!_sliderControlView) {
+        _sliderControlView = [[BNSliderControlView alloc]initWithFrame:CGRectZero];
+        _sliderControlView.text = @"滑动开始运客";
+        _sliderControlView.textFinish = @"操作成功!";
+        _sliderControlView.thumbImage = [UIImage imageNamed:@"icon_operation_busy"];
+        _sliderControlView.thumbFinishImage = [UIImage imageNamed:@"完成"];
+    }
+    return _sliderControlView;
+}
+
+-(BNPickerView *)pickerView{
+    if (!_pickerView) {
+        _pickerView = [[BNPickerView alloc]initWithFrame:CGRectZero];
+        _pickerView.block = ^(UIPickerView *pickerView, NSInteger btnIndex) {
+            NSString * info = [NSString stringWithFormat:@"%@-%@-%@", @([pickerView selectedRowInComponent:0]), @([pickerView selectedRowInComponent:1]), @([pickerView selectedRowInComponent:2])];
+            DDLog(@"_%@_:%@",@(btnIndex),info);
+
+        };
+    }
+    return _pickerView;
 }
 
 @end
