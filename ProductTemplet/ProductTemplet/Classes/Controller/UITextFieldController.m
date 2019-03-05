@@ -36,6 +36,7 @@
     self.textField = [[BNTextFieldOne alloc]initWithFrame:CGRectMake(10, 20, kScreenWidth - 20, 40)];
     self.textField.backgroundColor = UIColor.greenColor;
     self.textField.clearButtonMode = UITextFieldViewModeAlways;
+    [self.textField becomeFirstResponder];
     [self.view addSubview:self.textField];
     
     [self.textField showHistoryWithImage:@"click" handlder:^(BNTextFieldOne * _Nonnull textField, UIImageView * _Nonnull imgView) {

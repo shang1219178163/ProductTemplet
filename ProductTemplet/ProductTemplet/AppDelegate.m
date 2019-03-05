@@ -39,7 +39,7 @@
 //    [UIApplication setupRootController:UICtrFromString(@"RecognizerController") isAdjust:YES];
 //    [UIApplication setupRootController:UICtrFromString(@"UIRecognizerController") isAdjust:YES];
     
-    [UIApplication setupAppearance];
+    [UIApplication setupAppearanceDefault:false];
     [UIApplication setupIQKeyboardManager];
     
     //因为左右侧滑栏失效

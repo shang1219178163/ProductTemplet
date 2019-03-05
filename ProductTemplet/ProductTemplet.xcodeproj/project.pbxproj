@@ -12,6 +12,7 @@
 		1404FAF921E0A1BB00122E22 /* Skull.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1404FAF821E0A1BA00122E22 /* Skull.jpg */; };
 		1421D5CD21F307F700635582 /* CustomViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1421D5CC21F307F700635582 /* CustomViewController.m */; };
 		1421D5D021F3177700635582 /* BNWalletView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1421D5CF21F3177700635582 /* BNWalletView.m */; };
+		142447E1222E12D70087372F /* UITextField+List.m in Sources */ = {isa = PBXBuildFile; fileRef = 142447E0222E12D70087372F /* UITextField+List.m */; };
 		142A76D022263F080016D3DA /* icon_operation_busy@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 142A76CE22263F080016D3DA /* icon_operation_busy@2x.png */; };
 		142A76D122263F080016D3DA /* 完成@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 142A76CF22263F080016D3DA /* 完成@2x.png */; };
 		142A76D72226708D0016D3DA /* BNSliderControlView.m in Sources */ = {isa = PBXBuildFile; fileRef = 142A76D62226708D0016D3DA /* BNSliderControlView.m */; };
@@ -380,6 +381,8 @@
 		1421D5CC21F307F700635582 /* CustomViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CustomViewController.m; sourceTree = "<group>"; };
 		1421D5CE21F3177700635582 /* BNWalletView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BNWalletView.h; sourceTree = "<group>"; };
 		1421D5CF21F3177700635582 /* BNWalletView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BNWalletView.m; sourceTree = "<group>"; };
+		142447DF222E12D70087372F /* UITextField+List.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UITextField+List.h"; sourceTree = "<group>"; };
+		142447E0222E12D70087372F /* UITextField+List.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UITextField+List.m"; sourceTree = "<group>"; };
 		142A76CE22263F080016D3DA /* icon_operation_busy@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_operation_busy@2x.png"; sourceTree = "<group>"; };
 		142A76CF22263F080016D3DA /* 完成@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "完成@2x.png"; sourceTree = "<group>"; };
 		142A76D52226708D0016D3DA /* BNSliderControlView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BNSliderControlView.h; sourceTree = "<group>"; };
@@ -1196,6 +1199,8 @@
 				14E8F74E21F5E1ED004317B5 /* RuntimeController.m */,
 				142A770E2227B30E0016D3DA /* UITableViewPickerCell.h */,
 				142A770F2227B30E0016D3DA /* UITableViewPickerCell.m */,
+				142447DF222E12D70087372F /* UITextField+List.h */,
+				142447E0222E12D70087372F /* UITextField+List.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -2427,6 +2432,7 @@
 				147B971F21EF005B000F5294 /* UICollectionDisplayController.m in Sources */,
 				5162F70120BF9D10009A6253 /* FlowerView.m in Sources */,
 				5162F70D20BFB934009A6253 /* OperationViewController.m in Sources */,
+				142447E1222E12D70087372F /* UITextField+List.m in Sources */,
 				14E42CF72200040F00606AD0 /* BNTempViewController.m in Sources */,
 				14E42D162200042800606AD0 /* BNMenuListController.m in Sources */,
 				515CC97D20B6AAF2004AE27C /* AAOptions3d.m in Sources */,
