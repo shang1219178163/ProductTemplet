@@ -27,7 +27,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc]initWithTitle:@"Right" style:UIBarButtonItemStyleDone target:nil action:nil];
+//    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc]initWithTitle:@"Right" style:UIBarButtonItemStyleDone target:nil action:nil];
+    self.navigationItem.rightBarButtonItem = [UIView createBarItem:@"Right" style:UIBarButtonItemStyleDone];
+
     [self.navigationItem.rightBarButtonItem setActionBlock:^{
         DDLog(@"%@",@"111");
 

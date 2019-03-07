@@ -89,7 +89,17 @@
     
     self.view.backgroundColor = UIColor.yellowColor;
     
-    [self createBarItemTitle:@"Tap" imgName:nil isLeft:NO isHidden:NO handler:^(id obj, UIButton * item, NSInteger idx) {
+//    [self createBarItemTitle:@"Tap" imgName:nil isLeft:NO isHidden:NO handler:^(id obj, UIButton * item, NSInteger idx) {
+//        BNFilterView * view = [[BNFilterView alloc]init];
+//        view.dataList = self.filterList;
+//        //            view.direction = @1;
+//        [view show];
+//        view.block = ^(BNFilterView *view, NSIndexPath *indexPath, NSInteger idx) {
+//            DDLog(@"%@,%@",@(indexPath.section),@(indexPath.row));
+//        };
+//    }];
+    
+    [self createBarItem:@"个人中心" isLeft:false handler:^(id obj, UIView *item, NSInteger idx) {
         BNFilterView * view = [[BNFilterView alloc]init];
         view.dataList = self.filterList;
         //            view.direction = @1;
