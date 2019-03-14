@@ -16,7 +16,7 @@ PODS:
   - AFNetworking/UIKit (3.2.1):
     - AFNetworking/NSURLSession
   - Aspects (1.4.1)
-  - BNCategory (1.8.8):
+  - BNCategory (1.8.8.1):
     - AESCrypt-ObjC
     - BNGloble
     - BNKit
@@ -30,7 +30,7 @@ PODS:
     - YYModel
   - BNCollectionView (1.2.0):
     - BNCategory
-  - BNGloble (1.3.6.3)
+  - BNGloble (1.3.6.4)
   - BNKit (1.3.3):
     - BNGloble
   - BNTableViewCell (1.4.3.1):
@@ -184,9 +184,9 @@ SPEC CHECKSUMS:
   AESCrypt-ObjC: 6d930ff891a61b90505855e9447959a84be80715
   AFNetworking: b6f891fdfaed196b46c7a83cf209e09697b94057
   Aspects: 7595ba96a6727a58ebcbfc954497fc5d2fdde546
-  BNCategory: e5241f499a99ecc00c9647a07cfca21ee4c0ecac
+  BNCategory: 1cb5a9c7578aa7055f15c5246a73ae6714dfe90e
   BNCollectionView: 0c6be9c6da86b4314e4e7221fa8aebc0dc6856d4
-  BNGloble: cdf98edde95b78b2779d223897c42674e842930f
+  BNGloble: c4abe1178cafeb99cd1be2e04b74e162b0b413b5
   BNKit: 0d8caba583620f33c6f14da13617ed3dc6d3b17f
   BNTableViewCell: 6d11f270d89a773ee67d87f0224d8cd8724ecc58
   BNView: 7fc9fbcd292ff86b494bfb4d4404a87f8a58665a

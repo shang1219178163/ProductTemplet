@@ -22,7 +22,9 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
-  
+    [UIApplication setupIQKeyboardManager];
+    [UIApplication setupAppearanceDefault:false];
+
     UIViewController * controller = UICtrFromString(@"HomeViewController");
     UIViewController * controllerLeft = UICtrFromString(@"BNLeftViewController");
     UIViewController * controllerRight = UICtrFromString(@"BNRightViewController");
@@ -39,8 +41,6 @@
 //    [UIApplication setupRootController:UICtrFromString(@"RecognizerController") isAdjust:YES];
 //    [UIApplication setupRootController:UICtrFromString(@"UIRecognizerController") isAdjust:YES];
     
-    [UIApplication setupAppearanceDefault:false];
-    [UIApplication setupIQKeyboardManager];
     
     //因为左右侧滑栏失效
 //    UIApplication.tabBarController.selectedIndex = 3;
