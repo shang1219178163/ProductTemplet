@@ -178,7 +178,7 @@
                           @"金额跳动",@"MoneyDisplayController",
                           ],
                       @[
-                          @"语音读文字",@"AVSpeechViewController",
+                          @"文字转语音",@"AVSpeechViewController",
                           ],
                       
                       @[
