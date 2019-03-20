@@ -177,6 +177,9 @@
                       @[
                           @"金额跳动",@"MoneyDisplayController",
                           ],
+                      @[
+                          @"语音读文字",@"AVSpeechViewController",
+                          ],
                       
                       @[
                           @"Test",@"TestViewController",

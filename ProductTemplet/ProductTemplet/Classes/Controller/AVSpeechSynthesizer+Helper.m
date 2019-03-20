@@ -1,0 +1,49 @@
+//
+//  AVSpeechSynthesizer+Helper.m
+//  AVFoundation-语音朗读
+//
+//  Created by Bin Shang on 2019/3/20.
+//  Copyright © 2019 Frank.Zhang. All rights reserved.
+//
+
+#import "AVSpeechSynthesizer+Helper.h"
+
+
+@implementation AVSpeechSynthesizer (Helper)
+
+AVSpeechUtterance * AVSpeechUtteranceParam(NSString *speechString, NSString *voiceLanguage, float rate, float volume, float pitchMultiplier, NSTimeInterval preUtteranceDelay, NSTimeInterval postUtteranceDelay){
+    AVSpeechUtterance * utterance = [AVSpeechUtterance speechUtteranceWithString:speechString];
+    voiceLanguage = voiceLanguage ? : @"zh-CN";
+    utterance.voice = [AVSpeechSynthesisVoice voiceWithLanguage:voiceLanguage];
+    //语速0.0f~1.0f
+    utterance.rate = rate;
+    //声音的音调0.5f~2.0f
+    utterance.pitchMultiplier = pitchMultiplier;
+    //播放下下一句话的时候有多长时间的延迟
+    utterance.postUtteranceDelay = postUtteranceDelay;
+    //上一句之前需要多久
+    utterance.preUtteranceDelay = preUtteranceDelay;
+    //音量
+    utterance.volume = volume;
+    return utterance;
+}
+
+AVSpeechUtterance * AVSpeechUtteranceDefault(NSString *speechString, NSString *voiceLanguage){
+//    AVSpeechUtterance * utterance = [AVSpeechUtterance speechUtteranceWithString:speechString];
+//    utterance.voice = [AVSpeechSynthesisVoice voiceWithLanguage:voiceLanguage];
+//    //语速0.0f~1.0f
+//    utterance.rate = 0.37f;
+//    //声音的音调0.5f~2.0f
+//    utterance.pitchMultiplier = 0.8f;
+    //播放下下一句话的时候有多长时间的延迟
+//    utterance.postUtteranceDelay = 0.05f;
+//    //上一句之前需要多久
+//    utterance.preUtteranceDelay = 0.5f;
+    //音量
+//    utterance.volume = 1.0f;
+//    return utterance;
+    return AVSpeechUtteranceParam(speechString, voiceLanguage, 0.4, 1.0, 0.8, 0.0, 0.0);
+
+}
+
+@end
