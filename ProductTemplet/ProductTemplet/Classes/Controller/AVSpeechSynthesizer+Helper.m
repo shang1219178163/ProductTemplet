@@ -11,6 +11,18 @@
 
 @implementation AVSpeechSynthesizer (Helper)
 
+/**
+ [源]发音
+ 
+ @param speechString 发音字符串
+ @param voiceLanguage 默认 @"zh-CN"
+ @param rate 语速0.0f~1.0f
+ @param volume 音量
+ @param pitchMultiplier 声音的音调0.5f~2.0f
+ @param preUtteranceDelay 播放上一句之前需要多久
+ @param postUtteranceDelay 播放下下一句话的时候有多长时间的延迟
+ @return 发音实例
+ */
 AVSpeechUtterance * AVSpeechUtteranceParam(NSString *speechString, NSString *voiceLanguage, float rate, float volume, float pitchMultiplier, NSTimeInterval preUtteranceDelay, NSTimeInterval postUtteranceDelay){
     AVSpeechUtterance * utterance = [AVSpeechUtterance speechUtteranceWithString:speechString];
     voiceLanguage = voiceLanguage ? : @"zh-CN";
@@ -28,6 +40,9 @@ AVSpeechUtterance * AVSpeechUtteranceParam(NSString *speechString, NSString *voi
     return utterance;
 }
 
+/**
+ 发音(默认语速,音量,音调)
+ */
 AVSpeechUtterance * AVSpeechUtteranceDefault(NSString *speechString, NSString *voiceLanguage){
 //    AVSpeechUtterance * utterance = [AVSpeechUtterance speechUtteranceWithString:speechString];
 //    utterance.voice = [AVSpeechSynthesisVoice voiceWithLanguage:voiceLanguage];
