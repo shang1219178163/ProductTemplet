@@ -182,6 +182,10 @@
                           ],
                       
                       @[
+                          @"语音转文字",@"TextFromSpeechController",
+                          ],
+                      
+                      @[
                           @"Test",@"TestViewController",
                           
                           ],

@@ -18,9 +18,11 @@
 		142A77102227B30E0016D3DA /* UITableViewPickerCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 142A770F2227B30E0016D3DA /* UITableViewPickerCell.m */; };
 		143331AD2241F1F600436F75 /* AVSpeechViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 143331AC2241F1F600436F75 /* AVSpeechViewController.m */; };
 		143331B02241F24C00436F75 /* AVSpeechSynthesizer+Helper.m in Sources */ = {isa = PBXBuildFile; fileRef = 143331AF2241F24C00436F75 /* AVSpeechSynthesizer+Helper.m */; };
+		14488530224C584800B550AF /* AVAudioSession+Helper.m in Sources */ = {isa = PBXBuildFile; fileRef = 1448852F224C584800B550AF /* AVAudioSession+Helper.m */; };
 		144920AA21C7BAA700C3C2F6 /* MoneyDisplayController.m in Sources */ = {isa = PBXBuildFile; fileRef = 144920A921C7BAA700C3C2F6 /* MoneyDisplayController.m */; };
 		1476F78D21FC36B10088C137 /* WHKBaseRequestApi.m in Sources */ = {isa = PBXBuildFile; fileRef = 1476F78C21FC36B10088C137 /* WHKBaseRequestApi.m */; };
 		147B971F21EF005B000F5294 /* UICollectionDisplayController.m in Sources */ = {isa = PBXBuildFile; fileRef = 147B971E21EF005B000F5294 /* UICollectionDisplayController.m */; };
+		14A1EA752249FBAA00952911 /* TextFromSpeechController.m in Sources */ = {isa = PBXBuildFile; fileRef = 14A1EA742249FBAA00952911 /* TextFromSpeechController.m */; };
 		14E42CD3220003F200606AD0 /* BNOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 14E42CD1220003F200606AD0 /* BNOperation.m */; };
 		14E42CDA2200040200606AD0 /* BNUserLoginController.m in Sources */ = {isa = PBXBuildFile; fileRef = 14E42CD62200040200606AD0 /* BNUserLoginController.m */; };
 		14E42CDB2200040200606AD0 /* BNUserPwdChangeController.m in Sources */ = {isa = PBXBuildFile; fileRef = 14E42CD72200040200606AD0 /* BNUserPwdChangeController.m */; };
@@ -392,12 +394,16 @@
 		143331AC2241F1F600436F75 /* AVSpeechViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AVSpeechViewController.m; sourceTree = "<group>"; };
 		143331AE2241F24C00436F75 /* AVSpeechSynthesizer+Helper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "AVSpeechSynthesizer+Helper.h"; sourceTree = "<group>"; };
 		143331AF2241F24C00436F75 /* AVSpeechSynthesizer+Helper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "AVSpeechSynthesizer+Helper.m"; sourceTree = "<group>"; };
+		1448852E224C584800B550AF /* AVAudioSession+Helper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AVAudioSession+Helper.h"; sourceTree = "<group>"; };
+		1448852F224C584800B550AF /* AVAudioSession+Helper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "AVAudioSession+Helper.m"; sourceTree = "<group>"; };
 		144920A821C7BAA700C3C2F6 /* MoneyDisplayController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MoneyDisplayController.h; sourceTree = "<group>"; };
 		144920A921C7BAA700C3C2F6 /* MoneyDisplayController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MoneyDisplayController.m; sourceTree = "<group>"; };
 		1476F78B21FC36B10088C137 /* WHKBaseRequestApi.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WHKBaseRequestApi.h; sourceTree = "<group>"; };
 		1476F78C21FC36B10088C137 /* WHKBaseRequestApi.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WHKBaseRequestApi.m; sourceTree = "<group>"; };
 		147B971D21EF005B000F5294 /* UICollectionDisplayController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UICollectionDisplayController.h; sourceTree = "<group>"; };
 		147B971E21EF005B000F5294 /* UICollectionDisplayController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UICollectionDisplayController.m; sourceTree = "<group>"; };
+		14A1EA732249FBAA00952911 /* TextFromSpeechController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TextFromSpeechController.h; sourceTree = "<group>"; };
+		14A1EA742249FBAA00952911 /* TextFromSpeechController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TextFromSpeechController.m; sourceTree = "<group>"; };
 		14E42CD1220003F200606AD0 /* BNOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BNOperation.m; sourceTree = "<group>"; };
 		14E42CD2220003F200606AD0 /* BNOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BNOperation.h; sourceTree = "<group>"; };
 		14E42CD42200040200606AD0 /* BNUserLoginController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BNUserLoginController.h; sourceTree = "<group>"; };
@@ -1194,6 +1200,8 @@
 				147B971E21EF005B000F5294 /* UICollectionDisplayController.m */,
 				143331AB2241F1F600436F75 /* AVSpeechViewController.h */,
 				143331AC2241F1F600436F75 /* AVSpeechViewController.m */,
+				14A1EA732249FBAA00952911 /* TextFromSpeechController.h */,
+				14A1EA742249FBAA00952911 /* TextFromSpeechController.m */,
 				5186F1BF21A3A43900663707 /* BNImageView.h */,
 				5186F1C021A3A43900663707 /* BNImageView.m */,
 				1421D5CE21F3177700635582 /* BNWalletView.h */,
@@ -1206,6 +1214,8 @@
 				142A770F2227B30E0016D3DA /* UITableViewPickerCell.m */,
 				143331AE2241F24C00436F75 /* AVSpeechSynthesizer+Helper.h */,
 				143331AF2241F24C00436F75 /* AVSpeechSynthesizer+Helper.m */,
+				1448852E224C584800B550AF /* AVAudioSession+Helper.h */,
+				1448852F224C584800B550AF /* AVAudioSession+Helper.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -2394,7 +2404,9 @@
 				14E42CFA2200040F00606AD0 /* BNFourthViewController.m in Sources */,
 				51862E7D20BBA8270080BD4E /* InputValidator.m in Sources */,
 				513647C1208604DE005A20E7 /* HZWaitingView.m in Sources */,
+				14A1EA752249FBAA00952911 /* TextFromSpeechController.m in Sources */,
 				51862E7A20BBA1B50080BD4E /* StrategyFinancyAlipay.m in Sources */,
+				14488530224C584800B550AF /* AVAudioSession+Helper.m in Sources */,
 				513647BD208604DE005A20E7 /* HZPhotoBrowser.m in Sources */,
 				518CD32D219D78B6003CE348 /* BNActionSheet.m in Sources */,
 				5162F6F720BF9604009A6253 /* ThreadCommunicationController.m in Sources */,
