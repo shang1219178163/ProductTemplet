@@ -16,7 +16,7 @@ PODS:
   - AFNetworking/UIKit (3.2.1):
     - AFNetworking/NSURLSession
   - Aspects (1.4.1)
-  - BNCategory (1.8.8.1):
+  - BNCategory (1.8.9):
     - AESCrypt-ObjC
     - BNGloble
     - BNKit
@@ -30,7 +30,7 @@ PODS:
     - YYModel
   - BNCollectionView (1.2.0):
     - BNCategory
-  - BNGloble (1.3.6.4)
+  - BNGloble (1.3.6.6)
   - BNKit (1.3.3):
     - BNGloble
   - BNTableViewCell (1.4.3.1):
@@ -39,7 +39,7 @@ PODS:
     - BNKit
     - BNView
     - Masonry
-  - BNView (1.4.6.1):
+  - BNView (1.4.6.2):
     - BNCategory
     - BNGloble
     - BNKit
@@ -62,7 +62,7 @@ PODS:
   - FMDB/standard (2.7.5)
   - GTMBase64 (1.0.1)
   - iCarousel (1.8.3)
-  - IQKeyboardManager (6.2.0)
+  - IQKeyboardManager (6.2.1)
   - JCore (1.2.6)
   - JPush (3.1.2):
     - JCore (~> 1.2.6)
@@ -70,8 +70,8 @@ PODS:
   - KVOController (1.2.0)
   - Masonry (1.1.0)
   - MBProgressHUD (1.1.0)
-  - MJExtension (3.0.15.1)
-  - MJRefresh (3.1.15.7)
+  - MJExtension (3.0.16)
+  - MJRefresh (3.1.16)
   - PopoverView (0.0.2)
   - PPNumberButton (0.8.0)
   - SDCycleScrollView (1.75):
@@ -184,27 +184,27 @@ SPEC CHECKSUMS:
   AESCrypt-ObjC: 6d930ff891a61b90505855e9447959a84be80715
   AFNetworking: b6f891fdfaed196b46c7a83cf209e09697b94057
   Aspects: 7595ba96a6727a58ebcbfc954497fc5d2fdde546
-  BNCategory: 1cb5a9c7578aa7055f15c5246a73ae6714dfe90e
+  BNCategory: 175e67c7743eb4bba2fd8d979e9d7dbf79e06618
   BNCollectionView: 0c6be9c6da86b4314e4e7221fa8aebc0dc6856d4
-  BNGloble: c4abe1178cafeb99cd1be2e04b74e162b0b413b5
+  BNGloble: a2b4617b254fb76455c088a6424b8f80bfb5af03
   BNKit: 0d8caba583620f33c6f14da13617ed3dc6d3b17f
   BNTableViewCell: 6d11f270d89a773ee67d87f0224d8cd8724ecc58
-  BNView: 7fc9fbcd292ff86b494bfb4d4404a87f8a58665a
+  BNView: 15b978d31d67d766f2734732e34616971d74dd41
   BNViewHeight: 2ba42b040196f2fd1165df22f329eefa33ee46bc
   FCUUID: bb054fc90cd7cd99320f9f6ff8e130fe607fba05
   FLAnimatedImage: 4a0b56255d9b05f18b6dd7ee06871be5d3b89e31
   FMDB: 2ce00b547f966261cd18927a3ddb07cb6f3db82a
   GTMBase64: f0f91be06a7a20b84c8e4fee30c0430395091d82
   iCarousel: d782f635afac190c49bb8ee455882284cff8b85f
-  IQKeyboardManager: 6194101620b73af5e67900b8f89707a99de0b804
+  IQKeyboardManager: 964638372b4a61892cc74fdfa6fd26de8c9464a2
   JCore: cae516dd2bf1a73b578ce6e1065abd49e709e0f7
   JPush: d0cead70ba223a6a3b52749899ebda830dfbc49a
   JZLocationConverter: 3d816bee6484aed9c155a6045a02ce444833e2f0
   KVOController: d72ace34afea42468329623b3379ab3cd1d286b6
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
   MBProgressHUD: e7baa36a220447d8aeb12769bf0585582f3866d9
-  MJExtension: 19bc33ce2eee2d319760f5622562cf581a6ff756
-  MJRefresh: 697f8ec75ebdbe9207767bb682cf0f51b0d8a41f
+  MJExtension: 54dbbf6ee728f1a88e9aad904353d007831c7847
+  MJRefresh: 7798e16e53a5ef7f332dd05b27664db4e29530fd
   PopoverView: 62e83ffda75944d6cf2de9c6593489f3097dc1a3
   PPNumberButton: 4442ff64c21d91733057ca1b3dc05fb4df55f2c0
   SDCycleScrollView: 884b88f0266dd4708a0e1934975c69cb971707b1
@@ -224,4 +224,4 @@ SPEC CHECKSUMS:
 
 PODFILE CHECKSUM: 4b5f14a4ca8a42bf92f65c5c5b806f777e987bd6
 
-COCOAPODS: 1.5.3
+COCOAPODS: 1.6.1

@@ -20,7 +20,14 @@
     // Do any additional setup after loading the view.
     
     [self createBarItemTitle:@"label" imgName:nil isLeft:NO isHidden:NO handler:^(id obj, id item, NSInteger idx) {
-        [self goController:@"CycleLabelViewController" title:@"滚动lab"];
+        
+        UIViewController * controller = [NSClassFromString(@"CycleLabelViewController") new];
+
+        CATransition *anim = [CATransition animDuration:0.5 functionName:kCAMediaTimingFunctionEaseIn type:kCATransitionSuckEffect subType:kCATransitionFromTop];
+        [UIApplication.sharedApplication.keyWindow.layer addAnimation:anim forKey:nil];
+        
+        [self.navigationController pushViewController:controller animated:false];
+//        [self goController:@"CycleLabelViewController" title:@"滚动lab"];
 
     }];
     

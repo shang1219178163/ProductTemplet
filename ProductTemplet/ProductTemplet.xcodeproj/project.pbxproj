@@ -2263,7 +2263,7 @@
 			files = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-ProductTemplet/Pods-ProductTemplet-frameworks.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-ProductTemplet/Pods-ProductTemplet-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/AESCrypt-ObjC/AESCrypt_ObjC.framework",
 				"${BUILT_PRODUCTS_DIR}/AFNetworking/AFNetworking.framework",
 				"${BUILT_PRODUCTS_DIR}/Aspects/Aspects.framework",
@@ -2344,7 +2344,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ProductTemplet/Pods-ProductTemplet-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ProductTemplet/Pods-ProductTemplet-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		EE5350A78B176BB266FB039A /* [CP] Check Pods Manifest.lock */ = {
