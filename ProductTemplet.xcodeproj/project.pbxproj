@@ -13,7 +13,6 @@
 		1421D5CD21F307F700635582 /* CustomViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1421D5CC21F307F700635582 /* CustomViewController.m */; };
 		1421D5D021F3177700635582 /* BNWalletView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1421D5CF21F3177700635582 /* BNWalletView.m */; };
 		142A76D022263F080016D3DA /* icon_operation_busy@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 142A76CE22263F080016D3DA /* icon_operation_busy@2x.png */; };
-		142A76D122263F080016D3DA /* 完成@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 142A76CF22263F080016D3DA /* 完成@2x.png */; };
 		142A76D72226708D0016D3DA /* BNSliderControlView.m in Sources */ = {isa = PBXBuildFile; fileRef = 142A76D62226708D0016D3DA /* BNSliderControlView.m */; };
 		142A77102227B30E0016D3DA /* UITableViewPickerCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 142A770F2227B30E0016D3DA /* UITableViewPickerCell.m */; };
 		143331AD2241F1F600436F75 /* AVSpeechViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 143331AC2241F1F600436F75 /* AVSpeechViewController.m */; };
@@ -365,7 +364,6 @@
 		1421D5CE21F3177700635582 /* BNWalletView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BNWalletView.h; sourceTree = "<group>"; };
 		1421D5CF21F3177700635582 /* BNWalletView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BNWalletView.m; sourceTree = "<group>"; };
 		142A76CE22263F080016D3DA /* icon_operation_busy@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_operation_busy@2x.png"; sourceTree = "<group>"; };
-		142A76CF22263F080016D3DA /* 完成@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "完成@2x.png"; sourceTree = "<group>"; };
 		142A76D52226708D0016D3DA /* BNSliderControlView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BNSliderControlView.h; sourceTree = "<group>"; };
 		142A76D62226708D0016D3DA /* BNSliderControlView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BNSliderControlView.m; sourceTree = "<group>"; };
 		142A770E2227B30E0016D3DA /* UITableViewPickerCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UITableViewPickerCell.h; sourceTree = "<group>"; };
@@ -1022,7 +1020,6 @@
 				513646AD2086031D005A20E7 /* Info.plist */,
 				14E793C321D62E0B003230C8 /* bug.png */,
 				1404FAF821E0A1BA00122E22 /* Skull.jpg */,
-				142A76CF22263F080016D3DA /* 完成@2x.png */,
 				142A76CE22263F080016D3DA /* icon_operation_busy@2x.png */,
 				513646AE2086031D005A20E7 /* main.m */,
 				513649E320860683005A20E7 /* PrefixHeader.pch */,
@@ -2013,7 +2010,6 @@
 				513649B620860655005A20E7 /* img_home_immunization_98.png in Resources */,
 				513649D220860655005A20E7 /* img_remind_pregnancyTest.png in Resources */,
 				513649D320860655005A20E7 /* img_report_animalBaby.png in Resources */,
-				142A76D122263F080016D3DA /* 完成@2x.png in Resources */,
 				5136498920860655005A20E7 /* img_Add_AnimalAblactation.png in Resources */,
 				513649A620860655005A20E7 /* img_feed_N.png in Resources */,
 				513649E020860655005A20E7 /* img_warning_exception.png in Resources */,
@@ -2067,6 +2063,11 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/AMap.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/AMapNavi.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/ShareSDK.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/WeiboSDK.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/ShareSDKUI.bundle",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
