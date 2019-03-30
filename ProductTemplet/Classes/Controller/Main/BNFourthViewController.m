@@ -282,7 +282,7 @@
         _sliderControlView.text = @"滑动开始运客";
         _sliderControlView.textFinish = @"操作成功!";
         _sliderControlView.thumbImage = [UIImage imageNamed:@"icon_operation_busy"];
-        _sliderControlView.thumbFinishImage = [UIImage imageNamed:@"完成"];
+        _sliderControlView.thumbFinishImage = [UIImage imageNamed:@"icon_oprationSuccess"];
     }
     return _sliderControlView;
 }

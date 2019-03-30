@@ -15,6 +15,16 @@ PODS:
   - AFNetworking/Serialization (3.2.1)
   - AFNetworking/UIKit (3.2.1):
     - AFNetworking/NSURLSession
+  - AMap3DMap-NO-IDFA (6.7.0):
+    - AMapFoundation-NO-IDFA (~> 1.5)
+  - AMapFoundation-NO-IDFA (1.5.6)
+  - AMapLocation-NO-IDFA (2.6.1):
+    - AMapFoundation-NO-IDFA (~> 1.4)
+  - AMapNavi-NO-IDFA (6.7.0):
+    - AMap3DMap-NO-IDFA (~> 6.7)
+    - AMapFoundation-NO-IDFA (~> 1.5)
+  - AMapSearch-NO-IDFA (6.6.0):
+    - AMapFoundation-NO-IDFA (~> 1.4)
   - Aspects (1.4.1)
   - BNCategory (1.8.9):
     - AESCrypt-ObjC
@@ -72,6 +82,27 @@ PODS:
   - MBProgressHUD (1.1.0)
   - MJExtension (3.0.16)
   - MJRefresh (3.1.16)
+  - mob_sharesdk (4.2.3):
+    - mob_sharesdk/ShareSDK (= 4.2.3)
+    - MOBFoundation
+  - mob_sharesdk/ShareSDK (4.2.3):
+    - MOBFoundation
+  - mob_sharesdk/ShareSDKExtension (4.2.3):
+    - mob_sharesdk/ShareSDK
+    - MOBFoundation
+  - mob_sharesdk/ShareSDKPlatforms/QQ (4.2.3):
+    - mob_sharesdk/ShareSDK
+    - MOBFoundation
+  - mob_sharesdk/ShareSDKPlatforms/SinaWeibo (4.2.3):
+    - mob_sharesdk/ShareSDK
+    - MOBFoundation
+  - mob_sharesdk/ShareSDKPlatforms/WeChatFull (4.2.3):
+    - mob_sharesdk/ShareSDK
+    - MOBFoundation
+  - mob_sharesdk/ShareSDKUI (4.2.3):
+    - mob_sharesdk/ShareSDK
+    - MOBFoundation
+  - MOBFoundation (3.2.2)
   - PopoverView (0.0.2)
   - PPNumberButton (0.8.0)
   - SDCycleScrollView (1.75):
@@ -101,6 +132,9 @@ PODS:
 DEPENDENCIES:
   - AESCrypt-ObjC
   - AFNetworking
+  - AMapLocation-NO-IDFA
+  - AMapNavi-NO-IDFA
+  - AMapSearch-NO-IDFA
   - Aspects
   - BNCategory
   - BNCollectionView
@@ -122,6 +156,12 @@ DEPENDENCIES:
   - MBProgressHUD
   - MJExtension
   - MJRefresh
+  - mob_sharesdk
+  - mob_sharesdk/ShareSDKExtension
+  - mob_sharesdk/ShareSDKPlatforms/QQ
+  - mob_sharesdk/ShareSDKPlatforms/SinaWeibo
+  - mob_sharesdk/ShareSDKPlatforms/WeChatFull
+  - mob_sharesdk/ShareSDKUI
   - PopoverView
   - PPNumberButton
   - SDCycleScrollView
@@ -141,6 +181,11 @@ SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - AESCrypt-ObjC
     - AFNetworking
+    - AMap3DMap-NO-IDFA
+    - AMapFoundation-NO-IDFA
+    - AMapLocation-NO-IDFA
+    - AMapNavi-NO-IDFA
+    - AMapSearch-NO-IDFA
     - Aspects
     - BNCategory
     - BNCollectionView
@@ -163,6 +208,8 @@ SPEC REPOS:
     - MBProgressHUD
     - MJExtension
     - MJRefresh
+    - mob_sharesdk
+    - MOBFoundation
     - PopoverView
     - PPNumberButton
     - SDCycleScrollView
@@ -183,6 +230,11 @@ SPEC REPOS:
 SPEC CHECKSUMS:
   AESCrypt-ObjC: 6d930ff891a61b90505855e9447959a84be80715
   AFNetworking: b6f891fdfaed196b46c7a83cf209e09697b94057
+  AMap3DMap-NO-IDFA: ff23a9ca32dd17070a1c7042e57f080b3f764862
+  AMapFoundation-NO-IDFA: 40d723b352992d0f95abe2976f0c0ecda3c3ffc3
+  AMapLocation-NO-IDFA: ffd69b8b88f553d0b252d4967bf301ad2afff9c0
+  AMapNavi-NO-IDFA: ad1bdff5c62864469662c91a4c3d0a2f8b1335eb
+  AMapSearch-NO-IDFA: 07651afae010f7acda12beb1f2c0f45d29069e75
   Aspects: 7595ba96a6727a58ebcbfc954497fc5d2fdde546
   BNCategory: 175e67c7743eb4bba2fd8d979e9d7dbf79e06618
   BNCollectionView: 0c6be9c6da86b4314e4e7221fa8aebc0dc6856d4
@@ -205,6 +257,8 @@ SPEC CHECKSUMS:
   MBProgressHUD: e7baa36a220447d8aeb12769bf0585582f3866d9
   MJExtension: 54dbbf6ee728f1a88e9aad904353d007831c7847
   MJRefresh: 7798e16e53a5ef7f332dd05b27664db4e29530fd
+  mob_sharesdk: e906a03f75d03ba1404fb046e055160c8258242d
+  MOBFoundation: b5ff4038ddb9a0f06b685b86408f905a10aa147c
   PopoverView: 62e83ffda75944d6cf2de9c6593489f3097dc1a3
   PPNumberButton: 4442ff64c21d91733057ca1b3dc05fb4df55f2c0
   SDCycleScrollView: 884b88f0266dd4708a0e1934975c69cb971707b1
@@ -222,6 +276,6 @@ SPEC CHECKSUMS:
   YZPullDownMenu: afc60c3fc4f7caedd9556d32da43ea1718e078e0
   ZYCornerRadius: f0af817be7805b5c63d793042ca7a03f81e14069
 
-PODFILE CHECKSUM: 4b5f14a4ca8a42bf92f65c5c5b806f777e987bd6
+PODFILE CHECKSUM: 6533456c57c124bebac0496276d495d02b56f135
 
 COCOAPODS: 1.6.1
