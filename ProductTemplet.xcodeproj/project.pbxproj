@@ -66,7 +66,6 @@
 		51036F5020A17B3B009D8B7B /* WeiboLisController.m in Sources */ = {isa = PBXBuildFile; fileRef = 51036F4F20A17B3B009D8B7B /* WeiboLisController.m */; };
 		510BC99B208F2F0400CF48C5 /* FriendListController.m in Sources */ = {isa = PBXBuildFile; fileRef = 510BC99A208F2F0400CF48C5 /* FriendListController.m */; };
 		510BC99E208F355800CF48C5 /* img_arrowRight_gray.png in Resources */ = {isa = PBXBuildFile; fileRef = 510BC99D208F355800CF48C5 /* img_arrowRight_gray.png */; };
-		510BC9A0208F36F600CF48C5 /* bug.png in Resources */ = {isa = PBXBuildFile; fileRef = 510BC99F208F36F600CF48C5 /* bug.png */; };
 		510BC9A3208F3B6A00CF48C5 /* SliderTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 510BC9A2208F3B6A00CF48C5 /* SliderTabBarController.m */; };
 		51234B32215E326400F45FD2 /* WHKNetInfoFeedModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 51234B31215E326400F45FD2 /* WHKNetInfoFeedModel.m */; };
 		51258C1A215E38FD009CDEE3 /* NSBundle+Language.m in Sources */ = {isa = PBXBuildFile; fileRef = 51258C17215E38F9009CDEE3 /* NSBundle+Language.m */; };
@@ -468,7 +467,6 @@
 		510BC999208F2F0400CF48C5 /* FriendListController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FriendListController.h; sourceTree = "<group>"; };
 		510BC99A208F2F0400CF48C5 /* FriendListController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FriendListController.m; sourceTree = "<group>"; };
 		510BC99D208F355800CF48C5 /* img_arrowRight_gray.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = img_arrowRight_gray.png; sourceTree = "<group>"; };
-		510BC99F208F36F600CF48C5 /* bug.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bug.png; sourceTree = "<group>"; };
 		510BC9A1208F3B6A00CF48C5 /* SliderTabBarController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SliderTabBarController.h; sourceTree = "<group>"; };
 		510BC9A2208F3B6A00CF48C5 /* SliderTabBarController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SliderTabBarController.m; sourceTree = "<group>"; };
 		51234B30215E326300F45FD2 /* WHKNetInfoFeedModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WHKNetInfoFeedModel.h; sourceTree = "<group>"; };
@@ -1236,7 +1234,6 @@
 				51036F4620A16297009D8B7B /* img_notice.png */,
 				51B9CD1D20A0631F0096A540 /* img_arrowDown_orange.png */,
 				5184281A2091AD09007D7BAA /* loading.gif */,
-				510BC99F208F36F600CF48C5 /* bug.png */,
 				510BC99D208F355800CF48C5 /* img_arrowRight_gray.png */,
 				5136492620860655005A20E7 /* btn_selected_NO.png */,
 				5136492720860655005A20E7 /* btn_selected_YES.png */,
@@ -1978,7 +1975,6 @@
 				513649A420860655005A20E7 /* img_evenLevel_third.png in Resources */,
 				5136499820860655005A20E7 /* img_animalOut_H.png in Resources */,
 				513649BA20860655005A20E7 /* img_home_remind_98.png in Resources */,
-				510BC9A0208F36F600CF48C5 /* bug.png in Resources */,
 				513649B020860655005A20E7 /* img_home_calendar_98.png in Resources */,
 				515CC96E20B6AAF2004AE27C /* AAHighcharts-3d.js in Resources */,
 				518B906C217F2110007E7343 /* left_slider_back@2x.png in Resources */,
@@ -2071,11 +2067,6 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/AMap.bundle",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/AMapNavi.bundle",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/ShareSDK.bundle",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/WeiboSDK.bundle",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/ShareSDKUI.bundle",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
