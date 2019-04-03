@@ -14,7 +14,7 @@
 @interface AVSpeechViewController ()<AVSpeechSynthesizerDelegate>
 @property (nonatomic, strong) NSArray *strArray;
 @property (nonatomic, strong) NSArray *voiceArray;
-@property (nonatomic, strong) AVSpeechSynthesizer *synthesizer;
+@property (nonatomic, strong) AVSpeechSynthesizer *speechSynthesizer;
 
 @property (nonatomic, strong) UILabel *label;
 @property (nonatomic, strong) UIButton *btn;
@@ -65,15 +65,27 @@
 
 - (void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
-    
+     
     for (int i = 0; i < self.strArray.count;  i ++) {
         NSString * voiceLanguge = i < 8 ? @"zh-CN" : @"en-US";
         AVSpeechUtterance *utterance = AVSpeechUtteranceDefault(self.strArray[i], voiceLanguge);
         //开始播放
-        [self.synthesizer speakUtterance:utterance];
+        if (self.speechSynthesizer.isSpeaking) {
+            [self.speechSynthesizer stopSpeakingAtBoundary:AVSpeechBoundaryWord];
+        }
+        [self.speechSynthesizer speakUtterance:utterance];
     }
 }
 
+- (void)speakString:(NSString *)string{
+    AVSpeechUtterance *utterance = AVSpeechUtteranceDefault(string, @"zh-CN");
+    //开始播放
+    if (self.speechSynthesizer.isSpeaking) {
+        [self.speechSynthesizer stopSpeakingAtBoundary:AVSpeechBoundaryWord];
+    }
+    [self.speechSynthesizer speakUtterance:utterance];
+    
+}
 
 #pragma mark - -AVSpeechSynthesizerDelegate
 //开始朗读的代理方法
@@ -104,13 +116,13 @@
 }
 #pragma mark - - lazy
 
--(AVSpeechSynthesizer *)synthesizer{
-    if (!_synthesizer) {
-        _synthesizer = [[AVSpeechSynthesizer alloc]init];
-        _synthesizer.delegate = self;
+-(AVSpeechSynthesizer *)speechSynthesizer{
+    if (!_speechSynthesizer) {
+        _speechSynthesizer = [[AVSpeechSynthesizer alloc]init];
+        _speechSynthesizer.delegate = self;
         
     }
-    return _synthesizer;
+    return _speechSynthesizer;
 }
 
 -(UILabel *)label{
@@ -135,11 +147,11 @@
 
             if (view.isSelected == false) {
                 [view setTitle:@"Pause" forState:UIControlStateNormal];
-                [self.synthesizer continueSpeaking];
+                [self.speechSynthesizer continueSpeaking];
                 
             } else {
                 [view setTitle:@"Play" forState:UIControlStateNormal];
-                [self.synthesizer pauseSpeakingAtBoundary:AVSpeechBoundaryImmediate];
+                [self.speechSynthesizer pauseSpeakingAtBoundary:AVSpeechBoundaryImmediate];
             }
             
         } forControlEvents:UIControlEventTouchUpInside];

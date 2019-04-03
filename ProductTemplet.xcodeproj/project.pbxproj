@@ -16,8 +16,6 @@
 		142A76D72226708D0016D3DA /* BNSliderControlView.m in Sources */ = {isa = PBXBuildFile; fileRef = 142A76D62226708D0016D3DA /* BNSliderControlView.m */; };
 		142A77102227B30E0016D3DA /* UITableViewPickerCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 142A770F2227B30E0016D3DA /* UITableViewPickerCell.m */; };
 		143331AD2241F1F600436F75 /* AVSpeechViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 143331AC2241F1F600436F75 /* AVSpeechViewController.m */; };
-		143331B02241F24C00436F75 /* AVSpeechSynthesizer+Helper.m in Sources */ = {isa = PBXBuildFile; fileRef = 143331AF2241F24C00436F75 /* AVSpeechSynthesizer+Helper.m */; };
-		14488530224C584800B550AF /* AVAudioSession+Helper.m in Sources */ = {isa = PBXBuildFile; fileRef = 1448852F224C584800B550AF /* AVAudioSession+Helper.m */; };
 		1448875A224F4C8A00B550AF /* BNGeocodeAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 14488748224F4C8900B550AF /* BNGeocodeAnnotation.m */; };
 		1448875B224F4C8A00B550AF /* CommonUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = 1448874A224F4C8900B550AF /* CommonUtility.m */; };
 		1448875C224F4C8A00B550AF /* ErrorInfoUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = 1448874C224F4C8900B550AF /* ErrorInfoUtility.m */; };
@@ -297,10 +295,6 @@
 		51862E8020BBA8800080BD4E /* NumberInputValidator.m in Sources */ = {isa = PBXBuildFile; fileRef = 51862E7F20BBA8800080BD4E /* NumberInputValidator.m */; };
 		51862E8320BBA8B90080BD4E /* AlphaInputValidator.m in Sources */ = {isa = PBXBuildFile; fileRef = 51862E8220BBA8B90080BD4E /* AlphaInputValidator.m */; };
 		51862E8620BBA9400080BD4E /* CustomTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 51862E8520BBA9400080BD4E /* CustomTextField.m */; };
-		51862E9020BBB1D50080BD4E /* PlayerAdapter.m in Sources */ = {isa = PBXBuildFile; fileRef = 51862E8820BBB1D50080BD4E /* PlayerAdapter.m */; };
-		51862E9120BBB1D50080BD4E /* Ijkplayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 51862E8B20BBB1D50080BD4E /* Ijkplayer.m */; };
-		51862E9220BBB1D50080BD4E /* AVPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 51862E8F20BBB1D50080BD4E /* AVPlayer.m */; };
-		51862E9520BBB2150080BD4E /* AdapterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 51862E9420BBB2150080BD4E /* AdapterViewController.m */; };
 		5186F1C121A3A43900663707 /* BNImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5186F1C021A3A43900663707 /* BNImageView.m */; };
 		5186F1C421A3A95500663707 /* ShowListController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5186F1C321A3A95500663707 /* ShowListController.m */; };
 		51894140209C27E000A687E1 /* TestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5189413F209C27E000A687E1 /* TestViewController.m */; };
@@ -370,10 +364,6 @@
 		142A770F2227B30E0016D3DA /* UITableViewPickerCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UITableViewPickerCell.m; sourceTree = "<group>"; };
 		143331AB2241F1F600436F75 /* AVSpeechViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AVSpeechViewController.h; sourceTree = "<group>"; };
 		143331AC2241F1F600436F75 /* AVSpeechViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AVSpeechViewController.m; sourceTree = "<group>"; };
-		143331AE2241F24C00436F75 /* AVSpeechSynthesizer+Helper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "AVSpeechSynthesizer+Helper.h"; sourceTree = "<group>"; };
-		143331AF2241F24C00436F75 /* AVSpeechSynthesizer+Helper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "AVSpeechSynthesizer+Helper.m"; sourceTree = "<group>"; };
-		1448852E224C584800B550AF /* AVAudioSession+Helper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AVAudioSession+Helper.h"; sourceTree = "<group>"; };
-		1448852F224C584800B550AF /* AVAudioSession+Helper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "AVAudioSession+Helper.m"; sourceTree = "<group>"; };
 		14488748224F4C8900B550AF /* BNGeocodeAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BNGeocodeAnnotation.m; sourceTree = "<group>"; };
 		14488749224F4C8900B550AF /* ErrorInfoUtility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ErrorInfoUtility.h; sourceTree = "<group>"; };
 		1448874A224F4C8900B550AF /* CommonUtility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommonUtility.m; sourceTree = "<group>"; };
@@ -830,16 +820,6 @@
 		51862E8220BBA8B90080BD4E /* AlphaInputValidator.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AlphaInputValidator.m; sourceTree = "<group>"; };
 		51862E8420BBA9400080BD4E /* CustomTextField.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CustomTextField.h; sourceTree = "<group>"; };
 		51862E8520BBA9400080BD4E /* CustomTextField.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CustomTextField.m; sourceTree = "<group>"; };
-		51862E8820BBB1D50080BD4E /* PlayerAdapter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlayerAdapter.m; sourceTree = "<group>"; };
-		51862E8920BBB1D50080BD4E /* Ijkplayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Ijkplayer.h; sourceTree = "<group>"; };
-		51862E8A20BBB1D50080BD4E /* AVPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AVPlayer.h; sourceTree = "<group>"; };
-		51862E8B20BBB1D50080BD4E /* Ijkplayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Ijkplayer.m; sourceTree = "<group>"; };
-		51862E8C20BBB1D50080BD4E /* AVPlayerProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AVPlayerProtocol.h; sourceTree = "<group>"; };
-		51862E8D20BBB1D50080BD4E /* IjkplayerProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IjkplayerProtocol.h; sourceTree = "<group>"; };
-		51862E8E20BBB1D50080BD4E /* PlayerAdapter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayerAdapter.h; sourceTree = "<group>"; };
-		51862E8F20BBB1D50080BD4E /* AVPlayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AVPlayer.m; sourceTree = "<group>"; };
-		51862E9320BBB2150080BD4E /* AdapterViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AdapterViewController.h; sourceTree = "<group>"; };
-		51862E9420BBB2150080BD4E /* AdapterViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AdapterViewController.m; sourceTree = "<group>"; };
 		5186F1BF21A3A43900663707 /* BNImageView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BNImageView.h; sourceTree = "<group>"; };
 		5186F1C021A3A43900663707 /* BNImageView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BNImageView.m; sourceTree = "<group>"; };
 		5186F1C221A3A95500663707 /* ShowListController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ShowListController.h; sourceTree = "<group>"; };
@@ -1180,10 +1160,6 @@
 				14E8F74E21F5E1ED004317B5 /* RuntimeController.m */,
 				142A770E2227B30E0016D3DA /* UITableViewPickerCell.h */,
 				142A770F2227B30E0016D3DA /* UITableViewPickerCell.m */,
-				143331AE2241F24C00436F75 /* AVSpeechSynthesizer+Helper.h */,
-				143331AF2241F24C00436F75 /* AVSpeechSynthesizer+Helper.m */,
-				1448852E224C584800B550AF /* AVAudioSession+Helper.h */,
-				1448852F224C584800B550AF /* AVAudioSession+Helper.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -1709,8 +1685,6 @@
 				51862E6A20BB979A0080BD4E /* AbstractFactoryController.m */,
 				51862E6E20BB9E810080BD4E /* StrategyViewController.h */,
 				51862E6F20BB9E810080BD4E /* StrategyViewController.m */,
-				51862E9320BBB2150080BD4E /* AdapterViewController.h */,
-				51862E9420BBB2150080BD4E /* AdapterViewController.m */,
 				5169698C20BCED2200BAA53D /* FacadeViewController.h */,
 				5169698D20BCED2200BAA53D /* FacadeViewController.m */,
 				5169699E20BCF11600BAA53D /* MediatorViewController.h */,
@@ -1723,7 +1697,6 @@
 				516969B020BCFCB000BAA53D /* Composite */,
 				5169699D20BCF0FC00BAA53D /* Mediator */,
 				5169699020BCED3F00BAA53D /* Facade */,
-				51862E8720BBB1D50080BD4E /* Adapter */,
 				51862E6D20BB9E5B0080BD4E /* Strategy */,
 				51862E6C20BB9B5B0080BD4E /* AbstractFactory */,
 			);
@@ -1765,21 +1738,6 @@
 				51862E8520BBA9400080BD4E /* CustomTextField.m */,
 			);
 			path = Strategy;
-			sourceTree = "<group>";
-		};
-		51862E8720BBB1D50080BD4E /* Adapter */ = {
-			isa = PBXGroup;
-			children = (
-				51862E8C20BBB1D50080BD4E /* AVPlayerProtocol.h */,
-				51862E8D20BBB1D50080BD4E /* IjkplayerProtocol.h */,
-				51862E8E20BBB1D50080BD4E /* PlayerAdapter.h */,
-				51862E8820BBB1D50080BD4E /* PlayerAdapter.m */,
-				51862E8920BBB1D50080BD4E /* Ijkplayer.h */,
-				51862E8B20BBB1D50080BD4E /* Ijkplayer.m */,
-				51862E8A20BBB1D50080BD4E /* AVPlayer.h */,
-				51862E8F20BBB1D50080BD4E /* AVPlayer.m */,
-			);
-			path = Adapter;
 			sourceTree = "<group>";
 		};
 		518B9065217F2110007E7343 /* Resource */ = {
@@ -2049,8 +2007,6 @@
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputFileListPaths = (
-			);
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-ProductTemplet/Pods-ProductTemplet-resources.sh",
 				"${PODS_ROOT}/AMap3DMap-NO-IDFA/MAMapKit.framework/AMap.bundle",
@@ -2060,8 +2016,6 @@
 				"${PODS_ROOT}/mob_sharesdk/ShareSDK/Support/Optional/ShareSDKUI.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
-			outputFileListPaths = (
-			);
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/AMap.bundle",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/AMapNavi.bundle",
@@ -2192,7 +2146,6 @@
 				14E42CDA2200040200606AD0 /* BNUserLoginController.m in Sources */,
 				143331AD2241F1F600436F75 /* AVSpeechViewController.m in Sources */,
 				515C67E62137C55700D5EA94 /* BRecentCityCell.m in Sources */,
-				51862E9520BBB2150080BD4E /* AdapterViewController.m in Sources */,
 				14E42D172200042800606AD0 /* GlobleConst.m in Sources */,
 				14E42D1A2200042800606AD0 /* BNFileHandler.m in Sources */,
 				515CC98220B6AAF2004AE27C /* AAAnimation.m in Sources */,
@@ -2203,12 +2156,10 @@
 				1448875E224F4C8A00B550AF /* MANaviRoute.m in Sources */,
 				51698C4921376F9E0069C2B2 /* WHKMapViewController.m in Sources */,
 				14E42CDB2200040200606AD0 /* BNUserPwdChangeController.m in Sources */,
-				51862E9220BBB1D50080BD4E /* AVPlayer.m in Sources */,
 				51698C4221376F9E0069C2B2 /* Utilities.m in Sources */,
 				51698C892137C0800069C2B2 /* WHKUserDataModel.m in Sources */,
 				517D8B1F20B2C4C100DCA731 /* DBManager.m in Sources */,
 				515CC98520B6AAF2004AE27C /* AASpline.m in Sources */,
-				51862E9020BBB1D50080BD4E /* PlayerAdapter.m in Sources */,
 				14E8F74F21F5E1ED004317B5 /* RuntimeController.m in Sources */,
 				1448875F224F4C8A00B550AF /* MANaviPolyline.m in Sources */,
 				51894140209C27E000A687E1 /* TestViewController.m in Sources */,
@@ -2224,7 +2175,6 @@
 				513647C1208604DE005A20E7 /* HZWaitingView.m in Sources */,
 				14A1EA752249FBAA00952911 /* TextFromSpeechController.m in Sources */,
 				51862E7A20BBA1B50080BD4E /* StrategyFinancyAlipay.m in Sources */,
-				14488530224C584800B550AF /* AVAudioSession+Helper.m in Sources */,
 				513647BD208604DE005A20E7 /* HZPhotoBrowser.m in Sources */,
 				518CD32D219D78B6003CE348 /* BNActionSheet.m in Sources */,
 				5162F6F720BF9604009A6253 /* ThreadCommunicationController.m in Sources */,
@@ -2331,7 +2281,6 @@
 				51A4354921ABECAE000D9840 /* TextViewController.m in Sources */,
 				5175C93620C122B1009EA86E /* DBHandler.m in Sources */,
 				515CC98720B6AAF2004AE27C /* AAPie.m in Sources */,
-				51862E9120BBB1D50080BD4E /* Ijkplayer.m in Sources */,
 				14E42CDC2200040200606AD0 /* BNUserRegisterController.m in Sources */,
 				513647E0208604DE005A20E7 /* PPNetworkHelper.m in Sources */,
 				516969B720BCFD4000BAA53D /* CompanyComponent.m in Sources */,
@@ -2376,7 +2325,6 @@
 				14E42D1F2200043200606AD0 /* BNEmitterView.m in Sources */,
 				14E42D1C2200042800606AD0 /* BNNoti.m in Sources */,
 				515CC97C20B6AAF2004AE27C /* AAPlotLinesElement.m in Sources */,
-				143331B02241F24C00436F75 /* AVSpeechSynthesizer+Helper.m in Sources */,
 				516969AF20BCF9A800BAA53D /* AbstractClient.m in Sources */,
 				14E42CF22200040F00606AD0 /* BNSecondViewController.m in Sources */,
 				51364CA020860822005A20E7 /* Utilities_DM.m in Sources */,

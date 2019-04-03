@@ -23,9 +23,9 @@
         
         UIViewController * controller = [NSClassFromString(@"CycleLabelViewController") new];
 
-        CATransition *anim = [CATransition animDuration:0.5 functionName:kCAMediaTimingFunctionEaseIn type:kCATransitionSuckEffect subType:kCATransitionFromTop];
-        [UIApplication.sharedApplication.keyWindow.layer addAnimation:anim forKey:nil];
-        
+        CATransition *anim = [CATransition animDuration:0.5 functionName:kCAMediaTimingFunctionEaseIn type:kCATransitionFade subType:kCATransitionFromRight];
+//        [UIApplication.sharedApplication.keyWindow.layer addAnimation:anim forKey:nil];
+        [self.navigationController.view.layer addAnimation:anim forKey:nil];
         [self.navigationController pushViewController:controller animated:false];
 //        [self goController:@"CycleLabelViewController" title:@"滚动lab"];
 

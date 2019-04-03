@@ -7,7 +7,7 @@
 //
 
 #import "AVSpeechSynthesizer+Helper.h"
-
+#import "BNGloble.h"
 
 @implementation AVSpeechSynthesizer (Helper)
 
@@ -25,7 +25,7 @@
  */
 AVSpeechUtterance * AVSpeechUtteranceParam(NSString *speechString, NSString *voiceLanguage, float rate, float volume, float pitchMultiplier, NSTimeInterval preUtteranceDelay, NSTimeInterval postUtteranceDelay){
     AVSpeechUtterance * utterance = [AVSpeechUtterance speechUtteranceWithString:speechString];
-    voiceLanguage = voiceLanguage ? : @"zh-CN";
+    voiceLanguage = voiceLanguage ? : kLanguageCN;
     utterance.voice = [AVSpeechSynthesisVoice voiceWithLanguage:voiceLanguage];
     //语速0.0f~1.0f
     utterance.rate = rate;

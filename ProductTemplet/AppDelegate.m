@@ -23,6 +23,7 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     [UIApplication setupIQKeyboardManager];
+    UIColor.themeColor = UIColor.orangeColor;
     [UIApplication setupAppearanceDefault:false];
 
     UIViewController * controller = UICtrFromString(@"HomeViewController");

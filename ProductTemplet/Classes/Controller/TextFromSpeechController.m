@@ -18,7 +18,7 @@
 @property (nonatomic, strong) UIButton *btn;
 
 @property (nonatomic, strong) UILabel *label;
-@property (nonatomic, strong) SFSpeechRecognizer*speechRecognizer;//语音识别器
+@property (nonatomic, strong) SFSpeechRecognizer *speechRecognizer;//语音识别器
 @property (nonatomic, strong) SFSpeechAudioBufferRecognitionRequest *recognitionRequest;//语音识别请求
 @property (nonatomic, strong) SFSpeechRecognitionTask *recognitionTask;//语音任务管理器
 @property (nonatomic, strong) AVAudioEngine *audioEngine;//语音控制器
@@ -134,7 +134,7 @@
 
 #pragma mark---识别本地音频文件
 - (void)recognizeLocalAudioFile:(UIButton*)sender {
-    NSLocale *local =[[NSLocale alloc] initWithLocaleIdentifier:@"zh_CN"];
+    NSLocale *local = [NSLocale localeWithLocaleIdentifier:kLanguageCN];
     SFSpeechRecognizer *localRecognizer = [[SFSpeechRecognizer alloc] initWithLocale:local];
     NSURL *url = [NSBundle.mainBundle URLForResource:@"录音.m4a" withExtension:nil];
     if(!url)return;
