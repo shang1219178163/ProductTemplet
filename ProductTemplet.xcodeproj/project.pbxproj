@@ -29,6 +29,7 @@
 		144920AA21C7BAA700C3C2F6 /* MoneyDisplayController.m in Sources */ = {isa = PBXBuildFile; fileRef = 144920A921C7BAA700C3C2F6 /* MoneyDisplayController.m */; };
 		1476F78D21FC36B10088C137 /* WHKBaseRequestApi.m in Sources */ = {isa = PBXBuildFile; fileRef = 1476F78C21FC36B10088C137 /* WHKBaseRequestApi.m */; };
 		147B971F21EF005B000F5294 /* UICollectionDisplayController.m in Sources */ = {isa = PBXBuildFile; fileRef = 147B971E21EF005B000F5294 /* UICollectionDisplayController.m */; };
+		149B5508225AD3C5002B1039 /* BNTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 149B5507225AD3C5002B1039 /* BNTabBarController.m */; };
 		14A1EA752249FBAA00952911 /* TextFromSpeechController.m in Sources */ = {isa = PBXBuildFile; fileRef = 14A1EA742249FBAA00952911 /* TextFromSpeechController.m */; };
 		14E42CD3220003F200606AD0 /* BNOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 14E42CD1220003F200606AD0 /* BNOperation.m */; };
 		14E42CDA2200040200606AD0 /* BNUserLoginController.m in Sources */ = {isa = PBXBuildFile; fileRef = 14E42CD62200040200606AD0 /* BNUserLoginController.m */; };
@@ -388,6 +389,8 @@
 		1476F78C21FC36B10088C137 /* WHKBaseRequestApi.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WHKBaseRequestApi.m; sourceTree = "<group>"; };
 		147B971D21EF005B000F5294 /* UICollectionDisplayController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UICollectionDisplayController.h; sourceTree = "<group>"; };
 		147B971E21EF005B000F5294 /* UICollectionDisplayController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UICollectionDisplayController.m; sourceTree = "<group>"; };
+		149B5506225AD3C5002B1039 /* BNTabBarController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BNTabBarController.h; sourceTree = "<group>"; };
+		149B5507225AD3C5002B1039 /* BNTabBarController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BNTabBarController.m; sourceTree = "<group>"; };
 		14A1EA732249FBAA00952911 /* TextFromSpeechController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TextFromSpeechController.h; sourceTree = "<group>"; };
 		14A1EA742249FBAA00952911 /* TextFromSpeechController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TextFromSpeechController.m; sourceTree = "<group>"; };
 		14E42CD1220003F200606AD0 /* BNOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BNOperation.m; sourceTree = "<group>"; };
@@ -1150,6 +1153,8 @@
 				143331AC2241F1F600436F75 /* AVSpeechViewController.m */,
 				14A1EA732249FBAA00952911 /* TextFromSpeechController.h */,
 				14A1EA742249FBAA00952911 /* TextFromSpeechController.m */,
+				149B5506225AD3C5002B1039 /* BNTabBarController.h */,
+				149B5507225AD3C5002B1039 /* BNTabBarController.m */,
 				5186F1BF21A3A43900663707 /* BNImageView.h */,
 				5186F1C021A3A43900663707 /* BNImageView.m */,
 				1421D5CE21F3177700635582 /* BNWalletView.h */,
@@ -2145,6 +2150,7 @@
 			files = (
 				14E42CDA2200040200606AD0 /* BNUserLoginController.m in Sources */,
 				143331AD2241F1F600436F75 /* AVSpeechViewController.m in Sources */,
+				149B5508225AD3C5002B1039 /* BNTabBarController.m in Sources */,
 				515C67E62137C55700D5EA94 /* BRecentCityCell.m in Sources */,
 				14E42D172200042800606AD0 /* GlobleConst.m in Sources */,
 				14E42D1A2200042800606AD0 /* BNFileHandler.m in Sources */,

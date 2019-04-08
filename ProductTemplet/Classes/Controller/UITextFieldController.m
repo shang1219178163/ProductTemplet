@@ -103,7 +103,7 @@
 -(void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
     
-    [self checkVersion];
+//    [self checkVersion];
     
     
     UIImageView * imgView = [[UIImageView alloc]initWithFrame:CGRectMake(10, 200, 100, 100)];

@@ -142,6 +142,10 @@
                           @"View自定义",@"CustomViewController",
                           ],
                       @[
+                          @"嵌套TabBar,实现类UITabBarController功能",@"BNTabBarController",
+                          ],
+                      
+                      @[
                           @"UICollectionView",@"UICollectionDisplayController",
                           ],
                       @[
