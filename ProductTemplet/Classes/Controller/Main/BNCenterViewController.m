@@ -144,6 +144,9 @@
                       @[
                           @"嵌套TabBar,实现类UITabBarController功能",@"BNTabBarController",
                           ],
+                      @[
+                          @"BNTabBarController子类化",@"SubTabBarController",
+                          ],
                       
                       @[
                           @"UICollectionView",@"UICollectionDisplayController",
