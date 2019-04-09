@@ -23,6 +23,7 @@
                       ];
     
     self.viewControllers = UICtlrListFromList(list, false);
+    self.selectedIndex = 1;
 }
 
 
