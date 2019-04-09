@@ -26,9 +26,9 @@
     self.collectionView.dataSource = self;
     self.collectionView.dictClass = @{
                                       
-                                      UICollectionElementKindSectionItem       :   @[
-                                              @"BNCTViewCellOne"
-                                              ],
+                                      UICollectionElementKindSectionItem    :   @[
+                                                                                  @"BNCTViewCellOne"
+                                                                                  ],
                                        UICollectionElementKindSectionHeader :   @[
                                                                                  @"BNCTReusableViewZero",
                                                                                  ],
