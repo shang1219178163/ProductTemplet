@@ -37,7 +37,6 @@
    pod 'UICKeyChainStore'
    
    pod 'YBAttributeTextTapAction'
-   
    pod ‘YYCache’
    pod 'YYCategories'
    pod ‘YYWebImage’

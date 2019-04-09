@@ -8,12 +8,12 @@
 
 #import <UIKit/UIKit.h>
 
+///嵌套TabBar,实现类UITabBarController功能
 @interface BNTabBarController : UIViewController
 
 @property (nonatomic, copy) NSArray<__kindof UIViewController *> *viewControllers;
 @property (nonatomic, strong) __kindof UIViewController *selectedViewController;
 @property (nonatomic, assign) NSUInteger selectedIndex;
-
 
 
 @end
