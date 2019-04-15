@@ -137,7 +137,7 @@
     
     self.tableView.sectionFooterHeight = kScreenWidth;
     //    self.tableView.sectionHeaderHeight = CGRectGetHeight(self.view.bounds) - self.tableView.sectionFooterHeight - self.tableView.rowHeight;
-    self.tableView.sectionHeaderHeight = kScreenHeight - kH_StatusBar - kH_NaviagtionBar - kH_TabBar - self.tableView.sectionFooterHeight - self.tableView.rowHeight;
+    self.tableView.sectionHeaderHeight = kScreenHeight - kStatusBarHeight - kNaviBarHeight - kTabBarHeight - self.tableView.sectionFooterHeight - self.tableView.rowHeight;
     
 }
 

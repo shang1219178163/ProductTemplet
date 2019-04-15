@@ -56,7 +56,7 @@
     
     [self.tabBar makeConstraints:^(MASConstraintMaker *make) {
         make.left.right.equalTo(self.tabBar.superview);
-        make.height.equalTo(@(kH_TabBar));
+        make.height.equalTo(@(kTabBarHeight));
         make.bottom.equalTo(self.tabBar.superview).offset(0);
     }];
     
@@ -152,7 +152,7 @@
     if (!_tabBar) {
         _tabBar = ({
             UITabBar * view = [[UITabBar alloc]initWithFrame:CGRectZero];
-            view.frame = CGRectMake(0, CGRectGetHeight(self.view.frame) - kH_TabBar, CGRectGetWidth(self.view.frame), kH_TabBar);
+            view.frame = CGRectMake(0, CGRectGetHeight(self.view.frame) - kTabBarHeight, CGRectGetWidth(self.view.frame), kTabBarHeight);
             
 //            view.items = @[@"one", @"two", @"three", @"four"];
             view.tintColor = UITabBar.appearance.tintColor ?  : UIColor.themeColor;

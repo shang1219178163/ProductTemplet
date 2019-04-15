@@ -85,7 +85,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    [self configureTableView];
+    self.tableView.backgroundColor = UIColor.whiteColor;
+    [self.view addSubview:self.tableView];
     
     self.view.backgroundColor = UIColor.yellowColor;
     
@@ -207,11 +208,6 @@
     
 }
 
-- (void)configureTableView{
-    self.tableView.backgroundColor = UIColor.whiteColor;
-    [self.view addSubview:self.tableView];    
-}
-
 #pragma mark - -UITableView
 
 -(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
@@ -230,13 +226,15 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     NSArray * list = self.dataList[indexPath.row];
     
-    UITableViewOneCell * cell = [UITableViewOneCell cellWithTableView:tableView];
-    
+    static NSString * identifier = @"UITableViewCell1";
+//    UITableViewOneCell * cell = [UITableViewOneCell cellWithTableView:tableView];
+    UITableViewCell * cell = [UITableViewCell cellWithTableView:tableView identifier:identifier style:UITableViewCellStyleSubtitle];
+    cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
     cell.textLabel.text = list.firstObject;
     cell.textLabel.textColor = UIColor.themeColor;
-    
+    cell.detailTextLabel.text = list[1];
+    cell.detailTextLabel.textColor = UIColor.grayColor;
     return cell;
-
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{

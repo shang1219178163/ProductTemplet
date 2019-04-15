@@ -153,6 +153,7 @@
     [NSUserDefaults.standardUserDefaults setObject:nil forKey:@"1111"];
 
     DDLog(@"%@", NSHomeDirectory())
+    
 }
 
 -(void)viewWillAppear:(BOOL)animated{
@@ -174,6 +175,7 @@
     DDLog(@"%.2f,%.2f,%.2f,%.2f,",imgView.minY,imgView.minX,imgView.maxY,imgView.maxX);
 
     [self.view getViewLayer];
+    
 }
 
 -(void)viewDidAppear:(BOOL)animated{

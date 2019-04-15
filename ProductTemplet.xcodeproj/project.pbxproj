@@ -27,6 +27,7 @@
 		14488764224F4D6B00B550AF /* icon_oprationSuccess@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 14488762224F4D6A00B550AF /* icon_oprationSuccess@2x.png */; };
 		14488765224F4D6B00B550AF /* icon_oprationSuccess@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 14488763224F4D6B00B550AF /* icon_oprationSuccess@3x.png */; };
 		144920AA21C7BAA700C3C2F6 /* MoneyDisplayController.m in Sources */ = {isa = PBXBuildFile; fileRef = 144920A921C7BAA700C3C2F6 /* MoneyDisplayController.m */; };
+		146B8187225C74860004A249 /* SubTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 146B8186225C74860004A249 /* SubTabBarController.m */; };
 		1476F78D21FC36B10088C137 /* WHKBaseRequestApi.m in Sources */ = {isa = PBXBuildFile; fileRef = 1476F78C21FC36B10088C137 /* WHKBaseRequestApi.m */; };
 		147B971F21EF005B000F5294 /* UICollectionDisplayController.m in Sources */ = {isa = PBXBuildFile; fileRef = 147B971E21EF005B000F5294 /* UICollectionDisplayController.m */; };
 		149B5508225AD3C5002B1039 /* BNTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 149B5507225AD3C5002B1039 /* BNTabBarController.m */; };
@@ -385,6 +386,8 @@
 		14488763224F4D6B00B550AF /* icon_oprationSuccess@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_oprationSuccess@3x.png"; sourceTree = "<group>"; };
 		144920A821C7BAA700C3C2F6 /* MoneyDisplayController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MoneyDisplayController.h; sourceTree = "<group>"; };
 		144920A921C7BAA700C3C2F6 /* MoneyDisplayController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MoneyDisplayController.m; sourceTree = "<group>"; };
+		146B8185225C74860004A249 /* SubTabBarController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SubTabBarController.h; sourceTree = "<group>"; };
+		146B8186225C74860004A249 /* SubTabBarController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SubTabBarController.m; sourceTree = "<group>"; };
 		1476F78B21FC36B10088C137 /* WHKBaseRequestApi.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WHKBaseRequestApi.h; sourceTree = "<group>"; };
 		1476F78C21FC36B10088C137 /* WHKBaseRequestApi.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WHKBaseRequestApi.m; sourceTree = "<group>"; };
 		147B971D21EF005B000F5294 /* UICollectionDisplayController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UICollectionDisplayController.h; sourceTree = "<group>"; };
@@ -1155,6 +1158,8 @@
 				14A1EA742249FBAA00952911 /* TextFromSpeechController.m */,
 				149B5506225AD3C5002B1039 /* BNTabBarController.h */,
 				149B5507225AD3C5002B1039 /* BNTabBarController.m */,
+				146B8185225C74860004A249 /* SubTabBarController.h */,
+				146B8186225C74860004A249 /* SubTabBarController.m */,
 				5186F1BF21A3A43900663707 /* BNImageView.h */,
 				5186F1C021A3A43900663707 /* BNImageView.m */,
 				1421D5CE21F3177700635582 /* BNWalletView.h */,
@@ -2258,6 +2263,7 @@
 				14E42CF82200040F00606AD0 /* BNThirdViewController.m in Sources */,
 				14E42D152200042800606AD0 /* BNLanguage.m in Sources */,
 				14E42CF62200040F00606AD0 /* BNLeftViewController.m in Sources */,
+				146B8187225C74860004A249 /* SubTabBarController.m in Sources */,
 				515CC97A20B6AAF2004AE27C /* AACrosshair.m in Sources */,
 				515CC97720B6AAF2004AE27C /* AATooltip.m in Sources */,
 				14E42CFF2200041900606AD0 /* BNNetRootShareModel.m in Sources */,
