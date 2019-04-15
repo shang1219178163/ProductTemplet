@@ -18,7 +18,7 @@ PODS:
   - AMap3DMap-NO-IDFA (6.7.0):
     - AMapFoundation-NO-IDFA (~> 1.5)
   - AMapFoundation-NO-IDFA (1.5.6)
-  - AMapLocation-NO-IDFA (2.6.1):
+  - AMapLocation-NO-IDFA (2.6.2):
     - AMapFoundation-NO-IDFA (~> 1.4)
   - AMapNavi-NO-IDFA (6.7.0):
     - AMap3DMap-NO-IDFA (~> 6.7)
@@ -26,7 +26,7 @@ PODS:
   - AMapSearch-NO-IDFA (6.6.0):
     - AMapFoundation-NO-IDFA (~> 1.4)
   - Aspects (1.4.1)
-  - BNCategory (1.9.1.3):
+  - BNCategory (1.9.2.1):
     - AESCrypt-ObjC
     - BNGloble
     - BNKit
@@ -38,18 +38,18 @@ PODS:
     - SDWebImage
     - Toast
     - YYModel
-  - BNCollectionView (1.2.0):
+  - BNCollectionView (1.2.2):
     - BNCategory
-  - BNGloble (1.3.7)
+  - BNGloble (1.3.8)
   - BNKit (1.3.3):
     - BNGloble
-  - BNTableViewCell (1.4.3.1):
+  - BNTableViewCell (1.4.4):
     - BNCategory
     - BNGloble
     - BNKit
     - BNView
     - Masonry
-  - BNView (1.4.6.2):
+  - BNView (1.4.6.3):
     - BNCategory
     - BNGloble
     - BNKit
@@ -57,7 +57,7 @@ PODS:
     - PPNumberButton
     - SDCycleScrollView
     - TZImagePickerController
-  - BNViewHeight (1.2.6):
+  - BNViewHeight (1.2.7):
     - BNCategory
     - BNCollectionView
     - BNGloble
@@ -105,11 +105,11 @@ PODS:
   - MOBFoundation (3.2.2)
   - PopoverView (0.0.2)
   - PPNumberButton (0.8.0)
-  - SDCycleScrollView (1.75):
-    - SDWebImage (>= 4.0.0)
-  - SDWebImage (5.0.0):
-    - SDWebImage/Core (= 5.0.0)
-  - SDWebImage/Core (5.0.0)
+  - SDCycleScrollView (1.80):
+    - SDWebImage (>= 5.0.0)
+  - SDWebImage (5.0.1):
+    - SDWebImage/Core (= 5.0.1)
+  - SDWebImage/Core (5.0.1)
   - Toast (4.0.0)
   - TZImagePickerController (3.2.0)
   - UICKeyChainStore (2.1.2)
@@ -232,17 +232,17 @@ SPEC CHECKSUMS:
   AFNetworking: b6f891fdfaed196b46c7a83cf209e09697b94057
   AMap3DMap-NO-IDFA: ff23a9ca32dd17070a1c7042e57f080b3f764862
   AMapFoundation-NO-IDFA: 40d723b352992d0f95abe2976f0c0ecda3c3ffc3
-  AMapLocation-NO-IDFA: ffd69b8b88f553d0b252d4967bf301ad2afff9c0
+  AMapLocation-NO-IDFA: d7792c8c516f415e186f1bc25946f1a58ca6a583
   AMapNavi-NO-IDFA: ad1bdff5c62864469662c91a4c3d0a2f8b1335eb
   AMapSearch-NO-IDFA: 07651afae010f7acda12beb1f2c0f45d29069e75
   Aspects: 7595ba96a6727a58ebcbfc954497fc5d2fdde546
-  BNCategory: 0d54ce57bd0bd15c8246c2eff97b13ab6cf7d784
-  BNCollectionView: 0c6be9c6da86b4314e4e7221fa8aebc0dc6856d4
-  BNGloble: ec1395af7dafa766db3b6fde42e8cb821f0d37c5
+  BNCategory: 460b757d06b91fe9022d310376aee845f7b12b7c
+  BNCollectionView: 05a29730ff953b07c67cb0654baf3c6bf29aa6d6
+  BNGloble: 1df470634ce7c52fbe5e28e4d6454c46797012d8
   BNKit: 0d8caba583620f33c6f14da13617ed3dc6d3b17f
-  BNTableViewCell: 6d11f270d89a773ee67d87f0224d8cd8724ecc58
-  BNView: 15b978d31d67d766f2734732e34616971d74dd41
-  BNViewHeight: 2ba42b040196f2fd1165df22f329eefa33ee46bc
+  BNTableViewCell: 79b091cf83ac9d2e3f2b26864f41ce21e5838b86
+  BNView: 90df08a487230987a2f3591dabf9e5e251c7670d
+  BNViewHeight: 8ab9854cfc60d7c3cf7a6ce96738f3c625c38032
   FCUUID: bb054fc90cd7cd99320f9f6ff8e130fe607fba05
   FLAnimatedImage: 4a0b56255d9b05f18b6dd7ee06871be5d3b89e31
   FMDB: 2ce00b547f966261cd18927a3ddb07cb6f3db82a
@@ -261,8 +261,8 @@ SPEC CHECKSUMS:
   MOBFoundation: b5ff4038ddb9a0f06b685b86408f905a10aa147c
   PopoverView: 62e83ffda75944d6cf2de9c6593489f3097dc1a3
   PPNumberButton: 4442ff64c21d91733057ca1b3dc05fb4df55f2c0
-  SDCycleScrollView: 884b88f0266dd4708a0e1934975c69cb971707b1
-  SDWebImage: 5de80a0302de9e377e62f47d2fa1304efff0e55f
+  SDCycleScrollView: b3c9a5ed840c771c4938978174c7c9d9feefeb96
+  SDWebImage: 27dd2c9ea07a2252f94557c9fbb6105ee94b74c9
   Toast: 91b396c56ee72a5790816f40d3a94dd357abc196
   TZImagePickerController: 7850b158d025065b162a1a963d445040b828abc9
   UICKeyChainStore: 85db518bb1d294366d15ec9b92a416c4e670518f
@@ -276,6 +276,6 @@ SPEC CHECKSUMS:
   YZPullDownMenu: afc60c3fc4f7caedd9556d32da43ea1718e078e0
   ZYCornerRadius: f0af817be7805b5c63d793042ca7a03f81e14069
 
-PODFILE CHECKSUM: 6533456c57c124bebac0496276d495d02b56f135
+PODFILE CHECKSUM: 188da23f5aaf5a5de8af5dfb421b4dda584f95ce
 
 COCOAPODS: 1.7.0.beta.3
