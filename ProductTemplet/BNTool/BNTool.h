@@ -19,7 +19,6 @@
 #import "BNAddPictureView.h"
 #import "BNAddPictureVC.h"
 #import "BNEmail.h"
-#import "BNMap.h"
 #import "BNNoti.h"
 #import "BNNum.h"
 #import "WHKMapViewController.h"

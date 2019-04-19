@@ -8,9 +8,10 @@
 
 #import "AppDelegate.h"
 
-#import "UIApplication+Helper.h"
-#import "UIApplication+Other.h"
+//#import "UIApplication+Helper.h"
+//#import "UIApplication+Other.h"
 #import "BNCategory.h"
+#import "BNMapManager.h"
 
 #import "ZYSliderViewController.h"
 
@@ -22,7 +23,7 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
-    [UIApplication setupIQKeyboardManager];
+    [self setupThridSDKWithOptions:launchOptions];
     UIColor.themeColor = UIColor.orangeColor;
     [UIApplication setupAppearanceDefault:false];
 
@@ -37,8 +38,9 @@
 //    controller = UICtrFromString(@"SortViewController");
 //    controller = UICtrFromString(@"FriendListController");
     controller = UICtrFromString(@"HomeViewController");
-    [UIApplication setupRootController:rootVC isAdjust:NO];
-    
+//    [UIApplication setupRootController:rootVC isAdjust:NO];
+    [UIApplication setupRootController:controller isAdjust:NO];
+
 //    [UIApplication setupRootController:UICtrFromString(@"RecognizerController") isAdjust:YES];
 //    [UIApplication setupRootController:UICtrFromString(@"UIRecognizerController") isAdjust:YES];
     
@@ -48,6 +50,22 @@
 //    UIApplication.tabBarController.selectedIndex = 4;
 
     return YES;
+}
+
+- (void)setupThridSDKWithOptions:(NSDictionary *)launchOptions{
+    [UIApplication setupIQKeyboardManager];
+
+    //高德地图
+    AMapServices.sharedServices.apiKey = kGDMapKey;
+    //微信支付
+    //    [WXApi registerApp:kAppID_WX];
+    //社交分享
+    //    [UIApplication registerShareSDK];
+    //友盟
+//    [UIApplication registerUMengSDKAppKey:kAppKey_UMeng channel:kChannel_UMeng];
+//    //极光
+//    [self registerJPushSDKAppKey:kAppKey_JPush channel:kChannel_JPush isProduction:kIsProduction options:launchOptions];
+//    [self startBackgroudUploadLocation];
 }
 
 //- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {

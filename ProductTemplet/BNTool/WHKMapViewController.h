@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-#import "BNMap.h"
+#import "BNMapManager.h"
 
 @interface WHKMapViewController : UIViewController<MAMapViewDelegate,AMapLocationManagerDelegate,AMapSearchDelegate>
 

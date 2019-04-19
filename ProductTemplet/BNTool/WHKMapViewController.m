@@ -12,7 +12,7 @@
 #import "BNGloble.h"
 #import "BNCategory.h"
 
-#import "BNGeocodeAnnotation.h"
+#import "BNGeoAnno.h"
 
 
 #import "KVOController.h"
@@ -57,14 +57,7 @@ static const NSInteger kRoutePaddingEdge = 20;
 
 -(NSDictionary *)dictAnnotation{
     if (!_dictAnnotation) {
-        _dictAnnotation = @{
-                            kMapAddressUser:@"map_userLocation@2x.png",
-                            kMapAddressDefault:@"map_address_Default@2x.png",
-                            kMapAddressBegin:@"map_address_begin@2x.png",
-                            kMapAddressEnd:@"map_address_end@2x.png",
-                            kMapAddressCar:@"icon_car_green@2x.png",
-                            kMapAddressCarEnd:@"icon_car_red@2x.png",
-                            };
+        _dictAnnotation = BNMapManager.shared.annViewDict;
     }
     return _dictAnnotation;
 }
@@ -159,8 +152,8 @@ static const NSInteger kRoutePaddingEdge = 20;
             MAAnnotationView *userLocationView = [self.mapView viewForAnnotation:self.mapView.userLocation];
             userLocationView.annotation.coordinate = self.mapView.userLocation.coordinate;
 
-            userLocationView.annotation.title = kMapAddressUser;
-            userLocationView.image = [UIImage imageNamed:self.dictAnnotation[kMapAddressUser]];
+            userLocationView.annotation.title = kAnnoTitleUser;
+            userLocationView.image = [UIImage imageNamed:self.dictAnnotation[kAnnoTitleUser]];
             self.userLocationView = userLocationView;
             
         }
@@ -209,7 +202,7 @@ static const NSInteger kRoutePaddingEdge = 20;
         annotationView.pinColor = (annotation == self.mapView.annotations.firstObject ? MAPinAnnotationColorRed : MAPinAnnotationColorGreen);
         
         if ([annotation isKindOfClass:[MAUserLocation class]]) {
-            annotationView.image = [UIImage imageNamed: self.dictAnnotation[kMapAddressUser]];
+            annotationView.image = [UIImage imageNamed: self.dictAnnotation[kAnnoTitleUser]];
             
         }
         else if([self.dictAnnotation.allKeys containsObject:annotation.title]){
@@ -217,7 +210,7 @@ static const NSInteger kRoutePaddingEdge = 20;
             
         }
         else{
-            annotationView.image = [UIImage imageNamed:self.dictAnnotation[kMapAddressDefault]];
+            annotationView.image = [UIImage imageNamed:self.dictAnnotation[kAnnoTitleDefault]];
 
         }
         return annotationView;
@@ -298,9 +291,7 @@ static const NSInteger kRoutePaddingEdge = 20;
 
 
 - (void)mapView:(MAMapView *)mapView didSingleTappedAtCoordinate:(CLLocationCoordinate2D)coordinate{
-
-    DDLog(@"distance___%@",[BNMap distanceBetweenBeginPoint:self.coordinateBegin endPoint:self.coordinateEnd type:@"0"]);
-    [self addAnnotionCoordinate:coordinate title:kMapAddressEnd isBegin:NO];
+    [self addAnnotionCoordinate:coordinate title:kAnnoTitleEnd isBegin:NO];
 }
 
 
@@ -312,8 +303,8 @@ static const NSInteger kRoutePaddingEdge = 20;
     pointAnnotation.title      = title;
     pointAnnotation.subtitle   = [NSString stringWithFormat:@"{%f, %f}", coordinate.latitude, coordinate.longitude];
     
-    if ([BNMap getPointAnnotationTitle:title mapView:self.mapView]) {
-        pointAnnotation = [BNMap getPointAnnotationTitle:title mapView:self.mapView];
+    if ([BNMapManager annoWithTitle:title mapView:self.mapView]) {
+        pointAnnotation = [BNMapManager annoWithTitle:title mapView:self.mapView];
         pointAnnotation.coordinate = coordinate;
 //        [self.mapView selectAnnotation:pointAnnotation animated:YES];
 
@@ -349,8 +340,7 @@ static const NSInteger kRoutePaddingEdge = 20;
     request.location                    = [AMapGeoPoint locationWithLatitude:coordinate.latitude longitude:coordinate.longitude];
     request.requireExtension            = YES;
     
-    BNMap * binMap = [BNMap sharedInstance];
-    [binMap reGeocodeSearchWithRequest:request handler:^(AMapReGeocodeSearchRequest *request, AMapReGeocodeSearchResponse *response, NSError *error) {
+    [BNMapManager.shared reGeocodeSearchWithRequest:request handler:^(AMapReGeocodeSearchRequest *request, AMapReGeocodeSearchResponse *response, NSError *error) {
         if (error) {
             DDLog(@"error:%@",error);
             
@@ -362,8 +352,7 @@ static const NSInteger kRoutePaddingEdge = 20;
 }
 
 - (void)handleMapGeocodeAddress:(NSString *)address city:(NSString *)city{
-    BNMap * binMap = [BNMap sharedInstance];
-    [binMap geocodeSearchWithAddress:address city:city handler:^(AMapGeocodeSearchRequest *request, AMapGeocodeSearchResponse *response, NSError *error) {
+    [BNMapManager.shared geocodeSearchWithAddress:address city:city handler:^(AMapGeocodeSearchRequest *request, AMapGeocodeSearchResponse *response, NSError *error) {
         if (error) {
             DDLog(@"error:%@",error);
             
@@ -376,15 +365,13 @@ static const NSInteger kRoutePaddingEdge = 20;
 }
 
 - (void)handleSearchRoutePlanningDrive{
-    BNMap * binMap = [BNMap sharedInstance];
-    [binMap routeSearchBeginPoint:self.coordinateBegin endPoint:self.coordinateEnd strategy:5 type:@"0" handler:^(AMapRouteSearchBaseRequest *request, AMapRouteSearchResponse *response, NSError *error) {
-        
+    [BNMapManager.shared routeSearchStartPoint:self.coordinateBegin endPoint:self.coordinateEnd strategy:5 type:@"0" handler:^(AMapRouteSearchBaseRequest *request, AMapRouteSearchResponse *response, NSError *error) {
         if (error) {
             DDLog(@"error:%@",error);
             
         } else {
             [self presentDriveRouteWithResponse:response];
-
+            
         }
     }];
 }
@@ -398,7 +385,7 @@ static const NSInteger kRoutePaddingEdge = 20;
     self.pathPolylines = nil;
     
     // 只显⽰示第⼀条 规划的路径
-    self.pathPolylines = [BNMap polylinesForPath:response.route.paths[0]];
+    self.pathPolylines = MapPolylinesForPath(response.route.paths[0]);
     DDLog(@"steps_%@",response.route.paths[0]);
     //添加新的遮盖，然后会触发代理方法进行绘制
     [self.mapView addOverlays:self.pathPolylines];
