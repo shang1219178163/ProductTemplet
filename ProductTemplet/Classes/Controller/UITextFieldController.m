@@ -121,10 +121,10 @@
 }
 
 
-- (BOOL)checkVersion {
+- (BOOL)checkVersion:(NSString *)appStoreID {
     __block BOOL isUpdate = NO;
     
-    NSString *path = [NSString stringWithFormat:@"http://itunes.apple.com/cn/lookup?id=%@",kID_AppStoreConnect];
+    NSString *path = [NSString stringWithFormat:@"http://itunes.apple.com/cn/lookup?id=%@",appStoreID];
     NSMutableURLRequest *request = [NSMutableURLRequest requestPostURL:path body:nil];
     
     NSURLSessionDataTask *dataTask = [NSURLSession sendAsynRequest:request handler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
