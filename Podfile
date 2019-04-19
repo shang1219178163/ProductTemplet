@@ -31,7 +31,7 @@
    
    pod 'SDCycleScrollView'
    pod 'SDWebImage'
-   
+   pod 'SVProgressHUD'
    pod 'Toast'
    
    pod 'UICKeyChainStore'
