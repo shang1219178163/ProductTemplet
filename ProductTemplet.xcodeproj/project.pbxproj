@@ -62,6 +62,9 @@
 		1476F78D21FC36B10088C137 /* WHKBaseRequestApi.m in Sources */ = {isa = PBXBuildFile; fileRef = 1476F78C21FC36B10088C137 /* WHKBaseRequestApi.m */; };
 		147B971F21EF005B000F5294 /* UICollectionDisplayController.m in Sources */ = {isa = PBXBuildFile; fileRef = 147B971E21EF005B000F5294 /* UICollectionDisplayController.m */; };
 		149111D42272FFCC0078A7BB /* BNPageModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 149111D32272FFCC0078A7BB /* BNPageModel.m */; };
+		149111D7227308640078A7BB /* BNRequstManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 149111D6227308640078A7BB /* BNRequstManager.m */; };
+		149111DA227308E30078A7BB /* BNNetWorkAgent.m in Sources */ = {isa = PBXBuildFile; fileRef = 149111D9227308E30078A7BB /* BNNetWorkAgent.m */; };
+		149111E022730CCF0078A7BB /* BNAPIConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = 149111DF22730CCF0078A7BB /* BNAPIConfiguration.m */; };
 		149B5508225AD3C5002B1039 /* BNTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 149B5507225AD3C5002B1039 /* BNTabBarController.m */; };
 		14A1EA752249FBAA00952911 /* TextFromSpeechController.m in Sources */ = {isa = PBXBuildFile; fileRef = 14A1EA742249FBAA00952911 /* TextFromSpeechController.m */; };
 		14E42CD3220003F200606AD0 /* BNOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 14E42CD1220003F200606AD0 /* BNOperation.m */; };
@@ -480,6 +483,12 @@
 		147B971E21EF005B000F5294 /* UICollectionDisplayController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UICollectionDisplayController.m; sourceTree = "<group>"; };
 		149111D22272FFCC0078A7BB /* BNPageModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BNPageModel.h; sourceTree = "<group>"; };
 		149111D32272FFCC0078A7BB /* BNPageModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BNPageModel.m; sourceTree = "<group>"; };
+		149111D5227308640078A7BB /* BNRequstManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BNRequstManager.h; sourceTree = "<group>"; };
+		149111D6227308640078A7BB /* BNRequstManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BNRequstManager.m; sourceTree = "<group>"; };
+		149111D8227308E30078A7BB /* BNNetWorkAgent.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BNNetWorkAgent.h; sourceTree = "<group>"; };
+		149111D9227308E30078A7BB /* BNNetWorkAgent.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BNNetWorkAgent.m; sourceTree = "<group>"; };
+		149111DE22730CCF0078A7BB /* BNAPIConfiguration.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BNAPIConfiguration.h; sourceTree = "<group>"; };
+		149111DF22730CCF0078A7BB /* BNAPIConfiguration.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BNAPIConfiguration.m; sourceTree = "<group>"; };
 		149B5506225AD3C5002B1039 /* BNTabBarController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BNTabBarController.h; sourceTree = "<group>"; };
 		149B5507225AD3C5002B1039 /* BNTabBarController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BNTabBarController.m; sourceTree = "<group>"; };
 		14A1EA732249FBAA00952911 /* TextFromSpeechController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TextFromSpeechController.h; sourceTree = "<group>"; };
@@ -1161,8 +1170,14 @@
 				516F8561215DF8F4008E62B3 /* SuspendButton.m */,
 				142A76D52226708D0016D3DA /* BNSliderControlView.h */,
 				142A76D62226708D0016D3DA /* BNSliderControlView.m */,
+				149111DE22730CCF0078A7BB /* BNAPIConfiguration.h */,
+				149111DF22730CCF0078A7BB /* BNAPIConfiguration.m */,
 				149111D22272FFCC0078A7BB /* BNPageModel.h */,
 				149111D32272FFCC0078A7BB /* BNPageModel.m */,
+				149111D5227308640078A7BB /* BNRequstManager.h */,
+				149111D6227308640078A7BB /* BNRequstManager.m */,
+				149111D8227308E30078A7BB /* BNNetWorkAgent.h */,
+				149111D9227308E30078A7BB /* BNNetWorkAgent.m */,
 				513646A82086031D005A20E7 /* Assets.xcassets */,
 				5169DF232088254300B025C3 /* Public.xcassets */,
 				5136492420860655005A20E7 /* Resources */,
@@ -2325,6 +2340,7 @@
 				140A2B0C2269661F000ED121 /* PKMainController.m in Sources */,
 				143331AD2241F1F600436F75 /* AVSpeechViewController.m in Sources */,
 				149B5508225AD3C5002B1039 /* BNTabBarController.m in Sources */,
+				149111DA227308E30078A7BB /* BNNetWorkAgent.m in Sources */,
 				515C67E62137C55700D5EA94 /* BRecentCityCell.m in Sources */,
 				14E42D172200042800606AD0 /* GlobleConst.m in Sources */,
 				140A2BE922696E24000ED121 /* BNMapContainView.m in Sources */,
@@ -2354,6 +2370,7 @@
 				14E42CFA2200040F00606AD0 /* BNFourthViewController.m in Sources */,
 				140A2BEB22696E24000ED121 /* BNPOIAnnotation.m in Sources */,
 				51862E7D20BBA8270080BD4E /* InputValidator.m in Sources */,
+				149111E022730CCF0078A7BB /* BNAPIConfiguration.m in Sources */,
 				513647C1208604DE005A20E7 /* HZWaitingView.m in Sources */,
 				14A1EA752249FBAA00952911 /* TextFromSpeechController.m in Sources */,
 				51862E7A20BBA1B50080BD4E /* StrategyFinancyAlipay.m in Sources */,
@@ -2444,6 +2461,7 @@
 				14E42CF82200040F00606AD0 /* BNThirdViewController.m in Sources */,
 				14E42D152200042800606AD0 /* BNLanguage.m in Sources */,
 				14E42CF62200040F00606AD0 /* BNLeftViewController.m in Sources */,
+				149111D7227308640078A7BB /* BNRequstManager.m in Sources */,
 				146B8187225C74860004A249 /* SubTabBarController.m in Sources */,
 				515CC97A20B6AAF2004AE27C /* AACrosshair.m in Sources */,
 				515CC97720B6AAF2004AE27C /* AATooltip.m in Sources */,

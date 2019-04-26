@@ -11,7 +11,7 @@
 
 @implementation NSObject (Bind)
 
-- (void)observeTarget:(id)target keyPath:(NSString *)keyPath onChange:(void(^)(NSString *keyPath, id obj))handlder{
+- (void)observeTarget:(id)target keyPath:(NSString *)keyPath onChange:(void(^)(NSString *keyPath, id obj))handler{
     objc_setAssociatedObject(self, _cmd, handler, OBJC_ASSOCIATION_COPY_NONATOMIC);
     
     NSKeyValueObservingOptions options = NSKeyValueObservingOptionInitial | NSKeyValueObservingOptionNew;
@@ -21,12 +21,14 @@
     
 - (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context{
     void(^handlder)(NSString *keyPath, id obj) = objc_getAssociatedObject(self, @selector(addActionHandler:forControlEvents:));
-    if (self == object) {
-        if (handlder) handlder(keyPath, change[NSKeyValueChangeNewKey]);
+    if (handlder) handlder(keyPath, change[NSKeyValueChangeNewKey]);
 
-    } else {
-        [super observeValueForKeyPath:keyPath ofObject:object change:change context:context];
-    }
+//    if (self == object) {
+//        if (handlder) handlder(keyPath, change[NSKeyValueChangeNewKey]);
+//
+//    } else {
+//        [super observeValueForKeyPath:keyPath ofObject:object change:change context:context];
+//    }
 }
 
 @end
