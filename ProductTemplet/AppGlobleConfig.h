@@ -13,7 +13,7 @@
 static NSString * kAgreementURL     = @"";
 
 //
-static NSString * kAppStoreID       = @"";
+static NSString * kAppStoreID       = @"1223960667";
 
 #pragma mark - -极光
 

@@ -48,6 +48,7 @@
 		140A2BF822696E24000ED121 /* BNDriverNaviController.m in Sources */ = {isa = PBXBuildFile; fileRef = 140A2BD222696E23000ED121 /* BNDriverNaviController.m */; };
 		140A2BF922696E24000ED121 /* MAAnnotationView+Map.m in Sources */ = {isa = PBXBuildFile; fileRef = 140A2BD422696E24000ED121 /* MAAnnotationView+Map.m */; };
 		140A2BFD226977FB000ED121 /* AppGlobleConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 140A2BFC226977FA000ED121 /* AppGlobleConfig.m */; };
+		1419DAE3227005FF00F4BB5C /* NSObject+Bind.m in Sources */ = {isa = PBXBuildFile; fileRef = 1419DAE2227005FF00F4BB5C /* NSObject+Bind.m */; };
 		1421D5CD21F307F700635582 /* CustomViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1421D5CC21F307F700635582 /* CustomViewController.m */; };
 		1421D5D021F3177700635582 /* BNWalletView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1421D5CF21F3177700635582 /* BNWalletView.m */; };
 		142A76D022263F080016D3DA /* icon_operation_busy@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 142A76CE22263F080016D3DA /* icon_operation_busy@2x.png */; };
@@ -60,6 +61,7 @@
 		146B8187225C74860004A249 /* SubTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 146B8186225C74860004A249 /* SubTabBarController.m */; };
 		1476F78D21FC36B10088C137 /* WHKBaseRequestApi.m in Sources */ = {isa = PBXBuildFile; fileRef = 1476F78C21FC36B10088C137 /* WHKBaseRequestApi.m */; };
 		147B971F21EF005B000F5294 /* UICollectionDisplayController.m in Sources */ = {isa = PBXBuildFile; fileRef = 147B971E21EF005B000F5294 /* UICollectionDisplayController.m */; };
+		149111D42272FFCC0078A7BB /* BNPageModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 149111D32272FFCC0078A7BB /* BNPageModel.m */; };
 		149B5508225AD3C5002B1039 /* BNTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 149B5507225AD3C5002B1039 /* BNTabBarController.m */; };
 		14A1EA752249FBAA00952911 /* TextFromSpeechController.m in Sources */ = {isa = PBXBuildFile; fileRef = 14A1EA742249FBAA00952911 /* TextFromSpeechController.m */; };
 		14E42CD3220003F200606AD0 /* BNOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 14E42CD1220003F200606AD0 /* BNOperation.m */; };
@@ -453,6 +455,8 @@
 		140A2BD522696E24000ED121 /* BNMapManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BNMapManager.h; sourceTree = "<group>"; };
 		140A2BFB226976EC000ED121 /* AppGlobleConfig.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppGlobleConfig.h; sourceTree = "<group>"; };
 		140A2BFC226977FA000ED121 /* AppGlobleConfig.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppGlobleConfig.m; sourceTree = "<group>"; };
+		1419DAE1227005FF00F4BB5C /* NSObject+Bind.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSObject+Bind.h"; sourceTree = "<group>"; };
+		1419DAE2227005FF00F4BB5C /* NSObject+Bind.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSObject+Bind.m"; sourceTree = "<group>"; };
 		1421D5CB21F307F700635582 /* CustomViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CustomViewController.h; sourceTree = "<group>"; };
 		1421D5CC21F307F700635582 /* CustomViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CustomViewController.m; sourceTree = "<group>"; };
 		1421D5CE21F3177700635582 /* BNWalletView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BNWalletView.h; sourceTree = "<group>"; };
@@ -474,6 +478,8 @@
 		1476F78C21FC36B10088C137 /* WHKBaseRequestApi.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WHKBaseRequestApi.m; sourceTree = "<group>"; };
 		147B971D21EF005B000F5294 /* UICollectionDisplayController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UICollectionDisplayController.h; sourceTree = "<group>"; };
 		147B971E21EF005B000F5294 /* UICollectionDisplayController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UICollectionDisplayController.m; sourceTree = "<group>"; };
+		149111D22272FFCC0078A7BB /* BNPageModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BNPageModel.h; sourceTree = "<group>"; };
+		149111D32272FFCC0078A7BB /* BNPageModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BNPageModel.m; sourceTree = "<group>"; };
 		149B5506225AD3C5002B1039 /* BNTabBarController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BNTabBarController.h; sourceTree = "<group>"; };
 		149B5507225AD3C5002B1039 /* BNTabBarController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BNTabBarController.m; sourceTree = "<group>"; };
 		14A1EA732249FBAA00952911 /* TextFromSpeechController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TextFromSpeechController.h; sourceTree = "<group>"; };
@@ -1155,6 +1161,8 @@
 				516F8561215DF8F4008E62B3 /* SuspendButton.m */,
 				142A76D52226708D0016D3DA /* BNSliderControlView.h */,
 				142A76D62226708D0016D3DA /* BNSliderControlView.m */,
+				149111D22272FFCC0078A7BB /* BNPageModel.h */,
+				149111D32272FFCC0078A7BB /* BNPageModel.m */,
 				513646A82086031D005A20E7 /* Assets.xcassets */,
 				5169DF232088254300B025C3 /* Public.xcassets */,
 				5136492420860655005A20E7 /* Resources */,
@@ -1327,6 +1335,8 @@
 				142A770F2227B30E0016D3DA /* UITableViewPickerCell.m */,
 				140A2B0A2269661E000ED121 /* PKMainController.h */,
 				140A2B0B2269661E000ED121 /* PKMainController.m */,
+				1419DAE1227005FF00F4BB5C /* NSObject+Bind.h */,
+				1419DAE2227005FF00F4BB5C /* NSObject+Bind.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -2183,17 +2193,11 @@
 				"${PODS_ROOT}/Target Support Files/Pods-ProductTemplet/Pods-ProductTemplet-resources.sh",
 				"${PODS_ROOT}/AMap3DMap-NO-IDFA/MAMapKit.framework/AMap.bundle",
 				"${PODS_ROOT}/AMapNavi-NO-IDFA/AMapNaviKit.framework/AMapNavi.bundle",
-				"${PODS_ROOT}/mob_sharesdk/ShareSDK/Support/Required/ShareSDK.bundle",
-				"${PODS_ROOT}/mob_sharesdk/ShareSDK/Support/PlatformSDK/SinaWeiboSDK/WeiboSDK.bundle",
-				"${PODS_ROOT}/mob_sharesdk/ShareSDK/Support/Optional/ShareSDKUI.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/AMap.bundle",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/AMapNavi.bundle",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/ShareSDK.bundle",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/WeiboSDK.bundle",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/ShareSDKUI.bundle",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -2430,6 +2434,7 @@
 				5129425820B424EC009FB70E /* LockCompareController.m in Sources */,
 				51862E8320BBA8B90080BD4E /* AlphaInputValidator.m in Sources */,
 				512E43452137DDBD00272986 /* WHKGroupViewViewController.m in Sources */,
+				149111D42272FFCC0078A7BB /* BNPageModel.m in Sources */,
 				5162F70A20BFB7CB009A6253 /* GCDViewController.m in Sources */,
 				51036F5020A17B3B009D8B7B /* WeiboLisController.m in Sources */,
 				14E42D1B2200042800606AD0 /* BNNum.m in Sources */,
@@ -2489,6 +2494,7 @@
 				5162F6F420BF9337009A6253 /* ThreadNormolController.m in Sources */,
 				51AA002321991646002EB259 /* CountDownListController.m in Sources */,
 				517D8B2A20B2E09800DCA731 /* PersonCarsViewController.m in Sources */,
+				1419DAE3227005FF00F4BB5C /* NSObject+Bind.m in Sources */,
 				51862E6820BB94E40080BD4E /* EOCEmployeeFinance.m in Sources */,
 				5175C93C20C13DF3009EA86E /* Teacher.m in Sources */,
 				515D9D852150F77900318A4D /* LiveLikeController.m in Sources */,

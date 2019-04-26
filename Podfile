@@ -52,12 +52,12 @@
    pod 'AMapNavi-NO-IDFA'
    
    # 主模块(必须)
-   pod 'mob_sharesdk'
-   pod 'mob_sharesdk/ShareSDKUI'
-   pod 'mob_sharesdk/ShareSDKExtension'# 扩展模块（在调用可以弹出我们UI分享方法的时候是必需的）
-   pod 'mob_sharesdk/ShareSDKPlatforms/QQ'
-   pod 'mob_sharesdk/ShareSDKPlatforms/SinaWeibo'
-   pod 'mob_sharesdk/ShareSDKPlatforms/WeChatFull' #（微信sdk带支付的命令，和上面不带支付的不能共存，只能选择一个）
+#   pod 'mob_sharesdk'
+#   pod 'mob_sharesdk/ShareSDKUI'
+#   pod 'mob_sharesdk/ShareSDKExtension'# 扩展模块（在调用可以弹出我们UI分享方法的时候是必需的）
+#   pod 'mob_sharesdk/ShareSDKPlatforms/QQ'
+#   pod 'mob_sharesdk/ShareSDKPlatforms/SinaWeibo'
+#   pod 'mob_sharesdk/ShareSDKPlatforms/WeChatFull' #（微信sdk带支付的命令，和上面不带支付的不能共存，只能选择一个）
    
    
    pod 'BNGloble'
