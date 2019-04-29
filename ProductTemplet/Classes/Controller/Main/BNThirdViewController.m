@@ -7,7 +7,8 @@
 //
 
 #import "BNThirdViewController.h"
-
+#import "BNCheckVersApi.h"
+#import "BNAppInfoRootModel.h"
 
 @interface BNThirdViewController ()
 
@@ -21,6 +22,12 @@
     
 //    [self addChildControllerView:@"SliderTabBarController"];
     
+}
+- (void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+    
+    BNAppInfoRootModel *userModel = [BNCacheManager.shared objectForKey:kCacheKeyUserModel];
+    DDLog(userModel.description);
 }
 
 - (void)didReceiveMemoryWarning {

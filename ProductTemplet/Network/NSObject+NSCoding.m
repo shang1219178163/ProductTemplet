@@ -11,18 +11,18 @@
 
 @implementation NSObject (NSCoding)
 
-- (instancetype)initWithCoder:(NSCoder *)coder{
-//    self = [super initWithCoder:coder];
+//- (instancetype)initWithCoder:(NSCoder *)coder{
+//    self = [self initWithCoder:coder];
 //    if (self) {
-        [self yy_modelInitWithCoder:coder];
+//        [self yy_modelInitWithCoder:coder];
 //    }
-    return self;
-}
-
-- (void)encodeWithCoder:(NSCoder *)coder{
-    [self yy_modelEncodeWithCoder:coder];
-    
-}
+//    return self;
+//}
+//
+//- (void)encodeWithCoder:(NSCoder *)coder{
+//    [self yy_modelEncodeWithCoder:coder];
+//    
+//}
 
 
 @end

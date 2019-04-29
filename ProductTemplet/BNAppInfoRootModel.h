@@ -3,7 +3,7 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "NSObject+NSCoding.h"
+//#import "NSObject+NSCoding.h"
 
 @class BNAppInfoResultsModel;
 @interface BNAppInfoRootModel : NSObject

@@ -12,10 +12,10 @@
 		1401BE6C2276A4980078A722 /* BNCacheManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 1401BE6B2276A4980078A722 /* BNCacheManager.m */; };
 		1401BE6F2276A50E0078A722 /* BNCacheKey.m in Sources */ = {isa = PBXBuildFile; fileRef = 1401BE6E2276A50E0078A722 /* BNCacheKey.m */; };
 		1401BE762276AB960078A722 /* BNStoreManger.m in Sources */ = {isa = PBXBuildFile; fileRef = 1401BE752276AB960078A722 /* BNStoreManger.m */; };
-		1401BE792276AD840078A722 /* NSObject+NSCoding.m in Sources */ = {isa = PBXBuildFile; fileRef = 1401BE782276AD840078A722 /* NSObject+NSCoding.m */; };
 		1401BE7C2276CBD90078A722 /* BNBaseRequestApi.m in Sources */ = {isa = PBXBuildFile; fileRef = 1401BE7B2276CBD90078A722 /* BNBaseRequestApi.m */; };
 		1401BE822276D18C0078A722 /* BNCheckVersApi.m in Sources */ = {isa = PBXBuildFile; fileRef = 1401BE812276D18C0078A722 /* BNCheckVersApi.m */; };
 		1401BE892276EC270078A722 /* BNAppInfoRootModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1401BE872276EC270078A722 /* BNAppInfoRootModel.m */; };
+		1401BE8C2276F4DB0078A722 /* NSObject+NSCoding.m in Sources */ = {isa = PBXBuildFile; fileRef = 1401BE8B2276F4DB0078A722 /* NSObject+NSCoding.m */; };
 		1404FADC21DF40D700122E22 /* RecognizerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1404FADB21DF40D700122E22 /* RecognizerController.m */; };
 		1404FAE521DF4A5F00122E22 /* UIRecognizerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1404FAE421DF4A5F00122E22 /* UIRecognizerController.m */; };
 		1404FAF921E0A1BB00122E22 /* Skull.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1404FAF821E0A1BA00122E22 /* Skull.jpg */; };
@@ -407,14 +407,14 @@
 		1401BE6E2276A50E0078A722 /* BNCacheKey.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BNCacheKey.m; sourceTree = "<group>"; };
 		1401BE742276AB960078A722 /* BNStoreManger.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BNStoreManger.h; sourceTree = "<group>"; };
 		1401BE752276AB960078A722 /* BNStoreManger.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BNStoreManger.m; sourceTree = "<group>"; };
-		1401BE772276AD840078A722 /* NSObject+NSCoding.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSObject+NSCoding.h"; sourceTree = "<group>"; };
-		1401BE782276AD840078A722 /* NSObject+NSCoding.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSObject+NSCoding.m"; sourceTree = "<group>"; };
 		1401BE7A2276CBD90078A722 /* BNBaseRequestApi.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BNBaseRequestApi.h; sourceTree = "<group>"; };
 		1401BE7B2276CBD90078A722 /* BNBaseRequestApi.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BNBaseRequestApi.m; sourceTree = "<group>"; };
 		1401BE802276D18C0078A722 /* BNCheckVersApi.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BNCheckVersApi.h; sourceTree = "<group>"; };
 		1401BE812276D18C0078A722 /* BNCheckVersApi.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BNCheckVersApi.m; sourceTree = "<group>"; };
 		1401BE872276EC270078A722 /* BNAppInfoRootModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BNAppInfoRootModel.m; sourceTree = "<group>"; };
 		1401BE882276EC270078A722 /* BNAppInfoRootModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BNAppInfoRootModel.h; sourceTree = "<group>"; };
+		1401BE8A2276F4DA0078A722 /* NSObject+NSCoding.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+NSCoding.h"; sourceTree = "<group>"; };
+		1401BE8B2276F4DB0078A722 /* NSObject+NSCoding.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+NSCoding.m"; sourceTree = "<group>"; };
 		1404FADA21DF40D700122E22 /* RecognizerController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RecognizerController.h; sourceTree = "<group>"; };
 		1404FADB21DF40D700122E22 /* RecognizerController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RecognizerController.m; sourceTree = "<group>"; };
 		1404FAE321DF4A5F00122E22 /* UIRecognizerController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UIRecognizerController.h; sourceTree = "<group>"; };
@@ -1105,8 +1105,6 @@
 				1401BE632276A1370078A722 /* BNDiskCache.h */,
 				1401BE642276A1370078A722 /* BNDiskCache.m */,
 				1401BE692276A2180078A722 /* BNCacheProtocol.h */,
-				1401BE772276AD840078A722 /* NSObject+NSCoding.h */,
-				1401BE782276AD840078A722 /* NSObject+NSCoding.m */,
 			);
 			path = Storage;
 			sourceTree = "<group>";
@@ -1451,6 +1449,8 @@
 				14E42CEB2200040E00606AD0 /* BNFactoryListViewController.m */,
 				14E42CE02200040C00606AD0 /* BNFirstViewController.h */,
 				14E42CE72200040E00606AD0 /* BNFirstViewController.m */,
+				14E42CF02200040F00606AD0 /* BNThirdViewController.h */,
+				14E42CEA2200040E00606AD0 /* BNThirdViewController.m */,
 				14E42CDD2200040C00606AD0 /* BNFourthViewController.h */,
 				14E42CEC2200040E00606AD0 /* BNFourthViewController.m */,
 				14E42CDF2200040C00606AD0 /* BNLeftViewController.h */,
@@ -1461,8 +1461,6 @@
 				14E42CE22200040D00606AD0 /* BNSecondViewController.m */,
 				14E42CE62200040D00606AD0 /* BNTempViewController.h */,
 				14E42CE92200040E00606AD0 /* BNTempViewController.m */,
-				14E42CF02200040F00606AD0 /* BNThirdViewController.h */,
-				14E42CEA2200040E00606AD0 /* BNThirdViewController.m */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -1923,6 +1921,8 @@
 				51698C7E2137C0430069C2B2 /* WHKRequestHelper.m */,
 				51698C802137C0430069C2B2 /* WHKReuestSevice.h */,
 				51698C832137C0430069C2B2 /* WHKReuestSevice.m */,
+				1401BE8A2276F4DA0078A722 /* NSObject+NSCoding.h */,
+				1401BE8B2276F4DB0078A722 /* NSObject+NSCoding.m */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -2504,6 +2504,7 @@
 				149111E92275B34E0078A7BB /* BNLog.m in Sources */,
 				147B971F21EF005B000F5294 /* UICollectionDisplayController.m in Sources */,
 				5162F70120BF9D10009A6253 /* FlowerView.m in Sources */,
+				1401BE8C2276F4DB0078A722 /* NSObject+NSCoding.m in Sources */,
 				5162F70D20BFB934009A6253 /* OperationViewController.m in Sources */,
 				14E42CF72200040F00606AD0 /* BNTempViewController.m in Sources */,
 				14E42D162200042800606AD0 /* BNMenuListController.m in Sources */,
@@ -2626,7 +2627,6 @@
 				516969AE20BCF9A800BAA53D /* Seller.m in Sources */,
 				515C67E02137C55700D5EA94 /* LNLocationManager.m in Sources */,
 				140A2BFD226977FB000ED121 /* AppGlobleConfig.m in Sources */,
-				1401BE792276AD840078A722 /* NSObject+NSCoding.m in Sources */,
 				140A2BF322696E24000ED121 /* BNGeoAnno.m in Sources */,
 				51364C9D20860822005A20E7 /* PictureController.m in Sources */,
 				149111EC2275B7970078A7BB /* NSError+Helper.m in Sources */,
