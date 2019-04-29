@@ -63,12 +63,6 @@ NSString *const kHTTP_URLMiddle = @"i=42&c=entry&do=fengmian&m=android&source=io
     NSString * tokenRequest = [WHKRequestHelper getTokenRequestMessageName:[NSString stringWithFormat:@"r=%@",messageName]];
     allAddresss = [allAddresss stringByAppendingFormat:@"&psw=%@",tokenRequest];
     
-    //userID
-//    WHKNetInfoCheckLoginModel *userModel = [BNFileHandler UnarchiveObjectFilName:kAir_UserModel];
-//    WHKNetHogpenInfoModel * factoryModel = [BNFileHandler UnarchiveObjectFilName:kAir_FacoryModel];
-//    allAddresss = [allAddresss stringByAppendingFormat:@"&uid=%@",userModel.uid];
-//    allAddresss = [allAddresss stringByAppendingFormat:@"&uniacid=%@",factoryModel.uniacid];
-    
     return allAddresss;
 }
 

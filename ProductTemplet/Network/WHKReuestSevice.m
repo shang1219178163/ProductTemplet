@@ -107,8 +107,6 @@
     }];
 }
 
-
-
 + (void)recognizeCardWithParameters:(id)parameters
                             success:(PPHttpRequestSuccess)success
                             failure:(PPHttpRequestFailed)failure{

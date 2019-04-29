@@ -34,14 +34,6 @@ UIKIT_EXTERN NSString *const kExit;
 UIKIT_EXTERN NSString *const kHTTP_URLPreFix;
 UIKIT_EXTERN NSString *const kHTTP_URLMiddle;
 
-//#define kIOS_SERVERTEST //是否为测试版本
-//#ifndef kIOS_SERVERTEST //正式服务器
-//
-//#define KSERVER_ADDRESS @"http://agentappnew.3g.fang.com/http" //正式服务器
-//#else //测试服务器
-//
-//#endif
-
 
 @interface WHKRequestHelper : NSObject
 

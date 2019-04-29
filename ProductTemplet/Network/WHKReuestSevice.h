@@ -23,12 +23,10 @@ typedef NS_ENUM(NSInteger, WHKRequestServiceType) {
 
 /**
  请求成功的block
- 
  */
 typedef void(^PPRequestSuccess)(id responseObject);
 /**
  请求失败的block
- 
  */
 typedef void(^PPRequestFailure)(NSError *error);
 
