@@ -17,10 +17,10 @@
 
 @implementation BNPageModel
 
-- (instancetype)init{
+-(instancetype)init{
     self = [super init];
     if (self) {
-        _currPage = _minPage = 1;
+        _currPage = _firstPage = 1;
         _limit = 30;
         _hasNextPage = true;
         
@@ -36,8 +36,8 @@
 
 #pragma mak - -funtions
 
-- (void)turnToMinPage{
-    _currPage = _minPage;
+- (void)turnToFirstPage{
+    _currPage = _firstPage;
 }
 
 - (void)turnToNextPage{
@@ -45,7 +45,7 @@
 }
 
 - (BOOL)hasPrePage{
-    return _currPage > _minPage;
+    return _currPage > _firstPage;
 }
 
 - (void)turnToPrePage{
@@ -60,9 +60,9 @@
 }
 
 #pragma mark - -set
--(void)setMinPage:(NSUInteger)minPage{
+- (void)setFirstPage:(NSUInteger)minPage{
     assert(minPage >= 1);
-    _minPage = minPage;
+    _firstPage = minPage;
     _currPage = minPage;
 }
 

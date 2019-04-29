@@ -23,17 +23,17 @@
 /**
  API请求头中的UserAgent
  */
-+ (NSString *)apiHeaderUserAgent;
++ (NSString *)headerUserAgent;
 
 /**
  API请求头中的请求Version
  */
-+ (NSString *)apiHeaderAcceptVersion;
++ (NSString *)headerAcceptVersion;
 
 /**
  超时时间
  */
-+ (NSInteger)apiTimeOut;
++ (NSInteger)timeOut;
 
 @end
 

@@ -15,6 +15,10 @@
 #import "BNSliderControlView.h"
 #import "BNPickerView.h"
 
+#import <YYModel/YYModel.h>
+#import "BNCheckVersApi.h"
+#import "BNAppInfoRootModel.h"
+
 @interface BNFourthViewController ()
 
 @property (nonatomic, strong) UIImageView *imgView;
@@ -22,9 +26,10 @@
 @property (nonatomic, strong) UITabBarItem *tabBarItem;
 @property (nonatomic, strong) BNSegmentView * segmentView;
 @property (nonatomic, strong) BNSliderControlView * sliderControlView;
-@property(nonatomic, strong) BNPickerView * pickerView;
+@property (nonatomic, strong) BNPickerView * pickerView;
 
 @property (nonatomic, strong) UILabel *label;
+@property (nonatomic, strong) BNCheckVersApi *api;
 
 @end
 
@@ -176,6 +181,17 @@
 
     [self.view getViewLayer];
     
+    [self.api startRequestWithSuccessBlock:^(BNRequstManager * _Nonnull manager, NSDictionary * _Nullable dic, NSError * _Nullable error) {
+        DDLog(@"%@",dic.JSONValue);
+        BNAppInfoRootModel *model = [BNAppInfoRootModel yy_modelWithJSON:dic];
+
+        [BNCacheManager.shared setObject:model forKey:kCacheKeyUserModel];
+        BNAppInfoRootModel *userModel = [BNCacheManager.shared objectForKey:kCacheKeyUserModel];
+        DDLog(userModel.description);
+    } failedBlock:^(BNRequstManager * _Nonnull manager, NSDictionary * _Nullable dic, NSError * _Nullable error) {
+        DDLog(@"%@",error.message);
+
+    }];
 }
 
 -(void)viewDidAppear:(BOOL)animated{
@@ -301,6 +317,13 @@
     return _pickerView;
 }
 
+
+-(BNCheckVersApi *)api{
+    if (!_api) {
+        _api = [[BNCheckVersApi alloc]init];
+    }
+    return _api;
+}
 
 
 @end

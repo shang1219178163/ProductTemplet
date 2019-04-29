@@ -1,8 +1,8 @@
 //
-//  BNNetWorkAgent.h
+//  NSObject+NSCoding.h
 //  ProductTemplet
 //
-//  Created by Bin Shang on 2019/4/26.
+//  Created by Bin Shang on 2019/4/29.
 //  Copyright © 2019 BN. All rights reserved.
 //
 
@@ -10,7 +10,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface BNNetWorkAgent : NSObject
+@interface NSObject (NSCoding)<NSCoding>
 
 @end
 

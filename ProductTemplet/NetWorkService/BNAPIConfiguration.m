@@ -35,7 +35,7 @@ static NSString * _urlTest = nil;
 /**
  API请求头中的UserAgent
  */
-+ (NSString *)apiHeaderUserAgent{
++ (NSString *)headerUserAgent{
     NSString *systemVersion = UIApplication.phoneSystemVer;
     NSString *iphoneType = UIApplication.phoneType;
     return [NSString stringWithFormat:@"IOP/iOS%@/%@",systemVersion,iphoneType];
@@ -44,11 +44,11 @@ static NSString * _urlTest = nil;
 /**
  API请求头中的请求Version
  */
-+ (NSString *)apiHeaderAcceptVersion{
++ (NSString *)headerAcceptVersion{
     return @"1.3";
 }
 
-+ (NSInteger)apiTimeOut{
++ (NSInteger)timeOut{
     return 10;
 }
 

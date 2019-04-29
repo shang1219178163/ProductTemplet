@@ -12,14 +12,14 @@
 
 @property (nonatomic, assign, readonly) NSUInteger currPage;
 /// 最小页码,不一定是1(重置时currPage同值)
-@property (nonatomic, assign) NSUInteger minPage;
+@property (nonatomic, assign) NSUInteger firstPage;
 /// 每页限制个数
 @property (nonatomic, assign) NSUInteger limit;
 @property (nonatomic, assign, readonly) BOOL hasNextPage;
 
--(instancetype)initWithLimit:(NSUInteger)limit;
+- (instancetype)initWithLimit:(NSUInteger)limit;
 
-- (void)turnToMinPage;
+- (void)turnToFirstPage;
 
 - (void)turnToNextPage;
 
