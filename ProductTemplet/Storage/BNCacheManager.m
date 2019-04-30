@@ -15,7 +15,7 @@
 - (instancetype)init{
     self = [super init];
     if (self) {
-        _cache = [YYCache cacheWithName:@"BNCache"];
+        _cache = [YYCache cacheWithName:@"DataCache"];
         _diskCache = [[BNDiskCache alloc]initWithCache: _cache.diskCache];
         _memoryCache = [[BNMemoryCache alloc]initWithCache:_cache.memoryCache];
         

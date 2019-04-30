@@ -74,7 +74,7 @@
     self.isLoading = true;
     //请求日志
     [BNLog logRequestInfoWithURI:self.child.requestURI params:self.child.requestParams];
-    
+        
     NSURLSessionTask * task = nil;
     @weakify(self);
     switch (self.child.requestType) {

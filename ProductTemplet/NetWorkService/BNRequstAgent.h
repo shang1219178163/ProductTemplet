@@ -11,7 +11,6 @@
 #import "BNUploadModel.h"
 
 typedef void(^BNNetworkBlock) (BNURLResponse * _Nonnull response);
-typedef void(^BNNetworkBlock) (BNURLResponse * _Nonnull response);
 typedef void(^BNProgressBlock)(NSProgress * _Nonnull progress);
 
 NS_ASSUME_NONNULL_BEGIN

@@ -43,7 +43,6 @@
                parameters:(id)parameters
                   success:(BNNetworkBlock)success
                   failure:(BNNetworkBlock)failure{
-    //读取缓存
     NSURLSessionTask *sessionTask = [self.sessionManager GET:URL parameters:parameters progress:^(NSProgress * _Nonnull uploadProgress) {
 
     } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
@@ -86,7 +85,8 @@
     
     if (_isOpenLog) DDLog(@"responseObject = %@",[parameters JSONValue]);
 
-    NSURLSessionTask *sessionTask = [self.sessionManager POST:URL parameters:nil constructingBodyWithBlock:^(id<AFMultipartFormData>  _Nonnull formData) {
+    NSString * urlString = [BNAPIConfiguration.serviceURLString stringByAppendingString:URL];
+    NSURLSessionTask *sessionTask = [self.sessionManager POST:urlString parameters:parameters constructingBodyWithBlock:^(id<AFMultipartFormData>  _Nonnull formData) {
         
         for (NSUInteger i = 0; i < images.count; i++) {
             BNUploadModel * model = BNUploadModelFromParam(images, i, fileNames[i]);

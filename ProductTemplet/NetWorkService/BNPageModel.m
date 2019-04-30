@@ -60,10 +60,10 @@
 }
 
 #pragma mark - -set
-- (void)setFirstPage:(NSUInteger)minPage{
-    assert(minPage >= 1);
-    _firstPage = minPage;
-    _currPage = minPage;
+- (void)setFirstPage:(NSUInteger)firstPage{
+    assert(firstPage >= 1);
+    _firstPage = firstPage;
+    _currPage = firstPage;
 }
 
 

@@ -70,6 +70,9 @@ static NSString * _urlTest = nil;
 }
 
 + (NSString *)urlTest{
+    if (!_urlTest) {
+        _urlTest = BNAPIConfiguration.urlTestList.firstObject;
+    }
     return _urlTest;
 }
 

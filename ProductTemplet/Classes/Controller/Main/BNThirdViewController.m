@@ -22,12 +22,14 @@
     
 //    [self addChildControllerView:@"SliderTabBarController"];
     
+    
+    
 }
 - (void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
     
     BNAppInfoRootModel *userModel = [BNCacheManager.shared objectForKey:kCacheKeyUserModel];
-    DDLog(userModel.description);
+    DDLog(@"%@", userModel.description);
 }
 
 - (void)didReceiveMemoryWarning {
