@@ -19,12 +19,6 @@ NS_ASSUME_NONNULL_BEGIN
 
 + (instancetype)shared;
 
-//- (NSInteger)getWithParams:(NSDictionary *)params uri:(NSString *)uri success:(BNNetworkBlock)success fail:(BNNetworkBlock)fail;
-//- (NSInteger)postWithParmams:(NSDictionary *)params uri:(NSString *)uri success:(BNNetworkBlock)success fail:(BNNetworkBlock)fail;
-//
-//- (NSInteger)callAPIWithRequest:(NSURLRequest *)request success:(BNNetworkBlock)success fail:(BNNetworkBlock)fail;
-
-
 /**
  GET 请求
  */

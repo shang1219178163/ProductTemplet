@@ -67,6 +67,8 @@
 		14488764224F4D6B00B550AF /* icon_oprationSuccess@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 14488762224F4D6A00B550AF /* icon_oprationSuccess@2x.png */; };
 		14488765224F4D6B00B550AF /* icon_oprationSuccess@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 14488763224F4D6B00B550AF /* icon_oprationSuccess@3x.png */; };
 		144920AA21C7BAA700C3C2F6 /* MoneyDisplayController.m in Sources */ = {isa = PBXBuildFile; fileRef = 144920A921C7BAA700C3C2F6 /* MoneyDisplayController.m */; };
+		14579BA12294EE83001FEB0C /* WebSocketManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 14579BA02294EE83001FEB0C /* WebSocketManager.m */; };
+		14579BA42294FBBA001FEB0C /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 14579BA22294FBBA001FEB0C /* Reachability.m */; };
 		146B8187225C74860004A249 /* SubTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 146B8186225C74860004A249 /* SubTabBarController.m */; };
 		147B971F21EF005B000F5294 /* UICollectionDisplayController.m in Sources */ = {isa = PBXBuildFile; fileRef = 147B971E21EF005B000F5294 /* UICollectionDisplayController.m */; };
 		149111D42272FFCC0078A7BB /* BNPageModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 149111D32272FFCC0078A7BB /* BNPageModel.m */; };
@@ -506,6 +508,10 @@
 		14488763224F4D6B00B550AF /* icon_oprationSuccess@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_oprationSuccess@3x.png"; sourceTree = "<group>"; };
 		144920A821C7BAA700C3C2F6 /* MoneyDisplayController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MoneyDisplayController.h; sourceTree = "<group>"; };
 		144920A921C7BAA700C3C2F6 /* MoneyDisplayController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MoneyDisplayController.m; sourceTree = "<group>"; };
+		14579B9F2294EE83001FEB0C /* WebSocketManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WebSocketManager.h; sourceTree = "<group>"; };
+		14579BA02294EE83001FEB0C /* WebSocketManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WebSocketManager.m; sourceTree = "<group>"; };
+		14579BA22294FBBA001FEB0C /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
+		14579BA32294FBBA001FEB0C /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
 		146B8185225C74860004A249 /* SubTabBarController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SubTabBarController.h; sourceTree = "<group>"; };
 		146B8186225C74860004A249 /* SubTabBarController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SubTabBarController.m; sourceTree = "<group>"; };
 		147B971D21EF005B000F5294 /* UICollectionDisplayController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UICollectionDisplayController.h; sourceTree = "<group>"; };
@@ -1091,7 +1097,7 @@
 			path = NetWorkService;
 			sourceTree = "<group>";
 		};
-		1401BE702276A96D0078A722 /* Storage */ = {
+		1401BE702276A96D0078A722 /* NetWorkStorage */ = {
 			isa = PBXGroup;
 			children = (
 				1401BE742276AB960078A722 /* BNStoreManger.h */,
@@ -1106,7 +1112,7 @@
 				1401BE642276A1370078A722 /* BNDiskCache.m */,
 				1401BE692276A2180078A722 /* BNCacheProtocol.h */,
 			);
-			path = Storage;
+			path = NetWorkStorage;
 			sourceTree = "<group>";
 		};
 		140A2B2622696C51000ED121 /* MapView */ = {
@@ -1213,6 +1219,17 @@
 			path = JZLocationConverter;
 			sourceTree = "<group>";
 		};
+		14D8DD5522954A3500192EF2 /* NetWorkWebSocket */ = {
+			isa = PBXGroup;
+			children = (
+				14579BA32294FBBA001FEB0C /* Reachability.h */,
+				14579BA22294FBBA001FEB0C /* Reachability.m */,
+				14579B9F2294EE83001FEB0C /* WebSocketManager.h */,
+				14579BA02294EE83001FEB0C /* WebSocketManager.m */,
+			);
+			path = NetWorkWebSocket;
+			sourceTree = "<group>";
+		};
 		513646932086031D005A20E7 = {
 			isa = PBXGroup;
 			children = (
@@ -1254,7 +1271,8 @@
 				1401BE812276D18C0078A722 /* BNCheckVersApi.m */,
 				1401BE882276EC270078A722 /* BNAppInfoRootModel.h */,
 				1401BE872276EC270078A722 /* BNAppInfoRootModel.m */,
-				1401BE702276A96D0078A722 /* Storage */,
+				14D8DD5522954A3500192EF2 /* NetWorkWebSocket */,
+				1401BE702276A96D0078A722 /* NetWorkStorage */,
 				1401BE5F22769DCF0078A722 /* NetWorkService */,
 				513646A82086031D005A20E7 /* Assets.xcassets */,
 				5169DF232088254300B025C3 /* Public.xcassets */,
@@ -2330,6 +2348,7 @@
 				"${BUILT_PRODUCTS_DIR}/SDCycleScrollView/SDCycleScrollView.framework",
 				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
 				"${BUILT_PRODUCTS_DIR}/SVProgressHUD/SVProgressHUD.framework",
+				"${BUILT_PRODUCTS_DIR}/SocketRocket/SocketRocket.framework",
 				"${BUILT_PRODUCTS_DIR}/TZImagePickerController/TZImagePickerController.framework",
 				"${BUILT_PRODUCTS_DIR}/Toast/Toast.framework",
 				"${BUILT_PRODUCTS_DIR}/UICKeyChainStore/UICKeyChainStore.framework",
@@ -2371,6 +2390,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDCycleScrollView.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SVProgressHUD.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SocketRocket.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TZImagePickerController.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Toast.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/UICKeyChainStore.framework",
@@ -2543,6 +2563,7 @@
 				515CC97B20B6AAF2004AE27C /* AAColumn.m in Sources */,
 				5162F70020BF9D10009A6253 /* FlowerFactory.m in Sources */,
 				142A76D72226708D0016D3DA /* BNSliderControlView.m in Sources */,
+				14579BA12294EE83001FEB0C /* WebSocketManager.m in Sources */,
 				14E42CF82200040F00606AD0 /* BNThirdViewController.m in Sources */,
 				14E42D152200042800606AD0 /* BNLanguage.m in Sources */,
 				14E42CF62200040F00606AD0 /* BNLeftViewController.m in Sources */,
@@ -2567,6 +2588,7 @@
 				515CC98320B6AAF2004AE27C /* AALegend.m in Sources */,
 				515CC97620B6AAF2004AE27C /* AALine.m in Sources */,
 				140A2BEC22696E24000ED121 /* LineDashPolyline.m in Sources */,
+				14579BA42294FBBA001FEB0C /* Reachability.m in Sources */,
 				513647C8208604DE005A20E7 /* LocationShareModel.m in Sources */,
 				515CC97420B6AAF2004AE27C /* AAPlotOptions.m in Sources */,
 				516969AC20BCF9A800BAA53D /* AbstractMediator.m in Sources */,

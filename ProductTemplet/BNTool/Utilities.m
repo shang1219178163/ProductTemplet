@@ -68,7 +68,6 @@ static NSString *const kACSEncrypt = @"mbqh1Gtpj9L8pJuv";
 
     [mdict setObject:data forKey:plistKey];
    
-    NSError * error = nil;
     BOOL isSuccess = [mdict writeToFile:filePath atomically:YES];
     if (isSuccess) {
         DDLog(@"isSuccess");
@@ -77,7 +76,6 @@ static NSString *const kACSEncrypt = @"mbqh1Gtpj9L8pJuv";
         DDLog(@"isFail");
         
     }
-    
     return isSuccess;
 }
 
