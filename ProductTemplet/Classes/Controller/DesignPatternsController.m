@@ -96,11 +96,13 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     NSDictionary * dict = self.dataList[indexPath.row];
     
-    UITableViewOneCell * cell = [UITableViewOneCell cellWithTableView:tableView];
-    
+//    UITableViewOneCell * cell = [UITableViewOneCell cellWithTableView:tableView];
+    static NSString * identifer = @"identifer";
+    UITableViewOneCell * cell = [UITableViewOneCell cellWithTableView:tableView identifier:identifer style:UITableViewCellStyleSubtitle];
+
     cell.textLabel.text = dict[kItem_title];
     cell.textLabel.textColor = UIColor.themeColor;
-    
+    cell.detailTextLabel.text = dict[kItem_controller];
     return cell;
     
 }

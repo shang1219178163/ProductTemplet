@@ -1,5 +1,5 @@
 //
-//  ExtrinsicFlowerStateModel.h
+//  FlowerStateModel.h
 //  DesignPatternsCollections
 //
 //  Created by 马浩哲 on 16/11/24.
@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface ExtrinsicFlowerStateModel : NSObject
+@interface FlowerStateModel : NSObject
 
 @property (nonatomic, strong) UIView *flowerView;
 @property (nonatomic, assign) CGRect area;

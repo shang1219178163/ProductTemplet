@@ -12,13 +12,13 @@
 
 #import "FlowerView.h"
 #import "FlowerFactory.h"
-#import "ExtrinsicFlowerStateModel.h"
+#import "FlowerStateModel.h"
 #import "FlyweightView.h"
 
 
 @interface FlyweightViewController ()
 {
-    ExtrinsicFlowerStateModel *_extrinsicFlowerState;
+    FlowerStateModel *_extrinsicFlowerState;
 }
 
 @end
@@ -38,12 +38,12 @@
     //构造花朵列表
     FlowerFactory *factory = [[FlowerFactory alloc] init];
     NSMutableArray *flowerList = [[NSMutableArray alloc] initWithCapacity:500];
-    ;
     
-    for (int i = 0; i<5000; i++) {
+    
+    for (int i = 0; i < 5000; i++) {
         //使用随机花朵类型
         //从花朵工厂取得一个共享的花朵享元对象实例
-        FlowerType flowerType = arc4random()%kTotalNumberOfFlowerTypes;
+        FlowerType flowerType = arc4random()%FlowerTypeTotalNumber;
         UIView *flowerView = [factory flowerViewWithType:flowerType];
         
         /*
@@ -62,7 +62,7 @@
          CGFloat size = (arc4random() % (maxSize - minSize + 1)) + minSize;
          
          //拔花朵的属性赋值给一个外在状态对象
-         _extrinsicFlowerState = [[ExtrinsicFlowerStateModel alloc] init];
+         _extrinsicFlowerState = [[FlowerStateModel alloc] init];
          _extrinsicFlowerState.flowerView = flowerView;
          _extrinsicFlowerState.area = CGRectMake(x, y, size, size);
          //把外在花朵状态添加到花朵列表
@@ -75,9 +75,10 @@
     }
     FlyweightView *view = [[FlyweightView alloc] initWithFrame:CGRectMake(0, 0, kScreenWidth, kScreenHeight)];
     view.backgroundColor = [UIColor colorWithRed:10/255.0 green:80/255.0 blue:10/255.0 alpha:1.0];
-    [view setFlowerList:flowerList];
+    view.flowerList = flowerList;
     [self.view addSubview:view];
 
+    DDLog(@"%@",@(factory.flowerPool.count));
 }
 
 - (void)handleView:(UIView *)view{

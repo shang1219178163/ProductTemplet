@@ -285,7 +285,7 @@
 		5162F6FB20BF9C9B009A6253 /* FlyweightViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5162F6FA20BF9C9B009A6253 /* FlyweightViewController.m */; };
 		5162F70020BF9D10009A6253 /* FlowerFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 5162F6FD20BF9D0E009A6253 /* FlowerFactory.m */; };
 		5162F70120BF9D10009A6253 /* FlowerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5162F6FE20BF9D0E009A6253 /* FlowerView.m */; };
-		5162F70420BF9D5F009A6253 /* ExtrinsicFlowerStateModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5162F70220BF9D5F009A6253 /* ExtrinsicFlowerStateModel.m */; };
+		5162F70420BF9D5F009A6253 /* FlowerStateModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5162F70220BF9D5F009A6253 /* FlowerStateModel.m */; };
 		5162F70720BF9D6E009A6253 /* FlyweightView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5162F70620BF9D6D009A6253 /* FlyweightView.m */; };
 		5162F70A20BFB7CB009A6253 /* GCDViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5162F70920BFB7CB009A6253 /* GCDViewController.m */; };
 		5162F70D20BFB934009A6253 /* OperationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5162F70C20BFB934009A6253 /* OperationViewController.m */; };
@@ -844,8 +844,8 @@
 		5162F6FD20BF9D0E009A6253 /* FlowerFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FlowerFactory.m; sourceTree = "<group>"; };
 		5162F6FE20BF9D0E009A6253 /* FlowerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FlowerView.m; sourceTree = "<group>"; };
 		5162F6FF20BF9D10009A6253 /* FlowerFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FlowerFactory.h; sourceTree = "<group>"; };
-		5162F70220BF9D5F009A6253 /* ExtrinsicFlowerStateModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExtrinsicFlowerStateModel.m; sourceTree = "<group>"; };
-		5162F70320BF9D5F009A6253 /* ExtrinsicFlowerStateModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExtrinsicFlowerStateModel.h; sourceTree = "<group>"; };
+		5162F70220BF9D5F009A6253 /* FlowerStateModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FlowerStateModel.m; sourceTree = "<group>"; };
+		5162F70320BF9D5F009A6253 /* FlowerStateModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FlowerStateModel.h; sourceTree = "<group>"; };
 		5162F70520BF9D6D009A6253 /* FlyweightView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FlyweightView.h; sourceTree = "<group>"; };
 		5162F70620BF9D6D009A6253 /* FlyweightView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FlyweightView.m; sourceTree = "<group>"; };
 		5162F70820BFB7CB009A6253 /* GCDViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GCDViewController.h; sourceTree = "<group>"; };
@@ -1845,8 +1845,8 @@
 				5162F6FD20BF9D0E009A6253 /* FlowerFactory.m */,
 				5162F6FC20BF9D0E009A6253 /* FlowerView.h */,
 				5162F6FE20BF9D0E009A6253 /* FlowerView.m */,
-				5162F70320BF9D5F009A6253 /* ExtrinsicFlowerStateModel.h */,
-				5162F70220BF9D5F009A6253 /* ExtrinsicFlowerStateModel.m */,
+				5162F70320BF9D5F009A6253 /* FlowerStateModel.h */,
+				5162F70220BF9D5F009A6253 /* FlowerStateModel.m */,
 			);
 			path = Flyweight;
 			sourceTree = "<group>";
@@ -2575,7 +2575,7 @@
 				140A2BEA22696E24000ED121 /* BNMapOpenHelper.m in Sources */,
 				51234B32215E326400F45FD2 /* WHKNetInfoFeedModel.m in Sources */,
 				51862E5F20BB94810080BD4E /* EOCEmployee.m in Sources */,
-				5162F70420BF9D5F009A6253 /* ExtrinsicFlowerStateModel.m in Sources */,
+				5162F70420BF9D5F009A6253 /* FlowerStateModel.m in Sources */,
 				51954AB520A12DCC00B066C8 /* CycleLabelViewController.m in Sources */,
 				5169699A20BCED4000BAA53D /* LH4SWaiter.m in Sources */,
 				513647C7208604DE005A20E7 /* BackgroundTaskManager.m in Sources */,

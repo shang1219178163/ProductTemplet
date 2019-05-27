@@ -10,20 +10,18 @@
 
 typedef enum
 {
-    kAnemone = 1,
-    kCosmos,
-    kGerberas,
-    kHollyhock,
-    kJasmine,
-    kZinnia,
-    kTotalNumberOfFlowerTypes
+    FlowerTypeAnemone = 1,
+    FlowerTypeCosmos,
+    FlowerTypeGerberas,
+    FlowerTypeHollyhock,
+    FlowerTypeJasmine,
+    FlowerTypeZinnia,
+    FlowerTypeTotalNumber
 } FlowerType;
 
 @interface FlowerFactory : NSObject
-{
-    @private
-    NSMutableDictionary *flowerPool;
-}
+
+@property(nonatomic ,strong) NSMutableDictionary *flowerPool;
 
 -(UIView *)flowerViewWithType:(FlowerType)type;
 @end
