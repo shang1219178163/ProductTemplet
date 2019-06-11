@@ -21,16 +21,16 @@
     self = [super init];
     if (self) {
         _currPage = _firstPage = 1;
-        _limit = 30;
+        _pageSize = 30;
         _hasNextPage = true;
         
     }
     return self;
 }
 
--(instancetype)initWithLimit:(NSUInteger)limit{
+-(instancetype)initWithPageSize:(NSUInteger)pageSize{
     BNPageModel * model = [[BNPageModel alloc]init];
-    model.limit = limit;
+    model.pageSize = pageSize;
     return model;
 }
 
@@ -55,7 +55,7 @@
 }
 
 - (BOOL)hasNextPageWithItems:(NSArray *)array{
-    _hasNextPage = array.count >= _limit;
+    _hasNextPage = array.count >= _pageSize;
     return _hasNextPage;
 }
 
