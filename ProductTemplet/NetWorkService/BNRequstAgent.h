@@ -48,6 +48,22 @@ NS_ASSUME_NONNULL_BEGIN
                           success:(BNNetworkBlock)success
                           failure:(BNNetworkBlock)failure;
 
+/**
+ PUT请求
+ */
+- (NSURLSessionTask *)PUT:(NSString *)URL
+               parameters:(id)parameters
+                  success:(BNNetworkBlock)success
+                  failure:(BNNetworkBlock)failure;
+
+/**
+ Delete请求
+ */
+- (NSURLSessionTask *)DELETE:(NSString *)URL
+                  parameters:(id)parameters
+                     success:(BNNetworkBlock)success
+                     failure:(BNNetworkBlock)failure;
+
 - (void)cancelRequestWithID:(NSInteger)requestID;
 - (void)cancelRequestWithIDList:(NSArray *)requestIDs;
 - (void)cancelAllRequest;

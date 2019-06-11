@@ -43,6 +43,9 @@
                parameters:(id)parameters
                   success:(BNNetworkBlock)success
                   failure:(BNNetworkBlock)failure{
+    if (![URL containsString:BNAPIConfi.serviceUrl]) {
+        URL = [BNAPIConfi.serviceUrl stringByAppendingString:URL];
+    }
     NSURLSessionTask *sessionTask = [self.sessionManager GET:URL parameters:parameters progress:^(NSProgress * _Nonnull uploadProgress) {
 
     } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
@@ -85,8 +88,10 @@
     
     if (_isOpenLog) DDLog(@"responseObject = %@",[parameters jsonString]);
 
-    NSString * urlString = [BNAPIConfiguration.serviceURLString stringByAppendingString:URL];
-    NSURLSessionTask *sessionTask = [self.sessionManager POST:urlString parameters:parameters constructingBodyWithBlock:^(id<AFMultipartFormData>  _Nonnull formData) {
+    if (![URL containsString:BNAPIConfi.serviceUrl]) {
+        URL = [BNAPIConfi.serviceUrl stringByAppendingString:URL];
+    }
+    NSURLSessionTask *sessionTask = [self.sessionManager POST:URL parameters:parameters constructingBodyWithBlock:^(id<AFMultipartFormData>  _Nonnull formData) {
         
         for (NSUInteger i = 0; i < images.count; i++) {
             BNUploadModel * model = BNUploadModelFromParam(images, i, fileNames[i]);
@@ -130,6 +135,53 @@
     [sessionTask resume];
     return sessionTask;
 }
+
+#pragma mark - PUT请求
+- (NSURLSessionTask *)PUT:(NSString *)URL
+               parameters:(id)parameters
+                  success:(BNNetworkBlock)success
+                  failure:(BNNetworkBlock)failure{
+    if (![URL containsString:BNAPIConfi.serviceUrl]) {
+        URL = [BNAPIConfi.serviceUrl stringByAppendingString:URL];
+    }
+    
+    NSURLSessionTask *sessionTask = [self.sessionManager PUT:URL parameters:parameters success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+        BNURLResponse * model = [self modelWithTask:task responseObject:responseObject error:nil];
+        success ? success(model) : nil;
+        
+    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+        BNURLResponse * model = [self modelWithTask:task responseObject:nil error:error];
+        failure ? failure(model) : nil;
+    }];
+    // 添加sessionTask
+    self.sessionTaskDic[@(sessionTask.taskIdentifier)] = sessionTask;
+    [sessionTask resume];
+    return sessionTask;
+}
+
+#pragma mark - Delete请求
+- (NSURLSessionTask *)DELETE:(NSString *)URL
+                  parameters:(id)parameters
+                     success:(BNNetworkBlock)success
+                     failure:(BNNetworkBlock)failure{
+    if (![URL containsString:BNAPIConfi.serviceUrl]) {
+        URL = [BNAPIConfi.serviceUrl stringByAppendingString:URL];
+    }
+    
+    NSURLSessionTask *sessionTask = [self.sessionManager DELETE:URL parameters:parameters success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+        BNURLResponse * model = [self modelWithTask:task responseObject:responseObject error:nil];
+        success ? success(model) : nil;
+        
+    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+        BNURLResponse * model = [self modelWithTask:task responseObject:nil error:error];
+        failure ? failure(model) : nil;
+    }];
+    // 添加sessionTask
+    self.sessionTaskDic[@(sessionTask.taskIdentifier)] = sessionTask;
+    [sessionTask resume];
+    return sessionTask;
+}
+
 
 /**
  返回结果模型化处理
