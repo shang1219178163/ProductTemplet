@@ -38,6 +38,11 @@
     }
 }
 
+- (void)setValue:(NSString *)value forHTTPHeaderField:(NSString *)field {
+    [self.sessionManager.requestSerializer setValue:value forHTTPHeaderField:field];
+    
+}
+
 #pragma mark - GET请求
 - (NSURLSessionTask *)GET:(NSString *)URL
                parameters:(id)parameters

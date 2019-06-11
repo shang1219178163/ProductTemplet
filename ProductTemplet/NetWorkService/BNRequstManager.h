@@ -60,6 +60,7 @@ typedef NS_ENUM (NSInteger, BNRequestCode){
 
 @end
 
+/// 网络请求结果
 typedef void(^BNRequestResultBlock)(BNRequstManager * _Nonnull manager, NSDictionary *_Nullable dic, NSError *_Nullable error);
 
 NS_ASSUME_NONNULL_BEGIN

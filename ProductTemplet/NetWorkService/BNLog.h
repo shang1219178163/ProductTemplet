@@ -16,7 +16,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 + (void)logParams:(NSDictionary *)params;
 
-+ (void)logResponseJSON:(NSDictionary *)json;
++ (void)logResponseJSON:(NSDictionary *)params;
 
 + (void)logRequestInfoWithURI:(NSString *)uri params:(NSDictionary *)params;
 

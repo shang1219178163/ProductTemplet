@@ -19,8 +19,8 @@
     DDLog(@"%@",queryStr);
 }
 
-+ (void)logResponseJSON:(NSDictionary *)json{
-    NSString * queryStr = [json jsonString];
++ (void)logResponseJSON:(NSDictionary *)params{
+    NSString * queryStr = [params jsonString];
     DDLog(@"%@",queryStr);
 }
 

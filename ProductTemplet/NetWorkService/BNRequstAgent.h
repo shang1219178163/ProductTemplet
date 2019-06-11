@@ -19,6 +19,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 + (instancetype)shared;
 
+- (void)setValue:(NSString *)value forHTTPHeaderField:(NSString *)field;
+
 /**
  GET 请求
  */

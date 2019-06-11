@@ -74,7 +74,10 @@
     self.isLoading = true;
     //请求日志
     [BNLog logRequestInfoWithURI:self.child.requestURI params:self.child.requestParams];
-        
+    if ([NSUserDefaults valueForKey:@"token"]) {
+        [BNRequstAgent.shared setValue:[NSUserDefaults valueForKey:@"token"] forHTTPHeaderField:@"token"];
+    }
+    
     NSURLSessionTask * task = nil;
     @weakify(self);
     switch (self.child.requestType) {
