@@ -1,5 +1,5 @@
 //
-//  BNAPIConfiguration.h
+//  BNAPIConfi.h
 //  ProductTemplet
 //
 //  Created by Bin Shang on 2019/4/26.
@@ -9,16 +9,17 @@
 #import <Foundation/Foundation.h>
 
 
-@interface BNAPIConfiguration : NSObject
+@interface BNAPIConfi : NSObject
 
-@property (class, nonatomic, strong, readonly) NSArray * urlTestList;
-// urlDebug必须在urlDebugList中包含
-@property (class, nonatomic, strong) NSString * urlTest;
+@property (class, nonatomic, strong, readonly) NSArray * serviceUrlList;
+
+/// 测试接口(必须在serviceUrlList中)
+@property (class, nonatomic, strong) NSString * testUrl;
 
 /**
- web服务器请求地址
+ web服务器请求地址(正式接口)
  */
-+ (NSString *)serviceURLString;
+@property (class, nonatomic, strong, readonly) NSString * serviceUrl;
 
 /**
  API请求头中的UserAgent

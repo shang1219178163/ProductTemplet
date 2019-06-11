@@ -15,12 +15,12 @@
 }
 
 + (void)logParams:(NSDictionary *)params{
-    NSString * queryStr = [params JSONValue];
+    NSString * queryStr = [params jsonString];
     DDLog(@"%@",queryStr);
 }
 
 + (void)logResponseJSON:(NSDictionary *)json{
-    NSString * queryStr = [json JSONValue];
+    NSString * queryStr = [json jsonString];
     DDLog(@"%@",queryStr);
 }
 

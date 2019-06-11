@@ -138,7 +138,7 @@ NSString *const kHTTP_URLMiddle = @"i=42&c=entry&do=fengmian&m=android&source=io
         NSMutableDictionary * mDict = [NSMutableDictionary dictionaryWithDictionary:paramDict];
         [mDict removeObjectForKey:rKey];
         
-        jsonString = [mDict JSONValue];
+        jsonString = [mDict jsonString];
         DDLog(@"parameters_加密前_\%@",jsonString);
 //        jsonString = [Utilities AESEncryptTheString:jsonString];//加密
 //        DDLog(@"parameters_加密后_\%@",jsonString);

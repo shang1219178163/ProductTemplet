@@ -10,7 +10,7 @@
 #import <AFNetworking/AFNetworking.h>
 #import "AFNetworkActivityIndicatorManager.h"
 
-#import "BNAPIConfiguration.h"
+#import "BNAPIConfi.h"
 
 @interface BNRequstAgent()
 
@@ -83,7 +83,7 @@
                           success:(BNNetworkBlock)success
                           failure:(BNNetworkBlock)failure{
     
-    if (_isOpenLog) DDLog(@"responseObject = %@",[parameters JSONValue]);
+    if (_isOpenLog) DDLog(@"responseObject = %@",[parameters jsonString]);
 
     NSString * urlString = [BNAPIConfiguration.serviceURLString stringByAppendingString:URL];
     NSURLSessionTask *sessionTask = [self.sessionManager POST:urlString parameters:parameters constructingBodyWithBlock:^(id<AFMultipartFormData>  _Nonnull formData) {
@@ -139,7 +139,7 @@
         DDLog(@"error_%@_",error);
         
     } else {
-        DDLog(@"responseObject_%@_",[responseObject JSONValue]);
+        DDLog(@"responseObject_%@_",[responseObject jsonString]);
               
     }
     [self.sessionTaskDic removeObjectForKey:@(task.taskIdentifier)];
@@ -178,9 +178,9 @@
     if (!_sessionManager) {
         _sessionManager = AFHTTPSessionManager.manager;
         _sessionManager.requestSerializer = AFJSONRequestSerializer.serializer;
-        _sessionManager.requestSerializer.timeoutInterval = BNAPIConfiguration.timeOut;
-        [_sessionManager.requestSerializer setValue:BNAPIConfiguration.headerUserAgent forHTTPHeaderField:@"User-Agent"];
-        [_sessionManager.requestSerializer setValue:BNAPIConfiguration.headerAcceptVersion forHTTPHeaderField:@"Accept-Version"];
+        _sessionManager.requestSerializer.timeoutInterval = BNAPIConfi.timeOut;
+        [_sessionManager.requestSerializer setValue:BNAPIConfi.headerUserAgent forHTTPHeaderField:@"User-Agent"];
+        [_sessionManager.requestSerializer setValue:BNAPIConfi.headerAcceptVersion forHTTPHeaderField:@"Accept-Version"];
 
         _sessionManager.responseSerializer = AFJSONResponseSerializer.serializer;
         _sessionManager.responseSerializer.acceptableContentTypes = [NSSet setWithObjects:@"application/json", @"text/html", @"text/json", @"text/plain", @"text/javascript", @"text/xml", @"image/*", nil];

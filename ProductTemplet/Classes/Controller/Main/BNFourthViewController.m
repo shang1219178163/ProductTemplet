@@ -182,7 +182,7 @@
     [self.view getViewLayer];
     
     [self.api startRequestWithSuccessBlock:^(BNRequstManager * _Nonnull manager, NSDictionary * _Nullable dic, NSError * _Nullable error) {
-        DDLog(@"%@",dic.JSONValue);
+        DDLog(@"%@",dic.jsonString);
         BNAppInfoRootModel *model = [BNAppInfoRootModel yy_modelWithJSON:dic];
 
         [BNCacheManager.shared setObject:model forKey:kCacheKeyUserModel];

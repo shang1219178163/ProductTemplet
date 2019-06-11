@@ -74,7 +74,7 @@
 		149111D42272FFCC0078A7BB /* BNPageModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 149111D32272FFCC0078A7BB /* BNPageModel.m */; };
 		149111D7227308640078A7BB /* BNRequstManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 149111D6227308640078A7BB /* BNRequstManager.m */; };
 		149111DA227308E30078A7BB /* BNRequstAgent.m in Sources */ = {isa = PBXBuildFile; fileRef = 149111D9227308E30078A7BB /* BNRequstAgent.m */; };
-		149111E022730CCF0078A7BB /* BNAPIConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = 149111DF22730CCF0078A7BB /* BNAPIConfiguration.m */; };
+		149111E022730CCF0078A7BB /* BNAPIConfi.m in Sources */ = {isa = PBXBuildFile; fileRef = 149111DF22730CCF0078A7BB /* BNAPIConfi.m */; };
 		149111E322753BF10078A7BB /* BNURLResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 149111E222753BF10078A7BB /* BNURLResponse.m */; };
 		149111E6227542C10078A7BB /* BNUploadModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 149111E5227542C10078A7BB /* BNUploadModel.m */; };
 		149111E92275B34E0078A7BB /* BNLog.m in Sources */ = {isa = PBXBuildFile; fileRef = 149111E82275B34E0078A7BB /* BNLog.m */; };
@@ -522,8 +522,8 @@
 		149111D6227308640078A7BB /* BNRequstManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BNRequstManager.m; sourceTree = "<group>"; };
 		149111D8227308E30078A7BB /* BNRequstAgent.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BNRequstAgent.h; sourceTree = "<group>"; };
 		149111D9227308E30078A7BB /* BNRequstAgent.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BNRequstAgent.m; sourceTree = "<group>"; };
-		149111DE22730CCF0078A7BB /* BNAPIConfiguration.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BNAPIConfiguration.h; sourceTree = "<group>"; };
-		149111DF22730CCF0078A7BB /* BNAPIConfiguration.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BNAPIConfiguration.m; sourceTree = "<group>"; };
+		149111DE22730CCF0078A7BB /* BNAPIConfi.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BNAPIConfi.h; sourceTree = "<group>"; };
+		149111DF22730CCF0078A7BB /* BNAPIConfi.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BNAPIConfi.m; sourceTree = "<group>"; };
 		149111E122753BF10078A7BB /* BNURLResponse.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BNURLResponse.h; sourceTree = "<group>"; };
 		149111E222753BF10078A7BB /* BNURLResponse.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BNURLResponse.m; sourceTree = "<group>"; };
 		149111E4227542C10078A7BB /* BNUploadModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BNUploadModel.h; sourceTree = "<group>"; };
@@ -1075,8 +1075,8 @@
 		1401BE5F22769DCF0078A722 /* NetWorkService */ = {
 			isa = PBXGroup;
 			children = (
-				149111DE22730CCF0078A7BB /* BNAPIConfiguration.h */,
-				149111DF22730CCF0078A7BB /* BNAPIConfiguration.m */,
+				149111DE22730CCF0078A7BB /* BNAPIConfi.h */,
+				149111DF22730CCF0078A7BB /* BNAPIConfi.m */,
 				149111D22272FFCC0078A7BB /* BNPageModel.h */,
 				149111D32272FFCC0078A7BB /* BNPageModel.m */,
 				149111D5227308640078A7BB /* BNRequstManager.h */,
@@ -2469,7 +2469,7 @@
 				140A2BEB22696E24000ED121 /* BNPOIAnnotation.m in Sources */,
 				1401BE762276AB960078A722 /* BNStoreManger.m in Sources */,
 				51862E7D20BBA8270080BD4E /* InputValidator.m in Sources */,
-				149111E022730CCF0078A7BB /* BNAPIConfiguration.m in Sources */,
+				149111E022730CCF0078A7BB /* BNAPIConfi.m in Sources */,
 				513647C1208604DE005A20E7 /* HZWaitingView.m in Sources */,
 				14A1EA752249FBAA00952911 /* TextFromSpeechController.m in Sources */,
 				51862E7A20BBA1B50080BD4E /* StrategyFinancyAlipay.m in Sources */,

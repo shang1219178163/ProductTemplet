@@ -3,8 +3,8 @@
  use_frameworks!
 
  def common_pods
-   pod ‘AESCrypt-ObjC’
-   pod ‘AFNetworking’
+   pod 'AESCrypt-ObjC’
+   pod 'AFNetworking’
    pod 'Aspects'
    
    pod 'FCUUID'
@@ -14,7 +14,7 @@
    pod 'GTMBase64'
    
    pod 'IQKeyboardManager'
-   pod ‘iCarousel’
+   pod 'iCarousel’
    
    pod 'JPush'
    pod 'JZLocationConverter'
@@ -38,10 +38,10 @@
    pod 'UICKeyChainStore'
    
    pod 'YBAttributeTextTapAction'
-   pod ‘YYCache’
+   pod 'YYCache'
    pod 'YYCategories'
-   pod ‘YYWebImage’
-   pod ‘YYModel’
+   pod 'YYWebImage’
+   pod 'YYModel’
    pod 'YZPullDownMenu'
    
    pod 'ZYCornerRadius'
