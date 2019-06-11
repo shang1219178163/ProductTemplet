@@ -10,14 +10,14 @@
 
 
 @interface BNAPIConfi : NSObject
-
+/// 接口列表
 @property (class, nonatomic, strong, readonly) NSArray * serviceUrlList;
 
 /// 测试接口(必须在serviceUrlList中)
 @property (class, nonatomic, strong) NSString * testUrl;
 
 /**
- web服务器请求地址(正式接口)
+ web服务器请求地址
  */
 @property (class, nonatomic, strong, readonly) NSString * serviceUrl;
 
