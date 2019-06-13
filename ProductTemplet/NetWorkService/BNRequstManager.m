@@ -10,6 +10,7 @@
 #import "BNRequstAgent.h"
 #import "BNLog.h"
 #import "NSError+Helper.h"
+#import "BNAPIConfi.h"
 
 @interface BNRequstManager()
 
@@ -36,7 +37,11 @@
     return self;
 }
 
-- (NSURLSessionTask *)startRequestWithSuccessBlock:(BNRequestResultBlock)successBlock failedBlock:(BNRequestResultBlock)failureBlock{
+- (AFHTTPSessionManager *)sessionManager{
+    return BNRequstAgent.shared.sessionManager;
+}
+
+- (NSURLSessionTask *)requestWithSuccessBlock:(BNRequestResultBlock)successBlock failedBlock:(BNRequestResultBlock)failureBlock{
     self.successBlock = successBlock;
     self.failureBlock = failureBlock;
     return [self startRequest];
@@ -73,9 +78,36 @@
     
     self.isLoading = true;
     //请求日志
-    [BNLog logRequestInfoWithURI:self.child.requestURI params:self.child.requestParams];
-    if ([NSUserDefaults valueForKey:@"token"]) {
-        [BNRequstAgent.shared setValue:[NSUserDefaults valueForKey:@"token"] forHTTPHeaderField:@"token"];
+    NSString * urlStr = [BNAPIConfi.serviceUrl stringByAppendingPathComponent:self.child.requestURI];
+    [BNLog logRequestInfoWithURI:urlStr params:self.child.requestParams];
+    id token = [NSUserDefaults objectForKey:@"token"];
+    if (token) {
+        [BNRequstAgent.shared setValue:token forHTTPHeaderField:@"token"];
+
+//        NSString *token = [NSUserDefaults objectForKey:@"token"];
+        NSNumber *tokenTimeout = [NSUserDefaults objectForKey:@"tokenTimeout"];
+        NSString *cookieStr = [NSHTTPCookieStorage cookieDesWithToken:token tokenTimeout:tokenTimeout];
+        DDLog(@"cookieStr_%@", cookieStr);
+        [BNRequstAgent.shared setValue:cookieStr forHTTPHeaderField:@"Set-Cookie"];
+        
+        //
+//        NSNumber *tokenTimeout = [NSUserDefaults objectForKey:@"tokenTimeout"];
+        NSDictionary *properties = @{
+                                     NSHTTPCookieDomain: BNAPIConfi.serviceUrl,
+                                     NSHTTPCookiePath: @"/",
+                                     NSHTTPCookieName: @"token",
+                                     NSHTTPCookieValue: token,
+                                     NSHTTPCookieExpires: [NSDate dateWithTimeIntervalSinceNow:tokenTimeout.integerValue],
+                                     NSHTTPCookieMaximumAge: tokenTimeout,
+                                     };
+
+        NSHTTPCookie *cookie = [NSHTTPCookie cookieWithProperties:properties];
+        [NSHTTPCookieStorage.sharedHTTPCookieStorage setCookie:cookie];
+
+        NSLog(@"cookie:%@",cookie.description);
+        NSArray *cookies = [NSArray arrayWithObjects:cookie,nil];
+        NSDictionary *headers = [NSHTTPCookie requestHeaderFieldsWithCookies:cookies];
+        NSLog(@"headers:%@",headers);
     }
     
     NSURLSessionTask * task = nil;
@@ -109,12 +141,19 @@
                 self.isLoading = false;
                 [self didFailureOfResponse:response];
                 
+                NSDictionary *allHeaders = response.response.allHeaderFields;
+                DDLog(@"allHeaders_%@", allHeaders);
+                
+                NSArray * cookies = NSHTTPCookieStorage.sharedHTTPCookieStorage.cookies;
+                NSDictionary *headers = [NSHTTPCookie requestHeaderFieldsWithCookies:cookies];
+                NSLog(@"headers:%@",headers);
             }];
         }
             break;
         default:
             break;
     }
+    
     return task;
 }
 
@@ -125,6 +164,19 @@
         return;
     }
     
+    if ([BNRequstAgent.shared.sessionManager.responseSerializer isKindOfClass:AFHTTPResponseSerializer.class]) {
+        NSString *string = [[NSString alloc]initWithData:model.responseObject encoding:NSUTF8StringEncoding];
+        NSData *jsonData = [string dataUsingEncoding:NSUTF8StringEncoding];
+        id obj = [NSJSONSerialization JSONObjectWithData:jsonData options:kNilOptions error:nil];
+        obj = obj? : string;
+        
+        if (self.successBlock) {
+            self.successBlock(self, obj, nil);
+        }
+        return;
+    }
+   
+    
     NSDictionary *jsonDic = nil;
     if ([model.responseObject isKindOfClass: NSDictionary.class]) {
         jsonDic = model.responseObject;
@@ -132,14 +184,14 @@
     } else {
         NSString *jsonString = [[NSString alloc]initWithData:model.responseObject encoding:NSUTF8StringEncoding];
         if (!jsonString) {
-            model.errorOther = [NSError errorWithMessage:@"服务器返回的josn格式错误" code:BNRequestCodeJSONError obj:nil];
+            model.errorOther = [NSError errorWithMessage:@"服务器返回的responseObject错误" code:BNRequestCodeJSONError obj:nil];
             [self didFailureOfResponse:model];
             return;
         }
         
         NSData *data = [jsonString dataUsingEncoding:NSUTF8StringEncoding];
         NSError *error;
-        jsonDic = [NSJSONSerialization JSONObjectWithData:data options:0 error:&error];
+        jsonDic = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:&error];
         if (error) {
             model.errorOther = [NSError errorWithMessage:@"服务器返回的josn格式错误" code:BNRequestCodeJSONError obj:nil];
             [self didFailureOfResponse:model];
@@ -147,14 +199,17 @@
         }
     }
     
-    NSString * codeKey = [jsonDic.allKeys containsObject:@"code"] ? @"code" : @"resultCount";
-    NSInteger code = [jsonDic[codeKey] integerValue];
-    NSString *message = jsonDic[@"message"];
-    if (code != 1) {
-        model.errorOther = [NSError errorWithMessage:message code:code obj:nil];
-        [self didFailureOfResponse:model];
-        return;
+    if ([jsonDic.allKeys containsObject:@"code"] || [jsonDic.allKeys containsObject:@"resultCount"] ) {
+        NSString * codeKey = [jsonDic.allKeys containsObject:@"code"] ? @"code" : @"resultCount";
+        NSInteger code = [jsonDic[codeKey] integerValue];
+        NSString *message = jsonDic[@"message"];
+        if (code != 1) {
+            model.errorOther = [NSError errorWithMessage:message code:code obj:nil];
+            [self didFailureOfResponse:model];
+            return;
+        }
     }
+
     //请求结果日志
     [BNLog logResponseInfoWithURI:self.child.requestURI responseJSON:jsonDic];
     

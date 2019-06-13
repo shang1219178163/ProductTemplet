@@ -7,8 +7,7 @@
 //
 
 #import "BNRequstAgent.h"
-#import <AFNetworking/AFNetworking.h>
-#import "AFNetworkActivityIndicatorManager.h"
+
 
 #import "BNAPIConfi.h"
 
@@ -48,6 +47,9 @@
                parameters:(id)parameters
                   success:(BNNetworkBlock)success
                   failure:(BNNetworkBlock)failure{
+    
+    DDLog(@"requestSerializer.HTTPRequestHeaders_%@",self.sessionManager.requestSerializer.HTTPRequestHeaders);
+    
     if (![URL containsString:BNAPIConfi.serviceUrl]) {
         URL = [BNAPIConfi.serviceUrl stringByAppendingString:URL];
     }
@@ -237,9 +239,10 @@
         _sessionManager.requestSerializer = AFJSONRequestSerializer.serializer;
         _sessionManager.requestSerializer.timeoutInterval = BNAPIConfi.timeOut;
         [_sessionManager.requestSerializer setValue:BNAPIConfi.headerUserAgent forHTTPHeaderField:@"User-Agent"];
-        [_sessionManager.requestSerializer setValue:BNAPIConfi.headerAcceptVersion forHTTPHeaderField:@"Accept-Version"];
+//        [_sessionManager.requestSerializer setValue:BNAPIConfi.headerAcceptVersion forHTTPHeaderField:@"Accept-Version"];
 
         _sessionManager.responseSerializer = AFJSONResponseSerializer.serializer;
+        _sessionManager.responseSerializer = AFHTTPResponseSerializer.serializer;
         _sessionManager.responseSerializer.acceptableContentTypes = [NSSet setWithObjects:@"application/json", @"text/html", @"text/json", @"text/plain", @"text/javascript", @"text/xml", @"image/*", nil];
     }
     return _sessionManager;

@@ -157,7 +157,7 @@
     [NSUserDefaults.standardUserDefaults setObject:@"nil" forKey:@"1111"];
     [NSUserDefaults.standardUserDefaults setObject:nil forKey:@"1111"];
 
-    DDLog(@"%@", NSHomeDirectory())
+//    DDLog(@"%@", NSHomeDirectory())
     
 }
 
@@ -181,14 +181,14 @@
 
     [self.view getViewLayer];
     
-    [self.api startRequestWithSuccessBlock:^(BNRequstManager * _Nonnull manager, NSDictionary * _Nullable dic, NSError * _Nullable error) {
-        DDLog(@"%@",dic.jsonString);
-        BNAppInfoRootModel *model = [BNAppInfoRootModel yy_modelWithJSON:dic];
+    [self.api requestWithSuccessBlock:^(BNRequstManager * _Nonnull manager, id responseObject, NSError * _Nullable error) {
+        DDLog(@"%@",responseObject);
+        BNAppInfoRootModel *model = [BNAppInfoRootModel yy_modelWithJSON:responseObject];
 
         [BNCacheManager.shared setObject:model forKey:kCacheKeyUserModel];
         BNAppInfoRootModel *userModel = [BNCacheManager.shared objectForKey:kCacheKeyUserModel];
         DDLog(userModel.description);
-    } failedBlock:^(BNRequstManager * _Nonnull manager, NSDictionary * _Nullable dic, NSError * _Nullable error) {
+    } failedBlock:^(BNRequstManager * _Nonnull manager, id _Nullable responseObject, NSError * _Nullable error) {
         DDLog(@"%@",error.message);
 
     }];

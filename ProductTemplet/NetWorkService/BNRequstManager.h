@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+
 @class BNRequstManager;
 
 typedef NS_ENUM (NSInteger, BNRequestType){
@@ -61,7 +62,7 @@ typedef NS_ENUM (NSInteger, BNRequestCode){
 @end
 
 /// 网络请求结果
-typedef void(^BNRequestResultBlock)(BNRequstManager * _Nonnull manager, NSDictionary *_Nullable dic, NSError *_Nullable error);
+typedef void(^BNRequestResultBlock)(BNRequstManager * _Nonnull manager, id _Nullable responseObject, NSError *_Nullable error);
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -73,7 +74,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, copy) BNRequestResultBlock failureBlock;
 @property (nonatomic, assign, readonly) BOOL isLoading;
 
-- (NSURLSessionTask *)startRequestWithSuccessBlock:(BNRequestResultBlock)successBlock failedBlock:(BNRequestResultBlock)failureBlock;
+- (NSURLSessionTask *)requestWithSuccessBlock:(BNRequestResultBlock)successBlock failedBlock:(BNRequestResultBlock)failureBlock;
 
 - (void)cancelAllRequest;
 

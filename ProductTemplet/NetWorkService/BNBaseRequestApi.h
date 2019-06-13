@@ -11,6 +11,7 @@
 #import "BNCacheManager.h"
 #import "BNCacheKey.h"
 #import "NSError+Helper.h"
+#import "APIRequestURL.h"
 
 NS_ASSUME_NONNULL_BEGIN
 

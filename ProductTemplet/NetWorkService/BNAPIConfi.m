@@ -9,10 +9,8 @@
 #import "BNAPIConfi.h"
 #import "UIApplication+Helper.h"
 
-//#define APIServiceUrl_debug @"http://116.62.132.145"
-
 /// 正式接口
-static NSString * const kAPIServiceUrl = @"http://113.140.2.226:801";
+static NSString * const kAPIServiceUrl = @"http://114.116.1.186:10810";
 
 @implementation BNAPIConfi
 
@@ -20,10 +18,9 @@ static NSString * _testUrl = nil;
 
 +(NSArray *)serviceUrlList{
     return @[
-             @"http://113.140.2.226:801",
+             kAPIServiceUrl,
              @"测试接口二",
              @"测试接口三",
-             kAPIServiceUrl,
              ];
 }
 

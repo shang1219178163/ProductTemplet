@@ -24,7 +24,7 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     [self setupThridSDKWithOptions:launchOptions];
-    UIColor.themeColor = UIColor.orangeColor;
+//    UIColor.themeColor = UIColor.orangeColor;
     [UIApplication setupAppearanceDefault:false];
 
     UIViewController * controller = UICtrFromString(@"HomeViewController");
@@ -38,8 +38,12 @@
 //    controller = UICtrFromString(@"SortViewController");
 //    controller = UICtrFromString(@"FriendListController");
     controller = UICtrFromString(@"HomeViewController");
+
 //    [UIApplication setupRootController:rootVC isAdjust:NO];
-    [UIApplication setupRootController:controller isAdjust:NO];
+//    [UIApplication setupRootController:controller isAdjust:NO];
+
+    controller = UICtrFromString(@"LiveViewController");
+    [UIApplication setupRootController:controller isAdjust:true];
 
 //    [UIApplication setupRootController:UICtrFromString(@"RecognizerController") isAdjust:YES];
 //    [UIApplication setupRootController:UICtrFromString(@"UIRecognizerController") isAdjust:YES];

@@ -7,6 +7,9 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <AFNetworking/AFNetworking.h>
+#import "AFNetworkActivityIndicatorManager.h"
+
 #import "BNURLResponse.h"
 #import "BNUploadModel.h"
 
@@ -18,6 +21,8 @@ NS_ASSUME_NONNULL_BEGIN
 @interface BNRequstAgent : NSObject
 
 + (instancetype)shared;
+
+@property (nonatomic, strong, readonly) AFHTTPSessionManager *sessionManager;
 
 - (void)setValue:(NSString *)value forHTTPHeaderField:(NSString *)field;
 
