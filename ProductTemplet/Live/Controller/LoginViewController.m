@@ -89,6 +89,10 @@
         } forControlEvents:UIControlEventTouchUpInside];
         _userLoginView.block = ^(BNUserLoginView * _Nonnull view) {
             DDLog(@"登录!");
+            dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+                view.btnLogin.hidden = false;
+
+            });
         };
     }
     return _userLoginView;

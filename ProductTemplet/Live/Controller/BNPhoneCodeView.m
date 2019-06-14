@@ -109,14 +109,14 @@
 
 - (UIButton *)btnCode{
     if (!_btnCode) {
-        _btnCode = [UIView createBtnRect:CGRectZero title:@"验证码" image:nil type:@7];
+        _btnCode = [UIView createBtnRect:CGRectZero title:@"验证码" image:nil type:@4];
     }
     return _btnCode;
 }
 
 - (UIButton *)btn{
     if (!_btn) {
-        _btn = [UIView createBtnRect:CGRectZero title:@"确定" image:nil type:@8];
+        _btn = [UIView createBtnRect:CGRectZero title:@"确定" image:nil type:@1];
     }
     return _btn;
 }

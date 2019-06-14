@@ -14,15 +14,17 @@
     self = [super initWithFrame:frame];
     if (self) {
         [self createControls];
-        
     
     }
     return self;
 }
 
+
 - (void)layoutSubviews{
     [super layoutSubviews];
     
+    self.imgView.layer.cornerRadius = CGRectGetHeight(self.imgView.bounds)*0.5;
+    self.imgView.layer.masksToBounds = true;
 }
 
 - (void)createControls{
@@ -84,6 +86,7 @@
         make.height.equalTo(height);
         make.bottom.equalTo(self).offset( -kY_GAP);
     }];
+    
 }
 
 #pragma mark - -UITextField
@@ -178,6 +181,8 @@
             textField.backgroundColor = UIColorHexValue(0xE9E9E9);
             textField.clearsOnBeginEditing = YES;
             textField.clearButtonMode = UITextFieldViewModeWhileEditing;
+            textField.font = [UIFont systemFontOfSize:13];
+
             textField.delegate = self;
             textField;
         });
@@ -194,6 +199,7 @@
             textField.backgroundColor = UIColorHexValue(0xE9E9E9);
             textField.clearsOnBeginEditing = YES;
             textField.clearButtonMode = UITextFieldViewModeWhileEditing;
+            textField.font = [UIFont systemFontOfSize:13];
             textField.secureTextEntry = YES;
             textField.delegate = self;
             
@@ -208,6 +214,7 @@
             btn.frame = CGRectMake(0, 0, 40, 40);
             [btn setBackgroundImage:image forState:UIControlStateNormal];
             [btn setContentEdgeInsets:UIEdgeInsetsMake(5, 5, 5, 5)];
+            btn.titleLabel.font = [UIFont systemFontOfSize:15];
             [btn addActionHandler:^(id obj, id item, NSInteger idx) {
                 UIButton * sender = obj;
                 sender.selected = !sender.selected;
@@ -243,14 +250,14 @@
     if (!_btnLogin) {
         _btnLogin = ({
             UIButton *btn = [UIButton buttonWithType:UIButtonTypeCustom];
+            btn.titleLabel.font = [UIFont systemFontOfSize:15];
             [btn setTitle:@"登录" forState:UIControlStateNormal];
             [btn setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
             [btn setBackgroundImage:[UIImage imageWithColor:UIColor.themeColor] forState:UIControlStateNormal];
             [btn addActionHandler:^(id obj, id item, NSInteger idx) {
                 [self endEditing:YES];
-                //                [self requestWithInterfaceRank:@0];
-                
                 [self startAnimationWithSender:item];
+                
             }];
             
             btn;
@@ -265,7 +272,8 @@
             UIButton *btn = [UIButton buttonWithType:UIButtonTypeCustom];
             [btn setTitle:@"忘记密码?" forState:UIControlStateNormal];
             [btn setTitleColor:UIColor.themeColor forState:UIControlStateNormal];
-         
+            btn.titleLabel.font = [UIFont systemFontOfSize:15];
+
             btn;
         });
     }
@@ -278,7 +286,8 @@
             UIButton *btn = [UIButton buttonWithType:UIButtonTypeCustom];
             [btn setTitle:@"新用户?点击注册" forState:UIControlStateNormal];
             [btn setTitleColor:UIColor.themeColor forState:UIControlStateNormal];
-            
+            btn.titleLabel.font = [UIFont systemFontOfSize:15];
+
             btn;
         });
     }
@@ -291,7 +300,7 @@
             UILabel * label = [[UILabel alloc] initWithFrame:CGRectZero];
             label.text = @"用户协议、隐私条款";
             label.textColor = UIColor.themeColor;
-            label.font = [UIFont systemFontOfSize:17];
+            label.font = [UIFont systemFontOfSize:15];
             label.textAlignment = NSTextAlignmentRight;
             
             label.numberOfLines = 0;
