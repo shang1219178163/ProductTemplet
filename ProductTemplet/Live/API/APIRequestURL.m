@@ -22,6 +22,21 @@ NSString * const kAPIRequestURLServerinfo = @"/api/v1/getserverinfo";
 
 NSString * const kAPIRequestURLRestart = @"/api/v1/restart";
 
+NSString * const kAPIRequestURLDeviceList = @"/api/v1/device/list";
+
+//NSString * const kAPIRequestURLChannels = @"/api/v1/getchannels";
+NSString * const APIRequestURLChannels(NSString *ID){
+    return [NSString stringWithFormat:@"/nvc/%@/api/v1/getchannels", ID];
+}
+
+//NSString * const kAPIRequestURLChannelstream = @"/api/v1/getchannelstream";
+NSString * const APIRequestURLChannelstream(NSString *ID){
+    return [NSString stringWithFormat:@"/nvc/%@/api/v1/getchannelstream", ID];
+}
+
+NSString * const APIRequestURLTouchcChannelstream(NSString *ID){
+    return [NSString stringWithFormat:@"/nvc/%@/api/v1/touchchannelstream", ID];
+}
 
 + (void)requestUrl:(NSString *)url method:(NSString *)method completionHandler:(void (^)(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error))completionHandler{
     

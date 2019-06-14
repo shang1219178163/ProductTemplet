@@ -16,12 +16,17 @@
 
 #import "BNUserInfoApi.h"
 #import "BNServerinfoApi.h"
-
+#import "BNDeviceListApi.h"
+#import "BNChannelListApi.h"
+#import "BNChannelstreamApi.h"
 
 #import <YYModel/YYModel.h>
 #import "PKSeverinfoModel.h"
+#import "PKDeviceListRootModel.h"
 
 @interface LiveViewController ()
+
+@property(nonatomic, strong) BNItemsView * itemsView;
 
 @property(nonatomic, strong) BNUserLoginApi * userLoginApi;
 @property(nonatomic, strong) BNUserLogoutApi * userLogoutApi;
@@ -32,7 +37,11 @@
 @property(nonatomic, strong) BNUserInfoApi * userInfoApi;
 @property(nonatomic, strong) BNServerinfoApi * serverinfoApi;
 
-@property(nonatomic, strong) UISegmentedControl * segmentCtl;
+@property(nonatomic, strong) BNDeviceListApi * deviceListApi;
+@property(nonatomic, strong) BNChannelListApi * channelListApi;
+@property(nonatomic, strong) BNChannelstreamApi * channelstreamApi;
+
+@property(nonatomic, strong) PKDeviceListRootModel *devicesRootModel;
 
 @end
 
@@ -44,10 +53,22 @@
     // Do any additional setup after loading the view.
     self.title = @"Live";
     
-    [self.view addSubview:self.segmentCtl];
-    
+    [self.view addSubview:self.itemsView];
+
     [self createBarItem:@"登录" isLeft:true handler:^(id obj, UIView *item, NSInteger idx) {
-    
+        [self.userLoginApi requestWithSuccessBlock:^(BNRequstManager * _Nonnull manager, id _Nullable responseObject, NSError * _Nullable error) {
+            DDLog(@"%@", responseObject);
+            if (![responseObject isKindOfClass:NSDictionary.class]) {
+                return ;
+            }
+            NSDictionary *dic = responseObject;
+            [NSUserDefaults setObject:dic[@"Token"] forKey:@"token"];
+            [NSUserDefaults setObject:dic[@"TokenTimeout"] forKey:@"tokenTimeout"];
+            [NSUserDefaults synchronize];
+            
+        } failedBlock:^(BNRequstManager * _Nonnull manager, id _Nullable responseObject, NSError * _Nullable error) {
+            
+        }];
         
     }];
     
@@ -61,6 +82,8 @@
 
         }];
     }];
+    
+    [self.view getViewLayer];
 }
 
 
@@ -71,7 +94,7 @@
         DDLog(@"%@", responseObject);
         if (![responseObject isKindOfClass:NSDictionary.class]) {
             return ;
-        }        
+        }
         NSDictionary *dic = responseObject;
         [NSUserDefaults setObject:dic[@"Token"] forKey:@"token"];
         [NSUserDefaults setObject:dic[@"TokenTimeout"] forKey:@"tokenTimeout"];
@@ -88,7 +111,7 @@
         [self.serverinfoApi requestWithSuccessBlock:^(BNRequstManager * _Nonnull manager, id _Nullable responseObject, NSError * _Nullable error) {
             DDLog(@"%@", responseObject);
             PKSeverinfoModel *model = [PKSeverinfoModel yy_modelWithJSON:responseObject];
-            DDLog(@"%@", model.description);
+            DDLog(@"%@", model);
 
         } failedBlock:^(BNRequstManager * _Nonnull manager, id _Nullable responseObject, NSError * _Nullable error) {
             DDLog(@"%@", error);
@@ -104,8 +127,89 @@
 - (void)viewDidLayoutSubviews{
     [super viewDidLayoutSubviews];
     
-    self.segmentCtl.frame = CGRectMake(0, 20, kScreenWidth, 50);
+    self.itemsView.frame = CGRectMake(10, 20, kScreenWidth, kScreenWidth);
 
+}
+
+#pragma mark -funtions
+
+- (void)getInfoWithIndex:(NSInteger)index{
+    DDLog(@"%@", @(index));
+    switch (index) {
+        case 0:
+        {
+
+            [self.moidyPwdApi requestWithSuccessBlock:^(BNRequstManager * _Nonnull manager, id  _Nullable responseObject, NSError * _Nullable error) {
+                DDLog(@"%@",responseObject);
+                
+            } failedBlock:^(BNRequstManager * _Nonnull manager, id  _Nullable responseObject, NSError * _Nullable error) {
+                DDLog(@"%@", error);
+                
+            }];
+        }
+            break;
+        case 1:
+        {
+            [self.restartApi requestWithSuccessBlock:^(BNRequstManager * _Nonnull manager, id  _Nullable responseObject, NSError * _Nullable error) {
+                DDLog(@"%@",responseObject);
+                
+            } failedBlock:^(BNRequstManager * _Nonnull manager, id  _Nullable responseObject, NSError * _Nullable error) {
+                DDLog(@"%@", error);
+                
+            }];
+        }
+            break;
+        case 2:
+        {
+            [self.userInfoApi requestWithSuccessBlock:^(BNRequstManager * _Nonnull manager, id _Nullable responseObject, NSError * _Nullable error) {
+                DDLog(@"%@", responseObject);
+                
+            } failedBlock:^(BNRequstManager * _Nonnull manager, id _Nullable responseObject, NSError * _Nullable error) {
+                DDLog(@"%@", error);
+                
+            }];
+        }
+            break;
+        case 3:
+        {
+            [self.deviceListApi requestWithSuccessBlock:^(BNRequstManager * _Nonnull manager, id _Nullable responseObject, NSError * _Nullable error) {
+                DDLog(@"%@", [(NSDictionary *)responseObject jsonString]);
+                PKDeviceListRootModel *model = [PKDeviceListRootModel yy_modelWithJSON:responseObject];
+                DDLog(@"%@", model);
+                self.devicesRootModel = model;
+                [self goController:@"DeviceListController" title:@"设备列表" obj:model];
+                
+            } failedBlock:^(BNRequstManager * _Nonnull manager, id _Nullable responseObject, NSError * _Nullable error) {
+                DDLog(@"%@", error);
+                
+            }];
+        }
+            break;
+        case 4:
+        {
+            [self.channelListApi requestWithSuccessBlock:^(BNRequstManager * _Nonnull manager, id _Nullable responseObject, NSError * _Nullable error) {
+                DDLog(@"%@", responseObject);
+                
+            } failedBlock:^(BNRequstManager * _Nonnull manager, id _Nullable responseObject, NSError * _Nullable error) {
+                DDLog(@"%@", error);
+                
+            }];
+        }
+            break;
+        case 5:
+        {
+            [self.channelstreamApi requestWithSuccessBlock:^(BNRequstManager * _Nonnull manager, id _Nullable responseObject, NSError * _Nullable error) {
+                DDLog(@"%@", responseObject);
+                
+            } failedBlock:^(BNRequstManager * _Nonnull manager, id _Nullable responseObject, NSError * _Nullable error) {
+                DDLog(@"%@", error);
+                
+            }];
+        }
+            break;
+        default:
+            break;
+    }
 }
 
 
@@ -158,43 +262,47 @@
     return _restartApi;
 }
 
--(UISegmentedControl *)segmentCtl{
-    if (!_segmentCtl) {
-        NSArray * items = @[@"修改密码",@"重启服务",@"111",@"111",@"111",];
-        _segmentCtl = [UIView createSegmentRect:CGRectZero items:items selectedIndex:0 type:@1];
-        [_segmentCtl addActionHandler:^(UIControl * _Nonnull control) {
-            UISegmentedControl *sender = control;
-            switch (sender.selectedSegmentIndex) {
-                case 0:
-                {
-                    NSString * url = [BNAPIConfi.serviceUrl stringByAppendingPathComponent:self.moidyPwdApi.requestURI];
-                    [APIRequestURL requestUrl:url method:kHTTPMethodGET completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
-                        NSString *string = [[NSString alloc]initWithData:data encoding:NSUTF8StringEncoding];
-                        DDLog(@"%@",string);
-                    }];
-                }
-                    break;
-                case 1:
-                {
-                    NSString * url = [BNAPIConfi.serviceUrl stringByAppendingPathComponent:self.restartApi.requestURI];
-                    [APIRequestURL requestUrl:url method:kHTTPMethodGET completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
-                        NSString *string = [[NSString alloc]initWithData:data encoding:NSUTF8StringEncoding];
-                        DDLog(@"%@",string);
-                    }];
-                }
-                    break;
-                case 2:
-                {
-                    
-                }
-                    break;
-                default:
-                    break;
-            }
-            
-        } forControlEvents:UIControlEventValueChanged];
+-(BNDeviceListApi *)deviceListApi{
+    if (!_deviceListApi) {
+        _deviceListApi = [[BNDeviceListApi alloc]init];
+        _deviceListApi.limit = 10;
+        _deviceListApi.online = true;
     }
-    return _segmentCtl;
+    return _deviceListApi;
+}
+
+-(BNChannelListApi *)channelListApi{
+    if (!_channelListApi) {
+        _channelListApi = [[BNChannelListApi alloc]init];
+        _channelListApi.limit = 12;
+        _channelListApi.start = 0;
+
+    }
+    return _channelListApi;
+}
+
+- (BNChannelstreamApi *)channelstreamApi{
+    if (!_channelstreamApi) {
+        _channelstreamApi = [[BNChannelstreamApi alloc]init];
+        _channelstreamApi.protocol = @"FLV";
+        _channelstreamApi.channel = 1;
+    }
+    return _channelstreamApi;
+}
+
+-(BNItemsView *)itemsView{
+    if (!_itemsView) {
+        _itemsView = [[BNItemsView alloc]init];
+        _itemsView.backgroundColor = UIColor.greenColor;
+        _itemsView.numberOfRow = 4;
+        NSArray * items = @[@"修改密码",@"重启服务",@"用户信息",@"设备列表",@"通道列表",@"通道流",];
+        _itemsView.items = items;
+        _itemsView.block = ^(BNItemsView * _Nonnull itemsView, UIButton * _Nonnull btn) {
+            [self getInfoWithIndex:btn.tag];
+            
+        };
+    }
+    return _itemsView;
 }
 
 @end

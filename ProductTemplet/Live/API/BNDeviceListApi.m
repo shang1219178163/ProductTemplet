@@ -1,18 +1,18 @@
 //
-//  BNMoidyPwdApi.m
+//  BNDeviceListApi.m
 //  ProductTemplet
 //
-//  Created by Bin Shang on 2019/6/12.
+//  Created by Bin Shang on 2019/6/13.
 //  Copyright © 2019 BN. All rights reserved.
 //
 
-#import "BNMoidyPwdApi.h"
+#import "BNDeviceListApi.h"
 
-@implementation BNMoidyPwdApi
+@implementation BNDeviceListApi
 
 /// URI
 -(NSString *)requestURI{
-    return kAPIRequestURLModifyPwd;
+    return kAPIRequestURLDeviceList;
 }
 
 /// 网络请求方式默认GET
@@ -22,8 +22,8 @@
 /// 网络请求参数
 - (NSDictionary *)requestParams{
     return @{
-              @"oldpassword": self.oldpassword.md5Encode,
-              @"newpassword": self.newpassword.md5Encode,
+             @"limit": @(self.limit),
+             @"online": @(self.online),
              };
 }
 /// 网络请求参数验证
