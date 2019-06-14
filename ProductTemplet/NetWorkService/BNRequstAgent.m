@@ -93,7 +93,7 @@
                           success:(BNNetworkBlock)success
                           failure:(BNNetworkBlock)failure{
     
-    if (_isOpenLog) DDLog(@"responseObject = %@",[parameters jsonString]);
+    if (_isOpenLog) DDLog(@"parameters = %@",[parameters jsonString]);
 
     if (![URL containsString:BNAPIConfi.serviceUrl]) {
         URL = [BNAPIConfi.serviceUrl stringByAppendingString:URL];
@@ -195,12 +195,13 @@
  */
 - (BNURLResponse *)modelWithTask:(NSURLSessionDataTask *)task responseObject:(id )responseObject error:(NSError *)error{
     if (_isOpenLog) {
-        DDLog(@"error_%@_",error);
-        
-    } else {
-        DDLog(@"responseObject_%@_",[responseObject jsonString]);
-              
+        if (error) {
+            DDLog(@"error_%@_",error);
+        } else {
+            DDLog(@"responseObject_%@_",[responseObject jsonString]);
+        }
     }
+    
     [self.sessionTaskDic removeObjectForKey:@(task.taskIdentifier)];
     
     BNURLResponse * model = BNURLResponseFromParam(task.currentRequest, task.response, responseObject, error);

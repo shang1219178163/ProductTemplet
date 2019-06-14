@@ -87,7 +87,7 @@
 //        NSString *token = [NSUserDefaults objectForKey:@"token"];
         NSNumber *tokenTimeout = [NSUserDefaults objectForKey:@"tokenTimeout"];
         NSString *cookieStr = [NSHTTPCookieStorage cookieDesWithToken:token tokenTimeout:tokenTimeout];
-        DDLog(@"cookieStr_%@", cookieStr);
+//        DDLog(@"cookieStr_%@", cookieStr);
         [BNRequstAgent.shared setValue:cookieStr forHTTPHeaderField:@"Set-Cookie"];
         
         //
@@ -104,10 +104,6 @@
         NSHTTPCookie *cookie = [NSHTTPCookie cookieWithProperties:properties];
         [NSHTTPCookieStorage.sharedHTTPCookieStorage setCookie:cookie];
 
-        NSLog(@"cookie:%@",cookie.description);
-        NSArray *cookies = [NSArray arrayWithObjects:cookie,nil];
-        NSDictionary *headers = [NSHTTPCookie requestHeaderFieldsWithCookies:cookies];
-        NSLog(@"headers:%@",headers);
     }
     
     NSURLSessionTask * task = nil;
@@ -141,12 +137,12 @@
                 self.isLoading = false;
                 [self didFailureOfResponse:response];
                 
-                NSDictionary *allHeaders = response.response.allHeaderFields;
-                DDLog(@"allHeaders_%@", allHeaders);
-                
-                NSArray * cookies = NSHTTPCookieStorage.sharedHTTPCookieStorage.cookies;
-                NSDictionary *headers = [NSHTTPCookie requestHeaderFieldsWithCookies:cookies];
-                NSLog(@"headers:%@",headers);
+//                NSDictionary *allHeaders = response.response.allHeaderFields;
+//                DDLog(@"allHeaders_%@", allHeaders);
+//                
+//                NSArray * cookies = NSHTTPCookieStorage.sharedHTTPCookieStorage.cookies;
+//                NSDictionary *headers = [NSHTTPCookie requestHeaderFieldsWithCookies:cookies];
+//                NSLog(@"headers:%@",headers);
             }];
         }
             break;
@@ -260,10 +256,10 @@
 
             break;
     }
-    model.errorOther.obj = @{
-                            @"URI": self.child.requestURI,
-                            @"response" : model.response,
-                            };
+//    model.errorOther.obj = @{
+//                            @"URI": self.child.requestURI,
+//                            @"response" : model.response,
+//                            };
     [self handleFailureWithError:model.errorOther];
 }
 
