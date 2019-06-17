@@ -33,7 +33,7 @@
     CGFloat height = 40;
     
     CGSize imgViewSize = CGSizeMake(75, 75);
-    CGSize btnPwdSize = CGSizeMake(90, height);
+    CGSize btnPwdSize = CGSizeMake(70, height);
     
     [self addSubview:self.imgView];
     [self.imgView makeConstraints:^(MASConstraintMaker *make) {

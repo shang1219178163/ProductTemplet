@@ -14,7 +14,7 @@
     self = [super initWithFrame:frame];
     if (self) {
         [self createControls];
-        
+                
     }
     return self;
 }
@@ -43,10 +43,10 @@
     
     [self addSubview:self.btnCode];
     [self.btnCode makeConstraints:^(MASConstraintMaker *make) {
-        make.top.equalTo(self.textFieldPhone.bottom).offset(15);
+        make.top.equalTo(self.textFieldCode).offset(5);
         make.left.equalTo(self.textFieldCode.right).offset(8);
         make.right.equalTo(self.textFieldPhone.right);
-        make.height.equalTo(40);
+        make.bottom.equalTo(self.textFieldCode).offset(-5);
     }];
     
     [self addSubview:self.btn];
@@ -58,7 +58,7 @@
     }];
     
     self.btnCode.layer.masksToBounds = YES;
-    self.btnCode.layer.cornerRadius = CGRectGetHeight(self.btnCode.frame)/10.0;
+    self.btnCode.layer.cornerRadius = 8.0;
     
     self.btnCode.layer.borderColor = UIColor.themeColor.CGColor;
     self.btnCode.layer.borderWidth = kW_LayerBorder;
