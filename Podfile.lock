@@ -82,7 +82,6 @@ PODS:
   - MBProgressHUD (1.1.0)
   - MJExtension (3.0.17)
   - MJRefresh (3.2.0)
-  - PopoverView (0.0.2)
   - PPNumberButton (0.8.0)
   - SDCycleScrollView (1.80):
     - SDWebImage (>= 5.0.0)
@@ -137,7 +136,6 @@ DEPENDENCIES:
   - MBProgressHUD
   - MJExtension
   - MJRefresh
-  - PopoverView
   - PPNumberButton
   - SDCycleScrollView
   - SDWebImage
@@ -185,7 +183,6 @@ SPEC REPOS:
     - MBProgressHUD
     - MJExtension
     - MJRefresh
-    - PopoverView
     - PPNumberButton
     - SDCycleScrollView
     - SDWebImage
@@ -234,7 +231,6 @@ SPEC CHECKSUMS:
   MBProgressHUD: e7baa36a220447d8aeb12769bf0585582f3866d9
   MJExtension: 74ec83124a68891619fb7ba9c5c811bbf1691076
   MJRefresh: ed450d6eb9d3346a2cb033ab7eb6de090aeef437
-  PopoverView: 62e83ffda75944d6cf2de9c6593489f3097dc1a3
   PPNumberButton: 4442ff64c21d91733057ca1b3dc05fb4df55f2c0
   SDCycleScrollView: b3c9a5ed840c771c4938978174c7c9d9feefeb96
   SDWebImage: 920f1a2ff1ca8296ad34f6e0510a1ef1d70ac965
@@ -253,6 +249,6 @@ SPEC CHECKSUMS:
   YZPullDownMenu: afc60c3fc4f7caedd9556d32da43ea1718e078e0
   ZYCornerRadius: f0af817be7805b5c63d793042ca7a03f81e14069
 
-PODFILE CHECKSUM: bedf45157bf4fce824b8124e431716227e7bb2f8
+PODFILE CHECKSUM: 3a67be81e9ead0bfee85b5af94970fc5a02ac52e
 
 COCOAPODS: 1.7.0.beta.3

@@ -24,9 +24,11 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     [self setupThridSDKWithOptions:launchOptions];
-//    UIColor.themeColor = UIColor.orangeColor;
+    UIColor.themeColor = UIColor.orangeColor;
+    UIColor.themeColor = UIColorHexValue(0x0082e0);
+    
     [UIApplication setupAppearanceDefault:false];
-
+    
     UIViewController * controller = UICtrFromString(@"HomeViewController");
     UIViewController * controllerLeft = UICtrFromString(@"BNLeftViewController");
     UIViewController * controllerRight = UICtrFromString(@"BNRightViewController");
@@ -40,10 +42,11 @@
     controller = UICtrFromString(@"HomeViewController");
 
 //    [UIApplication setupRootController:rootVC isAdjust:NO];
-//    [UIApplication setupRootController:controller isAdjust:NO];
+    [UIApplication setupRootController:controller isAdjust:NO];
 
-    controller = UICtrFromString(@"LiveViewController");
-    [UIApplication setupRootController:controller isAdjust:true];
+//    controller = UICtrFromString(@"LoginViewController");
+//    controller = UICtrFromString(@"GroupViewController");
+//    [UIApplication setupRootController:controller isAdjust:true];
 
 //    [UIApplication setupRootController:UICtrFromString(@"RecognizerController") isAdjust:YES];
 //    [UIApplication setupRootController:UICtrFromString(@"UIRecognizerController") isAdjust:YES];

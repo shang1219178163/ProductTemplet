@@ -41,6 +41,14 @@
     return BNRequstAgent.shared.sessionManager;
 }
 
++ (NSDictionary *)paramsFromOrigin:(NSDictionary *)params{
+    NSMutableDictionary * mdic = [NSMutableDictionary dictionaryWithDictionary:params];
+    if ([NSUserDefaults.standardUserDefaults objectForKey:@"token"]) {
+        [mdic setObject:[NSUserDefaults objectForKey:@"token"] forKey:@"token"];
+    }
+    return mdic.copy;
+}
+
 - (NSURLSessionTask *)requestWithSuccessBlock:(BNRequestResultBlock)successBlock failedBlock:(BNRequestResultBlock)failureBlock{
     self.successBlock = successBlock;
     self.failureBlock = failureBlock;
@@ -78,32 +86,12 @@
     
     self.isLoading = true;
     //请求日志
-    NSString * urlStr = [BNAPIConfi.serviceUrl stringByAppendingPathComponent:self.child.requestURI];
-    [BNLog logRequestInfoWithURI:urlStr params:self.child.requestParams];
+    NSString *urlString = [BNAPIConfi.serviceUrl stringByAppendingPathComponent:self.child.requestURI];
+    NSDictionary *params = [BNRequstManager paramsFromOrigin:self.child.requestParams];
+    [BNLog logRequestInfoWithURI:urlString params:params];
     id token = [NSUserDefaults objectForKey:@"token"];
     if (token) {
-        [BNRequstAgent.shared setValue:token forHTTPHeaderField:@"token"];
-
-//        NSString *token = [NSUserDefaults objectForKey:@"token"];
-        NSNumber *tokenTimeout = [NSUserDefaults objectForKey:@"tokenTimeout"];
-        NSString *cookieStr = [NSHTTPCookieStorage cookieDesWithToken:token tokenTimeout:tokenTimeout];
-//        DDLog(@"cookieStr_%@", cookieStr);
-        [BNRequstAgent.shared setValue:cookieStr forHTTPHeaderField:@"Set-Cookie"];
-        
-        //
-//        NSNumber *tokenTimeout = [NSUserDefaults objectForKey:@"tokenTimeout"];
-        NSDictionary *properties = @{
-                                     NSHTTPCookieDomain: BNAPIConfi.serviceUrl,
-                                     NSHTTPCookiePath: @"/",
-                                     NSHTTPCookieName: @"token",
-                                     NSHTTPCookieValue: token,
-                                     NSHTTPCookieExpires: [NSDate dateWithTimeIntervalSinceNow:tokenTimeout.integerValue],
-                                     NSHTTPCookieMaximumAge: tokenTimeout,
-                                     };
-
-        NSHTTPCookie *cookie = [NSHTTPCookie cookieWithProperties:properties];
-        [NSHTTPCookieStorage.sharedHTTPCookieStorage setCookie:cookie];
-
+        [BNRequstAgent.shared setValue:token forHTTPHeaderField:@"Authorization"];
     }
     
     NSURLSessionTask * task = nil;
@@ -111,7 +99,7 @@
     switch (self.child.requestType) {
         case BNRequestTypePost:
         {
-            task = [BNRequstAgent.shared POST:self.child.requestURI parameters:self.child.requestParams success:^(BNURLResponse * _Nonnull response) {
+            task = [BNRequstAgent.shared POST:urlString parameters:params success:^(BNURLResponse * _Nonnull response) {
                 @strongify(self);
                 self.isLoading = false;
                 [self didSuccessOfResponse:response];
@@ -127,7 +115,7 @@
             break;
         case BNRequestTypeGet:
         {
-            task = [BNRequstAgent.shared GET:self.child.requestURI parameters:self.child.requestParams success:^(BNURLResponse * _Nonnull response) {
+            task = [BNRequstAgent.shared GET:urlString parameters:params success:^(BNURLResponse * _Nonnull response) {
                 @strongify(self);
                 self.isLoading = false;
                 [self didSuccessOfResponse:response];
@@ -136,13 +124,37 @@
                 @strongify(self);
                 self.isLoading = false;
                 [self didFailureOfResponse:response];
+    
+            }];
+        }
+            break;
+        case BNRequestTypePut:
+        {
+            task = [BNRequstAgent.shared PUT:urlString parameters:params success:^(BNURLResponse * _Nonnull response) {
+                @strongify(self);
+                self.isLoading = false;
+                [self didSuccessOfResponse:response];
                 
-//                NSDictionary *allHeaders = response.response.allHeaderFields;
-//                DDLog(@"allHeaders_%@", allHeaders);
-//                
-//                NSArray * cookies = NSHTTPCookieStorage.sharedHTTPCookieStorage.cookies;
-//                NSDictionary *headers = [NSHTTPCookie requestHeaderFieldsWithCookies:cookies];
-//                NSLog(@"headers:%@",headers);
+            } failure:^(BNURLResponse * _Nonnull response) {
+                @strongify(self);
+                self.isLoading = false;
+                [self didFailureOfResponse:response];
+                
+            }];
+        }
+            break;
+        case BNRequestTypeDelete:
+        {
+            task = [BNRequstAgent.shared DELETE:urlString parameters:params success:^(BNURLResponse * _Nonnull response) {
+                @strongify(self);
+                self.isLoading = false;
+                [self didSuccessOfResponse:response];
+                
+            } failure:^(BNURLResponse * _Nonnull response) {
+                @strongify(self);
+                self.isLoading = false;
+                [self didFailureOfResponse:response];
+                
             }];
         }
             break;
@@ -155,23 +167,9 @@
 
 - (void)didSuccessOfResponse:(BNURLResponse *)model{
     if (model.response.statusCode != 200) {
-        model.errorOther = [NSError errorWithMessage:@"服务器返回statusCode出错" code:BNRequestCodeServerError obj:nil];
         [self didFailureOfResponse:model];
         return;
     }
-    
-    if ([BNRequstAgent.shared.sessionManager.responseSerializer isKindOfClass:AFHTTPResponseSerializer.class]) {
-        NSString *string = [[NSString alloc]initWithData:model.responseObject encoding:NSUTF8StringEncoding];
-        NSData *jsonData = [string dataUsingEncoding:NSUTF8StringEncoding];
-        id obj = [NSJSONSerialization JSONObjectWithData:jsonData options:kNilOptions error:nil];
-        obj = obj? : string;
-        
-        if (self.successBlock) {
-            self.successBlock(self, obj, nil);
-        }
-        return;
-    }
-   
     
     NSDictionary *jsonDic = nil;
     if ([model.responseObject isKindOfClass: NSDictionary.class]) {
@@ -180,7 +178,7 @@
     } else {
         NSString *jsonString = [[NSString alloc]initWithData:model.responseObject encoding:NSUTF8StringEncoding];
         if (!jsonString) {
-            model.errorOther = [NSError errorWithMessage:@"服务器返回的responseObject错误" code:BNRequestCodeJSONError obj:nil];
+            model.errorOther = [NSError errorWithDomain:@"服务器返回的josn格式错误" code:BNRequestCodeJSONError userInfo:nil];
             [self didFailureOfResponse:model];
             return;
         }
@@ -189,27 +187,39 @@
         NSError *error;
         jsonDic = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:&error];
         if (error) {
-            model.errorOther = [NSError errorWithMessage:@"服务器返回的josn格式错误" code:BNRequestCodeJSONError obj:nil];
+            model.errorOther = [NSError errorWithDomain:@"服务器返回的josn格式错误" code:BNRequestCodeJSONError userInfo:nil];
             [self didFailureOfResponse:model];
             return;
         }
     }
     
-    if ([jsonDic.allKeys containsObject:@"code"] || [jsonDic.allKeys containsObject:@"resultCount"] ) {
-        NSString * codeKey = [jsonDic.allKeys containsObject:@"code"] ? @"code" : @"resultCount";
-        NSInteger code = [jsonDic[codeKey] integerValue];
-        NSString *message = jsonDic[@"message"];
-        if (code != 1) {
-            model.errorOther = [NSError errorWithMessage:message code:code obj:nil];
-            [self didFailureOfResponse:model];
-            return;
-        }
+    NSInteger code = 0;
+    NSString *message = @"";
+    if ([jsonDic.allKeys containsObject:@"code"]) {
+        code = [jsonDic[@"code"] integerValue];
+        
+    } else if ([jsonDic.allKeys containsObject:@"resultCount"]) {
+        code = [jsonDic.allKeys containsObject:@"resultCount"];
     }
-
+    
+    if ([jsonDic.allKeys containsObject:@"message"]) {
+        message = jsonDic[@"message"];
+    }
+    DDLog(@"_%@_%@_", @(code), message);
+    
+    BOOL isFailCode = [jsonDic.allKeys containsObject:@"code"] && code != 1;
+    BOOL isFailStatus = [jsonDic.allKeys containsObject:@"status"] && ![jsonDic[@"status"] isEqualToString:@"success"];
+    if (isFailCode || isFailStatus) {
+        NSString *tips = message ? : @"message为空";
+        model.errorOther = [NSError errorWithDomain:tips code:code userInfo:nil];
+        [self didFailureOfResponse:model];
+        return;
+    }
     //请求结果日志
-    [BNLog logResponseInfoWithURI:self.child.requestURI responseJSON:jsonDic];
+    NSString * urlString = [BNAPIConfi.serviceUrl stringByAppendingString:self.child.requestURI];
+    [BNLog logResponseInfoWithURI:urlString responseJSON:jsonDic];
     
-    DDLog(@"delegate:%@",self.delegate);
+//    DDLog(@"delegate:%@",self.delegate);
     if (self.delegate && [self.delegate conformsToProtocol:@protocol(BNRequestManagerProtocol)]) {
         [self.delegate manager:self successDic:jsonDic failError:nil];
     }
@@ -223,57 +233,25 @@
 }
 
 - (void)didFailureOfResponse:(BNURLResponse *)model{
-    NSInteger statusCode = model.response.statusCode;
-    if (model.response.statusCode != BNRequestCodeSuccess && statusCode > 0) {
-        model.errorOther = [NSError errorWithMessage:@"服务器返回statusCode出错" code:BNRequestCodeServerError obj:nil];
-        return;
-    }
-    
-    NSInteger errorCode = model.error.code;
-    switch (errorCode) {
-        case NSURLErrorTimedOut:
-            model.errorOther = [NSError errorWithMessage:@"请求超时" code:BNRequestCodeTimeout obj:nil];
-            
-            break;
-            
-        case NSURLErrorCancelled:
-            //当调用[task cancel]时，取消请求不回调
-            model.errorOther = [NSError errorWithMessage:@"请求被取消" code:BNRequestCodeCancel obj:nil];
-
-            break;
-        case NSURLErrorCannotConnectToHost:
-        case NSURLErrorBadURL:
-        case NSURLErrorUnsupportedURL:
-        case NSURLErrorCannotFindHost:
-        case NSURLErrorNetworkConnectionLost:
-        case NSURLErrorDNSLookupFailed:
-        case NSURLErrorNotConnectedToInternet:
-            model.errorOther = [NSError errorWithMessage:@"网络错误" code:BNRequestCodeNetworkError obj:nil];
-            
-            break;
-        default:
-            model.errorOther = [NSError errorWithMessage:@"未知错误" code:BNRequestCodeUnknown obj:nil];
-
-            break;
-    }
-//    model.errorOther.obj = @{
-//                            @"URI": self.child.requestURI,
-//                            @"response" : model.response,
-//                            };
-    [self handleFailureWithError:model.errorOther];
-}
-
-- (void)handleFailureWithError:(NSError *)error{
-    
-    if (error.code == BNRequestCodeInvalidToken || error.code == BNRequestCodeNoLogin) {
-        [BNRequstAgent.shared cancelAllRequest];
+    if (model.error) {
+        NSData *data = model.error.userInfo[@"com.alamofire.serialization.response.error.data"];
+        NSString *errorStr = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
+        NSInteger statusCode = model.response.statusCode;
+        DDLog(@"error:%@_%@",@(statusCode), errorStr);
         
-        //重置token
-        NSString * errorMsg = error.code == BNRequestCodeNoLogin ? @"您已在其他设备登录" : @"登录失效";
-        [UIAlertController showAletTitle:nil msg:errorMsg block:nil];
-        
+    } else {
+        if (model.errorOther.code == BNRequestCodeInvalidToken || model.errorOther.code == BNRequestCodeNoLogin) {
+            [BNRequstAgent.shared cancelAllRequest];
+            
+            //重置token
+            NSString * errorMsg = model.errorOther.code == BNRequestCodeNoLogin ? @"您已在其他设备登录" : @"登录失效";
+            [UIAlertController showAletTitle:nil msg:errorMsg block:^{
+//                NSNotificationCenter.defaultCenter postNotificationName:<#(nonnull NSNotificationName)#> object:<#(nullable id)#>
+            }];
+        }
     }
     
+    NSError * error = model.error ? : model.errorOther;
     if (self.delegate && [self.delegate conformsToProtocol:@protocol(BNRequestManagerProtocol)]) {
         [self.delegate manager:self successDic:nil failError:error];
     }
@@ -281,7 +259,6 @@
     if (self.failureBlock) {
         self.failureBlock(self, nil, error);
     }
-    
 }
 
 #pragma mark - -lazy

@@ -26,7 +26,7 @@
    pod 'MJRefresh'
    pod 'Masonry'
    
-   pod 'PopoverView'
+#   pod 'PopoverView'
    pod 'PPNumberButton'
    
    pod 'SDCycleScrollView'

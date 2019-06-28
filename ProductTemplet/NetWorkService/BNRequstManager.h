@@ -13,6 +13,8 @@
 typedef NS_ENUM (NSInteger, BNRequestType){
     BNRequestTypeGet,
     BNRequestTypePost,
+    BNRequestTypePut,
+    BNRequestTypeDelete,
 };
 
 typedef NS_ENUM (NSInteger, BNRequestCode){
