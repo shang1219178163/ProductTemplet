@@ -47,7 +47,7 @@
         make.top.equalTo(self.imgView.bottom).offset(padding);
         make.left.equalTo(self).offset(padding);
         make.right.equalTo(self).offset(-padding);
-        make.width.height.equalTo(height);
+        make.height.equalTo(height);
     }];
     
     [self addSubview:self.textFieldPwd];

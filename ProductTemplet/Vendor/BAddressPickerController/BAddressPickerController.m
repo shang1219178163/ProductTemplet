@@ -32,10 +32,6 @@
 
 /**
  *  初始化方法
- *
- *  @param frame
- *
- *  @return
  */
 - (id)initWithFrame:(CGRect)frame{
     self = [super init];
@@ -58,10 +54,6 @@
 #pragma mark - UISearchBar Delegate
 /**
  *  搜索开始回调用于更新UI
- *
- *  @param searchBar
- *
- *  @return
  */
 - (BOOL)searchBarShouldBeginEditing:(UISearchBar *)searchBar{
     if ([self.delegate respondsToSelector:@selector(beginSearch:)]) {
@@ -79,10 +71,6 @@
 
 /**
  *  搜索结束回调用于更新UI
- *
- *  @param searchBar
- *
- *  @return
  */
 - (BOOL)searchBarShouldEndEditing:(UISearchBar *)searchBar{
     if ([self.delegate respondsToSelector:@selector(endSearch:)]) {

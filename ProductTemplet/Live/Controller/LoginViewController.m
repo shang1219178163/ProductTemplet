@@ -31,7 +31,7 @@
     [[SVProgressHUD appearance] setDefaultStyle:SVProgressHUDStyleDark];
     [[SVProgressHUD appearance] setMaximumDismissTimeInterval:1.0];
 
-    [self requestLogin];
+//    [self requestLogin];
     
     
     [self.view addSubview:self.userLoginView];
@@ -64,7 +64,8 @@
         [self goController:@"DeviceListController" title:@"设备列表" obj:nil];
         
     } failedBlock:^(BNRequstManager * _Nonnull manager, id _Nullable responseObject, NSError * _Nullable error) {
-        
+        [SVProgressHUD showErrorWithStatus:error.description];
+
     }];
 }
 

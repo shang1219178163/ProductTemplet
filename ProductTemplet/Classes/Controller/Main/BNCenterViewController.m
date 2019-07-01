@@ -112,92 +112,94 @@
 
     self.dataList = @[
                       @[
-                          @"高德地图轨迹回溯",@"PKMainController",
+                          @"高德地图轨迹回溯", @"PKMainController",
                           ],
                       @[
-                          @"字符串映射研究",@"RuntimeController",
+                          @"字符串映射研究", @"RuntimeController",
                           ],
                       @[
-                          @"iOS字体大全",@"FontListController",
+                          @"iOS字体大全", @"FontListController",
                           ],
                       @[
-                          @"FMDB",@"FMBDViewController",
+                          @"FMDB", @"FMBDViewController",
                           ],
                       @[
-                          @"iOS锁性能对比",@"LockCompareController",
+                          @"iOS锁性能对比", @"LockCompareController",
                           ],
                       @[
-                          @"DesignPatterns",@"DesignPatternsController",
+                          @"DesignPatterns", @"DesignPatternsController",
                           ],
                       @[
-                          @"Multithreading",@"MultithreadingViewController",
+                          @"Multithreading", @"MultithreadingViewController",
                           ],
                       @[
-                          @"block循环引用完美解决方案",@"BlockViewController",
+                          @"block循环引用完美解决方案", @"BlockViewController",
                           ],
                       @[
-                          @"通用列表类展示封装",@"ShowListController",
+                          @"通用列表类展示封装", @"ShowListController",
                           
                           ],
                       @[
-                          @"录入类界面封装",@"EntryViewController",
+                          @"录入类界面封装", @"EntryViewController",
                           ],
                       @[
-                          @"View自定义",@"CustomViewController",
+                          @"View自定义", @"CustomViewController",
                           ],
                       @[
-                          @"嵌套TabBar,实现类UITabBarController功能",@"BNTabBarController",
+                          @"嵌套TabBar,实现类UITabBarController功能", @"BNTabBarController",
                           ],
                       @[
-                          @"BNTabBarController子类化",@"SubTabBarController",
+                          @"BNTabBarController子类化", @"SubTabBarController",
                           ],
                       
                       @[
-                          @"UICollectionView",@"UICollectionDisplayController",
+                          @"UICollectionView", @"UICollectionDisplayController",
                           ],
                       @[
-                          @"Sort",@"SortViewController",
+                          @"Sort", @"SortViewController",
                           ],
                       @[
-                          @"(不同线程)广播重定向",@"NotificationTreadController",
+                          @"(不同线程)广播重定向", @"NotificationTreadController",
                           ],
                       @[
-                          @"定时器列表",@"CountDownListController",
+                          @"定时器列表", @"CountDownListController",
                           ],
                       @[
-                          @"UIViewPropertyAnimator(iOS10)",@"UIViewPropertyAnimatorController",
+                          @"UIViewPropertyAnimator(iOS10)", @"UIViewPropertyAnimatorController",
                           ],
                       @[
-                          @"SugerAlert",@"SugerAlertController",
+                          @"SugerAlert", @"SugerAlertController",
                           ],
                       @[
-                          @"同一界面多网络请求",@"MutiRequestController",
+                          @"同一界面多网络请求", @"MutiRequestController",
                           ],
                       @[
-                          @"NSNumberFormatter",@"NumberViewController",
+                          @"NSNumberFormatter", @"NumberViewController",
                           ],
                       @[
-                          @"UITextField",@"UITextFieldController",
+                          @"UITextField", @"UITextFieldController",
                           ],
                       @[
-                          @"UITextView",@"TextViewController",
+                          @"UITextView", @"TextViewController",
                           ],
 //                      @[
-//                          @"FriendList",@"FriendListController",
+//                          @"FriendList", @"FriendListController",
 //                          ],
                       @[
-                          @"金额跳动",@"MoneyDisplayController",
+                          @"金额跳动", @"MoneyDisplayController",
                           ],
                       @[
-                          @"文字转语音",@"AVSpeechViewController",
-                          ],
-                      
-                      @[
-                          @"语音转文字",@"TextFromSpeechController",
+                          @"文字转语音", @"AVSpeechViewController",
                           ],
                       
                       @[
-                          @"Test",@"TestViewController",
+                          @"语音转文字", @"TextFromSpeechController",
+                          ],
+                      @[
+                          @"直播拉流", @"LoginViewController",
+                          ],
+                      @[
+                          @"Test", @"TestViewController",
                           
                           ],
          
@@ -244,6 +246,7 @@
 //    [self goController:list.lastObject title:list.firstObject];
     UITableViewCell * cell = [tableView cellForRowAtIndexPath:indexPath];
     [self pushController:list.lastObject item:cell type:@0];
+    
 }
 
 //-(NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section{

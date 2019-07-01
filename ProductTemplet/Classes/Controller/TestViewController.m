@@ -141,6 +141,20 @@
     return nil;
 }
 
+-(BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath{
+    return true;
+}
+
+-(NSArray<UITableViewRowAction *> *)tableView:(UITableView *)tableView editActionsForRowAtIndexPath:(NSIndexPath *)indexPath{
+    UITableViewRowAction *actionDelete = [UITableViewRowAction rowActionWithStyle:UITableViewRowActionStyleDestructive title:kActionTitle_Delete handler:^(UITableViewRowAction *action, NSIndexPath *indexPath){
+        DDLog(@"点击了%@",action.title);
+        //        [self handleMsgDeleteWithIndexPath:indexPath];
+        //网络删除成功之后,再删除本地,刷新列表
+        
+    }];
+    return @[actionDelete];
+}
+
 
 #pragma mark - - others funtion
 
