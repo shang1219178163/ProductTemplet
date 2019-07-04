@@ -20,13 +20,13 @@ PODS:
   - AMapFoundation-NO-IDFA (1.5.7)
   - AMapLocation-NO-IDFA (2.6.2):
     - AMapFoundation-NO-IDFA (~> 1.4)
-  - AMapNavi-NO-IDFA (6.8.0):
+  - AMapNavi-NO-IDFA (6.9.0):
     - AMap3DMap-NO-IDFA (~> 6.7)
     - AMapFoundation-NO-IDFA (~> 1.5)
   - AMapSearch-NO-IDFA (6.9.0):
     - AMapFoundation-NO-IDFA (~> 1.4)
   - Aspects (1.4.1)
-  - BNCategory (1.9.3.2):
+  - BNCategory (1.9.6):
     - AESCrypt-ObjC
     - BNGloble
     - BNKit
@@ -41,15 +41,15 @@ PODS:
   - BNCollectionView (1.2.2):
     - BNCategory
   - BNGloble (1.3.9)
-  - BNKit (1.3.3):
+  - BNKit (1.3.4):
     - BNGloble
-  - BNTableViewCell (1.4.4.1):
+  - BNTableViewCell (1.4.5):
     - BNCategory
     - BNGloble
     - BNKit
     - BNView
     - Masonry
-  - BNView (1.4.6.4):
+  - BNView (1.4.7):
     - BNCategory
     - BNGloble
     - BNKit
@@ -72,8 +72,8 @@ PODS:
   - FMDB/standard (2.7.5)
   - GTMBase64 (1.0.1)
   - iCarousel (1.8.3)
-  - IQKeyboardManager (6.3.0)
-  - JCore (2.0.2)
+  - IQKeyboardManager (6.4.0)
+  - JCore (2.1.1)
   - JPush (3.2.1):
     - JCore (< 3.0.0, >= 2.0.0)
   - JZLocationConverter (1.0.0)
@@ -207,23 +207,23 @@ SPEC CHECKSUMS:
   AMap3DMap-NO-IDFA: ffb000a25913efcdc5d979faa54a78655965bc23
   AMapFoundation-NO-IDFA: 9088085827c831811bb0fd3afd96b99963a7cf71
   AMapLocation-NO-IDFA: d7792c8c516f415e186f1bc25946f1a58ca6a583
-  AMapNavi-NO-IDFA: 93c9e767a120472ace590f53a7917595822bde2c
+  AMapNavi-NO-IDFA: 932388a920771b8877aa7bd189167731e97e4985
   AMapSearch-NO-IDFA: 264999e6c149383a8f164c2fe49b51513e93d674
   Aspects: 7595ba96a6727a58ebcbfc954497fc5d2fdde546
-  BNCategory: 174a8ba5389b5d09c3d921af2c9ac4b1f03c97a6
+  BNCategory: 2a1917bfe493437c560568ba7d00a3281bfabf03
   BNCollectionView: 05a29730ff953b07c67cb0654baf3c6bf29aa6d6
   BNGloble: 49ed76d0bb99d6ff38d9031cad5e3b7ca588296f
-  BNKit: 0d8caba583620f33c6f14da13617ed3dc6d3b17f
-  BNTableViewCell: 732bea19b4c1c9af829905388fb25a70c7da5808
-  BNView: f80ea527eec60f5147e7305a8e0641f5165d1f30
+  BNKit: 3542dcaf5a104c77bd29d8675e12e7e6bf4fabcd
+  BNTableViewCell: 417845213042fc803356e0549195b7991219f3ef
+  BNView: 1784ff1cf44e1179e75b962443da83d9a13c27b5
   BNViewHeight: 8ab9854cfc60d7c3cf7a6ce96738f3c625c38032
   FCUUID: bb054fc90cd7cd99320f9f6ff8e130fe607fba05
   FLAnimatedImage: 4a0b56255d9b05f18b6dd7ee06871be5d3b89e31
   FMDB: 2ce00b547f966261cd18927a3ddb07cb6f3db82a
   GTMBase64: f0f91be06a7a20b84c8e4fee30c0430395091d82
   iCarousel: d782f635afac190c49bb8ee455882284cff8b85f
-  IQKeyboardManager: 2ca9d64893247556f53523dcd8d78641f0ba7c23
-  JCore: d4cbe6d178eaeb0ed263e42a6ebcb617855ef7cb
+  IQKeyboardManager: fcef267266379c003181fc3592f6bdb8bf4db839
+  JCore: 4072327557f0b83cc22dd4041f2f839740c0077b
   JPush: a1ff8b8ec53fa3419b414946e4db4efa313baeae
   JZLocationConverter: 3d816bee6484aed9c155a6045a02ce444833e2f0
   KVOController: d72ace34afea42468329623b3379ab3cd1d286b6

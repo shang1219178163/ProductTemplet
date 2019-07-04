@@ -40,7 +40,8 @@
 //    controller = UICtrFromString(@"SortViewController");
 //    controller = UICtrFromString(@"FriendListController");
     controller = UICtrFromString(@"HomeViewController");
-
+//    controller = UICtrFromString(@"TestViewController");
+    
 //    [UIApplication setupRootController:rootVC isAdjust:NO];
     [UIApplication setupRootController:controller isAdjust:NO];
 

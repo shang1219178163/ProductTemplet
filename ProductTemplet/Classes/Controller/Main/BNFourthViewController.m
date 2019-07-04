@@ -94,13 +94,24 @@
     self.sliderView.layer.borderWidth = 1.0;
     
     CGRect rect = CGRectMake(UIScreen.width/2.0, 20, 100, 100);
-    UIImageView *imgView = [UIView createImgViewRect:rect image:@"Item_first_N" tag:100 type:@0];
+    UIImageView *imgView = ({
+        UIImageView *view = [UIImageView createImgViewRect:rect type:@0];
+        view.image = [UIImage imageNamed:@"Item_first_N"];
+        view.tag = 100;
+        view;
+    });
+    
     [self.view addSubview:imgView];
     
     imgView.tintColor = UIColor.themeColor;
 
     CGRect rect1 = CGRectMake(UIScreen.width/2.0 + 120, 20, 100, 100);
-    UIImageView *imgView1 = [UIView createImgViewRect:rect1 image:@"Item_first_H" tag:101 type:@0];
+    UIImageView *imgView1 = ({
+        UIImageView *view = [UIImageView createImgViewRect:rect1 type:@0];
+        view.image = [UIImage imageNamed:@"Item_first_H"];
+        view.tag = 101;
+        view;
+    });
     [self.view addSubview:imgView1];
     
 //    imgView1.tintColor = UIColor.grayColor;
@@ -252,7 +263,7 @@
             label.text = @"个数";
             [view addSubview:label];
             
-            UISlider *slider = [UIView createSliderRect:CGRectMake(0, 0, CGRectGetWidth(view.frame) - CGRectGetWidth(label.frame), CGRectGetHeight(view.frame)) value:70 minValue:10 maxValue:110];
+            UISlider *slider = [UISlider createSliderRect:CGRectMake(0, 0, CGRectGetWidth(view.frame) - CGRectGetWidth(label.frame), CGRectGetHeight(view.frame)) value:70 minValue:10 maxValue:110];
             slider.autoresizingMask = UIViewAutoresizingFlexibleWidth|UIViewAutoresizingFlexibleHeight;
             [slider addActionHandler:^(UIControl * _Nonnull obj) {
                 UISlider * sender = (UISlider *)obj;

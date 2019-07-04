@@ -35,7 +35,7 @@
     [self.items enumerateObjectsUsingBlock:^(NSString * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
         
         NSString *image = idx == 3 ? @"bug.png" : nil;
-        UIButton *view = [self createBtnRect:CGRectZero title:obj font:15 image:image type:@(idx)];
+        UIButton *view = [self createBtnRect:CGRectZero title:obj image:image type:@(idx)];
         [view addActionHandler:^(UIControl * _Nonnull control) {
             
         } forControlEvents:UIControlEventTouchUpInside];
@@ -64,13 +64,13 @@
     
 }
 
-- (UIButton *)createBtnRect:(CGRect)rect title:(NSString *)title font:(CGFloat)font image:(NSString *)image type:(NSNumber *)type{
+- (UIButton *)createBtnRect:(CGRect)rect title:(NSString *)title image:(NSString *)image type:(NSNumber *)type{
     UIButton * btn = [UIButton buttonWithType:UIButtonTypeSystem];
     btn.autoresizingMask = UIViewAutoresizingFlexibleWidth|UIViewAutoresizingFlexibleHeight;
     
     btn.frame = rect;
     [btn setTitle:title forState:UIControlStateNormal];
-    btn.titleLabel.font = [UIFont systemFontOfSize:font];
+    btn.titleLabel.font = [UIFont systemFontOfSize:16];
     btn.titleLabel.adjustsFontSizeToFitWidth = YES;
     
     btn.imageView.contentMode = UIViewContentModeScaleAspectFit;

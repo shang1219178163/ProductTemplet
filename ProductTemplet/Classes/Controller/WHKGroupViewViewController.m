@@ -113,7 +113,7 @@
         
         NSString * title = elements[i];
         CGRect btnRect = CGRectMake(x, y, w, h);
-//        UIButton * btn = [UIView createBtnRect:btnRect title:title font:16 image:nil tag:kTAG_BTN+i type:@0];
+//        UIButton * btn = [UIButton createBtnRect:btnRect title:title image:nil+i type:@0];
 //
         NSDictionary * dict = @{
                                 kRadio_title : title,
@@ -156,7 +156,7 @@
         
         NSString * title = elements[i];
         CGRect btnRect = CGRectMake(x, y, w, h);
-        //        UIButton * btn = [UIView createBtnRect:btnRect title:title font:16 image:nil tag:kTAG_BTN+i type:@0];
+        //        UIButton * btn = [UIButton createBtnRect:btnRect title:title image:nil type:@0];
         
         NSDictionary * dict = @{
                                 kRadio_imageH : @"img_select_H",
@@ -167,7 +167,9 @@
         radioView.isSelected = i%2 == 0 ? YES : NO;
         radioView.tag = kTAG_VIEW + i;
         CGRect labelRect = CGRectMake(x+30, y, w-30, 30);
-        UILabel * label = [UIView createLabelRect:labelRect text:title font:16 tag:kTAG_LABEL+i type:@2];
+        UILabel * label = [UILabel createLabelRect:labelRect type:@2];
+        label.text = title;
+        label.tag = kTAG_LABEL+i;
         label.textAlignment = NSTextAlignmentCenter;
         [backgroudView addSubview:radioView];
         [backgroudView addSubview:label];
