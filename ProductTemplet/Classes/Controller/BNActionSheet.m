@@ -8,8 +8,6 @@
 
 #import "BNActionSheet.h"
 
-#define Screen_Width [UIScreen mainScreen].bounds.size.width
-#define Screen_height [UIScreen mainScreen].bounds.size.height
 #define SPACE 10
 @interface BNActionSheet ()<UITableViewDelegate,UITableViewDataSource>
 @property (nonatomic, strong) UIView *maskView;
@@ -85,7 +83,7 @@
         cell.textLabel.text = _optionsArr[indexPath.row];
         if (indexPath.row == _optionsArr.count - 1) {
             UIBezierPath *maskPath = [UIBezierPath bezierPathWithRoundedRect:
-                                      CGRectMake(0, 0, Screen_Width - (SPACE * 2), tableView.rowHeight) byRoundingCorners:
+                                      CGRectMake(0, 0, kScreenWidth - (SPACE * 2), tableView.rowHeight) byRoundingCorners:
                                       UIRectCornerBottomLeft|UIRectCornerBottomRight cornerRadii:
                                       CGSizeMake(10, 10)];
             CAShapeLayer *maskLayer = [[CAShapeLayer alloc]init];
@@ -131,7 +129,7 @@
 }
 
 - (void)show {
-    _tableView.frame = CGRectMake(SPACE, Screen_height, Screen_Width - (SPACE * 2), _tableView.rowHeight * (_optionsArr.count + 1) + _headView.bounds.size.height + (SPACE * 2));
+    _tableView.frame = CGRectMake(SPACE, kScreenHeight, kScreenWidth - (SPACE * 2), _tableView.rowHeight * (_optionsArr.count + 1) + _headView.bounds.size.height + (SPACE * 2));
     [UIView animateWithDuration:.5 animations:^{
         CGRect rect = _tableView.frame;
         rect.origin.y -= _tableView.bounds.size.height;
