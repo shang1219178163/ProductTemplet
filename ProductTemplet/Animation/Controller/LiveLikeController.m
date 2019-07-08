@@ -1,15 +1,12 @@
 //
 //  LiveLikeController.m
-//  
+//  HuiZhuBang
 //
-//  Created by BIN on 2018/9/18.
-//  Copyright © 2018年 SHANG. All rights reserved.
+//  Created by hsf on 2018/9/18.
+//  Copyright © 2018年 WeiHouKeJi. All rights reserved.
 //
 
 #import "LiveLikeController.h"
-
-#import "UIView+Helper.h"
-#import "UIViewController+Helper.h"
 
 #import "BNEmitterView.h"
 
@@ -39,10 +36,17 @@
     UIImageView *backImage = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"backView"]];
     backImage.frame = self.view.bounds;
     [self.view addSubview:backImage];
+    UIButton * btn = ({
+        UIButton * button = [UIButton buttonWithType:UIButtonTypeCustom];
+        button.frame = CGRectMake(300, 667.0 - 75, 40, 40);
+        button.tag = 100;
+
+        [button setTitle:@"like" forState:UIControlStateNormal];
+        [button addTarget:self action:@selector(handActionSender:) forControlEvents:UIControlEventTouchUpInside];
+        [button setImage:[UIImage imageNamed:@"click"] forState:UIControlStateNormal];
+        button;
+    });
     
-    UIButton * btn = [UIButton createBtnRect:CGRectMake(300, 667.0 - 75, 40, 40) title:@"like" image:@"click" type:@0];
-    btn.tag = 100;
-    [btn addTarget:self action:@selector(handActionSender:) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:btn];
     
     [self.view addSubview:self.emitterVeiw];

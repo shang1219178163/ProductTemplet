@@ -6,8 +6,8 @@
 //  Copyright © 2018年 WHKJ. All rights reserved.
 //
 
-#import "SuperViewController.h"
+#import "AnniSuperController.h"
 
-@interface AnimationController8 : SuperViewController
+@interface AnimationController8 : AnniSuperController
 
 @end
