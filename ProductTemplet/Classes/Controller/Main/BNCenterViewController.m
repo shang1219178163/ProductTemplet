@@ -12,6 +12,7 @@
 @interface BNCenterViewController ()
 
 @property (nonatomic, strong) NSArray * filterList;
+@property (nonatomic, strong) BNTablePlainView * plainView;
 
 @end
 
@@ -86,8 +87,9 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     self.tableView.backgroundColor = UIColor.whiteColor;
-    [self.view addSubview:self.tableView];
-    
+//    [self.view addSubview:self.tableView];
+    [self.view addSubview:self.plainView];
+
     self.view.backgroundColor = UIColor.yellowColor;
     
 //    [self createBarItemTitle:@"Tap" imgName:nil isLeft:NO isHidden:NO handler:^(id obj, UIButton * item, NSInteger idx) {
@@ -112,99 +114,113 @@
 
     self.dataList = @[
                       @[
-                          @"高德地图轨迹回溯", @"PKMainController",
+                          @"PKMainController", @"高德地图轨迹回溯",
                           ],
                       @[
-                          @"字符串映射研究", @"RuntimeController",
+                          @"RuntimeController", @"字符串映射研究",
                           ],
                       @[
-                          @"iOS字体大全", @"FontListController",
+                          @"FontListController", @"iOS字体大全",
                           ],
                       @[
-                          @"FMDB", @"FMBDViewController",
+                          @"FMBDViewController", @"FMDB",
                           ],
                       @[
-                          @"iOS锁性能对比", @"LockCompareController",
+                          @"LockCompareController", @"iOS锁性能对比",
                           ],
                       @[
-                          @"DesignPatterns", @"DesignPatternsController",
+                          @"DesignPatternsController", @"DesignPatterns",
                           ],
                       @[
-                          @"Multithreading", @"MultithreadingViewController",
+                          @"MultithreadingViewController", @"Multithreading",
                           ],
                       @[
-                          @"block循环引用完美解决方案", @"BlockViewController",
+                          @"BlockViewController", @"block循环引用完美解决方案",
                           ],
                       @[
-                          @"通用列表类展示封装", @"ShowListController",
+                          @"ShowListController", @"通用列表类展示封装",
                           
                           ],
                       @[
-                          @"录入类界面封装", @"EntryViewController",
+                          @"EntryViewController", @"录入类界面封装",
                           ],
                       @[
-                          @"View自定义", @"CustomViewController",
+                          @"CustomViewController", @"View自定义",
                           ],
                       @[
-                          @"嵌套TabBar,实现类UITabBarController功能", @"BNTabBarController",
+                          @"BNTabBarController", @"嵌套TabBar,实现类UITabBarController功能",
                           ],
                       @[
-                          @"BNTabBarController子类化", @"SubTabBarController",
+                          @"SubTabBarController", @"BNTabBarController子类化",
                           ],
                       
                       @[
-                          @"UICollectionView", @"UICollectionDisplayController",
+                          @"UICollectionDisplayController", @"UICollectionView",
                           ],
                       @[
-                          @"Sort", @"SortViewController",
+                          @"SortViewController", @"Sort",
                           ],
                       @[
-                          @"(不同线程)广播重定向", @"NotificationTreadController",
+                          @"NotificationTreadController", @"(不同线程)广播重定向",
                           ],
                       @[
-                          @"定时器列表", @"CountDownListController",
+                          @"CountDownListController", @"定时器列表",
                           ],
                       @[
-                          @"UIViewPropertyAnimator(iOS10)", @"UIViewPropertyAnimatorController",
+                          @"UIViewPropertyAnimatorController", @"UIViewPropertyAnimator(iOS10)",
                           ],
                       @[
-                          @"SugerAlert", @"SugerAlertController",
+                          @"SugerAlertController", @"SugerAlert",
                           ],
                       @[
-                          @"同一界面多网络请求", @"MutiRequestController",
+                          @"MutiRequestController", @"同一界面多网络请求",
                           ],
                       @[
-                          @"NSNumberFormatter", @"NumberViewController",
+                          @"NumberViewController", @"NSNumberFormatter",
                           ],
                       @[
-                          @"UITextField", @"UITextFieldController",
+                          @"UITextFieldController", @"UITextField",
                           ],
                       @[
-                          @"UITextView", @"TextViewController",
+                          @"TextViewController", @"UITextView",
                           ],
 //                      @[
-//                          @"FriendList", @"FriendListController",
+//                          @"FriendListController", @"FriendList",
 //                          ],
                       @[
-                          @"金额跳动", @"MoneyDisplayController",
+                          @"MoneyDisplayController", @"金额跳动",
                           ],
                       @[
-                          @"文字转语音", @"AVSpeechViewController",
+                          @"AVSpeechViewController", @"文字转语音",
                           ],
                       
                       @[
-                          @"语音转文字", @"TextFromSpeechController",
+                          @"TextFromSpeechController", @"语音转文字",
                           ],
                       @[
-                          @"直播拉流", @"LoginViewController",
+                          @"LoginViewController", @"直播拉流",
                           ],
                       @[
-                          @"Test", @"TestViewController",
-                          
+                          @"KeyboardController",@"Keyboard自定义",
                           ],
-         
+                      @[
+                          @"AnimationListController", @"动画研究",
+                          ],
+                      @[
+                          @"TestViewController", @"Test",
+                          ],
+                               
                       ].mutableCopy;
+    
+    self.plainView.list = self.dataList;
+    [self.plainView.tableView reloadData];
       
+}
+
+- (void)viewDidLayoutSubviews{
+    [super viewDidLayoutSubviews];
+    
+    self.plainView.frame = self.view.bounds;
 }
 
 -(void)viewWillAppear:(BOOL)animated{
@@ -212,72 +228,45 @@
     
 }
 
-#pragma mark - -UITableView
-
--(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
-    return 1;
-}
-
-- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
-    return 60;
-}
-
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    NSInteger count = self.dataList.count > 0 ? self.dataList.count : 1;
-    return count;
-}
-
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
-    NSArray * list = self.dataList[indexPath.row];
-    
-    static NSString * identifier = @"UITableViewCell1";
-//    UITableViewOneCell * cell = [UITableViewOneCell cellWithTableView:tableView];
-    UITableViewCell * cell = [UITableViewCell cellWithTableView:tableView identifier:identifier style:UITableViewCellStyleSubtitle];
-    cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
-    cell.textLabel.text = list.firstObject;
-    cell.textLabel.textColor = UIColor.themeColor;
-    cell.detailTextLabel.text = list[1];
-    cell.detailTextLabel.textColor = UIColor.grayColor;
-    return cell;
-}
-
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-    NSArray * list = self.dataList[indexPath.row];
-//    [self goController:list.lastObject title:list.firstObject];
-    UITableViewCell * cell = [tableView cellForRowAtIndexPath:indexPath];
-    [self pushController:list.lastObject item:cell type:@0];
-    
-}
-
-//-(NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section{
-//
-//    NSString *text = [NSString stringWithFormat:@"共搜索到%@条符合条件的数据",@(self.resultList.count)];
-//    return text;
-//}
-
--(CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section{
-    return 0.01;
-}
-
-//-(UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section{
-//    UILabel * label = [[UILabel alloc]initWithFrame:CGRectZero];
-//    return label;
-//}
-
--(CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section{
-    return 0.01;
-}
-
-//-(UIView *)tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section{
-//    return [UIView new];
-//}
-
-
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
 
+#pragma mark -lazy
+
+- (BNTablePlainView *)plainView{
+    if (!_plainView) {
+        _plainView = [[BNTablePlainView alloc]init];
+        _plainView.tableView.rowHeight = 70;
+        
+        @weakify(self);
+        _plainView.blockCellForRow = ^UITableViewCell *(UITableView *tableView, NSIndexPath *indexPath) {
+            @strongify(self);
+            NSArray * list = self.dataList[indexPath.row];
+
+            static NSString * identifier = @"UITableViewCell1";
+            //    UITableViewOneCell * cell = [UITableViewOneCell cellWithTableView:tableView];
+            UITableViewCell * cell = [UITableViewCell cellWithTableView:tableView identifier:identifier style:UITableViewCellStyleSubtitle];
+            cell.textLabel.text = list[1];
+            cell.textLabel.textColor = UIColor.themeColor;
+            
+            cell.detailTextLabel.text = list[0];
+            cell.detailTextLabel.textColor = UIColor.grayColor;
+            cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+            return cell;
+        };
+        
+        _plainView.blockDidSelectRow = ^(UITableView *tableView, NSIndexPath *indexPath) {
+            @strongify(self);
+            NSArray * list = self.dataList[indexPath.row];
+            //    [self goController:list.lastObject title:list.firstObject];
+            UITableViewCell * cell = [tableView cellForRowAtIndexPath:indexPath];
+            [self pushController:list[0] item:cell type:@0];
+        };
+    }
+    return _plainView;
+}
 
 @end
 

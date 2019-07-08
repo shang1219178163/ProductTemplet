@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface TextViewController : UIViewController
+@interface TextViewInputController : UIViewController
 
 @end

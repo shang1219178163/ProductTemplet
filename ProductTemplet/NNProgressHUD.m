@@ -83,7 +83,7 @@
 
 + (void)showText:(NSString *)text{
     UIView * view = UIApplication.sharedApplication.keyWindow;
-    [NNProgressHUD showText:text centerY:view.centerY];
+    [NNProgressHUD showText:text centerY:view.center.y];
 }
 
 + (void)showLoadingText:(NSString *)text inView:(UIView *)inView{

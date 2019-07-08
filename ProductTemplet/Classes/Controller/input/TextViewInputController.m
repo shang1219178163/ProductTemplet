@@ -6,25 +6,18 @@
 //  Copyright © 2018年 kyson. All rights reserved.
 //
 
-#import "TextViewController.h"
+#import "TextViewInputController.h"
 
-#define SCREEN_WIDTH ([UIScreen mainScreen].bounds.size.width)
-#define SCREEN_HEIGHT ([UIScreen mainScreen].bounds.size.height)
-
-@interface TextViewController()<UITextViewDelegate>
-
+@interface TextViewInputController()<UITextViewDelegate>
 
 @property(nonatomic, strong) UITextView *xTextView;
 
 @end
 
 
+@implementation TextViewInputController
 
-@implementation TextViewController
-
-
-- (instancetype)init
-{
+- (instancetype)init{
     self = [super init];
     if (self) {
         
@@ -42,9 +35,9 @@
     [self.view addSubview:self.xTextView];
     
     
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(handleKeyboardNotification:) name:UIKeyboardWillShowNotification object:nil];
+    [NSNotificationCenter.defaultCenter addObserver:self selector:@selector(handleKeyboardNotification:) name:UIKeyboardWillShowNotification object:nil];
     
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(handleKeyboardNotification:) name:UIKeyboardWillHideNotification object:nil];
+    [NSNotificationCenter.defaultCenter addObserver:self selector:@selector(handleKeyboardNotification:) name:UIKeyboardWillHideNotification object:nil];
 }
 
 
@@ -83,7 +76,7 @@
 
 -(UITextView *)xTextView{
     if (!_xTextView) {
-        _xTextView = [[UITextView alloc] initWithFrame:CGRectMake(0, 100, SCREEN_WIDTH, SCREEN_HEIGHT - 100)];
+        _xTextView = [[UITextView alloc] initWithFrame:CGRectMake(0, 100, kScreenWidth, kScreenHeight - 100)];
         _xTextView.font = [UIFont systemFontOfSize:25];
     }
     return _xTextView;
@@ -92,7 +85,7 @@
 
 - (void)dealloc
 {
-    [[NSNotificationCenter defaultCenter] removeObserver:self];
+    [NSNotificationCenter.defaultCenter removeObserver:self];
 }
 
 @end

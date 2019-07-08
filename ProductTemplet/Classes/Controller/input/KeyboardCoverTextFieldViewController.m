@@ -18,16 +18,13 @@
 
 @implementation KeyboardCoverTextFieldViewController
 
-#define SCREEN_WIDTH ([UIScreen mainScreen].bounds.size.width)
-#define SCREEN_HEIGHT ([UIScreen mainScreen].bounds.size.height)
-
 -(void)viewDidLoad{
     [super viewDidLoad];
     self.tableview.keyboardDismissMode = UIScrollViewKeyboardDismissModeOnDrag;
     self.tableview.delegate = self;
     self.tableview.dataSource = self;
     [self.view addSubview:self.tableview];
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyBoardWillShowWithNotification:) name:UIKeyboardWillChangeFrameNotification object:nil];
+    [NSNotificationCenter.defaultCenter addObserver:self selector:@selector(keyBoardWillShowWithNotification:) name:UIKeyboardWillChangeFrameNotification object:nil];
 }
 
 
@@ -40,7 +37,7 @@
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
     if (!cell) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:cellIdentifier];
-        UITextField *field = [[UITextField alloc] initWithFrame:CGRectMake(15, 10, SCREEN_WIDTH - 30, 24)];
+        UITextField *field = [[UITextField alloc] initWithFrame:CGRectMake(15, 10, kScreenWidth - 30, 24)];
         field.delegate = self;
         field.placeholder = [NSString stringWithFormat:@"You can input Something At Index %li",(long)indexPath.row];
         [cell.contentView addSubview:field];
@@ -70,7 +67,7 @@
 
 -(UITableView *)tableview{
     if (!_tableview) {
-        _tableview = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT)];
+        _tableview = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, kScreenWidth, kScreenHeight)];
     }
     return _tableview;
 }
@@ -78,14 +75,14 @@
 
 -(NSArray *)titles{
     if (!_titles) {
-        _titles = @[@"textField",@"textField",@"textField",@"textField",@"textField",@"textField",@"textField",@"textField",@"textField",@"textField",@"textField",@"textField",@"textField",@"textField",@"textField",@"textField",@"textField",@"textField"];
+        _titles = @[@"textField",@"textField",@"textField",];
     }
     return _titles;
 }
 
 - (void)dealloc
 {
-    [[NSNotificationCenter defaultCenter] removeObserver:self];
+    [NSNotificationCenter.defaultCenter removeObserver:self];
 }
 
 

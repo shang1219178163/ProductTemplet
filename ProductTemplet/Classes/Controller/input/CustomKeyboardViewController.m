@@ -10,9 +10,6 @@
 
 #import "CustomKeyboardView.h"
 
-#define SCREEN_WIDTH ([UIScreen mainScreen].bounds.size.width)
-#define SCREEN_HEIGHT ([UIScreen mainScreen].bounds.size.height)
-
 @interface CustomKeyboardViewController ()<CustomKeyboardDelegate>
 
 @property (nonatomic, strong) UITextField *xTextField;
@@ -27,7 +24,7 @@
     self.view.backgroundColor = [UIColor whiteColor];
 
 #define kTextFieldHeight 40
-    self.xTextField.frame = CGRectMake(15, 85, SCREEN_WIDTH - 30, kTextFieldHeight);
+    self.xTextField.frame = CGRectMake(15, 85, kScreenWidth - 30, kTextFieldHeight);
     self.xTextField.layer.borderColor = UIColor.grayColor.CGColor;
     self.xTextField.layer.borderWidth = 1.f;
     self.xTextField.layer.cornerRadius = 12.f;
@@ -39,7 +36,7 @@
     self.xTextField.placeholder = @"Please Input Here";
     [self.view addSubview:self.xTextField];
     
-    CustomKeyboardView *keyView = [[CustomKeyboardView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, 176)];
+    CustomKeyboardView *keyView = [[CustomKeyboardView alloc] initWithFrame:CGRectMake(0, 0, kScreenWidth, 176)];
     keyView.delegate = self;
     self.xTextField.inputView = keyView;
 
@@ -53,9 +50,6 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-
-
-
 
 -(UITextField *)xTextField{
     if (!_xTextField) {

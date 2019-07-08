@@ -14,10 +14,8 @@
 
 @implementation CustomKeyboardView
 
-
 //shuffle
--(NSArray *)shuffle:(NSArray<NSNumber *> *)array
-{
+-(NSArray *)shuffle:(NSArray<NSNumber *> *)array{
     if(array == nil || array.count < 1)
         return nil;
     NSMutableArray *resultArray = [NSMutableArray arrayWithArray:array];
@@ -34,10 +32,7 @@
     return resultArray;
 }
 
-
-
-- (instancetype)initWithFrame:(CGRect)frame
-{
+- (instancetype)initWithFrame:(CGRect)frame{
     self = [super initWithFrame:frame];
     if (self) {
 
@@ -63,26 +58,17 @@
     return self;
 }
 
-
 -(void)buttonDidClicked:(UIButton *) sender{
     if (self.delegate) {
         [self.delegate keyboardItemDidClicked:sender.titleLabel.text];
     }
 }
 
-
 -(void)layoutSubviews{
     [super layoutSubviews];
     
     
-    
-    
 }
-
-
-
-
-
 
 
 @end

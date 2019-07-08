@@ -9,9 +9,6 @@
 #import "IDCardKeyboardViewController.h"
 #import "UITextField+Util.h"
 
-#define SCREEN_WIDTH ([UIScreen mainScreen].bounds.size.width)
-#define SCREEN_HEIGHT ([UIScreen mainScreen].bounds.size.height)
-
 @interface IDCardKeyboardViewController ()
 
 @property (nonatomic, strong) UITextField *xTextField;
@@ -29,7 +26,7 @@
     self.view.backgroundColor = [UIColor whiteColor];
     
 #define kTextFieldHeight 40
-    self.xTextField.frame = CGRectMake(15, 85, SCREEN_WIDTH - 30, kTextFieldHeight);
+    self.xTextField.frame = CGRectMake(15, 85, kScreenWidth - 30, kTextFieldHeight);
     self.xTextField.layer.borderColor = UIColor.grayColor.CGColor;
     self.xTextField.layer.borderWidth = 1.f;
     self.xTextField.layer.cornerRadius = 12.f;
@@ -41,8 +38,8 @@
     
     self.xTextField.placeholder = @"Please Input Here";
     [self.view addSubview:self.xTextField];
-    [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(keyboardWillShow:) name:UIKeyboardWillShowNotification object:nil];
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardWillHide:) name:UIKeyboardWillHideNotification object:nil];
+    [NSNotificationCenter.defaultCenter addObserver:self selector:@selector(keyboardWillShow:) name:UIKeyboardWillShowNotification object:nil];
+    [NSNotificationCenter.defaultCenter addObserver:self selector:@selector(keyboardWillHide:) name:UIKeyboardWillHideNotification object:nil];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -60,11 +57,11 @@
     CGFloat extrakeyButtonX = 0;
     CGFloat extrakeyButtonW = 0;
     CGFloat extrakeyButtonH = 0;
-    extrakeyButtonW = (SCREEN_WIDTH - 7) / 3;
+    extrakeyButtonW = (kScreenWidth - 7) / 3;
     extrakeyButtonH = kbHeight / 4;
 
     CGFloat extrakeyButtonY = 0;
-    extrakeyButtonY = SCREEN_HEIGHT + kbHeight - extrakeyButtonH;
+    extrakeyButtonY = kScreenHeight + kbHeight - extrakeyButtonH;
     //init here
     self.extrakeyButton = [[UIButton alloc] initWithFrame:CGRectMake(extrakeyButtonX, extrakeyButtonY, extrakeyButtonW, extrakeyButtonH)];
     [self.extrakeyButton addTarget:self action:@selector(buttonDidClicked) forControlEvents:UIControlEventTouchUpInside];
@@ -94,13 +91,11 @@
     [string replaceCharactersInRange:self.xTextField.selectedRange withString:self.extrakeyButton.currentTitle];
     self.xTextField.text = string;
     [self.xTextField setSelectedRange:NSMakeRange(insertIndex + 1, 0)];
-    [[NSNotificationCenter defaultCenter] postNotificationName:UITextFieldTextDidChangeNotification object:self];
+    [NSNotificationCenter.defaultCenter postNotificationName:UITextFieldTextDidChangeNotification object:self];
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
         [[UIDevice currentDevice] playInputClick];
     });
 }
-
-
 
 -(UITextField *)xTextField{
     if (!_xTextField) {
@@ -109,15 +104,14 @@
     return _xTextField;
 }
 
-
 -(void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
     [self.xTextField resignFirstResponder];
 }
 
 -(void)dealloc{
     //注销通知
-    [[NSNotificationCenter defaultCenter] removeObserver:self name:UIKeyboardWillShowNotification object:nil];
-    [[NSNotificationCenter defaultCenter] removeObserver:self name:UIKeyboardWillHideNotification object:nil];
+    [NSNotificationCenter.defaultCenter removeObserver:self name:UIKeyboardWillShowNotification object:nil];
+    [NSNotificationCenter.defaultCenter removeObserver:self name:UIKeyboardWillHideNotification object:nil];
 }
 
 @end

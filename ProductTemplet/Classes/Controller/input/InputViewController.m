@@ -8,9 +8,6 @@
 
 #import "InputViewController.h"
 
-#define SCREEN_WIDTH ([UIScreen mainScreen].bounds.size.width)
-#define SCREEN_HEIGHT ([UIScreen mainScreen].bounds.size.height)
-
 @interface InputViewController ()
 
 @property (nonatomic, strong) UITextField *xTextField;
@@ -22,7 +19,7 @@
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor whiteColor];
 #define kTextFieldHeight 40
-    self.xTextField.frame = CGRectMake(15, SCREEN_HEIGHT - kTextFieldHeight, SCREEN_WIDTH - 30, kTextFieldHeight);
+    self.xTextField.frame = CGRectMake(15, kScreenHeight - kTextFieldHeight, kScreenWidth - 30, kTextFieldHeight);
     self.xTextField.layer.borderColor = UIColor.grayColor.CGColor;
     self.xTextField.layer.borderWidth = 1.f;
     self.xTextField.layer.cornerRadius = 12.f;
@@ -33,9 +30,9 @@
     self.xTextField.placeholder = @"Please Input Here";
     [self.view addSubview:self.xTextField];
     
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(handleKeyboardNotification:) name:UIKeyboardWillShowNotification object:nil];
+    [NSNotificationCenter.defaultCenter addObserver:self selector:@selector(handleKeyboardNotification:) name:UIKeyboardWillShowNotification object:nil];
     
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(handleKeyboardNotification:) name:UIKeyboardWillHideNotification object:nil];
+    [NSNotificationCenter.defaultCenter addObserver:self selector:@selector(handleKeyboardNotification:) name:UIKeyboardWillHideNotification object:nil];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -73,7 +70,7 @@
 
 - (void)dealloc
 {
-    [[NSNotificationCenter defaultCenter] removeObserver:self];
+    [NSNotificationCenter.defaultCenter removeObserver:self];
 }
 
 

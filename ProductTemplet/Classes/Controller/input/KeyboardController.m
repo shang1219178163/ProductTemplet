@@ -6,15 +6,12 @@
 //  Copyright © 2018年 kyson. All rights reserved.
 //
 
-#import "ViewController.h"
-#import "TextViewController.h"
+#import "KeyboardController.h"
+#import "TextViewInputController.h"
 #import "InputViewController.h"
 #import "KeyboardCoverTextFieldViewController.h"
 #import "CustomKeyboardViewController.h"
 #import "IDCardKeyboardViewController.h"
-
-#define SCREEN_WIDTH ([UIScreen mainScreen].bounds.size.width)
-#define SCREEN_HEIGHT ([UIScreen mainScreen].bounds.size.height)
 
 @interface KeyboardController ()<UITableViewDelegate,UITableViewDataSource>
 
@@ -59,7 +56,7 @@
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     switch (indexPath.row) {
         case 0:{
-            TextViewController *textViewController = [[TextViewController alloc] init];
+            TextViewInputController *textViewController = [[TextViewInputController alloc] init];
             [self.navigationController pushViewController:textViewController animated:YES];
         }
             break;
@@ -92,7 +89,7 @@
 
 -(UITableView *)tableview{
     if (!_tableview) {
-        _tableview = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT)];
+        _tableview = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, kScreenWidth, kScreenHeight)];
     }
     
     return _tableview;
@@ -101,7 +98,8 @@
 
 -(NSArray *)titles{
     if (!_titles) {
-        _titles = @[@"TextViewController",@"InputViewController",@"KeyboardCoverTextFieldViewController",@"IDCardKeyboardViewController",@"CustomKeyboardViewController"];
+        _titles = @[@"TextViewInputController", @"InputViewController", @"KeyboardCoverTextFieldViewController",
+                    @"IDCardKeyboardViewController", @"CustomKeyboardViewController"];
     }
     return _titles;
 }
