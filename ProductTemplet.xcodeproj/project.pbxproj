@@ -132,6 +132,7 @@
 		14579BA42294FBBA001FEB0C /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 14579BA22294FBBA001FEB0C /* Reachability.m */; };
 		146B8187225C74860004A249 /* SubTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 146B8186225C74860004A249 /* SubTabBarController.m */; };
 		147AB8B822DDD76D00A5C4EC /* FileShareController.m in Sources */ = {isa = PBXBuildFile; fileRef = 147AB8B722DDD76D00A5C4EC /* FileShareController.m */; };
+		147AB8BB22DDE62700A5C4EC /* TrackRecordsController.m in Sources */ = {isa = PBXBuildFile; fileRef = 147AB8BA22DDE62700A5C4EC /* TrackRecordsController.m */; };
 		147B971F21EF005B000F5294 /* UICollectionDisplayController.m in Sources */ = {isa = PBXBuildFile; fileRef = 147B971E21EF005B000F5294 /* UICollectionDisplayController.m */; };
 		149111D42272FFCC0078A7BB /* BNPageModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 149111D32272FFCC0078A7BB /* BNPageModel.m */; };
 		149111D7227308640078A7BB /* BNRequstManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 149111D6227308640078A7BB /* BNRequstManager.m */; };
@@ -721,6 +722,8 @@
 		146B8186225C74860004A249 /* SubTabBarController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SubTabBarController.m; sourceTree = "<group>"; };
 		147AB8B622DDD76D00A5C4EC /* FileShareController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FileShareController.h; sourceTree = "<group>"; };
 		147AB8B722DDD76D00A5C4EC /* FileShareController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FileShareController.m; sourceTree = "<group>"; };
+		147AB8B922DDE62700A5C4EC /* TrackRecordsController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TrackRecordsController.h; sourceTree = "<group>"; };
+		147AB8BA22DDE62700A5C4EC /* TrackRecordsController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TrackRecordsController.m; sourceTree = "<group>"; };
 		147B971D21EF005B000F5294 /* UICollectionDisplayController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UICollectionDisplayController.h; sourceTree = "<group>"; };
 		147B971E21EF005B000F5294 /* UICollectionDisplayController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UICollectionDisplayController.m; sourceTree = "<group>"; };
 		149111D22272FFCC0078A7BB /* BNPageModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BNPageModel.h; sourceTree = "<group>"; };
@@ -1961,6 +1964,8 @@
 		51364744208604DD005A20E7 /* LocationTracker */ = {
 			isa = PBXGroup;
 			children = (
+				147AB8B922DDE62700A5C4EC /* TrackRecordsController.h */,
+				147AB8BA22DDE62700A5C4EC /* TrackRecordsController.m */,
 				51364745208604DD005A20E7 /* BackgroundTaskManager.h */,
 				51364746208604DD005A20E7 /* BackgroundTaskManager.m */,
 				51364747208604DD005A20E7 /* LocationShareModel.h */,
@@ -3200,6 +3205,7 @@
 				14E42CF72200040F00606AD0 /* BNTempViewController.m in Sources */,
 				14E42D162200042800606AD0 /* BNMenuListController.m in Sources */,
 				515CC97D20B6AAF2004AE27C /* AAOptions3d.m in Sources */,
+				147AB8BB22DDE62700A5C4EC /* TrackRecordsController.m in Sources */,
 				513646AF2086031D005A20E7 /* main.m in Sources */,
 				1401BE6F2276A50E0078A722 /* BNCacheKey.m in Sources */,
 				14B6B33522B0F8760047E094 /* PKSeverinfoModel.m in Sources */,

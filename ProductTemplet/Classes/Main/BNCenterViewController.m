@@ -106,6 +106,7 @@
 
     self.dataList = @[
                       @[@"PKMainController", @"高德地图轨迹回溯",],
+                      @[@"TrackRecordsController", @"后台二十四小时定时定位",],                      
                       @[@"TextFromSpeechController", @"语音转文字",],
                       @[@"AVSpeechViewController", @"文字转语音",],
                       @[@"RuntimeController", @"字符串映射研究",],

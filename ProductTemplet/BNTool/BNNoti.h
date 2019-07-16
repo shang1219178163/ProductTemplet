@@ -13,10 +13,10 @@
 
 #define kNoti_isRemote   @"kNoti_isRemote"
 
-#define kLocation_latitude   @"kLocation_latitude"
-#define kLocation_longitude  @"kLocation_longitude"
-#define kLocation_accuracy   @"kLocation_accuracy"
-#define kLocation_timeStamp  @"kLocation_timeStamp"
+//#define kLocation_latitude   @"kLocation_latitude"
+//#define kLocation_longitude  @"kLocation_longitude"
+//#define kLocation_accuracy   @"kLocation_accuracy"
+//#define kLocation_timeStamp  @"kLocation_timeStamp"
 
 #define kNoti_location_UploadCoordinate @"kNoti_location_UploadCoordinate"
 

@@ -96,7 +96,6 @@
 }
 
 - (void)startLocationTracking {
-
     CLAuthorizationStatus authorizationStatus = [CLLocationManager authorizationStatus];
     if (authorizationStatus == kCLAuthorizationStatusAuthorizedAlways) {
         [self locationMangerBegin];
@@ -110,7 +109,6 @@
 }
 
 - (void)stopLocationTracking {
-    
     [NSTimer stopTimer:self.shareModel.timerDelay];
 
 	CLLocationManager *locationManager = [LocationTracker shared];
@@ -122,7 +120,6 @@
 #pragma mark - CLLocationManagerDelegate Methods
 
 -(void)locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray *)locations{
-
     if (locations.count != 0) {
         CLLocation *userLocation = [locations lastObject];
 //        DDLog(@"userLocation__%@",userLocation);
@@ -272,9 +269,7 @@
 
 //获取当前时间戳
 - (NSString *)currentTimeStamp{
-    NSDate* date = [NSDate dateWithTimeIntervalSinceNow:0];//获取当前时间0秒后的时间
-    NSTimeInterval timeInterval = [date timeIntervalSince1970];// *1000 是精确到毫秒，不乘就是精确到秒
-    NSString *timeStr = [NSString stringWithFormat:@"%.0f", timeInterval];
+    NSString *timeStr = [NSString stringWithFormat:@"%.0f", NSDate.date.timeIntervalSince1970];
     return timeStr;
 }
 

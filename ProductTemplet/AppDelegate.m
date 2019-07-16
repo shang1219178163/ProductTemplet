@@ -14,10 +14,14 @@
 #import "BNMapManager.h"
 
 #import "ZYSliderViewController.h"
+#import "LocationTracker.h"
 #import "FileShareController.h"
 
 @interface AppDelegate ()
-
+/// 后台定时定位
+@property(nonatomic, strong) LocationTracker *locationTracker;
+@property(nonatomic, strong) NSTimer *locationTimer;
+/// app间文件共享
 @property(nonatomic, strong) FileShareController * fileController;
 @property(nonatomic, strong) UINavigationController * navController;
 
@@ -77,7 +81,35 @@
 //    [UIApplication registerUMengSDKAppKey:kAppKey_UMeng channel:kChannel_UMeng];
 //    //极光
 //    [self registerJPushSDKAppKey:kAppKey_JPush channel:kChannel_JPush isProduction:kIsProduction options:launchOptions];
-//    [self startBackgroudUploadLocation];
+    // 后台定位
+    [self startBackgroudUploadLocation];
+}
+
+- (void)startBackgroudUploadLocation{
+    [UIApplication registerAPNsWithDelegate:self];
+    
+    NSDictionary *dic = @{
+                          @(UIBackgroundRefreshStatusDenied): @"The app doesn't work without the Background App Refresh enabled. To turn it on, go to Settings > General > Background App Refresh",
+                          @(UIBackgroundRefreshStatusRestricted): @"The functions of this app are limited because the Background App Refresh is disable."
+                          };
+    if ([dic.allKeys containsObject:@(UIApplication.sharedApplication.backgroundRefreshStatus)]) {
+        NSString * message = dic[@(UIApplication.sharedApplication.backgroundRefreshStatus)];
+        [UIAlertController showSheetTitle:@"" msg:message actionTitles:@[kActionTitle_Sure] handler:nil];
+        return;
+    }
+    
+    self.locationTracker = [[LocationTracker alloc]init];
+    [self.locationTracker startLocationTracking];
+    self.locationTimer = [NSTimer scheduledTimerWithTimeInterval:kTimer_Interval
+                                                          target:self
+                                                        selector:@selector(updateLocation)
+                                                        userInfo:nil
+                                                         repeats:YES];
+}
+
+-(void)updateLocation {
+    NSLog(@"updateLocation");
+    [self.locationTracker updateLocationToServer];
 }
 
 //- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
@@ -107,7 +139,6 @@
 //
 //    return YES;
 //}
-
 
 - (void)applicationWillResignActive:(UIApplication *)application {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
