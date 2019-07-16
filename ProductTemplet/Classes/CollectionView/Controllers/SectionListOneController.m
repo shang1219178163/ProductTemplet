@@ -1,13 +1,13 @@
 
 //
-//  LeftViewController.m
+//  SectionListOneController.m
 //  BN_CollectionView
 //
 //  Created by hsf on 2018/4/12.
 //  Copyright © 2018年 BN. All rights reserved.
 //
 
-#import "LeftViewController.h"
+#import "SectionListOneController.h"
 
 #import "BNDataModel.h"
 
@@ -15,7 +15,7 @@
 #import "UICTReusableViewZero.h"
 
 
-@interface LeftViewController ()<UICollectionViewDataSource,UICollectionViewDelegate,UICollectionViewDelegateFlowLayout>
+@interface SectionListOneController ()<UICollectionViewDataSource,UICollectionViewDelegate,UICollectionViewDelegateFlowLayout>
 
 @property (nonatomic, strong) NSMutableArray *dataList;
 
@@ -24,84 +24,16 @@
 
 @end
 
-@implementation LeftViewController
+@implementation SectionListOneController
 
--(NSMutableArray *)dataList{
-    if (!_dataList) {
-        _dataList = [NSMutableArray arrayWithCapacity:0];
-    }
-    return _dataList;
-    
-}
-
--(NSDictionary *)dictClass{
-    
-    if (!_dictClass) {
-        _dictClass = @{
-                       
-                       UICollectionElementKindSectionItem:   @[
-                               @"UICTViewCellOne"
-                               ],
-                       UICollectionElementKindSectionHeader:   @[
-                               @"UICTReusableViewZero",
-                               ],
-                       UICollectionElementKindSectionFooter:   @[
-                               @"UICTReusableViewZero",
-                               ],
-                       
-                       };
-        
-    }
-    return _dictClass;
-}
-
--(UICollectionView *)collectionView{
-    if (!_collectionView) {
-        _collectionView = ({
-            UICollectionViewFlowLayout *layout = [[UICollectionViewFlowLayout alloc] init];
-            
-            //item水平间距
-            layout.minimumLineSpacing = 10;
-            //item垂直间距
-            layout.minimumInteritemSpacing = 10;
-            //item的尺寸
-            layout.itemSize = CGSizeMake(90, 100);
-            //item的UIEdgeInsets
-            layout.sectionInset = UIEdgeInsetsMake(10, 10, 10, 10);
-            //滑动方向,默认垂直
-            //            layout.scrollDirection = UICollectionViewScrollDirectionHorizontal;
-            //sectionView 尺寸
-            layout.headerReferenceSize = CGSizeMake(CGRectGetWidth(self.view.bounds), 40);
-            layout.footerReferenceSize = CGSizeMake(CGRectGetWidth(self.view.bounds), 20);
-            
-            UICollectionView *collectionView = [[UICollectionView alloc]initWithFrame:self.view.bounds collectionViewLayout:layout];
-            collectionView.backgroundColor = [UIColor whiteColor];
-            collectionView.delegate = self;
-            collectionView.dataSource = self;
-            collectionView.scrollsToTop = NO;
-            collectionView.showsVerticalScrollIndicator = NO;
-            collectionView.showsHorizontalScrollIndicator = NO;
-            
-            collectionView.dictClass = self.dictClass;
-            
-            collectionView;
-        });
-    }
-    return _collectionView;
-}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     self.edgesForExtendedLayout = UIRectEdgeNone;
     
-
     self.title = NSStringFromClass([self class]);
     self.view.backgroundColor = [UIColor whiteColor];
-    
-    
-    UIBarButtonItem * barOne = [[UIBarButtonItem alloc]initWithTitle:@"NEXT" style:UIBarButtonItemStyleDone target:self action:@selector(handleActionBtn:)];
-    self.navigationItem.rightBarButtonItem = barOne;
     
     [self.view addSubview:self.collectionView];
     
@@ -136,13 +68,6 @@
             [self.dataList addObject:model];
         }
     }
-    
-}
-
-- (void)handleActionBtn:(UIBarButtonItem *)sender{
-    DDLog(@"%@",sender.title);
-    
-
     
 }
 
@@ -290,6 +215,71 @@
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+
+#pragma mark -lazy
+-(NSMutableArray *)dataList{
+    if (!_dataList) {
+        _dataList = [NSMutableArray array];
+    }
+    return _dataList;
+    
+}
+
+-(NSDictionary *)dictClass{
+    if (!_dictClass) {
+        _dictClass = @{
+                       
+                       UICollectionElementKindSectionItem:   @[
+                               @"UICTViewCellOne"
+                               ],
+                       UICollectionElementKindSectionHeader:   @[
+                               @"UICTReusableViewZero",
+                               ],
+                       UICollectionElementKindSectionFooter:   @[
+                               @"UICTReusableViewZero",
+                               ],
+                       
+                       };
+        
+    }
+    return _dictClass;
+}
+
+-(UICollectionView *)collectionView{
+    if (!_collectionView) {
+        _collectionView = ({
+            UICollectionViewFlowLayout *layout = [[UICollectionViewFlowLayout alloc] init];
+            
+            //item水平间距
+            layout.minimumLineSpacing = 10;
+            //item垂直间距
+            layout.minimumInteritemSpacing = 10;
+            //item的尺寸
+            layout.itemSize = CGSizeMake(90, 100);
+            //item的UIEdgeInsets
+            layout.sectionInset = UIEdgeInsetsMake(10, 10, 10, 10);
+            //滑动方向,默认垂直
+            //            layout.scrollDirection = UICollectionViewScrollDirectionHorizontal;
+            //sectionView 尺寸
+            layout.headerReferenceSize = CGSizeMake(CGRectGetWidth(self.view.bounds), 40);
+            layout.footerReferenceSize = CGSizeMake(CGRectGetWidth(self.view.bounds), 20);
+            
+            UICollectionView *collectionView = [[UICollectionView alloc]initWithFrame:self.view.bounds collectionViewLayout:layout];
+            collectionView.backgroundColor = [UIColor whiteColor];
+            collectionView.delegate = self;
+            collectionView.dataSource = self;
+            collectionView.scrollsToTop = NO;
+            collectionView.showsVerticalScrollIndicator = NO;
+            collectionView.showsHorizontalScrollIndicator = NO;
+            
+            collectionView.dictClass = self.dictClass;
+            
+            collectionView;
+        });
+    }
+    return _collectionView;
 }
 
 

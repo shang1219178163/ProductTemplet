@@ -8,9 +8,8 @@
 
 #import "StrategyViewController.h"
 
-#import "Strategy/StrategyFinancy.h"
-
-#import "Strategy/CustomTextField.h"
+#import "StrategyFinancy.h"
+#import "CustomTextField.h"
 
 @interface StrategyViewController ()
 
@@ -21,7 +20,6 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    
     
 }
 

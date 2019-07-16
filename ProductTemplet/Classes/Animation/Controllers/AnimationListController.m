@@ -51,7 +51,8 @@
                       @[@"DriftAnimationController", @"红包雨动画",],
                       @[@"EmitterViewController", @"粒子动画",],
                       @[@"CommonAnimationController", @"动画",],
-                      
+                      @[@"UIViewPropertyAnimatorController", @"UIViewPropertyAnimator(iOS10)",],
+
                       ].mutableCopy;
     
 }

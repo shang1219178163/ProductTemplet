@@ -18,17 +18,6 @@
 
 @implementation BNExcelController
 
--(UIExcelView *)excelView{
-    if (!_excelView) {
-        CGRect rect = CGRectMake(0, 0, CGRectGetWidth(self.view.bounds), CGRectGetHeight(self.view.bounds));
-        _excelView = [[UIExcelView alloc]initWithFrame:rect];
-        _excelView.block = ^(UIExcelView *view, UICTViewCellExcel *cell, NSIndexPath *indexPath) {
-            DDLog(@"_%@\n%@\n%@",view,cell.label.text,NSStringFromIndexPath(indexPath));
-            
-        };
-    }
-    return _excelView;
-}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -86,7 +75,7 @@
     }
     
     NSArray *array = marr.copy;
-    NSArray * widthList = @[@80,@80,@80,@80,@80,@80,@80,@80,@80];
+//    NSArray * widthList = @[@80,@80,@80,@80,@80,@80,@80,@80,@80];
     NSArray * titleList = @[@"名称",@"总数",@"剩余",@"IP",@"状态",@"状态1",@"状态2",@"状态3",@"状态4",@"状态5"];
     NSMutableDictionary *dic  = @{
                                   //            kExcel_LockColumn   :   @1,
@@ -99,6 +88,20 @@
 
     self.excelView.dict = dic;
     [self.excelView reloadData];
+}
+
+#pragma mark -lazy
+
+-(UIExcelView *)excelView{
+    if (!_excelView) {
+        CGRect rect = CGRectMake(0, 0, CGRectGetWidth(self.view.bounds), CGRectGetHeight(self.view.bounds));
+        _excelView = [[UIExcelView alloc]initWithFrame:rect];
+        _excelView.block = ^(UIExcelView *view, UICTViewCellExcel *cell, NSIndexPath *indexPath) {
+            DDLog(@"_%@\n%@\n%@",view,cell.label.text,NSStringFromIndexPath(indexPath));
+            
+        };
+    }
+    return _excelView;
 }
 
 

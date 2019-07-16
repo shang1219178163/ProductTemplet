@@ -32,12 +32,6 @@
     self.title = @"list";
     self.view.backgroundColor = [UIColor orangeColor];
     
-    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc]initWithTitle:@"done" style:UIBarButtonItemStyleDone target:self action:@selector(handleActionBtn:)];
-    self.navigationItem.leftBarButtonItem.tag = 0;
-    
-    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc]initWithTitle:@"Excel" style:UIBarButtonItemStyleDone target:self action:@selector(handleActionBtn:)];
-    self.navigationItem.rightBarButtonItem.tag = 1;
-
     self.dictClass = @{
                        UICollectionElementKindSectionItem:   @[
                                @"UICTViewCellZero"
@@ -98,6 +92,7 @@
     
     self.collectionView.delegate = self;
     self.collectionView.dataSource = self;
+ 
     
     [self.view addSubview:self.collectionView];
     

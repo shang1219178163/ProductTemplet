@@ -65,19 +65,6 @@
     
     //
     CGRect rectNew = CGRectMake(20, CGRectGetMidY(self.view.bounds), kScreenWidth - 20*2, 0);
-//    UIView * containViewNew = [self createViewWithRectNew:rectNew elements:self.elementList numberOfRow:2 viewHeight:30 padding:10];
-//    containViewNew.backgroundColor = UIColor.greenColor;
-//    [self.view addSubview:containViewNew];
-    
-//    for (UIView * view in containViewNew.subviews) {
-//        [view addActionHandler:^(id obj, id item, NSInteger idx) {
-//            DDLog(@"%@",item);
-//            BNRadioView * radioView = item;
-//            radioView.isSelected = !radioView.isSelected;
-//
-//        }];
-//    }
- 
     BNGroupView * groupView = [BNGroupView viewRect:rectNew items:self.elementList numberOfRow:2 itemHeight:30 padding:10 selectedList:@[@1,@3,@6]];
     [self.view addSubview:groupView];
     

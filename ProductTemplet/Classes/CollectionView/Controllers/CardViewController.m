@@ -24,58 +24,6 @@
 
 @implementation CardViewController
 
--(NSDictionary *)dictClass{
-    if (!_dictClass) {
-        _dictClass = @{
-                       
-                       UICollectionElementKindSectionItem:   @[
-                                                               @"UICTViewCellOne"
-                                                               ],
-                       
-                       };
-        
-    }
-    return _dictClass;
-}
-
-
--(UICollectionView *)collectionView{
-    if (!_collectionView) {
-        _collectionView = ({
-            //默认布局
-            UICollectionViewFlowLayout *layout = [[UICollectionViewFlowLayout alloc] init];
-            
-            //item水平间距
-            layout.minimumLineSpacing = 10;
-            //item垂直间距
-            layout.minimumInteritemSpacing = 10;
-            //item的尺寸
-            layout.itemSize = CGSizeMake(90, 100);
-            //item的UIEdgeInsets
-            layout.sectionInset = UIEdgeInsetsMake(10, 10, 10, 10);
-            //滑动方向,默认垂直
-            //            layout.scrollDirection = UICollectionViewScrollDirectionHorizontal;
-            //sectionView 尺寸
-            layout.headerReferenceSize = CGSizeMake(CGRectGetWidth(self.view.bounds), 40);
-            layout.footerReferenceSize = CGSizeMake(CGRectGetWidth(self.view.bounds), 20);
-            
-            UICollectionView *collectionView = [[UICollectionView alloc]initWithFrame:self.view.bounds collectionViewLayout:layout];
-            collectionView.backgroundColor = [UIColor whiteColor];
-            collectionView.delegate = self;
-            collectionView.dataSource = self;
-            collectionView.scrollsToTop = NO;
-            collectionView.showsVerticalScrollIndicator = NO;
-            collectionView.showsHorizontalScrollIndicator = NO;
-            
-            collectionView.dictClass = self.dictClass;
-            
-            collectionView;
-        });
-    }
-    return _collectionView;
-}
-
-
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
@@ -146,5 +94,58 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
+#pragma mark -lazy
+
+-(NSDictionary *)dictClass{
+    if (!_dictClass) {
+        _dictClass = @{
+                       UICollectionElementKindSectionItem:   @[
+                               @"UICTViewCellOne"
+                               ],
+                       
+                       };
+        
+    }
+    return _dictClass;
+}
+
+-(UICollectionView *)collectionView{
+    if (!_collectionView) {
+        _collectionView = ({
+            //默认布局
+            UICollectionViewFlowLayout *layout = [[UICollectionViewFlowLayout alloc] init];
+            
+            //item水平间距
+            layout.minimumLineSpacing = 10;
+            //item垂直间距
+            layout.minimumInteritemSpacing = 10;
+            //item的尺寸
+            layout.itemSize = CGSizeMake(90, 100);
+            //item的UIEdgeInsets
+            layout.sectionInset = UIEdgeInsetsMake(10, 10, 10, 10);
+            //滑动方向,默认垂直
+            //            layout.scrollDirection = UICollectionViewScrollDirectionHorizontal;
+            //sectionView 尺寸
+            layout.headerReferenceSize = CGSizeMake(CGRectGetWidth(self.view.bounds), 40);
+            layout.footerReferenceSize = CGSizeMake(CGRectGetWidth(self.view.bounds), 20);
+            
+            UICollectionView *collectionView = [[UICollectionView alloc]initWithFrame:self.view.bounds collectionViewLayout:layout];
+            collectionView.backgroundColor = [UIColor whiteColor];
+            collectionView.delegate = self;
+            collectionView.dataSource = self;
+            collectionView.scrollsToTop = false;
+            collectionView.showsVerticalScrollIndicator = false;
+            collectionView.showsHorizontalScrollIndicator = false;
+            
+            collectionView.dictClass = self.dictClass;
+            
+            collectionView;
+        });
+    }
+    return _collectionView;
+}
+
+
 
 @end

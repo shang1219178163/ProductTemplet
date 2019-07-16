@@ -20,48 +20,6 @@
 
 @implementation SphereViewController
 
--(NSDictionary *)dictClass{
-    
-    if (!_dictClass) {
-        _dictClass = @{
-                       
-                       UICollectionElementKindSectionItem:   @[
-                               @"UICTViewCellOne"
-                               ],
-                       //                       UICollectionElementKindSectionHeader:   @[
-                       //                                                                 @"UICTReusableViewZero",
-                       //                                                                 ],
-                       //                       UICollectionElementKindSectionHeader:   @[
-                       //                                                                 @"UICTReusableViewZero",
-                       //                                                                 ],
-                       
-                       };
-        
-    }
-    return _dictClass;
-}
-
--(UICollectionView *)collectionView{
-    if (!_collectionView) {
-        _collectionView = ({
-            //            UICollectionViewFlowLayout *layout = [[UICollectionViewFlowLayout alloc] init];
-            UICTViewLayoutSphere * layout = [[UICTViewLayoutSphere alloc]init];
-            
-            UICollectionView *collectionView = [[UICollectionView alloc]initWithFrame:self.view.bounds collectionViewLayout:layout];
-            collectionView.backgroundColor = [UIColor whiteColor];
-            collectionView.delegate = self;
-            collectionView.dataSource = self;
-            collectionView.scrollsToTop = NO;
-            collectionView.showsVerticalScrollIndicator = NO;
-            collectionView.showsHorizontalScrollIndicator = NO;
-
-            collectionView.dictClass = self.dictClass;
-            
-            collectionView;
-        });
-    }
-    return _collectionView;
-}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -159,6 +117,50 @@
     }else if(scrollView.contentOffset.x>11*width){
         scrollView.contentOffset = CGPointMake(scrollView.contentOffset.x-10*width,scrollView.contentOffset.y);
     }
+}
+
+#pragma mark -lazy
+-(NSDictionary *)dictClass{
+    
+    if (!_dictClass) {
+        _dictClass = @{
+                       
+                       UICollectionElementKindSectionItem:   @[
+                               @"UICTViewCellOne"
+                               ],
+                       //                       UICollectionElementKindSectionHeader:   @[
+                       //                                                                 @"UICTReusableViewZero",
+                       //                                                                 ],
+                       //                       UICollectionElementKindSectionHeader:   @[
+                       //                                                                 @"UICTReusableViewZero",
+                       //                                                                 ],
+                       
+                       };
+        
+    }
+    return _dictClass;
+}
+
+-(UICollectionView *)collectionView{
+    if (!_collectionView) {
+        _collectionView = ({
+            //            UICollectionViewFlowLayout *layout = [[UICollectionViewFlowLayout alloc] init];
+            UICTViewLayoutSphere * layout = [[UICTViewLayoutSphere alloc]init];
+            
+            UICollectionView *collectionView = [[UICollectionView alloc]initWithFrame:self.view.bounds collectionViewLayout:layout];
+            collectionView.backgroundColor = [UIColor whiteColor];
+            collectionView.delegate = self;
+            collectionView.dataSource = self;
+            collectionView.scrollsToTop = NO;
+            collectionView.showsVerticalScrollIndicator = NO;
+            collectionView.showsHorizontalScrollIndicator = NO;
+            
+            collectionView.dictClass = self.dictClass;
+            
+            collectionView;
+        });
+    }
+    return _collectionView;
 }
 
 

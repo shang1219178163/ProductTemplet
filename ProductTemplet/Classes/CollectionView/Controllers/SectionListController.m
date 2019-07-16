@@ -1,12 +1,12 @@
 //
-//  SectionListViewController.m
+//  SectionListController.m
 //  BN_CollectionView
 //
 //  Created by hsf on 2018/4/16.
 //  Copyright © 2018年 BN. All rights reserved.
 //
 
-#import "SectionListViewController.h"
+#import "SectionListController.h"
 
 #import "UICTReusableViewZero.h"
 
@@ -14,7 +14,7 @@
 #import "UICTViewLayoutZero.h"
 #import "UICTViewLayoutOne.h"
 
-@interface SectionListViewController ()<UICollectionViewDataSource,UICollectionViewDelegate,UICollectionViewDelegateFlowLayout>
+@interface SectionListController ()<UICollectionViewDataSource,UICollectionViewDelegate,UICollectionViewDelegateFlowLayout>
 
 @property (nonatomic, strong) NSMutableArray *dataList;
 
@@ -23,65 +23,7 @@
 
 @end
 
-@implementation SectionListViewController
-
--(NSDictionary *)dictClass{
-    if (!_dictClass) {
-        _dictClass = @{
-                       
-                       UICollectionElementKindSectionItem:   @[
-                               @"UICTViewCellTwo"
-                               ],
-                       UICollectionElementKindSectionHeader:   @[
-                               @"UICTReusableViewZero",
-                               ],
-                       UICollectionElementKindSectionFooter:   @[
-                               @"UICTReusableViewZero",
-                               ],
-                       
-                       };
-        
-    }
-    return _dictClass;
-}
-
-
--(UICollectionView *)collectionView{
-    if (!_collectionView) {
-        _collectionView = ({
-            //默认布局
-            UICollectionViewFlowLayout *layout = [[UICollectionViewFlowLayout alloc] init];
-            
-            //item水平间距
-            layout.minimumLineSpacing = 10;
-            //item垂直间距
-            layout.minimumInteritemSpacing = 10;
-            //item的尺寸
-            layout.itemSize = CGSizeMake(90, 100);
-            //item的UIEdgeInsets
-            layout.sectionInset = UIEdgeInsetsMake(10, 10, 10, 10);
-            //滑动方向,默认垂直
-            //            layout.scrollDirection = UICollectionViewScrollDirectionHorizontal;
-            //sectionView 尺寸
-            layout.headerReferenceSize = CGSizeMake(CGRectGetWidth(self.view.bounds), 40);
-            layout.footerReferenceSize = CGSizeMake(CGRectGetWidth(self.view.bounds), 20);
-            
-            UICollectionView *collectionView = [[UICollectionView alloc]initWithFrame:self.view.bounds collectionViewLayout:layout];
-            collectionView.backgroundColor = [UIColor whiteColor];
-            collectionView.delegate = self;
-            collectionView.dataSource = self;
-            collectionView.scrollsToTop = NO;
-            collectionView.showsVerticalScrollIndicator = NO;
-            collectionView.showsHorizontalScrollIndicator = NO;
-
-            collectionView.dictClass = self.dictClass;
-
-            collectionView;
-        });
-    }
-    return _collectionView;
-}
-
+@implementation SectionListController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -213,9 +155,6 @@
     //    DDLog(@"%@",msg);
     
     DDLog(@"%@",indexPath);
-    
-    NSArray * array = @[@"CircleViewController",@"SphereViewController",@"PickerViewController",];
-    [self goController:array[indexPath.item] title:array[indexPath.item]];
 }
 
 //header的size
@@ -247,6 +186,64 @@
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+#pragma mark -lazy
+-(NSDictionary *)dictClass{
+    if (!_dictClass) {
+        _dictClass = @{
+                       
+                       UICollectionElementKindSectionItem:   @[
+                               @"UICTViewCellTwo"
+                               ],
+                       UICollectionElementKindSectionHeader:   @[
+                               @"UICTReusableViewZero",
+                               ],
+                       UICollectionElementKindSectionFooter:   @[
+                               @"UICTReusableViewZero",
+                               ],
+                       
+                       };
+        
+    }
+    return _dictClass;
+}
+
+
+-(UICollectionView *)collectionView{
+    if (!_collectionView) {
+        _collectionView = ({
+            //默认布局
+            UICollectionViewFlowLayout *layout = [[UICollectionViewFlowLayout alloc] init];
+            
+            //item水平间距
+            layout.minimumLineSpacing = 10;
+            //item垂直间距
+            layout.minimumInteritemSpacing = 10;
+            //item的尺寸
+            layout.itemSize = CGSizeMake(90, 100);
+            //item的UIEdgeInsets
+            layout.sectionInset = UIEdgeInsetsMake(10, 10, 10, 10);
+            //滑动方向,默认垂直
+            //            layout.scrollDirection = UICollectionViewScrollDirectionHorizontal;
+            //sectionView 尺寸
+            layout.headerReferenceSize = CGSizeMake(CGRectGetWidth(self.view.bounds), 40);
+            layout.footerReferenceSize = CGSizeMake(CGRectGetWidth(self.view.bounds), 20);
+            
+            UICollectionView *collectionView = [[UICollectionView alloc]initWithFrame:self.view.bounds collectionViewLayout:layout];
+            collectionView.backgroundColor = [UIColor whiteColor];
+            collectionView.delegate = self;
+            collectionView.dataSource = self;
+            collectionView.scrollsToTop = NO;
+            collectionView.showsVerticalScrollIndicator = NO;
+            collectionView.showsHorizontalScrollIndicator = NO;
+            
+            collectionView.dictClass = self.dictClass;
+            
+            collectionView;
+        });
+    }
+    return _collectionView;
 }
 
 @end

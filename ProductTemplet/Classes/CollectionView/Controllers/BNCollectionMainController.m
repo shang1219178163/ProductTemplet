@@ -24,18 +24,6 @@
     //    [self.view addSubview:self.tableView];
     [self.view addSubview:self.plainView];
     
-    self.view.backgroundColor = UIColor.yellowColor;
-    
-    //    [self createBarItemTitle:@"Tap" imgName:nil isLeft:NO isHidden:NO handler:^(id obj, UIButton * item, NSInteger idx) {
-    //        BNFilterView * view = [[BNFilterView alloc]init];
-    //        view.dataList = self.filterList;
-    //        //            view.direction = @1;
-    //        [view show];
-    //        view.block = ^(BNFilterView *view, NSIndexPath *indexPath, NSInteger idx) {
-    //            DDLog(@"%@,%@",@(indexPath.section),@(indexPath.row));
-    //        };
-    //    }];
-    
     [self createBarItem:@"个人中心" isLeft:false handler:^(id obj, UIView *item, NSInteger idx) {
         BNFilterView * view = [[BNFilterView alloc]init];
         view.dataList = self.filterList;
@@ -47,20 +35,18 @@
     }];
     
     self.dataList = @[
-                      @[@"BNCTViewController", @"圆形效果",],
+                      @[@"SphereViewController", @"空间球形效果",],
+                      @[@"CircleViewController", @"圆形效果",],
+                      @[@"PickerViewController", @"picker效果",],
+                      @[@"CardLineViewController", @"卡片信息展示效果",],
+                      @[@"CardViewController", @"卡片信息展示效果",],
                       @[@"BNExcelController", @"Excel视图",],
                       @[@"BNShareViewController", @"分享视图",],
-                      @[@"CTViewListController", @"",],
-                      @[@"CardLineViewController", @"",],
-                      @[@"CardViewController", @"",],
-                      @[@"CircleViewController", @"",],
-                      @[@"FileParseController", @"",],
-                      @[@"LeftViewController", @"",],
-                      @[@"PickerViewController", @"",],
-                      @[@"RightViewController", @"",],
-                      @[@"SectionListViewController", @"",],
-                      @[@"SphereViewController", @"",],
-                      @[@"TmpViewController", @"",],
+                      @[@"CTViewListController", @"多section效果",],
+                      @[@"SectionListOneController", @"可拖拽多section效果",],
+                      @[@"SectionListController", @"多section效果",],
+                      @[@"UICollectionDisplayController", @"UICollectionView",],
+                      @[@"TmpViewController", @"伸缩按钮",],
                       
                       ].mutableCopy;
     
@@ -100,10 +86,10 @@
             static NSString * identifier = @"UITableViewCell1";
             //    UITableViewOneCell * cell = [UITableViewOneCell cellWithTableView:tableView];
             UITableViewCell * cell = [UITableViewCell cellWithTableView:tableView identifier:identifier style:UITableViewCellStyleSubtitle];
-            cell.textLabel.text = list[0];
+            cell.textLabel.text = list[1];
             cell.textLabel.textColor = UIColor.themeColor;
             
-            cell.detailTextLabel.text = list[1];
+            cell.detailTextLabel.text = list[0];
             cell.detailTextLabel.textColor = UIColor.grayColor;
             cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
             return cell;
@@ -113,8 +99,8 @@
             @strongify(self);
             NSArray * list = self.dataList[indexPath.row];
             //    [self goController:list.lastObject title:list.firstObject];
-            UITableViewCell * cell = [tableView cellForRowAtIndexPath:indexPath];
-            [self pushController:list[0] title:list[1] item:cell type:@0];
+//            UITableViewCell * cell = [tableView cellForRowAtIndexPath:indexPath];
+            [self goController:list[0] title:list[1]];
         };
     }
     return _plainView;

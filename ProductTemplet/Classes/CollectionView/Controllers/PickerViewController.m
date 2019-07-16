@@ -20,48 +20,6 @@
 
 @implementation PickerViewController
 
--(NSDictionary *)dictClass{
-    
-    if (!_dictClass) {
-        _dictClass = @{
-                       
-                       UICollectionElementKindSectionItem:   @[
-                               @"UICTViewCellOne"
-                               ],
-//                       UICollectionElementKindSectionHeader:   @[
-//                                                                 @"UICTReusableViewZero",
-//                                                                 ],
-//                       UICollectionElementKindSectionHeader:   @[
-//                                                                 @"UICTReusableViewZero",
-//                                                                 ],
-
-                       };
-        
-    }
-    return _dictClass;
-}
-
--(UICollectionView *)collectionView{
-    if (!_collectionView) {
-        _collectionView = ({
-            //            UICollectionViewFlowLayout *layout = [[UICollectionViewFlowLayout alloc] init];
-            UICTViewLayoutPicker * layout = [[UICTViewLayoutPicker alloc]init];
-            
-            UICollectionView *collectionView = [[UICollectionView alloc]initWithFrame:self.view.bounds collectionViewLayout:layout];
-            collectionView.backgroundColor = [UIColor whiteColor];
-            collectionView.delegate = self;
-            collectionView.dataSource = self;
-            collectionView.scrollsToTop = NO;
-            collectionView.showsVerticalScrollIndicator = NO;
-            collectionView.showsHorizontalScrollIndicator = NO;
-            
-            collectionView.dictClass = self.dictClass;
-            
-            collectionView;
-        });
-    }
-    return _collectionView;
-}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -156,10 +114,10 @@
     NSInteger count = [self.collectionView numberOfItemsInSection:0];
     CGFloat height = CGRectGetHeight(self.collectionView.frame);
 
-    if (scrollView.contentOffset.y<200) {
-        scrollView.contentOffset = CGPointMake(0, scrollView.contentOffset.y+count*height);
-    }else if(scrollView.contentOffset.y>(count+1)*height){
-        scrollView.contentOffset = CGPointMake(0, scrollView.contentOffset.y-count*height);
+    if (scrollView.contentOffset.y < 200) {
+        scrollView.contentOffset = CGPointMake(0, scrollView.contentOffset.y + count*height);
+    }else if(scrollView.contentOffset.y > (count + 1)*height){
+        scrollView.contentOffset = CGPointMake(0, scrollView.contentOffset.y - count*height);
     }
 }
 
@@ -167,5 +125,50 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
+#pragma mark -lazy
+
+-(NSDictionary *)dictClass{
+    if (!_dictClass) {
+        _dictClass = @{
+                       
+                       UICollectionElementKindSectionItem:   @[
+                               @"UICTViewCellOne"
+                               ],
+                       //                       UICollectionElementKindSectionHeader:   @[
+                       //                                                                 @"UICTReusableViewZero",
+                       //                                                                 ],
+                       //                       UICollectionElementKindSectionHeader:   @[
+                       //                                                                 @"UICTReusableViewZero",
+                       //                                                                 ],
+                       
+                       };
+        
+    }
+    return _dictClass;
+}
+
+-(UICollectionView *)collectionView{
+    if (!_collectionView) {
+        _collectionView = ({
+            //            UICollectionViewFlowLayout *layout = [[UICollectionViewFlowLayout alloc] init];
+            UICTViewLayoutPicker * layout = [[UICTViewLayoutPicker alloc]init];
+            
+            UICollectionView *collectionView = [[UICollectionView alloc]initWithFrame:self.view.bounds collectionViewLayout:layout];
+            collectionView.backgroundColor = [UIColor whiteColor];
+            collectionView.delegate = self;
+            collectionView.dataSource = self;
+            collectionView.scrollsToTop = NO;
+            collectionView.showsVerticalScrollIndicator = NO;
+            collectionView.showsHorizontalScrollIndicator = NO;
+            
+            collectionView.dictClass = self.dictClass;
+            
+            collectionView;
+        });
+    }
+    return _collectionView;
+}
+
 
 @end

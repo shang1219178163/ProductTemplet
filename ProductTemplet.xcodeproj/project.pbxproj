@@ -117,6 +117,7 @@
 		141080B522D2E7D10011344E /* AnimationController18.m in Sources */ = {isa = PBXBuildFile; fileRef = 1410809C22D2E7D00011344E /* AnimationController18.m */; };
 		141080B622D2E7D10011344E /* AnniSuperController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1410809D22D2E7D10011344E /* AnniSuperController.m */; };
 		141080B722D2E7D10011344E /* AnimationListController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1410809E22D2E7D10011344E /* AnimationListController.m */; };
+		1415825722DDB88100643BF6 /* excel.geojson in Resources */ = {isa = PBXBuildFile; fileRef = 1415825622DDB88100643BF6 /* excel.geojson */; };
 		1419DAE3227005FF00F4BB5C /* NSObject+Bind.m in Sources */ = {isa = PBXBuildFile; fileRef = 1419DAE2227005FF00F4BB5C /* NSObject+Bind.m */; };
 		1421D5CD21F307F700635582 /* CustomViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1421D5CC21F307F700635582 /* CustomViewController.m */; };
 		1421D5D021F3177700635582 /* BNWalletView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1421D5CF21F3177700635582 /* BNWalletView.m */; };
@@ -162,11 +163,9 @@
 		14C1197622DC59AC009D18A3 /* UICTViewCellCycle.m in Sources */ = {isa = PBXBuildFile; fileRef = 14C1197222DC59AB009D18A3 /* UICTViewCellCycle.m */; };
 		14C1197822DC5A5A009D18A3 /* postImage.png in Resources */ = {isa = PBXBuildFile; fileRef = 14C1197722DC5A59009D18A3 /* postImage.png */; };
 		14C11AA922DC7FF8009D18A3 /* TmpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 14C11A8922DC7FD0009D18A3 /* TmpViewController.m */; };
-		14C11AAA22DC7FF8009D18A3 /* SectionListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 14C11A8A22DC7FD0009D18A3 /* SectionListViewController.m */; };
-		14C11AAB22DC7FF8009D18A3 /* RightViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 14C11A8C22DC7FD1009D18A3 /* RightViewController.m */; };
-		14C11AAC22DC7FF8009D18A3 /* LeftViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 14C11A8F22DC7FD2009D18A3 /* LeftViewController.m */; };
+		14C11AAA22DC7FF8009D18A3 /* SectionListController.m in Sources */ = {isa = PBXBuildFile; fileRef = 14C11A8A22DC7FD0009D18A3 /* SectionListController.m */; };
+		14C11AAC22DC7FF8009D18A3 /* SectionListOneController.m in Sources */ = {isa = PBXBuildFile; fileRef = 14C11A8F22DC7FD2009D18A3 /* SectionListOneController.m */; };
 		14C11AAD22DC7FF8009D18A3 /* CardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 14C11A9122DC7FD3009D18A3 /* CardViewController.m */; };
-		14C11AAE22DC7FF8009D18A3 /* BNCTViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 14C11A9222DC7FD3009D18A3 /* BNCTViewController.m */; };
 		14C11AB122DC7FF8009D18A3 /* CTViewGroupController.m in Sources */ = {isa = PBXBuildFile; fileRef = 14C11A9A22DC7FD6009D18A3 /* CTViewGroupController.m */; };
 		14C11AB222DC7FF8009D18A3 /* FileParseController.m in Sources */ = {isa = PBXBuildFile; fileRef = 14C11A9D22DC7FD7009D18A3 /* FileParseController.m */; };
 		14C11AB322DC7FF8009D18A3 /* CircleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 14C11A9E22DC7FD8009D18A3 /* CircleViewController.m */; };
@@ -695,6 +694,7 @@
 		1410809C22D2E7D00011344E /* AnimationController18.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AnimationController18.m; sourceTree = "<group>"; };
 		1410809D22D2E7D10011344E /* AnniSuperController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AnniSuperController.m; sourceTree = "<group>"; };
 		1410809E22D2E7D10011344E /* AnimationListController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AnimationListController.m; sourceTree = "<group>"; };
+		1415825622DDB88100643BF6 /* excel.geojson */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = excel.geojson; sourceTree = "<group>"; };
 		1419DAE1227005FF00F4BB5C /* NSObject+Bind.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSObject+Bind.h"; sourceTree = "<group>"; };
 		1419DAE2227005FF00F4BB5C /* NSObject+Bind.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSObject+Bind.m"; sourceTree = "<group>"; };
 		1421D5CB21F307F700635582 /* CustomViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CustomViewController.h; sourceTree = "<group>"; };
@@ -779,18 +779,15 @@
 		14C1197322DC59AB009D18A3 /* UICTViewCellCycle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UICTViewCellCycle.h; sourceTree = "<group>"; };
 		14C1197422DC59AC009D18A3 /* ScrollViewCycleController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScrollViewCycleController.h; sourceTree = "<group>"; };
 		14C1197722DC5A59009D18A3 /* postImage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = postImage.png; sourceTree = "<group>"; };
-		14C11A8622DC7FCF009D18A3 /* LeftViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LeftViewController.h; sourceTree = "<group>"; };
-		14C11A8722DC7FCF009D18A3 /* SectionListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SectionListViewController.h; sourceTree = "<group>"; };
+		14C11A8622DC7FCF009D18A3 /* SectionListOneController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SectionListOneController.h; sourceTree = "<group>"; };
+		14C11A8722DC7FCF009D18A3 /* SectionListController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SectionListController.h; sourceTree = "<group>"; };
 		14C11A8922DC7FD0009D18A3 /* TmpViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TmpViewController.m; sourceTree = "<group>"; };
-		14C11A8A22DC7FD0009D18A3 /* SectionListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SectionListViewController.m; sourceTree = "<group>"; };
+		14C11A8A22DC7FD0009D18A3 /* SectionListController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SectionListController.m; sourceTree = "<group>"; };
 		14C11A8B22DC7FD1009D18A3 /* CardViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CardViewController.h; sourceTree = "<group>"; };
-		14C11A8C22DC7FD1009D18A3 /* RightViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RightViewController.m; sourceTree = "<group>"; };
 		14C11A8D22DC7FD1009D18A3 /* CardLineViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CardLineViewController.h; sourceTree = "<group>"; };
 		14C11A8E22DC7FD2009D18A3 /* TmpViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TmpViewController.h; sourceTree = "<group>"; };
-		14C11A8F22DC7FD2009D18A3 /* LeftViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LeftViewController.m; sourceTree = "<group>"; };
-		14C11A9022DC7FD2009D18A3 /* BNCTViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BNCTViewController.h; sourceTree = "<group>"; };
+		14C11A8F22DC7FD2009D18A3 /* SectionListOneController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SectionListOneController.m; sourceTree = "<group>"; };
 		14C11A9122DC7FD3009D18A3 /* CardViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CardViewController.m; sourceTree = "<group>"; };
-		14C11A9222DC7FD3009D18A3 /* BNCTViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BNCTViewController.m; sourceTree = "<group>"; };
 		14C11A9422DC7FD4009D18A3 /* FileParseController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FileParseController.h; sourceTree = "<group>"; };
 		14C11A9522DC7FD5009D18A3 /* BNShareViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BNShareViewController.h; sourceTree = "<group>"; };
 		14C11A9622DC7FD5009D18A3 /* PickerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PickerViewController.h; sourceTree = "<group>"; };
@@ -801,7 +798,6 @@
 		14C11A9D22DC7FD7009D18A3 /* FileParseController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FileParseController.m; sourceTree = "<group>"; };
 		14C11A9E22DC7FD8009D18A3 /* CircleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CircleViewController.m; sourceTree = "<group>"; };
 		14C11A9F22DC7FD9009D18A3 /* PickerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PickerViewController.m; sourceTree = "<group>"; };
-		14C11AA122DC7FF7009D18A3 /* RightViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RightViewController.h; sourceTree = "<group>"; };
 		14C11AA222DC7FF7009D18A3 /* CTViewListController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CTViewListController.m; sourceTree = "<group>"; };
 		14C11AA322DC7FF7009D18A3 /* CardLineViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CardLineViewController.m; sourceTree = "<group>"; };
 		14C11AA422DC7FF7009D18A3 /* SphereViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SphereViewController.m; sourceTree = "<group>"; };
@@ -1518,33 +1514,22 @@
 			path = JZLocationConverter;
 			sourceTree = "<group>";
 		};
-		14107FA022CDF92E0011344E /* input */ = {
+		14107FA022CDF92E0011344E /* Input */ = {
 			isa = PBXGroup;
 			children = (
-				14107FBA22CDF9C80011344E /* KeyboardController.h */,
-				14107FB922CDF9C80011344E /* KeyboardController.m */,
+				147AB8B522DDC82F00A5C4EC /* Controllers */,
 				14107FA422CDF9480011344E /* CustomKeyboardView.h */,
 				14107FA322CDF9480011344E /* CustomKeyboardView.m */,
-				14107FAD22CDF9490011344E /* CustomKeyboardViewController.h */,
-				14107FA822CDF9480011344E /* CustomKeyboardViewController.m */,
-				14107FA922CDF9480011344E /* IDCardKeyboardViewController.h */,
-				14107FAC22CDF9490011344E /* IDCardKeyboardViewController.m */,
-				14107FA522CDF9480011344E /* InputViewController.h */,
-				14107FA122CDF9480011344E /* InputViewController.m */,
-				14107FA222CDF9480011344E /* KeyboardCoverTextFieldViewController.h */,
-				14107FA722CDF9480011344E /* KeyboardCoverTextFieldViewController.m */,
-				14107FA622CDF9480011344E /* TextViewInputController.h */,
-				14107FAA22CDF9480011344E /* TextViewInputController.m */,
 				14107FAE22CDF9490011344E /* UITextField+Util.h */,
 				14107FAB22CDF9480011344E /* UITextField+Util.m */,
 			);
-			path = input;
+			path = Input;
 			sourceTree = "<group>";
 		};
 		14107FE322D2E64A0011344E /* Animation */ = {
 			isa = PBXGroup;
 			children = (
-				1410800622D2E69B0011344E /* Controller */,
+				1410800622D2E69B0011344E /* Controllers */,
 				14107FE422D2E69B0011344E /* Resources */,
 				14107FFF22D2E69B0011344E /* View */,
 			);
@@ -1609,7 +1594,7 @@
 			path = View;
 			sourceTree = "<group>";
 		};
-		1410800622D2E69B0011344E /* Controller */ = {
+		1410800622D2E69B0011344E /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
 				1410809422D2E7CF0011344E /* AnimationController1.h */,
@@ -1658,53 +1643,112 @@
 				1410809A22D2E7D00011344E /* EmitterViewController.m */,
 				1410808222D2E7C90011344E /* LiveLikeController.h */,
 				1410807022D2E7C30011344E /* LiveLikeController.m */,
+				518CD322219D5A24003CE348 /* UIViewPropertyAnimatorController.h */,
+				518CD323219D5A24003CE348 /* UIViewPropertyAnimatorController.m */,
 				1410809922D2E7D00011344E /* AnimationListController.h */,
 				1410809E22D2E7D10011344E /* AnimationListController.m */,
 				1410808322D2E7CA0011344E /* AnniSuperController.h */,
 				1410809D22D2E7D10011344E /* AnniSuperController.m */,
 			);
-			path = Controller;
+			path = Controllers;
 			sourceTree = "<group>";
 		};
-		14C11A2B22DC7A28009D18A3 /* CollectionViewController */ = {
+		147AB8B222DDC7AE00A5C4EC /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
 				14C11ABB22DC813E009D18A3 /* BNCollectionMainController.h */,
 				14C11ABC22DC813E009D18A3 /* BNCollectionMainController.m */,
-				14C11A9022DC7FD2009D18A3 /* BNCTViewController.h */,
-				14C11A9222DC7FD3009D18A3 /* BNCTViewController.m */,
-				14C11A9722DC7FD5009D18A3 /* BNExcelController.h */,
-				14C11AA522DC7FF7009D18A3 /* BNExcelController.m */,
-				14C11A9522DC7FD5009D18A3 /* BNShareViewController.h */,
-				14C11AA622DC7FF8009D18A3 /* BNShareViewController.m */,
+				14C11AA822DC7FF8009D18A3 /* CTViewListController.h */,
+				14C11AA222DC7FF7009D18A3 /* CTViewListController.m */,
+				14C11A9C22DC7FD7009D18A3 /* CTViewGroupController.h */,
+				14C11A9A22DC7FD6009D18A3 /* CTViewGroupController.m */,
+				14C11A8722DC7FCF009D18A3 /* SectionListController.h */,
+				14C11A8A22DC7FD0009D18A3 /* SectionListController.m */,
+				14C11A8622DC7FCF009D18A3 /* SectionListOneController.h */,
+				14C11A8F22DC7FD2009D18A3 /* SectionListOneController.m */,
+				14C11A9B22DC7FD7009D18A3 /* SphereViewController.h */,
+				14C11AA422DC7FF7009D18A3 /* SphereViewController.m */,
+				14C11AA722DC7FF8009D18A3 /* CircleViewController.h */,
+				14C11A9E22DC7FD8009D18A3 /* CircleViewController.m */,
+				14C11A9622DC7FD5009D18A3 /* PickerViewController.h */,
+				14C11A9F22DC7FD9009D18A3 /* PickerViewController.m */,
 				14C11A8D22DC7FD1009D18A3 /* CardLineViewController.h */,
 				14C11AA322DC7FF7009D18A3 /* CardLineViewController.m */,
 				14C11A8B22DC7FD1009D18A3 /* CardViewController.h */,
 				14C11A9122DC7FD3009D18A3 /* CardViewController.m */,
-				14C11AA722DC7FF8009D18A3 /* CircleViewController.h */,
-				14C11A9E22DC7FD8009D18A3 /* CircleViewController.m */,
-				14C11AA822DC7FF8009D18A3 /* CTViewListController.h */,
-				14C11AA222DC7FF7009D18A3 /* CTViewListController.m */,
-				14C11A9422DC7FD4009D18A3 /* FileParseController.h */,
-				14C11A9D22DC7FD7009D18A3 /* FileParseController.m */,
-				14C11A9C22DC7FD7009D18A3 /* CTViewGroupController.h */,
-				14C11A9A22DC7FD6009D18A3 /* CTViewGroupController.m */,
-				14C11A8622DC7FCF009D18A3 /* LeftViewController.h */,
-				14C11A8F22DC7FD2009D18A3 /* LeftViewController.m */,
-				14C11A9622DC7FD5009D18A3 /* PickerViewController.h */,
-				14C11A9F22DC7FD9009D18A3 /* PickerViewController.m */,
-				14C11AA122DC7FF7009D18A3 /* RightViewController.h */,
-				14C11A8C22DC7FD1009D18A3 /* RightViewController.m */,
-				14C11A8722DC7FCF009D18A3 /* SectionListViewController.h */,
-				14C11A8A22DC7FD0009D18A3 /* SectionListViewController.m */,
-				14C11A9B22DC7FD7009D18A3 /* SphereViewController.h */,
-				14C11AA422DC7FF7009D18A3 /* SphereViewController.m */,
+				14C11A9722DC7FD5009D18A3 /* BNExcelController.h */,
+				14C11AA522DC7FF7009D18A3 /* BNExcelController.m */,
+				14C11A9522DC7FD5009D18A3 /* BNShareViewController.h */,
+				14C11AA622DC7FF8009D18A3 /* BNShareViewController.m */,
 				14C11A8E22DC7FD2009D18A3 /* TmpViewController.h */,
 				14C11A8922DC7FD0009D18A3 /* TmpViewController.m */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		147AB8B322DDC7E500A5C4EC /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				5162F6F220BF9337009A6253 /* ThreadNormolController.h */,
+				5162F6F320BF9337009A6253 /* ThreadNormolController.m */,
+				5162F6EF20BF9110009A6253 /* ThreadViewController.h */,
+				5162F6F020BF9110009A6253 /* ThreadViewController.m */,
+				5162F6F520BF9604009A6253 /* ThreadCommunicationController.h */,
+				5162F6F620BF9604009A6253 /* ThreadCommunicationController.m */,
+				5162F70820BFB7CB009A6253 /* GCDViewController.h */,
+				5162F70920BFB7CB009A6253 /* GCDViewController.m */,
+				5162F70B20BFB934009A6253 /* OperationViewController.h */,
+				5162F70C20BFB934009A6253 /* OperationViewController.m */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		147AB8B422DDC80800A5C4EC /* Controlllers */ = {
+			isa = PBXGroup;
+			children = (
+				51862E6920BB979A0080BD4E /* AbstractFactoryController.h */,
+				51862E6A20BB979A0080BD4E /* AbstractFactoryController.m */,
+				51862E6E20BB9E810080BD4E /* StrategyViewController.h */,
+				51862E6F20BB9E810080BD4E /* StrategyViewController.m */,
+				5169698C20BCED2200BAA53D /* FacadeViewController.h */,
+				5169698D20BCED2200BAA53D /* FacadeViewController.m */,
+				5169699E20BCF11600BAA53D /* MediatorViewController.h */,
+				5169699F20BCF11600BAA53D /* MediatorViewController.m */,
+				516969B120BCFCFF00BAA53D /* CompositeViewController.h */,
+				516969B220BCFCFF00BAA53D /* CompositeViewController.m */,
+				5162F6F920BF9C9B009A6253 /* FlyweightViewController.h */,
+				5162F6FA20BF9C9B009A6253 /* FlyweightViewController.m */,
+			);
+			path = Controlllers;
+			sourceTree = "<group>";
+		};
+		147AB8B522DDC82F00A5C4EC /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				14107FBA22CDF9C80011344E /* KeyboardController.h */,
+				14107FB922CDF9C80011344E /* KeyboardController.m */,
+				14107FAD22CDF9490011344E /* CustomKeyboardViewController.h */,
+				14107FA822CDF9480011344E /* CustomKeyboardViewController.m */,
+				14107FA922CDF9480011344E /* IDCardKeyboardViewController.h */,
+				14107FAC22CDF9490011344E /* IDCardKeyboardViewController.m */,
+				14107FA522CDF9480011344E /* InputViewController.h */,
+				14107FA122CDF9480011344E /* InputViewController.m */,
+				14107FA222CDF9480011344E /* KeyboardCoverTextFieldViewController.h */,
+				14107FA722CDF9480011344E /* KeyboardCoverTextFieldViewController.m */,
+				14107FA622CDF9480011344E /* TextViewInputController.h */,
+				14107FAA22CDF9480011344E /* TextViewInputController.m */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		14C11A2B22DC7A28009D18A3 /* CollectionView */ = {
+			isa = PBXGroup;
+			children = (
+				147AB8B222DDC7AE00A5C4EC /* Controllers */,
 				14C11ABE22DC872B009D18A3 /* BNDataModel.h */,
 				14C11ABF22DC872C009D18A3 /* BNDataModel.m */,
 			);
-			path = CollectionViewController;
+			path = CollectionView;
 			sourceTree = "<group>";
 		};
 		14D40A2722C5BB7B00AF74B9 /* PopoverView */ = {
@@ -1837,9 +1881,6 @@
 		5136469E2086031D005A20E7 /* ProductTemplet */ = {
 			isa = PBXGroup;
 			children = (
-				14107FE322D2E64A0011344E /* Animation */,
-				14F0FE6422B0AD6B00057093 /* Live */,
-				517D8B1320B2B52300DCA731 /* DBManager */,
 				513649102086055E005A20E7 /* Classes */,
 				51698C7D2137C0430069C2B2 /* Network */,
 				51364CC72086092D005A20E7 /* DataModel */,
@@ -1939,6 +1980,14 @@
 		513649102086055E005A20E7 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				517D8B1320B2B52300DCA731 /* DBManager */,
+				14F0FE6422B0AD6B00057093 /* Live */,
+				14107FA022CDF92E0011344E /* Input */,
+				51364913208605B2005A20E7 /* Main */,
+				51862E4D20BB907C0080BD4E /* DesignPatterns */,
+				5162F71120BFC051009A6253 /* Multithreading */,
+				14107FE322D2E64A0011344E /* Animation */,
+				14C11A2B22DC7A28009D18A3 /* CollectionView */,
 				5136491120860573005A20E7 /* Controller */,
 			);
 			path = Classes;
@@ -1947,14 +1996,11 @@
 		5136491120860573005A20E7 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				14C11A2B22DC7A28009D18A3 /* CollectionViewController */,
-				14107FA022CDF92E0011344E /* input */,
-				5162F71120BFC051009A6253 /* Multithreading */,
-				51862E4D20BB907C0080BD4E /* DesignPatterns */,
 				515CC85720B69DAA004AE27C /* UserInfo */,
-				51364913208605B2005A20E7 /* Main */,
 				512E43432137DDBB00272986 /* WHKGroupViewViewController.h */,
 				512E43442137DDBC00272986 /* WHKGroupViewViewController.m */,
+				14C11A9422DC7FD4009D18A3 /* FileParseController.h */,
+				14C11A9D22DC7FD7009D18A3 /* FileParseController.m */,
 				5189413E209C27E000A687E1 /* TestViewController.h */,
 				5189413F209C27E000A687E1 /* TestViewController.m */,
 				14C1197422DC59AC009D18A3 /* ScrollViewCycleController.h */,
@@ -1995,8 +2041,6 @@
 				51AA003021992952002EB259 /* CounterListGroupController.m */,
 				516CCFD1219BFC5E007D3F80 /* KVC_Controller.h */,
 				516CCFD2219BFC5E007D3F80 /* KVC_Controller.m */,
-				518CD322219D5A24003CE348 /* UIViewPropertyAnimatorController.h */,
-				518CD323219D5A24003CE348 /* UIViewPropertyAnimatorController.m */,
 				518CD328219D787F003CE348 /* SugerAlertController.h */,
 				518CD329219D787F003CE348 /* SugerAlertController.m */,
 				518CD32C219D78B5003CE348 /* BNActionSheet.h */,
@@ -2081,6 +2125,7 @@
 		5136492420860655005A20E7 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				1415825622DDB88100643BF6 /* excel.geojson */,
 				14488762224F4D6A00B550AF /* icon_oprationSuccess@2x.png */,
 				14488763224F4D6B00B550AF /* icon_oprationSuccess@3x.png */,
 				51900DD821895B9A0038A178 /* img_home_immune_147.png */,
@@ -2437,18 +2482,9 @@
 		5162F71120BFC051009A6253 /* Multithreading */ = {
 			isa = PBXGroup;
 			children = (
+				147AB8B322DDC7E500A5C4EC /* Controllers */,
 				14E42CD2220003F200606AD0 /* BNOperation.h */,
 				14E42CD1220003F200606AD0 /* BNOperation.m */,
-				5162F6F220BF9337009A6253 /* ThreadNormolController.h */,
-				5162F6F320BF9337009A6253 /* ThreadNormolController.m */,
-				5162F6EF20BF9110009A6253 /* ThreadViewController.h */,
-				5162F6F020BF9110009A6253 /* ThreadViewController.m */,
-				5162F6F520BF9604009A6253 /* ThreadCommunicationController.h */,
-				5162F6F620BF9604009A6253 /* ThreadCommunicationController.m */,
-				5162F70820BFB7CB009A6253 /* GCDViewController.h */,
-				5162F70920BFB7CB009A6253 /* GCDViewController.m */,
-				5162F70B20BFB934009A6253 /* OperationViewController.h */,
-				5162F70C20BFB934009A6253 /* OperationViewController.m */,
 			);
 			path = Multithreading;
 			sourceTree = "<group>";
@@ -2553,18 +2589,7 @@
 		51862E4D20BB907C0080BD4E /* DesignPatterns */ = {
 			isa = PBXGroup;
 			children = (
-				51862E6920BB979A0080BD4E /* AbstractFactoryController.h */,
-				51862E6A20BB979A0080BD4E /* AbstractFactoryController.m */,
-				51862E6E20BB9E810080BD4E /* StrategyViewController.h */,
-				51862E6F20BB9E810080BD4E /* StrategyViewController.m */,
-				5169698C20BCED2200BAA53D /* FacadeViewController.h */,
-				5169698D20BCED2200BAA53D /* FacadeViewController.m */,
-				5169699E20BCF11600BAA53D /* MediatorViewController.h */,
-				5169699F20BCF11600BAA53D /* MediatorViewController.m */,
-				516969B120BCFCFF00BAA53D /* CompositeViewController.h */,
-				516969B220BCFCFF00BAA53D /* CompositeViewController.m */,
-				5162F6F920BF9C9B009A6253 /* FlyweightViewController.h */,
-				5162F6FA20BF9C9B009A6253 /* FlyweightViewController.m */,
+				147AB8B422DDC80800A5C4EC /* Controlllers */,
 				5162F6F820BF9C7F009A6253 /* Flyweight */,
 				516969B020BCFCB000BAA53D /* Composite */,
 				5169699D20BCF0FC00BAA53D /* Mediator */,
@@ -2883,6 +2908,7 @@
 				5136499F20860655005A20E7 /* img_dialog_inquiry.png in Resources */,
 				140A2BD822696E24000ED121 /* map_trackingPoints_blue@2x.png in Resources */,
 				140A2BDE22696E24000ED121 /* GuGong.tracking in Resources */,
+				1415825722DDB88100643BF6 /* excel.geojson in Resources */,
 				513649A220860655005A20E7 /* img_evenLevel_first.png in Resources */,
 				518B906D217F2110007E7343 /* left_slider_back@3x.png in Resources */,
 				1410804B22D2E69C0011344E /* point.png in Resources */,
@@ -3046,7 +3072,7 @@
 				141080A122D2E7D10011344E /* LiveLikeController.m in Sources */,
 				14C11AC022DC872C009D18A3 /* BNDataModel.m in Sources */,
 				14107FAF22CDF9490011344E /* InputViewController.m in Sources */,
-				14C11AAA22DC7FF8009D18A3 /* SectionListViewController.m in Sources */,
+				14C11AAA22DC7FF8009D18A3 /* SectionListController.m in Sources */,
 				14E42CDA2200040200606AD0 /* BNUserLoginController.m in Sources */,
 				140A2B0C2269661F000ED121 /* PKMainController.m in Sources */,
 				143331AD2241F1F600436F75 /* AVSpeechViewController.m in Sources */,
@@ -3116,7 +3142,7 @@
 				515C67E52137C55700D5EA94 /* BCurrentCityCell.m in Sources */,
 				14C1197522DC59AC009D18A3 /* ScrollViewCycleController.m in Sources */,
 				14F0FE6722B0AD9800057093 /* LiveViewController.m in Sources */,
-				14C11AAC22DC7FF8009D18A3 /* LeftViewController.m in Sources */,
+				14C11AAC22DC7FF8009D18A3 /* SectionListOneController.m in Sources */,
 				140A2BEE22696E24000ED121 /* JZLocationConverter.m in Sources */,
 				141080B522D2E7D10011344E /* AnimationController18.m in Sources */,
 				149111E6227542C10078A7BB /* BNUploadModel.m in Sources */,
@@ -3265,7 +3291,6 @@
 				14E42CDC2200040200606AD0 /* BNUserRegisterController.m in Sources */,
 				513647E0208604DE005A20E7 /* PPNetworkHelper.m in Sources */,
 				516969B720BCFD4000BAA53D /* CompanyComponent.m in Sources */,
-				14C11AAB22DC7FF8009D18A3 /* RightViewController.m in Sources */,
 				516CCFD3219BFC5E007D3F80 /* KVC_Controller.m in Sources */,
 				14E8692D21C251BA009CE33E /* HomeViewController.m in Sources */,
 				516969AD20BCF9A800BAA53D /* Buyer.m in Sources */,
@@ -3330,7 +3355,6 @@
 				51364C9D20860822005A20E7 /* PictureController.m in Sources */,
 				14107FB022CDF9490011344E /* CustomKeyboardView.m in Sources */,
 				149111EC2275B7970078A7BB /* NSError+Helper.m in Sources */,
-				14C11AAE22DC7FF8009D18A3 /* BNCTViewController.m in Sources */,
 				14107FB322CDF9490011344E /* TextViewInputController.m in Sources */,
 				14E42D1C2200042800606AD0 /* BNNoti.m in Sources */,
 				140A2BE822696E24000ED121 /* BNDriverRouteController.m in Sources */,

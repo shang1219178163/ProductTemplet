@@ -1,5 +1,5 @@
 //
-//  LeftViewController.h
+//  SectionListOneController.h
 //  BN_CollectionView
 //
 //  Created by hsf on 2018/4/12.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface LeftViewController : UIViewController
+@interface SectionListOneController : UIViewController
 
 @end

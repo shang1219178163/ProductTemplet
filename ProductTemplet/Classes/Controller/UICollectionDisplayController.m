@@ -26,13 +26,13 @@
     self.collectionView.dataSource = self;
     self.collectionView.dictClass = @{
                                       
-                                      UICollectionElementKindSectionItem    :   @[
+                                      UICollectionElementKindSectionItem:   @[
                                                                                   @"UICTViewCellOne"
                                                                                   ],
                                        UICollectionElementKindSectionHeader:   @[
                                                                                  @"UICTReusableViewZero",
                                                                                  ],
-                                       UICollectionElementKindSectionHeader:   @[
+                                       UICollectionElementKindSectionFooter:   @[
                                                                                  @"UICTReusableViewZero",
                                                                                  ],
 
@@ -71,11 +71,11 @@
 //}
 
 -(UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath{
-    UICTViewCellOne * cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"UICTViewCellOne" forIndexPath:indexPath];
-    //    cell.layer.masksToBounds = YES;
-    //    cell.layer.cornerRadius = 25;
+    UICTViewCellOne *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"UICTViewCellOne" forIndexPath:indexPath];
     cell.backgroundColor = [UIColor colorWithRed:arc4random()%255/255.0 green:arc4random()%255/255.0 blue:arc4random()%255/255.0 alpha:1];
     cell.label.text = NSStringFromIndexPath(indexPath);
+    
+//    [cell getViewLayer]
     return cell;
 }
 
@@ -97,11 +97,10 @@
 //}
 
 - (UICollectionReusableView *)collectionView:(UICollectionView *)collectionView viewForSupplementaryElementOfKind:(NSString *)kind atIndexPath:(NSIndexPath *)indexPath{
-    UICTReusableViewZero * view = [UICTReusableViewZero viewWithCollectionView:collectionView indexPath:indexPath kind:kind];
+    UICTReusableViewZero *view = [UICTReusableViewZero viewWithCollectionView:collectionView indexPath:indexPath kind:kind];
     view.label.text = [kind isEqualToString:UICollectionElementKindSectionHeader]  ? @"headerView": @"footerView";
     view.label.backgroundColor = [kind isEqualToString:UICollectionElementKindSectionHeader]  ? [UIColor greenColor] : [UIColor yellowColor];
     return view;
-    
 }
 
 - (void)didReceiveMemoryWarning {
@@ -111,15 +110,12 @@
 
 
 -(void)scrollViewDidScroll:(UIScrollView *)scrollView{
-    
     if (scrollView.contentOffset.x < 0) {
         
     }
-    
 }
 
-#pragma mark - -funtions
-
+#pragma mark -funtions
 
 
 @end

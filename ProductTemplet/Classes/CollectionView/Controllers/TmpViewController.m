@@ -25,30 +25,6 @@
 
 @implementation TmpViewController
 
--(BNExtendView *)extendView{
-    if (!_extendView) {
-        _extendView = [[BNExtendView alloc]initWithFrame:CGRectMake(kScreenWidth/2.0 - 20,kScreenHeight/2.0 - 20, 40, 40)];
-        _extendView.direction = @0;
-        NSArray * array = @[
-                            @{
-                                kExtendItem_img :   @"Googleplus_round",
-                                kExtendItem_VC  :   @"WHKMsgCommentController",
-                                },
-                            @{
-                                kExtendItem_img :   @"Facebook_round",
-                                kExtendItem_VC  :   @"WHKMsgCommentController",
-                                },
-                            @{
-                                kExtendItem_img :   @"Pinterest_round",
-                                kExtendItem_VC  :   @"WHKMsgCommentController",
-                                },
-                            ];
-        _extendView.itemDictList = array;
-    }
-    return _extendView;
-}
-
-
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
@@ -113,9 +89,6 @@
 
         }];
     }
-    
-   
-    
 }
 
 - (void)didReceiveMemoryWarning {
@@ -123,6 +96,30 @@
     // Dispose of any resources that can be recreated.
 }
 
+#pragma mark -lazy
+
+-(BNExtendView *)extendView{
+    if (!_extendView) {
+        _extendView = [[BNExtendView alloc]initWithFrame:CGRectMake(kScreenWidth/2.0 - 20,kScreenHeight/2.0 - 20, 40, 40)];
+        _extendView.direction = @0;
+        NSArray * array = @[
+                            @{
+                                kExtendItem_img :   @"Googleplus_round",
+                                kExtendItem_VC  :   @"WHKMsgCommentController",
+                                },
+                            @{
+                                kExtendItem_img :   @"Facebook_round",
+                                kExtendItem_VC  :   @"WHKMsgCommentController",
+                                },
+                            @{
+                                kExtendItem_img :   @"Pinterest_round",
+                                kExtendItem_VC  :   @"WHKMsgCommentController",
+                                },
+                            ];
+        _extendView.itemDictList = array;
+    }
+    return _extendView;
+}
 
 
 @end

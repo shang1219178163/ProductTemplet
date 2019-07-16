@@ -106,7 +106,11 @@
 
     self.dataList = @[
                       @[@"PKMainController", @"高德地图轨迹回溯",],
+                      @[@"TextFromSpeechController", @"语音转文字",],
                       @[@"RuntimeController", @"字符串映射研究",],
+                      @[@"LoginViewController", @"直播拉流",],
+                      @[@"AnimationListController", @"动画研究",],
+                   
                       @[@"BNCollectionMainController", @"CollectionView封装",],
                       @[@"FontListController", @"iOS字体大全",],
                       @[@"FMBDViewController", @"FMDB",],
@@ -119,24 +123,20 @@
                       @[@"CustomViewController", @"View自定义",],
                       @[@"BNTabBarController", @"嵌套TabBar,实现类UITabBarController功能",],
                       @[@"SubTabBarController", @"BNTabBarController子类化",],
-                      @[@"UICollectionDisplayController", @"UICollectionView",],
                       @[@"SortViewController", @"Sort",],
                       @[@"NotificationTreadController", @"(不同线程)广播重定向",],
                       @[@"CountDownListController", @"定时器列表",],
-                      @[@"UIViewPropertyAnimatorController", @"UIViewPropertyAnimator(iOS10)",],
                       @[@"SugerAlertController", @"SugerAlert",],
                       @[@"MutiRequestController", @"同一界面多网络请求",],
-                      @[@"NumberViewController", @"NSNumberFormatter",],
+                      @[@"NumberViewController", @"NSNumberFormatter(金额小数点处理)",],
                       @[@"UITextFieldController", @"UITextField",],
                       @[@"TextViewController", @"UITextView",],
 //                      @[@"FriendListController", @"FriendList", ],
                       @[@"MoneyDisplayController", @"金额跳动",],
                       @[@"AVSpeechViewController", @"文字转语音",],
-                      @[@"TextFromSpeechController", @"语音转文字",],
-                      @[@"LoginViewController", @"直播拉流",],
                       @[@"KeyboardController",@"Keyboard自定义",],
-                      @[@"AnimationListController", @"动画研究",],
                       @[@"ScrollViewCycleController", @"ScrollViewCycle",],
+                      @[@"FileParseController", @"json文件解析",],
                       @[@"TestViewController", @"Test",],
                                
                       ].mutableCopy;
