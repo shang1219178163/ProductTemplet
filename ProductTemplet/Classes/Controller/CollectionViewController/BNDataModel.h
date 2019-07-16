@@ -1,5 +1,5 @@
 //
-//  BN_DataModel.h
+//  BNDataModel.h
 //  BN_CollectionView
 //
 //  Created by hsf on 2018/4/28.

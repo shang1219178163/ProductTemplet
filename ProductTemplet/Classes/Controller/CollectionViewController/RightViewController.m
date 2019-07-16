@@ -35,29 +35,11 @@
     self.title = NSStringFromClass([self class]);
     self.view.backgroundColor = [UIColor greenColor];
 
-    UIBarButtonItem * bar = [[UIBarButtonItem alloc]initWithTitle:@"Next" style:UIBarButtonItemStyleDone target:self action:@selector(handleActionBtn:)];
-    self.navigationItem.rightBarButtonItem = bar;
-    
-    
     [self configureReportExcelView];
 
 }
 
-- (void)handleActionBtn:(UIBarButtonItem *)sender{
-    DDLog(@"%@",sender.title);
-    
-    NSDictionary * dict = @{
-                            @"Next" : @"ExcelViewController",
-                            };
-    
-    for (NSString * key in dict) {
-        if ([sender.title isEqualToString:key]) {
-            UIViewController * controller = [NSClassFromString(dict[key]) new];
-            [self.navigationController pushViewController:controller animated:YES];
-        }
-    }
-    
-}
+
 
 - (void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];

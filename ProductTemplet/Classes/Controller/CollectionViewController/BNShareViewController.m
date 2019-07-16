@@ -8,7 +8,7 @@
 //  Copyright © 2018年 BN. All rights reserved.
 //
 
-#import "BNShareView.h"
+#import "BNShareViewController.h"
 
 #import "BNShareView.h"
 
@@ -35,7 +35,7 @@
     self.edgesForExtendedLayout = UIRectEdgeNone;
 
     
-    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc]initWithTitle:@"Left" style:UIBarButtonItemStyleDone target:self action:@selector(handleActionBtn:)];
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc]initWithTitle:@"分享" style:UIBarButtonItemStyleDone target:self action:@selector(handleActionBtn:)];
 
     
 //    [self.view addSubview:self.shareView];

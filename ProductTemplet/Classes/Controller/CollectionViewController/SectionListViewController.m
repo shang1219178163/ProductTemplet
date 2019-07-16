@@ -150,7 +150,7 @@
         [self goController:@"BNExcelController" title:@""];
 
     }else{
-        [self goController:@"BNShareView" title:@""];
+        [self goController:@"BNShareViewController" title:@""];
         
     }
     

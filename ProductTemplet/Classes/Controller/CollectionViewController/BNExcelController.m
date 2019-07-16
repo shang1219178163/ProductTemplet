@@ -10,9 +10,6 @@
 
 #import "UIExcelView.h"
 
-#import "NSObject+Helper.h"
-#import "UINavigationController+Helper.h"
-
 @interface BNExcelController ()
 
 @property (nonatomic, strong) UIExcelView * excelView;
@@ -80,10 +77,10 @@
         NSMutableArray * tmp  = [NSMutableArray array];
         [tmp addObject:[NSString stringWithFormat:@"项目%@",@(i)]];
         [tmp addObjectsFromArray:@[@10000,@0,@"3.4.5.6",@"027641081087",@"1",]];
-        [tmp addObject:@([self getRandomNumber:1 to:100])];
-        [tmp addObject:@([self getRandomNumber:100 to:10000])];
-        [tmp addObject:@([self getRandomNumber:1000 to:1999])];
-        [tmp addObject:@([self getRandomNumber:10000000000 to:19999999999])];
+        [tmp addObject:@([self getRandomNum:1 to:100])];
+        [tmp addObject:@([self getRandomNum:100 to:10000])];
+        [tmp addObject:@([self getRandomNum:1000 to:1999])];
+        [tmp addObject:@([self getRandomNum:10000000000 to:19999999999])];
 
         [marr addObject:tmp];
     }

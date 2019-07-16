@@ -47,17 +47,14 @@
     }];
     
     self.dataList = @[
-                      @[@"BNCTViewController", @"",],
-                      @[@"BNExcelController", @"",],
-                      @[@"BNFontListShowController", @"",],
-                      @[@"BNShareViewController", @"",],
+                      @[@"BNCTViewController", @"圆形效果",],
+                      @[@"BNExcelController", @"Excel视图",],
+                      @[@"BNShareViewController", @"分享视图",],
                       @[@"CTViewListController", @"",],
-                      @[@"CTViewListNewController", @"",],
                       @[@"CardLineViewController", @"",],
                       @[@"CardViewController", @"",],
                       @[@"CircleViewController", @"",],
                       @[@"FileParseController", @"",],
-                      @[@"GroupViewController", @"",],
                       @[@"LeftViewController", @"",],
                       @[@"PickerViewController", @"",],
                       @[@"RightViewController", @"",],
@@ -103,10 +100,10 @@
             static NSString * identifier = @"UITableViewCell1";
             //    UITableViewOneCell * cell = [UITableViewOneCell cellWithTableView:tableView];
             UITableViewCell * cell = [UITableViewCell cellWithTableView:tableView identifier:identifier style:UITableViewCellStyleSubtitle];
-            cell.textLabel.text = list[1];
+            cell.textLabel.text = list[0];
             cell.textLabel.textColor = UIColor.themeColor;
             
-            cell.detailTextLabel.text = list[0];
+            cell.detailTextLabel.text = list[1];
             cell.detailTextLabel.textColor = UIColor.grayColor;
             cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
             return cell;

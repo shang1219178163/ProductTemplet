@@ -24,12 +24,10 @@
                         @{
                             kItem_header  :   @"时间",
 //                            kItem_footer  :   @"footer_0",
-                            kItem_obj   :   @[
-                                    @"天数",
+                            kItem_obj   :   @[          @"天数",
                                     
                                     ],
-                            kItem_objSeleted   :   @[
-                                    @(YES),
+                            kItem_objSeleted   :   @[          @(YES),
                                     
                                     ].mutableCopy,
                             
@@ -37,12 +35,10 @@
                             @{
                                 kItem_header  :   @"栏位",
 //                                kItem_footer  :   @"footer_1",
-                                kItem_obj   :   @[
-                                        @"栏位",
+                                kItem_obj   :   @[              @"栏位",
                                         
                                         ],
-                                kItem_objSeleted   :   @[
-                                        @(YES),
+                                kItem_objSeleted   :   @[              @(YES),
 
                                         ].mutableCopy,
                                 
@@ -50,12 +46,10 @@
                             @{
                                 kItem_header  :   @"性别",
 //                                kItem_footer  :   @"footer_2",
-                                kItem_obj   :   @[
-                                        @"母猪",
+                                kItem_obj   :   @[              @"母猪",
                                         
                                         ],
-                                kItem_objSeleted   :   @[
-                                        @(YES),
+                                kItem_objSeleted   :   @[              @(YES),
 
                                         ].mutableCopy,
                                 
@@ -63,14 +57,12 @@
                             @{
                                 kItem_header  :   @"状态",
 //                                kItem_footer  :   @"footer_2",
-                                kItem_obj   :   @[
-                                        @"后备", @"妊娠", @"哺乳",
+                                kItem_obj   :   @[              @"后备", @"妊娠", @"哺乳",
                                         @"返情空怀", @"B超鉴定空怀", @"流产空怀",
                                         @"断奶空怀",
                                         
                                         ],
-                                kItem_objSeleted   :   @[
-                                        @(YES),@(NO),@(NO),
+                                kItem_objSeleted   :   @[              @(YES),@(NO),@(NO),
                                         @(NO),@(NO),@(NO),
                                         @(NO),
                                         
@@ -113,102 +105,39 @@
     }];
 
     self.dataList = @[
-                      @[
-                          @"PKMainController", @"高德地图轨迹回溯",
-                          ],
-                      @[
-                          @"RuntimeController", @"字符串映射研究",
-                          ],
-                      @[
-                          @"FontListController", @"iOS字体大全",
-                          ],
-                      @[
-                          @"FMBDViewController", @"FMDB",
-                          ],
-                      @[
-                          @"LockCompareController", @"iOS锁性能对比",
-                          ],
-                      @[
-                          @"DesignPatternsController", @"DesignPatterns",
-                          ],
-                      @[
-                          @"MultithreadingViewController", @"Multithreading",
-                          ],
-                      @[
-                          @"BlockViewController", @"block循环引用完美解决方案",
-                          ],
-                      @[
-                          @"ShowListController", @"通用列表类展示封装",
-                          
-                          ],
-                      @[
-                          @"EntryViewController", @"录入类界面封装",
-                          ],
-                      @[
-                          @"CustomViewController", @"View自定义",
-                          ],
-                      @[
-                          @"BNTabBarController", @"嵌套TabBar,实现类UITabBarController功能",
-                          ],
-                      @[
-                          @"SubTabBarController", @"BNTabBarController子类化",
-                          ],
-                      
-                      @[
-                          @"UICollectionDisplayController", @"UICollectionView",
-                          ],
-                      @[
-                          @"SortViewController", @"Sort",
-                          ],
-                      @[
-                          @"NotificationTreadController", @"(不同线程)广播重定向",
-                          ],
-                      @[
-                          @"CountDownListController", @"定时器列表",
-                          ],
-                      @[
-                          @"UIViewPropertyAnimatorController", @"UIViewPropertyAnimator(iOS10)",
-                          ],
-                      @[
-                          @"SugerAlertController", @"SugerAlert",
-                          ],
-                      @[
-                          @"MutiRequestController", @"同一界面多网络请求",
-                          ],
-                      @[
-                          @"NumberViewController", @"NSNumberFormatter",
-                          ],
-                      @[
-                          @"UITextFieldController", @"UITextField",
-                          ],
-                      @[
-                          @"TextViewController", @"UITextView",
-                          ],
-//                      @[
-//                          @"FriendListController", @"FriendList",
-//                          ],
-                      @[
-                          @"MoneyDisplayController", @"金额跳动",
-                          ],
-                      @[
-                          @"AVSpeechViewController", @"文字转语音",
-                          ],
-                      
-                      @[
-                          @"TextFromSpeechController", @"语音转文字",
-                          ],
-                      @[
-                          @"LoginViewController", @"直播拉流",
-                          ],
-                      @[
-                          @"KeyboardController",@"Keyboard自定义",
-                          ],
-                      @[
-                          @"AnimationListController", @"动画研究",
-                          ],
-                      @[
-                          @"TestViewController", @"Test",
-                          ],
+                      @[@"PKMainController", @"高德地图轨迹回溯",],
+                      @[@"RuntimeController", @"字符串映射研究",],
+                      @[@"BNCollectionMainController", @"CollectionView封装",],
+                      @[@"FontListController", @"iOS字体大全",],
+                      @[@"FMBDViewController", @"FMDB",],
+                      @[@"LockCompareController", @"iOS锁性能对比",],
+                      @[@"DesignPatternsController", @"DesignPatterns",],
+                      @[@"MultithreadingViewController", @"Multithreading",],
+                      @[@"BlockViewController", @"block循环引用完美解决方案",],
+                      @[@"ShowListController", @"通用列表类展示封装", ],
+                      @[@"EntryViewController", @"录入类界面封装",],
+                      @[@"CustomViewController", @"View自定义",],
+                      @[@"BNTabBarController", @"嵌套TabBar,实现类UITabBarController功能",],
+                      @[@"SubTabBarController", @"BNTabBarController子类化",],
+                      @[@"UICollectionDisplayController", @"UICollectionView",],
+                      @[@"SortViewController", @"Sort",],
+                      @[@"NotificationTreadController", @"(不同线程)广播重定向",],
+                      @[@"CountDownListController", @"定时器列表",],
+                      @[@"UIViewPropertyAnimatorController", @"UIViewPropertyAnimator(iOS10)",],
+                      @[@"SugerAlertController", @"SugerAlert",],
+                      @[@"MutiRequestController", @"同一界面多网络请求",],
+                      @[@"NumberViewController", @"NSNumberFormatter",],
+                      @[@"UITextFieldController", @"UITextField",],
+                      @[@"TextViewController", @"UITextView",],
+//                      @[@"FriendListController", @"FriendList", ],
+                      @[@"MoneyDisplayController", @"金额跳动",],
+                      @[@"AVSpeechViewController", @"文字转语音",],
+                      @[@"TextFromSpeechController", @"语音转文字",],
+                      @[@"LoginViewController", @"直播拉流",],
+                      @[@"KeyboardController",@"Keyboard自定义",],
+                      @[@"AnimationListController", @"动画研究",],
+                      @[@"ScrollViewCycleController", @"ScrollViewCycle",],
+                      @[@"TestViewController", @"Test",],
                                
                       ].mutableCopy;
     
@@ -262,7 +191,7 @@
             NSArray * list = self.dataList[indexPath.row];
             //    [self goController:list.lastObject title:list.firstObject];
             UITableViewCell * cell = [tableView cellForRowAtIndexPath:indexPath];
-            [self pushController:list[0] item:cell type:@0];
+            [self pushController:list[0] title:list[1] item:cell type:@0];
         };
     }
     return _plainView;

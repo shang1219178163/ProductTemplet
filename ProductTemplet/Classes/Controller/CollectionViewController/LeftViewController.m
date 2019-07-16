@@ -9,7 +9,7 @@
 
 #import "LeftViewController.h"
 
-#import "BN_DataModel.h"
+#import "BNDataModel.h"
 
 #import "UICTViewCellOne.h"
 #import "UICTReusableViewZero.h"
@@ -45,7 +45,7 @@
                        UICollectionElementKindSectionHeader:   @[
                                @"UICTReusableViewZero",
                                ],
-                       UICollectionElementKindSectionHeader:   @[
+                       UICollectionElementKindSectionFooter:   @[
                                @"UICTReusableViewZero",
                                ],
                        
@@ -117,7 +117,7 @@
             NSMutableArray * marr = [NSMutableArray arrayWithCapacity:0];
             
             for (NSInteger j = 0; j < 7; j++) {
-                BN_DataModel * model = [[BN_DataModel alloc]init];
+                BNDataModel * model = [[BNDataModel alloc]init];
                 model.title = [NSString stringWithFormat:@"%@_%@",@(i),@(j)];
                 model.imgName = [NSString stringWithFormat:@"%@",@(j)];
                 
@@ -129,7 +129,7 @@
     }
     else{
         for (NSInteger j = 0; j < 7; j++) {
-            BN_DataModel * model = [[BN_DataModel alloc]init];
+            BNDataModel * model = [[BNDataModel alloc]init];
             model.title = [NSString stringWithFormat:@"%@_",@(j)];
             model.imgName = [NSString stringWithFormat:@"%@",@(j)];
             
@@ -196,7 +196,7 @@
 //}
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath{
-    BN_DataModel * model = [self itemAtIndexPath:indexPath];
+    BNDataModel * model = [self itemAtIndexPath:indexPath];
     
     UICTViewCellOne * view = [UICTViewCellOne viewWithCollectionView:collectionView indexPath:indexPath];
     
@@ -207,7 +207,7 @@
 
     view.backgroundColor = [UIColor cyanColor];
     
-    [UIView getLineWithView:view];
+    [view getViewLayer];
     return view;
 }
 
@@ -247,7 +247,7 @@
 - (void)collectionView:(UICollectionView *)collectionView moveItemAtIndexPath:(NSIndexPath *)sourceIndexPath toIndexPath:(NSIndexPath*)destinationIndexPath {
 
     NSMutableArray *arraySection = [self arrayAtSection:sourceIndexPath.section];
-    BN_DataModel * model = [self itemAtIndexPath:sourceIndexPath];
+    BNDataModel * model = [self itemAtIndexPath:sourceIndexPath];
     
     [arraySection removeObjectAtIndex:sourceIndexPath.row];
     [arraySection insertObject:model atIndex:destinationIndexPath.row];

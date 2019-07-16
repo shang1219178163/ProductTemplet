@@ -16,6 +16,8 @@
 
 @interface CTViewListController ()<UICollectionViewDataSource,UICollectionViewDelegate,UICollectionViewDelegateFlowLayout>
 
+@property (nonatomic, strong) NSDictionary *dictClass;
+
 @end
 
 @implementation CTViewListController
@@ -43,7 +45,7 @@
                        UICollectionElementKindSectionHeader:   @[
                                @"UICTReusableViewZero",
                                ],
-                       UICollectionElementKindSectionHeader:   @[
+                       UICollectionElementKindSectionFooter:   @[
                                @"UICTReusableViewZero",
                                ],
                        
@@ -62,7 +64,7 @@
                           kItem_header  :   @"header功能测试",
                           kItem_footer  :   @"footer功能测试",
                           kItem_obj     :   @[
-                                  @"RightViewController",@"TmpViewController",@"BNShareView",
+                                  @"RightViewController",@"TmpViewController",@"BNShareViewController",
                                   @"MainViewController",
                                   ],
                           },
@@ -128,7 +130,7 @@
         [self goController:@"FileParseController" title:@"文件解析"];
         return;
     }
-    [self goController:@"BNExcelController"];
+    [self goController:@"BNExcelController" title:@"BNExcelController"];
 
 }
 
@@ -197,7 +199,7 @@
     
     DDLog(@"%@",NSStringFromIndexPath(indexPath));
     NSString * controlleName = [self itemAtSection:indexPath];
-    [self goController:controlleName];
+    [self goController:controlleName title:controlleName];
 }
 
 //header的size

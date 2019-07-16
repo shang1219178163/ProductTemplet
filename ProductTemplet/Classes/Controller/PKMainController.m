@@ -98,8 +98,7 @@
 - (void)handleMapLocation:(UIButton *)sender{
     [BNMapManager.shared startSingleLocationWithReGeocode:true handler:^(CLLocation *location, AMapLocationReGeocode *regeocode, AMapLocationManager *manager, NSError *error) {
         if (error) {
-            DDLog(@"error:%@",error);
-            [self showAlertTitle:@"error" msg:location.description];
+            [self showAlertTitle:@"error" msg:error.localizedDescription actionTitles:nil handler:nil];
 
         } else {
 //            DDLog(@"coordinate:%@\nreGeocode:%@",NSStringFromCoordinate(location.coordinate),regeocode);
@@ -137,12 +136,12 @@
                         DDLog(@"error_%@",error.description);
                         return ;
                     }
-                    DDLog(@"_%@_%@_%@_",customID, NSStringFromCoordinate(coordinate), @(regions.firstObject.fenceStatus));
+//                    DDLog(@"_%@_%@_%@_",customID, NSStringFromCoordinate(coordinate), @(regions.firstObject.fenceStatus));
                 }];
             } else {
 //                [MBProgressHUD showToastWithTips:kMsg_LocationFailed inView:self.navigationController.view];
                 [self showAlertTitle:@"error" msg:location.description];
-
+            
             }
         }
     }];

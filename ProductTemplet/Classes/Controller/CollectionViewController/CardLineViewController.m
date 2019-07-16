@@ -88,16 +88,7 @@
     self.title = @"CardLine";
     self.view.backgroundColor = [UIColor whiteColor];
     
-    UIBarButtonItem * bar = [[UIBarButtonItem alloc]initWithTitle:@"Next" style:UIBarButtonItemStyleDone target:self action:@selector(handleActionBtn:)];
-    self.navigationItem.rightBarButtonItem = bar;
-    
     [self.view addSubview:self.collectionView];
-    
-}
-
-- (void)handleActionBtn:(UIBarButtonItem *)sender{
-    DDLog(@"%@",sender.title);
-    
     
 }
 
@@ -136,6 +127,7 @@
     //    cell.layer.cornerRadius = 25;
     cell.backgroundColor = [UIColor colorWithRed:arc4random()%255/255.0 green:arc4random()%255/255.0 blue:arc4random()%255/255.0 alpha:1];
     cell.label.text = NSStringFromIndexPath(indexPath);
+    cell.backgroundColor = UIColor.themeColor;
     return cell;
 }
 

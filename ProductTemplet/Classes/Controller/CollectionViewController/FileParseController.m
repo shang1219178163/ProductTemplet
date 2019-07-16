@@ -8,7 +8,6 @@
 
 #import "FileParseController.h"
 
-#import "UIViewController+AddView.h"
 
 @interface FileParseController ()
 
@@ -46,7 +45,7 @@
 - (void)handleDataList{
     
     dispatch_async(dispatch_get_global_queue(0, 0), ^{
-        NSMutableArray * marr = [@"excel.geojson" jsonFileToObjc];
+        NSMutableArray * marr = [NSFileManager paserJsonFile:@"excel.geojson"];
         [marr enumerateObjectsUsingBlock:^(NSMutableArray *  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
             [obj removeObjectAtIndex:0];
             if (![obj.lastObject isEqualToString:@""]) {
@@ -54,7 +53,7 @@
             }
             [obj removeLastObject];
             
-            NNLog(@"'%@' = '%@';\n",obj.firstObject,obj.lastObject);
+            DDLog(@"'%@' = '%@';\n",obj.firstObject,obj.lastObject);
         }];
         
         dispatch_async(dispatch_get_main_queue(), ^{

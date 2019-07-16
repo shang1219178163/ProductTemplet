@@ -158,6 +158,26 @@
 		14B6B34A22B1FFE40047E094 /* PKDeviceListRootModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 14B6B34922B1FFE30047E094 /* PKDeviceListRootModel.m */; };
 		14B6B34D22B2233B0047E094 /* PKChannelListRootModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 14B6B34B22B2233A0047E094 /* PKChannelListRootModel.m */; };
 		14B6B35022B230350047E094 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 14B6B34F22B230350047E094 /* LoginViewController.m */; };
+		14C1197522DC59AC009D18A3 /* ScrollViewCycleController.m in Sources */ = {isa = PBXBuildFile; fileRef = 14C1197122DC59AB009D18A3 /* ScrollViewCycleController.m */; };
+		14C1197622DC59AC009D18A3 /* UICTViewCellCycle.m in Sources */ = {isa = PBXBuildFile; fileRef = 14C1197222DC59AB009D18A3 /* UICTViewCellCycle.m */; };
+		14C1197822DC5A5A009D18A3 /* postImage.png in Resources */ = {isa = PBXBuildFile; fileRef = 14C1197722DC5A59009D18A3 /* postImage.png */; };
+		14C11AA922DC7FF8009D18A3 /* TmpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 14C11A8922DC7FD0009D18A3 /* TmpViewController.m */; };
+		14C11AAA22DC7FF8009D18A3 /* SectionListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 14C11A8A22DC7FD0009D18A3 /* SectionListViewController.m */; };
+		14C11AAB22DC7FF8009D18A3 /* RightViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 14C11A8C22DC7FD1009D18A3 /* RightViewController.m */; };
+		14C11AAC22DC7FF8009D18A3 /* LeftViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 14C11A8F22DC7FD2009D18A3 /* LeftViewController.m */; };
+		14C11AAD22DC7FF8009D18A3 /* CardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 14C11A9122DC7FD3009D18A3 /* CardViewController.m */; };
+		14C11AAE22DC7FF8009D18A3 /* BNCTViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 14C11A9222DC7FD3009D18A3 /* BNCTViewController.m */; };
+		14C11AB122DC7FF8009D18A3 /* CTViewGroupController.m in Sources */ = {isa = PBXBuildFile; fileRef = 14C11A9A22DC7FD6009D18A3 /* CTViewGroupController.m */; };
+		14C11AB222DC7FF8009D18A3 /* FileParseController.m in Sources */ = {isa = PBXBuildFile; fileRef = 14C11A9D22DC7FD7009D18A3 /* FileParseController.m */; };
+		14C11AB322DC7FF8009D18A3 /* CircleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 14C11A9E22DC7FD8009D18A3 /* CircleViewController.m */; };
+		14C11AB422DC7FF8009D18A3 /* PickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 14C11A9F22DC7FD9009D18A3 /* PickerViewController.m */; };
+		14C11AB622DC7FF8009D18A3 /* CTViewListController.m in Sources */ = {isa = PBXBuildFile; fileRef = 14C11AA222DC7FF7009D18A3 /* CTViewListController.m */; };
+		14C11AB722DC7FF8009D18A3 /* CardLineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 14C11AA322DC7FF7009D18A3 /* CardLineViewController.m */; };
+		14C11AB822DC7FF8009D18A3 /* SphereViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 14C11AA422DC7FF7009D18A3 /* SphereViewController.m */; };
+		14C11AB922DC7FF8009D18A3 /* BNExcelController.m in Sources */ = {isa = PBXBuildFile; fileRef = 14C11AA522DC7FF7009D18A3 /* BNExcelController.m */; };
+		14C11ABA22DC7FF8009D18A3 /* BNShareViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 14C11AA622DC7FF8009D18A3 /* BNShareViewController.m */; };
+		14C11ABD22DC813E009D18A3 /* BNCollectionMainController.m in Sources */ = {isa = PBXBuildFile; fileRef = 14C11ABC22DC813E009D18A3 /* BNCollectionMainController.m */; };
+		14C11AC022DC872C009D18A3 /* BNDataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 14C11ABF22DC872C009D18A3 /* BNDataModel.m */; };
 		14C96FC022B399FA0015BA1D /* GroupViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 14C96FBF22B399FA0015BA1D /* GroupViewController.m */; };
 		14D40A3022C5BB7B00AF74B9 /* PopoverAction.m in Sources */ = {isa = PBXBuildFile; fileRef = 14D40A2C22C5BB7B00AF74B9 /* PopoverAction.m */; };
 		14D40A3122C5BB7B00AF74B9 /* PopoverView.m in Sources */ = {isa = PBXBuildFile; fileRef = 14D40A2D22C5BB7B00AF74B9 /* PopoverView.m */; };
@@ -754,6 +774,45 @@
 		14B6B34C22B2233A0047E094 /* PKChannelListRootModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PKChannelListRootModel.h; sourceTree = "<group>"; };
 		14B6B34E22B230340047E094 /* LoginViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
 		14B6B34F22B230350047E094 /* LoginViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
+		14C1197122DC59AB009D18A3 /* ScrollViewCycleController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScrollViewCycleController.m; sourceTree = "<group>"; };
+		14C1197222DC59AB009D18A3 /* UICTViewCellCycle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UICTViewCellCycle.m; sourceTree = "<group>"; };
+		14C1197322DC59AB009D18A3 /* UICTViewCellCycle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UICTViewCellCycle.h; sourceTree = "<group>"; };
+		14C1197422DC59AC009D18A3 /* ScrollViewCycleController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScrollViewCycleController.h; sourceTree = "<group>"; };
+		14C1197722DC5A59009D18A3 /* postImage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = postImage.png; sourceTree = "<group>"; };
+		14C11A8622DC7FCF009D18A3 /* LeftViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LeftViewController.h; sourceTree = "<group>"; };
+		14C11A8722DC7FCF009D18A3 /* SectionListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SectionListViewController.h; sourceTree = "<group>"; };
+		14C11A8922DC7FD0009D18A3 /* TmpViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TmpViewController.m; sourceTree = "<group>"; };
+		14C11A8A22DC7FD0009D18A3 /* SectionListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SectionListViewController.m; sourceTree = "<group>"; };
+		14C11A8B22DC7FD1009D18A3 /* CardViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CardViewController.h; sourceTree = "<group>"; };
+		14C11A8C22DC7FD1009D18A3 /* RightViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RightViewController.m; sourceTree = "<group>"; };
+		14C11A8D22DC7FD1009D18A3 /* CardLineViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CardLineViewController.h; sourceTree = "<group>"; };
+		14C11A8E22DC7FD2009D18A3 /* TmpViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TmpViewController.h; sourceTree = "<group>"; };
+		14C11A8F22DC7FD2009D18A3 /* LeftViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LeftViewController.m; sourceTree = "<group>"; };
+		14C11A9022DC7FD2009D18A3 /* BNCTViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BNCTViewController.h; sourceTree = "<group>"; };
+		14C11A9122DC7FD3009D18A3 /* CardViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CardViewController.m; sourceTree = "<group>"; };
+		14C11A9222DC7FD3009D18A3 /* BNCTViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BNCTViewController.m; sourceTree = "<group>"; };
+		14C11A9422DC7FD4009D18A3 /* FileParseController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FileParseController.h; sourceTree = "<group>"; };
+		14C11A9522DC7FD5009D18A3 /* BNShareViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BNShareViewController.h; sourceTree = "<group>"; };
+		14C11A9622DC7FD5009D18A3 /* PickerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PickerViewController.h; sourceTree = "<group>"; };
+		14C11A9722DC7FD5009D18A3 /* BNExcelController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BNExcelController.h; sourceTree = "<group>"; };
+		14C11A9A22DC7FD6009D18A3 /* CTViewGroupController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CTViewGroupController.m; sourceTree = "<group>"; };
+		14C11A9B22DC7FD7009D18A3 /* SphereViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SphereViewController.h; sourceTree = "<group>"; };
+		14C11A9C22DC7FD7009D18A3 /* CTViewGroupController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTViewGroupController.h; sourceTree = "<group>"; };
+		14C11A9D22DC7FD7009D18A3 /* FileParseController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FileParseController.m; sourceTree = "<group>"; };
+		14C11A9E22DC7FD8009D18A3 /* CircleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CircleViewController.m; sourceTree = "<group>"; };
+		14C11A9F22DC7FD9009D18A3 /* PickerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PickerViewController.m; sourceTree = "<group>"; };
+		14C11AA122DC7FF7009D18A3 /* RightViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RightViewController.h; sourceTree = "<group>"; };
+		14C11AA222DC7FF7009D18A3 /* CTViewListController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CTViewListController.m; sourceTree = "<group>"; };
+		14C11AA322DC7FF7009D18A3 /* CardLineViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CardLineViewController.m; sourceTree = "<group>"; };
+		14C11AA422DC7FF7009D18A3 /* SphereViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SphereViewController.m; sourceTree = "<group>"; };
+		14C11AA522DC7FF7009D18A3 /* BNExcelController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BNExcelController.m; sourceTree = "<group>"; };
+		14C11AA622DC7FF8009D18A3 /* BNShareViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BNShareViewController.m; sourceTree = "<group>"; };
+		14C11AA722DC7FF8009D18A3 /* CircleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CircleViewController.h; sourceTree = "<group>"; };
+		14C11AA822DC7FF8009D18A3 /* CTViewListController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTViewListController.h; sourceTree = "<group>"; };
+		14C11ABB22DC813E009D18A3 /* BNCollectionMainController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BNCollectionMainController.h; sourceTree = "<group>"; };
+		14C11ABC22DC813E009D18A3 /* BNCollectionMainController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BNCollectionMainController.m; sourceTree = "<group>"; };
+		14C11ABE22DC872B009D18A3 /* BNDataModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BNDataModel.h; sourceTree = "<group>"; };
+		14C11ABF22DC872C009D18A3 /* BNDataModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BNDataModel.m; sourceTree = "<group>"; };
 		14C96FBE22B399FA0015BA1D /* GroupViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GroupViewController.h; sourceTree = "<group>"; };
 		14C96FBF22B399FA0015BA1D /* GroupViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GroupViewController.m; sourceTree = "<group>"; };
 		14D40A2822C5BB7B00AF74B9 /* PopoverView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PopoverView.h; sourceTree = "<group>"; };
@@ -1607,6 +1666,47 @@
 			path = Controller;
 			sourceTree = "<group>";
 		};
+		14C11A2B22DC7A28009D18A3 /* CollectionViewController */ = {
+			isa = PBXGroup;
+			children = (
+				14C11ABB22DC813E009D18A3 /* BNCollectionMainController.h */,
+				14C11ABC22DC813E009D18A3 /* BNCollectionMainController.m */,
+				14C11A9022DC7FD2009D18A3 /* BNCTViewController.h */,
+				14C11A9222DC7FD3009D18A3 /* BNCTViewController.m */,
+				14C11A9722DC7FD5009D18A3 /* BNExcelController.h */,
+				14C11AA522DC7FF7009D18A3 /* BNExcelController.m */,
+				14C11A9522DC7FD5009D18A3 /* BNShareViewController.h */,
+				14C11AA622DC7FF8009D18A3 /* BNShareViewController.m */,
+				14C11A8D22DC7FD1009D18A3 /* CardLineViewController.h */,
+				14C11AA322DC7FF7009D18A3 /* CardLineViewController.m */,
+				14C11A8B22DC7FD1009D18A3 /* CardViewController.h */,
+				14C11A9122DC7FD3009D18A3 /* CardViewController.m */,
+				14C11AA722DC7FF8009D18A3 /* CircleViewController.h */,
+				14C11A9E22DC7FD8009D18A3 /* CircleViewController.m */,
+				14C11AA822DC7FF8009D18A3 /* CTViewListController.h */,
+				14C11AA222DC7FF7009D18A3 /* CTViewListController.m */,
+				14C11A9422DC7FD4009D18A3 /* FileParseController.h */,
+				14C11A9D22DC7FD7009D18A3 /* FileParseController.m */,
+				14C11A9C22DC7FD7009D18A3 /* CTViewGroupController.h */,
+				14C11A9A22DC7FD6009D18A3 /* CTViewGroupController.m */,
+				14C11A8622DC7FCF009D18A3 /* LeftViewController.h */,
+				14C11A8F22DC7FD2009D18A3 /* LeftViewController.m */,
+				14C11A9622DC7FD5009D18A3 /* PickerViewController.h */,
+				14C11A9F22DC7FD9009D18A3 /* PickerViewController.m */,
+				14C11AA122DC7FF7009D18A3 /* RightViewController.h */,
+				14C11A8C22DC7FD1009D18A3 /* RightViewController.m */,
+				14C11A8722DC7FCF009D18A3 /* SectionListViewController.h */,
+				14C11A8A22DC7FD0009D18A3 /* SectionListViewController.m */,
+				14C11A9B22DC7FD7009D18A3 /* SphereViewController.h */,
+				14C11AA422DC7FF7009D18A3 /* SphereViewController.m */,
+				14C11A8E22DC7FD2009D18A3 /* TmpViewController.h */,
+				14C11A8922DC7FD0009D18A3 /* TmpViewController.m */,
+				14C11ABE22DC872B009D18A3 /* BNDataModel.h */,
+				14C11ABF22DC872C009D18A3 /* BNDataModel.m */,
+			);
+			path = CollectionViewController;
+			sourceTree = "<group>";
+		};
 		14D40A2722C5BB7B00AF74B9 /* PopoverView */ = {
 			isa = PBXGroup;
 			children = (
@@ -1767,6 +1867,7 @@
 				513646AD2086031D005A20E7 /* Info.plist */,
 				14E793C321D62E0B003230C8 /* bug.png */,
 				1404FAF821E0A1BA00122E22 /* Skull.jpg */,
+				14C1197722DC5A59009D18A3 /* postImage.png */,
 				142A76CE22263F080016D3DA /* icon_operation_busy@2x.png */,
 				513646AE2086031D005A20E7 /* main.m */,
 				513649E320860683005A20E7 /* PrefixHeader.pch */,
@@ -1846,6 +1947,7 @@
 		5136491120860573005A20E7 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				14C11A2B22DC7A28009D18A3 /* CollectionViewController */,
 				14107FA022CDF92E0011344E /* input */,
 				5162F71120BFC051009A6253 /* Multithreading */,
 				51862E4D20BB907C0080BD4E /* DesignPatterns */,
@@ -1855,6 +1957,10 @@
 				512E43442137DDBC00272986 /* WHKGroupViewViewController.m */,
 				5189413E209C27E000A687E1 /* TestViewController.h */,
 				5189413F209C27E000A687E1 /* TestViewController.m */,
+				14C1197422DC59AC009D18A3 /* ScrollViewCycleController.h */,
+				14C1197122DC59AB009D18A3 /* ScrollViewCycleController.m */,
+				14C1197322DC59AB009D18A3 /* UICTViewCellCycle.h */,
+				14C1197222DC59AB009D18A3 /* UICTViewCellCycle.m */,
 				51B9CCFA209FE2B00096A540 /* TimerViewController.h */,
 				51B9CCFB209FE2B00096A540 /* TimerViewController.m */,
 				510BC999208F2F0400CF48C5 /* FriendListController.h */,
@@ -2771,6 +2877,7 @@
 				140A2BE022696E24000ED121 /* map_ball_yellow@3x.png in Resources */,
 				5136498E20860655005A20E7 /* img_Add_AnimalHouse.png in Resources */,
 				5136499520860655005A20E7 /* img_animalFemale.png in Resources */,
+				14C1197822DC5A5A009D18A3 /* postImage.png in Resources */,
 				1410804522D2E69C0011344E /* am_0@2x.png in Resources */,
 				5136498F20860655005A20E7 /* img_Add_AnimalOrigin.png in Resources */,
 				5136499F20860655005A20E7 /* img_dialog_inquiry.png in Resources */,
@@ -2937,7 +3044,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				141080A122D2E7D10011344E /* LiveLikeController.m in Sources */,
+				14C11AC022DC872C009D18A3 /* BNDataModel.m in Sources */,
 				14107FAF22CDF9490011344E /* InputViewController.m in Sources */,
+				14C11AAA22DC7FF8009D18A3 /* SectionListViewController.m in Sources */,
 				14E42CDA2200040200606AD0 /* BNUserLoginController.m in Sources */,
 				140A2B0C2269661F000ED121 /* PKMainController.m in Sources */,
 				143331AD2241F1F600436F75 /* AVSpeechViewController.m in Sources */,
@@ -2951,6 +3060,7 @@
 				140A2BE922696E24000ED121 /* BNMapContainView.m in Sources */,
 				14E42D1A2200042800606AD0 /* BNFileHandler.m in Sources */,
 				515CC98220B6AAF2004AE27C /* AAAnimation.m in Sources */,
+				14C11AAD22DC7FF8009D18A3 /* CardViewController.m in Sources */,
 				149F88B022B386F300EAB4C2 /* ChangePwdController.m in Sources */,
 				515CC98920B6AAF2004AE27C /* AAChartView.m in Sources */,
 				14E42D142200042800606AD0 /* BNAccountTool.m in Sources */,
@@ -3004,7 +3114,9 @@
 				517D8B2420B2C66800DCA731 /* Car.m in Sources */,
 				140A2BDD22696E24000ED121 /* BNDriverRouteView.m in Sources */,
 				515C67E52137C55700D5EA94 /* BCurrentCityCell.m in Sources */,
+				14C1197522DC59AC009D18A3 /* ScrollViewCycleController.m in Sources */,
 				14F0FE6722B0AD9800057093 /* LiveViewController.m in Sources */,
+				14C11AAC22DC7FF8009D18A3 /* LeftViewController.m in Sources */,
 				140A2BEE22696E24000ED121 /* JZLocationConverter.m in Sources */,
 				141080B522D2E7D10011344E /* AnimationController18.m in Sources */,
 				149111E6227542C10078A7BB /* BNUploadModel.m in Sources */,
@@ -3018,6 +3130,7 @@
 				140A2BE722696E24000ED121 /* BNSpeechSynthesizer.m in Sources */,
 				51698C862137C0440069C2B2 /* WHKReuestSevice.m in Sources */,
 				140A2BE122696E24000ED121 /* TrackingViewController.m in Sources */,
+				14C11AB222DC7FF8009D18A3 /* FileParseController.m in Sources */,
 				515CC98C20B6AAF2004AE27C /* AASeriesElement.m in Sources */,
 				515CC97920B6AAF2004AE27C /* AAYAxis.m in Sources */,
 				517D8B2B20B2E09800DCA731 /* CarViewController.m in Sources */,
@@ -3036,6 +3149,7 @@
 				51698C4B21376F9E0069C2B2 /* KeychainTool.m in Sources */,
 				149F88AD22B37AB900EAB4C2 /* BNUserLoginView.m in Sources */,
 				51B9CD1820A0520F0096A540 /* ZYSliderViewController.m in Sources */,
+				14C11AB422DC7FF8009D18A3 /* PickerViewController.m in Sources */,
 				518CD324219D5A24003CE348 /* UIViewPropertyAnimatorController.m in Sources */,
 				14F0FE5722B0A83200057093 /* APIRequestURL.m in Sources */,
 				51B9CD1920A0520F0096A540 /* UIViewController+ZYSliderViewController.m in Sources */,
@@ -3045,6 +3159,7 @@
 				140A2BE622696E24000ED121 /* BNMapManager.m in Sources */,
 				14E42CF42200040F00606AD0 /* BNCenterViewController.m in Sources */,
 				14C96FC022B399FA0015BA1D /* GroupViewController.m in Sources */,
+				14C1197622DC59AC009D18A3 /* UICTViewCellCycle.m in Sources */,
 				149111E92275B34E0078A7BB /* BNLog.m in Sources */,
 				141080A022D2E7D10011344E /* AnimationController8.m in Sources */,
 				147B971F21EF005B000F5294 /* UICollectionDisplayController.m in Sources */,
@@ -3060,6 +3175,7 @@
 				515CC98120B6AAF2004AE27C /* AAArea.m in Sources */,
 				1401BE652276A1370078A722 /* BNDiskCache.m in Sources */,
 				14E42CD3220003F200606AD0 /* BNOperation.m in Sources */,
+				14C11ABA22DC7FF8009D18A3 /* BNShareViewController.m in Sources */,
 				51AA0037219929C3002EB259 /* BNCounter.m in Sources */,
 				513647C9208604DE005A20E7 /* LocationTracker.m in Sources */,
 				D7EDEAB221BDF5930048CCDA /* FontListController.m in Sources */,
@@ -3120,6 +3236,8 @@
 				51AA00332199295A002EB259 /* CounterListGroupController.m in Sources */,
 				518CD32A219D787F003CE348 /* SugerAlertController.m in Sources */,
 				14E42CF12200040F00606AD0 /* BNFontListController.m in Sources */,
+				14C11AB722DC7FF8009D18A3 /* CardLineViewController.m in Sources */,
+				14C11AB322DC7FF8009D18A3 /* CircleViewController.m in Sources */,
 				5162F6F120BF9110009A6253 /* ThreadViewController.m in Sources */,
 				515CC97220B6AAF2004AE27C /* AASeries.m in Sources */,
 				517D8B2520B2C66800DCA731 /* Person.m in Sources */,
@@ -3140,11 +3258,14 @@
 				51A4354921ABECAE000D9840 /* TextViewController.m in Sources */,
 				5175C93620C122B1009EA86E /* DBHandler.m in Sources */,
 				1401BE7C2276CBD90078A722 /* BNBaseRequestApi.m in Sources */,
+				14C11AB822DC7FF8009D18A3 /* SphereViewController.m in Sources */,
 				515CC98720B6AAF2004AE27C /* AAPie.m in Sources */,
 				14B6B33B22B1F2400047E094 /* BNChannelListApi.m in Sources */,
+				14C11AB922DC7FF8009D18A3 /* BNExcelController.m in Sources */,
 				14E42CDC2200040200606AD0 /* BNUserRegisterController.m in Sources */,
 				513647E0208604DE005A20E7 /* PPNetworkHelper.m in Sources */,
 				516969B720BCFD4000BAA53D /* CompanyComponent.m in Sources */,
+				14C11AAB22DC7FF8009D18A3 /* RightViewController.m in Sources */,
 				516CCFD3219BFC5E007D3F80 /* KVC_Controller.m in Sources */,
 				14E8692D21C251BA009CE33E /* HomeViewController.m in Sources */,
 				516969AD20BCF9A800BAA53D /* Buyer.m in Sources */,
@@ -3152,6 +3273,7 @@
 				14107FB222CDF9490011344E /* CustomKeyboardViewController.m in Sources */,
 				5167FF1520F5C0EC004A810C /* PulsingHaloLayer.m in Sources */,
 				144920AA21C7BAA700C3C2F6 /* MoneyDisplayController.m in Sources */,
+				14C11AB622DC7FF8009D18A3 /* CTViewListController.m in Sources */,
 				515CC98020B6AAF2004AE27C /* AATitle.m in Sources */,
 				140A2BF722696E24000ED121 /* BNDriverRouteTipView.m in Sources */,
 				1401BE822276D18C0078A722 /* BNCheckVersApi.m in Sources */,
@@ -3201,12 +3323,14 @@
 				51862E5020BB908E0080BD4E /* DesignPatternsController.m in Sources */,
 				516969AE20BCF9A800BAA53D /* Seller.m in Sources */,
 				141080A422D2E7D10011344E /* AnimationController16.m in Sources */,
+				14C11AB122DC7FF8009D18A3 /* CTViewGroupController.m in Sources */,
 				515C67E02137C55700D5EA94 /* LNLocationManager.m in Sources */,
 				140A2BFD226977FB000ED121 /* AppGlobleConfig.m in Sources */,
 				140A2BF322696E24000ED121 /* BNGeoAnno.m in Sources */,
 				51364C9D20860822005A20E7 /* PictureController.m in Sources */,
 				14107FB022CDF9490011344E /* CustomKeyboardView.m in Sources */,
 				149111EC2275B7970078A7BB /* NSError+Helper.m in Sources */,
+				14C11AAE22DC7FF8009D18A3 /* BNCTViewController.m in Sources */,
 				14107FB322CDF9490011344E /* TextViewInputController.m in Sources */,
 				14E42D1C2200042800606AD0 /* BNNoti.m in Sources */,
 				140A2BE822696E24000ED121 /* BNDriverRouteController.m in Sources */,
@@ -3219,6 +3343,7 @@
 				141080AE22D2E7D10011344E /* BNAnimationController.m in Sources */,
 				5175C93F20C13E30009EA86E /* Lesson.m in Sources */,
 				141080B622D2E7D10011344E /* AnniSuperController.m in Sources */,
+				14C11ABD22DC813E009D18A3 /* BNCollectionMainController.m in Sources */,
 				141080B422D2E7D10011344E /* EmitterViewController.m in Sources */,
 				515CC98620B6AAF2004AE27C /* AAItemStyle.m in Sources */,
 				141080AC22D2E7D10011344E /* AnimationController17.m in Sources */,
@@ -3227,6 +3352,7 @@
 				14B6B34422B1FE9C0047E094 /* ChannleListController.m in Sources */,
 				5162F6EE20BF8A2D009A6253 /* MultithreadingViewController.m in Sources */,
 				513646A12086031D005A20E7 /* AppDelegate.m in Sources */,
+				14C11AA922DC7FF8009D18A3 /* TmpViewController.m in Sources */,
 				14E42CF52200040F00606AD0 /* BNFirstViewController.m in Sources */,
 				140A2BED22696E24000ED121 /* MANaviRoute.m in Sources */,
 				14107FB422CDF9490011344E /* UITextField+Util.m in Sources */,

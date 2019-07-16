@@ -6,7 +6,7 @@
 //  Copyright © 2018年 BN. All rights reserved.
 //
 
-#import "GroupViewController.h"
+#import "CTViewGroupController.h"
 
 #import "BNAlertView.h"
 #import "BNAlertViewOne.h"
@@ -17,14 +17,14 @@
 #import "BNPickerViewAddress.h"
 #import "BNPickerViewAddress.h"
 
-@interface GroupViewController ()
+@interface CTViewGroupController ()
 
 @property (nonatomic, strong) NSArray *itemList;
 @property (nonatomic, strong) NSString *address;
 
 @end
 
-@implementation GroupViewController
+@implementation CTViewGroupController
 
 -(NSArray *)itemList{
     if (!_itemList) {

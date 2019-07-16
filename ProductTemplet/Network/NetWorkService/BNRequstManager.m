@@ -245,7 +245,7 @@
             
             //重置token
             NSString * errorMsg = model.errorOther.code == BNRequestCodeNoLogin ? @"您已在其他设备登录" : @"登录失效";
-            [UIAlertController showAletTitle:nil msg:errorMsg block:^{
+            [UIAlertController showAletTitle:nil msg:errorMsg handler:^{
 //                NSNotificationCenter.defaultCenter postNotificationName:<#(nonnull NSNotificationName)#> object:<#(nullable id)#>
             }];
         }

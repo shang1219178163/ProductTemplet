@@ -25,13 +25,12 @@
 @implementation CardViewController
 
 -(NSDictionary *)dictClass{
-    
     if (!_dictClass) {
         _dictClass = @{
                        
                        UICollectionElementKindSectionItem:   @[
-                               @"UICTViewCellOne"
-                               ],
+                                                               @"UICTViewCellOne"
+                                                               ],
                        
                        };
         
@@ -87,12 +86,7 @@
     self.title = @"关卡";
     self.view.backgroundColor = [UIColor orangeColor];
     
-    self.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc]initWithTitle:@"" style:UIBarButtonItemStyleDone target:nil action:nil];
-    
-    UIBarButtonItem * bar = [[UIBarButtonItem alloc]initWithTitle:@"Excel" style:UIBarButtonItemStyleDone target:self action:@selector(handleActionBtn:)];
-    self.navigationItem.rightBarButtonItem = bar;
-    
-    DDLog(@"self.view.bounds_%@",@(self.view.bounds));
+//    self.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc]initWithTitle:@"" style:UIBarButtonItemStyleDone target:nil action:nil];
     
     self.dataList = @[
                       @"LY(二元),2",@"YL(大长),1",@"C(长白),1",@"D(杜洛克),1",@"D(大白),1",@"L(长白),1",@"D(大约克),1",
@@ -118,10 +112,6 @@
     
 }
 
-- (void)handleActionBtn:(UIBarButtonItem *)sender{
-    
-    
-}
 #pragma mark - -UICollectionView
 //返回section个数
 - (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView{

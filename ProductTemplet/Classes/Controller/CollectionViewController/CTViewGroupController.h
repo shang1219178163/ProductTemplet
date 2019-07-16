@@ -1,5 +1,5 @@
 //
-//  GroupViewController.h
+//  CTViewGroupController.h
 //  BN_CollectionView
 //
 //  Created by hsf on 2018/5/25.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface GroupViewController : UIViewController
+@interface CTViewGroupController : UIViewController
 
 @end
