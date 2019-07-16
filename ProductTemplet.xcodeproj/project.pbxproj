@@ -131,6 +131,7 @@
 		14579BA12294EE83001FEB0C /* WebSocketManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 14579BA02294EE83001FEB0C /* WebSocketManager.m */; };
 		14579BA42294FBBA001FEB0C /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 14579BA22294FBBA001FEB0C /* Reachability.m */; };
 		146B8187225C74860004A249 /* SubTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 146B8186225C74860004A249 /* SubTabBarController.m */; };
+		147AB8B822DDD76D00A5C4EC /* FileShareController.m in Sources */ = {isa = PBXBuildFile; fileRef = 147AB8B722DDD76D00A5C4EC /* FileShareController.m */; };
 		147B971F21EF005B000F5294 /* UICollectionDisplayController.m in Sources */ = {isa = PBXBuildFile; fileRef = 147B971E21EF005B000F5294 /* UICollectionDisplayController.m */; };
 		149111D42272FFCC0078A7BB /* BNPageModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 149111D32272FFCC0078A7BB /* BNPageModel.m */; };
 		149111D7227308640078A7BB /* BNRequstManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 149111D6227308640078A7BB /* BNRequstManager.m */; };
@@ -718,6 +719,8 @@
 		14579BA32294FBBA001FEB0C /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
 		146B8185225C74860004A249 /* SubTabBarController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SubTabBarController.h; sourceTree = "<group>"; };
 		146B8186225C74860004A249 /* SubTabBarController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SubTabBarController.m; sourceTree = "<group>"; };
+		147AB8B622DDD76D00A5C4EC /* FileShareController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FileShareController.h; sourceTree = "<group>"; };
+		147AB8B722DDD76D00A5C4EC /* FileShareController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FileShareController.m; sourceTree = "<group>"; };
 		147B971D21EF005B000F5294 /* UICollectionDisplayController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UICollectionDisplayController.h; sourceTree = "<group>"; };
 		147B971E21EF005B000F5294 /* UICollectionDisplayController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UICollectionDisplayController.m; sourceTree = "<group>"; };
 		149111D22272FFCC0078A7BB /* BNPageModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BNPageModel.h; sourceTree = "<group>"; };
@@ -2003,6 +2006,8 @@
 				512E43442137DDBC00272986 /* WHKGroupViewViewController.m */,
 				14C11A9422DC7FD4009D18A3 /* FileParseController.h */,
 				14C11A9D22DC7FD7009D18A3 /* FileParseController.m */,
+				147AB8B622DDD76D00A5C4EC /* FileShareController.h */,
+				147AB8B722DDD76D00A5C4EC /* FileShareController.m */,
 				5189413E209C27E000A687E1 /* TestViewController.h */,
 				5189413F209C27E000A687E1 /* TestViewController.m */,
 				14C1197422DC59AC009D18A3 /* ScrollViewCycleController.h */,
@@ -3300,6 +3305,7 @@
 				144920AA21C7BAA700C3C2F6 /* MoneyDisplayController.m in Sources */,
 				14C11AB622DC7FF8009D18A3 /* CTViewListController.m in Sources */,
 				515CC98020B6AAF2004AE27C /* AATitle.m in Sources */,
+				147AB8B822DDD76D00A5C4EC /* FileShareController.m in Sources */,
 				140A2BF722696E24000ED121 /* BNDriverRouteTipView.m in Sources */,
 				1401BE822276D18C0078A722 /* BNCheckVersApi.m in Sources */,
 				1421D5D021F3177700635582 /* BNWalletView.m in Sources */,

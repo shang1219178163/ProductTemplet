@@ -14,8 +14,12 @@
 #import "BNMapManager.h"
 
 #import "ZYSliderViewController.h"
+#import "FileShareController.h"
 
 @interface AppDelegate ()
+
+@property(nonatomic, strong) FileShareController * fileController;
+@property(nonatomic, strong) UINavigationController * navController;
 
 @end
 
@@ -131,5 +135,41 @@
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
 
+#pragma mark -
+#pragma mark Image view
+
+#if __IPHONE_OS_VERSION_MAX_ALLOWED < __IPHONE_9_0
+- (BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(nullable NSString *)sourceApplication annotation:(id)annotation{
+    return YES;
+}
+
+#else
+- (BOOL)application:(UIApplication *)application openURL:(NSURL *)url options:(nonnull NSDictionary<NSString *,id> *)options{
+    //    UINavigationController * rootVC = (UINavigationController *)UIApplication.sharedApplication.delegate.window.rootViewController;
+    
+    NSLog(@"%@\n%@",url,options);
+    self.fileController.url = url;
+    self.fileController.dict = options;
+    
+    UIViewController *rootVC = UIApplication.sharedApplication.delegate.window.rootViewController;
+    [rootVC presentViewController:self.navController animated:YES completion:nil];
+    
+    return YES;
+}
+#endif
+
+-(FileShareController *)fileController{
+    if (!_fileController) {
+        _fileController = [[FileShareController alloc]init];
+    }
+    return _fileController;
+}
+
+-(UINavigationController *)navController{
+    if (!_navController) {
+        _navController = [[UINavigationController alloc] initWithRootViewController:self.fileController];
+    }
+    return _navController;
+}
 
 @end
