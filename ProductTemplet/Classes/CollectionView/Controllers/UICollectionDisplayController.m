@@ -41,6 +41,12 @@
     
 }
 
+-(void)viewDidLayoutSubviews{
+    [super viewDidLayoutSubviews];
+    
+    self.collectionView.frame = self.view.bounds;
+}
+
 #pragma mark - -UICollectionView
 //返回section个数
 - (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView{

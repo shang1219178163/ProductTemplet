@@ -41,8 +41,6 @@
     UILongPressGestureRecognizer *longPressGesture = [[UILongPressGestureRecognizer alloc] initWithTarget:self action:@selector(longPressAction:)];
     [self.collectionView addGestureRecognizer:longPressGesture];
     
-
-    
     BOOL isSection = YES;
     if (isSection) {
         for (NSInteger i = 0; i < 3; i++) {
@@ -70,6 +68,13 @@
     }
     
 }
+
+-(void)viewDidLayoutSubviews{
+    [super viewDidLayoutSubviews];
+    
+    self.collectionView.frame = self.view.bounds;
+}
+
 
 -(NSMutableArray *)arrayAtSection:(NSInteger)section{
     
@@ -186,7 +191,7 @@
     
     switch (longPress.state) {
         case UIGestureRecognizerStateBegan:
-            
+        {
             if (!indexPath) {
                 break;
             }
@@ -195,8 +200,8 @@
             if (!canMove) {
                 break;
             }
+        }
             break;
-            
         case UIGestureRecognizerStateChanged:
             [self.collectionView updateInteractiveMovementTargetPosition:point];
             break;
