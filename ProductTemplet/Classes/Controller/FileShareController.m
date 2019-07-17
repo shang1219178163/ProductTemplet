@@ -153,7 +153,7 @@
         
     }
     _docController.URL = self.url;
-    _docController.UTI = self.url.getUTI;
+//    _docController.UTI = self.url.getUTI;
     [_docController presentPreviewAnimated:YES];
     
     return _docController;

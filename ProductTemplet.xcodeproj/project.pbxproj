@@ -133,6 +133,8 @@
 		146B8187225C74860004A249 /* SubTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 146B8186225C74860004A249 /* SubTabBarController.m */; };
 		147AB8B822DDD76D00A5C4EC /* FileShareController.m in Sources */ = {isa = PBXBuildFile; fileRef = 147AB8B722DDD76D00A5C4EC /* FileShareController.m */; };
 		147AB8BB22DDE62700A5C4EC /* TrackRecordsController.m in Sources */ = {isa = PBXBuildFile; fileRef = 147AB8BA22DDE62700A5C4EC /* TrackRecordsController.m */; };
+		147ABB5822DED1A500A5C4EC /* BNCollectionDataController.m in Sources */ = {isa = PBXBuildFile; fileRef = 147ABB5422DED1A500A5C4EC /* BNCollectionDataController.m */; };
+		147ABB5922DED1A500A5C4EC /* BNCollectionDataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 147ABB5522DED1A500A5C4EC /* BNCollectionDataModel.m */; };
 		147B971F21EF005B000F5294 /* UICollectionDisplayController.m in Sources */ = {isa = PBXBuildFile; fileRef = 147B971E21EF005B000F5294 /* UICollectionDisplayController.m */; };
 		149111D42272FFCC0078A7BB /* BNPageModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 149111D32272FFCC0078A7BB /* BNPageModel.m */; };
 		149111D7227308640078A7BB /* BNRequstManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 149111D6227308640078A7BB /* BNRequstManager.m */; };
@@ -724,6 +726,10 @@
 		147AB8B722DDD76D00A5C4EC /* FileShareController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FileShareController.m; sourceTree = "<group>"; };
 		147AB8B922DDE62700A5C4EC /* TrackRecordsController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TrackRecordsController.h; sourceTree = "<group>"; };
 		147AB8BA22DDE62700A5C4EC /* TrackRecordsController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TrackRecordsController.m; sourceTree = "<group>"; };
+		147ABB5422DED1A500A5C4EC /* BNCollectionDataController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BNCollectionDataController.m; sourceTree = "<group>"; };
+		147ABB5522DED1A500A5C4EC /* BNCollectionDataModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BNCollectionDataModel.m; sourceTree = "<group>"; };
+		147ABB5622DED1A500A5C4EC /* BNCollectionDataController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BNCollectionDataController.h; sourceTree = "<group>"; };
+		147ABB5722DED1A500A5C4EC /* BNCollectionDataModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BNCollectionDataModel.h; sourceTree = "<group>"; };
 		147B971D21EF005B000F5294 /* UICollectionDisplayController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UICollectionDisplayController.h; sourceTree = "<group>"; };
 		147B971E21EF005B000F5294 /* UICollectionDisplayController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UICollectionDisplayController.m; sourceTree = "<group>"; };
 		149111D22272FFCC0078A7BB /* BNPageModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BNPageModel.h; sourceTree = "<group>"; };
@@ -1749,6 +1755,17 @@
 			path = Controllers;
 			sourceTree = "<group>";
 		};
+		147ABB5322DED19500A5C4EC /* CollectionData */ = {
+			isa = PBXGroup;
+			children = (
+				147ABB5622DED1A500A5C4EC /* BNCollectionDataController.h */,
+				147ABB5422DED1A500A5C4EC /* BNCollectionDataController.m */,
+				147ABB5722DED1A500A5C4EC /* BNCollectionDataModel.h */,
+				147ABB5522DED1A500A5C4EC /* BNCollectionDataModel.m */,
+			);
+			name = CollectionData;
+			sourceTree = "<group>";
+		};
 		14C11A2B22DC7A28009D18A3 /* CollectionView */ = {
 			isa = PBXGroup;
 			children = (
@@ -1990,6 +2007,7 @@
 		513649102086055E005A20E7 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				147ABB5322DED19500A5C4EC /* CollectionData */,
 				517D8B1320B2B52300DCA731 /* DBManager */,
 				14F0FE6422B0AD6B00057093 /* Live */,
 				14107FA022CDF92E0011344E /* Input */,
@@ -3104,6 +3122,7 @@
 				51862E7320BB9FA70080BD4E /* StrategyFinancy.m in Sources */,
 				51698C4921376F9E0069C2B2 /* WHKMapViewController.m in Sources */,
 				14E42CDB2200040200606AD0 /* BNUserPwdChangeController.m in Sources */,
+				147ABB5822DED1A500A5C4EC /* BNCollectionDataController.m in Sources */,
 				140A2BD922696E24000ED121 /* MoveAnnotationView.m in Sources */,
 				51698C4221376F9E0069C2B2 /* Utilities.m in Sources */,
 				51698C892137C0800069C2B2 /* WHKUserDataModel.m in Sources */,
@@ -3240,6 +3259,7 @@
 				51900DD7218953C20038A178 /* NotificationTreadController.m in Sources */,
 				1410805122D2E69C0011344E /* BNAppStoreProgress.m in Sources */,
 				141080B222D2E7D10011344E /* AnimationController12.m in Sources */,
+				147ABB5922DED1A500A5C4EC /* BNCollectionDataModel.m in Sources */,
 				149F88A422B3750F00EAB4C2 /* ResetPwdController.m in Sources */,
 				141080A722D2E7D10011344E /* AnimationController4.m in Sources */,
 				5129425820B424EC009FB70E /* LockCompareController.m in Sources */,
