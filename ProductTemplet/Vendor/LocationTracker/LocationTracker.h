@@ -16,7 +16,7 @@
 //#define kTimer_Interval  30
 //#define kTimer_Interval_Foreground  30
 
-#define kLocation_Duration  10
+#define kLocation_Duration  5
 #define kLocation_Accuracy  2000
 
 #define kLocation_latitude   @"kLocation_latitude"

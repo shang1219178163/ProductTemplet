@@ -82,7 +82,7 @@
 //    //极光
 //    [self registerJPushSDKAppKey:kAppKey_JPush channel:kChannel_JPush isProduction:kIsProduction options:launchOptions];
     // 后台定位
-    [self startBackgroudUploadLocation];
+//    [self startBackgroudUploadLocation];
 }
 
 - (void)startBackgroudUploadLocation{
