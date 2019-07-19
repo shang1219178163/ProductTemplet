@@ -26,7 +26,7 @@ PODS:
   - AMapSearch-NO-IDFA (6.9.0):
     - AMapFoundation-NO-IDFA (~> 1.4)
   - Aspects (1.4.1)
-  - BNCategory (1.9.8.2):
+  - BNCategory (1.9.8.3):
     - AESCrypt-ObjC
     - BNGloble
     - BNKit
@@ -51,7 +51,7 @@ PODS:
     - BNKit
     - BNView
     - Masonry
-  - BNView (1.5.1):
+  - BNView (1.5.1.2):
     - BNCategory
     - BNGloble
     - BNKit
@@ -212,12 +212,12 @@ SPEC CHECKSUMS:
   AMapNavi-NO-IDFA: 932388a920771b8877aa7bd189167731e97e4985
   AMapSearch-NO-IDFA: 264999e6c149383a8f164c2fe49b51513e93d674
   Aspects: 7595ba96a6727a58ebcbfc954497fc5d2fdde546
-  BNCategory: 00a7956e8108285564b68da0b300754475196fb9
+  BNCategory: 1cee7e49242d8fe0b646f758b5cbe3384e3b2789
   BNCollectionView: 7877a1d4fe72e5d3a493c350a386baab544ab739
   BNGloble: 49ed76d0bb99d6ff38d9031cad5e3b7ca588296f
   BNKit: 3542dcaf5a104c77bd29d8675e12e7e6bf4fabcd
   BNTableViewCell: 8ce06a467f508cf169b9767d5ff32c365153325d
-  BNView: d48efae21758d0fd1be1e19804a8b525750aa3c4
+  BNView: 8e49426bcd718c5be37e0fa1693e890224edfa55
   BNViewHeight: bd479cfccf62abda72197cf8b97fc847a49662b9
   FCUUID: bb054fc90cd7cd99320f9f6ff8e130fe607fba05
   FLAnimatedImage: 4a0b56255d9b05f18b6dd7ee06871be5d3b89e31
