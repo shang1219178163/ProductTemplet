@@ -42,16 +42,16 @@ typedef NS_ENUM (NSInteger, BNRequestCode){
 /// 网络请求方式默认GET
 - (BNRequestType)requestType;
 /// 网络请求参数
-- (NSDictionary *)requestParams;
+- (NSDictionary *_Nullable)requestParams;
 /// 网络请求参数验证
 - (BOOL)validateParams;
 
 @optional
 
 /// 存储网络结果
-- (BOOL)saveJsonOfCache:(NSDictionary *)json;
+- (BOOL)saveJsonOfCache:(NSDictionary *_Nullable)json;
 /// 从缓存读取网络结果
-- (NSDictionary *)jsonFromCache;
+- (NSDictionary *_Nullable)jsonFromCache;
 
 @end
 
@@ -63,20 +63,24 @@ typedef NS_ENUM (NSInteger, BNRequestCode){
 
 @end
 
-/// 网络请求结果
-typedef void(^BNRequestResultBlock)(BNRequstManager * _Nonnull manager, id _Nullable responseObject, NSError *_Nullable error);
-
 NS_ASSUME_NONNULL_BEGIN
+
+/// 网络请求结果
+typedef void(^BNRequestBlock)(BNRequstManager *manager, id _Nullable responseObject, NSError *_Nullable error);
 
 @interface BNRequstManager : NSObject
 
-@property (nonatomic, weak) id<BNRequestManagerProtocol> child;
-@property (nonatomic, weak) id<BNRequestManagerResultDelegate> delegate;
-@property (nonatomic, copy) BNRequestResultBlock successBlock;
-@property (nonatomic, copy) BNRequestResultBlock failureBlock;
-@property (nonatomic, assign, readonly) BOOL isLoading;
+@property(nonatomic, weak) id<BNRequestManagerProtocol> child;
+@property(nonatomic, weak) id<BNRequestManagerResultDelegate> delegate;
+@property(nonatomic, copy) BNRequestBlock successBlock;
+@property(nonatomic, copy) BNRequestBlock failureBlock;
+@property(nonatomic, copy) BNRequestBlock requestBlock;
 
-- (NSURLSessionTask *)requestWithSuccessBlock:(BNRequestResultBlock)successBlock failedBlock:(BNRequestResultBlock)failureBlock;
+@property(nonatomic, assign, readonly) BOOL isLoading;
+
+- (NSURLSessionTask *)requestWithSuccessBlock:(BNRequestBlock)successBlock failedBlock:(BNRequestBlock)failureBlock;
+
+- (NSURLSessionTask *)requestWithBlock:(BNRequestBlock)block;
 
 - (void)cancelAllRequest;
 

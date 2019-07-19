@@ -49,9 +49,14 @@
     return mdic.copy;
 }
 
-- (NSURLSessionTask *)requestWithSuccessBlock:(BNRequestResultBlock)successBlock failedBlock:(BNRequestResultBlock)failureBlock{
+- (NSURLSessionTask *)requestWithSuccessBlock:(BNRequestBlock)successBlock failedBlock:(BNRequestBlock)failureBlock{
     self.successBlock = successBlock;
     self.failureBlock = failureBlock;
+    return [self startRequest];
+}
+
+- (NSURLSessionTask *)requestWithBlock:(BNRequestBlock)block{
+    self.requestBlock = block;
     return [self startRequest];
 }
 
@@ -66,6 +71,9 @@
         if (self.failureBlock) {
             self.failureBlock(self, nil, error);
         }
+        if (self.requestBlock) {
+            self.requestBlock(self, nil, error);
+        }
         return task;
     }
     
@@ -76,6 +84,9 @@
         }
         if (self.successBlock) {
             self.successBlock(self, cacheDic, nil);
+        }
+        if (self.requestBlock) {
+            self.requestBlock(self, cacheDic, nil);
         }
         return task;
     }
@@ -226,6 +237,9 @@
     if (self.successBlock) {
         self.successBlock(self, jsonDic, nil);
     }
+    if (self.requestBlock) {
+        self.requestBlock(self, jsonDic, nil);
+    }
     //缓存数据
     if ([self.child respondsToSelector:@selector(saveJsonOfCache:)]) {
         [self.child saveJsonOfCache:jsonDic];
@@ -258,6 +272,9 @@
     
     if (self.failureBlock) {
         self.failureBlock(self, nil, error);
+    }
+    if (self.requestBlock) {
+        self.requestBlock(self, nil, error);
     }
 }
 
