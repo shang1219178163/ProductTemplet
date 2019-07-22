@@ -222,6 +222,8 @@
 		14F0FE6322B0AB8400057093 /* BNUserLogoutApi.m in Sources */ = {isa = PBXBuildFile; fileRef = 14F0FE6222B0AB8400057093 /* BNUserLogoutApi.m */; };
 		14F0FE6722B0AD9800057093 /* LiveViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 14F0FE6622B0AD9800057093 /* LiveViewController.m */; };
 		14F0FE6B22B0ADDB00057093 /* BNUserLoginApi.m in Sources */ = {isa = PBXBuildFile; fileRef = 14F0FE6922B0ADDB00057093 /* BNUserLoginApi.m */; };
+		14F9BF3F22E56167001637B6 /* PhotoDisplayController.m in Sources */ = {isa = PBXBuildFile; fileRef = 14F9BF3E22E56167001637B6 /* PhotoDisplayController.m */; };
+		14F9BF4222E56332001637B6 /* UICTViewLayoutPhoto.m in Sources */ = {isa = PBXBuildFile; fileRef = 14F9BF4022E56331001637B6 /* UICTViewLayoutPhoto.m */; };
 		51036F4720A16298009D8B7B /* img_notice.png in Resources */ = {isa = PBXBuildFile; fileRef = 51036F4620A16297009D8B7B /* img_notice.png */; };
 		51036F5020A17B3B009D8B7B /* WeiboLisController.m in Sources */ = {isa = PBXBuildFile; fileRef = 51036F4F20A17B3B009D8B7B /* WeiboLisController.m */; };
 		510BC99B208F2F0400CF48C5 /* FriendListController.m in Sources */ = {isa = PBXBuildFile; fileRef = 510BC99A208F2F0400CF48C5 /* FriendListController.m */; };
@@ -903,6 +905,10 @@
 		14F0FE6622B0AD9800057093 /* LiveViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LiveViewController.m; sourceTree = "<group>"; };
 		14F0FE6922B0ADDB00057093 /* BNUserLoginApi.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BNUserLoginApi.m; sourceTree = "<group>"; };
 		14F0FE6A22B0ADDB00057093 /* BNUserLoginApi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BNUserLoginApi.h; sourceTree = "<group>"; };
+		14F9BF3D22E56167001637B6 /* PhotoDisplayController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PhotoDisplayController.h; sourceTree = "<group>"; };
+		14F9BF3E22E56167001637B6 /* PhotoDisplayController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PhotoDisplayController.m; sourceTree = "<group>"; };
+		14F9BF4022E56331001637B6 /* UICTViewLayoutPhoto.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UICTViewLayoutPhoto.m; sourceTree = "<group>"; };
+		14F9BF4122E56331001637B6 /* UICTViewLayoutPhoto.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UICTViewLayoutPhoto.h; sourceTree = "<group>"; };
 		48DCCC545F7DD72A25BB7579 /* Pods-ProductTemplet.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ProductTemplet.release.xcconfig"; path = "Pods/Target Support Files/Pods-ProductTemplet/Pods-ProductTemplet.release.xcconfig"; sourceTree = "<group>"; };
 		51036F4620A16297009D8B7B /* img_notice.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = img_notice.png; sourceTree = "<group>"; };
 		51036F4E20A17B3B009D8B7B /* WeiboLisController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WeiboLisController.h; sourceTree = "<group>"; };
@@ -1694,6 +1700,8 @@
 				14C11AA522DC7FF7009D18A3 /* BNExcelController.m */,
 				14C11A9522DC7FD5009D18A3 /* BNShareViewController.h */,
 				14C11AA622DC7FF8009D18A3 /* BNShareViewController.m */,
+				14F9BF3D22E56167001637B6 /* PhotoDisplayController.h */,
+				14F9BF3E22E56167001637B6 /* PhotoDisplayController.m */,
 				14C11A8E22DC7FD2009D18A3 /* TmpViewController.h */,
 				14C11A8922DC7FD0009D18A3 /* TmpViewController.m */,
 			);
@@ -1772,6 +1780,8 @@
 				147AB8B222DDC7AE00A5C4EC /* Controllers */,
 				14C11ABE22DC872B009D18A3 /* BNDataModel.h */,
 				14C11ABF22DC872C009D18A3 /* BNDataModel.m */,
+				14F9BF4122E56331001637B6 /* UICTViewLayoutPhoto.h */,
+				14F9BF4022E56331001637B6 /* UICTViewLayoutPhoto.m */,
 			);
 			path = CollectionView;
 			sourceTree = "<group>";
@@ -3097,6 +3107,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				14F9BF4222E56332001637B6 /* UICTViewLayoutPhoto.m in Sources */,
 				141080A122D2E7D10011344E /* LiveLikeController.m in Sources */,
 				14C11AC022DC872C009D18A3 /* BNDataModel.m in Sources */,
 				14107FAF22CDF9490011344E /* InputViewController.m in Sources */,
@@ -3140,6 +3151,7 @@
 				14F0FE5D22B0AA3400057093 /* BNServerinfoApi.m in Sources */,
 				140A2BD722696E24000ED121 /* TrackViewController.m in Sources */,
 				1410809F22D2E7D10011344E /* AnimationController5.m in Sources */,
+				14F9BF3F22E56167001637B6 /* PhotoDisplayController.m in Sources */,
 				5169699C20BCED4000BAA53D /* LHFinance.m in Sources */,
 				141080A222D2E7D10011344E /* AnimationController3.m in Sources */,
 				5186F1C121A3A43900663707 /* BNImageView.m in Sources */,

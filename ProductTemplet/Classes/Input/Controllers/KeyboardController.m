@@ -89,7 +89,7 @@
 
 -(UITableView *)tableview{
     if (!_tableview) {
-        _tableview = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, kScreenWidth, kScreenHeight)];
+        _tableview = [[UITableView alloc] initWithFrame:self.view.bounds];
     }
     
     return _tableview;

@@ -1,30 +1,29 @@
-
 //
-//  CircleViewController.m
-//  BN_CollectionView
+//  PhotoDisplayController.m
+//  ProductTemplet
 //
-//  Created by hsf on 2018/4/16.
-//  Copyright © 2018年 BN. All rights reserved.
+//  Created by Bin Shang on 2019/7/22.
+//  Copyright © 2019 BN. All rights reserved.
 //
 
-#import "CircleViewController.h"
+#import "PhotoDisplayController.h"
 
-//#import "UICTViewLayoutCircle.h"
-//#import "UICTViewCellOne.h"
+#import "UICTViewLayoutPhoto.h"
+#import "UICTViewCellOne.h"
 
-@interface CircleViewController ()<UICollectionViewDataSource,UICollectionViewDelegate,UICollectionViewDelegateFlowLayout>
+@interface PhotoDisplayController ()<UICollectionViewDataSource,UICollectionViewDelegate,UICollectionViewDelegateFlowLayout>
 
 @property (nonatomic, strong) UICollectionView *collectionView;
 @property (nonatomic, strong) NSDictionary *dictClass;
 
 @end
 
-@implementation CircleViewController
+@implementation PhotoDisplayController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    self.title = @"Circle";
+    self.title = @"圆圈";
     
     [self.view addSubview:self.collectionView];
     
@@ -35,7 +34,7 @@
 #pragma mark - -UICollectionView
 //返回section个数
 - (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView{
-    return 1;
+    return 3;
 }
 
 //每个section的item个数
@@ -111,12 +110,12 @@
                        UICollectionElementKindSectionItem:   @[
                                @"UICTViewCellOne"
                                ],
-                       //                       UICollectionElementKindSectionHeader:   @[
-                       //                                                                 @"UICTReusableViewZero",
-                       //                                                                 ],
-                       //                       UICollectionElementKindSectionHeader:   @[
-                       //                                                                 @"UICTReusableViewZero",
-                       //                                                                 ],
+//                       UICollectionElementKindSectionHeader:   @[
+//                                                                 @"UICTReusableViewZero",
+//                                                                 ],
+//                       UICollectionElementKindSectionHeader:   @[
+//                                                                 @"UICTReusableViewZero",
+//                                                                 ],
                        
                        };
         
@@ -127,39 +126,34 @@
 -(UICollectionView *)collectionView{
     if (!_collectionView) {
         _collectionView = ({
-//            UICollectionViewFlowLayout *layout = ({
-//                UICollectionViewFlowLayout *layout = [[UICollectionViewFlowLayout alloc] init];
-//                //item水平间距
-//                layout.minimumLineSpacing = 10;
-//                //item垂直间距
-//                layout.minimumInteritemSpacing = 10;
-//                //item的尺寸
-//                layout.itemSize = CGSizeMake(90, 100);
-//                //item的UIEdgeInsets
-//                layout.sectionInset = UIEdgeInsetsMake(10, 10, 10, 10);
-//                //滑动方向,默认垂直
-//                layout.scrollDirection = UICollectionViewScrollDirectionHorizontal;
-//                //sectionView 尺寸
-//                layout.headerReferenceSize = CGSizeMake(kScreenWidth, 40);
-//                layout.footerReferenceSize = CGSizeMake(kScreenWidth, 20);
-//
-//                layout;
-//            });
-
-            UICTViewLayoutCircle * layout = [[UICTViewLayoutCircle alloc]init];
+            UICTViewLayoutPhoto * layout = [[UICTViewLayoutPhoto alloc]init];
             layout.itemSize = CGSizeMake(90, 100);
+
+            //item水平间距
+            //            layout.minimumLineSpacing = 10;
+            //            //item垂直间距
+            //            layout.minimumInteritemSpacing = 10;
+            //            //item的尺寸
+            //            layout.itemSize = CGSizeMake(90, 100);
+            //            //item的UIEdgeInsets
+            //            layout.sectionInset = UIEdgeInsetsMake(10, 10, 10, 10);
+            //滑动方向,默认垂直
+            //            layout.scrollDirection = UICollectionViewScrollDirectionHorizontal;
+            //sectionView 尺寸
+            //            layout.headerReferenceSize = CGSizeMake(CGRectGetWidth(self.view.bounds), 40);
+            //            layout.footerReferenceSize = CGSizeMake(CGRectGetWidth(self.view.bounds), 20);
             
-            UICollectionView *view = [[UICollectionView alloc]initWithFrame:self.view.bounds collectionViewLayout:layout];
-            view.backgroundColor = [UIColor whiteColor];
-            view.delegate = self;
-            view.dataSource = self;
-            view.scrollsToTop = NO;
-            view.showsVerticalScrollIndicator = true;
-            view.showsHorizontalScrollIndicator = true;
+            UICollectionView *collectionView = [[UICollectionView alloc]initWithFrame:self.view.bounds collectionViewLayout:layout];
+            collectionView.backgroundColor = [UIColor whiteColor];
+            collectionView.delegate = self;
+            collectionView.dataSource = self;
+            collectionView.scrollsToTop = NO;
+            collectionView.showsVerticalScrollIndicator = NO;
+            collectionView.showsHorizontalScrollIndicator = NO;
             
-            view.dictClass = self.dictClass;
+            collectionView.dictClass = self.dictClass;
             
-            view;
+            collectionView;
         });
     }
     return _collectionView;

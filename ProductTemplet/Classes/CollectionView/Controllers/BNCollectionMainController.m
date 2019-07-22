@@ -37,6 +37,7 @@
     self.dataList = @[
                       @[@"SphereViewController", @"空间球形效果",],
                       @[@"CircleViewController", @"圆形效果",],
+                      @[@"PhotoDisplayController", @"圆圈效果",],                      
                       @[@"PickerViewController", @"picker效果",],
                       @[@"CardLineViewController", @"卡片信息展示效果",],
                       @[@"CardViewController", @"卡片信息展示效果",],
