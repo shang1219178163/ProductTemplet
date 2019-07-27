@@ -57,8 +57,7 @@
 - (void)counterWithTableView:(UITableView *)tableView :(NSArray *)dataList {
     _tableView = tableView;
     _dataList = dataList;
-    
-    self.timer = [NSTimer counterWithTimer:self.timer handler:^{
+    self.timer = [NSTimer createGCDTimer:60 repeats:true block:^{
         for (UITableViewCell * cell in tableView.visibleCells) {
             NSString* tmpEndTime = [dataList.firstObject isKindOfClass:[NSArray class]] ? dataList[cell.tag/100][cell.tag%100] : dataList[cell.tag];
 
