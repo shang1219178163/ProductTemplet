@@ -42,19 +42,6 @@
     money = 0.123456;
     NSNumber * num = @(money);
     
-    NSString * string = NSStringFromRoundHalfUp(num, 2, NSNumberFormatterDecimalStyle);
-    NSString * string1 = NSStringFromRoundHalfUp(num, 2, NSNumberFormatterPercentStyle);
-
-    NSNumber * string8 = NSNumberFromRound(num, 2, NSNumberFormatterRoundHalfUp);
-    NSNumber * string9 = NSNumberFromRound(num, 2, NSNumberFormatterRoundCeiling);
-    NSNumber * string10 = NSNumberFromRound(num, 2, NSNumberFormatterRoundFloor);
-    
-    DDLog(@"_%@_",string);
-    DDLog(@"_%@_",string1);
-   
-    DDLog(@"_%@_",string8);
-    DDLog(@"_%@_",string9);
-    DDLog(@"_%@_",string10);
     
     NSDecimalNumber * number = [@"0.35".decNumer decimalNumberByAdding:@"0.15".decNumer];
     DDLog(@"_%@_",number);
