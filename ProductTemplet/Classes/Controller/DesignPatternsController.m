@@ -32,43 +32,43 @@
 
     self.dataList = @[
                       @{
-                          kItem_title       :   @"抽象工厂模式",
-                          kItem_controller  :   @"AbstractFactoryController",
+                          kItem_title:   @"抽象工厂模式",
+                          kItem_controller:   @"AbstractFactoryController",
                           
                           },
                       @{
-                          kItem_title       :   @"Strategy/策略",
-                          kItem_controller  :   @"StrategyViewController",
+                          kItem_title:   @"Strategy/策略",
+                          kItem_controller:   @"StrategyViewController",
                           
                           },
                       @{
-                          kItem_title       :   @"Adapter/适配器",
-                          kItem_controller  :   @"AdapterViewController",
+                          kItem_title:   @"Adapter/适配器",
+                          kItem_controller:   @"AdapterViewController",
                           
                           },
                       @{
-                          kItem_title       :   @"Facade/外观",
-                          kItem_controller  :   @"FacadeViewController",
+                          kItem_title:   @"Facade/外观",
+                          kItem_controller:   @"FacadeViewController",
                           
                           },
                       @{
-                          kItem_title       :   @"Mediator/中介者",
-                          kItem_controller  :   @"MediatorViewController",
+                          kItem_title:   @"Mediator/中介者",
+                          kItem_controller:   @"MediatorViewController",
                           
                           },
                       @{
-                          kItem_title       :   @"Composite/组合",
-                          kItem_controller  :   @"CompositeViewController",
+                          kItem_title:   @"Composite/组合",
+                          kItem_controller:   @"CompositeViewController",
                           
                           },
                       @{
-                          kItem_title       :   @"Flyweight/享元",
-                          kItem_controller  :   @"FlyweightViewController",
+                          kItem_title:   @"Flyweight/享元",
+                          kItem_controller:   @"FlyweightViewController",
                           
                           },
                       @{
-                          kItem_title       :   @"item3",
-                          kItem_controller  :   @"",
+                          kItem_title:   @"item3",
+                          kItem_controller:   @"",
                           
                           },
                       

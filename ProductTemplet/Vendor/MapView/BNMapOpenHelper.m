@@ -38,8 +38,8 @@ MKMapItem * MKMapItemFromMKPlacemark(MKPlacemark *placemark){
         MKMapItem *mappItem = MKMapItemFromMKPlacemark(MKPlacemarkFromCLPlacemark(placemarks.firstObject));
         [MKMapItem openMapsWithItems:@[currentLocation,mappItem]
                        launchOptions:@{
-                                       MKLaunchOptionsDirectionsModeKey :   MKLaunchOptionsDirectionsModeDriving,
-                                       MKLaunchOptionsShowsTrafficKey   :   @(true),
+                                       MKLaunchOptionsDirectionsModeKey:   MKLaunchOptionsDirectionsModeDriving,
+                                       MKLaunchOptionsShowsTrafficKey:   @(true),
                                        }];
         
     }];

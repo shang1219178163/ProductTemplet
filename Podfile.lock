@@ -26,7 +26,7 @@ PODS:
   - AMapSearch-NO-IDFA (6.9.0):
     - AMapFoundation-NO-IDFA (~> 1.4)
   - Aspects (1.4.1)
-  - BNCategory (2.0.0.1):
+  - BNCategory (2.0.0.2):
     - AESCrypt-ObjC
     - BNGloble
     - BNKit
@@ -212,7 +212,7 @@ SPEC CHECKSUMS:
   AMapNavi-NO-IDFA: 932388a920771b8877aa7bd189167731e97e4985
   AMapSearch-NO-IDFA: 264999e6c149383a8f164c2fe49b51513e93d674
   Aspects: 7595ba96a6727a58ebcbfc954497fc5d2fdde546
-  BNCategory: 7a47635ace37cec2d809f8c50b7bb01be458d48b
+  BNCategory: e4c043d764ec801b81d8c3eafed75bea3c3df87f
   BNCollectionView: 48ed93af1ede742ed1556b2f99e95e047b0dd286
   BNGloble: 49ed76d0bb99d6ff38d9031cad5e3b7ca588296f
   BNKit: 3542dcaf5a104c77bd29d8675e12e7e6bf4fabcd

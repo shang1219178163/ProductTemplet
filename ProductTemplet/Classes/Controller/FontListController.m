@@ -71,8 +71,8 @@
             for (id fontName in fontNames) {
                 NSLog(@"name: %@", fontName);
                 NSDictionary *font = @{
-                                       @"name"    :   fontName,
-                                       @"font"    :   [UIFont fontWithName:fontName size:17.0],
+                                       @"name":   fontName,
+                                       @"font":   [UIFont fontWithName:fontName size:17.0],
                                        
                                        };
                 

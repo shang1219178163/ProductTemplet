@@ -87,9 +87,9 @@
         {
             
             NSDictionary * dic = @{
-//                                   kItem_header  :   @"header_0",
-//                                   kItem_footer  :   @"footer_0",
-                                   kItem_obj   :   @[
+//                                   kItem_header:   @"header_0",
+//                                   kItem_footer:   @"footer_0",
+                                   kItem_obj:   @[
                                            @"去模型_00",
                                            @"去模型_01",
                                            @"去模型_02",],
@@ -147,9 +147,9 @@
         {
             NSDictionary * dict = @{
                                     kAlert_Title:   @"提示信息",
-                                    kAlert_Img  :   @"bug",
-//                                    kAlert_Msg  :   @"只用了两年时间，天津东边的一片盐碱地，就让创造了蛇口神话的袁庚都为之紧张。……",
-                                    kAlert_Btns :   @[@"取消",@"确定"],
+                                    kAlert_Img:   @"bug",
+//                                    kAlert_Msg:   @"只用了两年时间，天津东边的一片盐碱地，就让创造了蛇口神话的袁庚都为之紧张。……",
+                                    kAlert_Btns:   @[@"取消",@"确定"],
                                     
                                     };
             BNAlertViewTwo * view = [BNAlertViewTwo viewWithParams:dict];

@@ -10,11 +10,9 @@
 
 @interface Lesson : NSObject
 
-@property (nonatomic,copy)NSString *FLDBID;
+@property(nonatomic,copy) NSString *FLDBID;
 @property(nonatomic,copy) NSString *name;
-
 @property(nonatomic,copy) NSString *duration;
-
-@property (nonatomic,copy)NSString *lessonID;
+@property(nonatomic,copy) NSString *lessonID;
 
 @end

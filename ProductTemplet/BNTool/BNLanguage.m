@@ -69,9 +69,9 @@ static NSString *const kUserLanguage = @"KeyUserLanguage";
 
 +(NSDictionary *)dic{
     return @{
-             @"跟随系统"    :   @"",
-             @"简体中文"    :   @"zh-Hans",
-             @"English"   :   @"en",
+             @"跟随系统":   @"",
+             @"简体中文":   @"zh-Hans",
+             @"English":   @"en",
              
              };
     

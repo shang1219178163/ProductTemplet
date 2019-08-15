@@ -47,25 +47,25 @@
     
     self.dataList = @[
                       @{
-                          kItem_header  :   @"header不同布局",
-                          kItem_footer  :   @"footer不同布局",
-                          kItem_obj     :   @[
+                          kItem_header:   @"header不同布局",
+                          kItem_footer:   @"footer不同布局",
+                          kItem_obj:   @[
                                   @"CircleViewController",@"SphereViewController",@"PickerViewController",
                                   @"RightViewController",@"CardViewController",@"CardLineViewController"
                                   ],
                           },
                       @{
-                          kItem_header  :   @"header功能测试",
-                          kItem_footer  :   @"footer功能测试",
-                          kItem_obj     :   @[
+                          kItem_header:   @"header功能测试",
+                          kItem_footer:   @"footer功能测试",
+                          kItem_obj:   @[
                                   @"RightViewController",@"TmpViewController",@"BNShareViewController",
                                   @"MainViewController",
                                   ],
                           },
                       @{
-                          kItem_header  :   @"header其他",
-                          kItem_footer  :   @"footer其他",
-                          kItem_obj     :   @[
+                          kItem_header:   @"header其他",
+                          kItem_footer:   @"footer其他",
+                          kItem_obj:   @[
                                   @"ListViewController",@"GroupViewController",@"",
                                   ],
                           },

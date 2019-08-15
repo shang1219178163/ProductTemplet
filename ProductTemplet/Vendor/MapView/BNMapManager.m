@@ -268,13 +268,13 @@ NSArray<MAPolyline *> *MapPolylinesForPath(AMapPath *path){
 -(NSDictionary *)annViewDict{
     if (!_annViewDict) {
         _annViewDict = @{
-                         kAnnoTitleUser     :   @"map_userLocation_default",
-                         kAnnoTitleDefault  :   @"map_annotation_default_green",
-                         kAnnoTitleStart    :   @"map_annotation_begin_green",
-                         kAnnoTitleEnd      :   @"map_annotation_end_orange",
-//                         kAnnoTitleMove     :   @"map_userLocation_arrow",
-                         kAnnoTitleMove     :   @"map_car_yellow",
-                         kAnnoTitleRoute    :   @"map_trackingPoints_blue",
+                         kAnnoTitleUser:   @"map_userLocation_default",
+                         kAnnoTitleDefault:   @"map_annotation_default_green",
+                         kAnnoTitleStart:   @"map_annotation_begin_green",
+                         kAnnoTitleEnd:   @"map_annotation_end_orange",
+//                         kAnnoTitleMove:   @"map_userLocation_arrow",
+                         kAnnoTitleMove:   @"map_car_yellow",
+                         kAnnoTitleRoute:   @"map_trackingPoints_blue",
                          };
     }
     return _annViewDict;

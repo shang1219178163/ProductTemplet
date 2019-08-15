@@ -64,7 +64,12 @@
     //因为左右侧滑栏失效
 //    UIApplication.tabBarController.selectedIndex = 3;
 //    UIApplication.tabBarController.selectedIndex = 4;
+    
+    NSString * a = [NSNumberFormatter fractionDigits:@(1.4988) min:2 max:2 roundingMode:NSNumberFormatterRoundUp];
+    NSString * b = [NSNumberFormatter fractionDigits:@(1.4988) min:2 max:3 roundingMode:NSNumberFormatterRoundUp];
+    NSString * c = [NSNumberFormatter fractionDigits:@(1.4988) min:2 max:3 roundingMode:NSNumberFormatterRoundDown];
 
+    NSString * d = @(1.595).to_string;
     return YES;
 }
 

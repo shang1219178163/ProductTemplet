@@ -69,10 +69,10 @@
 - (void)operationTableWithSQL:(NSString *)sql type:(DBOperationType)type{
     
     NSDictionary * dic = @{
-                            @(DBOperationTypeTableCreate)  :   @"创建",
-                            @(DBOperationTypeTableDrop)  :   @"删除",
-                            @(DBOperationTypeTableAlter)  :   @"修改",
-                            @(DBOperationTypeTableSelect)  :   @"查询",
+                            @(DBOperationTypeTableCreate):   @"创建",
+                            @(DBOperationTypeTableDrop):   @"删除",
+                            @(DBOperationTypeTableAlter):   @"修改",
+                            @(DBOperationTypeTableSelect):   @"查询",
 
                             };
     
@@ -385,9 +385,9 @@
         NSArray * params = @[
                              @[@"person_id",@"person_name",@"person_age",@"person_number"],
                              @{
-                                 @"person_id"   :   maxID,
-                                 @"person_name" :   person.name,
-                                 @"person_age"  :   @(person.age),
+                                 @"person_id" :   maxID,
+                                 @"person_name":   person.name,
+                                 @"person_age":   @(person.age),
                                  @"person_number":  @(person.number),
                                  },
                              ];
@@ -416,8 +416,8 @@
 - (void)updatePerson:(Person *)person{
     
     NSDictionary * dic = @{
-                             @"person_name" :   person.name,
-                             @"person_age"  :   @(person.age),
+                             @"person_name":   person.name,
+                             @"person_age":   @(person.age),
                              @"person_number":  @(person.number + 1),
                              
                              };
@@ -435,10 +435,10 @@
 - (NSMutableArray *)getAllPerson{
     [Person mj_setupReplacedKeyFromPropertyName:^NSDictionary *{
         return @{
-                 @"ID"   :   @"person_id",
-                 @"name"   :   @"person_name",
-                 @"age"   :   @"person_age",
-                 @"number"   :   @"person_number",
+                 @"ID":   @"person_id",
+                 @"name":   @"person_name",
+                 @"age":   @"person_age",
+                 @"number":   @"person_number",
                  
                  };
         
@@ -480,9 +480,9 @@
         NSArray * params = @[
                              @[@"own_id",@"car_id",@"car_brand",@"car_price"],
                              @{
-                                 @"own_id"   :   person.ID,
-                                 @"car_id" :   maxID,
-                                 @"car_brand"  :   car.brand,
+                                 @"own_id":   person.ID,
+                                 @"car_id":   maxID,
+                                 @"car_brand":   car.brand,
                                  @"car_price":  @(car.price),
                                  },
                              ];

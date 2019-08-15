@@ -12,11 +12,10 @@
 
 @interface Student : NSObject
 
-@property (nonatomic,copy)NSString *FLDBID;
-@property(nonatomic,copy) NSString *name;
-@property(nonatomic,assign) NSInteger age;
-@property(nonatomic,assign) NSInteger studentID;
-
-@property(nonatomic,strong) NSArray <Lesson *>*lessonList;
+@property(nonatomic, copy) NSString *FLDBID;
+@property(nonatomic, copy) NSString *name;
+@property(nonatomic, assign) NSInteger age;
+@property(nonatomic, assign) NSInteger studentID;
+@property(nonatomic, strong) NSArray <Lesson *>*lessonList;
 
 @end

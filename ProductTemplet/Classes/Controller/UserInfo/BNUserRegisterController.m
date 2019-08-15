@@ -24,18 +24,18 @@
     if (!_itemList) {
         _itemList = @[
                       @{
-                          @"text"           :  @"",
-                          @"placeholder"    :  @"   请输入手机号",
+                          @"text":  @"",
+                          @"placeholder":  @"   请输入手机号",
 
                           }.mutableCopy,
                       @{
-                          @"text"           :  @"",
-                          @"placeholder"    :  @"   请输入验证码",
+                          @"text":  @"",
+                          @"placeholder":  @"   请输入验证码",
                           
                           }.mutableCopy,
                       @{
-                          @"text"           :  @"",
-                          @"placeholder"    :  @"   请输入密码",
+                          @"text":  @"",
+                          @"placeholder":  @"   请输入密码",
                           
                           }.mutableCopy,
                 

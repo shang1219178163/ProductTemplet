@@ -78,10 +78,10 @@
 //    NSArray * widthList = @[@80,@80,@80,@80,@80,@80,@80,@80,@80];
     NSArray * titleList = @[@"名称",@"总数",@"剩余",@"IP",@"状态",@"状态1",@"状态2",@"状态3",@"状态4",@"状态5"];
     NSMutableDictionary *dic  = @{
-                                  //            kExcel_LockColumn   :   @1,
-                                  //            kExcel_WidthList    :   widthList,
-                                  kExcelTitles    :   titleList,
-                                  kExcelDatas     :   array,
+                                  //            kExcel_LockColumn:   @1,
+                                  //            kExcel_WidthList:   widthList,
+                                  kExcelTitles:   titleList,
+                                  kExcelDatas:   array,
 
                                   }.mutableCopy;
 

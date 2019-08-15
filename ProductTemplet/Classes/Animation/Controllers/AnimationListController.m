@@ -52,7 +52,8 @@
                       @[@"EmitterViewController", @"粒子动画",],
                       @[@"CommonAnimationController", @"动画",],
                       @[@"UIViewPropertyAnimatorController", @"UIViewPropertyAnimator(iOS10)",],
-
+                      @[@"WaveController", @"波浪动画",],
+                      
                       ].mutableCopy;
     
 }

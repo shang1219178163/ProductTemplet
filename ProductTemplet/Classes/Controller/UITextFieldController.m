@@ -80,14 +80,14 @@
     
     self.textField.identify = @"one";
 //    NSDictionary * dic = @{
-//                           @"one"   :   @[@"111111",@"222222",@"33333",],
+//                           @"one":   @[@"111111",@"222222",@"33333",],
 //                           };
     
     NSDictionary * dic = @{
-                           @"one"   :   @{
-                                            @"user1"    :   @"pwd_1",
-                                            @"user2"    :   @"pwd_2",
-                                            @"user3"    :   @"pwd_3",
+                           @"one":   @{
+                                        @"user1":   @"pwd_1",
+                                        @"user2":   @"pwd_2",
+                                        @"user3":   @"pwd_3",
                                    },
                            };
 

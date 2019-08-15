@@ -283,17 +283,17 @@
 -(NSDictionary *)errorDic{
     if (!_errorDic) {
         _errorDic = @{
-                      @(BNRequestCodeParamsError)    : @"参数错误",
-                      @(BNRequestCodeJSONError)      : @"JSON解析错误",
-                      @(BNRequestCodeTimeout)        : @"请求超时",
-                      @(BNRequestCodeNetworkError)   : @"网络错误",
-                      @(BNRequestCodeServerError)    : @"服务端返回非200的状态码",
-                      @(BNRequestCodeCancel)         : @"取消网络请求",
-                      @(BNRequestCodeNoLogin)        : @"未登录",
-                      @(BNRequestCodeNotFound)       : @"服务器找不到给定的资源；文档不存在",
-                      @(BNRequestCodeInvalidRequest) : @"无效请求",
-                      @(BNRequestCodeInvalidToken)   : @"参数错误",
-                      @(BNRequestCodeUnknown)        : @"未知错误",
+                      @(BNRequestCodeParamsError): @"参数错误",
+                      @(BNRequestCodeJSONError): @"JSON解析错误",
+                      @(BNRequestCodeTimeout): @"请求超时",
+                      @(BNRequestCodeNetworkError): @"网络错误",
+                      @(BNRequestCodeServerError): @"服务端返回非200的状态码",
+                      @(BNRequestCodeCancel): @"取消网络请求",
+                      @(BNRequestCodeNoLogin): @"未登录",
+                      @(BNRequestCodeNotFound): @"服务器找不到给定的资源；文档不存在",
+                      @(BNRequestCodeInvalidRequest): @"无效请求",
+                      @(BNRequestCodeInvalidToken): @"参数错误",
+                      @(BNRequestCodeUnknown): @"未知错误",
                       };
     }
     return _errorDic;

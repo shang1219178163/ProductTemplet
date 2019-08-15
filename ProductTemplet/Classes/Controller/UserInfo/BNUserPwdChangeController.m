@@ -24,23 +24,23 @@
     if (!_itemList) {
         _itemList = @[
                       @{
-                          @"text"           :  @"",
-                          @"placeholder"    :  @"   请输入手机号",
+                          @"text":  @"",
+                          @"placeholder":  @"   请输入手机号",
                           
                           }.mutableCopy,
                       @{
-                          @"text"           :  @"",
-                          @"placeholder"    :  @"   请输入验证码",
+                          @"text":  @"",
+                          @"placeholder":  @"   请输入验证码",
                           
                           }.mutableCopy,
                       @{
-                          @"text"           :  @"",
-                          @"placeholder"    :  @"   请输入新密码",
+                          @"text":  @"",
+                          @"placeholder":  @"   请输入新密码",
                           
                           }.mutableCopy,
                       @{
-                          @"text"           :  @"",
-                          @"placeholder"    :  @"   确认密码",
+                          @"text":  @"",
+                          @"placeholder":  @"   确认密码",
                           
                           }.mutableCopy,
                       ].mutableCopy;

@@ -32,33 +32,33 @@
     
     self.dataList = @[
                       @{
-                          kItem_title       :   @"ThreadNormol",
-                          kItem_controller  :   @"ThreadNormolController",
+                          kItem_title:   @"ThreadNormol",
+                          kItem_controller:   @"ThreadNormolController",
                           
                           },
                       @{
-                          kItem_title       :   @"Thread",
-                          kItem_controller  :   @"ThreadViewController",
+                          kItem_title:   @"Thread",
+                          kItem_controller:   @"ThreadViewController",
                           
                           },
                       @{
-                          kItem_title       :   @"ThreadCommunication",
-                          kItem_controller  :   @"ThreadCommunicationController",
+                          kItem_title:   @"ThreadCommunication",
+                          kItem_controller:   @"ThreadCommunicationController",
                           
                           },
                       @{
-                          kItem_title       :   @"GCD",
-                          kItem_controller  :   @"GCDViewController",
+                          kItem_title:   @"GCD",
+                          kItem_controller:   @"GCDViewController",
                           
                           },
                       @{
-                          kItem_title       :   @"Operation",
-                          kItem_controller  :   @"OperationViewController",
+                          kItem_title:   @"Operation",
+                          kItem_controller:   @"OperationViewController",
                           
                           },
                       @{
-                          kItem_title       :   @"item3",
-                          kItem_controller  :   @"",
+                          kItem_title:   @"item3",
+                          kItem_controller:   @"",
                           
                           },
                       

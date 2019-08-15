@@ -214,6 +214,8 @@
 		14E793C421D62E0B003230C8 /* bug.png in Resources */ = {isa = PBXBuildFile; fileRef = 14E793C321D62E0B003230C8 /* bug.png */; };
 		14E8692D21C251BA009CE33E /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 14E8692C21C251BA009CE33E /* HomeViewController.m */; };
 		14E8F74F21F5E1ED004317B5 /* RuntimeController.m in Sources */ = {isa = PBXBuildFile; fileRef = 14E8F74E21F5E1ED004317B5 /* RuntimeController.m */; };
+		14F08BAE23016D9C00B75842 /* WaterView.m in Sources */ = {isa = PBXBuildFile; fileRef = 14F08BAC23016D9C00B75842 /* WaterView.m */; };
+		14F08BB123016DDD00B75842 /* WaveController.m in Sources */ = {isa = PBXBuildFile; fileRef = 14F08BB023016DDD00B75842 /* WaveController.m */; };
 		14F0FE4E22B0A6E400057093 /* BNUserInfoApi.m in Sources */ = {isa = PBXBuildFile; fileRef = 14F0FE4D22B0A6E400057093 /* BNUserInfoApi.m */; };
 		14F0FE5722B0A83200057093 /* APIRequestURL.m in Sources */ = {isa = PBXBuildFile; fileRef = 14F0FE5522B0A83200057093 /* APIRequestURL.m */; };
 		14F0FE5A22B0AA0000057093 /* BNMoidyPwdApi.m in Sources */ = {isa = PBXBuildFile; fileRef = 14F0FE5922B0AA0000057093 /* BNMoidyPwdApi.m */; };
@@ -889,6 +891,10 @@
 		14E8692C21C251BA009CE33E /* HomeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
 		14E8F74D21F5E1EC004317B5 /* RuntimeController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RuntimeController.h; sourceTree = "<group>"; };
 		14E8F74E21F5E1ED004317B5 /* RuntimeController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RuntimeController.m; sourceTree = "<group>"; };
+		14F08BAC23016D9C00B75842 /* WaterView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WaterView.m; sourceTree = "<group>"; };
+		14F08BAD23016D9C00B75842 /* WaterView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WaterView.h; sourceTree = "<group>"; };
+		14F08BAF23016DDD00B75842 /* WaveController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WaveController.h; sourceTree = "<group>"; };
+		14F08BB023016DDD00B75842 /* WaveController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WaveController.m; sourceTree = "<group>"; };
 		14F0FE4C22B0A6E400057093 /* BNUserInfoApi.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BNUserInfoApi.h; sourceTree = "<group>"; };
 		14F0FE4D22B0A6E400057093 /* BNUserInfoApi.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BNUserInfoApi.m; sourceTree = "<group>"; };
 		14F0FE5522B0A83200057093 /* APIRequestURL.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APIRequestURL.m; sourceTree = "<group>"; };
@@ -1667,6 +1673,8 @@
 				1410809E22D2E7D10011344E /* AnimationListController.m */,
 				1410808322D2E7CA0011344E /* AnniSuperController.h */,
 				1410809D22D2E7D10011344E /* AnniSuperController.m */,
+				14F08BAF23016DDD00B75842 /* WaveController.h */,
+				14F08BB023016DDD00B75842 /* WaveController.m */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -1812,6 +1820,15 @@
 			path = NetWorkWebSocket;
 			sourceTree = "<group>";
 		};
+		14F08BAB23016D8600B75842 /* WaterView */ = {
+			isa = PBXGroup;
+			children = (
+				14F08BAD23016D9C00B75842 /* WaterView.h */,
+				14F08BAC23016D9C00B75842 /* WaterView.m */,
+			);
+			path = WaterView;
+			sourceTree = "<group>";
+		};
 		14F0FE4722B0A65A00057093 /* API */ = {
 			isa = PBXGroup;
 			children = (
@@ -1954,6 +1971,7 @@
 		513646EB208604DD005A20E7 /* Vendor */ = {
 			isa = PBXGroup;
 			children = (
+				14F08BAB23016D8600B75842 /* WaterView */,
 				14D40A2722C5BB7B00AF74B9 /* PopoverView */,
 				140A2B2622696C51000ED121 /* MapView */,
 				515C67C62137C55700D5EA94 /* BAddressPickerController */,
@@ -2041,8 +2059,6 @@
 				14C11A9D22DC7FD7009D18A3 /* FileParseController.m */,
 				147AB8B622DDD76D00A5C4EC /* FileShareController.h */,
 				147AB8B722DDD76D00A5C4EC /* FileShareController.m */,
-				5189413E209C27E000A687E1 /* TestViewController.h */,
-				5189413F209C27E000A687E1 /* TestViewController.m */,
 				14C1197422DC59AC009D18A3 /* ScrollViewCycleController.h */,
 				14C1197122DC59AB009D18A3 /* ScrollViewCycleController.m */,
 				14C1197322DC59AB009D18A3 /* UICTViewCellCycle.h */,
@@ -2156,6 +2172,8 @@
 				14E42CE22200040D00606AD0 /* BNSecondViewController.m */,
 				14E42CE62200040D00606AD0 /* BNTempViewController.h */,
 				14E42CE92200040E00606AD0 /* BNTempViewController.m */,
+				5189413E209C27E000A687E1 /* TestViewController.h */,
+				5189413F209C27E000A687E1 /* TestViewController.m */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -3191,6 +3209,7 @@
 				14F0FE5A22B0AA0000057093 /* BNMoidyPwdApi.m in Sources */,
 				51AA00342199295A002EB259 /* CounterListController.m in Sources */,
 				5185FDDC21A248E900FFA730 /* MutiRequestController.m in Sources */,
+				14F08BAE23016D9C00B75842 /* WaterView.m in Sources */,
 				14E42CF92200040F00606AD0 /* BNFactoryListViewController.m in Sources */,
 				51258C1A215E38FD009CDEE3 /* NSBundle+Language.m in Sources */,
 				51A4A1272182FB7900BA9923 /* EntryViewController.m in Sources */,
@@ -3271,6 +3290,7 @@
 				51900DD7218953C20038A178 /* NotificationTreadController.m in Sources */,
 				1410805122D2E69C0011344E /* BNAppStoreProgress.m in Sources */,
 				141080B222D2E7D10011344E /* AnimationController12.m in Sources */,
+				14F08BB123016DDD00B75842 /* WaveController.m in Sources */,
 				147ABB5922DED1A500A5C4EC /* BNCollectionDataModel.m in Sources */,
 				149F88A422B3750F00EAB4C2 /* ResetPwdController.m in Sources */,
 				141080A722D2E7D10011344E /* AnimationController4.m in Sources */,
