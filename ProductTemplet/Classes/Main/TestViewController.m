@@ -7,8 +7,7 @@
 //
 
 #import "TestViewController.h"
-
-
+#import "WHKNetInfoFeedModel.h"
 
 @interface TestViewController ()
 
@@ -45,6 +44,59 @@
 
     
 }
+
+- (void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+    
+    NSArray *list = @[@"1111", @"2222", @"3333", @"4444"];
+    NSArray *listOne = [list map:^NSString * _Nonnull(NSObject * _Nonnull obj, NSUInteger idx) {
+        return [(NSString *)obj substringToIndex:idx];
+    }];
+    DDLog(@"listOne_%@", listOne);
+    
+    NSArray *listTwo = [list filter:^BOOL(NSObject * _Nonnull obj, NSUInteger idx) {
+        return [(NSString *)obj compare:@"222" options:NSNumericSearch] == NSOrderedDescending;
+    }];
+    DDLog(@"listTwo_%@", listTwo);
+    
+    NSArray *listThree = [list sortedAscending:true];
+    DDLog(@"listThree_%@", listThree);
+    
+    NSArray *listFour = [list sortedAscending:false];
+    DDLog(@"listFour_%@", listFour);
+    
+    for (NSString *obj in list) {
+        NSComparisonResult result = [obj compare:@"222" options:NSNumericSearch];
+        DDLog(@"%@", @(result));
+    }
+    
+    NSArray *array = @[@24, @17, @85, @13, @9, @54, @76, @45, @5, @63];
+    NSArray *list1 = [array filter:^BOOL(NSObject * _Nonnull obj, NSUInteger idx) {
+        return [(NSNumber *)obj integerValue] > 20;
+    }];
+    DDLog(@"list1_%@", list1);
+    
+    NSArray *list2 = [list filter:^BOOL(NSObject * _Nonnull obj, NSUInteger idx) {
+        return (![(NSString *)obj isEqualToString:@"222"]);
+    }];
+    DDLog(@"list2_%@", list2);
+    
+    NSMutableArray * marr = [NSMutableArray array];
+    for (NSInteger i = 0; i < 5; i++) {
+        WHKNetInfoFeedModel * model = [[WHKNetInfoFeedModel alloc]init];
+        model.category = [NSString stringWithFormat:@"name_%@", @(i)];
+        model.vendor = [NSDateFormatter stringFromDate:NSDate.date format:kFormatDate];
+        [marr addObject:model];
+    }
+    
+    NSArray * list10 = [marr map:^NSString * _Nonnull(NSObject * _Nonnull obj, NSUInteger idx) {
+        return [obj valueForKey:@"category"];
+    }];
+    DDLog(@"list10_%@", list10);
+    
+}
+
+
 
 #pragma mark - -UITableView
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
