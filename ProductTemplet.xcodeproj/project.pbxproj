@@ -119,6 +119,7 @@
 		141080B722D2E7D10011344E /* AnimationListController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1410809E22D2E7D10011344E /* AnimationListController.m */; };
 		1415825722DDB88100643BF6 /* excel.geojson in Resources */ = {isa = PBXBuildFile; fileRef = 1415825622DDB88100643BF6 /* excel.geojson */; };
 		1419DAE3227005FF00F4BB5C /* NSObject+Bind.m in Sources */ = {isa = PBXBuildFile; fileRef = 1419DAE2227005FF00F4BB5C /* NSObject+Bind.m */; };
+		141E2B90230637E700466008 /* NSObject+Tmp.m in Sources */ = {isa = PBXBuildFile; fileRef = 141E2B8F230637E600466008 /* NSObject+Tmp.m */; };
 		1421D5CD21F307F700635582 /* CustomViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1421D5CC21F307F700635582 /* CustomViewController.m */; };
 		1421D5D021F3177700635582 /* BNWalletView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1421D5CF21F3177700635582 /* BNWalletView.m */; };
 		142A76D022263F080016D3DA /* icon_operation_busy@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 142A76CE22263F080016D3DA /* icon_operation_busy@2x.png */; };
@@ -705,6 +706,8 @@
 		1415825622DDB88100643BF6 /* excel.geojson */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = excel.geojson; sourceTree = "<group>"; };
 		1419DAE1227005FF00F4BB5C /* NSObject+Bind.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSObject+Bind.h"; sourceTree = "<group>"; };
 		1419DAE2227005FF00F4BB5C /* NSObject+Bind.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSObject+Bind.m"; sourceTree = "<group>"; };
+		141E2B8E230637E600466008 /* NSObject+Tmp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+Tmp.h"; sourceTree = "<group>"; };
+		141E2B8F230637E600466008 /* NSObject+Tmp.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+Tmp.m"; sourceTree = "<group>"; };
 		1421D5CB21F307F700635582 /* CustomViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CustomViewController.h; sourceTree = "<group>"; };
 		1421D5CC21F307F700635582 /* CustomViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CustomViewController.m; sourceTree = "<group>"; };
 		1421D5CE21F3177700635582 /* BNWalletView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BNWalletView.h; sourceTree = "<group>"; };
@@ -2174,6 +2177,8 @@
 				14E42CE92200040E00606AD0 /* BNTempViewController.m */,
 				5189413E209C27E000A687E1 /* TestViewController.h */,
 				5189413F209C27E000A687E1 /* TestViewController.m */,
+				141E2B8E230637E600466008 /* NSObject+Tmp.h */,
+				141E2B8F230637E600466008 /* NSObject+Tmp.m */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -3342,6 +3347,7 @@
 				51862E7620BBA1110080BD4E /* StrategyFinancyYouLi.m in Sources */,
 				140A2BE522696E24000ED121 /* DriveNaviViewController.m in Sources */,
 				140A2BDF22696E24000ED121 /* Tracking.m in Sources */,
+				141E2B90230637E700466008 /* NSObject+Tmp.m in Sources */,
 				515CC98A20B6AAF2004AE27C /* AAChartModel.m in Sources */,
 				51B9CCFC209FE2B00096A540 /* TimerViewController.m in Sources */,
 				51A4354921ABECAE000D9840 /* TextViewController.m in Sources */,

@@ -108,7 +108,7 @@
                                 kExtendItem_VC:   @"WHKMsgCommentController",
                                 },
                             @{
-                                kExtendItem_im:   @"Facebook_round",
+                                kExtendItem_img:   @"Facebook_round",
                                 kExtendItem_VC:   @"WHKMsgCommentController",
                                 },
                             @{

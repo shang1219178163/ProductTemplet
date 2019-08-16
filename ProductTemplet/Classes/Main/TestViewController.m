@@ -49,21 +49,45 @@
     [super viewWillAppear:animated];
     
     NSArray *list = @[@"1111", @"2222", @"3333", @"4444"];
-    NSArray *listOne = [list map:^NSString * _Nonnull(NSObject * _Nonnull obj, NSUInteger idx) {
+    
+    NSArray *listFirst = [list sortedAscending:true];
+    DDLog(@"listFirst_%@", listFirst);
+    
+    NSArray *listSecond = [list sortedAscending:false];
+    DDLog(@"listSecond_%@", listSecond);
+    
+    NSArray *listOne = [list map:^NSObject * _Nonnull(NSObject * _Nonnull obj, NSUInteger idx) {
         return [(NSString *)obj substringToIndex:idx];
     }];
     DDLog(@"listOne_%@", listOne);
     
-    NSArray *listTwo = [list filter:^BOOL(NSObject * _Nonnull obj, NSUInteger idx) {
-        return [(NSString *)obj compare:@"222" options:NSNumericSearch] == NSOrderedDescending;
+    NSMutableArray * marr = [NSMutableArray array];
+    for (NSInteger i = 0; i < 5; i++) {
+        WHKNetInfoFeedModel * model = [[WHKNetInfoFeedModel alloc]init];
+        model.category = [NSString stringWithFormat:@"name_%@", @(i)];
+        model.vendor = [NSDateFormatter stringFromDate:NSDate.date format:kFormatDate];
+        if (i == 1) {
+            model.category = nil;
+        }
+        [marr addObject:model];
+    }
+    
+    NSArray * listTwo = [marr map:^NSObject * _Nonnull(NSObject * _Nonnull obj, NSUInteger idx) {
+        return [obj valueForKey:@"category"] ? : @"";
     }];
     DDLog(@"listTwo_%@", listTwo);
     
-    NSArray *listThree = [list sortedAscending:true];
+    NSArray * listThree = [marr map:^NSObject * _Nonnull(NSObject * _Nonnull obj, NSUInteger idx) {
+        [obj setValue:@(idx) forKey:@"category"];
+        return obj;
+    }];
     DDLog(@"listThree_%@", listThree);
     
-    NSArray *listFour = [list sortedAscending:false];
-    DDLog(@"listFour_%@", listFour);
+    NSArray *list1 = [list filter:^BOOL(NSObject * _Nonnull obj, NSUInteger idx) {
+        return [(NSString *)obj compare:@"222" options:NSNumericSearch] == NSOrderedDescending;
+    }];
+    DDLog(@"list1_%@", list1);
+    
     
     for (NSString *obj in list) {
         NSComparisonResult result = [obj compare:@"222" options:NSNumericSearch];
@@ -71,28 +95,16 @@
     }
     
     NSArray *array = @[@24, @17, @85, @13, @9, @54, @76, @45, @5, @63];
-    NSArray *list1 = [array filter:^BOOL(NSObject * _Nonnull obj, NSUInteger idx) {
+    NSArray *list2 = [array filter:^BOOL(NSObject * _Nonnull obj, NSUInteger idx) {
         return [(NSNumber *)obj integerValue] > 20;
-    }];
-    DDLog(@"list1_%@", list1);
-    
-    NSArray *list2 = [list filter:^BOOL(NSObject * _Nonnull obj, NSUInteger idx) {
-        return (![(NSString *)obj isEqualToString:@"222"]);
     }];
     DDLog(@"list2_%@", list2);
     
-    NSMutableArray * marr = [NSMutableArray array];
-    for (NSInteger i = 0; i < 5; i++) {
-        WHKNetInfoFeedModel * model = [[WHKNetInfoFeedModel alloc]init];
-        model.category = [NSString stringWithFormat:@"name_%@", @(i)];
-        model.vendor = [NSDateFormatter stringFromDate:NSDate.date format:kFormatDate];
-        [marr addObject:model];
-    }
-    
-    NSArray * list10 = [marr map:^NSString * _Nonnull(NSObject * _Nonnull obj, NSUInteger idx) {
-        return [obj valueForKey:@"category"];
+    NSArray *list3 = [list filter:^BOOL(NSObject * _Nonnull obj, NSUInteger idx) {
+        return (![(NSString *)obj isEqualToString:@"222"]);
     }];
-    DDLog(@"list10_%@", list10);
+    DDLog(@"list3_%@", list3);
+    
     
 }
 
@@ -225,14 +237,5 @@
     // Dispose of any resources that can be recreated.
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end
