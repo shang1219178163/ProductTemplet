@@ -138,7 +138,8 @@
                       @[@"KeyboardController",@"Keyboard自定义",],
                       @[@"ScrollViewCycleController", @"ScrollViewCycle",],
                       @[@"FileParseController", @"json文件解析",],
-                      @[@"BNCollectionDataController", @"集合属性KVO监听",],                      
+                      @[@"BNCollectionDataController", @"集合属性KVO监听",],
+                      @[@"SnapshotViewController", @"屏幕截图分享/反馈",],                      
                       @[@"TestViewController", @"Test",],
                                
                       ].mutableCopy;
