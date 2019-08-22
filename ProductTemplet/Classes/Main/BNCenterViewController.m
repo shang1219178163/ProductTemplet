@@ -141,7 +141,7 @@
                       @[@"BNCollectionDataController", @"集合属性KVO监听",],
                       @[@"SnapshotViewController", @"屏幕截图分享/反馈",],                      
                       @[@"TestViewController", @"Test",],
-                               
+                      
                       ].mutableCopy;
     
     self.plainView.list = self.dataList;

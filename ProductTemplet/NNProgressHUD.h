@@ -16,15 +16,15 @@ NS_ASSUME_NONNULL_BEGIN
 
 + (void)showText:(NSString *)text;
 
-+ (void)showLoadingText:(NSString *)text inView:(UIView *)inView;
++ (void)showLoadingText:(NSString *)text inView:(UIView * _Nullable)inView;
 
 + (void)showLoadingText:(NSString *)text;
 
-+ (void)showSuccessText:(NSString *)text inView:(UIView *)inView;
++ (void)showSuccessText:(NSString *)text inView:(UIView * _Nullable)inView;
 
 + (void)showSuccessText:(NSString *)text;
 
-+ (void)showErrorText:(NSString *)text inView:(UIView *)inView;
++ (void)showErrorText:(NSString *)text inView:(UIView * _Nullable)inView;
 
 + (void)showErrorText:(NSString *)text;
 

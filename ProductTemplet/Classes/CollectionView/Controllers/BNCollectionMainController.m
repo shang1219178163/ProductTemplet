@@ -35,6 +35,7 @@
     }];
     
     self.dataList = @[
+                      @[@"ScrollHorizontalController", @"水平滚动",],
                       @[@"SphereViewController", @"空间球形效果",],
                       @[@"CircleViewController", @"圆形效果",],
                       @[@"PhotoDisplayController", @"圆圈效果",],                      
@@ -48,6 +49,7 @@
                       @[@"SectionListController", @"多section效果",],
                       @[@"UICollectionDisplayController", @"UICollectionView",],
                       @[@"TmpViewController", @"伸缩按钮",],
+
                       
                       ].mutableCopy;
     

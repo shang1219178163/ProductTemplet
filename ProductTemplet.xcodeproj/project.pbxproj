@@ -119,7 +119,7 @@
 		141080B722D2E7D10011344E /* AnimationListController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1410809E22D2E7D10011344E /* AnimationListController.m */; };
 		1415825722DDB88100643BF6 /* excel.geojson in Resources */ = {isa = PBXBuildFile; fileRef = 1415825622DDB88100643BF6 /* excel.geojson */; };
 		1419DAE3227005FF00F4BB5C /* NSObject+Bind.m in Sources */ = {isa = PBXBuildFile; fileRef = 1419DAE2227005FF00F4BB5C /* NSObject+Bind.m */; };
-		141E2B90230637E700466008 /* NSObject+Tmp.m in Sources */ = {isa = PBXBuildFile; fileRef = 141E2B8F230637E600466008 /* NSObject+Tmp.m */; };
+		141E2B90230637E700466008 /* NSArray+Tmp.m in Sources */ = {isa = PBXBuildFile; fileRef = 141E2B8F230637E600466008 /* NSArray+Tmp.m */; };
 		1421D5CD21F307F700635582 /* CustomViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1421D5CC21F307F700635582 /* CustomViewController.m */; };
 		1421D5D021F3177700635582 /* BNWalletView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1421D5CF21F3177700635582 /* BNWalletView.m */; };
 		142A76D022263F080016D3DA /* icon_operation_busy@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 142A76CE22263F080016D3DA /* icon_operation_busy@2x.png */; };
@@ -132,6 +132,7 @@
 		14579BA12294EE83001FEB0C /* WebSocketManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 14579BA02294EE83001FEB0C /* WebSocketManager.m */; };
 		14579BA42294FBBA001FEB0C /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 14579BA22294FBBA001FEB0C /* Reachability.m */; };
 		146B8187225C74860004A249 /* SubTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 146B8186225C74860004A249 /* SubTabBarController.m */; };
+		147900392306BB5A00FC4825 /* SnapshotViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 147900382306BB5A00FC4825 /* SnapshotViewController.m */; };
 		147AB8B822DDD76D00A5C4EC /* FileShareController.m in Sources */ = {isa = PBXBuildFile; fileRef = 147AB8B722DDD76D00A5C4EC /* FileShareController.m */; };
 		147AB8BB22DDE62700A5C4EC /* TrackRecordsController.m in Sources */ = {isa = PBXBuildFile; fileRef = 147AB8BA22DDE62700A5C4EC /* TrackRecordsController.m */; };
 		147ABB5822DED1A500A5C4EC /* BNCollectionDataController.m in Sources */ = {isa = PBXBuildFile; fileRef = 147ABB5422DED1A500A5C4EC /* BNCollectionDataController.m */; };
@@ -197,7 +198,7 @@
 		14E42CF42200040F00606AD0 /* BNCenterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 14E42CE52200040D00606AD0 /* BNCenterViewController.m */; };
 		14E42CF52200040F00606AD0 /* BNFirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 14E42CE72200040E00606AD0 /* BNFirstViewController.m */; };
 		14E42CF62200040F00606AD0 /* BNLeftViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 14E42CE82200040E00606AD0 /* BNLeftViewController.m */; };
-		14E42CF72200040F00606AD0 /* BNTempViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 14E42CE92200040E00606AD0 /* BNTempViewController.m */; };
+		14E42CF72200040F00606AD0 /* ScrollHorizontalController.m in Sources */ = {isa = PBXBuildFile; fileRef = 14E42CE92200040E00606AD0 /* ScrollHorizontalController.m */; };
 		14E42CF82200040F00606AD0 /* BNThirdViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 14E42CEA2200040E00606AD0 /* BNThirdViewController.m */; };
 		14E42CF92200040F00606AD0 /* BNFactoryListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 14E42CEB2200040E00606AD0 /* BNFactoryListViewController.m */; };
 		14E42CFA2200040F00606AD0 /* BNFourthViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 14E42CEC2200040E00606AD0 /* BNFourthViewController.m */; };
@@ -706,8 +707,8 @@
 		1415825622DDB88100643BF6 /* excel.geojson */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = excel.geojson; sourceTree = "<group>"; };
 		1419DAE1227005FF00F4BB5C /* NSObject+Bind.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSObject+Bind.h"; sourceTree = "<group>"; };
 		1419DAE2227005FF00F4BB5C /* NSObject+Bind.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSObject+Bind.m"; sourceTree = "<group>"; };
-		141E2B8E230637E600466008 /* NSObject+Tmp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+Tmp.h"; sourceTree = "<group>"; };
-		141E2B8F230637E600466008 /* NSObject+Tmp.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+Tmp.m"; sourceTree = "<group>"; };
+		141E2B8E230637E600466008 /* NSArray+Tmp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+Tmp.h"; sourceTree = "<group>"; };
+		141E2B8F230637E600466008 /* NSArray+Tmp.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+Tmp.m"; sourceTree = "<group>"; };
 		1421D5CB21F307F700635582 /* CustomViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CustomViewController.h; sourceTree = "<group>"; };
 		1421D5CC21F307F700635582 /* CustomViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CustomViewController.m; sourceTree = "<group>"; };
 		1421D5CE21F3177700635582 /* BNWalletView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BNWalletView.h; sourceTree = "<group>"; };
@@ -729,6 +730,9 @@
 		14579BA32294FBBA001FEB0C /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
 		146B8185225C74860004A249 /* SubTabBarController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SubTabBarController.h; sourceTree = "<group>"; };
 		146B8186225C74860004A249 /* SubTabBarController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SubTabBarController.m; sourceTree = "<group>"; };
+		1473B632230E723D0002C9B5 /* ProductTemplet copy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "ProductTemplet copy-Info.plist"; path = "/Users/shang/GitHub/ProductTemplet/ProductTemplet copy-Info.plist"; sourceTree = "<absolute>"; };
+		147900372306BB5A00FC4825 /* SnapshotViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SnapshotViewController.h; sourceTree = "<group>"; };
+		147900382306BB5A00FC4825 /* SnapshotViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SnapshotViewController.m; sourceTree = "<group>"; };
 		147AB8B622DDD76D00A5C4EC /* FileShareController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FileShareController.h; sourceTree = "<group>"; };
 		147AB8B722DDD76D00A5C4EC /* FileShareController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FileShareController.m; sourceTree = "<group>"; };
 		147AB8B922DDE62700A5C4EC /* TrackRecordsController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TrackRecordsController.h; sourceTree = "<group>"; };
@@ -855,10 +859,10 @@
 		14E42CE32200040D00606AD0 /* BNRightViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BNRightViewController.m; sourceTree = "<group>"; };
 		14E42CE42200040D00606AD0 /* BNFontListController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BNFontListController.h; sourceTree = "<group>"; };
 		14E42CE52200040D00606AD0 /* BNCenterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BNCenterViewController.m; sourceTree = "<group>"; };
-		14E42CE62200040D00606AD0 /* BNTempViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BNTempViewController.h; sourceTree = "<group>"; };
+		14E42CE62200040D00606AD0 /* ScrollHorizontalController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScrollHorizontalController.h; sourceTree = "<group>"; };
 		14E42CE72200040E00606AD0 /* BNFirstViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BNFirstViewController.m; sourceTree = "<group>"; };
 		14E42CE82200040E00606AD0 /* BNLeftViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BNLeftViewController.m; sourceTree = "<group>"; };
-		14E42CE92200040E00606AD0 /* BNTempViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BNTempViewController.m; sourceTree = "<group>"; };
+		14E42CE92200040E00606AD0 /* ScrollHorizontalController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScrollHorizontalController.m; sourceTree = "<group>"; };
 		14E42CEA2200040E00606AD0 /* BNThirdViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BNThirdViewController.m; sourceTree = "<group>"; };
 		14E42CEB2200040E00606AD0 /* BNFactoryListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BNFactoryListViewController.m; sourceTree = "<group>"; };
 		14E42CEC2200040E00606AD0 /* BNFourthViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BNFourthViewController.m; sourceTree = "<group>"; };
@@ -1687,6 +1691,8 @@
 			children = (
 				14C11ABB22DC813E009D18A3 /* BNCollectionMainController.h */,
 				14C11ABC22DC813E009D18A3 /* BNCollectionMainController.m */,
+				14E42CE62200040D00606AD0 /* ScrollHorizontalController.h */,
+				14E42CE92200040E00606AD0 /* ScrollHorizontalController.m */,
 				14C11AA822DC7FF8009D18A3 /* CTViewListController.h */,
 				14C11AA222DC7FF7009D18A3 /* CTViewListController.m */,
 				14C11A9C22DC7FD7009D18A3 /* CTViewGroupController.h */,
@@ -1922,6 +1928,7 @@
 				5136469D2086031D005A20E7 /* Products */,
 				7DBEAB1433023084F3DAA136 /* Pods */,
 				FA5A66B59426CEAD1CF3700D /* Frameworks */,
+				1473B632230E723D0002C9B5 /* ProductTemplet copy-Info.plist */,
 			);
 			sourceTree = "<group>";
 		};
@@ -2138,6 +2145,8 @@
 				1421D5CC21F307F700635582 /* CustomViewController.m */,
 				14E8F74D21F5E1EC004317B5 /* RuntimeController.h */,
 				14E8F74E21F5E1ED004317B5 /* RuntimeController.m */,
+				147900372306BB5A00FC4825 /* SnapshotViewController.h */,
+				147900382306BB5A00FC4825 /* SnapshotViewController.m */,
 				142A770E2227B30E0016D3DA /* UITableViewPickerCell.h */,
 				142A770F2227B30E0016D3DA /* UITableViewPickerCell.m */,
 				140A2B0A2269661E000ED121 /* PKMainController.h */,
@@ -2173,12 +2182,10 @@
 				14E42CE32200040D00606AD0 /* BNRightViewController.m */,
 				14E42CED2200040E00606AD0 /* BNSecondViewController.h */,
 				14E42CE22200040D00606AD0 /* BNSecondViewController.m */,
-				14E42CE62200040D00606AD0 /* BNTempViewController.h */,
-				14E42CE92200040E00606AD0 /* BNTempViewController.m */,
 				5189413E209C27E000A687E1 /* TestViewController.h */,
 				5189413F209C27E000A687E1 /* TestViewController.m */,
-				141E2B8E230637E600466008 /* NSObject+Tmp.h */,
-				141E2B8F230637E600466008 /* NSObject+Tmp.m */,
+				141E2B8E230637E600466008 /* NSArray+Tmp.h */,
+				141E2B8F230637E600466008 /* NSArray+Tmp.m */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -3233,6 +3240,7 @@
 				5168C8E521A6401F00850687 /* NumberViewController.m in Sources */,
 				513647DF208604DE005A20E7 /* PPNetworkCache.m in Sources */,
 				516969AB20BCF9A800BAA53D /* MediatorLJ.m in Sources */,
+				147900392306BB5A00FC4825 /* SnapshotViewController.m in Sources */,
 				513647C2208604DE005A20E7 /* PhotoMainViewController.m in Sources */,
 				1404FADC21DF40D700122E22 /* RecognizerController.m in Sources */,
 				516969B320BCFCFF00BAA53D /* CompositeViewController.m in Sources */,
@@ -3257,7 +3265,7 @@
 				5162F70120BF9D10009A6253 /* FlowerView.m in Sources */,
 				1401BE8C2276F4DB0078A722 /* NSObject+NSCoding.m in Sources */,
 				5162F70D20BFB934009A6253 /* OperationViewController.m in Sources */,
-				14E42CF72200040F00606AD0 /* BNTempViewController.m in Sources */,
+				14E42CF72200040F00606AD0 /* ScrollHorizontalController.m in Sources */,
 				14E42D162200042800606AD0 /* BNMenuListController.m in Sources */,
 				515CC97D20B6AAF2004AE27C /* AAOptions3d.m in Sources */,
 				147AB8BB22DDE62700A5C4EC /* TrackRecordsController.m in Sources */,
@@ -3347,7 +3355,7 @@
 				51862E7620BBA1110080BD4E /* StrategyFinancyYouLi.m in Sources */,
 				140A2BE522696E24000ED121 /* DriveNaviViewController.m in Sources */,
 				140A2BDF22696E24000ED121 /* Tracking.m in Sources */,
-				141E2B90230637E700466008 /* NSObject+Tmp.m in Sources */,
+				141E2B90230637E700466008 /* NSArray+Tmp.m in Sources */,
 				515CC98A20B6AAF2004AE27C /* AAChartModel.m in Sources */,
 				51B9CCFC209FE2B00096A540 /* TimerViewController.m in Sources */,
 				51A4354921ABECAE000D9840 /* TextViewController.m in Sources */,
