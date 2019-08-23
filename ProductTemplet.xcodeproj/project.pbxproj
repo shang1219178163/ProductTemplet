@@ -155,6 +155,7 @@
 		149F88AD22B37AB900EAB4C2 /* BNUserLoginView.m in Sources */ = {isa = PBXBuildFile; fileRef = 149F88AC22B37AB900EAB4C2 /* BNUserLoginView.m */; };
 		149F88B022B386F300EAB4C2 /* ChangePwdController.m in Sources */ = {isa = PBXBuildFile; fileRef = 149F88AF22B386F300EAB4C2 /* ChangePwdController.m */; };
 		14A1EA752249FBAA00952911 /* TextFromSpeechController.m in Sources */ = {isa = PBXBuildFile; fileRef = 14A1EA742249FBAA00952911 /* TextFromSpeechController.m */; };
+		14A95147230F77F10045140F /* UIFont+Helper.m in Sources */ = {isa = PBXBuildFile; fileRef = 14A95146230F77F10045140F /* UIFont+Helper.m */; };
 		14B6B33522B0F8760047E094 /* PKSeverinfoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 14B6B33422B0F8760047E094 /* PKSeverinfoModel.m */; };
 		14B6B33822B1F2180047E094 /* BNDeviceListApi.m in Sources */ = {isa = PBXBuildFile; fileRef = 14B6B33722B1F2180047E094 /* BNDeviceListApi.m */; };
 		14B6B33B22B1F2400047E094 /* BNChannelListApi.m in Sources */ = {isa = PBXBuildFile; fileRef = 14B6B33A22B1F2400047E094 /* BNChannelListApi.m */; };
@@ -209,7 +210,6 @@
 		14E42D162200042800606AD0 /* BNMenuListController.m in Sources */ = {isa = PBXBuildFile; fileRef = 14E42D062200042500606AD0 /* BNMenuListController.m */; };
 		14E42D172200042800606AD0 /* GlobleConst.m in Sources */ = {isa = PBXBuildFile; fileRef = 14E42D082200042500606AD0 /* GlobleConst.m */; };
 		14E42D182200042800606AD0 /* BNEmail.m in Sources */ = {isa = PBXBuildFile; fileRef = 14E42D092200042500606AD0 /* BNEmail.m */; };
-		14E42D192200042800606AD0 /* BNGCD.m in Sources */ = {isa = PBXBuildFile; fileRef = 14E42D0A2200042600606AD0 /* BNGCD.m */; };
 		14E42D1A2200042800606AD0 /* BNFileHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 14E42D0D2200042600606AD0 /* BNFileHandler.m */; };
 		14E42D1B2200042800606AD0 /* BNNum.m in Sources */ = {isa = PBXBuildFile; fileRef = 14E42D0E2200042600606AD0 /* BNNum.m */; };
 		14E42D1C2200042800606AD0 /* BNNoti.m in Sources */ = {isa = PBXBuildFile; fileRef = 14E42D132200042700606AD0 /* BNNoti.m */; };
@@ -777,6 +777,8 @@
 		149F88AF22B386F300EAB4C2 /* ChangePwdController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ChangePwdController.m; sourceTree = "<group>"; };
 		14A1EA732249FBAA00952911 /* TextFromSpeechController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TextFromSpeechController.h; sourceTree = "<group>"; };
 		14A1EA742249FBAA00952911 /* TextFromSpeechController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TextFromSpeechController.m; sourceTree = "<group>"; };
+		14A95145230F77F10045140F /* UIFont+Helper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIFont+Helper.h"; sourceTree = "<group>"; };
+		14A95146230F77F10045140F /* UIFont+Helper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIFont+Helper.m"; sourceTree = "<group>"; };
 		14B6B33322B0F8760047E094 /* PKSeverinfoModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PKSeverinfoModel.h; sourceTree = "<group>"; };
 		14B6B33422B0F8760047E094 /* PKSeverinfoModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PKSeverinfoModel.m; sourceTree = "<group>"; };
 		14B6B33622B1F2180047E094 /* BNDeviceListApi.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BNDeviceListApi.h; sourceTree = "<group>"; };
@@ -875,7 +877,6 @@
 		14E42CFD2200041900606AD0 /* BNNetRootShareModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BNNetRootShareModel.m; sourceTree = "<group>"; };
 		14E42CFE2200041900606AD0 /* BNSimpleDataModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BNSimpleDataModel.m; sourceTree = "<group>"; };
 		14E42D012200042400606AD0 /* BNFileHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BNFileHandler.h; sourceTree = "<group>"; };
-		14E42D022200042500606AD0 /* BNGCD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BNGCD.h; sourceTree = "<group>"; };
 		14E42D032200042500606AD0 /* BNAccountTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BNAccountTool.m; sourceTree = "<group>"; };
 		14E42D042200042500606AD0 /* BNMenuListController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BNMenuListController.h; sourceTree = "<group>"; };
 		14E42D052200042500606AD0 /* BNLanguage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BNLanguage.m; sourceTree = "<group>"; };
@@ -883,7 +884,6 @@
 		14E42D072200042500606AD0 /* GlobleConst.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GlobleConst.h; sourceTree = "<group>"; };
 		14E42D082200042500606AD0 /* GlobleConst.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GlobleConst.m; sourceTree = "<group>"; };
 		14E42D092200042500606AD0 /* BNEmail.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BNEmail.m; sourceTree = "<group>"; };
-		14E42D0A2200042600606AD0 /* BNGCD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BNGCD.m; sourceTree = "<group>"; };
 		14E42D0B2200042600606AD0 /* BNAccountTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BNAccountTool.h; sourceTree = "<group>"; };
 		14E42D0C2200042600606AD0 /* BNEmail.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BNEmail.h; sourceTree = "<group>"; };
 		14E42D0D2200042600606AD0 /* BNFileHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BNFileHandler.m; sourceTree = "<group>"; };
@@ -2186,6 +2186,8 @@
 				5189413F209C27E000A687E1 /* TestViewController.m */,
 				141E2B8E230637E600466008 /* NSArray+Tmp.h */,
 				141E2B8F230637E600466008 /* NSArray+Tmp.m */,
+				14A95145230F77F10045140F /* UIFont+Helper.h */,
+				14A95146230F77F10045140F /* UIFont+Helper.m */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -2312,8 +2314,6 @@
 				14E42D092200042500606AD0 /* BNEmail.m */,
 				14E42D012200042400606AD0 /* BNFileHandler.h */,
 				14E42D0D2200042600606AD0 /* BNFileHandler.m */,
-				14E42D022200042500606AD0 /* BNGCD.h */,
-				14E42D0A2200042600606AD0 /* BNGCD.m */,
 				14E42D112200042700606AD0 /* BNLanguage.h */,
 				14E42D052200042500606AD0 /* BNLanguage.m */,
 				14E42D042200042500606AD0 /* BNMenuListController.h */,
@@ -3234,7 +3234,6 @@
 				517D8B2B20B2E09800DCA731 /* CarViewController.m in Sources */,
 				51862E8620BBA9400080BD4E /* CustomTextField.m in Sources */,
 				140A2BF122696E24000ED121 /* CommonUtility.m in Sources */,
-				14E42D192200042800606AD0 /* BNGCD.m in Sources */,
 				517D8B2E20B2E0A200DCA731 /* FMViewController.m in Sources */,
 				515CC97820B6AAF2004AE27C /* AASubtitle.m in Sources */,
 				5168C8E521A6401F00850687 /* NumberViewController.m in Sources */,
@@ -3359,6 +3358,7 @@
 				515CC98A20B6AAF2004AE27C /* AAChartModel.m in Sources */,
 				51B9CCFC209FE2B00096A540 /* TimerViewController.m in Sources */,
 				51A4354921ABECAE000D9840 /* TextViewController.m in Sources */,
+				14A95147230F77F10045140F /* UIFont+Helper.m in Sources */,
 				5175C93620C122B1009EA86E /* DBHandler.m in Sources */,
 				1401BE7C2276CBD90078A722 /* BNBaseRequestApi.m in Sources */,
 				14C11AB822DC7FF8009D18A3 /* SphereViewController.m in Sources */,

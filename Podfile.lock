@@ -26,7 +26,7 @@ PODS:
   - AMapSearch-NO-IDFA (6.9.0):
     - AMapFoundation-NO-IDFA (~> 1.4)
   - Aspects (1.4.1)
-  - BNCategory (2.0.3.2):
+  - BNCategory (2.0.4):
     - AESCrypt-ObjC
     - BNGloble
     - BNKit
@@ -38,14 +38,14 @@ PODS:
     - SDWebImage
     - Toast
     - YYModel
-  - BNCollectionView (1.3.3.2):
+  - BNCollectionView (1.3.3.3):
     - BNCategory
     - BNGloble
     - Masonry
   - BNGloble (1.3.9)
   - BNKit (1.3.4):
     - BNGloble
-  - BNTableViewCell (1.4.5.3):
+  - BNTableViewCell (1.4.6.1):
     - BNCategory
     - BNGloble
     - BNKit
@@ -212,11 +212,11 @@ SPEC CHECKSUMS:
   AMapNavi-NO-IDFA: 932388a920771b8877aa7bd189167731e97e4985
   AMapSearch-NO-IDFA: 264999e6c149383a8f164c2fe49b51513e93d674
   Aspects: 7595ba96a6727a58ebcbfc954497fc5d2fdde546
-  BNCategory: fcfc6959c16d9e016acfde11490c772c4ae9dc67
-  BNCollectionView: 82dc11948c23cf4e0a9856f6e3874d96d016607d
+  BNCategory: 602120fa3724f7cb5b9740305d99d340f40c6719
+  BNCollectionView: f7730805d5b4e1099c58030066b966604ddf9cec
   BNGloble: 49ed76d0bb99d6ff38d9031cad5e3b7ca588296f
   BNKit: 3542dcaf5a104c77bd29d8675e12e7e6bf4fabcd
-  BNTableViewCell: 7f16ed799ad22dda6998f2c595adbf49e38dc3b1
+  BNTableViewCell: d783d99562c6c5754f0074ad0c200a48a5aa408d
   BNView: 2d41bce65c0f607e215407da96cd1b166f8e53d8
   BNViewHeight: 0ade1a67b651ec853c63acb946b2221176e640aa
   FCUUID: bb054fc90cd7cd99320f9f6ff8e130fe607fba05

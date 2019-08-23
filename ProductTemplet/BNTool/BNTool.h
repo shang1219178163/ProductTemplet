@@ -27,7 +27,5 @@
 #import "KeychainTool.h"
 #import "UncaughtExceptionHandler.h"
 
-#import "BNGCD.h"
-
 
 #endif /* BNTool_h */

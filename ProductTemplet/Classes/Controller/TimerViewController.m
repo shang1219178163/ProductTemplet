@@ -9,10 +9,9 @@
 #import "TimerViewController.h"
 
 
-#import "BNGCD.h"
-
 @interface TimerViewController ()
 
+@property (nonatomic, strong) UISwitch * switchCtl;
 @property (nonatomic, strong) NSTimer * timer;
 
 @end
@@ -27,18 +26,23 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc]initWithCustomView:self.switchCtl];
+    [self.view addSubview:self.switchCtl];
+    
     
     __block NSInteger i = 0;
     _timer = [NSTimer scheduledTimer:1 block:^(NSTimer *timer) {
         i++;
         DDLog(@"__%@",@(i));
     } repeats:YES];
-      
-    BNdispatchTimer(self, 1, ^(dispatch_source_t timer) {
+    
+    [NSTimer createGCDTimer:1 repeats:true block:^{
         i++;
         DDLog(@"%@",@(i));
-    });
+    }];
+    
     DDLog(@"___%@",@(i));
+    
 }
 
 -(void)viewDidDisappear:(BOOL)animated{
@@ -53,14 +57,22 @@
     // Dispose of any resources that can be recreated.
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+-(UISwitch *)switchCtl{
+    if (!_switchCtl) {
+        _switchCtl = ({
+            UISwitch * view = [UISwitch createSwitchRect:CGRectZero isOn:false];
+            view.onTintColor = UIColor.randomColor;
+            view.tintColor = UIColor.randomColor;
+            view.thumbTintColor = UIColor.randomColor;
+            [view addActionHandler:^(UIControl * _Nonnull control) {
+                UISwitch *sender = (UISwitch *)control;
+                DDLog(@"开关状态_%@", @(sender.isOn));
+                
+            } forControlEvents:UIControlEventValueChanged];
+            view;
+        });
+    }
+    return _switchCtl;
 }
-*/
 
 @end
