@@ -1,5 +1,5 @@
 //
-//  BNSliderView.h
+//  NNSliderView.h
 //  HXPhotoSlideUnlock
 //
 //  Created by Bin Shang on 2019/2/26.

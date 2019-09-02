@@ -8,14 +8,14 @@
 
 #import "CycleLabelViewController.h"
 
-#import "BNCycleView.h"
+#import "NNCycleView.h"
 #import "UIView+Helper.h"
 
 @interface CycleLabelViewController ()
 
 @property (nonatomic, strong) NSArray *dataList;
 
-@property (nonatomic, strong) BNCycleView *cycleView;
+@property (nonatomic, strong) NNCycleView *cycleView;
 
 @end
 
@@ -28,7 +28,7 @@
     
     self.dataList = @[@"aaaaaaaaaaaaaaaaaaaaaaaaaaa",@"bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",@"ccccccccccccccccccccccccccc",];
 
-    self.cycleView = [[BNCycleView alloc]initWithFrame:CGRectMake(20, 60, kScreenWidth*0.8, 40)];
+    self.cycleView = [[NNCycleView alloc]initWithFrame:CGRectMake(20, 60, kScreenWidth*0.8, 40)];
     self.cycleView.list = self.dataList;
     [self.view addSubview:self.cycleView];
     [self.cycleView start];

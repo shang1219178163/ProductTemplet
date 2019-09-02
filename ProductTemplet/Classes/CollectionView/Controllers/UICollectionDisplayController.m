@@ -22,9 +22,9 @@
     self.view.backgroundColor = [UIColor whiteColor];
     
     
-    self.collectionView.delegate = self;
-    self.collectionView.dataSource = self;
-    self.collectionView.dictClass = @{
+    self.ctView.delegate = self;
+    self.ctView.dataSource = self;
+    self.ctView.dictClass = @{
                                       
                                       UICollectionElementKindSectionItem:   @[
                                                                                   @"UICTViewCellOne"
@@ -37,14 +37,14 @@
                                                                                  ],
 
                                       };
-    [self.view addSubview:self.collectionView];
+    [self.view addSubview:self.ctView];
     
 }
 
 -(void)viewDidLayoutSubviews{
     [super viewDidLayoutSubviews];
     
-    self.collectionView.frame = self.view.bounds;
+    self.ctView.frame = self.view.bounds;
 }
 
 #pragma mark - -UICollectionView

@@ -9,26 +9,26 @@
 
 #import "BNMenuListController.h"
 
-#import "BNGloble.h"
-#import "BNBtnView.h"
-#import "BNMenuView.h"
+#import "NNGloble.h"
+#import "NNBtnView.h"
+#import "NNMenuView.h"
 
 #import "UIView+Helper.h"
 #import "NSArray+Helper.h"
 
 @interface BNMenuListController ()
 
-@property (nonatomic, strong) BNBtnView * btnView;
-@property (nonatomic, strong) BNMenuView * menuView;
+@property (nonatomic, strong) NNBtnView * btnView;
+@property (nonatomic, strong) NNMenuView * menuView;
 
 @end
 
 @implementation BNMenuListController
 
--(BNBtnView *)btnView{
+-(NNBtnView *)btnView{
     if (!_btnView) {
         _btnView = ({
-            BNBtnView * btnView = [[BNBtnView alloc]initWithFrame:CGRectMake(10, 10, kScreenWidth/4.0, 50)];
+            NNBtnView * btnView = [[NNBtnView alloc]initWithFrame:CGRectMake(10, 10, kScreenWidth/4.0, 50)];
             btnView.imageView.image = [UIImage imageNamed:@"img_arrowDown_orange.png"];
             btnView.label.text = @"测试数据";
             btnView.type = @3;
@@ -49,7 +49,7 @@
 //    [self configureMenuList];
     
     [self.view addSubview:self.btnView];
-    self.btnView.block = ^(BNBtnView *view) {
+    self.btnView.block = ^(NNBtnView *view) {
         DDLog(@"%@",view.label.text);
         
     };
@@ -67,14 +67,14 @@
     
     self.btnView.label.text = [menuList firstObject];
     self.btnView.label.textColor = UIColor.whiteColor;
-    self.btnView.block = ^(BNBtnView *view) {
+    self.btnView.block = ^(NNBtnView *view) {
         [self handleActionBtnView:view];
         
     };
     
-    BNMenuView * menuView = [[BNMenuView alloc]initWithFrame:CGRectMake(0, 0, kScreenWidth, 0.0)];
+    NNMenuView * menuView = [[NNMenuView alloc]initWithFrame:CGRectMake(0, 0, kScreenWidth, 0.0)];
     menuView.dataList = menuList;
-    menuView.block = ^(BNMenuView *view, NSIndexPath *indexPath) {
+    menuView.block = ^(NNMenuView *view, NSIndexPath *indexPath) {
         
         NSString * string = menuList[indexPath.row];
         self.btnView.label.text = string;
@@ -95,7 +95,7 @@
 }
 
 #pragma mark - -BINBtnView
-- (void)handleActionBtnView:(BNBtnView *)sender{
+- (void)handleActionBtnView:(NNBtnView *)sender{
     self.menuView.isShow = CGAffineTransformIsIdentity(sender.imageView.transform) ? YES : NO;
 
     [UIView animateWithDuration:kDurationDrop animations:^{

@@ -92,7 +92,7 @@
         [self goController:@"BNExcelController" title:@""];
 
     }else{
-        [self goController:@"BNShareViewController" title:@""];
+        [self goController:@"NNShareViewController" title:@""];
         
     }
     

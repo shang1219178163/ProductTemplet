@@ -21,10 +21,10 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 
-    [self.view addSubview:self.tableView];
+    [self.view addSubview:self.tbView];
 
     /// 1.初始化 传入当前视图和数据数组
-    self.countDown = [[BNCounter alloc] initWithTable:self.tableView];
+    self.countDown = [[BNCounter alloc] initWithTable:self.tbView];
     
 }
 

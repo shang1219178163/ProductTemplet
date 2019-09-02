@@ -8,36 +8,36 @@
 
 #import "CustomViewController.h"
 
-#import "BNGloble.h"
+#import "NNGloble.h"
 #import "NSArray+Helper.h"
 #import "NSString+Helper.h"
 #import "UIView+Helper.h"
 #import "UIControl+Helper.h"
 
-#import "BNItemsView.h"
+#import "NNItemsView.h"
 #import "BNWalletView.h"
-#import "BNSearchView.h"
+#import "NNSearchView.h"
 
-#import "BNCellDefaultView.h"
-#import "BNDateRangeView.h"
-#import "BNSliderView.h"
-#import "BNSheetView.h"
-#import "BNSwitchView.h"
-#import "BNListChooseView.h"
+#import "NNCellDefaultView.h"
+#import "NNDateRangeView.h"
+#import "NNSliderView.h"
+#import "NNSheetView.h"
+#import "NNSwitchView.h"
+#import "NNListChooseView.h"
 
 
 @interface CustomViewController ()
 
-@property (nonatomic, strong) BNItemsView * itemsView;
+@property (nonatomic, strong) NNItemsView * itemsView;
 @property (nonatomic, strong) BNWalletView * walletView;
-@property (nonatomic, strong) BNSearchView * searchView;
+@property (nonatomic, strong) NNSearchView * searchView;
 
-@property (nonatomic, strong) BNCellDefaultView * defaultView;
-@property (nonatomic, strong) BNDateRangeView * dateRangeView;
-@property (nonatomic, strong) BNSliderView * sliderView;
-@property (nonatomic, strong) BNSheetView * sheetView;
-@property (nonatomic, strong) BNSwitchView * switchView;
-@property (nonatomic, strong) BNListChooseView * chooseView;
+@property (nonatomic, strong) NNCellDefaultView * defaultView;
+@property (nonatomic, strong) NNDateRangeView * dateRangeView;
+@property (nonatomic, strong) NNSliderView * sliderView;
+@property (nonatomic, strong) NNSheetView * sheetView;
+@property (nonatomic, strong) NNSwitchView * switchView;
+@property (nonatomic, strong) NNListChooseView * chooseView;
 
 @end
 
@@ -88,10 +88,10 @@
     [self.view getViewLayer];
 }
 
-- (BNItemsView *)itemsView{
+- (NNItemsView *)itemsView{
     if (!_itemsView) {
-        _itemsView = [[BNItemsView alloc]initWithFrame:CGRectZero];
-        _itemsView.block = ^(BNItemsView * _Nonnull itemsView, UIButton * _Nonnull btn) {
+        _itemsView = [[NNItemsView alloc]initWithFrame:CGRectZero];
+        _itemsView.block = ^(NNItemsView * _Nonnull itemsView, UIButton * _Nonnull btn) {
             DDLog(@"%@",btn.currentTitle);
         };
     }
@@ -109,9 +109,9 @@
     return _walletView;
 }
 
--(BNSearchView *)searchView{
+-(NNSearchView *)searchView{
     if (!_searchView) {
-        _searchView = [[BNSearchView alloc]initWithFrame:CGRectZero];
+        _searchView = [[NNSearchView alloc]initWithFrame:CGRectZero];
         [_searchView.btn addActionHandler:^(UIControl * _Nonnull control) {
             DDLog(@"%@",_searchView.queryStr);
             
@@ -120,9 +120,9 @@
     return _searchView;
 }
 
--(BNCellDefaultView *)defaultView{
+-(NNCellDefaultView *)defaultView{
     if (!_defaultView) {
-        _defaultView = [[BNCellDefaultView alloc]initWithFrame:CGRectZero];
+        _defaultView = [[NNCellDefaultView alloc]initWithFrame:CGRectZero];
         _defaultView.labelLeft.text = @"显示标题:";
         _defaultView.labelRight.text = @"11111";
         _defaultView.imgViewRight.hidden = false;
@@ -130,37 +130,37 @@
     return _defaultView;
 }
 
--(BNDateRangeView *)dateRangeView{
+-(NNDateRangeView *)dateRangeView{
     if (!_dateRangeView) {
-        _dateRangeView = [[BNDateRangeView alloc]initWithFrame:CGRectZero];
+        _dateRangeView = [[NNDateRangeView alloc]initWithFrame:CGRectZero];
     }
     return _dateRangeView;
 }
 
--(BNSliderView *)sliderView{
+-(NNSliderView *)sliderView{
     if (!_sliderView) {
-        _sliderView = [[BNSliderView alloc]initWithFrame:CGRectZero];
+        _sliderView = [[NNSliderView alloc]initWithFrame:CGRectZero];
     }
     return _sliderView;
 }
 
--(BNSheetView *)sheetView{
+-(NNSheetView *)sheetView{
     if (!_sheetView) {
-        _sheetView = [[BNSheetView alloc]initWithFrame:CGRectZero];
+        _sheetView = [[NNSheetView alloc]initWithFrame:CGRectZero];
     }
     return _sheetView;
 }
 
--(BNSwitchView *)switchView{
+-(NNSwitchView *)switchView{
     if (!_switchView) {
-        _switchView = [[BNSwitchView alloc]initWithFrame:CGRectZero];
+        _switchView = [[NNSwitchView alloc]initWithFrame:CGRectZero];
     }
     return _switchView;
 }
 
-- (BNListChooseView *)chooseView{
+- (NNListChooseView *)chooseView{
     if (!_chooseView) {
-        _chooseView = [[BNListChooseView alloc]initWithFrame:CGRectZero];
+        _chooseView = [[NNListChooseView alloc]initWithFrame:CGRectZero];
     }
     return _chooseView;
 }

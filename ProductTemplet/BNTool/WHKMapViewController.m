@@ -9,12 +9,10 @@
 
 #import "WHKMapViewController.h"
 
-#import "BNGloble.h"
-#import "BNCategory.h"
+#import "NNGloble.h"
+#import "NNCategoryPro.h"
 
 #import "BNGeoAnno.h"
-
-
 #import "KVOController.h"
 
 static const NSInteger kRoutePaddingEdge = 20;

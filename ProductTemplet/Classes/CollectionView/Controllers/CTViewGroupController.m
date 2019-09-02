@@ -8,14 +8,14 @@
 
 #import "CTViewGroupController.h"
 
-#import "BNAlertView.h"
-#import "BNAlertViewOne.h"
-#import "BNAlertViewTwo.h"
+#import "NNAlertView.h"
+#import "NNAlertViewOne.h"
+#import "NNAlertViewTwo.h"
 
-#import "BNFilterView.h"
+#import "NNFilterView.h"
 
-#import "BNPickerViewAddress.h"
-#import "BNPickerViewAddress.h"
+#import "NNPickerViewAddress.h"
+#import "NNPickerViewAddress.h"
 
 @interface CTViewGroupController ()
 
@@ -76,7 +76,7 @@
             break;
         case 1:
         {
-            BNAlertView * alertView = [[BNAlertView alloc]init];
+            NNAlertView * alertView = [[NNAlertView alloc]init];
             alertView.dataList = [NSArray arrayWithItem:@"测试_" count:3];
 
             [alertView show];
@@ -95,13 +95,13 @@
                                            @"去模型_02",],
                                    };
 
-            BNAlertViewOne * alertView = [[BNAlertViewOne alloc]init];
+            NNAlertViewOne * alertView = [[NNAlertViewOne alloc]init];
 //            alertView.dataList = [NSArray arrayWithItemPrefix:@"数据_" startIndex:1 count:22 type:@0];
             alertView.data = dic;
             alertView.label.text = @"选择死淘原因";
 
             [alertView show];
-            alertView.block = ^(BNAlertViewOne *view, NSIndexPath *indexPath) {
+            alertView.block = ^(NNAlertViewOne *view, NSIndexPath *indexPath) {
                 DDLog(@"%@,%@",@(indexPath.section),@(indexPath.row))
             };
             
@@ -109,13 +109,13 @@
             break;
         case 3:
         {
-            BNAlertViewTwo * alertView = [[BNAlertViewTwo alloc]init];
+            NNAlertViewTwo * alertView = [[NNAlertViewTwo alloc]init];
             alertView.label.text = nil;
             alertView.imgView.image = [UIImage imageNamed:@"bug"];
             alertView.labelSub.text = @"只用了两年时间，天津东边的一片盐碱地，就让创造了蛇口神话的袁庚都为之紧张。……";
             alertView.items = @[@"取消",@"确定"];
             [alertView show];
-            alertView.block = ^(BNAlertViewTwo *view, NSInteger idx) {
+            alertView.block = ^(NNAlertViewTwo *view, NSInteger idx) {
                 DDLog(@"%@",@(idx))
             };
             [alertView getViewLayer];
@@ -124,11 +124,11 @@
             break;
         case 4:
         {
-//            BNFilterView * view = [[BNFilterView alloc]init];
-            BNFilterView * view = [BNFilterView shared];
+//            NNFilterView * view = [[NNFilterView alloc]init];
+            NNFilterView * view = [NNFilterView shared];
 //            view.direction = @1;
             [view show];
-            view.block = ^(BNFilterView *view, NSIndexPath *indexPath, NSInteger idx) {
+            view.block = ^(NNFilterView *view, NSIndexPath *indexPath, NSInteger idx) {
                 DDLog(@"%@,%@",@(indexPath.section),@(indexPath.row))
             };
         }
@@ -152,9 +152,9 @@
                                     kAlert_Btns:   @[@"取消",@"确定"],
                                     
                                     };
-            BNAlertViewTwo * view = [BNAlertViewTwo viewWithParams:dict];
+            NNAlertViewTwo * view = [NNAlertViewTwo viewWithParams:dict];
             [view show];
-            view.block = ^(BNAlertViewTwo *view, NSInteger idx) {
+            view.block = ^(NNAlertViewTwo *view, NSInteger idx) {
                 NSLog(@"%@",@(idx));
                 
             };
@@ -241,7 +241,7 @@
 
 - (void)createPickerViewAddress:(NSInteger)tag address:(NSString *)address{
     [self.view endEditing:YES];
-    BNPickerViewAddress * view = [[BNPickerViewAddress alloc]initWithCancelTitle:@"取消" confirmTitle:@"确定"];
+    NNPickerViewAddress * view = [[NNPickerViewAddress alloc]initWithCancelTitle:@"取消" confirmTitle:@"确定"];
     view.title = @"请选择";
     view.tag = tag;
     
@@ -263,7 +263,7 @@
 - (void)createPickerViewTag:(NSInteger)tag address:(NSString *)address{
     [self.view endEditing:YES];
     
-    BNPickerViewAddress * view = [[BNPickerViewAddress alloc]initWithCancelTitle:@"取消" confirmTitle:@"确定"];
+    NNPickerViewAddress * view = [[NNPickerViewAddress alloc]initWithCancelTitle:@"取消" confirmTitle:@"确定"];
     view.title = @"请选择";
     view.tag = tag;
     

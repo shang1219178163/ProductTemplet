@@ -10,8 +10,6 @@
 
 #import "BNSimpleDataModel.h"
 
-#import "BNTableViewCell.h"
-
 @interface FriendListController ()
 
 @end
@@ -22,7 +20,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    [self.view addSubview:self.tableView];
+    [self.view addSubview:self.tbView];
 
     [self initDataSource];
 }
@@ -31,7 +29,7 @@
     //操作记录
     NSArray * array = @[@"分组0",@"分组1",@"分组2",@"分组3",@"分组4",@"分组5",@"分组6",@"分组7",@"分组8",@"分组9"];
     for (NSInteger i = 0; i < array.count; i++) {
-        BNFoldSectionModel * foldModel = [[BNFoldSectionModel alloc] init];
+        NNFoldSectionModel * foldModel = [[NNFoldSectionModel alloc] init];
         foldModel.title = array[i];
         foldModel.isOpen = NO;
         foldModel.image = @"bug.png";
@@ -46,8 +44,8 @@
     
 }
 
-- (BNFoldSectionModel *)itemAtSection:(NSInteger)section{
-    BNFoldSectionModel * foldModel = self.dataList[section];
+- (NNFoldSectionModel *)itemAtSection:(NSInteger)section{
+    NNFoldSectionModel * foldModel = self.dataList[section];
     return foldModel;
 }
 
@@ -57,7 +55,7 @@
 }
 
 -(NSInteger) tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    BNFoldSectionModel * foldModel = [self itemAtSection:section];
+    NNFoldSectionModel * foldModel = [self itemAtSection:section];
     NSInteger count = foldModel.isOpen  ? foldModel.dataList.count : 0;
     return count;
     
@@ -70,7 +68,7 @@
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     
-    BNFoldSectionModel * foldModel = [self itemAtSection:indexPath.section];
+    NNFoldSectionModel * foldModel = [self itemAtSection:indexPath.section];
     id obj = foldModel.dataList[indexPath.row];
     
     NSString * title = [obj isKindOfClass:[NSArray class]] ? [obj firstObject] : obj;
@@ -118,7 +116,7 @@
 
 -(UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section{
     
-    BNFoldSectionModel * foldModel = [self itemAtSection:section];
+    NNFoldSectionModel * foldModel = [self itemAtSection:section];
     
     UITableHeaderFooterViewZero * foldHeaderView = [UITableHeaderFooterViewZero viewWithTableView:tableView];
 
@@ -129,10 +127,10 @@
     foldHeaderView.labelLeftSub.text = [@(foldModel.dataList.count) stringValue];
     foldHeaderView.labelLeftSub.textColor = UIColor.themeColor;
     foldHeaderView.imgViewLeft.image = [UIImage imageNamed:foldModel.image];
-    //    foldHeaderView.blockView = ^(BNHeaderFooterView *foldView, NSInteger index) {
+    //    foldHeaderView.blockView = ^(NNHeaderFooterView *foldView, NSInteger index) {
     foldHeaderView.blockView = ^(UITableViewHeaderFooterView *foldView, NSInteger index) {
         foldModel.isOpen = !foldModel.isOpen;
-        [self.tableView reloadSections:[NSIndexSet indexSetWithIndex:section] withRowAnimation:UITableViewRowAnimationNone];
+        [tableView reloadSections:[NSIndexSet indexSetWithIndex:section] withRowAnimation:UITableViewRowAnimationNone];
         
     };
 

@@ -9,7 +9,7 @@
 
 #import "WHKLeftMenuView.h"
 
-#import "BNGloble.h"
+#import "NNGloble.h"
 
 @interface WHKLeftMenuView()
 

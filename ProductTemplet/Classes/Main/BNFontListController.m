@@ -19,9 +19,9 @@
 @implementation BNFontListController
 
 - (void)configureTableView{
-    self.tableView.delegate = self;
-    self.tableView.dataSource = self;
-    [self.view addSubview:self.tableView];
+    self.tbView.delegate = self;
+    self.tbView.dataSource = self;
+    [self.view addSubview:self.tbView];
     
 }
 
@@ -52,7 +52,7 @@
         [self.dataList addObject:marr];
     }
     
-    [self.tableView reloadData];
+    [self.tbView reloadData];
 }
 
 #pragma mark - -UITableView

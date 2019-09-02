@@ -159,10 +159,10 @@
 //    return _imgView;
 //}
 
--(BNRotationView *)imgView{
+-(NNRotationView *)imgView{
     if (!_imgView) {
         //        _imgView = [[BN_RotationView alloc]initWithFrame:CGRectMake(10, 10, 100, 100)];
-        _imgView = [[BNRotationView alloc]init];
+        _imgView = [[NNRotationView alloc]init];
         _imgView.imgView.image = UIApplication.appIcon;
         _imgView.isColorFollow = NO;
         _imgView.layerFront.strokeColor = UIColor.themeColor.CGColor;

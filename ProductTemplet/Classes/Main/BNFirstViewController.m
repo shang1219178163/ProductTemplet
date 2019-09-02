@@ -20,9 +20,9 @@
 
 @interface BNFirstViewController ()<SDCycleScrollViewDelegate>
 
-@property (nonatomic, strong) BNBtnView * btnView;
-@property (nonatomic, strong) BNMenuView * menuView;
-@property (nonatomic, strong) BNTurnView * turnView;
+@property (nonatomic, strong) NNBtnView * btnView;
+@property (nonatomic, strong) NNMenuView * menuView;
+@property (nonatomic, strong) NNTurnView * turnView;
 
 @property (nonatomic, strong) NSArray * elementList;
 
@@ -32,10 +32,10 @@
 
 @implementation BNFirstViewController
 
--(BNBtnView *)btnView{
+-(NNBtnView *)btnView{
     if (!_btnView) {
         _btnView = ({
-            BNBtnView * btnView = [[BNBtnView alloc]initWithFrame:CGRectMake(10, 10, kScreenWidth/4.0, 50)];
+            NNBtnView * btnView = [[NNBtnView alloc]initWithFrame:CGRectMake(10, 10, kScreenWidth/4.0, 50)];
             btnView.imageView.image = [UIImage imageNamed:@"img_arrowDown_orange.png"];
             btnView.label.text = @"测试数据";
             btnView.type = @3;
@@ -115,7 +115,7 @@
 - (void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
     
-    [self.tableView reloadData];
+    [self.tbView reloadData];
     
 }
 
@@ -128,16 +128,16 @@
         [self.dataList addObject:model];
     }
     
-    [self.tableView reloadData];
+    [self.tbView reloadData];
     
 }
 
 - (void)configureTableView{
-    [self.view addSubview:self.tableView];
+    [self.view addSubview:self.tbView];
     
-    self.tableView.sectionFooterHeight = kScreenWidth;
+    self.tbView.sectionFooterHeight = kScreenWidth;
     //    self.tableView.sectionHeaderHeight = CGRectGetHeight(self.view.bounds) - self.tableView.sectionFooterHeight - self.tableView.rowHeight;
-    self.tableView.sectionHeaderHeight = kScreenHeight - kStatusBarHeight - kNaviBarHeight - kTabBarHeight - self.tableView.sectionFooterHeight - self.tableView.rowHeight;
+    self.tbView.sectionHeaderHeight = kScreenHeight - kStatusBarHeight - kNaviBarHeight - kTabBarHeight - self.tbView.sectionFooterHeight - self.tbView.rowHeight;
     
 }
 
@@ -195,14 +195,14 @@
     
     self.btnView.label.text = [menuList firstObject];
     self.btnView.label.textColor = UIColor.whiteColor;
-    self.btnView.block = ^(BNBtnView *view) {
+    self.btnView.block = ^(NNBtnView *view) {
         [self handleActionBtnView:view];
         
     };
     
-    BNMenuView * menuView = [[BNMenuView alloc]initWithFrame:CGRectMake(0, 0, kScreenWidth, 0.0)];
+    NNMenuView * menuView = [[NNMenuView alloc]initWithFrame:CGRectMake(0, 0, kScreenWidth, 0.0)];
     menuView.dataList = menuList;
-    menuView.block = ^(BNMenuView *view, NSIndexPath *indexPath) {
+    menuView.block = ^(NNMenuView *view, NSIndexPath *indexPath) {
         
         NSString * string = menuList[indexPath.row];
         self.btnView.label.text = string;
@@ -223,7 +223,7 @@
 }
 
 #pragma mark - -BINBtnView
-- (void)handleActionBtnView:(BNBtnView *)sender{
+- (void)handleActionBtnView:(NNBtnView *)sender{
     self.menuView.isShow = CGAffineTransformIsIdentity(sender.imageView.transform) ? YES : NO;
     
     [UIView animateWithDuration:kDurationDrop animations:^{
@@ -257,12 +257,10 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     NSInteger count = self.dataList.count > 0 ? self.dataList.count : 1;
     return count;
-    
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
-    return self.tableView.rowHeight;
-    
+    return tableView.rowHeight;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
@@ -297,24 +295,18 @@
 }
 
 -(UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section{
-    
     UIView * view = [self getViewWithHeight:tableView.sectionHeaderHeight isHeader:YES];
     return view;
-    
 }
 
 -(CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section{
     return tableView.sectionFooterHeight;
-    
 }
 
 -(UIView *)tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section{
-    
     UIView * view = [self getViewWithHeight:tableView.sectionFooterHeight isHeader:NO];
     return view;
-    
 }
-
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

@@ -9,15 +9,10 @@
 
 #import "UITextFieldController.h"
 
-#import "BNCategory.h"
-
-#import "BNViewHeight.h"
-
-
 @interface UITextFieldController ()
 
 //@property (strong, nonatomic) UITextField *textField;
-@property (strong, nonatomic) BNTextFieldOne *textField;
+@property (strong, nonatomic) NNTextFieldOne *textField;
 @property (strong, nonatomic) UITextField *textFieldPwd;
 
 @end
@@ -35,13 +30,13 @@
 
     }];
     
-    self.textField = [[BNTextFieldOne alloc]initWithFrame:CGRectMake(10, 20, kScreenWidth - 20, 40)];
+    self.textField = [[NNTextFieldOne alloc]initWithFrame:CGRectMake(10, 20, kScreenWidth - 20, 40)];
     self.textField.backgroundColor = UIColor.greenColor;
     self.textField.clearButtonMode = UITextFieldViewModeAlways;
     [self.textField becomeFirstResponder];
     [self.view addSubview:self.textField];
     
-    [self.textField showHistoryWithImage:@"click" handlder:^(BNTextFieldOne * _Nonnull textField, UIImageView * _Nonnull imgView) {
+    [self.textField showHistoryWithImage:@"click" handlder:^(NNTextFieldOne * _Nonnull textField, UIImageView * _Nonnull imgView) {
         NSString * selectorName = CGRectGetHeight(textField.historyTableView.frame) < 5 ? @"showHistory"  :   @"hideHistroy";
         SEL selector = NSSelectorFromString(selectorName);
         [textField performSelectorOnMainThread:selector withObject:nil waitUntilDone:NO];
@@ -49,7 +44,7 @@
     }];
     
     //
-    self.textFieldPwd = [[BNTextFieldOne alloc]initWithFrame:CGRectMake(CGRectGetMinX(self.textField.frame), CGRectGetMaxY(self.textField.frame) + 10, kScreenWidth - 20, 40)];
+    self.textFieldPwd = [[NNTextFieldOne alloc]initWithFrame:CGRectMake(CGRectGetMinX(self.textField.frame), CGRectGetMaxY(self.textField.frame) + 10, kScreenWidth - 20, 40)];
     self.textFieldPwd.backgroundColor = UIColor.greenColor;
     self.textFieldPwd.clearButtonMode = UITextFieldViewModeAlways;
     [self.view addSubview:self.textFieldPwd];

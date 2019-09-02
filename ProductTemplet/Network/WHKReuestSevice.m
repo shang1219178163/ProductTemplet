@@ -9,7 +9,7 @@
 #import "WHKReuestSevice.h"
 #import "WHKRequestHelper.h"
 
-#import "BNGloble.h"
+#import "NNGloble.h"
 
 @implementation WHKReuestSevice
 

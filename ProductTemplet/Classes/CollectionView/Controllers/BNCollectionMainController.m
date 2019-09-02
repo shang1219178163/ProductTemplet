@@ -11,7 +11,7 @@
 @interface BNCollectionMainController ()
 
 @property (nonatomic, strong) NSArray * filterList;
-@property (nonatomic, strong) BNTablePlainView * plainView;
+@property (nonatomic, strong) NNTablePlainView * plainView;
 
 @end
 
@@ -20,16 +20,16 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    self.tableView.backgroundColor = UIColor.whiteColor;
+    self.tbView.backgroundColor = UIColor.whiteColor;
     //    [self.view addSubview:self.tableView];
     [self.view addSubview:self.plainView];
     
     [self createBarItem:@"个人中心" isLeft:false handler:^(id obj, UIView *item, NSInteger idx) {
-        BNFilterView * view = [[BNFilterView alloc]init];
+        NNFilterView * view = [[NNFilterView alloc]init];
         view.dataList = self.filterList;
         //            view.direction = @1;
         [view show];
-        view.block = ^(BNFilterView *view, NSIndexPath *indexPath, NSInteger idx) {
+        view.block = ^(NNFilterView *view, NSIndexPath *indexPath, NSInteger idx) {
             DDLog(@"%@,%@",@(indexPath.section),@(indexPath.row));
         };
     }];
@@ -43,7 +43,7 @@
                       @[@"CardLineViewController", @"卡片信息展示效果",],
                       @[@"CardViewController", @"卡片信息展示效果",],
                       @[@"BNExcelController", @"Excel视图",],
-                      @[@"BNShareViewController", @"分享视图",],
+                      @[@"NNShareViewController", @"分享视图",],
                       @[@"CTViewListController", @"多section效果",],
                       @[@"SectionListOneController", @"可拖拽多section效果",],
                       @[@"SectionListController", @"多section效果",],
@@ -76,9 +76,9 @@
 
 #pragma mark -lazy
 
-- (BNTablePlainView *)plainView{
+- (NNTablePlainView *)plainView{
     if (!_plainView) {
-        _plainView = [[BNTablePlainView alloc]init];
+        _plainView = [[NNTablePlainView alloc]init];
         _plainView.tableView.rowHeight = 70;
         
         @weakify(self);

@@ -9,7 +9,7 @@
 
 #import "BNFileHandler.h"
 
-#import "BNGloble.h"
+#import "NNGloble.h"
 
 @interface BNFileHandler ()
 

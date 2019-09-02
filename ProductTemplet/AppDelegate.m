@@ -10,7 +10,7 @@
 
 //#import "UIApplication+Helper.h"
 //#import "UIApplication+Other.h"
-#import "BNCategory.h"
+#import "NNCategoryPro.h"
 #import "BNMapManager.h"
 
 #import "ZYSliderViewController.h"

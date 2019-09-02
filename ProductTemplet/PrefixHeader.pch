@@ -17,13 +17,13 @@
 
 #import "AppGlobleConfig.h"
 
-#import "BNGloble.h"
-#import "BNKit.h"
-#import "BNCategory.h"
-#import "BNView.h"
-#import "BNTableViewCell.h"
-#import "BNCollectionView.h"
-#import "BNViewHeight.h"
+
+#import <NNGloble/NNGloble.h>
+#import <NNCategoryPro/NNCategoryPro.h>
+#import <NNView/NNView.h>
+#import <NNTableViewCell/NNTableViewCell.h>
+#import <NNCollectionView/NNCollectionView.h>
+#import <NNViewComplex/NNViewComplex.h>
 
 #import <MJExtension/MJExtension.h>
 

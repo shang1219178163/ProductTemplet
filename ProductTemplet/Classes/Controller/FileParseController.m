@@ -11,7 +11,7 @@
 
 @interface FileParseController ()
 
-@property(nonatomic, strong) BNTablePlainView *plainView;
+@property(nonatomic, strong) NNTablePlainView *plainView;
 
 @end
 
@@ -21,7 +21,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-    self.tableView.backgroundColor = UIColor.greenColor;
+    self.tbView.backgroundColor = UIColor.greenColor;
     [self.view addSubview:self.plainView];
 }
 
@@ -62,9 +62,9 @@
 
 #pragma mark -lazy
 
-- (BNTablePlainView *)plainView{
+- (NNTablePlainView *)plainView{
     if (!_plainView) {
-        _plainView = [[BNTablePlainView alloc]initWithFrame:self.view.bounds];
+        _plainView = [[NNTablePlainView alloc]initWithFrame:self.view.bounds];
         @weakify(self);
         _plainView.blockCellForRow = ^UITableViewCell *(UITableView *tableView, NSIndexPath *indexPath) {
             @strongify(self);

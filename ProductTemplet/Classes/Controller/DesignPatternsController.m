@@ -18,9 +18,9 @@
 @implementation DesignPatternsController
 
 - (void)configureTableView{
-    self.tableView.delegate = self;
-    self.tableView.dataSource = self;
-    [self.view addSubview:self.tableView];
+    self.tbView.delegate = self;
+    self.tbView.dataSource = self;
+    [self.view addSubview:self.tbView];
     
 }
 

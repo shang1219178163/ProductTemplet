@@ -20,7 +20,7 @@
 
 @interface DeviceListController ()
 
-@property(nonatomic, strong) BNTablePlainView * plainView;
+@property(nonatomic, strong) NNTablePlainView * plainView;
 @property(nonatomic, strong) BNDeviceListApi * deviceListApi;
 @property(nonatomic, strong) BNUserLogoutApi * userLogoutApi;
 
@@ -111,9 +111,9 @@
 
 #pragma mark -lazy
 
-- (BNTablePlainView *)plainView{
+- (NNTablePlainView *)plainView{
     if (!_plainView) {
-        _plainView = [[BNTablePlainView alloc]init];
+        _plainView = [[NNTablePlainView alloc]init];
         _plainView.tableView.rowHeight = 70;
         _plainView.blockCellForRow = ^UITableViewCell *(UITableView *tableView, NSIndexPath *indexPath) {
             static NSString * identifier = @"cell";

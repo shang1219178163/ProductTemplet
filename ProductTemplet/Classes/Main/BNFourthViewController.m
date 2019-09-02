@@ -13,7 +13,7 @@
 #import <FLAnimatedImage/FLAnimatedImage.h>
 
 #import "BNSliderControlView.h"
-#import "BNPickerView.h"
+#import "NNPickerView.h"
 
 #import <YYModel/YYModel.h>
 #import "BNCheckVersApi.h"
@@ -24,9 +24,9 @@
 @property (nonatomic, strong) UIImageView *imgView;
 @property (nonatomic, strong) UIView *sliderView;
 @property (nonatomic, strong) UITabBarItem *tabBarItem;
-@property (nonatomic, strong) BNSegmentView * segmentView;
+@property (nonatomic, strong) NNSegmentView * segmentView;
 @property (nonatomic, strong) BNSliderControlView * sliderControlView;
-@property (nonatomic, strong) BNPickerView * pickerView;
+@property (nonatomic, strong) NNPickerView * pickerView;
 
 @property (nonatomic, strong) UILabel *label;
 @property (nonatomic, strong) BNCheckVersApi *api;
@@ -277,9 +277,9 @@
     return _sliderView;
 }
 
--(BNSegmentView *)segmentView{
+-(NNSegmentView *)segmentView{
     if (!_segmentView) {
-        _segmentView = [[BNSegmentView alloc]initWithFrame: CGRectZero];
+        _segmentView = [[NNSegmentView alloc]initWithFrame: CGRectZero];
         _segmentView.segmentCtl.itemList = @[@"one",@"two",@"three",@"four"];
         _segmentView.indicatorHeight = 1;
         _segmentView.type = 2;
@@ -316,9 +316,9 @@
     return _sliderControlView;
 }
 
--(BNPickerView *)pickerView{
+-(NNPickerView *)pickerView{
     if (!_pickerView) {
-        _pickerView = [[BNPickerView alloc]initWithFrame:CGRectZero];
+        _pickerView = [[NNPickerView alloc]initWithFrame:CGRectZero];
         _pickerView.block = ^(UIPickerView *pickerView, NSInteger btnIndex) {
             NSString * info = [NSString stringWithFormat:@"%@-%@-%@", @([pickerView selectedRowInComponent:0]), @([pickerView selectedRowInComponent:1]), @([pickerView selectedRowInComponent:2])];
             DDLog(@"_%@_:%@",@(btnIndex),info);

@@ -8,7 +8,7 @@
 
 #import "SuspendButton.h"
 
-#import "BNGloble.h"
+#import "NNGloble.h"
 //悬浮按钮宽高
 static CGFloat kSuspendBtnWidth = 50;
 

@@ -8,7 +8,7 @@
 
 #import "LocationTracker.h"
 
-#import "BNGloble.h"
+#import "NNGloble.h"
 #import "BNNoti.h"
 
 #import "UIApplication+Helper.h"

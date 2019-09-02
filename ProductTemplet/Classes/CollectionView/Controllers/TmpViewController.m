@@ -8,7 +8,7 @@
 
 #import "TmpViewController.h"
 
-#import "BNExtendView.h"
+#import "NNExtendView.h"
 
 @interface TmpViewController ()
 
@@ -19,7 +19,7 @@
 @property (nonatomic, strong) UIView * containView;
 @property (nonatomic, strong) NSArray * items;
 
-@property (nonatomic, strong) BNExtendView * extendView;
+@property (nonatomic, strong) NNExtendView * extendView;
 
 @end
 
@@ -34,7 +34,7 @@
     
     self.extendView.backgroundColor = [UIColor orangeColor];
     [self.view addSubview:self.extendView];
-    self.extendView.block = ^(BNExtendView *view, id obj, UIButton *sender) {
+    self.extendView.block = ^(NNExtendView *view, id obj, UIButton *sender) {
         DDLog(@"__%@_%@",obj,@(sender.tag));
         
     };
@@ -98,9 +98,9 @@
 
 #pragma mark -lazy
 
--(BNExtendView *)extendView{
+-(NNExtendView *)extendView{
     if (!_extendView) {
-        _extendView = [[BNExtendView alloc]initWithFrame:CGRectMake(kScreenWidth/2.0 - 20,kScreenHeight/2.0 - 20, 40, 40)];
+        _extendView = [[NNExtendView alloc]initWithFrame:CGRectMake(kScreenWidth/2.0 - 20,kScreenHeight/2.0 - 20, 40, 40)];
         _extendView.direction = @0;
         NSArray * array = @[
                             @{

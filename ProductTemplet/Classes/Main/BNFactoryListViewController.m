@@ -17,7 +17,7 @@
 @implementation BNFactoryListViewController
 
 - (void)configureTableView{
-    [self.view addSubview:self.tableView];
+    [self.view addSubview:self.tbView];
     
 }
 
@@ -38,7 +38,7 @@
         [self.dataList addObject:model];
     }
     
-    [self.tableView reloadData];
+    [self.tbView reloadData];
     
 }
 

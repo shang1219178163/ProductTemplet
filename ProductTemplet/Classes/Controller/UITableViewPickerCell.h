@@ -9,13 +9,13 @@
 #import <UIKit/UIKit.h>
 
 #import "UITableViewCell+AddView.h"
-#import "BNPickerView.h"
+#import "NNPickerView.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
 @interface UITableViewPickerCell : UITableViewCell
 
-@property (nonatomic, strong) BNPickerView * chooseView;
+@property (nonatomic, strong) NNPickerView * chooseView;
 
 @end
 

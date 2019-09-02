@@ -7,8 +7,7 @@
 //
 
 #import "BNCounter.h"
-
-#import "BNCategory.h"
+#import "NNCategoryPro.h"
 
 @implementation BNCounter 
 

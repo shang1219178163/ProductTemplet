@@ -58,7 +58,7 @@
                           kItem_header:   @"header功能测试",
                           kItem_footer:   @"footer功能测试",
                           kItem_obj:   @[
-                                  @"RightViewController",@"TmpViewController",@"BNShareViewController",
+                                  @"RightViewController",@"TmpViewController",@"NNShareViewController",
                                   @"MainViewController",
                                   ],
                           },
@@ -75,28 +75,26 @@
     
     //新布局
     UICTViewLayoutZero * layoutZero = [[UICTViewLayoutZero alloc]init];
-    layoutZero.itemSize = CGSizeMake((CGRectGetWidth(self.collectionView.bounds) - 10*2 - 10)/2.0, 80);
-    self.collectionView.collectionViewLayout = layoutZero;
+    layoutZero.itemSize = CGSizeMake((CGRectGetWidth(self.ctView.bounds) - 10*2 - 10)/2.0, 80);
+    self.ctView.collectionViewLayout = layoutZero;
     
     //新布局
     //    UICTViewLayoutOne * layoutOne = [[UICTViewLayoutOne alloc]init];
-    //    layoutOne.itemSize = CGSizeMake((CGRectGetWidth(self.collectionView.bounds) - 10)/2.0, 80);
+    //    layoutOne.itemSize = CGSizeMake((CGRectGetWidth(self.ctView.bounds) - 10)/2.0, 80);
     //    layoutOne.sectionInset = UIEdgeInsetsMake(20, 20, 20, 20);
     //    layoutOne.minimumLineSpacing = 15;
     //    layoutOne.minimumInteritemSpacing = 10;
     //    layoutOne.headerReferenceSize = CGSizeMake(CGRectGetWidth(self.view.bounds), 50);
     //    layoutOne.footerReferenceSize = CGSizeMake(CGRectGetWidth(self.view.bounds), 15);
-    //    self.collectionView.collectionViewLayout = layoutOne;
+    //    self.ctView.collectionViewLayout = layoutOne;
     
-    self.collectionView.dictClass = self.dictClass;
+    self.ctView.dictClass = self.dictClass;
+    self.ctView.delegate = self;
+    self.ctView.dataSource = self;
     
-    self.collectionView.delegate = self;
-    self.collectionView.dataSource = self;
- 
+    [self.view addSubview:self.ctView];
     
-    [self.view addSubview:self.collectionView];
-    
-    [self.collectionView reloadData];
+    [self.ctView reloadData];
     
 }
 
@@ -113,8 +111,8 @@
     
     DDLog(@"self.view.bounds_%@",@(self.view.bounds));
     //调整布局
-    self.collectionView.frame = CGRectMake(0, 10, kScreenWidth - 10*2, CGRectGetHeight(self.view.bounds) - 20);
-    self.collectionView.frame = self.view.bounds;
+    self.ctView.frame = CGRectMake(0, 10, kScreenWidth - 10*2, CGRectGetHeight(self.view.bounds) - 20);
+    self.ctView.frame = self.view.bounds;
     
 }
 
@@ -150,7 +148,7 @@
 
 //设置每个item的尺寸
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath{
-    CGSize itemSize = CGSizeMake((CGRectGetWidth(self.collectionView.bounds) - 10)/2.0, 50);
+    CGSize itemSize = CGSizeMake((CGRectGetWidth(self.ctView.bounds) - 10)/2.0, 50);
     return itemSize;
 }
 

@@ -7,7 +7,7 @@
 
 #import "BackgroundTaskManager.h"
 
-#import "BNGloble.h"
+#import "NNGloble.h"
 
 @interface BackgroundTaskManager()
 

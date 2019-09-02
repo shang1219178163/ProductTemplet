@@ -13,7 +13,7 @@ NS_ASSUME_NONNULL_BEGIN
 @interface BNUserLoginView : UIView<UITextFieldDelegate>
 
 //@property (nonatomic, strong) UIImageView * imgView;
-@property (nonatomic, strong) BNRotationView * imgView;
+@property (nonatomic, strong) NNRotationView * imgView;
 
 @property (nonatomic, strong) UITextField * textFieldName;
 @property (nonatomic, strong) UITextField * textFieldPwd;

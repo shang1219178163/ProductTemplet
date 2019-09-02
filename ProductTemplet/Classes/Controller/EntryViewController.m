@@ -7,23 +7,23 @@
 //
 
 #import "EntryViewController.h"
-#import "BNSuspendBtn.h"
+#import "NNSuspendBtn.h"
 
 #import "UITableViewPickerCell.h"
 
 @interface EntryViewController ()
 
 @property(nonatomic, strong) NSDictionary * dic;
-@property(nonatomic, strong) BNSuspendBtn * suspendBtn;
-@property(nonatomic, strong) BNPickerView * pickerView;
+@property(nonatomic, strong) NNSuspendBtn * suspendBtn;
+@property(nonatomic, strong) NNPickerView * pickerView;
 
 @end
 
 @implementation EntryViewController
 
--(BNSuspendBtn *)suspendBtn{
+-(NNSuspendBtn *)suspendBtn{
     if (!_suspendBtn) {
-        _suspendBtn = [[BNSuspendBtn alloc]initWithFrame:CGRectMake(kScreenWidth - 60, 80, 60, 60)];
+        _suspendBtn = [[NNSuspendBtn alloc]initWithFrame:CGRectMake(kScreenWidth - 60, 80, 60, 60)];
         _suspendBtn.insets = UIEdgeInsetsMake(40, 60, 80, 100);
         _suspendBtn.parController = self;
         [_suspendBtn addActionHandler:^(UIControl * _Nonnull control) {
@@ -49,7 +49,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    [self.view addSubview:self.tableView];
+    [self.view addSubview:self.tbView];
 
     [self.view addSubview: self.suspendBtn];
     
@@ -163,7 +163,7 @@
         {
             UITableViewDateRangeCell * cell = [UITableViewDateRangeCell cellWithTableView:tableView];
             cell.dateRangeView.labelLeft.text = value0;
-            cell.dateRangeView.block = ^(BNDateRangeView *view) {
+            cell.dateRangeView.block = ^(NNDateRangeView *view) {
                 DDLog(@"%@至%@",view.dateStart,view.dateEnd);
             };
             [cell getViewLayer];
@@ -212,7 +212,7 @@
             cell.chooseView.labelLeft.text = value0;
             
             @weakify(cell);
-            cell.chooseView.pickerView.block = ^(BNPickerListView *view, NSIndexPath *indexP, NSString * text) {
+            cell.chooseView.pickerView.block = ^(NNPickerListView *view, NSIndexPath *indexP, NSString * text) {
                 @strongify(cell);
                 cell.chooseView.textField.text = text;
                 
@@ -304,9 +304,9 @@
     // Dispose of any resources that can be recreated.
 }
 
--(BNPickerView *)pickerView{
+-(NNPickerView *)pickerView{
     if (!_pickerView) {
-        _pickerView = [[BNPickerView alloc]initWithFrame:CGRectZero];
+        _pickerView = [[NNPickerView alloc]initWithFrame:CGRectZero];
         _pickerView.block = ^(UIPickerView *pickerView, NSInteger btnIndex) {
            DDLog(@"_%@_",@(btnIndex))
             

@@ -8,7 +8,7 @@
 
 #import "Utilities_DM.h"
 
-#import "BNGloble.h"
+#import "NNGloble.h"
 #import <Photos/Photos.h>
 #import "UIApplication+Helper.h"
 #import "UIWindow+Helper.h"

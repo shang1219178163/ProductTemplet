@@ -19,7 +19,7 @@
 
 @interface ChannleListController ()
 
-@property(nonatomic, strong) BNTablePlainView * plainView;
+@property(nonatomic, strong) NNTablePlainView * plainView;
 @property(nonatomic, strong) BNChannelListApi * channelListApi;
 
 @end
@@ -78,9 +78,9 @@
 }
 
 #pragma mark -lazy
-- (BNTablePlainView *)plainView{
+- (NNTablePlainView *)plainView{
     if (!_plainView) {
-        _plainView = [[BNTablePlainView alloc]init];
+        _plainView = [[NNTablePlainView alloc]init];
         _plainView.tableView.rowHeight = 80;
         
         @weakify(self);

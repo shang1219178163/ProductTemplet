@@ -8,20 +8,20 @@
 
 #import "AnimationController6.h"
 
-#import "BNRotationView.h"
+#import "NNRotationView.h"
 
 @interface AnimationController6 ()
 
-@property (nonatomic, strong) BNRotationView * rotaionView;
+@property (nonatomic, strong) NNRotationView * rotaionView;
 
 @end
 
 @implementation AnimationController6
 
--(BNRotationView *)rotaionView{
+-(NNRotationView *)rotaionView{
     if (!_rotaionView) {
-        _rotaionView = [[BNRotationView alloc]initWithFrame:CGRectMake(10, 10, 100, 100)];
-//        _rotaionView = [[BNRotationView alloc]init];
+        _rotaionView = [[NNRotationView alloc]initWithFrame:CGRectMake(10, 10, 100, 100)];
+//        _rotaionView = [[NNRotationView alloc]init];
 
     }
     return _rotaionView;

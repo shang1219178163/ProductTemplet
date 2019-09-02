@@ -25,7 +25,7 @@
     
     self.title = @"Main";
     
-    [self.view addSubview:self.tableView];
+    [self.view addSubview:self.tbView];
     
     self.dataList = @[
                       @[@"AnimationController1", @"ViewController1",],
@@ -62,7 +62,7 @@
 -(void)viewDidLayoutSubviews{
     [super viewDidLayoutSubviews];
     
-    self.tableView.frame = self.view.bounds;
+    self.tbView.frame = self.view.bounds;
 //    [self goController:@"AnimationController18" title:@"18"];
 
 }

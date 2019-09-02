@@ -8,10 +8,6 @@
 
 #import "NumberViewController.h"
 
-#import "BNCategory.h"
-//#import "NSDecimalNumber+Helper.h"
-#import "BNGeneralConst.h"
-
 @interface NumberViewController ()
 
 @end

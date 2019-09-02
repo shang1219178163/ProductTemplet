@@ -22,9 +22,9 @@
     [super viewDidLoad];
 
 
-    [self.view addSubview:self.tableView];
+    [self.view addSubview:self.tbView];
     // 1.初始化 传入当前视图和数据数组
-    self.countDown = [[BNCounter alloc] initWithTable:self.tableView];
+    self.countDown = [[BNCounter alloc] initWithTable:self.tbView];
 
     
 //    DDLog(@"_%p_",BNCounter.shared);
@@ -40,7 +40,7 @@
     
     self.countDown.isPlusTime = self.isPlusTime = [self.obj boolValue];
     self.countDown.dataList = self.dataList = [self dataListWithIsPlus:self.countDown.isPlusTime];
-    [self.tableView reloadData];
+    [self.tbView reloadData];
     DDLog(@"_%@_%@_%@_",@(self.isPlusTime),@(self.countDown.isPlusTime),self.obj);
 
 }

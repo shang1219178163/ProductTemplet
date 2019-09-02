@@ -16,8 +16,8 @@
 
 #import "BNFileHandler.h"
 #import "BNMenuListController.h"
-#import "BNAddPictureView.h"
-#import "BNAddPictureVC.h"
+#import "NNAddPictureView.h"
+#import "NNAddPictureVC.h"
 #import "BNEmail.h"
 #import "BNNoti.h"
 #import "BNNum.h"

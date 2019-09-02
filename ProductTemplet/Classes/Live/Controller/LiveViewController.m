@@ -26,7 +26,7 @@
 
 @interface LiveViewController ()
 
-@property(nonatomic, strong) BNItemsView * itemsView;
+@property(nonatomic, strong) NNItemsView * itemsView;
 
 @property(nonatomic, strong) BNUserLoginApi * userLoginApi;
 @property(nonatomic, strong) BNUserLogoutApi * userLogoutApi;
@@ -290,14 +290,14 @@
     return _channelstreamApi;
 }
 
--(BNItemsView *)itemsView{
+-(NNItemsView *)itemsView{
     if (!_itemsView) {
-        _itemsView = [[BNItemsView alloc]init];
+        _itemsView = [[NNItemsView alloc]init];
         _itemsView.backgroundColor = UIColor.greenColor;
         _itemsView.numberOfRow = 4;
         NSArray * items = @[@"修改密码",@"重启服务",@"用户信息",@"设备列表",@"通道列表",@"通道流",];
         _itemsView.items = items;
-        _itemsView.block = ^(BNItemsView * _Nonnull itemsView, UIButton * _Nonnull btn) {
+        _itemsView.block = ^(NNItemsView * _Nonnull itemsView, UIButton * _Nonnull btn) {
             [self getInfoWithIndex:btn.tag];
             
         };

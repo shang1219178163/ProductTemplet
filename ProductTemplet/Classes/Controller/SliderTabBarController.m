@@ -8,8 +8,8 @@
 
 #import "SliderTabBarController.h"
 
-#import "BNGloble.h"
-#import "BNTabBarViewZero.h"
+#import "NNGloble.h"
+#import "NNTabBarViewZero.h"
 
 #import "BNNoti.h"
 
@@ -17,15 +17,15 @@
 @interface SliderTabBarController ()<UITableViewDelegate,UITableViewDataSource>
 
 @property (nonatomic, strong) NSArray * itemList;
-@property (nonatomic, strong) BNTabBarViewZero * tabBarView;
+@property (nonatomic, strong) NNTabBarViewZero * tabBarView;
 
 @end
 
 @implementation SliderTabBarController
 
--(BNTabBarViewZero *)tabBarView{
+-(NNTabBarViewZero *)tabBarView{
     if (!_tabBarView) {
-        _tabBarView = [BNTabBarViewZero viewRect:self.view.bounds items:self.itemList];
+        _tabBarView = [NNTabBarViewZero viewRect:self.view.bounds items:self.itemList];
     }
     return _tabBarView;
 }
@@ -55,7 +55,7 @@
     
     [self.view addSubview:self.tabBarView];
    
-    self.tabBarView.block = ^(BNTabBarViewZero *view, UITableView *tableView, NSInteger idx) {
+    self.tabBarView.block = ^(NNTabBarViewZero *view, UITableView *tableView, NSInteger idx) {
         
         DDLog(@"%@_%@_%@",view,tableView,@(idx));
 

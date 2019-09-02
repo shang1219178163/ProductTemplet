@@ -8,7 +8,7 @@
 
 #import "BNSpeechSynthesizer.h"
 #import "AVSpeechSynthesizer+Helper.h"
-#import "BNGloble.h"
+#import "NNGloble.h"
 
 @implementation BNSpeechSynthesizer
 

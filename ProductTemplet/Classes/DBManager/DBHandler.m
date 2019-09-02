@@ -12,7 +12,7 @@
 
 #import <FMDB/FMDB.h>
 
-#import "BNGloble.h"
+#import "NNGloble.h"
 #import "NSObject+Helper.h"
 
 @interface DBHandler ()

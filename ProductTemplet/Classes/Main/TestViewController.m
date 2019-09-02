@@ -9,6 +9,7 @@
 #import "TestViewController.h"
 #import "WHKNetInfoFeedModel.h"
 #import "NSArray+Tmp.h"
+#import "NSDictionary+Tmp.h"
 
 @interface TestViewController ()
 
@@ -24,16 +25,15 @@
     [self createBarItemTitle:@"Timer" imgName:nil isLeft:NO isHidden:NO handler:^(id obj, id item, NSInteger idx) {
         [self goController:@"TimerViewController" title:@"Timer"];
     }];
-
     
 //    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc]initWithTitle:@"tim" style:UIBarButtonItemStyleDone target:self action:@selector(handleActionBtn:)];
     
     self.dataList = [NSMutableArray arrayWithCapacity:0];
     self.dataList = @[@"",@"",@"",].mutableCopy;
 
-    [self.view addSubview:self.tableView];
+    [self.view addSubview:self.tbView];
     
-    [self.tableView mas_makeConstraints:^(MASConstraintMaker *make) {
+    [self.tbView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.edges.equalTo(self.view).insets(UIEdgeInsetsMake(15, 15, 15, 15));
     }];
     
@@ -47,7 +47,14 @@
 - (void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
     
-    [self funtionMore];
+//    [self funtionMore];
+    [self funtionMoreDic];
+
+    CFUUIDRef uuid = CFUUIDCreate(NULL);
+    CFStringRef uuidStr = CFUUIDCreateString(NULL, uuid);
+    NSString *uniqueIdentifier = [NSString stringWithFormat:@"%@", uuidStr];
+    
+    DDLog(@"uniqueIdentifier_%@", uniqueIdentifier);
 }
 
 - (void)viewDidAppear:(BOOL)animated {
@@ -274,6 +281,42 @@
     DDLog(@"%@", [array13 componentsJoinedByString:@","]);
 }
 
+- (void)funtionMoreDic{
+    NSDictionary *dic = @{
+                          @"1": @"111",
+                          @"2": @"222",
+                          @"3": @"222",
+                          @"4": @"444",
+                          };
+    
+    NSDictionary *dic1 = [dic map:^NSObject * _Nonnull(NSObject<NSCopying> * _Nonnull key, NSObject * _Nonnull obj) {
+        return [NSString stringWithFormat:@"%@_%@", key, obj];
+    }];
+    DDLog(@"dic1_%@",dic1);
+//    2019-08-26 18:54:36.503000+0800【line -303】-[TestViewController funtionMoreDic] dic1_{
+//        3 = 3_222;
+//        1 = 1_111;
+//        4 = 4_444;
+//        2 = 2_222;
+//    }
+    
+    NSDictionary *dic2 = [dic filter:^BOOL(NSObject<NSCopying> * _Nonnull key, NSObject * _Nonnull obj) {
+        return [(NSString *)key isEqualToString:@"2"];
+    }];
+    DDLog(@"dic2_%@",dic2);
+//    2019-08-26 18:54:36.504000+0800【line -304】-[TestViewController funtionMoreDic] dic2_{
+//        2 = 222;
+//    }
+    NSDictionary *dic3 = [dic filter:^BOOL(NSObject<NSCopying> * _Nonnull key, NSObject * _Nonnull obj) {
+        return [(NSString *)obj isEqualToString:@"222"];
+    }];
+    DDLog(@"dic3_%@",dic3);
+//    2019-08-26 18:54:36.504000+0800【line -305】-[TestViewController funtionMoreDic] dic3_{
+//        3 = 222;
+//        2 = 222;
+//    }
+    
+}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

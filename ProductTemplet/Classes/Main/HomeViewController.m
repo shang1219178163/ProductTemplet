@@ -8,7 +8,7 @@
 
 #import "HomeViewController.h"
 
-#import "BNCategory.h"
+#import "NNCategoryPro.h"
 
 @interface HomeViewController ()<UITabBarControllerDelegate>
 
@@ -29,8 +29,9 @@
                       @[@"BNCenterViewController", @"总览", @"Item_center_N", @"Item_center_H",@"10",],
                       @[@"BNThirdViewController", @"消息", @"Item_third_N", @"Item_third_H",@"12",],
 //                      @[@"BNFourthViewController", @"我的", @"Item_fourth_N", @"Item_fourth_H",@"13",],
-                      @[@"TestViewController", @"test", @"Item_fourth_N", @"Item_fourth_H",@"13",],
-                      
+//                      @[@"TestViewController", @"test", @"Item_fourth_N", @"Item_fourth_H",@"13",],
+                      @[@"ScrollHorizontalController", @"test", @"Item_fourth_N", @"Item_fourth_H",@"13",],
+
                       ];
     self.viewControllers = UINavListFromList(list);
     self.selectedIndex = 2;

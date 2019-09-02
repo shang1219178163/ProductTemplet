@@ -8,7 +8,7 @@
 
 #import "Utilities.h"
 
-#import "BNGloble.h"
+#import "NNGloble.h"
 
 #import "AESCrypt.h"
 #import "Utilities_DM.h"

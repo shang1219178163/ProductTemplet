@@ -21,7 +21,7 @@
 #import "Teacher.h"
 #import "Lesson.h"
 
-#import "BNGloble.h"
+#import "NNGloble.h"
 #import "NSObject+Helper.h"
 #import "UIViewController+Helper.h"
 
@@ -43,10 +43,10 @@
     
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(addData)];
 
-    self.tableView.frame = self.view.bounds;
-    self.tableView.dataSource = self;
-    self.tableView.delegate = self;
-    [self.view addSubview:self.tableView];
+    self.tbView.frame = self.view.bounds;
+    self.tbView.dataSource = self;
+    self.tbView.delegate = self;
+    [self.view addSubview:self.tbView];
     
     
     
@@ -134,16 +134,13 @@
 - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath{
     
     if (editingStyle == UITableViewCellEditingStyleDelete){
-        
         Person *person = self.dataArray[indexPath.row];
         
         [[DBManager shared] deletePerson:person];
         [[DBManager shared] deleteAllCarsFromPerson:person];
         self.dataArray = [[DBManager shared] getAllPerson];
         
-        [self.tableView reloadData];
-        
-        
+        [self.tbView reloadData];
     }
     
 }
@@ -163,7 +160,7 @@
     
         self.dataArray = [[DBManager shared] getAllPerson];
     
-        [self.tableView reloadData];
+        [tableView reloadData];
 }
 
 
@@ -211,7 +208,7 @@
     [[DBManager shared] addPerson:person];
     self.dataArray = [[DBManager shared] getAllPerson];
     
-    [self.tableView reloadData];
+    [self.tbView reloadData];
     
 }
 - (void)watchCars{

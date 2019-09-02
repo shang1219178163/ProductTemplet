@@ -10,7 +10,8 @@
 #import <MJRefresh/MJRefresh.h>
 
 @interface ShowListController ()
-@property (nonatomic, strong) BNTablePlainView *plainView;
+
+@property (nonatomic, strong) NNTablePlainView *plainView;
 
 @end
 
@@ -24,9 +25,9 @@
 }
 
 
-- (BNTablePlainView *)plainView{
+- (NNTablePlainView *)plainView{
     if (!_plainView) {
-        _plainView = [[BNTablePlainView alloc]initWithFrame:self.view.bounds];
+        _plainView = [[NNTablePlainView alloc]initWithFrame:self.view.bounds];
         
         NSMutableArray * marr = @[@"111",@"222",@"333",@"444",].mutableCopy;
         _plainView.list = marr;
