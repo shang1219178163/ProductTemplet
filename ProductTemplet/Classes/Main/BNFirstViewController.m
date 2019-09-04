@@ -11,7 +11,7 @@
 #import "UIViewController+ZYSliderViewController.h"
 #import "ZYSliderViewController.h"
 
-#import "BNSimpleDataModel.h"
+#import "NNSimpleDataModel.h"
 
 #import "KVOController.h"
 #import "SDCycleScrollView.h"

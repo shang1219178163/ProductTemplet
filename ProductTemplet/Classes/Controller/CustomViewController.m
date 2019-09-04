@@ -15,7 +15,7 @@
 #import "UIControl+Helper.h"
 
 #import "NNItemsView.h"
-#import "BNWalletView.h"
+#import "NNWalletView.h"
 #import "NNSearchView.h"
 
 #import "NNCellDefaultView.h"
@@ -29,7 +29,7 @@
 @interface CustomViewController ()
 
 @property (nonatomic, strong) NNItemsView * itemsView;
-@property (nonatomic, strong) BNWalletView * walletView;
+@property (nonatomic, strong) NNWalletView * walletView;
 @property (nonatomic, strong) NNSearchView * searchView;
 
 @property (nonatomic, strong) NNCellDefaultView * defaultView;
@@ -98,11 +98,11 @@
     return _itemsView;
 }
 
-- (BNWalletView *)walletView{
+- (NNWalletView *)walletView{
     if (!_walletView) {
-        _walletView = [[BNWalletView alloc]initWithFrame:CGRectZero];
+        _walletView = [[NNWalletView alloc]initWithFrame:CGRectZero];
 //        _walletView.type = @2;
-        _walletView.block = ^(BNWalletView * _Nonnull walletView, UIView * _Nonnull view) {
+        _walletView.block = ^(NNWalletView * _Nonnull walletView, UIView * _Nonnull view) {
             DDLog(@"_%@",@(view.tag));
         };
     }

@@ -1,5 +1,5 @@
 //
-//  BNWalletView.h
+//  NNWalletView.h
 //  ProductTemplet
 //
 //  Created by Bin Shang on 2019/1/19.
@@ -10,14 +10,14 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface BNWalletView : UIView
+@interface NNWalletView : UIView
 
 @property (nonatomic, strong) NSArray<NSString *> *items;
 @property (nonatomic, assign) NSInteger numberOfRow;
 @property (nonatomic, assign) CGFloat padding;
 @property (nonatomic, assign) NSNumber *type;
 
-@property (nonatomic, copy) void(^block)(BNWalletView *walletView, UIView *view);
+@property (nonatomic, copy) void(^block)(NNWalletView *walletView, UIView *view);
 
 @end
 

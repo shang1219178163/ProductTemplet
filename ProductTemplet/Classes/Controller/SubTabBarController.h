@@ -6,11 +6,11 @@
 //  Copyright © 2019 BN. All rights reserved.
 //
 
-#import "BNTabBarController.h"
+#import "NNTabBarController.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface SubTabBarController : BNTabBarController
+@interface SubTabBarController : NNTabBarController
 
 @end
 

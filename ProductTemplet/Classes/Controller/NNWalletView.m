@@ -1,14 +1,14 @@
 //
-//  BNWalletView.m
+//  NNWalletView.m
 //  ProductTemplet
 //
 //  Created by Bin Shang on 2019/1/19.
 //  Copyright © 2019 BN. All rights reserved.
 //
 
-#import "BNWalletView.h"
+#import "NNWalletView.h"
 
-@interface BNWalletView()
+@interface NNWalletView()
 
 @property (nonatomic, strong) NSMutableArray *itemList;
 @property (nonatomic, assign) CGPoint origin;
@@ -17,7 +17,7 @@
 
 @end
 
-@implementation BNWalletView
+@implementation NNWalletView
 
 -(instancetype)initWithFrame:(CGRect)frame{
     self = [super initWithFrame:frame];

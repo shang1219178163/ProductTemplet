@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface BNFontListController : UIViewController
+@interface NNFontListController : UIViewController
 
 @end

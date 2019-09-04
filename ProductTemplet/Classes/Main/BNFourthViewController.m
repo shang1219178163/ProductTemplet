@@ -81,11 +81,8 @@
         [sender.view imageToSavedPhotosAlbum:^(NSError *error) {
             if (error) {
                 DDLog(@"%@",error.description);
-
-            } else {
-                DDLog(@"保存图像成功!");
-                
             }
+            DDLog(@"保存图像成功!");
         }];
     }];
     

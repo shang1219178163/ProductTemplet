@@ -1,30 +1,30 @@
 //
-//  BNActionSheet.m
-//  BNActionSheet
+//  NNActionSheet.m
+//  NNActionSheet
 //
 //  Created by 刘硕 on 2017/5/5.
 //  Copyright © 2017年 刘硕. All rights reserved.
 //
 
-#import "BNActionSheet.h"
+#import "NNActionSheet.h"
 
 #define SPACE 10
-@interface BNActionSheet ()<UITableViewDelegate,UITableViewDataSource>
+@interface NNActionSheet ()<UITableViewDelegate,UITableViewDataSource>
 @property (nonatomic, strong) UIView *maskView;
 @property (nonatomic, strong) UITableView *tableView;
 @property (nonatomic, strong) NSArray *optionsArr;
 @property (nonatomic,   copy) NSString *cancelTitle;
 @property (nonatomic, strong) UIView *headView;
 @property (nonatomic,   copy) void(^selectedBlock)(NSInteger);
-@property (nonatomic,   copy) void(^cancelBlock)();
+@property (nonatomic,   copy) void(^cancelBlock)(void);
 @end
-@implementation BNActionSheet
+@implementation NNActionSheet
 
 - (instancetype)initWithTitleView:(UIView*)titleView
                        optionsArr:(NSArray*)optionsArr
                       cancelTitle:(NSString*)cancelTitle
                     selectedBlock:(void(^)(NSInteger))selectedBlock
-                      cancelBlock:(void(^)())cancelBlock {
+                      cancelBlock:(void(^)(void))cancelBlock {
     if (self = [super init]) {
         _headView = titleView;
         _optionsArr = optionsArr;

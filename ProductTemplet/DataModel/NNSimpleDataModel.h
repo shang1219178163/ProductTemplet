@@ -1,5 +1,5 @@
 //
-//  BNSimpleDataModel.h
+//  NNSimpleDataModel.h
 //  ProductTemplet
 //
 //  Created by BIN on 2018/4/17.
@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface BNSimpleDataModel : NSObject
+@interface NNSimpleDataModel : NSObject
 
 @property (nonatomic, assign) NSInteger modelID;
 @property (nonatomic, copy) NSString *controllerName;

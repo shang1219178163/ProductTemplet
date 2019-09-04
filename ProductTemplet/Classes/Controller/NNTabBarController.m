@@ -1,21 +1,21 @@
 //
-//  BNTabBarController.m
+//  NNTabBarController.m
 //  ProductTemplet
 //
 //  Created by Bin Shang on 2019/4/8.
 //  Copyright © 2019 BN. All rights reserved.
 //
 
-#import "BNTabBarController.h"
+#import "NNTabBarController.h"
 
-@interface BNTabBarController ()<UITabBarDelegate>
+@interface NNTabBarController ()<UITabBarDelegate>
 
 @property (nonatomic, strong) UITabBar *tabBar;
 @property (nonatomic, strong) UIView *containView;
 
 @end
 
-@implementation BNTabBarController
+@implementation NNTabBarController
 
 - (void)dealloc{
     [self removeObserver:self forKeyPath:@"viewControllers"];
@@ -56,7 +56,7 @@
     
     [self.tabBar makeConstraints:^(MASConstraintMaker *make) {
         make.left.right.equalTo(self.tabBar.superview);
-        make.height.equalTo(@(kTabBarHeight));
+        make.height.equalTo(@(kTabBarHeight+30));
         make.bottom.equalTo(self.tabBar.superview).offset(0);
     }];
     
@@ -151,9 +151,7 @@
 -(UITabBar *)tabBar{
     if (!_tabBar) {
         _tabBar = ({
-            UITabBar * view = [[UITabBar alloc]initWithFrame:CGRectZero];
-            view.frame = CGRectMake(0, CGRectGetHeight(self.view.frame) - kTabBarHeight, CGRectGetWidth(self.view.frame), kTabBarHeight);
-            
+            UITabBar * view = [[UITabBar alloc]initWithFrame:CGRectZero];            
 //            view.items = @[@"one", @"two", @"three", @"four"];
             view.tintColor = UITabBar.appearance.tintColor ?  : UIColor.themeColor;
             view.barTintColor = UITabBar.appearance.barTintColor? : UIColor.whiteColor;

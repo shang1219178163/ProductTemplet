@@ -123,7 +123,7 @@
                       @[@"ShowListController", @"通用列表类展示封装", ],
                       @[@"EntryViewController", @"录入类界面封装",],
                       @[@"CustomViewController", @"View自定义",],
-                      @[@"BNTabBarController", @"嵌套TabBar,实现类UITabBarController功能",],
+                      @[@"NNTabBarController", @"嵌套TabBar,实现类UITabBarController功能",],
                       @[@"SubTabBarController", @"BNTabBarController子类化",],
                       @[@"SortViewController", @"Sort",],
                       @[@"NotificationTreadController", @"(不同线程)广播重定向",],

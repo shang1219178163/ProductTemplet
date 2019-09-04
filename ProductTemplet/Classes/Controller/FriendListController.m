@@ -8,7 +8,7 @@
 
 #import "FriendListController.h"
 
-#import "BNSimpleDataModel.h"
+#import "NNSimpleDataModel.h"
 
 @interface FriendListController ()
 

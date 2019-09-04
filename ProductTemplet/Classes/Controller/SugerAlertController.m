@@ -8,7 +8,7 @@
 
 #import "SugerAlertController.h"
 
-#import "BNActionSheet.h"
+#import "NNActionSheet.h"
 #import <CoreLocation/CoreLocation.h>
 #import <MapKit/MapKit.h>
 
@@ -36,7 +36,7 @@
 
 - (void)showSugerAlertView{
     @weakify(self);
-    BNActionSheet *optionsView = [[BNActionSheet alloc]initWithTitleView:self.headView optionsArr:self.dataArr cancelTitle:@"取消" selectedBlock:^(NSInteger index) {
+    NNActionSheet *optionsView = [[NNActionSheet alloc]initWithTitleView:self.headView optionsArr:self.dataArr cancelTitle:@"取消" selectedBlock:^(NSInteger index) {
         @strongify(self);
         NSString *optionsStr = self.dataArr[index];
         if ([optionsStr isEqualToString:@"苹果地图"]) {
