@@ -22,9 +22,9 @@ NS_ASSUME_NONNULL_BEGIN
 @property(nonatomic, strong) NSMutableArray *list;
 @property(nonatomic, assign) NSInteger showItemNum;
 @property(nonatomic, assign) NSInteger indicatorType;
-@property(nonatomic, assign) CGFloat indicatorHeight;
+@property(nonatomic, assign) CGFloat indicatorHeight UI_APPEARANCE_SELECTOR;
 @property(nonatomic, strong) UIColor *normalColor;
-@property(nonatomic, strong) UIColor *selectedColor;
+@property(nonatomic, strong) UIColor *selectedColor UI_APPEARANCE_SELECTOR;
 @property(nonatomic, strong, readonly) NSIndexPath *selectIndexPath;
 
 @property(nonatomic, copy) BlockCellForItem blockCellForItem;

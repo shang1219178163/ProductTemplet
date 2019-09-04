@@ -147,6 +147,7 @@
 		149111E6227542C10078A7BB /* BNUploadModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 149111E5227542C10078A7BB /* BNUploadModel.m */; };
 		149111E92275B34E0078A7BB /* BNLog.m in Sources */ = {isa = PBXBuildFile; fileRef = 149111E82275B34E0078A7BB /* BNLog.m */; };
 		149111EC2275B7970078A7BB /* NSError+Helper.m in Sources */ = {isa = PBXBuildFile; fileRef = 149111EB2275B7970078A7BB /* NSError+Helper.m */; };
+		1493DAC9231F52A400CB7433 /* CardView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1493DAC8231F52A400CB7433 /* CardView.m */; };
 		149B5508225AD3C5002B1039 /* BNTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 149B5507225AD3C5002B1039 /* BNTabBarController.m */; };
 		149F888D22B23CC200EAB4C2 /* BNTouchcChannelstreamApi.m in Sources */ = {isa = PBXBuildFile; fileRef = 149F888C22B23CC200EAB4C2 /* BNTouchcChannelstreamApi.m */; };
 		149F889F22B34C5600EAB4C2 /* PKLivePlayerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 149F889E22B34C5600EAB4C2 /* PKLivePlayerController.m */; };
@@ -766,6 +767,8 @@
 		149111E82275B34E0078A7BB /* BNLog.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BNLog.m; sourceTree = "<group>"; };
 		149111EA2275B7970078A7BB /* NSError+Helper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSError+Helper.h"; sourceTree = "<group>"; };
 		149111EB2275B7970078A7BB /* NSError+Helper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSError+Helper.m"; sourceTree = "<group>"; };
+		1493DAC7231F52A400CB7433 /* CardView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CardView.h; sourceTree = "<group>"; };
+		1493DAC8231F52A400CB7433 /* CardView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CardView.m; sourceTree = "<group>"; };
 		149B5506225AD3C5002B1039 /* BNTabBarController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BNTabBarController.h; sourceTree = "<group>"; };
 		149B5507225AD3C5002B1039 /* BNTabBarController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BNTabBarController.m; sourceTree = "<group>"; };
 		149F888B22B23CC200EAB4C2 /* BNTouchcChannelstreamApi.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BNTouchcChannelstreamApi.h; sourceTree = "<group>"; };
@@ -1708,6 +1711,8 @@
 				14C11ABC22DC813E009D18A3 /* BNCollectionMainController.m */,
 				14E42CE62200040D00606AD0 /* ScrollHorizontalController.h */,
 				14E42CE92200040E00606AD0 /* ScrollHorizontalController.m */,
+				1493DAC7231F52A400CB7433 /* CardView.h */,
+				1493DAC8231F52A400CB7433 /* CardView.m */,
 				14A9576F231125F10045140F /* NNScrollView.h */,
 				14A95770231125F10045140F /* NNScrollView.m */,
 				144FF41C2311458C007BCBFE /* UICTViewCellTen.h */,
@@ -3479,6 +3484,7 @@
 				14107FD422D087630011344E /* NNProgressHUD.m in Sources */,
 				141080AD22D2E7D10011344E /* AnimationController13.m in Sources */,
 				14B6B34422B1FE9C0047E094 /* ChannleListController.m in Sources */,
+				1493DAC9231F52A400CB7433 /* CardView.m in Sources */,
 				5162F6EE20BF8A2D009A6253 /* MultithreadingViewController.m in Sources */,
 				513646A12086031D005A20E7 /* AppDelegate.m in Sources */,
 				144FF41E2311458C007BCBFE /* UICTViewCellTen.m in Sources */,

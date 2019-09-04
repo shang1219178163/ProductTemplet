@@ -22,10 +22,6 @@
     if (self) {
         self.showItemNum = 4;
         self.selectIndexPath = [NSIndexPath indexPathForRow:0 inSection:0];
-        self.selectedColor = UIColor.themeColor;
-        self.normalColor = UIColor.grayColor;
-        
-        self.indicatorHeight = 1.5;
         
         [self addSubview:self.collectionView];
         [self.collectionView addSubview:self.indicatorView];
@@ -63,7 +59,7 @@
     if (!cell) {
         cell = [[UICollectionViewCell alloc] init];
     }
-    cell.backgroundColor = [UIColor randomColor];
+//    cell.backgroundColor = [UIColor randomColor];
     return cell;
 }
 
@@ -93,12 +89,12 @@
                     self.indicatorView.frame = CGRectMake(self.layout.itemSize.width * self.selectIndexPath.row,
                                                           0,
                                                           self.layout.itemSize.width,
-                                                          self.indicatorHeight);
+                                                          self.indicatorView.layer.borderWidth);
                     
                 } else {
                     self.indicatorView.frame = CGRectMake(0,
                                                           self.layout.itemSize.height * self.selectIndexPath.row,
-                                                          self.indicatorHeight,
+                                                          self.indicatorView.layer.borderWidth,
                                                           self.layout.itemSize.height);
                 }
             }];
@@ -109,14 +105,14 @@
             [UIView animateWithDuration:0.35 animations:^{
                 if (self.layout.scrollDirection == UICollectionViewScrollDirectionHorizontal) {
                     self.indicatorView.frame = CGRectMake(self.layout.itemSize.width * self.selectIndexPath.row,
-                                                          self.layout.itemSize.height - self.indicatorHeight,
+                                                          self.layout.itemSize.height - self.indicatorView.layer.borderWidth,
                                                           self.layout.itemSize.width,
-                                                          self.indicatorHeight);
+                                                          self.indicatorView.layer.borderWidth);
                     
                 } else {
-                    self.indicatorView.frame = CGRectMake(self.layout.itemSize.width - self.indicatorHeight,
+                    self.indicatorView.frame = CGRectMake(self.layout.itemSize.width - self.indicatorView.layer.borderWidth,
                                                           self.layout.itemSize.height * self.selectIndexPath.row,
-                                                          self.indicatorHeight,
+                                                          self.indicatorView.layer.borderWidth,
                                                           self.layout.itemSize.height);
                 }
             }];
@@ -156,6 +152,28 @@
     [self setupIndicator];
 }
 
+- (UIColor *)selectedColor{
+    return NNScrollView.appearance.selectedColor ? : [UIColor colorWithCGColor:self.indicatorView.layer.borderColor];
+}
+
+- (void)setSelectedColor:(UIColor *)selectedColor{
+    if (selectedColor) {
+        self.indicatorView.layer.borderColor = selectedColor.CGColor;
+    }
+}
+
+- (CGFloat)indicatorHeight{
+    return NNScrollView.appearance.indicatorHeight > 0 ? NNScrollView.appearance.indicatorHeight : self.indicatorView.layer.borderWidth;
+}
+
+- (void)setIndicatorHeight:(CGFloat)indicatorHeight{
+    if (indicatorHeight > 0) {
+        self.indicatorView.layer.borderWidth = indicatorHeight;
+    }
+}
+
+#pragma mark -lazy
+
 -(UICollectionViewFlowLayout *)layout{
     if (!_layout) {
         _layout = ({
@@ -173,8 +191,6 @@
     }
     return _layout;
 }
-
-#pragma mark -lazy
 
 -(UICollectionView *)collectionView{
     if (!_collectionView) {
@@ -202,22 +218,15 @@
     }
 }
 
-//- (NSMutableArray *)list{
-//    if (!_list) {
-//        _list = [NSMutableArray array];
-//    }
-//    return _list;
-//}
-
 - (UIView *)indicatorView{
     if (!_indicatorView) {
         _indicatorView = ({
             UIView *view = [[UIView alloc]initWithFrame:CGRectZero];
             view.layer.backgroundColor = UIColor.clearColor.CGColor;
             //        layer.opacity = 0;
+             view.layer.borderColor = UIColor.themeColor.CGColor;
+             view.layer.borderWidth = 2;
             
-            view.layer.borderColor = self.selectedColor.CGColor;
-            view.layer.borderWidth = self.indicatorHeight;
             view;
         });
     }

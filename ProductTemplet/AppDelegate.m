@@ -80,10 +80,10 @@
 
     //高德地图
     AMapServices.sharedServices.apiKey = kGDMapKey;
-    //微信支付
-    //    [WXApi registerApp:kAppID_WX];
-    //社交分享
-    //    [UIApplication registerShareSDK];
+//微信支付
+//    [WXApi registerApp:kAppID_WX];
+//社交分享
+//    [UIApplication registerShareSDK];
     //友盟
 //    [UIApplication registerUMengSDKAppKey:kAppKey_UMeng channel:kChannel_UMeng];
 //    //极光

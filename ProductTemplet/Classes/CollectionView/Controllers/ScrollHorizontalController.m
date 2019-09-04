@@ -9,6 +9,7 @@
 #import "ScrollHorizontalController.h"
 #import "NNScrollView.h"
 #import "UICTViewCellTen.h"
+#import "CardView.h"
 
 @interface ScrollHorizontalController ()<UICollectionViewDataSource, UICollectionViewDelegate>
 
@@ -17,6 +18,7 @@
 
 @property(nonatomic, strong) NNScrollView *scrollView;
 @property(nonatomic, strong) NNScrollView *scrollViewOne;
+@property(nonatomic, strong) CardView *cardView;
 
 @end
 
@@ -24,6 +26,9 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    NNScrollView.appearance.selectedColor = UIColor.redColor;
+    NNScrollView.appearance.indicatorHeight = 3;
     
     self.list = @[@"", @"", @""].mutableCopy;
     
@@ -36,6 +41,13 @@
     
     self.scrollViewOne.frame = CGRectMake(20, CGRectGetMaxY(self.scrollView.frame) + 10, 60, kScreenWidth);
     [self.scrollViewOne.collectionView reloadData];
+    
+    
+    [CardView appearance].leftColor = [UIColor redColor];
+    [CardView appearance].rightColor = [UIColor orangeColor];
+    
+    
+    self.cardView.frame = CGRectMake(20, 100, 200, 100);
     
 //    [self.view getViewLayer];
 }
@@ -59,6 +71,11 @@
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
     UICollectionViewCell *cell = [collectionView cellForItemAtIndexPath:indexPath];
 
+}
+
+- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
+//    CardView * cardView = [[CardView alloc]initWithFrame:CGRectMake(20, 100, 200, 100)];
+    [self.view addSubview:self.cardView];
 }
 
 #pragma mark -lazy
@@ -97,29 +114,36 @@
         _scrollView = ({
             NNScrollView *view = [[NNScrollView alloc]initWithFrame:CGRectZero];
             view.list = @[@"1", @"2", @"3", @"4", @"5", @"6",].mutableCopy;
-//            view.indicatorType = 2;
+            view.indicatorType = 2;
             
             [view.collectionView registerClass:UICTViewCellOne.class forCellWithReuseIdentifier:@"UICTViewCellOne"];
             [view.collectionView registerClass:UICTViewCellTen.class forCellWithReuseIdentifier:@"UICTViewCellTen"];
 
+            @weakify(view);
             view.blockCellForItem = ^UICollectionViewCell * _Nullable(UICollectionView * _Nonnull collectionView, NSIndexPath * _Nonnull indexPath) {
+                @strongify(view);
 //                UICollectionViewCell *cell = [UICollectionViewCell viewWithCollectionView:collectionView indexPath:indexPath];
                 UICTViewCellOne *cell = [UICTViewCellOne viewWithCollectionView:collectionView indexPath:indexPath];
 //                UICTViewCellTen *cell = [UICTViewCellTen viewWithCollectionView:collectionView indexPath:indexPath];
+                BOOL isSame = [view.selectIndexPath compare: indexPath] == NSOrderedSame;
+                cell.label.textColor = isSame == true ? view.selectedColor : UIColor.grayColor;
 
                 cell.label.text = [NSString stringWithFormat:@"标题%@", @(indexPath.row)];
                 cell.imgView.image = [UIImage imageNamed:@"bug.png"];
-                cell.contentView.backgroundColor = UIColor.randomColor;
+//                cell.contentView.backgroundColor = UIColor.randomColor;
                 
-                cell.label.hidden = true;
-//                cell.imgView.hidden = true;
+//                cell.label.hidden = true;
+                cell.imgView.hidden = true;
+                
+                DDLog(@"%@_%@_%@", NSStringFromIndexPath(view.selectIndexPath), NSStringFromIndexPath(indexPath), @(isSame));
 
-                [cell.contentView getViewLayer];
+//                [cell.contentView getViewLayer];
                 return cell;
             };
             
             view.blockDidSelectItem = ^(UICollectionView * _Nonnull collectionView, NSIndexPath * _Nonnull indexPath) {
 //                DDLog(@"%@", @(indexPath.row));
+                [collectionView reloadData];
 
             };
             
@@ -155,12 +179,20 @@
             
             view.blockDidSelectItem = ^(UICollectionView * _Nonnull collectionView, NSIndexPath * _Nonnull indexPath) {
                 DDLog(@"%@", @(indexPath.row));
+
             };
             
             view;
         });
     }
     return _scrollViewOne;
+}
+
+- (CardView *)cardView{
+    if (!_cardView) {
+        _cardView = [[CardView alloc]initWithFrame:CGRectZero];
+    }
+    return _cardView;
 }
 
 @end

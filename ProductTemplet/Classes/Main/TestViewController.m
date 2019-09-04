@@ -33,7 +33,7 @@
 
     [self.view addSubview:self.tbView];
     
-    [self.tbView mas_makeConstraints:^(MASConstraintMaker *make) {
+    [self.tbView makeConstraints:^(MASConstraintMaker *make) {
         make.edges.equalTo(self.view).insets(UIEdgeInsetsMake(15, 15, 15, 15));
     }];
     
