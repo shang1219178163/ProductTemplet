@@ -102,7 +102,7 @@
 - (NNCycleScrollView *)verScrollView{
     if (!_verScrollView) {
         _verScrollView = ({
-            NNCycleScrollView *view = [[NNCycleScrollView alloc]initWithFrame:CGRectMake(0, 300, CGRectGetWidth(self.view.bounds), 200)];
+            NNCycleScrollView *view = [[NNCycleScrollView alloc]initWithFrame:CGRectZero];
             view.direction = UICollectionViewScrollDirectionVertical;
             view.delegate = self;
             view.blockDidSelectedIndex = ^(NSInteger index) {
