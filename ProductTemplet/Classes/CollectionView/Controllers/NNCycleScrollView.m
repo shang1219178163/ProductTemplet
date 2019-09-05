@@ -2,14 +2,15 @@
 //  NNCycleScrollView.m
 //  NNCycleScrollView
 //
-//  Created by bjovov on 2017/11/23.
-//  Copyright © 2017年 caoxueliang.cn. All rights reserved.
+//  Created by Bin Shang on 2019/8/24.
+//  Copyright © 2019 BN. All rights reserved.
 //
 
 #import "NNCycleScrollView.h"
 #import "UICTViewCellOne.h"
 
 @interface NNCycleScrollView()<UICollectionViewDelegate,UICollectionViewDataSource>
+
 @property (nonatomic,strong) NSTimer *timer;
 @property (nonatomic,strong) UICollectionView *ctView;
 @property (nonatomic,strong) UIPageControl *pageControl;
@@ -42,10 +43,24 @@
     return self;
 }
 
-- (void)didMoveToSuperview{
-    [super didMoveToSuperview];
+- (void)layoutSubviews {
+    [super layoutSubviews];
+ 
+    self.flowLayout.itemSize = self.bounds.size;
+    [self.ctView makeConstraints:^(MASConstraintMaker *make) {
+        make.edges.equalTo(self);
+    }];
     
+    [self.pageControl makeConstraints:^(MASConstraintMaker *make) {
+        make.left.equalTo(self).offset(0);
+        make.right.equalTo(self).offset(0);
+        make.bottom.equalTo(self);
+        make.height.equalTo(30);
+    }];
+    
+    //重置起始位置
     [self setImageArray:_imageArray];
+
 }
 
 - (void)initTimer{
@@ -62,7 +77,6 @@
 #pragma mark - Setter Menthod
 - (void)setDirection:(UICollectionViewScrollDirection)direction{
     _flowLayout.scrollDirection = direction;
-//    [self setImageArray:_imageArray];
 }
 
 - (void)setIsAutoScroll:(BOOL)isAutoScroll{
@@ -138,19 +152,22 @@
     /**只有是无限循环和数组个数大于1时，才能无限循环*/
     if (self.isinFiniteLoop && self.imageArray.count > 1) {
         return self.imageArray.count + 2;
-    }else{
+    } else {
         return self.imageArray.count;
     }
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath{
     UICTViewCellOne *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"UICTViewCellOne" forIndexPath:indexPath];
+    cell.label.hidden = true;
+    
     NSInteger currentIndex = [self dataSourceIndexForCurrentIndex:indexPath.item];
-    if ([self.imageArray[currentIndex] isKindOfClass:[UIImage class]]) {
-        cell.image = self.imageArray[currentIndex];
+    id obj = self.imageArray[currentIndex];
+    if ([obj isKindOfClass:[UIImage class]]) {
+        cell.imgView.image = obj;
         
-    } else if ([self.imageArray[currentIndex] isKindOfClass:[NSString class]]){
-        cell.imageURL = self.imageArray[currentIndex];
+    } else if ([obj isKindOfClass:[NSString class]]){
+        [cell.imgView loadImage:obj defaultImg:@"tmp"];
         
     }
     return cell;
@@ -194,9 +211,9 @@
             NSIndexPath *indexPath = [NSIndexPath indexPathForItem:self.imageArray.count inSection:0];
             [_ctView scrollToItemAtIndexPath:indexPath atScrollPosition:UICollectionViewScrollPositionNone animated:NO];
             
-        }else if (currentIndex == self.imageArray.count + 1){
+        } else if (currentIndex == self.imageArray.count + 1){
             NSIndexPath *indexPath = [NSIndexPath indexPathForItem:1 inSection:0];
-           [_ctView scrollToItemAtIndexPath:indexPath atScrollPosition:UICollectionViewScrollPositionNone animated:NO];
+            [_ctView scrollToItemAtIndexPath:indexPath atScrollPosition:UICollectionViewScrollPositionNone animated:NO];
             
         }
     }
@@ -210,7 +227,7 @@
         _flowLayout = ({
             UICollectionViewFlowLayout *layout = [[UICollectionViewFlowLayout alloc]init];
             layout.scrollDirection = UICollectionViewScrollDirectionHorizontal;
-            layout.itemSize = self.bounds.size;
+            layout.itemSize = UIScreen.mainScreen.bounds.size;
             layout.minimumLineSpacing = 0;
             layout.minimumInteritemSpacing = 0;
             
@@ -241,9 +258,9 @@
 - (UIPageControl *)pageControl{
     if (!_pageControl) {
         _pageControl = ({
-            UIPageControl *view = [[UIPageControl alloc]initWithFrame:CGRectMake(0, self.bounds.size.height - 30, self.bounds.size.width, 30)];
-            view.currentPageIndicatorTintColor = [UIColor redColor];
-            view.pageIndicatorTintColor = [UIColor grayColor];
+            UIPageControl *view = [[UIPageControl alloc]initWithFrame:CGRectZero];
+            view.currentPageIndicatorTintColor = UIColor.redColor;
+            view.pageIndicatorTintColor = UIColor.grayColor;
             view;
         });
     }

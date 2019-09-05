@@ -35,14 +35,14 @@
 -(void)layoutSubviews{
     [super layoutSubviews];
     
-    if (!self.label.text || self.label.hidden == true){
+    if (self.label.hidden == true){
         [self.imgView makeConstraints:^(MASConstraintMaker *make) {
             make.edges.equalTo(self.contentView);
         }];
         return;
     }
     
-    if (!self.imgView.image || self.imgView.hidden == true){
+    if (self.imgView.hidden == true){
         [self.label makeConstraints:^(MASConstraintMaker *make) {
             make.edges.equalTo(self.contentView);
         }];

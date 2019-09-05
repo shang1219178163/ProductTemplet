@@ -14,11 +14,15 @@
 @interface ScrollHorizontalController ()<UICollectionViewDataSource, UICollectionViewDelegate>
 
 @property(nonatomic, strong) UICollectionView *ctView;
+@property(nonatomic, strong) UIPageControl *pageControl;
+
 @property(nonatomic, strong) NSMutableArray *list;
 
 @property(nonatomic, strong) NNScrollView *scrollView;
 @property(nonatomic, strong) NNScrollView *scrollViewOne;
 @property(nonatomic, strong) CardView *cardView;
+
+@property(nonatomic, strong) NSTimer *timer;
 
 @end
 
@@ -32,7 +36,10 @@
     
     self.list = @[@"", @"", @""].mutableCopy;
     
+    
     [self.view addSubview:self.ctView];
+    [self.view addSubview:self.pageControl];
+
     [self.view addSubview:self.scrollView];
     [self.view addSubview:self.scrollViewOne];
 
@@ -46,10 +53,31 @@
     [CardView appearance].leftColor = [UIColor redColor];
     [CardView appearance].rightColor = [UIColor orangeColor];
     
+//    self.timer = [NSTimer timerWithTimeInterval:2 target:self selector:@selector(autoScroll) userInfo:nil repeats:YES];
+//    [NSRunLoop.mainRunLoop addTimer:self.timer forMode:NSRunLoopCommonModes];
     
     self.cardView.frame = CGRectMake(20, 100, 200, 100);
     
 //    [self.view getViewLayer];
+}
+
+- (void)viewDidLayoutSubviews{
+    [super viewDidLayoutSubviews];
+    
+    [self.ctView makeConstraints:^(MASConstraintMaker *make) {
+        make.top.equalTo(self.view).offset(20);
+        make.left.equalTo(self.view).offset(0);
+        make.right.equalTo(self.view).offset(0);
+        make.height.equalTo(kScreenWidth/kRatio_IDCard);
+    }];
+    
+    [self.pageControl makeConstraints:^(MASConstraintMaker *make) {
+        make.left.equalTo(self.ctView).offset(0);
+        make.right.equalTo(self.ctView).offset(0);
+        make.bottom.equalTo(self.ctView.bottom).offset(0);
+        make.height.equalTo(30);
+    }];
+
 }
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
@@ -71,6 +99,32 @@
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
     UICollectionViewCell *cell = [collectionView cellForItemAtIndexPath:indexPath];
 
+}
+
+- (void)scrollViewDidScroll:(UIScrollView *)scrollView{
+    if (scrollView == self.ctView) {
+        self.pageControl.currentPage = scrollView.contentOffset.x/kScreenWidth;
+    }
+}
+
+- (void)autoScroll{
+    NSInteger currentIndex = [self currentIndex];
+    NSInteger nextIndex = (currentIndex == self.list.count - 1) ? 0 : (currentIndex + 1);
+    NSIndexPath *indexPath = [NSIndexPath indexPathForItem:nextIndex inSection:0];
+    [self.ctView scrollToItemAtIndexPath:indexPath
+                        atScrollPosition:UICollectionViewScrollPositionNone
+                                animated:nextIndex ? YES : NO];
+}
+
+- (NSInteger)currentIndex{
+    UICollectionViewFlowLayout *layout = (UICollectionViewFlowLayout *)self.ctView.collectionViewLayout;
+    int index = 0;
+    if (layout.scrollDirection == UICollectionViewScrollDirectionHorizontal) {
+        index = (self.ctView.contentOffset.x + layout.itemSize.width * 0.5) / layout.itemSize.width;
+    } else {
+        index = (self.ctView.contentOffset.y + layout.itemSize.height * 0.5) / layout.itemSize.height;
+    }
+    return MAX(0, index);
 }
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
@@ -107,6 +161,22 @@
         });
     }
     return _ctView;
+}
+
+-(UIPageControl *)pageControl{
+    if (!_pageControl) {
+        _pageControl = ({
+            UIPageControl *view = [[UIPageControl alloc] initWithFrame:CGRectZero];
+            view.numberOfPages = self.list.count;
+            view.currentPage = 0;
+            view.hidesForSinglePage = YES;
+            view.defersCurrentPageDisplay = YES;
+            view.backgroundColor = [UIColor.blackColor colorWithAlphaComponent:0.5];
+
+            view;
+        });
+    }
+    return _pageControl;
 }
 
 - (NNScrollView *)scrollView{
