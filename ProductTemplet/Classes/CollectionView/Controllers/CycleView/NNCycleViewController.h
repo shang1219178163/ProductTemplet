@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface CycleViewController : UIViewController
+@interface NNCycleViewController : UIViewController
 
 
 @end

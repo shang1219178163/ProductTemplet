@@ -6,17 +6,17 @@
 //  Copyright © 2017年 caoxueliang.cn. All rights reserved.
 //
 
-#import "CycleViewController.h"
+#import "NNCycleViewController.h"
 #import "NNCycleScrollView.h"
 
-@interface CycleViewController ()<NNCycleScrollViewDelegate>
+@interface NNCycleViewController ()<NNCycleScrollViewDelegate>
 
 @property (nonatomic,strong) NNCycleScrollView *horScrollView;
 @property (nonatomic,strong) NNCycleScrollView *verScrollView;
 
 @end
 
-@implementation CycleViewController
+@implementation NNCycleViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];

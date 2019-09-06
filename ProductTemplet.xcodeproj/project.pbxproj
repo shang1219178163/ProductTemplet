@@ -222,8 +222,18 @@
 		14E793C421D62E0B003230C8 /* bug.png in Resources */ = {isa = PBXBuildFile; fileRef = 14E793C321D62E0B003230C8 /* bug.png */; };
 		14E8692D21C251BA009CE33E /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 14E8692C21C251BA009CE33E /* HomeViewController.m */; };
 		14E8F74F21F5E1ED004317B5 /* RuntimeController.m in Sources */ = {isa = PBXBuildFile; fileRef = 14E8F74E21F5E1ED004317B5 /* RuntimeController.m */; };
-		14EAC92F2320FDFE00E42D4F /* CycleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 14EAC92C2320FDFE00E42D4F /* CycleViewController.m */; };
+		14EAC92F2320FDFE00E42D4F /* NNCycleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 14EAC92C2320FDFE00E42D4F /* NNCycleViewController.m */; };
 		14EAC9302320FDFE00E42D4F /* NNCycleScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 14EAC92E2320FDFE00E42D4F /* NNCycleScrollView.m */; };
+		14EAC9392321188800E42D4F /* UICTViewLayoutSlope.m in Sources */ = {isa = PBXBuildFile; fileRef = 14EAC9312321188700E42D4F /* UICTViewLayoutSlope.m */; };
+		14EAC93A2321188800E42D4F /* NNSlopeShowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 14EAC9322321188700E42D4F /* NNSlopeShowController.m */; };
+		14EAC93B2321188800E42D4F /* UICTViewCellInspiration.m in Sources */ = {isa = PBXBuildFile; fileRef = 14EAC9352321188700E42D4F /* UICTViewCellInspiration.m */; };
+		14EAC93C2321188800E42D4F /* InspirationModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 14EAC9362321188800E42D4F /* InspirationModel.m */; };
+		14EAC93E232118A200E42D4F /* Inspirations.plist in Resources */ = {isa = PBXBuildFile; fileRef = 14EAC93D232118A200E42D4F /* Inspirations.plist */; };
+		14EAC9402321DA1300E42D4F /* pageScrollView.plist in Resources */ = {isa = PBXBuildFile; fileRef = 14EAC93F2321DA1200E42D4F /* pageScrollView.plist */; };
+		14EAC94A2321DA8300E42D4F /* UICTViewCellPage.m in Sources */ = {isa = PBXBuildFile; fileRef = 14EAC9442321DA8200E42D4F /* UICTViewCellPage.m */; };
+		14EAC94B2321DA8300E42D4F /* NNPageInfoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 14EAC9472321DA8200E42D4F /* NNPageInfoModel.m */; };
+		14EAC94C2321DA8300E42D4F /* NNPageScrollViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 14EAC9482321DA8200E42D4F /* NNPageScrollViewController.m */; };
+		14EAC94D2321DA8300E42D4F /* UICTViewLayoutPage.m in Sources */ = {isa = PBXBuildFile; fileRef = 14EAC9492321DA8300E42D4F /* UICTViewLayoutPage.m */; };
 		14F08BAE23016D9C00B75842 /* WaterView.m in Sources */ = {isa = PBXBuildFile; fileRef = 14F08BAC23016D9C00B75842 /* WaterView.m */; };
 		14F08BB123016DDD00B75842 /* WaveController.m in Sources */ = {isa = PBXBuildFile; fileRef = 14F08BB023016DDD00B75842 /* WaveController.m */; };
 		14F0FE4E22B0A6E400057093 /* BNUserInfoApi.m in Sources */ = {isa = PBXBuildFile; fileRef = 14F0FE4D22B0A6E400057093 /* BNUserInfoApi.m */; };
@@ -917,10 +927,28 @@
 		14E8692C21C251BA009CE33E /* HomeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
 		14E8F74D21F5E1EC004317B5 /* RuntimeController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RuntimeController.h; sourceTree = "<group>"; };
 		14E8F74E21F5E1ED004317B5 /* RuntimeController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RuntimeController.m; sourceTree = "<group>"; };
-		14EAC92B2320FDFE00E42D4F /* CycleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CycleViewController.h; sourceTree = "<group>"; };
-		14EAC92C2320FDFE00E42D4F /* CycleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CycleViewController.m; sourceTree = "<group>"; };
+		14EAC92B2320FDFE00E42D4F /* NNCycleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NNCycleViewController.h; sourceTree = "<group>"; };
+		14EAC92C2320FDFE00E42D4F /* NNCycleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NNCycleViewController.m; sourceTree = "<group>"; };
 		14EAC92D2320FDFE00E42D4F /* NNCycleScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NNCycleScrollView.h; sourceTree = "<group>"; };
 		14EAC92E2320FDFE00E42D4F /* NNCycleScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NNCycleScrollView.m; sourceTree = "<group>"; };
+		14EAC9312321188700E42D4F /* UICTViewLayoutSlope.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UICTViewLayoutSlope.m; sourceTree = "<group>"; };
+		14EAC9322321188700E42D4F /* NNSlopeShowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NNSlopeShowController.m; sourceTree = "<group>"; };
+		14EAC9332321188700E42D4F /* InspirationModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InspirationModel.h; sourceTree = "<group>"; };
+		14EAC9342321188700E42D4F /* NNSlopeShowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NNSlopeShowController.h; sourceTree = "<group>"; };
+		14EAC9352321188700E42D4F /* UICTViewCellInspiration.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UICTViewCellInspiration.m; sourceTree = "<group>"; };
+		14EAC9362321188800E42D4F /* InspirationModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InspirationModel.m; sourceTree = "<group>"; };
+		14EAC9372321188800E42D4F /* UICTViewLayoutSlope.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UICTViewLayoutSlope.h; sourceTree = "<group>"; };
+		14EAC9382321188800E42D4F /* UICTViewCellInspiration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UICTViewCellInspiration.h; sourceTree = "<group>"; };
+		14EAC93D232118A200E42D4F /* Inspirations.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Inspirations.plist; sourceTree = "<group>"; };
+		14EAC93F2321DA1200E42D4F /* pageScrollView.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = pageScrollView.plist; sourceTree = "<group>"; };
+		14EAC9422321DA8200E42D4F /* NNPageInfoModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NNPageInfoModel.h; sourceTree = "<group>"; };
+		14EAC9432321DA8200E42D4F /* NNPageScrollViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NNPageScrollViewController.h; sourceTree = "<group>"; };
+		14EAC9442321DA8200E42D4F /* UICTViewCellPage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UICTViewCellPage.m; sourceTree = "<group>"; };
+		14EAC9452321DA8200E42D4F /* UICTViewLayoutPage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UICTViewLayoutPage.h; sourceTree = "<group>"; };
+		14EAC9462321DA8200E42D4F /* UICTViewCellPage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UICTViewCellPage.h; sourceTree = "<group>"; };
+		14EAC9472321DA8200E42D4F /* NNPageInfoModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NNPageInfoModel.m; sourceTree = "<group>"; };
+		14EAC9482321DA8200E42D4F /* NNPageScrollViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NNPageScrollViewController.m; sourceTree = "<group>"; };
+		14EAC9492321DA8300E42D4F /* UICTViewLayoutPage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UICTViewLayoutPage.m; sourceTree = "<group>"; };
 		14F08BAC23016D9C00B75842 /* WaterView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WaterView.m; sourceTree = "<group>"; };
 		14F08BAD23016D9C00B75842 /* WaterView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WaterView.h; sourceTree = "<group>"; };
 		14F08BAF23016DDD00B75842 /* WaveController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WaveController.h; sourceTree = "<group>"; };
@@ -1710,6 +1738,9 @@
 		147AB8B222DDC7AE00A5C4EC /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				14EAC94F2321DAC700E42D4F /* SlopeView */,
+				14EAC94E2321DA9200E42D4F /* CycleView */,
+				14EAC9412321DA6F00E42D4F /* PageScrollow */,
 				14C11ABB22DC813E009D18A3 /* BNCollectionMainController.h */,
 				14C11ABC22DC813E009D18A3 /* BNCollectionMainController.m */,
 				14E42CE62200040D00606AD0 /* ScrollHorizontalController.h */,
@@ -1720,10 +1751,6 @@
 				14A95770231125F10045140F /* NNScrollView.m */,
 				144FF41C2311458C007BCBFE /* UICTViewCellTen.h */,
 				144FF41D2311458C007BCBFE /* UICTViewCellTen.m */,
-				14EAC92B2320FDFE00E42D4F /* CycleViewController.h */,
-				14EAC92C2320FDFE00E42D4F /* CycleViewController.m */,
-				14EAC92D2320FDFE00E42D4F /* NNCycleScrollView.h */,
-				14EAC92E2320FDFE00E42D4F /* NNCycleScrollView.m */,
 				14C11AA822DC7FF8009D18A3 /* CTViewListController.h */,
 				14C11AA222DC7FF7009D18A3 /* CTViewListController.m */,
 				14C11A9C22DC7FD7009D18A3 /* CTViewGroupController.h */,
@@ -1858,6 +1885,49 @@
 				14579BA02294EE83001FEB0C /* WebSocketManager.m */,
 			);
 			path = NetWorkWebSocket;
+			sourceTree = "<group>";
+		};
+		14EAC9412321DA6F00E42D4F /* PageScrollow */ = {
+			isa = PBXGroup;
+			children = (
+				14EAC93F2321DA1200E42D4F /* pageScrollView.plist */,
+				14EAC9422321DA8200E42D4F /* NNPageInfoModel.h */,
+				14EAC9472321DA8200E42D4F /* NNPageInfoModel.m */,
+				14EAC9432321DA8200E42D4F /* NNPageScrollViewController.h */,
+				14EAC9482321DA8200E42D4F /* NNPageScrollViewController.m */,
+				14EAC9462321DA8200E42D4F /* UICTViewCellPage.h */,
+				14EAC9442321DA8200E42D4F /* UICTViewCellPage.m */,
+				14EAC9452321DA8200E42D4F /* UICTViewLayoutPage.h */,
+				14EAC9492321DA8300E42D4F /* UICTViewLayoutPage.m */,
+			);
+			path = PageScrollow;
+			sourceTree = "<group>";
+		};
+		14EAC94E2321DA9200E42D4F /* CycleView */ = {
+			isa = PBXGroup;
+			children = (
+				14EAC92B2320FDFE00E42D4F /* NNCycleViewController.h */,
+				14EAC92C2320FDFE00E42D4F /* NNCycleViewController.m */,
+				14EAC92D2320FDFE00E42D4F /* NNCycleScrollView.h */,
+				14EAC92E2320FDFE00E42D4F /* NNCycleScrollView.m */,
+			);
+			path = CycleView;
+			sourceTree = "<group>";
+		};
+		14EAC94F2321DAC700E42D4F /* SlopeView */ = {
+			isa = PBXGroup;
+			children = (
+				14EAC93D232118A200E42D4F /* Inspirations.plist */,
+				14EAC9372321188800E42D4F /* UICTViewLayoutSlope.h */,
+				14EAC9312321188700E42D4F /* UICTViewLayoutSlope.m */,
+				14EAC9332321188700E42D4F /* InspirationModel.h */,
+				14EAC9362321188800E42D4F /* InspirationModel.m */,
+				14EAC9342321188700E42D4F /* NNSlopeShowController.h */,
+				14EAC9322321188700E42D4F /* NNSlopeShowController.m */,
+				14EAC9382321188800E42D4F /* UICTViewCellInspiration.h */,
+				14EAC9352321188700E42D4F /* UICTViewCellInspiration.m */,
+			);
+			path = SlopeView;
 			sourceTree = "<group>";
 		};
 		14F08BAB23016D8600B75842 /* WaterView */ = {
@@ -2886,6 +2956,7 @@
 				5136498720860655005A20E7 /* img_Ablactation_N.png in Resources */,
 				5169DF242088254400B025C3 /* Public.xcassets in Resources */,
 				513649CE20860655005A20E7 /* img_remark.png in Resources */,
+				14EAC9402321DA1300E42D4F /* pageScrollView.plist in Resources */,
 				515CC81220B6844E004AE27C /* img_btnBack.png in Resources */,
 				513649D920860655005A20E7 /* img_semenCollect_N.png in Resources */,
 				1410804A22D2E69C0011344E /* triangle.png in Resources */,
@@ -2927,6 +2998,7 @@
 				5136499D20860655005A20E7 /* img_Childbirth_N.png in Resources */,
 				5136499220860655005A20E7 /* img_Add_AnimalSemenCollect.png in Resources */,
 				1410803D22D2E69C0011344E /* leaf_bg@2x.png in Resources */,
+				14EAC93E232118A200E42D4F /* Inspirations.plist in Resources */,
 				513649DE20860655005A20E7 /* img_Tupping_N.png in Resources */,
 				5136499920860655005A20E7 /* img_animalOut_N.png in Resources */,
 				5136499E20860655005A20E7 /* img_delete.png in Resources */,
@@ -3256,9 +3328,11 @@
 				14F0FE5A22B0AA0000057093 /* BNMoidyPwdApi.m in Sources */,
 				51AA00342199295A002EB259 /* CounterListController.m in Sources */,
 				5185FDDC21A248E900FFA730 /* MutiRequestController.m in Sources */,
+				14EAC93C2321188800E42D4F /* InspirationModel.m in Sources */,
 				14F08BAE23016D9C00B75842 /* WaterView.m in Sources */,
 				14E42CF92200040F00606AD0 /* BNFactoryListViewController.m in Sources */,
 				51258C1A215E38FD009CDEE3 /* NSBundle+Language.m in Sources */,
+				14EAC94A2321DA8300E42D4F /* UICTViewCellPage.m in Sources */,
 				51A4A1272182FB7900BA9923 /* EntryViewController.m in Sources */,
 				140A2BE722696E24000ED121 /* BNSpeechSynthesizer.m in Sources */,
 				51698C862137C0440069C2B2 /* WHKReuestSevice.m in Sources */,
@@ -3422,12 +3496,13 @@
 				510BC99B208F2F0400CF48C5 /* FriendListController.m in Sources */,
 				14B6B33E22B1F4FE0047E094 /* BNChannelstreamApi.m in Sources */,
 				14D40A3122C5BB7B00AF74B9 /* PopoverView.m in Sources */,
-				14EAC92F2320FDFE00E42D4F /* CycleViewController.m in Sources */,
+				14EAC92F2320FDFE00E42D4F /* NNCycleViewController.m in Sources */,
 				14D40A3222C5BB7B00AF74B9 /* PopoverViewCell.m in Sources */,
 				51698C4321376F9E0069C2B2 /* AddressPickerDemo.m in Sources */,
 				14B6B33822B1F2180047E094 /* BNDeviceListApi.m in Sources */,
 				14F0FE6B22B0ADDB00057093 /* BNUserLoginApi.m in Sources */,
 				5169698E20BCED2200BAA53D /* FacadeViewController.m in Sources */,
+				14EAC93A2321188800E42D4F /* NNSlopeShowController.m in Sources */,
 				5162F6F420BF9337009A6253 /* ThreadNormolController.m in Sources */,
 				51AA002321991646002EB259 /* CountDownListController.m in Sources */,
 				517D8B2A20B2E09800DCA731 /* PersonCarsViewController.m in Sources */,
@@ -3447,6 +3522,7 @@
 				141080A822D2E7D10011344E /* AnimationController10.m in Sources */,
 				515CC98420B6AAF2004AE27C /* AAMarker.m in Sources */,
 				140A2BF822696E24000ED121 /* BNDriverNaviController.m in Sources */,
+				14EAC93B2321188800E42D4F /* UICTViewCellInspiration.m in Sources */,
 				140A2BF422696E24000ED121 /* MANaviAnnotation.m in Sources */,
 				141080A922D2E7D10011344E /* AnimationController2.m in Sources */,
 				5169699920BCED4000BAA53D /* LHSales.m in Sources */,
@@ -3460,6 +3536,7 @@
 				516969A020BCF11600BAA53D /* MediatorViewController.m in Sources */,
 				515C67DF2137C55700D5EA94 /* ChineseToPinyin.m in Sources */,
 				14D40A3022C5BB7B00AF74B9 /* PopoverAction.m in Sources */,
+				14EAC9392321188800E42D4F /* UICTViewLayoutSlope.m in Sources */,
 				142A77102227B30E0016D3DA /* UITableViewPickerCell.m in Sources */,
 				51862E5020BB908E0080BD4E /* DesignPatternsController.m in Sources */,
 				516969AE20BCF9A800BAA53D /* Seller.m in Sources */,
@@ -3481,14 +3558,17 @@
 				14E42CF22200040F00606AD0 /* BNSecondViewController.m in Sources */,
 				51364CA020860822005A20E7 /* Utilities_DM.m in Sources */,
 				141080AE22D2E7D10011344E /* BNAnimationController.m in Sources */,
+				14EAC94D2321DA8300E42D4F /* UICTViewLayoutPage.m in Sources */,
 				5175C93F20C13E30009EA86E /* Lesson.m in Sources */,
 				141080B622D2E7D10011344E /* AnniSuperController.m in Sources */,
 				14C11ABD22DC813E009D18A3 /* BNCollectionMainController.m in Sources */,
 				141080B422D2E7D10011344E /* EmitterViewController.m in Sources */,
 				515CC98620B6AAF2004AE27C /* AAItemStyle.m in Sources */,
 				141080AC22D2E7D10011344E /* AnimationController17.m in Sources */,
+				14EAC94B2321DA8300E42D4F /* NNPageInfoModel.m in Sources */,
 				14107FD422D087630011344E /* NNProgressHUD.m in Sources */,
 				141080AD22D2E7D10011344E /* AnimationController13.m in Sources */,
+				14EAC94C2321DA8300E42D4F /* NNPageScrollViewController.m in Sources */,
 				14B6B34422B1FE9C0047E094 /* ChannleListController.m in Sources */,
 				1493DAC9231F52A400CB7433 /* CardView.m in Sources */,
 				5162F6EE20BF8A2D009A6253 /* MultithreadingViewController.m in Sources */,
