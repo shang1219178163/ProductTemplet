@@ -1,5 +1,5 @@
 //
-//  BNCollectionMainController.h
+//  UICTViewMainController.h
 //  ProductTemplet
 //
 //  Created by Bin Shang on 2019/7/15.
@@ -10,7 +10,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface BNCollectionMainController : UIViewController
+@interface UICTViewMainController : UIViewController
 
 @end
 

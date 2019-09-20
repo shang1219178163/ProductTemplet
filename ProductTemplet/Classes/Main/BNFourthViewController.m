@@ -39,8 +39,8 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-//    [self addChildControllerView:@"FontListController"];
-//    [self addChildControllerView:@"FriendListController"];
+//    [self addControllerName:@"FontListController"];
+//    [self addControllerName:@"FriendListController"];
     [self createBarItemTitle:nil imgName:@"Item_fourth_H" isLeft:NO isHidden:NO handler:^(id obj, UIButton *item, NSInteger idx) {
         [self.pickerView show];
 

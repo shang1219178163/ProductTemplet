@@ -1,21 +1,21 @@
 //
-//  BNCollectionMainController.m
+//  UICTViewMainController.m
 //  ProductTemplet
 //
 //  Created by Bin Shang on 2019/7/15.
 //  Copyright © 2019 BN. All rights reserved.
 //
 
-#import "BNCollectionMainController.h"
+#import "UICTViewMainController.h"
 
-@interface BNCollectionMainController ()
+@interface UICTViewMainController ()
 
 @property (nonatomic, strong) NSArray * filterList;
 @property (nonatomic, strong) NNTablePlainView * plainView;
 
 @end
 
-@implementation BNCollectionMainController
+@implementation UICTViewMainController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -40,7 +40,7 @@
                       @[@"NNPageScrollViewController", @"多页面菜单",],
                       @[@"NNSlopeShowController", @"倾斜效果",],
                       @[@"SphereViewController", @"空间球形效果",],
-                      @[@"CircleViewController", @"圆形效果",],
+                      @[@"CircleViewController", @"圆形效果(多层)",],
                       @[@"PhotoDisplayController", @"圆圈效果",],
                       @[@"PickerViewController", @"picker效果",],
                       @[@"CardLineViewController", @"卡片信息展示效果",],

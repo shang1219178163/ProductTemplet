@@ -112,7 +112,7 @@
                       @[@"RuntimeController", @"字符串映射研究",],
                       @[@"LoginViewController", @"直播拉流",],
                       @[@"AnimationListController", @"动画研究",],
-                      @[@"BNCollectionMainController", @"CollectionView封装",],
+                      @[@"UICTViewMainController", @"CollectionView封装",],
                       @[@"FileShareController", @"app之间文件共享",],                      
                       @[@"FontListController", @"iOS字体大全",],
                       @[@"FMBDViewController", @"FMDB",],
@@ -139,14 +139,16 @@
                       @[@"ScrollViewCycleController", @"ScrollViewCycle",],
                       @[@"FileParseController", @"json文件解析",],
                       @[@"BNCollectionDataController", @"集合属性KVO监听",],
-                      @[@"SnapshotViewController", @"屏幕截图分享/反馈",],                      
+                      @[@"SnapshotViewController", @"屏幕截图分享/反馈",],
+                      @[@"AppIconChangeController", @"app图标更换",],
+                      
                       @[@"TestViewController", @"Test",],
                       
                       ].mutableCopy;
     
     self.plainView.list = self.dataList;
     [self.plainView.tableView reloadData];
-      
+    
 }
 
 - (void)viewDidLayoutSubviews{
@@ -169,7 +171,7 @@
 
 - (NNTablePlainView *)plainView{
     if (!_plainView) {
-        _plainView = [[NNTablePlainView alloc]init];
+        _plainView = [[NNTablePlainView alloc]initWithFrame:self.view.bounds];
         _plainView.tableView.rowHeight = 70;
         
         @weakify(self);

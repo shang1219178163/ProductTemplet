@@ -30,11 +30,12 @@
                       @[@"BNThirdViewController", @"消息", @"Item_third_N", @"Item_third_H",@"12",],
 //                      @[@"BNFourthViewController", @"我的", @"Item_fourth_N", @"Item_fourth_H",@"13",],
 //                      @[@"TestViewController", @"test", @"Item_fourth_N", @"Item_fourth_H",@"13",],
-                      @[@"ScrollHorizontalController", @"test", @"Item_fourth_N", @"Item_fourth_H",@"13",],
-
+//                      @[@"ScrollHorizontalController", @"test", @"Item_fourth_N", @"Item_fourth_H",@"13",],
+                      @[@"LineDashViewController", @"test", @"Item_fourth_N", @"Item_fourth_H",@"13",],
+                      
                       ];
     self.viewControllers = UINavListFromList(list);
-    self.selectedIndex = 2;
+    self.selectedIndex = 4;
     
     self.delegate = self;
     self.moreNavigationController.navigationBarHidden = YES;

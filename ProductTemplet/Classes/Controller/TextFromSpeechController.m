@@ -9,8 +9,8 @@
 #import "TextFromSpeechController.h"
 
 #import <Speech/Speech.h>
-
 #import <AVFoundation/AVFoundation.h>
+#import "UIApplication+Permission.h"
 
 //API_AVAILABLE(ios(10.0))
 @interface TextFromSpeechController ()<SFSpeechRecognizerDelegate>
