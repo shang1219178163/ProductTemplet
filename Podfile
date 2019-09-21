@@ -60,7 +60,7 @@
 #   pod 'mob_sharesdk/ShareSDKPlatforms/QQ'
 #   pod 'mob_sharesdk/ShareSDKPlatforms/SinaWeibo'
 #   pod 'mob_sharesdk/ShareSDKPlatforms/WeChatFull' #（微信sdk带支付的命令，和上面不带支付的不能共存，只能选择一个）
-   
+   pod 'PromiseKit'
    
    pod 'NNGloble'
    pod 'NNCategoryPro'

@@ -3205,6 +3205,7 @@
 				"${BUILT_PRODUCTS_DIR}/NNView/NNView.framework",
 				"${BUILT_PRODUCTS_DIR}/NNViewComplex/NNViewComplex.framework",
 				"${BUILT_PRODUCTS_DIR}/PPNumberButton/PPNumberButton.framework",
+				"${BUILT_PRODUCTS_DIR}/PromiseKit/PromiseKit.framework",
 				"${BUILT_PRODUCTS_DIR}/SDCycleScrollView/SDCycleScrollView.framework",
 				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
 				"${BUILT_PRODUCTS_DIR}/SVProgressHUD/SVProgressHUD.framework",
@@ -3245,6 +3246,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/NNView.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/NNViewComplex.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PPNumberButton.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PromiseKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDCycleScrollView.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SVProgressHUD.framework",
@@ -3778,6 +3780,7 @@
 					"$(PROJECT_DIR)",
 				);
 				GCC_INPUT_FILETYPE = automatic;
+				GCC_OPTIMIZATION_LEVEL = s;
 				GCC_PREFIX_HEADER = ProductTemplet/PrefixHeader.pch;
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",

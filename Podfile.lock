@@ -79,6 +79,15 @@ PODS:
     - NNGloble
     - NNView
   - PPNumberButton (0.8.0)
+  - PromiseKit (6.11.0):
+    - PromiseKit/CorePromise (= 6.11.0)
+    - PromiseKit/Foundation (= 6.11.0)
+    - PromiseKit/UIKit (= 6.11.0)
+  - PromiseKit/CorePromise (6.11.0)
+  - PromiseKit/Foundation (6.11.0):
+    - PromiseKit/CorePromise
+  - PromiseKit/UIKit (6.11.0):
+    - PromiseKit/CorePromise
   - SDCycleScrollView (1.80):
     - SDWebImage (>= 5.0.0)
   - SDWebImage (5.1.1):
@@ -132,6 +141,7 @@ DEPENDENCIES:
   - NNView
   - NNViewComplex
   - PPNumberButton
+  - PromiseKit
   - SDCycleScrollView
   - SDWebImage
   - SocketRocket
@@ -178,6 +188,7 @@ SPEC REPOS:
     - NNView
     - NNViewComplex
     - PPNumberButton
+    - PromiseKit
     - SDCycleScrollView
     - SDWebImage
     - SocketRocket
@@ -225,6 +236,7 @@ SPEC CHECKSUMS:
   NNView: 0056d96938273aaf8a656813723ea41d18814ed7
   NNViewComplex: 63d49f12b69b39058c3a840fde081bd762c1cb97
   PPNumberButton: 4442ff64c21d91733057ca1b3dc05fb4df55f2c0
+  PromiseKit: e4863d06976e7dee5e41c04fc7371c16b3600292
   SDCycleScrollView: b3c9a5ed840c771c4938978174c7c9d9feefeb96
   SDWebImage: 96d7f03415ccb28d299d765f93557ff8a617abd8
   SocketRocket: d57c7159b83c3c6655745cd15302aa24b6bae531
@@ -242,6 +254,6 @@ SPEC CHECKSUMS:
   YZPullDownMenu: afc60c3fc4f7caedd9556d32da43ea1718e078e0
   ZYCornerRadius: f0af817be7805b5c63d793042ca7a03f81e14069
 
-PODFILE CHECKSUM: f7b1f27e81ae55f03b002f1a12fc0a1e87dd0f07
+PODFILE CHECKSUM: ef9735b6c64114cb865062a6a5b61beeffdaeace
 
 COCOAPODS: 1.7.0.beta.3
