@@ -9,7 +9,9 @@
 
 #import "BNCenterViewController.h"
 
-@interface BNCenterViewController ()
+@interface BNCenterViewController ()<UISearchBarDelegate>
+
+@property (nonatomic, strong) UISearchBar *searchBar;
 
 @property (nonatomic, strong) NSArray * filterList;
 @property (nonatomic, strong) NNTablePlainView * plainView;
@@ -94,7 +96,7 @@
 //        };
 //    }];
     
-    [self createBarItem:@"个人中心" isLeft:false handler:^(id obj, UIView *item, NSInteger idx) {
+    [self createBarItem:@"筛选" isLeft:false handler:^(id obj, UIView *item, NSInteger idx) {
         NNFilterView * view = [[NNFilterView alloc]init];
         view.dataList = self.filterList;
         //            view.direction = @1;
@@ -124,7 +126,7 @@
                       @[@"EntryViewController", @"录入类界面封装",],
                       @[@"CustomViewController", @"View自定义",],
                       @[@"NNTabBarController", @"嵌套TabBar,实现类UITabBarController功能",],
-                      @[@"SubTabBarController", @"BNTabBarController子类化",],
+                      @[@"SubTabBarController", @"NNTabBarController子类化",],
                       @[@"SortViewController", @"Sort",],
                       @[@"NotificationTreadController", @"(不同线程)广播重定向",],
                       @[@"CountDownListController", @"定时器列表",],
@@ -149,6 +151,7 @@
     self.plainView.list = self.dataList;
     [self.plainView.tableView reloadData];
     
+    [self setupSearchBar];
 }
 
 - (void)viewDidLayoutSubviews{
@@ -166,6 +169,81 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+#pragma mark -funtions
+- (void)setupSearchBar {
+    [super viewDidLoad];
+    // Do any additional setup after loading the view.
+    
+    [UIApplication setupAppearanceSearchbarCancellButton];
+    self.searchBar = ({
+        UISearchBar *searchBar = [UISearchBar createSearchBarRect:CGRectMake(0, 0, kScreenWidth - 100, 30)];
+//        searchBar.placeholder = @"请输入流水号、商品信息或会员信息";
+        searchBar.placeholderStr = @"请输入流水号、商品信息或会员信息";
+        searchBar.delegate = self;
+//        searchBar.scopeButtonTitles = @[@"111", @"22", @"333"];
+//        searchBar.showsScopeBar = true;
+//        searchBar.showsBookmarkButton = true;
+        searchBar;
+    });
+    
+    //Set to titleView
+    self.navigationItem.titleView = ({
+        UIView *titleView = [[UIView alloc]initWithFrame:self.searchBar.bounds];
+        //UIColor *color =  self.navigationController.navigationBar.tintColor;
+        //[titleView setBackgroundColor:color];
+        [titleView addSubview:self.searchBar];
+        
+        titleView;
+    });
+}
+
+#pragma mark -UISearchBar
+
+- (BOOL)searchBarShouldBeginEditing:(UISearchBar *)searchBar{
+    return true;
+}
+
+- (void)searchBarTextDidBeginEditing:(UISearchBar *)searchBar{
+}
+
+- (BOOL)searchBarShouldEndEditing:(UISearchBar *)searchBar{
+    return true;
+}
+
+- (void)searchBarTextDidEndEditing:(UISearchBar *)searchBar{
+    
+}
+
+- (void)searchBar:(UISearchBar *)searchBar textDidChange:(NSString *)searchText{
+    DDLog(@"%@1", searchBar.text);
+}
+
+- (BOOL)searchBar:(UISearchBar *)searchBar shouldChangeTextInRange:(NSRange)range replacementText:(NSString *)text{
+    DDLog(@"%@", searchBar.text);
+    
+    return true;
+}
+
+- (void)searchBarSearchButtonClicked:(UISearchBar *)searchBar{
+    DDLog(@"%@", searchBar.text);
+    
+}
+
+- (void)searchBarBookmarkButtonClicked:(UISearchBar *)searchBar{
+    DDLog(@"%@", searchBar.text);
+    
+}
+
+- (void)searchBarCancelButtonClicked:(UISearchBar *)searchBar{
+    DDLog(@"%@", searchBar.text);
+    
+}
+
+- (void)searchBarResultsListButtonClicked:(UISearchBar *)searchBar{
+    DDLog(@"%@", searchBar.text);
+    
+}
+
 
 #pragma mark -lazy
 
