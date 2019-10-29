@@ -16,7 +16,6 @@
     
     NSKeyValueObservingOptions options = NSKeyValueObservingOptionInitial | NSKeyValueObservingOptionNew;
     [target addObserver:self forKeyPath:keyPath options:options context:nil];
-    
 }
     
 - (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context{

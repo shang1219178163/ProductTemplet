@@ -108,15 +108,13 @@
 
     self.dataList = @[
                       @[@"PKMainController", @"高德地图轨迹回溯",],
-                      @[@"TrackRecordsController", @"后台二十四小时定时定位",],                      
-                      @[@"TextFromSpeechController", @"语音转文字",],
-                      @[@"AVSpeechViewController", @"文字转语音",],
+                      @[@"SystemAboutController", @"系统相关",],
+                      @[@"NNSearchController", @"复合搜索o🔍",],
+                      @[@"TrackRecordsController", @"后台二十四小时定时定位",],
                       @[@"RuntimeController", @"字符串映射研究",],
                       @[@"LoginViewController", @"直播拉流",],
                       @[@"AnimationListController", @"动画研究",],
                       @[@"UICTViewMainController", @"CollectionView封装",],
-                      @[@"FileShareController", @"app之间文件共享",],                      
-                      @[@"FontListController", @"iOS字体大全",],
                       @[@"FMBDViewController", @"FMDB",],
                       @[@"LockCompareController", @"iOS锁性能对比",],
                       @[@"DesignPatternsController", @"DesignPatterns",],
@@ -133,17 +131,9 @@
                       @[@"SugerAlertController", @"SugerAlert",],
                       @[@"MutiRequestController", @"同一界面多网络请求",],
                       @[@"NumberViewController", @"NSNumberFormatter(金额小数点处理)",],
-                      @[@"UITextFieldController", @"UITextField",],
-                      @[@"TextViewController", @"UITextView",],
 //                      @[@"FriendListController", @"FriendList", ],
                       @[@"MoneyDisplayController", @"金额跳动",],
-                      @[@"KeyboardController",@"Keyboard自定义",],
-                      @[@"ScrollViewCycleController", @"ScrollViewCycle",],
-                      @[@"FileParseController", @"json文件解析",],
-                      @[@"BNCollectionDataController", @"集合属性KVO监听",],
-                      @[@"SnapshotViewController", @"屏幕截图分享/反馈",],
-                      @[@"AppIconChangeController", @"app图标更换",],
-                      
+                      @[@"ScrollViewCycleController", @"ScrollViewCycle",],                      
                       @[@"TestViewController", @"Test",],
                       
                       ].mutableCopy;
@@ -177,8 +167,7 @@
     [UIApplication setupAppearanceSearchbarCancellButton];
     self.searchBar = ({
         UISearchBar *searchBar = [UISearchBar createSearchBarRect:CGRectMake(0, 0, kScreenWidth - 100, 30)];
-//        searchBar.placeholder = @"请输入流水号、商品信息或会员信息";
-        searchBar.placeholderStr = @"请输入流水号、商品信息或会员信息";
+        searchBar.placeholder = @"请输入流水号、商品信息或会员信息";
         searchBar.delegate = self;
 //        searchBar.scopeButtonTitles = @[@"111", @"22", @"333"];
 //        searchBar.showsScopeBar = true;

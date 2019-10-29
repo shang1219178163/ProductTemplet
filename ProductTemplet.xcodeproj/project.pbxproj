@@ -16,6 +16,9 @@
 		1401BE822276D18C0078A722 /* BNCheckVersApi.m in Sources */ = {isa = PBXBuildFile; fileRef = 1401BE812276D18C0078A722 /* BNCheckVersApi.m */; };
 		1401BE892276EC270078A722 /* BNAppInfoRootModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1401BE872276EC270078A722 /* BNAppInfoRootModel.m */; };
 		1401BE8C2276F4DB0078A722 /* NSObject+NSCoding.m in Sources */ = {isa = PBXBuildFile; fileRef = 1401BE8B2276F4DB0078A722 /* NSObject+NSCoding.m */; };
+		1402183A23683A7B00B27E4C /* sound.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1402183923683A7A00B27E4C /* sound.plist */; };
+		1402183D23683A9600B27E4C /* AudioSoundController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1402183B23683A9500B27E4C /* AudioSoundController.m */; };
+		1402184023683B9900B27E4C /* SystemAboutController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1402183F23683B9900B27E4C /* SystemAboutController.m */; };
 		1404FADC21DF40D700122E22 /* RecognizerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1404FADB21DF40D700122E22 /* RecognizerController.m */; };
 		1404FAE521DF4A5F00122E22 /* UIRecognizerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1404FAE421DF4A5F00122E22 /* UIRecognizerController.m */; };
 		1404FAF921E0A1BB00122E22 /* Skull.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1404FAF821E0A1BA00122E22 /* Skull.jpg */; };
@@ -157,6 +160,7 @@
 		149111EC2275B7970078A7BB /* NSError+Helper.m in Sources */ = {isa = PBXBuildFile; fileRef = 149111EB2275B7970078A7BB /* NSError+Helper.m */; };
 		1493DAC9231F52A400CB7433 /* CardView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1493DAC8231F52A400CB7433 /* CardView.m */; };
 		149B5508225AD3C5002B1039 /* NNTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 149B5507225AD3C5002B1039 /* NNTabBarController.m */; };
+		149BE1512341923F00D74E7C /* NSString+Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 149BE1502341923F00D74E7C /* NSString+Helper.swift */; };
 		149F888D22B23CC200EAB4C2 /* BNTouchcChannelstreamApi.m in Sources */ = {isa = PBXBuildFile; fileRef = 149F888C22B23CC200EAB4C2 /* BNTouchcChannelstreamApi.m */; };
 		149F889F22B34C5600EAB4C2 /* PKLivePlayerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 149F889E22B34C5600EAB4C2 /* PKLivePlayerController.m */; };
 		149F88A422B3750F00EAB4C2 /* ResetPwdController.m in Sources */ = {isa = PBXBuildFile; fileRef = 149F88A322B3750F00EAB4C2 /* ResetPwdController.m */; };
@@ -165,8 +169,11 @@
 		149F88AD22B37AB900EAB4C2 /* BNUserLoginView.m in Sources */ = {isa = PBXBuildFile; fileRef = 149F88AC22B37AB900EAB4C2 /* BNUserLoginView.m */; };
 		149F88B022B386F300EAB4C2 /* ChangePwdController.m in Sources */ = {isa = PBXBuildFile; fileRef = 149F88AF22B386F300EAB4C2 /* ChangePwdController.m */; };
 		14A1EA752249FBAA00952911 /* TextFromSpeechController.m in Sources */ = {isa = PBXBuildFile; fileRef = 14A1EA742249FBAA00952911 /* TextFromSpeechController.m */; };
-		14A95147230F77F10045140F /* UIFont+Helper.m in Sources */ = {isa = PBXBuildFile; fileRef = 14A95146230F77F10045140F /* UIFont+Helper.m */; };
+		14A86A852355AFC700AD9BC1 /* NNSearchResultController.m in Sources */ = {isa = PBXBuildFile; fileRef = 14A86A812355AFC600AD9BC1 /* NNSearchResultController.m */; };
+		14A86A862355AFC700AD9BC1 /* NNSearchController.m in Sources */ = {isa = PBXBuildFile; fileRef = 14A86A822355AFC600AD9BC1 /* NNSearchController.m */; };
 		14A95771231125F10045140F /* NNScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 14A95770231125F10045140F /* NNScrollView.m */; };
+		14B14BAD234C171B004B7BF9 /* SearchTitleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 14B14BAC234C171B004B7BF9 /* SearchTitleViewController.m */; };
+		14B14BB3234C2C8F004B7BF9 /* UIApplication+Tmp.m in Sources */ = {isa = PBXBuildFile; fileRef = 14B14BB2234C2C8F004B7BF9 /* UIApplication+Tmp.m */; };
 		14B6B33522B0F8760047E094 /* PKSeverinfoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 14B6B33422B0F8760047E094 /* PKSeverinfoModel.m */; };
 		14B6B33822B1F2180047E094 /* BNDeviceListApi.m in Sources */ = {isa = PBXBuildFile; fileRef = 14B6B33722B1F2180047E094 /* BNDeviceListApi.m */; };
 		14B6B33B22B1F2400047E094 /* BNChannelListApi.m in Sources */ = {isa = PBXBuildFile; fileRef = 14B6B33A22B1F2400047E094 /* BNChannelListApi.m */; };
@@ -252,6 +259,9 @@
 		14F0FE6322B0AB8400057093 /* BNUserLogoutApi.m in Sources */ = {isa = PBXBuildFile; fileRef = 14F0FE6222B0AB8400057093 /* BNUserLogoutApi.m */; };
 		14F0FE6722B0AD9800057093 /* LiveViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 14F0FE6622B0AD9800057093 /* LiveViewController.m */; };
 		14F0FE6B22B0ADDB00057093 /* BNUserLoginApi.m in Sources */ = {isa = PBXBuildFile; fileRef = 14F0FE6922B0ADDB00057093 /* BNUserLoginApi.m */; };
+		14F25F4E23599AB000D05998 /* UIBarButtonItem+Block.m in Sources */ = {isa = PBXBuildFile; fileRef = 14F25F4D23599AB000D05998 /* UIBarButtonItem+Block.m */; };
+		14F25F542359A14800D05998 /* UIView+Tmp.m in Sources */ = {isa = PBXBuildFile; fileRef = 14F25F532359A14800D05998 /* UIView+Tmp.m */; };
+		14F6382B23630AC900D0EBF0 /* NSObject+Tmp.m in Sources */ = {isa = PBXBuildFile; fileRef = 14F6382A23630AC900D0EBF0 /* NSObject+Tmp.m */; };
 		14F9BF3F22E56167001637B6 /* PhotoDisplayController.m in Sources */ = {isa = PBXBuildFile; fileRef = 14F9BF3E22E56167001637B6 /* PhotoDisplayController.m */; };
 		14F9BF4222E56332001637B6 /* UICTViewLayoutPhoto.m in Sources */ = {isa = PBXBuildFile; fileRef = 14F9BF4022E56331001637B6 /* UICTViewLayoutPhoto.m */; };
 		51036F4720A16298009D8B7B /* img_notice.png in Resources */ = {isa = PBXBuildFile; fileRef = 51036F4620A16297009D8B7B /* img_notice.png */; };
@@ -559,6 +569,11 @@
 		1401BE882276EC270078A722 /* BNAppInfoRootModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BNAppInfoRootModel.h; sourceTree = "<group>"; };
 		1401BE8A2276F4DA0078A722 /* NSObject+NSCoding.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+NSCoding.h"; sourceTree = "<group>"; };
 		1401BE8B2276F4DB0078A722 /* NSObject+NSCoding.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+NSCoding.m"; sourceTree = "<group>"; };
+		1402183923683A7A00B27E4C /* sound.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = sound.plist; sourceTree = "<group>"; };
+		1402183B23683A9500B27E4C /* AudioSoundController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AudioSoundController.m; sourceTree = "<group>"; };
+		1402183C23683A9600B27E4C /* AudioSoundController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AudioSoundController.h; sourceTree = "<group>"; };
+		1402183E23683B9900B27E4C /* SystemAboutController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SystemAboutController.h; sourceTree = "<group>"; };
+		1402183F23683B9900B27E4C /* SystemAboutController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SystemAboutController.m; sourceTree = "<group>"; };
 		1404FADA21DF40D700122E22 /* RecognizerController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RecognizerController.h; sourceTree = "<group>"; };
 		1404FADB21DF40D700122E22 /* RecognizerController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RecognizerController.m; sourceTree = "<group>"; };
 		1404FAE321DF4A5F00122E22 /* UIRecognizerController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UIRecognizerController.h; sourceTree = "<group>"; };
@@ -800,6 +815,8 @@
 		1493DAC8231F52A400CB7433 /* CardView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CardView.m; sourceTree = "<group>"; };
 		149B5506225AD3C5002B1039 /* NNTabBarController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NNTabBarController.h; sourceTree = "<group>"; };
 		149B5507225AD3C5002B1039 /* NNTabBarController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NNTabBarController.m; sourceTree = "<group>"; };
+		149BE14F2341923D00D74E7C /* ProductTemplet-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ProductTemplet-Bridging-Header.h"; sourceTree = "<group>"; };
+		149BE1502341923F00D74E7C /* NSString+Helper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSString+Helper.swift"; sourceTree = "<group>"; };
 		149F888B22B23CC200EAB4C2 /* BNTouchcChannelstreamApi.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BNTouchcChannelstreamApi.h; sourceTree = "<group>"; };
 		149F888C22B23CC200EAB4C2 /* BNTouchcChannelstreamApi.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BNTouchcChannelstreamApi.m; sourceTree = "<group>"; };
 		149F889D22B34C5500EAB4C2 /* PKLivePlayerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PKLivePlayerController.h; sourceTree = "<group>"; };
@@ -816,10 +833,16 @@
 		149F88AF22B386F300EAB4C2 /* ChangePwdController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ChangePwdController.m; sourceTree = "<group>"; };
 		14A1EA732249FBAA00952911 /* TextFromSpeechController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TextFromSpeechController.h; sourceTree = "<group>"; };
 		14A1EA742249FBAA00952911 /* TextFromSpeechController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TextFromSpeechController.m; sourceTree = "<group>"; };
-		14A95145230F77F10045140F /* UIFont+Helper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIFont+Helper.h"; sourceTree = "<group>"; };
-		14A95146230F77F10045140F /* UIFont+Helper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIFont+Helper.m"; sourceTree = "<group>"; };
+		14A86A7F2355AFC500AD9BC1 /* NNSearchController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NNSearchController.h; sourceTree = "<group>"; };
+		14A86A802355AFC500AD9BC1 /* NNSearchResultController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NNSearchResultController.h; sourceTree = "<group>"; };
+		14A86A812355AFC600AD9BC1 /* NNSearchResultController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NNSearchResultController.m; sourceTree = "<group>"; };
+		14A86A822355AFC600AD9BC1 /* NNSearchController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NNSearchController.m; sourceTree = "<group>"; };
 		14A9576F231125F10045140F /* NNScrollView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NNScrollView.h; sourceTree = "<group>"; };
 		14A95770231125F10045140F /* NNScrollView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NNScrollView.m; sourceTree = "<group>"; };
+		14B14BAB234C171B004B7BF9 /* SearchTitleViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SearchTitleViewController.h; sourceTree = "<group>"; };
+		14B14BAC234C171B004B7BF9 /* SearchTitleViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SearchTitleViewController.m; sourceTree = "<group>"; };
+		14B14BB1234C2C8F004B7BF9 /* UIApplication+Tmp.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIApplication+Tmp.h"; sourceTree = "<group>"; };
+		14B14BB2234C2C8F004B7BF9 /* UIApplication+Tmp.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIApplication+Tmp.m"; sourceTree = "<group>"; };
 		14B6B33322B0F8760047E094 /* PKSeverinfoModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PKSeverinfoModel.h; sourceTree = "<group>"; };
 		14B6B33422B0F8760047E094 /* PKSeverinfoModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PKSeverinfoModel.m; sourceTree = "<group>"; };
 		14B6B33622B1F2180047E094 /* BNDeviceListApi.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BNDeviceListApi.h; sourceTree = "<group>"; };
@@ -987,6 +1010,12 @@
 		14F0FE6622B0AD9800057093 /* LiveViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LiveViewController.m; sourceTree = "<group>"; };
 		14F0FE6922B0ADDB00057093 /* BNUserLoginApi.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BNUserLoginApi.m; sourceTree = "<group>"; };
 		14F0FE6A22B0ADDB00057093 /* BNUserLoginApi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BNUserLoginApi.h; sourceTree = "<group>"; };
+		14F25F4C23599AB000D05998 /* UIBarButtonItem+Block.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIBarButtonItem+Block.h"; sourceTree = "<group>"; };
+		14F25F4D23599AB000D05998 /* UIBarButtonItem+Block.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIBarButtonItem+Block.m"; sourceTree = "<group>"; };
+		14F25F522359A14800D05998 /* UIView+Tmp.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+Tmp.h"; sourceTree = "<group>"; };
+		14F25F532359A14800D05998 /* UIView+Tmp.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+Tmp.m"; sourceTree = "<group>"; };
+		14F6382923630AC900D0EBF0 /* NSObject+Tmp.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSObject+Tmp.h"; sourceTree = "<group>"; };
+		14F6382A23630AC900D0EBF0 /* NSObject+Tmp.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSObject+Tmp.m"; sourceTree = "<group>"; };
 		14F9BF3D22E56167001637B6 /* PhotoDisplayController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PhotoDisplayController.h; sourceTree = "<group>"; };
 		14F9BF3E22E56167001637B6 /* PhotoDisplayController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PhotoDisplayController.m; sourceTree = "<group>"; };
 		14F9BF4022E56331001637B6 /* UICTViewLayoutPhoto.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UICTViewLayoutPhoto.m; sourceTree = "<group>"; };
@@ -2202,12 +2231,13 @@
 				1401BE812276D18C0078A722 /* BNCheckVersApi.m */,
 				1401BE882276EC270078A722 /* BNAppInfoRootModel.h */,
 				1401BE872276EC270078A722 /* BNAppInfoRootModel.m */,
-				14A95145230F77F10045140F /* UIFont+Helper.h */,
-				14A95146230F77F10045140F /* UIFont+Helper.m */,
 				14107FD222D087630011344E /* NNProgressHUD.h */,
 				14107FD322D087630011344E /* NNProgressHUD.m */,
 				14E49C8C232780EB0099912E /* UIApplication+Permission.h */,
 				14E49C8D232780EB0099912E /* UIApplication+Permission.m */,
+				14F6382923630AC900D0EBF0 /* NSObject+Tmp.h */,
+				14F6382A23630AC900D0EBF0 /* NSObject+Tmp.m */,
+				149BE1502341923F00D74E7C /* NSString+Helper.swift */,
 				513646A82086031D005A20E7 /* Assets.xcassets */,
 				5169DF232088254300B025C3 /* Public.xcassets */,
 				5136492420860655005A20E7 /* Resources */,
@@ -2216,8 +2246,10 @@
 				1404FAF821E0A1BA00122E22 /* Skull.jpg */,
 				14C1197722DC5A59009D18A3 /* postImage.png */,
 				142A76CE22263F080016D3DA /* icon_operation_busy@2x.png */,
+				1402183923683A7A00B27E4C /* sound.plist */,
 				513646AE2086031D005A20E7 /* main.m */,
 				513649E320860683005A20E7 /* PrefixHeader.pch */,
+				149BE14F2341923D00D74E7C /* ProductTemplet-Bridging-Header.h */,
 			);
 			path = ProductTemplet;
 			sourceTree = "<group>";
@@ -2391,12 +2423,20 @@
 				14E8F74E21F5E1ED004317B5 /* RuntimeController.m */,
 				147900372306BB5A00FC4825 /* SnapshotViewController.h */,
 				147900382306BB5A00FC4825 /* SnapshotViewController.m */,
+				1402183E23683B9900B27E4C /* SystemAboutController.h */,
+				1402183F23683B9900B27E4C /* SystemAboutController.m */,
+				1402183C23683A9600B27E4C /* AudioSoundController.h */,
+				1402183B23683A9500B27E4C /* AudioSoundController.m */,
 				142A770E2227B30E0016D3DA /* UITableViewPickerCell.h */,
 				142A770F2227B30E0016D3DA /* UITableViewPickerCell.m */,
 				140A2B0A2269661E000ED121 /* PKMainController.h */,
 				140A2B0B2269661E000ED121 /* PKMainController.m */,
 				1419DAE1227005FF00F4BB5C /* NSObject+Bind.h */,
 				1419DAE2227005FF00F4BB5C /* NSObject+Bind.m */,
+				14F25F4C23599AB000D05998 /* UIBarButtonItem+Block.h */,
+				14F25F4D23599AB000D05998 /* UIBarButtonItem+Block.m */,
+				14F25F522359A14800D05998 /* UIView+Tmp.h */,
+				14F25F532359A14800D05998 /* UIView+Tmp.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -2430,12 +2470,20 @@
 				14403E6823322314005DB45B /* LineDashViewController.m */,
 				145C913723347B4400849E9D /* AppIconChangeController.h */,
 				145C913823347B4400849E9D /* AppIconChangeController.m */,
+				14B14BAB234C171B004B7BF9 /* SearchTitleViewController.h */,
+				14B14BAC234C171B004B7BF9 /* SearchTitleViewController.m */,
+				14A86A7F2355AFC500AD9BC1 /* NNSearchController.h */,
+				14A86A822355AFC600AD9BC1 /* NNSearchController.m */,
+				14A86A802355AFC500AD9BC1 /* NNSearchResultController.h */,
+				14A86A812355AFC600AD9BC1 /* NNSearchResultController.m */,
 				14DF58242314C58000906A9D /* BNView.h */,
 				14DF58252314C58000906A9D /* BNView.m */,
 				141E2B8E230637E600466008 /* NSArray+Tmp.h */,
 				141E2B8F230637E600466008 /* NSArray+Tmp.m */,
 				14DF581D2313D79D00906A9D /* NSDictionary+Tmp.h */,
 				14DF581E2313D79E00906A9D /* NSDictionary+Tmp.m */,
+				14B14BB1234C2C8F004B7BF9 /* UIApplication+Tmp.h */,
+				14B14BB2234C2C8F004B7BF9 /* UIApplication+Tmp.m */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -2949,6 +2997,7 @@
 				TargetAttributes = {
 					5136469B2086031D005A20E7 = {
 						CreatedOnToolsVersion = 9.2;
+						LastSwiftMigration = 1020;
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
 							com.apple.BackgroundModes = {
@@ -3064,6 +3113,7 @@
 				515CC96E20B6AAF2004AE27C /* AAHighcharts-3d.js in Resources */,
 				518B906C217F2110007E7343 /* left_slider_back@2x.png in Resources */,
 				51036F4720A16298009D8B7B /* img_notice.png in Resources */,
+				1402183A23683A7B00B27E4C /* sound.plist in Resources */,
 				5136498820860655005A20E7 /* img_add.png in Resources */,
 				513649DF20860655005A20E7 /* img_update.png in Resources */,
 				513649A820860655005A20E7 /* img_growthStage_one.png in Resources */,
@@ -3205,7 +3255,6 @@
 				"${BUILT_PRODUCTS_DIR}/NNView/NNView.framework",
 				"${BUILT_PRODUCTS_DIR}/NNViewComplex/NNViewComplex.framework",
 				"${BUILT_PRODUCTS_DIR}/PPNumberButton/PPNumberButton.framework",
-				"${BUILT_PRODUCTS_DIR}/PromiseKit/PromiseKit.framework",
 				"${BUILT_PRODUCTS_DIR}/SDCycleScrollView/SDCycleScrollView.framework",
 				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
 				"${BUILT_PRODUCTS_DIR}/SVProgressHUD/SVProgressHUD.framework",
@@ -3246,7 +3295,6 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/NNView.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/NNViewComplex.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PPNumberButton.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PromiseKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDCycleScrollView.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SVProgressHUD.framework",
@@ -3302,6 +3350,7 @@
 				14E42CDA2200040200606AD0 /* BNUserLoginController.m in Sources */,
 				140A2B0C2269661F000ED121 /* PKMainController.m in Sources */,
 				143331AD2241F1F600436F75 /* AVSpeechViewController.m in Sources */,
+				1402183D23683A9600B27E4C /* AudioSoundController.m in Sources */,
 				149B5508225AD3C5002B1039 /* NNTabBarController.m in Sources */,
 				141080AF22D2E7D10011344E /* CommonAnimationController.m in Sources */,
 				149111DA227308E30078A7BB /* BNRequstAgent.m in Sources */,
@@ -3363,6 +3412,7 @@
 				518CD32D219D78B6003CE348 /* NNActionSheet.m in Sources */,
 				140A2BE322696E24000ED121 /* UIPOIAnnotationView.m in Sources */,
 				14B6B34722B1FEB20047E094 /* ChannelSteamController.m in Sources */,
+				14A86A862355AFC700AD9BC1 /* NNSearchController.m in Sources */,
 				5162F6F720BF9604009A6253 /* ThreadCommunicationController.m in Sources */,
 				515C67E22137C55700D5EA94 /* LNSearchManager.m in Sources */,
 				140A2BE422696E24000ED121 /* BNDriverNaviManager.m in Sources */,
@@ -3375,6 +3425,7 @@
 				515C67E52137C55700D5EA94 /* BCurrentCityCell.m in Sources */,
 				14C1197522DC59AC009D18A3 /* ScrollViewCycleController.m in Sources */,
 				14F0FE6722B0AD9800057093 /* LiveViewController.m in Sources */,
+				14F6382B23630AC900D0EBF0 /* NSObject+Tmp.m in Sources */,
 				14C11AAC22DC7FF8009D18A3 /* SectionListOneController.m in Sources */,
 				140A2BEE22696E24000ED121 /* JZLocationConverter.m in Sources */,
 				141080B522D2E7D10011344E /* AnimationController18.m in Sources */,
@@ -3471,11 +3522,13 @@
 				149F88A422B3750F00EAB4C2 /* ResetPwdController.m in Sources */,
 				141080A722D2E7D10011344E /* AnimationController4.m in Sources */,
 				5129425820B424EC009FB70E /* LockCompareController.m in Sources */,
+				14F25F542359A14800D05998 /* UIView+Tmp.m in Sources */,
 				51862E8320BBA8B90080BD4E /* AlphaInputValidator.m in Sources */,
 				512E43452137DDBD00272986 /* WHKGroupViewViewController.m in Sources */,
 				149111D42272FFCC0078A7BB /* BNPageModel.m in Sources */,
 				14B6B34D22B2233B0047E094 /* PKChannelListRootModel.m in Sources */,
 				5162F70A20BFB7CB009A6253 /* GCDViewController.m in Sources */,
+				14F25F4E23599AB000D05998 /* UIBarButtonItem+Block.m in Sources */,
 				51036F5020A17B3B009D8B7B /* WeiboLisController.m in Sources */,
 				14E42D1B2200042800606AD0 /* BNNum.m in Sources */,
 				515CC97B20B6AAF2004AE27C /* AAColumn.m in Sources */,
@@ -3516,13 +3569,13 @@
 				515CC97420B6AAF2004AE27C /* AAPlotOptions.m in Sources */,
 				516969AC20BCF9A800BAA53D /* AbstractMediator.m in Sources */,
 				51862E7620BBA1110080BD4E /* StrategyFinancyYouLi.m in Sources */,
+				14B14BB3234C2C8F004B7BF9 /* UIApplication+Tmp.m in Sources */,
 				140A2BE522696E24000ED121 /* DriveNaviViewController.m in Sources */,
 				140A2BDF22696E24000ED121 /* Tracking.m in Sources */,
 				141E2B90230637E700466008 /* NSArray+Tmp.m in Sources */,
 				515CC98A20B6AAF2004AE27C /* AAChartModel.m in Sources */,
 				51B9CCFC209FE2B00096A540 /* TimerViewController.m in Sources */,
 				51A4354921ABECAE000D9840 /* TextViewController.m in Sources */,
-				14A95147230F77F10045140F /* UIFont+Helper.m in Sources */,
 				5175C93620C122B1009EA86E /* DBHandler.m in Sources */,
 				14A95771231125F10045140F /* NNScrollView.m in Sources */,
 				1401BE7C2276CBD90078A722 /* BNBaseRequestApi.m in Sources */,
@@ -3537,6 +3590,7 @@
 				14E8692D21C251BA009CE33E /* HomeViewController.m in Sources */,
 				516969AD20BCF9A800BAA53D /* Buyer.m in Sources */,
 				51862E6520BB94D40080BD4E /* EOCEmployeeDesigner.m in Sources */,
+				1402184023683B9900B27E4C /* SystemAboutController.m in Sources */,
 				14107FB222CDF9490011344E /* CustomKeyboardViewController.m in Sources */,
 				5167FF1520F5C0EC004A810C /* PulsingHaloLayer.m in Sources */,
 				144920AA21C7BAA700C3C2F6 /* MoneyDisplayController.m in Sources */,
@@ -3577,6 +3631,8 @@
 				515CC98420B6AAF2004AE27C /* AAMarker.m in Sources */,
 				140A2BF822696E24000ED121 /* BNDriverNaviController.m in Sources */,
 				14EAC93B2321188800E42D4F /* UICTViewCellInspiration.m in Sources */,
+				14B14BAD234C171B004B7BF9 /* SearchTitleViewController.m in Sources */,
+				149BE1512341923F00D74E7C /* NSString+Helper.swift in Sources */,
 				140A2BF422696E24000ED121 /* MANaviAnnotation.m in Sources */,
 				141080A922D2E7D10011344E /* AnimationController2.m in Sources */,
 				5169699920BCED4000BAA53D /* LHSales.m in Sources */,
@@ -3641,6 +3697,7 @@
 				1421D5CD21F307F700635582 /* CustomViewController.m in Sources */,
 				518B5B432086C8FE002FDD33 /* FactoryDetailInfoModel.m in Sources */,
 				5162F70720BF9D6E009A6253 /* FlyweightView.m in Sources */,
+				14A86A852355AFC700AD9BC1 /* NNSearchResultController.m in Sources */,
 				140A2BD622696E24000ED121 /* Util.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -3758,6 +3815,145 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = UB99NJ7K8G;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/ProductTemplet/Vendor/AMap/AMap3DMap",
+					"$(PROJECT_DIR)/ProductTemplet/Vendor/AMap/AMapFoundation",
+					"$(PROJECT_DIR)/ProductTemplet/Vendor/AMap/AMapLocation",
+					"$(PROJECT_DIR)/ProductTemplet/Vendor/AMap/AMapSearch",
+					"$(PROJECT_DIR)/ProductTemplet/Vendor/MobSDK/Required",
+					"$(PROJECT_DIR)/ProductTemplet/Vendor/MobSDK/ShareSDK",
+					"$(PROJECT_DIR)/ProductTemplet/Vendor/MobSDK/ShareSDK/Support/Optional",
+					"$(PROJECT_DIR)/ProductTemplet/Vendor/MobSDK/ShareSDK/Support/PlatformConnector",
+					"$(PROJECT_DIR)/ProductTemplet/Vendor/MobSDK/ShareSDK/Support/PlatformSDK/QQSDK",
+					"$(PROJECT_DIR)/ProductTemplet/Vendor/MobSDK/ShareSDK/Support/Required",
+					"$(PROJECT_DIR)/ProductTemplet/Vendor",
+					"\"$(SRCROOT)/ProductTemplet/Tool/PayTool\"",
+					"$(PROJECT_DIR)/ProductTemplet/Tool/PayTool/AppPayAli",
+					"\"$(SRCROOT)/ProductTemplet/Tool/PayTool/AppPayWX\"",
+					"$(PROJECT_DIR)",
+				);
+				GCC_INPUT_FILETYPE = automatic;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREFIX_HEADER = ProductTemplet/PrefixHeader.pch;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"${PODS_ROOT}/Headers/Public\"",
+					"\"${PODS_ROOT}/Headers/Public/JCore\"",
+					"\"${PODS_ROOT}/Headers/Public/JPush\"",
+					"\"$(SRCROOT)/ProductTemplet/Tool/PayTool\"",
+					"\"$(SRCROOT)/ProductTemplet/Tool/PayTool/AppPayAli\"",
+					"\"$(SRCROOT)/ProductTemplet/Tool/PayTool/AppPayWX\"",
+				);
+				INFOPLIST_FILE = ProductTemplet/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/ProductTemplet/Vendor/MobSDK/ShareSDK/Support/PlatformSDK/SinaWeiboSDK",
+					"\"$(SRCROOT)/ProductTemplet/Tool/PayTool\"",
+					"\"$(SRCROOT)/ProductTemplet/Tool/PayTool/AppPayAli\"",
+					"\"$(SRCROOT)/ProductTemplet/Tool/PayTool/AppPayWX\"",
+					"$(PROJECT_DIR)/ProductTemplet/Tool/PayTool/AppPayWX/WechatSDK1.8.2",
+					"$(PROJECT_DIR)/ProductTemplet/Tool/PayTool/AppPayAli",
+					"$(PROJECT_DIR)",
+				);
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-ObjC",
+					"-l\"resolv\"",
+					"-l\"z\"",
+					"-framework",
+					"\"AESCrypt_ObjC\"",
+					"-framework",
+					"\"AFNetworking\"",
+					"-framework",
+					"\"Aspects\"",
+					"-framework",
+					"\"CFNetwork\"",
+					"-framework",
+					"\"CoreFoundation\"",
+					"-framework",
+					"\"CoreGraphics\"",
+					"-framework",
+					"\"CoreTelephony\"",
+					"-framework",
+					"\"FCUUID\"",
+					"-framework",
+					"\"FLAnimatedImage\"",
+					"-framework",
+					"\"FMDB\"",
+					"-framework",
+					"\"Foundation\"",
+					"-framework",
+					"\"GTMBase64\"",
+					"-framework",
+					"\"IQKeyboardManager\"",
+					"-framework",
+					"\"JZLocationConverter\"",
+					"-framework",
+					"\"KVOController\"",
+					"-framework",
+					"\"MBProgressHUD\"",
+					"-framework",
+					"\"MJExtension\"",
+					"-framework",
+					"\"MJRefresh\"",
+					"-framework",
+					"\"Masonry\"",
+					"-framework",
+					"\"PPNumberButton\"",
+					"-framework",
+					"\"SDCycleScrollView\"",
+					"-framework",
+					"\"SDWebImage\"",
+					"-framework",
+					"\"Security\"",
+					"-framework",
+					"\"SystemConfiguration\"",
+					"-framework",
+					"\"TZImagePickerController\"",
+					"-framework",
+					"\"Toast\"",
+					"-framework",
+					"\"UICKeyChainStore\"",
+					"-framework",
+					"\"UIKit\"",
+					"-framework",
+					"\"YBAttributeTextTapAction\"",
+					"-framework",
+					"\"YYCache\"",
+					"-framework",
+					"\"YYModel\"",
+					"-framework",
+					"\"YZPullDownMenu\"",
+					"-framework",
+					"\"ZYCornerRadius\"",
+					"-framework",
+					"\"iCarousel\"",
+					"-weak_framework",
+					"\"UserNotifications\"",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = BIN.ProductTemplet.ios;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "ProductTemplet/ProductTemplet-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		513646B42086031D005A20E7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 48DCCC545F7DD72A25BB7579 /* Pods-ProductTemplet.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = UB99NJ7K8G;
@@ -3883,140 +4079,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = BIN.ProductTemplet.ios;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Debug;
-		};
-		513646B42086031D005A20E7 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 48DCCC545F7DD72A25BB7579 /* Pods-ProductTemplet.release.xcconfig */;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = UB99NJ7K8G;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/ProductTemplet/Vendor/AMap/AMap3DMap",
-					"$(PROJECT_DIR)/ProductTemplet/Vendor/AMap/AMapFoundation",
-					"$(PROJECT_DIR)/ProductTemplet/Vendor/AMap/AMapLocation",
-					"$(PROJECT_DIR)/ProductTemplet/Vendor/AMap/AMapSearch",
-					"$(PROJECT_DIR)/ProductTemplet/Vendor/MobSDK/Required",
-					"$(PROJECT_DIR)/ProductTemplet/Vendor/MobSDK/ShareSDK",
-					"$(PROJECT_DIR)/ProductTemplet/Vendor/MobSDK/ShareSDK/Support/Optional",
-					"$(PROJECT_DIR)/ProductTemplet/Vendor/MobSDK/ShareSDK/Support/PlatformConnector",
-					"$(PROJECT_DIR)/ProductTemplet/Vendor/MobSDK/ShareSDK/Support/PlatformSDK/QQSDK",
-					"$(PROJECT_DIR)/ProductTemplet/Vendor/MobSDK/ShareSDK/Support/Required",
-					"$(PROJECT_DIR)/ProductTemplet/Vendor",
-					"\"$(SRCROOT)/ProductTemplet/Tool/PayTool\"",
-					"$(PROJECT_DIR)/ProductTemplet/Tool/PayTool/AppPayAli",
-					"\"$(SRCROOT)/ProductTemplet/Tool/PayTool/AppPayWX\"",
-					"$(PROJECT_DIR)",
-				);
-				GCC_INPUT_FILETYPE = automatic;
-				GCC_PREFIX_HEADER = ProductTemplet/PrefixHeader.pch;
-				HEADER_SEARCH_PATHS = (
-					"$(inherited)",
-					"\"${PODS_ROOT}/Headers/Public\"",
-					"\"${PODS_ROOT}/Headers/Public/JCore\"",
-					"\"${PODS_ROOT}/Headers/Public/JPush\"",
-					"\"$(SRCROOT)/ProductTemplet/Tool/PayTool\"",
-					"\"$(SRCROOT)/ProductTemplet/Tool/PayTool/AppPayAli\"",
-					"\"$(SRCROOT)/ProductTemplet/Tool/PayTool/AppPayWX\"",
-				);
-				INFOPLIST_FILE = ProductTemplet/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/ProductTemplet/Vendor/MobSDK/ShareSDK/Support/PlatformSDK/SinaWeiboSDK",
-					"\"$(SRCROOT)/ProductTemplet/Tool/PayTool\"",
-					"\"$(SRCROOT)/ProductTemplet/Tool/PayTool/AppPayAli\"",
-					"\"$(SRCROOT)/ProductTemplet/Tool/PayTool/AppPayWX\"",
-					"$(PROJECT_DIR)/ProductTemplet/Tool/PayTool/AppPayWX/WechatSDK1.8.2",
-					"$(PROJECT_DIR)/ProductTemplet/Tool/PayTool/AppPayAli",
-					"$(PROJECT_DIR)",
-				);
-				OTHER_LDFLAGS = (
-					"$(inherited)",
-					"-ObjC",
-					"-l\"resolv\"",
-					"-l\"z\"",
-					"-framework",
-					"\"AESCrypt_ObjC\"",
-					"-framework",
-					"\"AFNetworking\"",
-					"-framework",
-					"\"Aspects\"",
-					"-framework",
-					"\"CFNetwork\"",
-					"-framework",
-					"\"CoreFoundation\"",
-					"-framework",
-					"\"CoreGraphics\"",
-					"-framework",
-					"\"CoreTelephony\"",
-					"-framework",
-					"\"FCUUID\"",
-					"-framework",
-					"\"FLAnimatedImage\"",
-					"-framework",
-					"\"FMDB\"",
-					"-framework",
-					"\"Foundation\"",
-					"-framework",
-					"\"GTMBase64\"",
-					"-framework",
-					"\"IQKeyboardManager\"",
-					"-framework",
-					"\"JZLocationConverter\"",
-					"-framework",
-					"\"KVOController\"",
-					"-framework",
-					"\"MBProgressHUD\"",
-					"-framework",
-					"\"MJExtension\"",
-					"-framework",
-					"\"MJRefresh\"",
-					"-framework",
-					"\"Masonry\"",
-					"-framework",
-					"\"PPNumberButton\"",
-					"-framework",
-					"\"SDCycleScrollView\"",
-					"-framework",
-					"\"SDWebImage\"",
-					"-framework",
-					"\"Security\"",
-					"-framework",
-					"\"SystemConfiguration\"",
-					"-framework",
-					"\"TZImagePickerController\"",
-					"-framework",
-					"\"Toast\"",
-					"-framework",
-					"\"UICKeyChainStore\"",
-					"-framework",
-					"\"UIKit\"",
-					"-framework",
-					"\"YBAttributeTextTapAction\"",
-					"-framework",
-					"\"YYCache\"",
-					"-framework",
-					"\"YYModel\"",
-					"-framework",
-					"\"YZPullDownMenu\"",
-					"-framework",
-					"\"ZYCornerRadius\"",
-					"-framework",
-					"\"iCarousel\"",
-					"-weak_framework",
-					"\"UserNotifications\"",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = BIN.ProductTemplet.ios;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "ProductTemplet/ProductTemplet-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;

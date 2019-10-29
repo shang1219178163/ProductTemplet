@@ -19,12 +19,10 @@
 + (BOOL)isChineseLanguage{
     NSString *language = [self currentLanguage];
     return [language hasPrefix:@"zh-Hans"];
-    
 }
 
 + (NSString *)currentLanguage{
     return BNLanguage.userLanguage ? : NSLocale.preferredLanguages.firstObject;
-    
 }
 
 + (void)load{

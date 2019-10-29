@@ -16,6 +16,7 @@
 #import "ZYSliderViewController.h"
 #import "LocationTracker.h"
 #import "FileShareController.h"
+#import "ProductTemplet-Swift.h"
 
 @interface AppDelegate ()
 /// 后台定时定位
@@ -60,7 +61,6 @@
 //    [UIApplication setupRootController:UICtrFromString(@"RecognizerController") isAdjust:YES];
 //    [UIApplication setupRootController:UICtrFromString(@"UIRecognizerController") isAdjust:YES];
     
-    
     //因为左右侧滑栏失效
 //    UIApplication.tabBarController.selectedIndex = 3;
 //    UIApplication.tabBarController.selectedIndex = 4;
@@ -71,7 +71,13 @@
     NSString * e = [NSNumberFormatter fractionDigits:@(.4988) min:2 max:3 roundingMode:NSNumberFormatterRoundDown];
     NSString * f = [NSNumberFormatter fractionDigits:@(.4) min:2 max:3 roundingMode:NSNumberFormatterRoundDown];
 
-    NSString * d = @(1.595).to_string;
+    NSString * d = @(1.595).toString;
+    
+    [d isNewerWithVersion:@"1.3."];
+    [d isSameWithVersion:@"2"];
+    [d isOlderWithVersion:@"3"];
+    [NSString dateTime:@"2" isEnd:false];
+    
     return YES;
 }
 

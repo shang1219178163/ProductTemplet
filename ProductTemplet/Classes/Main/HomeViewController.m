@@ -31,7 +31,9 @@
 //                      @[@"BNFourthViewController", @"我的", @"Item_fourth_N", @"Item_fourth_H",@"13",],
 //                      @[@"TestViewController", @"test", @"Item_fourth_N", @"Item_fourth_H",@"13",],
 //                      @[@"ScrollHorizontalController", @"test", @"Item_fourth_N", @"Item_fourth_H",@"13",],
-                      @[@"LineDashViewController", @"test", @"Item_fourth_N", @"Item_fourth_H",@"13",],
+//                      @[@"LineDashViewController", @"test", @"Item_fourth_N", @"Item_fourth_H",@"13",],
+                      @[@"SearchTitleViewController", @"test", @"Item_fourth_N", @"Item_fourth_H",@"13",],
+
                       
                       ];
     self.viewControllers = UINavListFromList(list);

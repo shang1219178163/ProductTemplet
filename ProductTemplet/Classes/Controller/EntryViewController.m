@@ -270,7 +270,6 @@
 }
 
 -(void)handleActionSender:(UISegmentedControl *)sender{
-    
     DDLog(@"%@",@(sender.selectedSegmentIndex));
 }
 
@@ -278,25 +277,22 @@
     return 10;
 }
 
--(UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section{
-    return [UIView new];
-}
+//-(UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section{
+//    return [UIView new];
+//}
 
 -(CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section{
-    return 10;
+    return 0.01;
 }
 
--(UIView *)tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section{
-    return [UIView new];
-}
+//-(UIView *)tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section{
+//    return [UIView new];
+//}
 
 //- (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath{
 //
-//    UICTViewCellOne * cell = [UICTViewCellOne viewWithCollectionView:collectionView indexPath:indexPath];
-//
-//
+//    UICTViewCellOne * cell = [UICTViewCellOne viewWithCollectionView:collectionView indexPath:indexPath];//
 //    return cell;
-//
 //}
 
 - (void)didReceiveMemoryWarning {

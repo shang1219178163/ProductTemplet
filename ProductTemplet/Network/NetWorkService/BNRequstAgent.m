@@ -45,8 +45,8 @@
 #pragma mark - GET请求
 - (NSURLSessionTask *)GET:(NSString *)URL
                parameters:(id)parameters
-                  success:(BNNetworkBlock)success
-                  failure:(BNNetworkBlock)failure{
+                  success:(NNNetworkBlock)success
+                  failure:(NNNetworkBlock)failure{
     
     DDLog(@"requestSerializer.HTTPRequestHeaders_%@",self.sessionManager.requestSerializer.HTTPRequestHeaders);
     
@@ -73,8 +73,8 @@
 #pragma mark - - POST请求
 - (NSURLSessionTask *)POST:(NSString *)URL
                                parameters:(id)parameters
-                                  success:(BNNetworkBlock)success
-                                  failure:(BNNetworkBlock)failure{
+                                  success:(NNNetworkBlock)success
+                                  failure:(NNNetworkBlock)failure{
     return [BNRequstAgent.shared postWithURL:URL
                                   parameters:parameters
                                       images:nil
@@ -89,9 +89,9 @@
                        parameters:(id)parameters
                            images:(NSArray<UIImage *> *)images
                         fileNames:(NSArray<NSString *> *)fileNames
-                         progress:(BNProgressBlock)progress
-                          success:(BNNetworkBlock)success
-                          failure:(BNNetworkBlock)failure{
+                         progress:(NNProgressBlock)progress
+                          success:(NNNetworkBlock)success
+                          failure:(NNNetworkBlock)failure{
     
     if (_isOpenLog) DDLog(@"parameters = %@",[parameters jsonString]);
 
@@ -146,8 +146,8 @@
 #pragma mark - PUT请求
 - (NSURLSessionTask *)PUT:(NSString *)URL
                parameters:(id)parameters
-                  success:(BNNetworkBlock)success
-                  failure:(BNNetworkBlock)failure{
+                  success:(NNNetworkBlock)success
+                  failure:(NNNetworkBlock)failure{
     if (![URL containsString:BNAPIConfi.serviceUrl]) {
         URL = [BNAPIConfi.serviceUrl stringByAppendingString:URL];
     }
@@ -169,8 +169,8 @@
 #pragma mark - Delete请求
 - (NSURLSessionTask *)DELETE:(NSString *)URL
                   parameters:(id)parameters
-                     success:(BNNetworkBlock)success
-                     failure:(BNNetworkBlock)failure{
+                     success:(NNNetworkBlock)success
+                     failure:(NNNetworkBlock)failure{
     if (![URL containsString:BNAPIConfi.serviceUrl]) {
         URL = [BNAPIConfi.serviceUrl stringByAppendingString:URL];
     }

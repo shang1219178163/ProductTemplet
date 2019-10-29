@@ -26,7 +26,7 @@ static NSString * _testUrl = nil;
 
 +(NSString *)serviceUrl{
     NSString * apiUrl = @"";
-#if defined DEBUG
+#ifdef DEBUG
     apiUrl = self.testUrl;
 #else
     apiUrl = kAPIServiceUrl;//正式接口

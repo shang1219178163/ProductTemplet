@@ -31,7 +31,6 @@
 //    [BNCounter destoryShared];
 //    NSInteger a = 9;
 //    DDLog(@"__%p_",BNCounter.shared);
-
     
 }
 

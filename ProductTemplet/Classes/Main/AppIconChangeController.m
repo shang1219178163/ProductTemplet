@@ -64,7 +64,7 @@
             @strongify(self);
             NSArray * list = self.dataList[indexPath.row];
             [UIApplication setAppIconWithName:list[0]];
-            
+        
         };
     }
     return _plainView;
