@@ -7,7 +7,7 @@
 //
 
 #import "BNThirdViewController.h"
-#import " NNCheckVersApi.h"
+#import "NNCheckVersApi.h"
 
 @interface BNThirdViewController ()
 

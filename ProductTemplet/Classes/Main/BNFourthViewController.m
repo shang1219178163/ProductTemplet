@@ -16,7 +16,7 @@
 #import "NNPickerView.h"
 
 #import <YYModel/YYModel.h>
-#import " NNCheckVersApi.h"
+#import "NNCheckVersApi.h"
 #import "NNRootAppInfoModel.h"
 
 @interface BNFourthViewController ()
