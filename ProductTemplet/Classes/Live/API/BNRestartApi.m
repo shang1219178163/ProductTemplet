@@ -15,8 +15,8 @@
 }
 
 /// 网络请求方式默认GET
-- (BNRequestType)requestType{
-    return BNRequestTypeGet;
+- (NNRequestType)requestType{
+    return NNRequestTypeGet;
 }
 /// 网络请求参数
 - (NSDictionary *)requestParams{

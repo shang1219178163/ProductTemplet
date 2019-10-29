@@ -64,7 +64,7 @@
     NSURLSessionTask * task = nil;
 
     if (![self.child validateParams]) {
-        NSError * error = [NSError errorWithMessage:@"validateParams参数校验失败" code:BNRequestCodeParamsError obj:nil];
+        NSError * error = [NSError errorWithMessage:@"validateParams参数校验失败" code:NNRequestCodeParamsError obj:nil];
         if (self.delegate && [self.delegate conformsToProtocol:@protocol(BNRequestManagerProtocol)]) {
             [self.delegate manager:self successDic:nil failError:error];
         }
@@ -108,7 +108,7 @@
     NSURLSessionTask * task = nil;
     @weakify(self);
     switch (self.child.requestType) {
-        case BNRequestTypePost:
+        case NNRequestTypePost:
         {
             task = [NNRequstAgent.shared POST:urlString parameters:params success:^(NNURLResponse * _Nonnull response) {
                 @strongify(self);
@@ -124,7 +124,7 @@
 
         }
             break;
-        case BNRequestTypeGet:
+        case NNRequestTypeGet:
         {
             task = [NNRequstAgent.shared GET:urlString parameters:params success:^(NNURLResponse * _Nonnull response) {
                 @strongify(self);
@@ -139,7 +139,7 @@
             }];
         }
             break;
-        case BNRequestTypePut:
+        case NNRequestTypePut:
         {
             task = [NNRequstAgent.shared PUT:urlString parameters:params success:^(NNURLResponse * _Nonnull response) {
                 @strongify(self);
@@ -154,7 +154,7 @@
             }];
         }
             break;
-        case BNRequestTypeDelete:
+        case NNRequestTypeDelete:
         {
             task = [NNRequstAgent.shared DELETE:urlString parameters:params success:^(NNURLResponse * _Nonnull response) {
                 @strongify(self);
@@ -189,7 +189,7 @@
     } else {
         NSString *jsonString = [[NSString alloc]initWithData:model.responseObject encoding:NSUTF8StringEncoding];
         if (!jsonString) {
-            model.errorOther = [NSError errorWithDomain:@"服务器返回的josn格式错误" code:BNRequestCodeJSONError userInfo:nil];
+            model.errorOther = [NSError errorWithDomain:@"服务器返回的josn格式错误" code:NNRequestCodeJSONError userInfo:nil];
             [self didFailureOfResponse:model];
             return;
         }
@@ -198,7 +198,7 @@
         NSError *error;
         jsonDic = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:&error];
         if (error) {
-            model.errorOther = [NSError errorWithDomain:@"服务器返回的josn格式错误" code:BNRequestCodeJSONError userInfo:nil];
+            model.errorOther = [NSError errorWithDomain:@"服务器返回的josn格式错误" code:NNRequestCodeJSONError userInfo:nil];
             [self didFailureOfResponse:model];
             return;
         }
@@ -254,11 +254,11 @@
         DDLog(@"error:%@_%@",@(statusCode), errorStr);
         
     } else {
-        if (model.errorOther.code == BNRequestCodeInvalidToken || model.errorOther.code == BNRequestCodeNoLogin) {
+        if (model.errorOther.code == NNRequestCodeInvalidToken || model.errorOther.code == NNRequestCodeNoLogin) {
             [NNRequstAgent.shared cancelAllRequest];
             
             //重置token
-            NSString * errorMsg = model.errorOther.code == BNRequestCodeNoLogin ? @"您已在其他设备登录" : @"登录失效";
+            NSString * errorMsg = model.errorOther.code == NNRequestCodeNoLogin ? @"您已在其他设备登录" : @"登录失效";
             [UIAlertController showAletTitle:nil msg:errorMsg handler:^{
 //                NSNotificationCenter.defaultCenter postNotificationName:<#(nonnull NSNotificationName)#> object:<#(nullable id)#>
             }];
@@ -283,17 +283,17 @@
 -(NSDictionary *)errorDic{
     if (!_errorDic) {
         _errorDic = @{
-                      @(BNRequestCodeParamsError): @"参数错误",
-                      @(BNRequestCodeJSONError): @"JSON解析错误",
-                      @(BNRequestCodeTimeout): @"请求超时",
-                      @(BNRequestCodeNetworkError): @"网络错误",
-                      @(BNRequestCodeServerError): @"服务端返回非200的状态码",
-                      @(BNRequestCodeCancel): @"取消网络请求",
-                      @(BNRequestCodeNoLogin): @"未登录",
-                      @(BNRequestCodeNotFound): @"服务器找不到给定的资源；文档不存在",
-                      @(BNRequestCodeInvalidRequest): @"无效请求",
-                      @(BNRequestCodeInvalidToken): @"参数错误",
-                      @(BNRequestCodeUnknown): @"未知错误",
+                      @(NNRequestCodeParamsError): @"参数错误",
+                      @(NNRequestCodeJSONError): @"JSON解析错误",
+                      @(NNRequestCodeTimeout): @"请求超时",
+                      @(NNRequestCodeNetworkError): @"网络错误",
+                      @(NNRequestCodeServerError): @"服务端返回非200的状态码",
+                      @(NNRequestCodeCancel): @"取消网络请求",
+                      @(NNRequestCodeNoLogin): @"未登录",
+                      @(NNRequestCodeNotFound): @"服务器找不到给定的资源；文档不存在",
+                      @(NNRequestCodeInvalidRequest): @"无效请求",
+                      @(NNRequestCodeInvalidToken): @"参数错误",
+                      @(NNRequestCodeUnknown): @"未知错误",
                       };
     }
     return _errorDic;

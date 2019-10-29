@@ -25,8 +25,8 @@
     return nil;
 }
 
-- (BNRequestType)requestType{
-    return BNRequestTypeGet;
+- (NNRequestType)requestType{
+    return NNRequestTypeGet;
 }
 
 - (NSDictionary *)requestParams{

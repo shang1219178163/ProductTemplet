@@ -14,8 +14,8 @@
     return @"http://itunes.apple.com/cn/lookup?";
 }
 
--(BNRequestType)requestType{
-    return BNRequestTypeGet;
+-(NNRequestType)requestType{
+    return NNRequestTypeGet;
 }
 
 -(NSDictionary *)requestParams{

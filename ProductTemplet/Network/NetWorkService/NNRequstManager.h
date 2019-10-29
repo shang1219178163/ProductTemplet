@@ -10,26 +10,26 @@
 
 @class NNRequstManager;
 
-typedef NS_ENUM (NSInteger, BNRequestType){
-    BNRequestTypeGet,
-    BNRequestTypePost,
-    BNRequestTypePut,
-    BNRequestTypeDelete,
+typedef NS_ENUM (NSInteger, NNRequestType){
+    NNRequestTypeGet,
+    NNRequestTypePost,
+    NNRequestTypePut,
+    NNRequestTypeDelete,
 };
 
-typedef NS_ENUM (NSInteger, BNRequestCode){
-    BNRequestCodeSuccess        = 1,        //请求成功
-    BNRequestCodeParamsError    = 100,      //参数错误，
-    BNRequestCodeJSONError      = 101,      //JSON解析错误
-    BNRequestCodeTimeout        = 102,      //请求超时
-    BNRequestCodeNetworkError   = 103,      //网络错误，
-    BNRequestCodeServerError    = 104,      //服务端返回非200的状态码
-    BNRequestCodeCancel         = 105,      //取消网络请求
-    BNRequestCodeNoLogin        = 106,      //未登录
-    BNRequestCodeNotFound       = 107,      //服务器找不到给定的资源；文档不存在
-    BNRequestCodeInvalidRequest = 108,      //无效请求
-    BNRequestCodeInvalidToken   = 109,      //token失效
-    BNRequestCodeUnknown        = 110,      //未知错误
+typedef NS_ENUM (NSInteger, NNRequestCode){
+    NNRequestCodeSuccess        = 1,        //请求成功
+    NNRequestCodeParamsError    = 100,      //参数错误，
+    NNRequestCodeJSONError      = 101,      //JSON解析错误
+    NNRequestCodeTimeout        = 102,      //请求超时
+    NNRequestCodeNetworkError   = 103,      //网络错误，
+    NNRequestCodeServerError    = 104,      //服务端返回非200的状态码
+    NNRequestCodeCancel         = 105,      //取消网络请求
+    NNRequestCodeNoLogin        = 106,      //未登录
+    NNRequestCodeNotFound       = 107,      //服务器找不到给定的资源；文档不存在
+    NNRequestCodeInvalidRequest = 108,      //无效请求
+    NNRequestCodeInvalidToken   = 109,      //token失效
+    NNRequestCodeUnknown        = 110,      //未知错误
 };
 
 
@@ -40,7 +40,7 @@ typedef NS_ENUM (NSInteger, BNRequestCode){
 /// URI
 - (NSString *_Nonnull)requestURI;
 /// 网络请求方式默认GET
-- (BNRequestType)requestType;
+- (NNRequestType)requestType;
 /// 网络请求参数
 - (NSDictionary *_Nullable)requestParams;
 /// 网络请求参数验证
