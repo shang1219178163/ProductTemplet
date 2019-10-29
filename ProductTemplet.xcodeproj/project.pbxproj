@@ -7,15 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1401BE622276A1220078A722 /* BNMemoryCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 1401BE612276A1220078A722 /* BNMemoryCache.m */; };
-		1401BE652276A1370078A722 /* BNDiskCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 1401BE642276A1370078A722 /* BNDiskCache.m */; };
-		1401BE6C2276A4980078A722 /* BNCacheManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 1401BE6B2276A4980078A722 /* BNCacheManager.m */; };
-		1401BE6F2276A50E0078A722 /* BNCacheKey.m in Sources */ = {isa = PBXBuildFile; fileRef = 1401BE6E2276A50E0078A722 /* BNCacheKey.m */; };
+		1401BE622276A1220078A722 /* NNMemoryCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 1401BE612276A1220078A722 /* NNMemoryCache.m */; };
+		1401BE652276A1370078A722 /* NNDiskCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 1401BE642276A1370078A722 /* NNDiskCache.m */; };
+		1401BE6C2276A4980078A722 /* NNCacheManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 1401BE6B2276A4980078A722 /* NNCacheManager.m */; };
+		1401BE6F2276A50E0078A722 /* NNCacheKey.m in Sources */ = {isa = PBXBuildFile; fileRef = 1401BE6E2276A50E0078A722 /* NNCacheKey.m */; };
 		1401BE762276AB960078A722 /* BNStoreManger.m in Sources */ = {isa = PBXBuildFile; fileRef = 1401BE752276AB960078A722 /* BNStoreManger.m */; };
-		1401BE7C2276CBD90078A722 /* BNBaseRequestApi.m in Sources */ = {isa = PBXBuildFile; fileRef = 1401BE7B2276CBD90078A722 /* BNBaseRequestApi.m */; };
-		1401BE822276D18C0078A722 /* BNCheckVersApi.m in Sources */ = {isa = PBXBuildFile; fileRef = 1401BE812276D18C0078A722 /* BNCheckVersApi.m */; };
-		1401BE892276EC270078A722 /* BNAppInfoRootModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1401BE872276EC270078A722 /* BNAppInfoRootModel.m */; };
-		1401BE8C2276F4DB0078A722 /* NSObject+NSCoding.m in Sources */ = {isa = PBXBuildFile; fileRef = 1401BE8B2276F4DB0078A722 /* NSObject+NSCoding.m */; };
+		1401BE7C2276CBD90078A722 /* NNBaseRequestApi.m in Sources */ = {isa = PBXBuildFile; fileRef = 1401BE7B2276CBD90078A722 /* NNBaseRequestApi.m */; };
+		1401BE822276D18C0078A722 /* NNCheckVersApi.m in Sources */ = {isa = PBXBuildFile; fileRef = 1401BE812276D18C0078A722 /* NNCheckVersApi.m */; };
 		1402183A23683A7B00B27E4C /* sound.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1402183923683A7A00B27E4C /* sound.plist */; };
 		1402183D23683A9600B27E4C /* AudioSoundController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1402183B23683A9500B27E4C /* AudioSoundController.m */; };
 		1402184023683B9900B27E4C /* SystemAboutController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1402183F23683B9900B27E4C /* SystemAboutController.m */; };
@@ -150,13 +148,13 @@
 		147ABB5822DED1A500A5C4EC /* BNCollectionDataController.m in Sources */ = {isa = PBXBuildFile; fileRef = 147ABB5422DED1A500A5C4EC /* BNCollectionDataController.m */; };
 		147ABB5922DED1A500A5C4EC /* BNCollectionDataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 147ABB5522DED1A500A5C4EC /* BNCollectionDataModel.m */; };
 		147B971F21EF005B000F5294 /* UICollectionDisplayController.m in Sources */ = {isa = PBXBuildFile; fileRef = 147B971E21EF005B000F5294 /* UICollectionDisplayController.m */; };
-		149111D42272FFCC0078A7BB /* BNPageModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 149111D32272FFCC0078A7BB /* BNPageModel.m */; };
-		149111D7227308640078A7BB /* BNRequstManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 149111D6227308640078A7BB /* BNRequstManager.m */; };
-		149111DA227308E30078A7BB /* BNRequstAgent.m in Sources */ = {isa = PBXBuildFile; fileRef = 149111D9227308E30078A7BB /* BNRequstAgent.m */; };
-		149111E022730CCF0078A7BB /* BNAPIConfi.m in Sources */ = {isa = PBXBuildFile; fileRef = 149111DF22730CCF0078A7BB /* BNAPIConfi.m */; };
-		149111E322753BF10078A7BB /* BNURLResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 149111E222753BF10078A7BB /* BNURLResponse.m */; };
-		149111E6227542C10078A7BB /* BNUploadModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 149111E5227542C10078A7BB /* BNUploadModel.m */; };
-		149111E92275B34E0078A7BB /* BNLog.m in Sources */ = {isa = PBXBuildFile; fileRef = 149111E82275B34E0078A7BB /* BNLog.m */; };
+		149111D42272FFCC0078A7BB /* NNPageModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 149111D32272FFCC0078A7BB /* NNPageModel.m */; };
+		149111D7227308640078A7BB /* NNRequstManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 149111D6227308640078A7BB /* NNRequstManager.m */; };
+		149111DA227308E30078A7BB /* NNRequstAgent.m in Sources */ = {isa = PBXBuildFile; fileRef = 149111D9227308E30078A7BB /* NNRequstAgent.m */; };
+		149111E022730CCF0078A7BB /* NNAPIConfi.m in Sources */ = {isa = PBXBuildFile; fileRef = 149111DF22730CCF0078A7BB /* NNAPIConfi.m */; };
+		149111E322753BF10078A7BB /* NNURLResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 149111E222753BF10078A7BB /* NNURLResponse.m */; };
+		149111E6227542C10078A7BB /* NNUploadModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 149111E5227542C10078A7BB /* NNUploadModel.m */; };
+		149111E92275B34E0078A7BB /* NNLog.m in Sources */ = {isa = PBXBuildFile; fileRef = 149111E82275B34E0078A7BB /* NNLog.m */; };
 		149111EC2275B7970078A7BB /* NSError+Helper.m in Sources */ = {isa = PBXBuildFile; fileRef = 149111EB2275B7970078A7BB /* NSError+Helper.m */; };
 		1493DAC9231F52A400CB7433 /* CardView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1493DAC8231F52A400CB7433 /* CardView.m */; };
 		149B5508225AD3C5002B1039 /* NNTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 149B5507225AD3C5002B1039 /* NNTabBarController.m */; };
@@ -550,25 +548,21 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		1401BE602276A1220078A722 /* BNMemoryCache.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BNMemoryCache.h; sourceTree = "<group>"; };
-		1401BE612276A1220078A722 /* BNMemoryCache.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BNMemoryCache.m; sourceTree = "<group>"; };
-		1401BE632276A1370078A722 /* BNDiskCache.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BNDiskCache.h; sourceTree = "<group>"; };
-		1401BE642276A1370078A722 /* BNDiskCache.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BNDiskCache.m; sourceTree = "<group>"; };
-		1401BE692276A2180078A722 /* BNCacheProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BNCacheProtocol.h; sourceTree = "<group>"; };
-		1401BE6A2276A4980078A722 /* BNCacheManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BNCacheManager.h; sourceTree = "<group>"; };
-		1401BE6B2276A4980078A722 /* BNCacheManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BNCacheManager.m; sourceTree = "<group>"; };
-		1401BE6D2276A50E0078A722 /* BNCacheKey.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BNCacheKey.h; sourceTree = "<group>"; };
-		1401BE6E2276A50E0078A722 /* BNCacheKey.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BNCacheKey.m; sourceTree = "<group>"; };
+		1401BE602276A1220078A722 /* NNMemoryCache.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NNMemoryCache.h; sourceTree = "<group>"; };
+		1401BE612276A1220078A722 /* NNMemoryCache.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NNMemoryCache.m; sourceTree = "<group>"; };
+		1401BE632276A1370078A722 /* NNDiskCache.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NNDiskCache.h; sourceTree = "<group>"; };
+		1401BE642276A1370078A722 /* NNDiskCache.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NNDiskCache.m; sourceTree = "<group>"; };
+		1401BE692276A2180078A722 /* NNCacheProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NNCacheProtocol.h; sourceTree = "<group>"; };
+		1401BE6A2276A4980078A722 /* NNCacheManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NNCacheManager.h; sourceTree = "<group>"; };
+		1401BE6B2276A4980078A722 /* NNCacheManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NNCacheManager.m; sourceTree = "<group>"; };
+		1401BE6D2276A50E0078A722 /* NNCacheKey.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NNCacheKey.h; sourceTree = "<group>"; };
+		1401BE6E2276A50E0078A722 /* NNCacheKey.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NNCacheKey.m; sourceTree = "<group>"; };
 		1401BE742276AB960078A722 /* BNStoreManger.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BNStoreManger.h; sourceTree = "<group>"; };
 		1401BE752276AB960078A722 /* BNStoreManger.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BNStoreManger.m; sourceTree = "<group>"; };
-		1401BE7A2276CBD90078A722 /* BNBaseRequestApi.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BNBaseRequestApi.h; sourceTree = "<group>"; };
-		1401BE7B2276CBD90078A722 /* BNBaseRequestApi.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BNBaseRequestApi.m; sourceTree = "<group>"; };
-		1401BE802276D18C0078A722 /* BNCheckVersApi.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BNCheckVersApi.h; sourceTree = "<group>"; };
-		1401BE812276D18C0078A722 /* BNCheckVersApi.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BNCheckVersApi.m; sourceTree = "<group>"; };
-		1401BE872276EC270078A722 /* BNAppInfoRootModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BNAppInfoRootModel.m; sourceTree = "<group>"; };
-		1401BE882276EC270078A722 /* BNAppInfoRootModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BNAppInfoRootModel.h; sourceTree = "<group>"; };
-		1401BE8A2276F4DA0078A722 /* NSObject+NSCoding.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+NSCoding.h"; sourceTree = "<group>"; };
-		1401BE8B2276F4DB0078A722 /* NSObject+NSCoding.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+NSCoding.m"; sourceTree = "<group>"; };
+		1401BE7A2276CBD90078A722 /* NNBaseRequestApi.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NNBaseRequestApi.h; sourceTree = "<group>"; };
+		1401BE7B2276CBD90078A722 /* NNBaseRequestApi.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NNBaseRequestApi.m; sourceTree = "<group>"; };
+		1401BE802276D18C0078A722 /* NNCheckVersApi.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NNCheckVersApi.h; sourceTree = "<group>"; };
+		1401BE812276D18C0078A722 /* NNCheckVersApi.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NNCheckVersApi.m; sourceTree = "<group>"; };
 		1402183923683A7A00B27E4C /* sound.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = sound.plist; sourceTree = "<group>"; };
 		1402183B23683A9500B27E4C /* AudioSoundController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AudioSoundController.m; sourceTree = "<group>"; };
 		1402183C23683A9600B27E4C /* AudioSoundController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AudioSoundController.h; sourceTree = "<group>"; };
@@ -795,20 +789,20 @@
 		147ABB5722DED1A500A5C4EC /* BNCollectionDataModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BNCollectionDataModel.h; sourceTree = "<group>"; };
 		147B971D21EF005B000F5294 /* UICollectionDisplayController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UICollectionDisplayController.h; sourceTree = "<group>"; };
 		147B971E21EF005B000F5294 /* UICollectionDisplayController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UICollectionDisplayController.m; sourceTree = "<group>"; };
-		149111D22272FFCC0078A7BB /* BNPageModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BNPageModel.h; sourceTree = "<group>"; };
-		149111D32272FFCC0078A7BB /* BNPageModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BNPageModel.m; sourceTree = "<group>"; };
-		149111D5227308640078A7BB /* BNRequstManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BNRequstManager.h; sourceTree = "<group>"; };
-		149111D6227308640078A7BB /* BNRequstManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BNRequstManager.m; sourceTree = "<group>"; };
-		149111D8227308E30078A7BB /* BNRequstAgent.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BNRequstAgent.h; sourceTree = "<group>"; };
-		149111D9227308E30078A7BB /* BNRequstAgent.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BNRequstAgent.m; sourceTree = "<group>"; };
-		149111DE22730CCF0078A7BB /* BNAPIConfi.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BNAPIConfi.h; sourceTree = "<group>"; };
-		149111DF22730CCF0078A7BB /* BNAPIConfi.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BNAPIConfi.m; sourceTree = "<group>"; };
-		149111E122753BF10078A7BB /* BNURLResponse.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BNURLResponse.h; sourceTree = "<group>"; };
-		149111E222753BF10078A7BB /* BNURLResponse.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BNURLResponse.m; sourceTree = "<group>"; };
-		149111E4227542C10078A7BB /* BNUploadModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BNUploadModel.h; sourceTree = "<group>"; };
-		149111E5227542C10078A7BB /* BNUploadModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BNUploadModel.m; sourceTree = "<group>"; };
-		149111E72275B34E0078A7BB /* BNLog.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BNLog.h; sourceTree = "<group>"; };
-		149111E82275B34E0078A7BB /* BNLog.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BNLog.m; sourceTree = "<group>"; };
+		149111D22272FFCC0078A7BB /* NNPageModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NNPageModel.h; sourceTree = "<group>"; };
+		149111D32272FFCC0078A7BB /* NNPageModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NNPageModel.m; sourceTree = "<group>"; };
+		149111D5227308640078A7BB /* NNRequstManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NNRequstManager.h; sourceTree = "<group>"; };
+		149111D6227308640078A7BB /* NNRequstManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NNRequstManager.m; sourceTree = "<group>"; };
+		149111D8227308E30078A7BB /* NNRequstAgent.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NNRequstAgent.h; sourceTree = "<group>"; };
+		149111D9227308E30078A7BB /* NNRequstAgent.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NNRequstAgent.m; sourceTree = "<group>"; };
+		149111DE22730CCF0078A7BB /* NNAPIConfi.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NNAPIConfi.h; sourceTree = "<group>"; };
+		149111DF22730CCF0078A7BB /* NNAPIConfi.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NNAPIConfi.m; sourceTree = "<group>"; };
+		149111E122753BF10078A7BB /* NNURLResponse.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NNURLResponse.h; sourceTree = "<group>"; };
+		149111E222753BF10078A7BB /* NNURLResponse.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NNURLResponse.m; sourceTree = "<group>"; };
+		149111E4227542C10078A7BB /* NNUploadModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NNUploadModel.h; sourceTree = "<group>"; };
+		149111E5227542C10078A7BB /* NNUploadModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NNUploadModel.m; sourceTree = "<group>"; };
+		149111E72275B34E0078A7BB /* NNLog.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NNLog.h; sourceTree = "<group>"; };
+		149111E82275B34E0078A7BB /* NNLog.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NNLog.m; sourceTree = "<group>"; };
 		149111EA2275B7970078A7BB /* NSError+Helper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSError+Helper.h"; sourceTree = "<group>"; };
 		149111EB2275B7970078A7BB /* NSError+Helper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSError+Helper.m"; sourceTree = "<group>"; };
 		1493DAC7231F52A400CB7433 /* CardView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CardView.h; sourceTree = "<group>"; };
@@ -1497,24 +1491,24 @@
 		1401BE5F22769DCF0078A722 /* NetWorkService */ = {
 			isa = PBXGroup;
 			children = (
-				149111DE22730CCF0078A7BB /* BNAPIConfi.h */,
-				149111DF22730CCF0078A7BB /* BNAPIConfi.m */,
-				149111D22272FFCC0078A7BB /* BNPageModel.h */,
-				149111D32272FFCC0078A7BB /* BNPageModel.m */,
-				149111D5227308640078A7BB /* BNRequstManager.h */,
-				149111D6227308640078A7BB /* BNRequstManager.m */,
-				149111D8227308E30078A7BB /* BNRequstAgent.h */,
-				149111D9227308E30078A7BB /* BNRequstAgent.m */,
-				149111E122753BF10078A7BB /* BNURLResponse.h */,
-				149111E222753BF10078A7BB /* BNURLResponse.m */,
-				149111E4227542C10078A7BB /* BNUploadModel.h */,
-				149111E5227542C10078A7BB /* BNUploadModel.m */,
-				149111E72275B34E0078A7BB /* BNLog.h */,
-				149111E82275B34E0078A7BB /* BNLog.m */,
+				149111DE22730CCF0078A7BB /* NNAPIConfi.h */,
+				149111DF22730CCF0078A7BB /* NNAPIConfi.m */,
+				149111D22272FFCC0078A7BB /* NNPageModel.h */,
+				149111D32272FFCC0078A7BB /* NNPageModel.m */,
+				149111D5227308640078A7BB /* NNRequstManager.h */,
+				149111D6227308640078A7BB /* NNRequstManager.m */,
+				149111D8227308E30078A7BB /* NNRequstAgent.h */,
+				149111D9227308E30078A7BB /* NNRequstAgent.m */,
+				149111E122753BF10078A7BB /* NNURLResponse.h */,
+				149111E222753BF10078A7BB /* NNURLResponse.m */,
+				149111E4227542C10078A7BB /* NNUploadModel.h */,
+				149111E5227542C10078A7BB /* NNUploadModel.m */,
+				149111E72275B34E0078A7BB /* NNLog.h */,
+				149111E82275B34E0078A7BB /* NNLog.m */,
 				149111EA2275B7970078A7BB /* NSError+Helper.h */,
 				149111EB2275B7970078A7BB /* NSError+Helper.m */,
-				1401BE7A2276CBD90078A722 /* BNBaseRequestApi.h */,
-				1401BE7B2276CBD90078A722 /* BNBaseRequestApi.m */,
+				1401BE7A2276CBD90078A722 /* NNBaseRequestApi.h */,
+				1401BE7B2276CBD90078A722 /* NNBaseRequestApi.m */,
 			);
 			path = NetWorkService;
 			sourceTree = "<group>";
@@ -1524,15 +1518,15 @@
 			children = (
 				1401BE742276AB960078A722 /* BNStoreManger.h */,
 				1401BE752276AB960078A722 /* BNStoreManger.m */,
-				1401BE6A2276A4980078A722 /* BNCacheManager.h */,
-				1401BE6B2276A4980078A722 /* BNCacheManager.m */,
-				1401BE6D2276A50E0078A722 /* BNCacheKey.h */,
-				1401BE6E2276A50E0078A722 /* BNCacheKey.m */,
-				1401BE602276A1220078A722 /* BNMemoryCache.h */,
-				1401BE612276A1220078A722 /* BNMemoryCache.m */,
-				1401BE632276A1370078A722 /* BNDiskCache.h */,
-				1401BE642276A1370078A722 /* BNDiskCache.m */,
-				1401BE692276A2180078A722 /* BNCacheProtocol.h */,
+				1401BE6A2276A4980078A722 /* NNCacheManager.h */,
+				1401BE6B2276A4980078A722 /* NNCacheManager.m */,
+				1401BE6D2276A50E0078A722 /* NNCacheKey.h */,
+				1401BE6E2276A50E0078A722 /* NNCacheKey.m */,
+				1401BE602276A1220078A722 /* NNMemoryCache.h */,
+				1401BE612276A1220078A722 /* NNMemoryCache.m */,
+				1401BE632276A1370078A722 /* NNDiskCache.h */,
+				1401BE642276A1370078A722 /* NNDiskCache.m */,
+				1401BE692276A2180078A722 /* NNCacheProtocol.h */,
 			);
 			path = NetWorkStorage;
 			sourceTree = "<group>";
@@ -2227,10 +2221,8 @@
 				516F8561215DF8F4008E62B3 /* SuspendButton.m */,
 				142A76D52226708D0016D3DA /* BNSliderControlView.h */,
 				142A76D62226708D0016D3DA /* BNSliderControlView.m */,
-				1401BE802276D18C0078A722 /* BNCheckVersApi.h */,
-				1401BE812276D18C0078A722 /* BNCheckVersApi.m */,
-				1401BE882276EC270078A722 /* BNAppInfoRootModel.h */,
-				1401BE872276EC270078A722 /* BNAppInfoRootModel.m */,
+				1401BE802276D18C0078A722 /* NNCheckVersApi.h */,
+				1401BE812276D18C0078A722 /* NNCheckVersApi.m */,
 				14107FD222D087630011344E /* NNProgressHUD.h */,
 				14107FD322D087630011344E /* NNProgressHUD.m */,
 				14E49C8C232780EB0099912E /* UIApplication+Permission.h */,
@@ -2826,8 +2818,6 @@
 				51698C7E2137C0430069C2B2 /* WHKRequestHelper.m */,
 				51698C802137C0430069C2B2 /* WHKReuestSevice.h */,
 				51698C832137C0430069C2B2 /* WHKReuestSevice.m */,
-				1401BE8A2276F4DA0078A722 /* NSObject+NSCoding.h */,
-				1401BE8B2276F4DB0078A722 /* NSObject+NSCoding.m */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -3353,7 +3343,7 @@
 				1402183D23683A9600B27E4C /* AudioSoundController.m in Sources */,
 				149B5508225AD3C5002B1039 /* NNTabBarController.m in Sources */,
 				141080AF22D2E7D10011344E /* CommonAnimationController.m in Sources */,
-				149111DA227308E30078A7BB /* BNRequstAgent.m in Sources */,
+				149111DA227308E30078A7BB /* NNRequstAgent.m in Sources */,
 				515C67E62137C55700D5EA94 /* BRecentCityCell.m in Sources */,
 				145C913923347B4400849E9D /* AppIconChangeController.m in Sources */,
 				14E42D172200042800606AD0 /* GlobleConst.m in Sources */,
@@ -3402,7 +3392,7 @@
 				140A2BEB22696E24000ED121 /* BNPOIAnnotation.m in Sources */,
 				1401BE762276AB960078A722 /* BNStoreManger.m in Sources */,
 				51862E7D20BBA8270080BD4E /* InputValidator.m in Sources */,
-				149111E022730CCF0078A7BB /* BNAPIConfi.m in Sources */,
+				149111E022730CCF0078A7BB /* NNAPIConfi.m in Sources */,
 				513647C1208604DE005A20E7 /* HZWaitingView.m in Sources */,
 				14A1EA752249FBAA00952911 /* TextFromSpeechController.m in Sources */,
 				51862E7A20BBA1B50080BD4E /* StrategyFinancyAlipay.m in Sources */,
@@ -3429,7 +3419,7 @@
 				14C11AAC22DC7FF8009D18A3 /* SectionListOneController.m in Sources */,
 				140A2BEE22696E24000ED121 /* JZLocationConverter.m in Sources */,
 				141080B522D2E7D10011344E /* AnimationController18.m in Sources */,
-				149111E6227542C10078A7BB /* BNUploadModel.m in Sources */,
+				149111E6227542C10078A7BB /* NNUploadModel.m in Sources */,
 				140A2BF022696E24000ED121 /* BNReGeoAnno.m in Sources */,
 				14F0FE5A22B0AA0000057093 /* BNMoidyPwdApi.m in Sources */,
 				51AA00342199295A002EB259 /* CounterListController.m in Sources */,
@@ -3466,27 +3456,26 @@
 				518CD324219D5A24003CE348 /* UIViewPropertyAnimatorController.m in Sources */,
 				14F0FE5722B0A83200057093 /* APIRequestURL.m in Sources */,
 				51B9CD1920A0520F0096A540 /* UIViewController+ZYSliderViewController.m in Sources */,
-				1401BE622276A1220078A722 /* BNMemoryCache.m in Sources */,
+				1401BE622276A1220078A722 /* NNMemoryCache.m in Sources */,
 				14E42D002200041900606AD0 /* NNSimpleDataModel.m in Sources */,
 				140A2BE622696E24000ED121 /* BNMapManager.m in Sources */,
 				14E42CF42200040F00606AD0 /* BNCenterViewController.m in Sources */,
 				14C96FC022B399FA0015BA1D /* GroupViewController.m in Sources */,
 				14C1197622DC59AC009D18A3 /* UICTViewCellCycle.m in Sources */,
-				149111E92275B34E0078A7BB /* BNLog.m in Sources */,
+				149111E92275B34E0078A7BB /* NNLog.m in Sources */,
 				141080A022D2E7D10011344E /* AnimationController8.m in Sources */,
 				147B971F21EF005B000F5294 /* UICollectionDisplayController.m in Sources */,
 				5162F70120BF9D10009A6253 /* FlowerView.m in Sources */,
-				1401BE8C2276F4DB0078A722 /* NSObject+NSCoding.m in Sources */,
 				5162F70D20BFB934009A6253 /* OperationViewController.m in Sources */,
 				14E42CF72200040F00606AD0 /* ScrollHorizontalController.m in Sources */,
 				14E42D162200042800606AD0 /* BNMenuListController.m in Sources */,
 				515CC97D20B6AAF2004AE27C /* AAOptions3d.m in Sources */,
 				147AB8BB22DDE62700A5C4EC /* TrackRecordsController.m in Sources */,
 				513646AF2086031D005A20E7 /* main.m in Sources */,
-				1401BE6F2276A50E0078A722 /* BNCacheKey.m in Sources */,
+				1401BE6F2276A50E0078A722 /* NNCacheKey.m in Sources */,
 				14B6B33522B0F8760047E094 /* PKSeverinfoModel.m in Sources */,
 				515CC98120B6AAF2004AE27C /* AAArea.m in Sources */,
-				1401BE652276A1370078A722 /* BNDiskCache.m in Sources */,
+				1401BE652276A1370078A722 /* NNDiskCache.m in Sources */,
 				14E42CD3220003F200606AD0 /* BNOperation.m in Sources */,
 				14C11ABA22DC7FF8009D18A3 /* NNShareViewController.m in Sources */,
 				51AA0037219929C3002EB259 /* BNCounter.m in Sources */,
@@ -3525,7 +3514,7 @@
 				14F25F542359A14800D05998 /* UIView+Tmp.m in Sources */,
 				51862E8320BBA8B90080BD4E /* AlphaInputValidator.m in Sources */,
 				512E43452137DDBD00272986 /* WHKGroupViewViewController.m in Sources */,
-				149111D42272FFCC0078A7BB /* BNPageModel.m in Sources */,
+				149111D42272FFCC0078A7BB /* NNPageModel.m in Sources */,
 				14B6B34D22B2233B0047E094 /* PKChannelListRootModel.m in Sources */,
 				5162F70A20BFB7CB009A6253 /* GCDViewController.m in Sources */,
 				14F25F4E23599AB000D05998 /* UIBarButtonItem+Block.m in Sources */,
@@ -3539,7 +3528,7 @@
 				14E42CF82200040F00606AD0 /* BNThirdViewController.m in Sources */,
 				14E42D152200042800606AD0 /* BNLanguage.m in Sources */,
 				14E42CF62200040F00606AD0 /* BNLeftViewController.m in Sources */,
-				149111D7227308640078A7BB /* BNRequstManager.m in Sources */,
+				149111D7227308640078A7BB /* NNRequstManager.m in Sources */,
 				146B8187225C74860004A249 /* SubTabBarController.m in Sources */,
 				515CC97A20B6AAF2004AE27C /* AACrosshair.m in Sources */,
 				515CC97720B6AAF2004AE27C /* AATooltip.m in Sources */,
@@ -3578,7 +3567,7 @@
 				51A4354921ABECAE000D9840 /* TextViewController.m in Sources */,
 				5175C93620C122B1009EA86E /* DBHandler.m in Sources */,
 				14A95771231125F10045140F /* NNScrollView.m in Sources */,
-				1401BE7C2276CBD90078A722 /* BNBaseRequestApi.m in Sources */,
+				1401BE7C2276CBD90078A722 /* NNBaseRequestApi.m in Sources */,
 				14C11AB822DC7FF8009D18A3 /* SphereViewController.m in Sources */,
 				515CC98720B6AAF2004AE27C /* AAPie.m in Sources */,
 				14B6B33B22B1F2400047E094 /* BNChannelListApi.m in Sources */,
@@ -3598,7 +3587,7 @@
 				515CC98020B6AAF2004AE27C /* AATitle.m in Sources */,
 				147AB8B822DDD76D00A5C4EC /* FileShareController.m in Sources */,
 				140A2BF722696E24000ED121 /* BNDriverRouteTipView.m in Sources */,
-				1401BE822276D18C0078A722 /* BNCheckVersApi.m in Sources */,
+				1401BE822276D18C0078A722 /* NNCheckVersApi.m in Sources */,
 				1421D5D021F3177700635582 /* NNWalletView.m in Sources */,
 				515CC97E20B6AAF2004AE27C /* AAStyle.m in Sources */,
 				510BC99B208F2F0400CF48C5 /* FriendListController.m in Sources */,
@@ -3636,9 +3625,9 @@
 				140A2BF422696E24000ED121 /* MANaviAnnotation.m in Sources */,
 				141080A922D2E7D10011344E /* AnimationController2.m in Sources */,
 				5169699920BCED4000BAA53D /* LHSales.m in Sources */,
-				1401BE6C2276A4980078A722 /* BNCacheManager.m in Sources */,
+				1401BE6C2276A4980078A722 /* NNCacheManager.m in Sources */,
 				140A2BF522696E24000ED121 /* ErrorInfoUtility.m in Sources */,
-				149111E322753BF10078A7BB /* BNURLResponse.m in Sources */,
+				149111E322753BF10078A7BB /* NNURLResponse.m in Sources */,
 				516969BA20BCFD9B00BAA53D /* CompanyLeaf.m in Sources */,
 				1404FAE521DF4A5F00122E22 /* UIRecognizerController.m in Sources */,
 				515C67DD2137C55700D5EA94 /* BAddressPickerController.m in Sources */,
@@ -3688,7 +3677,6 @@
 				14E42CF52200040F00606AD0 /* BNFirstViewController.m in Sources */,
 				140A2BED22696E24000ED121 /* MANaviRoute.m in Sources */,
 				14107FB422CDF9490011344E /* UITextField+Util.m in Sources */,
-				1401BE892276EC270078A722 /* BNAppInfoRootModel.m in Sources */,
 				5175C93920C13DE1009EA86E /* Student.m in Sources */,
 				513646B720860332005A20E7 /* MainViewController.m in Sources */,
 				14B6B34122B1FE8A0047E094 /* DeviceListController.m in Sources */,

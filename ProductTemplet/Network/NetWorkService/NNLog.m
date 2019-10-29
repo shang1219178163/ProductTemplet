@@ -1,14 +1,14 @@
 //
-//  BNLog.m
+//  NNLog.m
 //  ProductTemplet
 //
 //  Created by Bin Shang on 2019/4/28.
 //  Copyright © 2019 BN. All rights reserved.
 //
 
-#import "BNLog.h"
+#import "NNLog.h"
 
-@implementation BNLog
+@implementation NNLog
 
 + (void)logRequestURI:(NSString *)uri{
     DDLog(@"URI: >> %@",uri);

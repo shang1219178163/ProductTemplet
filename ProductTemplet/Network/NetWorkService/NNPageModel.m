@@ -1,21 +1,21 @@
 //
-//  BNPageModel.m
+//  NNPageModel.m
 //  ProductTemplet
 //
 //  Created by Bin Shang on 2019/4/26.
 //  Copyright © 2019 BN. All rights reserved.
 //
 
-#import "BNPageModel.h"
+#import "NNPageModel.h"
 
-@interface BNPageModel()
+@interface NNPageModel()
 
 @property (nonatomic, assign, readwrite) NSUInteger currPage;
 @property (nonatomic, assign, readwrite) BOOL hasNextPage;
 
 @end
 
-@implementation BNPageModel
+@implementation NNPageModel
 
 -(instancetype)init{
     self = [super init];
@@ -29,7 +29,7 @@
 }
 
 -(instancetype)initWithPageSize:(NSUInteger)pageSize{
-    BNPageModel * model = [[BNPageModel alloc]init];
+    NNPageModel * model = [[NNPageModel alloc]init];
     model.pageSize = pageSize;
     return model;
 }

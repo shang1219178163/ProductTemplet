@@ -76,7 +76,7 @@
     PKDeviceInfoModel * deviceModel = self.obj;
     PKChannelInfoModel * channelModel = self.objOne;
     self.channelstreamApi.ID = deviceModel.ID;
-    [self.channelstreamApi requestWithSuccessBlock:^(BNRequstManager * _Nonnull manager, id _Nullable responseObject, NSError * _Nullable error) {
+    [self.channelstreamApi requestWithSuccessBlock:^(NNRequstManager * _Nonnull manager, id _Nullable responseObject, NSError * _Nullable error) {
         //        DDLog(@"%@", responseObject);
         dispatch_async(dispatch_get_global_queue(0, 0), ^{
             DDLog(@"%@", [(NSDictionary *)responseObject jsonString]);
@@ -89,16 +89,16 @@
             });
         });
         
-    } failedBlock:^(BNRequstManager * _Nonnull manager, id _Nullable responseObject, NSError * _Nullable error) {
+    } failedBlock:^(NNRequstManager * _Nonnull manager, id _Nullable responseObject, NSError * _Nullable error) {
         DDLog(@"%@", error);
         
     }];
     
     self.touchcChannelstreamApi.ID = deviceModel.ID;
-    [self.touchcChannelstreamApi requestWithSuccessBlock:^(BNRequstManager * _Nonnull manager, id _Nullable responseObject, NSError * _Nullable error) {
+    [self.touchcChannelstreamApi requestWithSuccessBlock:^(NNRequstManager * _Nonnull manager, id _Nullable responseObject, NSError * _Nullable error) {
         DDLog(@"%@", responseObject);
      
-    } failedBlock:^(BNRequstManager * _Nonnull manager, id _Nullable responseObject, NSError * _Nullable error) {
+    } failedBlock:^(NNRequstManager * _Nonnull manager, id _Nullable responseObject, NSError * _Nullable error) {
         DDLog(@"%@", error);
         
     }];

@@ -1,18 +1,18 @@
 //
-//  BNRequstManager.m
+//  NNRequstManager.m
 //  ProductTemplet
 //
 //  Created by Bin Shang on 2019/4/26.
 //  Copyright © 2019 BN. All rights reserved.
 //
 
-#import "BNRequstManager.h"
-#import "BNRequstAgent.h"
-#import "BNLog.h"
+#import "NNRequstManager.h"
+#import "NNRequstAgent.h"
+#import "NNLog.h"
 #import "NSError+Helper.h"
-#import "BNAPIConfi.h"
+#import "NNAPIConfi.h"
 
-@interface BNRequstManager()
+@interface NNRequstManager()
 
 @property (nonatomic, assign, readwrite) BOOL isLoading;
 @property (nonatomic, strong) NSMutableDictionary *taskDic;
@@ -21,7 +21,7 @@
 @end
 
 
-@implementation BNRequstManager
+@implementation NNRequstManager
 
 - (instancetype)init{
     self = [super init];
@@ -38,7 +38,7 @@
 }
 
 - (AFHTTPSessionManager *)sessionManager{
-    return BNRequstAgent.shared.sessionManager;
+    return NNRequstAgent.shared.sessionManager;
 }
 
 + (NSDictionary *)paramsFromOrigin:(NSDictionary *)params{
@@ -97,12 +97,12 @@
     
     self.isLoading = true;
     //请求日志
-    NSString *urlString = [BNAPIConfi.serviceUrl stringByAppendingPathComponent:self.child.requestURI];
-    NSDictionary *params = [BNRequstManager paramsFromOrigin:self.child.requestParams];
-    [BNLog logRequestInfoWithURI:urlString params:params];
+    NSString *urlString = [NNAPIConfi.serviceUrl stringByAppendingPathComponent:self.child.requestURI];
+    NSDictionary *params = [NNRequstManager paramsFromOrigin:self.child.requestParams];
+    [NNLog logRequestInfoWithURI:urlString params:params];
     id token = [NSUserDefaults objectForKey:@"token"];
     if (token) {
-        [BNRequstAgent.shared setValue:token forHTTPHeaderField:@"Authorization"];
+        [NNRequstAgent.shared setValue:token forHTTPHeaderField:@"Authorization"];
     }
     
     NSURLSessionTask * task = nil;
@@ -110,12 +110,12 @@
     switch (self.child.requestType) {
         case BNRequestTypePost:
         {
-            task = [BNRequstAgent.shared POST:urlString parameters:params success:^(BNURLResponse * _Nonnull response) {
+            task = [NNRequstAgent.shared POST:urlString parameters:params success:^(NNURLResponse * _Nonnull response) {
                 @strongify(self);
                 self.isLoading = false;
                 [self didSuccessOfResponse:response];
                 
-            } failure:^(BNURLResponse * _Nonnull response) {
+            } failure:^(NNURLResponse * _Nonnull response) {
                 @strongify(self);
                 self.isLoading = false;
                 [self didFailureOfResponse:response];
@@ -126,12 +126,12 @@
             break;
         case BNRequestTypeGet:
         {
-            task = [BNRequstAgent.shared GET:urlString parameters:params success:^(BNURLResponse * _Nonnull response) {
+            task = [NNRequstAgent.shared GET:urlString parameters:params success:^(NNURLResponse * _Nonnull response) {
                 @strongify(self);
                 self.isLoading = false;
                 [self didSuccessOfResponse:response];
 
-            } failure:^(BNURLResponse * _Nonnull response) {
+            } failure:^(NNURLResponse * _Nonnull response) {
                 @strongify(self);
                 self.isLoading = false;
                 [self didFailureOfResponse:response];
@@ -141,12 +141,12 @@
             break;
         case BNRequestTypePut:
         {
-            task = [BNRequstAgent.shared PUT:urlString parameters:params success:^(BNURLResponse * _Nonnull response) {
+            task = [NNRequstAgent.shared PUT:urlString parameters:params success:^(NNURLResponse * _Nonnull response) {
                 @strongify(self);
                 self.isLoading = false;
                 [self didSuccessOfResponse:response];
                 
-            } failure:^(BNURLResponse * _Nonnull response) {
+            } failure:^(NNURLResponse * _Nonnull response) {
                 @strongify(self);
                 self.isLoading = false;
                 [self didFailureOfResponse:response];
@@ -156,12 +156,12 @@
             break;
         case BNRequestTypeDelete:
         {
-            task = [BNRequstAgent.shared DELETE:urlString parameters:params success:^(BNURLResponse * _Nonnull response) {
+            task = [NNRequstAgent.shared DELETE:urlString parameters:params success:^(NNURLResponse * _Nonnull response) {
                 @strongify(self);
                 self.isLoading = false;
                 [self didSuccessOfResponse:response];
                 
-            } failure:^(BNURLResponse * _Nonnull response) {
+            } failure:^(NNURLResponse * _Nonnull response) {
                 @strongify(self);
                 self.isLoading = false;
                 [self didFailureOfResponse:response];
@@ -176,7 +176,7 @@
     return task;
 }
 
-- (void)didSuccessOfResponse:(BNURLResponse *)model{
+- (void)didSuccessOfResponse:(NNURLResponse *)model{
     if (model.response.statusCode != 200) {
         [self didFailureOfResponse:model];
         return;
@@ -227,8 +227,8 @@
         return;
     }
     //请求结果日志
-    NSString * urlString = [BNAPIConfi.serviceUrl stringByAppendingString:self.child.requestURI];
-    [BNLog logResponseInfoWithURI:urlString responseJSON:jsonDic];
+    NSString * urlString = [NNAPIConfi.serviceUrl stringByAppendingString:self.child.requestURI];
+    [NNLog logResponseInfoWithURI:urlString responseJSON:jsonDic];
     
 //    DDLog(@"delegate:%@",self.delegate);
     if (self.delegate && [self.delegate conformsToProtocol:@protocol(BNRequestManagerProtocol)]) {
@@ -246,7 +246,7 @@
     }
 }
 
-- (void)didFailureOfResponse:(BNURLResponse *)model{
+- (void)didFailureOfResponse:(NNURLResponse *)model{
     if (model.error) {
         NSData *data = model.error.userInfo[@"com.alamofire.serialization.response.error.data"];
         NSString *errorStr = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
@@ -255,7 +255,7 @@
         
     } else {
         if (model.errorOther.code == BNRequestCodeInvalidToken || model.errorOther.code == BNRequestCodeNoLogin) {
-            [BNRequstAgent.shared cancelAllRequest];
+            [NNRequstAgent.shared cancelAllRequest];
             
             //重置token
             NSString * errorMsg = model.errorOther.code == BNRequestCodeNoLogin ? @"您已在其他设备登录" : @"登录失效";

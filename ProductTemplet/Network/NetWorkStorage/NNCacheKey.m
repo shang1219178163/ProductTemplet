@@ -1,14 +1,14 @@
 //
-//  BNCacheKey.m
+//  NNCacheKey.m
 //  ProductTemplet
 //
 //  Created by Bin Shang on 2019/4/29.
 //  Copyright © 2019 BN. All rights reserved.
 //
 
-#import "BNCacheKey.h"
+#import "NNCacheKey.h"
 
-@implementation BNCacheKey
+@implementation NNCacheKey
 
 NSString * const kCacheKeyToken     =   @"kCacheKeyToken";
 NSString * const kCacheKeyUserModel =   @"kCacheKeyUserModel";

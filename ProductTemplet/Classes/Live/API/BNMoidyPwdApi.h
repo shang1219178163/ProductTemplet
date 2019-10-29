@@ -6,11 +6,11 @@
 //  Copyright © 2019 BN. All rights reserved.
 //
 
-#import "BNBaseRequestApi.h"
+#import "NNBaseRequestApi.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface BNMoidyPwdApi : BNBaseRequestApi
+@interface BNMoidyPwdApi : NNBaseRequestApi
 
 @property(nonatomic, strong) NSString * oldpassword;
 @property(nonatomic, strong) NSString * newpassword;

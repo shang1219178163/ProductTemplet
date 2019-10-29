@@ -16,8 +16,8 @@
 #import "NNPickerView.h"
 
 #import <YYModel/YYModel.h>
-#import "BNCheckVersApi.h"
-#import "BNAppInfoRootModel.h"
+#import " NNCheckVersApi.h"
+#import "NNRootAppInfoModel.h"
 
 @interface BNFourthViewController ()
 
@@ -29,7 +29,7 @@
 @property (nonatomic, strong) NNPickerView * pickerView;
 
 @property (nonatomic, strong) UILabel *label;
-@property (nonatomic, strong) BNCheckVersApi *api;
+@property (nonatomic, strong)  NNCheckVersApi *api;
 
 @end
 
@@ -189,14 +189,14 @@
 
     [self.view getViewLayer];
     
-    [self.api requestWithSuccessBlock:^(BNRequstManager * _Nonnull manager, id responseObject, NSError * _Nullable error) {
+    [self.api requestWithSuccessBlock:^(NNRequstManager * _Nonnull manager, id responseObject, NSError * _Nullable error) {
         DDLog(@"%@",responseObject);
-        BNAppInfoRootModel *model = [BNAppInfoRootModel yy_modelWithJSON:responseObject];
+        NNRootAppInfoModel *model = [NNRootAppInfoModel yy_modelWithJSON:responseObject];
 
-        [BNCacheManager.shared setObject:model forKey:kCacheKeyUserModel];
-        BNAppInfoRootModel *userModel = [BNCacheManager.shared objectForKey:kCacheKeyUserModel];
+        [NNCacheManager.shared setObject:model forKey:kCacheKeyUserModel];
+        NNRootAppInfoModel *userModel = [NNCacheManager.shared objectForKey:kCacheKeyUserModel];
         DDLog(userModel.description);
-    } failedBlock:^(BNRequstManager * _Nonnull manager, id _Nullable responseObject, NSError * _Nullable error) {
+    } failedBlock:^(NNRequstManager * _Nonnull manager, id _Nullable responseObject, NSError * _Nullable error) {
         DDLog(@"%@",error.message);
 
     }];
@@ -326,9 +326,9 @@
 }
 
 
--(BNCheckVersApi *)api{
+-( NNCheckVersApi *)api{
     if (!_api) {
-        _api = [[BNCheckVersApi alloc]init];
+        _api = [[ NNCheckVersApi alloc]init];
     }
     return _api;
 }

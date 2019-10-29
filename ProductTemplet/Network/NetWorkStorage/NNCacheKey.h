@@ -1,5 +1,5 @@
 //
-//  BNCacheKey.h
+//  NNCacheKey.h
 //  ProductTemplet
 //
 //  Created by Bin Shang on 2019/4/29.
@@ -10,7 +10,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface BNCacheKey : NSObject
+@interface NNCacheKey : NSObject
 
 FOUNDATION_EXPORT NSString * const kCacheKeyToken ;
 FOUNDATION_EXPORT NSString * const kCacheKeyUserModel ;

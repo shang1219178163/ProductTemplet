@@ -1,5 +1,5 @@
 //
-//  BNCacheProtocol.h
+//  NNCacheProtocol.h
 //  ProductTemplet
 //
 //  Created by Bin Shang on 2019/4/29.
@@ -10,7 +10,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@protocol BNCacheProtocol <NSObject>
+@protocol NNCacheProtocol <NSObject>
 
 - (void)setObject:(id<NSCoding>)object forKey:(NSString *)key;
 

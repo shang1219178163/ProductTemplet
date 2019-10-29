@@ -1,14 +1,14 @@
 //
-//  BNDiskCache.m
+//  NNDiskCache.m
 //  ProductTemplet
 //
 //  Created by Bin Shang on 2019/4/29.
 //  Copyright © 2019 BN. All rights reserved.
 //
 
-#import "BNDiskCache.h"
+#import "NNDiskCache.h"
 
-@implementation BNDiskCache{
+@implementation NNDiskCache{
     YYDiskCache * _diskCache;
 
 }

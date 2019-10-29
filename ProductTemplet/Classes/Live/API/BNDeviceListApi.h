@@ -6,11 +6,11 @@
 //  Copyright © 2019 BN. All rights reserved.
 //
 
-#import "BNBaseRequestApi.h"
+#import "NNBaseRequestApi.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface BNDeviceListApi : BNBaseRequestApi
+@interface BNDeviceListApi : NNBaseRequestApi
 
 @property(nonatomic, assign) NSInteger limit;
 @property(nonatomic, assign) BOOL online;

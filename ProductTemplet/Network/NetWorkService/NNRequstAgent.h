@@ -10,15 +10,16 @@
 #import <AFNetworking/AFNetworking.h>
 #import "AFNetworkActivityIndicatorManager.h"
 
-#import "BNURLResponse.h"
-#import "BNUploadModel.h"
+#import "NNURLResponse.h"
+#import "NNUploadModel.h"
 
-typedef void(^NNNetworkBlock) (BNURLResponse * _Nonnull response);
+typedef void(^NNNetworkBlock) (NNURLResponse * _Nonnull response);
 typedef void(^NNProgressBlock)(NSProgress * _Nonnull progress);
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface BNRequstAgent : NSObject
+/// <#Description#>
+@interface NNRequstAgent : NSObject
 
 + (instancetype)shared;
 

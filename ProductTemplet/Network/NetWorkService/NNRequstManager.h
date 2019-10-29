@@ -1,5 +1,5 @@
 //
-//  BNRequstManager.h
+//  NNRequstManager.h
 //  ProductTemplet
 //
 //  Created by Bin Shang on 2019/4/26.
@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@class BNRequstManager;
+@class NNRequstManager;
 
 typedef NS_ENUM (NSInteger, BNRequestType){
     BNRequestTypeGet,
@@ -59,16 +59,16 @@ typedef NS_ENUM (NSInteger, BNRequestCode){
 @protocol BNRequestManagerResultDelegate <NSObject>
 
 @required
-- (void)manager:(BNRequstManager *_Nonnull)manager successDic:(NSDictionary *_Nullable)dic failError:(NSError *_Nullable)error;
+- (void)manager:(NNRequstManager *_Nonnull)manager successDic:(NSDictionary *_Nullable)dic failError:(NSError *_Nullable)error;
 
 @end
 
 NS_ASSUME_NONNULL_BEGIN
 
 /// 网络请求结果
-typedef void(^BNRequestBlock)(BNRequstManager *manager, id _Nullable responseObject, NSError *_Nullable error);
+typedef void(^BNRequestBlock)(NNRequstManager *manager, id _Nullable responseObject, NSError *_Nullable error);
 
-@interface BNRequstManager : NSObject
+@interface NNRequstManager : NSObject
 
 @property(nonatomic, weak) id<BNRequestManagerProtocol> child;
 @property(nonatomic, weak) id<BNRequestManagerResultDelegate> delegate;

@@ -1,5 +1,5 @@
 //
-//  BNAPIConfi.h
+//  NNAPIConfi.h
 //  ProductTemplet
 //
 //  Created by Bin Shang on 2019/4/26.
@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 
 
-@interface BNAPIConfi : NSObject
+@interface NNAPIConfi : NSObject
 /// 接口列表
 @property (class, nonatomic, strong, readonly) NSArray * serviceUrlList;
 

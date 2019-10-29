@@ -50,7 +50,7 @@
 - (void)requestLogin{
 
     [SVProgressHUD showWithStatus:kMsg_NetWorkRequesting];
-    [self.userLoginApi requestWithSuccessBlock:^(BNRequstManager * _Nonnull manager, id _Nullable responseObject, NSError * _Nullable error) {
+    [self.userLoginApi requestWithSuccessBlock:^(NNRequstManager * _Nonnull manager, id _Nullable responseObject, NSError * _Nullable error) {
         DDLog(@"%@", responseObject);
         if (![responseObject isKindOfClass:NSDictionary.class]) {
             return ;
@@ -63,7 +63,7 @@
         [SVProgressHUD dismiss];
         [self goController:@"DeviceListController" title:@"设备列表" obj:nil];
         
-    } failedBlock:^(BNRequstManager * _Nonnull manager, id _Nullable responseObject, NSError * _Nullable error) {
+    } failedBlock:^(NNRequstManager * _Nonnull manager, id _Nullable responseObject, NSError * _Nullable error) {
         [SVProgressHUD showErrorWithStatus:error.description];
 
     }];

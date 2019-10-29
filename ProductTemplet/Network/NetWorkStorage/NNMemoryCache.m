@@ -1,14 +1,14 @@
 //
-//  BNMemoryCache.m
+//  NNMemoryCache.m
 //  ProductTemplet
 //
 //  Created by Bin Shang on 2019/4/29.
 //  Copyright © 2019 BN. All rights reserved.
 //
 
-#import "BNMemoryCache.h"
+#import "NNMemoryCache.h"
 
-@implementation BNMemoryCache{
+@implementation NNMemoryCache{
     YYMemoryCache * _memoryCache;
     
 }

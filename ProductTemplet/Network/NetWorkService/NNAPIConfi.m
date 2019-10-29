@@ -1,18 +1,18 @@
 //
-//  BNAPIConfi.m
+//  NNAPIConfi.m
 //  ProductTemplet
 //
 //  Created by Bin Shang on 2019/4/26.
 //  Copyright © 2019 BN. All rights reserved.
 //
 
-#import "BNAPIConfi.h"
+#import "NNAPIConfi.h"
 #import "UIApplication+Helper.h"
 
 /// 正式接口
 static NSString * const kAPIServiceUrl = @"http://114.116.1.186:10810";
 
-@implementation BNAPIConfi
+@implementation NNAPIConfi
 
 static NSString * _testUrl = nil;
 
@@ -65,7 +65,7 @@ static NSString * _testUrl = nil;
 }
 
 + (void)setTestUrl:(NSString *)testUrl{
-    assert([BNAPIConfi.serviceUrlList containsObject:testUrl]);
+    assert([NNAPIConfi.serviceUrlList containsObject:testUrl]);
     _testUrl = testUrl;
 }
 

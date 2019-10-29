@@ -1,16 +1,16 @@
 //
-//  BNUploadModel.m
+//  NNUploadModel.m
 //  ProductTemplet
 //
 //  Created by Bin Shang on 2019/4/28.
 //  Copyright © 2019 BN. All rights reserved.
 //
 
-#import "BNUploadModel.h"
+#import "NNUploadModel.h"
 
-@implementation BNUploadModel
+@implementation NNUploadModel
 
-BNUploadModel *BNUploadModelFromParam(NSArray<UIImage *> *images, NSInteger idx, NSString *fileName){
+NNUploadModel *BNUploadModelFromParam(NSArray<UIImage *> *images, NSInteger idx, NSString *fileName){
     //    NSData *imageData = [Utilities_DM compressImageDataFromImage:image maxFileSize:1024];
     //    NSString * imageType = [Utilities_DM contentTypeForImageData:imageData];
     NSData *imageData = nil;
@@ -22,7 +22,7 @@ BNUploadModel *BNUploadModelFromParam(NSArray<UIImage *> *images, NSInteger idx,
     
     NSString * name = [NSString stringWithFormat:@"image%@",@(idx+1)];
     
-    BNUploadModel * model = [[BNUploadModel alloc] init];
+    NNUploadModel * model = [[NNUploadModel alloc] init];
     model.data = imageData;
     model.name = name;
     model.fileName = fileName ? [NSString stringWithFormat:@"%@.%@", fileName, imageType] : imageFileName;

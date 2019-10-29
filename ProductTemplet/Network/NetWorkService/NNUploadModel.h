@@ -1,5 +1,5 @@
 //
-//  BNUploadModel.h
+//  NNUploadModel.h
 //  ProductTemplet
 //
 //  Created by Bin Shang on 2019/4/28.
@@ -10,14 +10,14 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface BNUploadModel : NSObject
+@interface NNUploadModel : NSObject
 
 @property (nonatomic, strong) NSData *data;
 @property (nonatomic, strong) NSString *name;
 @property (nonatomic, strong) NSString *fileName;
 @property (nonatomic, strong) NSString *mimeType;
 
-BNUploadModel *BNUploadModelFromParam(NSArray<UIImage *> *images, NSInteger idx, NSString *fileName);
+NNUploadModel *BNUploadModelFromParam(NSArray<UIImage *> *images, NSInteger idx, NSString *fileName);
 
 @end
 

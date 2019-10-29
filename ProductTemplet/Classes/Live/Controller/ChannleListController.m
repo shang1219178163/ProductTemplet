@@ -55,7 +55,7 @@
     PKDeviceInfoModel * deviceModel = self.obj;
     self.channelListApi.ID = deviceModel.ID;
     
-    [self.channelListApi requestWithSuccessBlock:^(BNRequstManager * _Nonnull manager, id _Nullable responseObject, NSError * _Nullable error) {
+    [self.channelListApi requestWithSuccessBlock:^(NNRequstManager * _Nonnull manager, id _Nullable responseObject, NSError * _Nullable error) {
         //        DDLog(@"%@", responseObject);
         
         dispatch_async(dispatch_get_global_queue(0, 0), ^{
@@ -71,7 +71,7 @@
             });
         });
         
-    } failedBlock:^(BNRequstManager * _Nonnull manager, id _Nullable responseObject, NSError * _Nullable error) {
+    } failedBlock:^(NNRequstManager * _Nonnull manager, id _Nullable responseObject, NSError * _Nullable error) {
         DDLog(@"%@", error);
         
     }];

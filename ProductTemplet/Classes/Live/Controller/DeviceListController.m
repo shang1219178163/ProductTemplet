@@ -60,7 +60,7 @@
 - (void)requestDeviceList{
     
     [SVProgressHUD showWithStatus:kMsg_NetWorkRequesting];
-    [self.deviceListApi requestWithSuccessBlock:^(BNRequstManager * _Nonnull manager, id _Nullable responseObject, NSError * _Nullable error) {
+    [self.deviceListApi requestWithSuccessBlock:^(NNRequstManager * _Nonnull manager, id _Nullable responseObject, NSError * _Nullable error) {
         DDLog(@"%@", [(NSDictionary *)responseObject jsonString]);
         
         dispatch_async(dispatch_get_global_queue(0, 0), ^{
@@ -74,7 +74,7 @@
             });
         });
        
-    } failedBlock:^(BNRequstManager * _Nonnull manager, id _Nullable responseObject, NSError * _Nullable error) {
+    } failedBlock:^(NNRequstManager * _Nonnull manager, id _Nullable responseObject, NSError * _Nullable error) {
         DDLog(@"%@", error);
         
     }];
@@ -83,12 +83,12 @@
 
 - (void)requestLogout{
     [SVProgressHUD showWithStatus:kMsg_NetWorkRequesting];
-    [self.userLogoutApi requestWithSuccessBlock:^(BNRequstManager * _Nonnull manager, id _Nullable responseObject, NSError * _Nullable error) {
+    [self.userLogoutApi requestWithSuccessBlock:^(NNRequstManager * _Nonnull manager, id _Nullable responseObject, NSError * _Nullable error) {
         DDLog(@"%@", responseObject);
         [SVProgressHUD dismiss];
         [self.navigationController popViewControllerAnimated:true];
         
-    } failedBlock:^(BNRequstManager * _Nonnull manager, id _Nullable responseObject, NSError * _Nullable error) {
+    } failedBlock:^(NNRequstManager * _Nonnull manager, id _Nullable responseObject, NSError * _Nullable error) {
         DDLog(@"%@", error);
         
     }];
@@ -99,10 +99,10 @@
     
     [SVProgressHUD showWithStatus:kMsg_NetWorkRequesting];
 
-    [self.userInfoApi requestWithSuccessBlock:^(BNRequstManager * _Nonnull manager, id _Nullable responseObject, NSError * _Nullable error) {
+    [self.userInfoApi requestWithSuccessBlock:^(NNRequstManager * _Nonnull manager, id _Nullable responseObject, NSError * _Nullable error) {
         DDLog(@"%@", responseObject);
         
-    } failedBlock:^(BNRequstManager * _Nonnull manager, id _Nullable responseObject, NSError * _Nullable error) {
+    } failedBlock:^(NNRequstManager * _Nonnull manager, id _Nullable responseObject, NSError * _Nullable error) {
         DDLog(@"%@", error);
         
     }];

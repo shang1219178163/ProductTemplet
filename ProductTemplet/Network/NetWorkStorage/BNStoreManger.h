@@ -7,7 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "BNCacheManager.h"
+#import "NNCacheManager.h"
 
 NS_ASSUME_NONNULL_BEGIN
 

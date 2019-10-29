@@ -10,9 +10,9 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface BNURLResponse : NSObject
+@interface NNURLResponse : NSObject
 
-BNURLResponse *BNURLResponseFromParam(__kindof NSURLRequest *request,__kindof NSURLResponse *response, id _Nullable responseObject, NSError * _Nullable error);
+NNURLResponse *BNURLResponseFromParam(__kindof NSURLRequest *request,__kindof NSURLResponse *response, id _Nullable responseObject, NSError * _Nullable error);
 
 @property (nonatomic, strong) NSURLRequest *request;
 @property (nonatomic, strong) NSHTTPURLResponse *response;

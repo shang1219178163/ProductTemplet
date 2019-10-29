@@ -1,5 +1,5 @@
 //
-//  BNLog.h
+//  NNLog.h
 //  ProductTemplet
 //
 //  Created by Bin Shang on 2019/4/28.
@@ -10,7 +10,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface BNLog : NSObject
+@interface NNLog : NSObject
 
 + (void)logRequestURI:(NSString *)uri;
 

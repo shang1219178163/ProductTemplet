@@ -1,5 +1,5 @@
 //
-//  BNPageModel.h
+//  NNPageModel.h
 //  ProductTemplet
 //
 //  Created by Bin Shang on 2019/4/26.
@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface BNPageModel : NSObject
+@interface NNPageModel : NSObject
 
 @property (nonatomic, assign, readonly) NSUInteger currPage;
 /// 最小页码,不一定是1(重置时currPage同值)

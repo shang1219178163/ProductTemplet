@@ -7,7 +7,7 @@
 //
 
 #import "LiveViewController.h"
-#import "BNAPIConfi.h"
+#import "NNAPIConfi.h"
 
 #import "BNUserLoginApi.h"
 #import "BNUserLogoutApi.h"
@@ -56,7 +56,7 @@
     [self.view addSubview:self.itemsView];
 
     [self createBarItem:@"登录" isLeft:true handler:^(id obj, UIView *item, NSInteger idx) {
-        [self.userLoginApi requestWithSuccessBlock:^(BNRequstManager * _Nonnull manager, id _Nullable responseObject, NSError * _Nullable error) {
+        [self.userLoginApi requestWithSuccessBlock:^(NNRequstManager * _Nonnull manager, id _Nullable responseObject, NSError * _Nullable error) {
             DDLog(@"%@", responseObject);
             if (![responseObject isKindOfClass:NSDictionary.class]) {
                 return ;
@@ -66,7 +66,7 @@
             [NSUserDefaults setObject:dic[@"TokenTimeout"] forKey:@"tokenTimeout"];
             [NSUserDefaults synchronize];
             
-        } failedBlock:^(BNRequstManager * _Nonnull manager, id _Nullable responseObject, NSError * _Nullable error) {
+        } failedBlock:^(NNRequstManager * _Nonnull manager, id _Nullable responseObject, NSError * _Nullable error) {
             
         }];
         
@@ -74,10 +74,10 @@
     
     [self createBarItem:@"注销" isLeft:false handler:^(id obj, UIView *item, NSInteger idx) {
 
-        [self.userLogoutApi requestWithSuccessBlock:^(BNRequstManager * _Nonnull manager, id _Nullable responseObject, NSError * _Nullable error) {
+        [self.userLogoutApi requestWithSuccessBlock:^(NNRequstManager * _Nonnull manager, id _Nullable responseObject, NSError * _Nullable error) {
             DDLog(@"%@", responseObject);
 
-        } failedBlock:^(BNRequstManager * _Nonnull manager, id _Nullable responseObject, NSError * _Nullable error) {
+        } failedBlock:^(NNRequstManager * _Nonnull manager, id _Nullable responseObject, NSError * _Nullable error) {
             DDLog(@"%@", error);
 
         }];
@@ -90,7 +90,7 @@
 - (void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
     
-    [self.userLoginApi requestWithSuccessBlock:^(BNRequstManager * _Nonnull manager, id _Nullable responseObject, NSError * _Nullable error) {
+    [self.userLoginApi requestWithSuccessBlock:^(NNRequstManager * _Nonnull manager, id _Nullable responseObject, NSError * _Nullable error) {
         DDLog(@"%@", responseObject);
         if (![responseObject isKindOfClass:NSDictionary.class]) {
             return ;
@@ -100,25 +100,25 @@
         [NSUserDefaults setObject:dic[@"TokenTimeout"] forKey:@"tokenTimeout"];
         [NSUserDefaults synchronize];
         
-        [self.userInfoApi requestWithSuccessBlock:^(BNRequstManager * _Nonnull manager, id _Nullable responseObject, NSError * _Nullable error) {
+        [self.userInfoApi requestWithSuccessBlock:^(NNRequstManager * _Nonnull manager, id _Nullable responseObject, NSError * _Nullable error) {
             DDLog(@"%@", responseObject);
 
-        } failedBlock:^(BNRequstManager * _Nonnull manager, id _Nullable responseObject, NSError * _Nullable error) {
+        } failedBlock:^(NNRequstManager * _Nonnull manager, id _Nullable responseObject, NSError * _Nullable error) {
             DDLog(@"%@", error);
             
         }];
         
-        [self.serverinfoApi requestWithSuccessBlock:^(BNRequstManager * _Nonnull manager, id _Nullable responseObject, NSError * _Nullable error) {
+        [self.serverinfoApi requestWithSuccessBlock:^(NNRequstManager * _Nonnull manager, id _Nullable responseObject, NSError * _Nullable error) {
             DDLog(@"%@", responseObject);
             PKSeverinfoModel *model = [PKSeverinfoModel yy_modelWithJSON:responseObject];
             DDLog(@"%@", model);
 
-        } failedBlock:^(BNRequstManager * _Nonnull manager, id _Nullable responseObject, NSError * _Nullable error) {
+        } failedBlock:^(NNRequstManager * _Nonnull manager, id _Nullable responseObject, NSError * _Nullable error) {
             DDLog(@"%@", error);
             
         }];
 
-    } failedBlock:^(BNRequstManager * _Nonnull manager, id _Nullable responseObject, NSError * _Nullable error) {
+    } failedBlock:^(NNRequstManager * _Nonnull manager, id _Nullable responseObject, NSError * _Nullable error) {
         DDLog(@"%@", error);
 
     }];
@@ -139,10 +139,10 @@
         case 0:
         {
 
-            [self.moidyPwdApi requestWithSuccessBlock:^(BNRequstManager * _Nonnull manager, id  _Nullable responseObject, NSError * _Nullable error) {
+            [self.moidyPwdApi requestWithSuccessBlock:^(NNRequstManager * _Nonnull manager, id  _Nullable responseObject, NSError * _Nullable error) {
                 DDLog(@"%@",responseObject);
                 
-            } failedBlock:^(BNRequstManager * _Nonnull manager, id  _Nullable responseObject, NSError * _Nullable error) {
+            } failedBlock:^(NNRequstManager * _Nonnull manager, id  _Nullable responseObject, NSError * _Nullable error) {
                 DDLog(@"%@", error);
                 
             }];
@@ -150,10 +150,10 @@
             break;
         case 1:
         {
-            [self.restartApi requestWithSuccessBlock:^(BNRequstManager * _Nonnull manager, id  _Nullable responseObject, NSError * _Nullable error) {
+            [self.restartApi requestWithSuccessBlock:^(NNRequstManager * _Nonnull manager, id  _Nullable responseObject, NSError * _Nullable error) {
                 DDLog(@"%@",responseObject);
                 
-            } failedBlock:^(BNRequstManager * _Nonnull manager, id  _Nullable responseObject, NSError * _Nullable error) {
+            } failedBlock:^(NNRequstManager * _Nonnull manager, id  _Nullable responseObject, NSError * _Nullable error) {
                 DDLog(@"%@", error);
                 
             }];
@@ -161,10 +161,10 @@
             break;
         case 2:
         {
-            [self.userInfoApi requestWithSuccessBlock:^(BNRequstManager * _Nonnull manager, id _Nullable responseObject, NSError * _Nullable error) {
+            [self.userInfoApi requestWithSuccessBlock:^(NNRequstManager * _Nonnull manager, id _Nullable responseObject, NSError * _Nullable error) {
                 DDLog(@"%@", responseObject);
                 
-            } failedBlock:^(BNRequstManager * _Nonnull manager, id _Nullable responseObject, NSError * _Nullable error) {
+            } failedBlock:^(NNRequstManager * _Nonnull manager, id _Nullable responseObject, NSError * _Nullable error) {
                 DDLog(@"%@", error);
                 
             }];
@@ -172,14 +172,14 @@
             break;
         case 3:
         {
-            [self.deviceListApi requestWithSuccessBlock:^(BNRequstManager * _Nonnull manager, id _Nullable responseObject, NSError * _Nullable error) {
+            [self.deviceListApi requestWithSuccessBlock:^(NNRequstManager * _Nonnull manager, id _Nullable responseObject, NSError * _Nullable error) {
                 DDLog(@"%@", [(NSDictionary *)responseObject jsonString]);
                 PKDeviceListRootModel *model = [PKDeviceListRootModel yy_modelWithJSON:responseObject];
                 DDLog(@"%@", model);
                 self.devicesRootModel = model;
                 [self goController:@"DeviceListController" title:@"设备列表" obj:model];
                 
-            } failedBlock:^(BNRequstManager * _Nonnull manager, id _Nullable responseObject, NSError * _Nullable error) {
+            } failedBlock:^(NNRequstManager * _Nonnull manager, id _Nullable responseObject, NSError * _Nullable error) {
                 DDLog(@"%@", error);
                 
             }];
@@ -187,10 +187,10 @@
             break;
         case 4:
         {
-            [self.channelListApi requestWithSuccessBlock:^(BNRequstManager * _Nonnull manager, id _Nullable responseObject, NSError * _Nullable error) {
+            [self.channelListApi requestWithSuccessBlock:^(NNRequstManager * _Nonnull manager, id _Nullable responseObject, NSError * _Nullable error) {
                 DDLog(@"%@", responseObject);
                 
-            } failedBlock:^(BNRequstManager * _Nonnull manager, id _Nullable responseObject, NSError * _Nullable error) {
+            } failedBlock:^(NNRequstManager * _Nonnull manager, id _Nullable responseObject, NSError * _Nullable error) {
                 DDLog(@"%@", error);
                 
             }];
@@ -198,10 +198,10 @@
             break;
         case 5:
         {
-            [self.channelstreamApi requestWithSuccessBlock:^(BNRequstManager * _Nonnull manager, id _Nullable responseObject, NSError * _Nullable error) {
+            [self.channelstreamApi requestWithSuccessBlock:^(NNRequstManager * _Nonnull manager, id _Nullable responseObject, NSError * _Nullable error) {
                 DDLog(@"%@", responseObject);
                 
-            } failedBlock:^(BNRequstManager * _Nonnull manager, id _Nullable responseObject, NSError * _Nullable error) {
+            } failedBlock:^(NNRequstManager * _Nonnull manager, id _Nullable responseObject, NSError * _Nullable error) {
                 DDLog(@"%@", error);
                 
             }];

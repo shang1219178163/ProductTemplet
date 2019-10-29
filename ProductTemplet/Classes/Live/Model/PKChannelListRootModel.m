@@ -3,7 +3,7 @@
 //
 
 #import "PKChannelListRootModel.h"
-#import "BNAPIConfi.h"
+#import "NNAPIConfi.h"
 
 @implementation PKChannelListRootModel
 
@@ -33,8 +33,8 @@
 
 - (void)setURL:(NSString *)URL{
     _URL = URL;
-    if (![_URL hasPrefix:BNAPIConfi.serviceUrl]) {
-        _URL = [BNAPIConfi.serviceUrl stringByAppendingString:_URL];
+    if (![_URL hasPrefix:NNAPIConfi.serviceUrl]) {
+        _URL = [NNAPIConfi.serviceUrl stringByAppendingString:_URL];
     }
 }
 
@@ -46,8 +46,8 @@
 
 - (void)setSnapURL:(NSString *)SnapURL{
     _SnapURL = SnapURL;
-    if (![_SnapURL hasPrefix:BNAPIConfi.serviceUrl]) {
-        _SnapURL = [BNAPIConfi.serviceUrl stringByAppendingString:_SnapURL];
+    if (![_SnapURL hasPrefix:NNAPIConfi.serviceUrl]) {
+        _SnapURL = [NNAPIConfi.serviceUrl stringByAppendingString:_SnapURL];
     }
 }
 

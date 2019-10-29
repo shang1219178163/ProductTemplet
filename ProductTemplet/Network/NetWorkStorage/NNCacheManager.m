@@ -1,14 +1,14 @@
 //
-//  BNCacheManager.m
+//  NNCacheManager.m
 //  ProductTemplet
 //
 //  Created by Bin Shang on 2019/4/29.
 //  Copyright © 2019 BN. All rights reserved.
 //
 
-#import "BNCacheManager.h"
+#import "NNCacheManager.h"
 
-@implementation BNCacheManager{
+@implementation NNCacheManager{
     YYCache * _cache;
 }
 
@@ -16,18 +16,18 @@
     self = [super init];
     if (self) {
         _cache = [YYCache cacheWithName:@"DataCache"];
-        _diskCache = [[BNDiskCache alloc]initWithCache: _cache.diskCache];
-        _memoryCache = [[BNMemoryCache alloc]initWithCache:_cache.memoryCache];
+        _diskCache = [[NNDiskCache alloc]initWithCache: _cache.diskCache];
+        _memoryCache = [[NNMemoryCache alloc]initWithCache:_cache.memoryCache];
         
     }
     return self;
 }
 
 + (instancetype)shared{
-    static BNCacheManager *_instance;
+    static NNCacheManager *_instance;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
-        _instance = [[BNCacheManager alloc]init];
+        _instance = [[NNCacheManager alloc]init];
         
     });
     return _instance;

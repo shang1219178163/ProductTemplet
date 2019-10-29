@@ -1,14 +1,14 @@
 //
-//  BNCheckVersApi.h
+//   NNCheckVersApi.h
 //  ProductTemplet
 //
 //  Created by Bin Shang on 2019/4/29.
 //  Copyright © 2019 BN. All rights reserved.
 //
 
-#import "BNBaseRequestApi.h"
+#import "NNBaseRequestApi.h"
 
-@interface BNCheckVersApi : BNBaseRequestApi
+@interface  NNCheckVersApi : NNBaseRequestApi
 
 
 

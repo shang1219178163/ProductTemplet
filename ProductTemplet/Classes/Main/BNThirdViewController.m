@@ -7,8 +7,7 @@
 //
 
 #import "BNThirdViewController.h"
-#import "BNCheckVersApi.h"
-#import "BNAppInfoRootModel.h"
+#import " NNCheckVersApi.h"
 
 @interface BNThirdViewController ()
 
@@ -28,8 +27,7 @@
 - (void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
     
-    BNAppInfoRootModel *userModel = [BNCacheManager.shared objectForKey:kCacheKeyUserModel];
-    DDLog(@"%@", userModel.description);
+
 }
 
 - (void)didReceiveMemoryWarning {
