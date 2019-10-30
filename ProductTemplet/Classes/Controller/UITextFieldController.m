@@ -117,7 +117,7 @@
 - (BOOL)checkVersion:(NSString *)appStoreID {
     __block BOOL isUpdate = NO;
     
-    NSString *path = [NSString stringWithFormat:@"http://itunes.apple.com/cn/lookup?id=%@",appStoreID];
+    NSString *path = [NSString stringWithFormat:@"http://itunes.apple.com/cn/lookup?id=%@", appStoreID];
     NSMutableURLRequest *request = [NSMutableURLRequest requestPostURL:path body:nil];
     
     NSURLSessionDataTask *dataTask = [NSURLSession sendAsynRequest:request handler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
@@ -136,7 +136,7 @@
         _textField = [[NNTextFieldOne alloc]initWithFrame:CGRectMake(20, 20, kScreenWidth - 40, 40)];
         _textField.backgroundColor = UIColor.greenColor;
         _textField.clearButtonMode = UITextFieldViewModeAlways;
-        [_textField showHistoryWithImage:@"click" handlder:^(NNTextFieldOne * _Nonnull textField, UIImageView * _Nonnull imgView) {
+        [_textField showHistoryWithImage:@"click" handlder:^(NNTextFieldOne * textField, UIImageView * imgView) {
             NSString * selectorName = CGRectGetHeight(textField.historyTableView.frame) < 5 ? @"showHistory"  :   @"hideHistroy";
             SEL selector = NSSelectorFromString(selectorName);
             [textField performSelectorOnMainThread:selector withObject:nil waitUntilDone:NO];

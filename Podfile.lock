@@ -34,7 +34,7 @@ PODS:
   - FMDB/standard (2.7.5)
   - GTMBase64 (1.0.1)
   - iCarousel (1.8.3)
-  - IQKeyboardManager (6.5.0)
+  - IQKeyboardManager (6.5.3)
   - JCore (2.1.4)
   - JPush (3.2.6):
     - JCore (< 3.0.0, >= 2.0.0)
@@ -44,7 +44,7 @@ PODS:
   - MBProgressHUD (1.1.0)
   - MJExtension (3.2.1)
   - MJRefresh (3.2.0)
-  - NNCategoryPro (2.2.5.5):
+  - NNCategoryPro (2.2.5.6):
     - AESCrypt-ObjC
     - FLAnimatedImage
     - GTMBase64
@@ -81,13 +81,13 @@ PODS:
   - PPNumberButton (0.8.0)
   - SDCycleScrollView (1.80):
     - SDWebImage (>= 5.0.0)
-  - SDWebImage (5.2.3):
-    - SDWebImage/Core (= 5.2.3)
-  - SDWebImage/Core (5.2.3)
+  - SDWebImage (5.2.5):
+    - SDWebImage/Core (= 5.2.5)
+  - SDWebImage/Core (5.2.5)
   - SocketRocket (0.5.1)
   - SVProgressHUD (2.2.5)
   - Toast (4.0.0)
-  - TZImagePickerController (3.2.5)
+  - TZImagePickerController (3.2.6)
   - UICKeyChainStore (2.1.2)
   - UMengAnalytics-NO-IDFA (4.2.5)
   - YBAttributeTextTapAction (3.0.3)
@@ -148,7 +148,7 @@ DEPENDENCIES:
   - ZYCornerRadius
 
 SPEC REPOS:
-  https://github.com/CocoaPods/Specs.git:
+  trunk:
     - AESCrypt-ObjC
     - AFNetworking
     - AMap3DMap-NO-IDFA
@@ -209,7 +209,7 @@ SPEC CHECKSUMS:
   FMDB: 2ce00b547f966261cd18927a3ddb07cb6f3db82a
   GTMBase64: f0f91be06a7a20b84c8e4fee30c0430395091d82
   iCarousel: d782f635afac190c49bb8ee455882284cff8b85f
-  IQKeyboardManager: 700e5155d6a292383b54e8678aec769e14fc78fc
+  IQKeyboardManager: c2f901164d56807a35788483584d09fa69192e8e
   JCore: d345c049141877eb61c33011455fdb5fcab1673f
   JPush: 41dd48a69bd8c08abc692dc7f2b23c0fb281471f
   JZLocationConverter: 3d816bee6484aed9c155a6045a02ce444833e2f0
@@ -218,7 +218,7 @@ SPEC CHECKSUMS:
   MBProgressHUD: e7baa36a220447d8aeb12769bf0585582f3866d9
   MJExtension: 635f2c663dcb1bf76fa4b715b2570a5710aec545
   MJRefresh: ed450d6eb9d3346a2cb033ab7eb6de090aeef437
-  NNCategoryPro: 2ee953117163d7dc0a31fe10d12cc6ae24218a90
+  NNCategoryPro: 0517300a9e99cc4d89df8897f02b6630362e47d5
   NNCollectionView: f7a43711e3af90fa665ce4b32883686693de549e
   NNGloble: 28d22c2a61905c9b988ebeef424ff521eed9f4ef
   NNTableViewCell: 208edf59178f099238cee982dcacb8855d497c1a
@@ -226,11 +226,11 @@ SPEC CHECKSUMS:
   NNViewComplex: db2c081f082a261611278231943fa0786a388aab
   PPNumberButton: 4442ff64c21d91733057ca1b3dc05fb4df55f2c0
   SDCycleScrollView: b3c9a5ed840c771c4938978174c7c9d9feefeb96
-  SDWebImage: 46a7f73228f84ce80990c786e4372cf4db5875ce
+  SDWebImage: 4eabf2fa6695c95c47724214417a9c036c965e4a
   SocketRocket: d57c7159b83c3c6655745cd15302aa24b6bae531
   SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
   Toast: 91b396c56ee72a5790816f40d3a94dd357abc196
-  TZImagePickerController: 17440009643a472aa91e8af3b54d05091b152f0a
+  TZImagePickerController: 3900e8d68428ff3a88817efce82ae9e7d9ffebc9
   UICKeyChainStore: 85db518bb1d294366d15ec9b92a416c4e670518f
   UMengAnalytics-NO-IDFA: 16666e32edce5be44ae5b14aaaa7f3582e09d6ab
   YBAttributeTextTapAction: b7e61f0265b5673e7ce7bad7319e8eff9e209a2b
