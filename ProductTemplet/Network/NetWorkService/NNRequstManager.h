@@ -13,6 +13,7 @@
 typedef NS_ENUM (NSInteger, NNRequestType){
     NNRequestTypeGet,
     NNRequestTypePost,
+    NNRequestTypeFormDataPost,
     NNRequestTypePut,
     NNRequestTypeDelete,
 };
@@ -33,7 +34,7 @@ typedef NS_ENUM (NSInteger, NNRequestCode){
 };
 
 
-@protocol BNRequestManagerProtocol <NSObject>
+@protocol NNRequestManagerProtocol <NSObject>
 
 @required
 
@@ -56,7 +57,7 @@ typedef NS_ENUM (NSInteger, NNRequestCode){
 @end
 
 
-@protocol BNRequestManagerResultDelegate <NSObject>
+@protocol NNRequestManagerResultDelegate <NSObject>
 
 @required
 - (void)manager:(NNRequstManager *_Nonnull)manager successDic:(NSDictionary *_Nullable)dic failError:(NSError *_Nullable)error;
@@ -66,21 +67,21 @@ typedef NS_ENUM (NSInteger, NNRequestCode){
 NS_ASSUME_NONNULL_BEGIN
 
 /// 网络请求结果
-typedef void(^BNRequestBlock)(NNRequstManager *manager, id _Nullable responseObject, NSError *_Nullable error);
+typedef void(^NNRequestBlock)(NNRequstManager *manager, id _Nullable responseObject, NSError *_Nullable error);
 
 @interface NNRequstManager : NSObject
 
-@property(nonatomic, weak) id<BNRequestManagerProtocol> child;
-@property(nonatomic, weak) id<BNRequestManagerResultDelegate> delegate;
-@property(nonatomic, copy) BNRequestBlock successBlock;
-@property(nonatomic, copy) BNRequestBlock failureBlock;
-@property(nonatomic, copy) BNRequestBlock requestBlock;
+@property(nonatomic, weak) id<NNRequestManagerProtocol> child;
+@property(nonatomic, weak) id<NNRequestManagerResultDelegate> delegate;
+@property(nonatomic, copy) NNRequestBlock successBlock;
+@property(nonatomic, copy) NNRequestBlock failureBlock;
+@property(nonatomic, copy) NNRequestBlock requestBlock;
 
 @property(nonatomic, assign, readonly) BOOL isLoading;
 
-- (NSURLSessionTask *)requestWithSuccessBlock:(BNRequestBlock)successBlock failedBlock:(BNRequestBlock)failureBlock;
+- (NSURLSessionTask *)requestWithSuccessBlock:(NNRequestBlock)successBlock failedBlock:(NNRequestBlock)failureBlock;
 
-- (NSURLSessionTask *)requestWithBlock:(BNRequestBlock)block;
+- (NSURLSessionTask *)requestWithBlock:(NNRequestBlock)block;
 
 - (void)cancelAllRequest;
 

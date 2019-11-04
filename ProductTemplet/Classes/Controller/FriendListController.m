@@ -20,7 +20,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    [self.view addSubview:self.tbView];
+    [self.view addSubview:self.tbViewGrouped];
 
     [self initDataSource];
 }
@@ -58,12 +58,10 @@
     NNFoldSectionModel * foldModel = [self itemAtSection:section];
     NSInteger count = foldModel.isOpen  ? foldModel.dataList.count : 0;
     return count;
-    
 }
 
 -(CGFloat) tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
     return 50;
-    
 }
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
@@ -81,7 +79,6 @@
     cell.labelLeftSub.textColor = UIColor.redColor;
     [cell getViewLayer];
     return cell;
-    
 }
 
 //-(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{

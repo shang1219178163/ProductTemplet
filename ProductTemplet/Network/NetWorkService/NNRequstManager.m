@@ -26,8 +26,8 @@
 - (instancetype)init{
     self = [super init];
     if (self) {
-        if ([self conformsToProtocol:@protocol(BNRequestManagerProtocol)]) {
-            self.child = (id <BNRequestManagerProtocol>)self;
+        if ([self conformsToProtocol:@protocol(NNRequestManagerProtocol)]) {
+            self.child = (id <NNRequestManagerProtocol>)self;
             
         } else {
             NSException *exception = [[NSException alloc] initWithName:@"BNRequestManager init exption" reason:@"必须在子数实现BNRequestManagerProtocol" userInfo:nil];
@@ -49,13 +49,13 @@
     return mdic.copy;
 }
 
-- (NSURLSessionTask *)requestWithSuccessBlock:(BNRequestBlock)successBlock failedBlock:(BNRequestBlock)failureBlock{
+- (NSURLSessionTask *)requestWithSuccessBlock:(NNRequestBlock)successBlock failedBlock:(NNRequestBlock)failureBlock{
     self.successBlock = successBlock;
     self.failureBlock = failureBlock;
     return [self startRequest];
 }
 
-- (NSURLSessionTask *)requestWithBlock:(BNRequestBlock)block{
+- (NSURLSessionTask *)requestWithBlock:(NNRequestBlock)block{
     self.requestBlock = block;
     return [self startRequest];
 }
@@ -65,7 +65,7 @@
 
     if (![self.child validateParams]) {
         NSError * error = [NSError errorWithMessage:@"validateParams参数校验失败" code:NNRequestCodeParamsError obj:nil];
-        if (self.delegate && [self.delegate conformsToProtocol:@protocol(BNRequestManagerProtocol)]) {
+        if (self.delegate && [self.delegate conformsToProtocol:@protocol(NNRequestManagerProtocol)]) {
             [self.delegate manager:self successDic:nil failError:error];
         }
         if (self.failureBlock) {
@@ -79,7 +79,7 @@
     
     if ([self.child respondsToSelector:@selector(jsonFromCache)] && self.child.jsonFromCache) {
         NSDictionary *cacheDic = self.child.jsonFromCache;
-        if (self.delegate && [self.delegate conformsToProtocol:@protocol(BNRequestManagerProtocol)]) {
+        if (self.delegate && [self.delegate conformsToProtocol:@protocol(NNRequestManagerProtocol)]) {
             [self.delegate manager:self successDic:cacheDic failError:nil];
         }
         if (self.successBlock) {
@@ -124,6 +124,22 @@
 
         }
             break;
+        case NNRequestTypeFormDataPost:
+       {
+           task = [NNRequstAgent.shared formDataPostWithURL:urlString parameters:params images:nil fileNames:nil progress:nil success:^(NNURLResponse * _Nonnull response) {
+               @strongify(self);
+               self.isLoading = false;
+               [self didSuccessOfResponse:response];
+               
+           } failure:^(NNURLResponse * _Nonnull response) {
+               @strongify(self);
+               self.isLoading = false;
+               [self didFailureOfResponse:response];
+               
+           }];
+
+       }
+           break;
         case NNRequestTypeGet:
         {
             task = [NNRequstAgent.shared GET:urlString parameters:params success:^(NNURLResponse * _Nonnull response) {
@@ -231,7 +247,7 @@
     [NNLog logResponseInfoWithURI:urlString responseJSON:jsonDic];
     
 //    DDLog(@"delegate:%@",self.delegate);
-    if (self.delegate && [self.delegate conformsToProtocol:@protocol(BNRequestManagerProtocol)]) {
+    if (self.delegate && [self.delegate conformsToProtocol:@protocol(NNRequestManagerProtocol)]) {
         [self.delegate manager:self successDic:jsonDic failError:nil];
     }
     if (self.successBlock) {
@@ -266,7 +282,7 @@
     }
     
     NSError * error = model.error ? : model.errorOther;
-    if (self.delegate && [self.delegate conformsToProtocol:@protocol(BNRequestManagerProtocol)]) {
+    if (self.delegate && [self.delegate conformsToProtocol:@protocol(NNRequestManagerProtocol)]) {
         [self.delegate manager:self successDic:nil failError:error];
     }
     

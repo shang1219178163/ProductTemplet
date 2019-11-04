@@ -70,26 +70,36 @@
 
 #pragma mark - - POST请求
 - (NSURLSessionTask *)POST:(NSString *)URL
-                               parameters:(id)parameters
-                                  success:(NNNetworkBlock)success
-                                  failure:(NNNetworkBlock)failure{
-    return [NNRequstAgent.shared postWithURL:URL
-                                  parameters:parameters
-                                      images:nil
-                                   fileNames:nil
-                                    progress:nil
-                                     success:success
-                                     failure:failure];
+                parameters:(id)parameters
+                   success:(NNNetworkBlock)success
+                   failure:(NNNetworkBlock)failure{
+    __block NSURLSessionDataTask *dataTask = nil;
+    dataTask = [self.sessionManager POST:URL parameters:parameters
+                                progress:^(NSProgress * _Nonnull uploadProgress) {
+        //上传进度
+//        dispatch_sync(dispatch_get_main_queue(), ^{
+//            progress ? progress(uploadProgress) : nil;
+//        });
+    } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+        NNURLResponse * model = [self modelWithTask:task responseObject:responseObject error:nil];
+        success ? success(model) : nil;
+        
+    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+        NNURLResponse * model = [self modelWithTask:task responseObject:nil error:error];
+        failure ? failure(model) : nil;
+        
+    }];
+    return dataTask;
 }
 
 #pragma mark - 支持上传多张图片
-- (NSURLSessionTask *)postWithURL:(NSString *)URL
-                       parameters:(id)parameters
-                           images:(NSArray<UIImage *> *)images
-                        fileNames:(NSArray<NSString *> *)fileNames
-                         progress:(NNProgressBlock)progress
-                          success:(NNNetworkBlock)success
-                          failure:(NNNetworkBlock)failure{
+- (NSURLSessionTask *)formDataPostWithURL:(NSString *)URL
+                               parameters:(id)parameters
+                                   images:(NSArray<UIImage *> *)images
+                                fileNames:(NSArray<NSString *> *)fileNames
+                                 progress:(NNProgressBlock)progress
+                                  success:(NNNetworkBlock)success
+                                  failure:(NNNetworkBlock)failure{
     
     if (_isOpenLog) DDLog(@"parameters = %@",[parameters jsonString]);
 

@@ -48,13 +48,13 @@ NS_ASSUME_NONNULL_BEGIN
  @param fileNames 图片名称数组
  @param progress 进度条代码块
  */
-- (NSURLSessionTask *)postWithURL:(NSString *)URL
-                       parameters:(id)parameters
-                           images:(NSArray<UIImage *> * _Nullable )images
-                        fileNames:(NSArray<NSString *> *_Nullable)fileNames
-                         progress:(NNProgressBlock _Nullable)progress
-                          success:(NNNetworkBlock)success
-                          failure:(NNNetworkBlock)failure;
+- (NSURLSessionTask *)formDataPostWithURL:(NSString *)URL
+                               parameters:(id)parameters
+                                   images:(NSArray<UIImage *> * _Nullable )images
+                                fileNames:(NSArray<NSString *> *_Nullable)fileNames
+                                 progress:(NNProgressBlock _Nullable)progress
+                                  success:(NNNetworkBlock)success
+                                  failure:(NNNetworkBlock)failure;
 
 /**
  PUT请求

@@ -15,7 +15,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface NNBaseRequestApi : NNRequstManager<BNRequestManagerProtocol>
+@interface NNBaseRequestApi : NNRequstManager<NNRequestManagerProtocol>
 
 
 @end
