@@ -60,7 +60,7 @@
 -(UISwitch *)switchCtl{
     if (!_switchCtl) {
         _switchCtl = ({
-            UISwitch * view = [UISwitch createSwitchRect:CGRectZero isOn:false];
+            UISwitch * view = [UISwitch createRect:CGRectZero isOn:false];
             view.onTintColor = UIColor.randomColor;
             view.tintColor = UIColor.randomColor;
             view.thumbTintColor = UIColor.randomColor;

@@ -126,7 +126,7 @@
 
 -(UITextView *)textView{
     if (!_textView) {
-        _textView = [UIView createTextViewRect:CGRectZero placeholder:@"请输入"];
+        _textView = [UITextView createRect:CGRectZero placeholder:@"请输入"];
         
     }
     return _textView;

@@ -46,7 +46,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    NSInteger idx = 2;
+    NSInteger idx = 3;
     switch (idx) {
         case 0:
         {
@@ -81,6 +81,11 @@
             DDLog(@"_%@_",@([@" 21" isContainBlank]));
         }
             break;
+        case 3:
+         {
+      
+         }
+             break;
         default:
             break;
     }

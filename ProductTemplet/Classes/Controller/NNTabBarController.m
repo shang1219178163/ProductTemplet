@@ -87,7 +87,7 @@
             controller.view.backgroundColor = UIColor.whiteColor;
             [self addChildViewController:controller];
             [controller didMoveToParentViewController:self];
-            [controller createBackItem:[UIImage imageNamed:@"icon_arowLeft_black"]];
+//            [controller createBackItem:[UIImage imageNamed:@"icon_arowLeft_black"]];
 
             [self.containView addSubview:controller.view];
             

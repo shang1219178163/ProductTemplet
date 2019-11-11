@@ -109,7 +109,7 @@
     self.dataList = @[
                       @[@"PKMainController", @"高德地图轨迹回溯",],
                       @[@"SystemAboutController", @"系统相关",],
-                      @[@"NNSearchController", @"复合搜索o🔍",],
+                      @[@"NNSearchController", @"复合搜索🔍",],
                       @[@"TrackRecordsController", @"后台二十四小时定时定位",],
                       @[@"RuntimeController", @"字符串映射研究",],
                       @[@"LoginViewController", @"直播拉流",],
@@ -166,7 +166,7 @@
     
     [UIApplication setupAppearanceSearchbarCancellButton];
     self.searchBar = ({
-        UISearchBar *searchBar = [UISearchBar createSearchBarRect:CGRectMake(0, 0, kScreenWidth - 100, 30)];
+        UISearchBar *searchBar = [UISearchBar createRect:CGRectMake(0, 0, kScreenWidth - 100, 30)];
         searchBar.placeholder = @"请输入流水号、商品信息或会员信息";
         searchBar.delegate = self;
 //        searchBar.scopeButtonTitles = @[@"111", @"22", @"333"];

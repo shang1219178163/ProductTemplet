@@ -172,7 +172,7 @@
     return _itemList;
 }
 
-- (UILabel *)createLabelRect:(CGRect)rect text:(NSString *)text tag:(NSInteger)tag{
+- (UILabel *)createRect:(CGRect)rect text:(NSString *)text tag:(NSInteger)tag{
     UILabel * label = [[UILabel alloc] initWithFrame:rect];
     label.autoresizingMask = UIViewAutoresizingFlexibleWidth|UIViewAutoresizingFlexibleHeight;
     label.text = text;

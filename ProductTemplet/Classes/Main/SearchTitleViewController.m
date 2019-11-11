@@ -24,7 +24,7 @@
     
     [UIApplication setupAppearanceSearchbarCancellButton];
     self.searchBar = ({
-        UISearchBar *searchBar = [UISearchBar createSearchBarRect:CGRectMake(0, 0, kScreenWidth - 100, 30)];
+        UISearchBar *searchBar = [UISearchBar createRect:CGRectMake(0, 0, kScreenWidth - 100, 30)];
         searchBar.placeholder = @"请输入流水号、商品信息或会员信息";        
         searchBar.delegate = self;
 //        searchBar.scopeButtonTitles = @[@"111", @"22", @"333"];
@@ -42,6 +42,15 @@
 
         titleView;
     });
+}
+
+- (void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+ 
+    
+    CGRect rect = CGRectMake(20, 20, kScreenWidth - 40, 40);
+    UISegmentedControl *control = [UISegmentedControl createRect:rect items:@[@"昨天", @"今天", @"明天"] selectedIndex:1 type:@2];
+    [self.view addSubview: control];
 }
 
 #pragma mark -UISearchBar

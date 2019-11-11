@@ -22,21 +22,23 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    [self createBarItemTitle:@"Timer" imgName:nil isLeft:NO isHidden:NO handler:^(id obj, id item, NSInteger idx) {
-        [self goController:@"TimerViewController" title:@"Timer"];
-    }];
+//    [self createBarItemTitle:@"Timer" imgName:nil isLeft:NO isHidden:NO handler:^(id obj, id item, NSInteger idx) {
+//        [self goController:@"TimerViewController" title:@"Timer"];
+//    }];
+//
+////    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc]initWithTitle:@"tim" style:UIBarButtonItemStyleDone target:self action:@selector(handleActionBtn:)];
+//
+//    self.dataList = [NSMutableArray arrayWithCapacity:0];
+//    self.dataList = @[@"",@"",@"",].mutableCopy;
+//
+//    [self.view addSubview:self.tbView];
+//
+//    [self.tbView makeConstraints:^(MASConstraintMaker *make) {
+//        make.edges.equalTo(self.view).insets(UIEdgeInsetsMake(15, 15, 15, 15));
+//    }];
     
-//    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc]initWithTitle:@"tim" style:UIBarButtonItemStyleDone target:self action:@selector(handleActionBtn:)];
     
-    self.dataList = [NSMutableArray arrayWithCapacity:0];
-    self.dataList = @[@"",@"",@"",].mutableCopy;
 
-    [self.view addSubview:self.tbView];
-    
-    [self.tbView makeConstraints:^(MASConstraintMaker *make) {
-        make.edges.equalTo(self.view).insets(UIEdgeInsetsMake(15, 15, 15, 15));
-    }];
-    
 }
 
 - (void)handleActionBtn:(UIBarButtonItem *)sender{
@@ -55,6 +57,7 @@
     NSString *uniqueIdentifier = [NSString stringWithFormat:@"%@", uuidStr];
     
     DDLog(@"uniqueIdentifier_%@", uniqueIdentifier);
+    
 }
 
 - (void)viewDidAppear:(BOOL)animated {

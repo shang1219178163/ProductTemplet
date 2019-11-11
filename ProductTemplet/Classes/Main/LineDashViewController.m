@@ -96,7 +96,7 @@
 
 - (UIButton *)btn{
     if (!_btn) {
-//        _btn = [UIButton createBtnRect:CGRectZero title:@"测试按钮" image:nil type:@0];
+//        _btn = [UIButton createRect:CGRectZero title:@"测试按钮" image:nil type:@0];
         _btn = ({
             UIButton * btn = [UIButton buttonWithType:UIButtonTypeCustom];
             btn.autoresizingMask = UIViewAutoresizingFlexibleWidth|UIViewAutoresizingFlexibleHeight;
@@ -118,7 +118,7 @@
 
 - (UIButton *)btn1{
     if (!_btn1) {
-//        _btn1 = [UIButton createBtnRect:CGRectZero title:@"测试按钮1" image:nil type:@0];
+//        _btn1 = [UIButton createRect:CGRectZero title:@"测试按钮1" image:nil type:@0];
         _btn1 = ({
             UIButton * btn = [UIButton buttonWithType:UIButtonTypeCustom];
             btn.autoresizingMask = UIViewAutoresizingFlexibleWidth|UIViewAutoresizingFlexibleHeight;

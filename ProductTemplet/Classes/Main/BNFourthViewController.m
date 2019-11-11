@@ -62,7 +62,7 @@
         tabBarController.tabBar.tintColor = UIColor.themeColor;
         
         
-//        UITabBarItem *tabBarItem = [UIView createTabBarItem:@"title" image:@"Item_third_H" selectedImage:@"Item_first_H"];
+//        UITabBarItem *tabBarItem = [UITabBarItem createItem:@"title" image:@"Item_third_H" selectedImage:@"Item_first_H"];
 //        tabBarController.viewControllers.firstObject.tabBarItem = tabBarItem;
 
         NSArray *list = @[@[@"BNFirstViewController",@"首页",@"Item_third_N",@"Item_third_H",@"0",],
@@ -92,7 +92,7 @@
     
     CGRect rect = CGRectMake(UIScreen.width/2.0, 20, 100, 100);
     UIImageView *imgView = ({
-        UIImageView *view = [UIImageView createImgViewRect:rect type:@0];
+        UIImageView *view = [UIImageView createRect:rect type:@0];
         view.image = [UIImage imageNamed:@"Item_first_N"];
         view.tag = 100;
         view;
@@ -104,7 +104,7 @@
 
     CGRect rect1 = CGRectMake(UIScreen.width/2.0 + 120, 20, 100, 100);
     UIImageView *imgView1 = ({
-        UIImageView *view = [UIImageView createImgViewRect:rect1 type:@0];
+        UIImageView *view = [UIImageView createRect:rect1 type:@0];
         view.image = [UIImage imageNamed:@"Item_first_H"];
         view.tag = 101;
         view;
@@ -260,7 +260,7 @@
             label.text = @"个数";
             [view addSubview:label];
             
-            UISlider *slider = [UISlider createSliderRect:CGRectMake(0, 0, CGRectGetWidth(view.frame) - CGRectGetWidth(label.frame), CGRectGetHeight(view.frame)) value:70 minValue:10 maxValue:110];
+            UISlider *slider = [UISlider createRect:CGRectMake(0, 0, CGRectGetWidth(view.frame) - CGRectGetWidth(label.frame), CGRectGetHeight(view.frame)) value:70 minValue:10 maxValue:110];
             slider.autoresizingMask = UIViewAutoresizingFlexibleWidth|UIViewAutoresizingFlexibleHeight;
             [slider addActionHandler:^(UIControl * _Nonnull obj) {
                 UISlider * sender = (UISlider *)obj;

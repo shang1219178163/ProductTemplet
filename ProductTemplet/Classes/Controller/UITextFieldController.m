@@ -27,11 +27,12 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
 //    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc]initWithTitle:@"Right" style:UIBarButtonItemStyleDone target:nil action:nil];
-    self.navigationItem.rightBarButtonItem = [UIView createBarItem:@"Right" style:UIBarButtonItemStyleDone];
-    [self.navigationItem.rightBarButtonItem setActionBlock:^{
-        DDLog(@"%@",@"111");
-
+    self.navigationItem.rightBarButtonItem = [UIBarButtonItem createItem:@"Right" style:UIBarButtonItemStyleDone];
+    [self.navigationItem.rightBarButtonItem addActionBlock:^(UIBarButtonItem * _Nonnull item) {
+        DDLog(@"%@", item);
     }];
+    
+    
 
     [self.view addSubview:self.textField];
     [self.view addSubview:self.textFieldPwd];
@@ -63,10 +64,6 @@
     [self.view getViewLayer];
     
     self.textField.identify = @"one";
-//    NSDictionary * dic = @{
-//                           @"one":   @[@"111111",@"222222",@"33333",],
-//                           };
-    
     NSDictionary * dic = @{
                            @"one":   @{
                                         @"user1":   @"pwd_1",
@@ -90,12 +87,24 @@
     tap.numberOfTapsRequired = 1;
     tap.numberOfTouchesRequired = 1;
     [tap addActionBlock:^(UIGestureRecognizer * _Nonnull reco) {
-        DDLog(@"%@", reco)
+        DDLog(@"%@", reco);
 
     }];
     
     [self.view addGestureRecognizer:tap];
     
+}
+
+- (void)viewDidLayoutSubviews{
+    [super viewDidLayoutSubviews];
+    
+//    [self.navigationItem.leftBarButtonItem addActionBlock:^(UIBarButtonItem * _Nonnull item) {
+//        DDLog(@"%@", item);
+//    }];
+//    [self.backBtn addActionHandler:^(UIControl * _Nonnull control) {
+//        DDLog(@"%@", control);
+//
+//    } forControlEvents:UIControlEventTouchUpInside];
 }
 
 -(void)viewWillAppear:(BOOL)animated{

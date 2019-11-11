@@ -19,7 +19,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    
+        
     self.dataList = @[@[@"AppIcon", @"默认",],
                       @[@"parkingOne", @"Parking",],
                       @[@"parkingWang", @"停车王",],
