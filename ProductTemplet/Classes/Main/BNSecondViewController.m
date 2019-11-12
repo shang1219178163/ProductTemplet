@@ -33,10 +33,7 @@
     
     
     UIViewController * controller = [NSClassFromString(@"FriendListController") new];
-    [self addChildViewController:controller];
-    
-    [self.view addSubview:controller.view];
-
+    [self addControllerVC:controller];
 }
 
 -(void)viewWillAppear:(BOOL)animated{

@@ -44,19 +44,14 @@
     
 }
 
-- (NNFoldSectionModel *)itemAtSection:(NSInteger)section{
-    NNFoldSectionModel * foldModel = self.dataList[section];
-    return foldModel;
-}
-
 #pragma mark -- talbeView的代理方法
 -(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
     return self.dataList.count;
 }
 
 -(NSInteger) tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    NNFoldSectionModel * foldModel = [self itemAtSection:section];
-    NSInteger count = foldModel.isOpen  ? foldModel.dataList.count : 0;
+    NNFoldSectionModel * foldModel = self.dataList[section];
+    NSInteger count = foldModel.isOpen ? foldModel.dataList.count : 0;
     return count;
 }
 
@@ -66,12 +61,11 @@
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     
-    NNFoldSectionModel * foldModel = [self itemAtSection:indexPath.section];
+    NNFoldSectionModel * foldModel = self.dataList[indexPath.section];
     id obj = foldModel.dataList[indexPath.row];
     
     NSString * title = [obj isKindOfClass:[NSArray class]] ? [obj firstObject] : obj;
     NSString * textSub = [@(foldModel.dataList.count) stringValue];;
-    
     
     UITableViewElevenCell * cell = [UITableViewElevenCell cellWithTableView:tableView];
     cell.labelLeft.text = title;
@@ -83,7 +77,7 @@
 
 //-(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
 //
-//    BNFoldSectionModel * foldModel = [self itemAtSection:indexPath.section];
+//NNFoldSectionModel * foldModel = self.dataList[indexPath.section];
 //    id obj = foldModel.dataList[indexPath.row];
 //
 //    NSString * title = [obj isKindOfClass:[NSArray class]] ? [obj firstObject] : obj;
@@ -113,27 +107,27 @@
 
 -(UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section{
     
-    NNFoldSectionModel * foldModel = [self itemAtSection:section];
-    
-    UITableHeaderFooterViewZero * foldHeaderView = [UITableHeaderFooterViewZero viewWithTableView:tableView];
+    NNFoldSectionModel *foldModel = self.dataList[section];
 
-    foldHeaderView.isCanOPen = YES;
-    foldHeaderView.isOpen = foldModel.isOpen;
-    foldHeaderView.labelLeft.text = foldModel.title;
-    foldHeaderView.labelLeft.textColor = UIColor.themeColor;
-    foldHeaderView.labelLeftSub.text = [@(foldModel.dataList.count) stringValue];
-    foldHeaderView.labelLeftSub.textColor = UIColor.themeColor;
-    foldHeaderView.imgViewLeft.image = [UIImage imageNamed:foldModel.image];
+    UITableHeaderFooterViewZero * headerView = [UITableHeaderFooterViewZero viewWithTableView:tableView];
+
+    headerView.isCanOPen = YES;
+    headerView.isOpen = foldModel.isOpen;
+    headerView.labelLeft.text = foldModel.title;
+    headerView.labelLeft.textColor = UIColor.themeColor;
+    headerView.labelLeftSub.text = [@(foldModel.dataList.count) stringValue];
+    headerView.labelLeftSub.textColor = UIColor.themeColor;
+    headerView.imgViewLeft.image = [UIImage imageNamed:foldModel.image];
     //    foldHeaderView.blockView = ^(NNHeaderFooterView *foldView, NSInteger index) {
-    foldHeaderView.blockView = ^(UITableViewHeaderFooterView *foldView, NSInteger index) {
+    headerView.blockView = ^(UITableViewHeaderFooterView *foldView, NSInteger index) {
         foldModel.isOpen = !foldModel.isOpen;
         [tableView reloadSections:[NSIndexSet indexSetWithIndex:section] withRowAnimation:UITableViewRowAnimationNone];
         
     };
 
-    [foldHeaderView getViewLayer];
+    [headerView getViewLayer];
     
-    return foldHeaderView;
+    return headerView;
     
 }
 
