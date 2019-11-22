@@ -55,7 +55,7 @@
 }
 
 - (BOOL)hasNextPageWithItems:(NSArray *)array{
-    _hasNextPage = array.count >= _pageSize;
+    _hasNextPage = array.count == _pageSize;
     return _hasNextPage;
 }
 

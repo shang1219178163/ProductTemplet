@@ -83,7 +83,7 @@ NSString *const kHTTP_URLMiddle = @"i=42&c=entry&do=fengmian&m=android&source=io
 + (NSString *)getTokenRequestMessageName:(NSString *)messageName{
     //
     NSDate * now = NSDate.date;
-    NSString * dateStr = [NSDateFormatter stringFromDate:now format:@"yyyyMMdd"];
+    NSString * dateStr = [NSDateFormatter stringFromDate:now fmt:@"yyyyMMdd"];
     NSString * string = [dateStr stringByAppendingFormat:@"%@",messageName];
     NSString * md5String = [string md5Encode];
     

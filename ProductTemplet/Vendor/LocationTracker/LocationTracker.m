@@ -103,7 +103,7 @@
     }
     else{
         NSString *msg = [NSString stringWithFormat:@"请开启始终定位(设置->隐私->定位服务->选择%@->始终)",UIApplication.appName];
-        [UIApplication.rootController showAlertTitle:@"定位服务" msg:msg actionTitles:@[kActionTitle_Sure] handler:nil];
+        [UIApplication.rootController showAlertTitle:@"定位服务" msg:msg actionTitles:@[kTitleSure] handler:nil];
         
     }
 }
@@ -129,14 +129,14 @@
         NSTimeInterval locationAge = -[userLocation.timestamp timeIntervalSinceNow];
         if (locationAge > 20) return;
         
-        if(userLocation != nil && accuracy > 0 && accuracy < kLocation_Accuracy &&(!(coordinate.latitude == 0.0 && coordinate.longitude == 0.0))){
+        if(userLocation != nil && accuracy > 0 && accuracy < kLocationAccuracy &&(!(coordinate.latitude == 0.0 && coordinate.longitude == 0.0))){
             self.myLastLocation = coordinate;
             self.myLastLocationAccuracy = accuracy;
             
             NSDictionary * dict = @{
-                                    kLocation_latitude : @(coordinate.latitude),
-                                    kLocation_longitude : @(coordinate.longitude),
-                                    kLocation_accuracy : @(accuracy),
+                                    keyLocationLatitude : @(coordinate.latitude),
+                                    keyLocationLongitude : @(coordinate.longitude),
+                                    keyLocationAccuracy : @(accuracy),
                                     
                                     };
             
@@ -144,7 +144,7 @@
             //Every 1 minute, I will select the best location based on accuracy and send to server
             [self.shareModel.myLocationArray addObject:dict];
             
-//            if (!self.lastSendDate || [[self.lastSendDate dateByAddingInterval:kTimer_Interval] compare:[NSDate date]] <= 0) {
+//            if (!self.lastSendDate || [[self.lastSendDate dateByAddingInterval:kTimerInterval] compare:[NSDate date]] <= 0) {
 //                self.lastSendDate = [NSDate date];
 //                NSLog(@"send________%f->%f->%@",coordinate.latitude,coordinate.longitude,@(accuracy));
 //
@@ -164,9 +164,9 @@
 //    }
     
     
-    NSTimeInterval timeInterval = kTimer_Interval_Foreground - kLocation_Duration;
+    NSTimeInterval timeInterval = kTimerInterval_Foreground - kLocationDuration;
     if (self.isEnterBackgroud) {
-        timeInterval = kTimer_Interval - kLocation_Duration;
+        timeInterval = kTimerInterval - kLocationDuration;
         
     }
     
@@ -178,7 +178,7 @@
     
     //Will only stop the locationManager after 10 seconds, so that we can get some accurate locations
     //The location manager will only operate for 10 seconds to save battery
-    self.shareModel.timerDelay = [NSTimer scheduledTimerWithTimeInterval:kLocation_Duration target:self
+    self.shareModel.timerDelay = [NSTimer scheduledTimerWithTimeInterval:kLocationDuration target:self
                                                     selector:@selector(stopLocationTracking)
                                                     userInfo:nil
                                                      repeats:NO];
@@ -192,13 +192,13 @@
     {
         case kCLErrorNetwork: // general, network-related error
         {
-            [UIApplication.rootController showAlertTitle:@"网络错误" msg:@"网络链接失败,请检查网络" actionTitles:@[kActionTitle_Sure] handler:nil];
+            [UIApplication.rootController showAlertTitle:@"网络错误" msg:@"网络链接失败,请检查网络" actionTitles:@[kTitleSure] handler:nil];
         }
             break;
         case kCLErrorDenied:
         {
             NSString *msg = [NSString stringWithFormat:@"请开启始终定位(设置->隐私->定位服务->选择%@->始终)",UIApplication.appName];
-            [UIApplication.rootController showAlertTitle:@"定位失败" msg:msg actionTitles:@[kActionTitle_Sure] handler:nil];
+            [UIApplication.rootController showAlertTitle:@"定位失败" msg:msg actionTitles:@[kTitleSure] handler:nil];
             
         }
             break;
@@ -224,7 +224,7 @@
             myBestLocation = currentLocation;
         }
         else{
-            if([currentLocation[kLocation_accuracy] floatValue] <= [myBestLocation[kLocation_accuracy] floatValue]){
+            if([currentLocation[keyLocationAccuracy] floatValue] <= [myBestLocation[keyLocationAccuracy] floatValue]){
                 myBestLocation = currentLocation;
             }
         }
@@ -242,21 +242,21 @@
     }
     else{
         CLLocationCoordinate2D bestLocation = CLLocationCoordinate2DMake(0.0, 0.0);
-        bestLocation.latitude = [myBestLocation[kLocation_latitude] floatValue];
-        bestLocation.longitude = [myBestLocation[kLocation_longitude] floatValue];
+        bestLocation.latitude = [myBestLocation[keyLocationLatitude] floatValue];
+        bestLocation.longitude = [myBestLocation[keyLocationLongitude] floatValue];
         self.myLocation = bestLocation;
-        self.myLocationAccuracy = [myBestLocation[kLocation_accuracy] floatValue];
+        self.myLocationAccuracy = [myBestLocation[keyLocationAccuracy] floatValue];
     }
     
 //    DDLog(@"Send to Server: Latitude(%f) Longitude(%f) Accuracy(%f)   %@",self.myLocation.latitude, self.myLocation.longitude,self.myLocationAccuracy,self.isEnterBackgroud ? @"后台定位":@"前台定位");
     NSDictionary * dict = @{
-                            kLocation_latitude : @(self.myLocation.latitude),
-                            kLocation_longitude : @(self.myLocation.longitude),
-                            kLocation_accuracy : @(self.myLocationAccuracy),
-                            kLocation_timeStamp : [self currentTimeStamp]
+                            keyLocationLatitude : @(self.myLocation.latitude),
+                            keyLocationLongitude : @(self.myLocation.longitude),
+                            keyLocationAccuracy : @(self.myLocationAccuracy),
+                            keyLocationTimeStamp : [self currentTimeStamp]
                             };
     
-    [NSNotificationCenter.defaultCenter postNotificationName:kNoti_location_UploadCoordinate object:nil userInfo:dict];
+    [NSNotificationCenter.defaultCenter postNotificationName:kNotiPostNameLocation_UploadCoordinate object:nil userInfo:dict];
 
     //TODO: Your code to send the self.myLocation and self.myLocationAccuracy to your server
     

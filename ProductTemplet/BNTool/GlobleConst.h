@@ -96,7 +96,7 @@ UIKIT_EXTERN NSString * const kOrderObject_dray ;
  好友/司机
  */
 
-UIKIT_EXTERN NSString * const kMsg_friendAdd ;
+UIKIT_EXTERN NSString * const kfriendAdd ;
 
 
 /**

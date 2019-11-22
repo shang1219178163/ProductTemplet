@@ -44,7 +44,7 @@
 //    [super viewWillAppear:animated];
 ////    [UIDevice.currentDevice setValue:@(UIInterfaceOrientationLandscapeLeft) forKey:@"orientation"];
 //    if (!self.player) {
-//        [SVProgressHUD showWithStatus:kMsg_NetWorkRequesting];
+//        [SVProgressHUD showWithStatus:kNetWorkRequesting];
 //    }
 //
 //    if (self.obj) self.url = self.obj;

@@ -39,7 +39,7 @@
     [self.view addSubview:self.tableView];
     self.tableView.tableHeaderView = self.label;
     
-    [NSNotificationCenter.defaultCenter addObserver:self selector:@selector(handleNoti:) name:kNoti_locationOld object:nil];
+    [NSNotificationCenter.defaultCenter addObserver:self selector:@selector(handleNoti:) name:kNotiPostNameLocationOld object:nil];
     
     [self addChildViewController:self.emailVC];
     
@@ -104,8 +104,8 @@
     UITableViewCell * cell = [UITableViewCell cellWithTableView:tableView identifier:cellIdentifier style:UITableViewCellStyleSubtitle];
     
     NSDictionary * dict = self.titleMarr[indexPath.row];
-    cell.detailTextLabel.text = [NSString stringWithFormat:@"row%@_(%@,%@)",@(indexPath.row),dict[kLocation_latitude],dict[kLocation_longitude]];
-    cell.textLabel.text = [NSString stringWithFormat:@"%@",[NSDateFormatter stringFromInterval:dict[kLocation_timeStamp] format:kFormatDate]];
+    cell.detailTextLabel.text = [NSString stringWithFormat:@"row%@_(%@,%@)",@(indexPath.row),dict[keyLocationLatitude],dict[keyLocationLongitude]];
+    cell.textLabel.text = [NSString stringWithFormat:@"%@",[NSDateFormatter stringFromInterval:dict[keyLocationTimeStamp] fmt:kFormatDate]];
     
     cell.textLabel.font = [UIFont systemFontOfSize:14];
     cell.detailTextLabel.font = [UIFont systemFontOfSize:12];

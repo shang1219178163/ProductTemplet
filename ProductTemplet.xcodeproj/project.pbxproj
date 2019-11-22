@@ -182,6 +182,7 @@
 		14B6B34A22B1FFE40047E094 /* PKDeviceListRootModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 14B6B34922B1FFE30047E094 /* PKDeviceListRootModel.m */; };
 		14B6B34D22B2233B0047E094 /* PKChannelListRootModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 14B6B34B22B2233A0047E094 /* PKChannelListRootModel.m */; };
 		14B6B35022B230350047E094 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 14B6B34F22B230350047E094 /* LoginViewController.m */; };
+		14B7CF6D2383D2F200AEF7BC /* UIImageView+Tmp.m in Sources */ = {isa = PBXBuildFile; fileRef = 14B7CF6C2383D2F200AEF7BC /* UIImageView+Tmp.m */; };
 		14C1197522DC59AC009D18A3 /* ScrollViewCycleController.m in Sources */ = {isa = PBXBuildFile; fileRef = 14C1197122DC59AB009D18A3 /* ScrollViewCycleController.m */; };
 		14C1197622DC59AC009D18A3 /* UICTViewCellCycle.m in Sources */ = {isa = PBXBuildFile; fileRef = 14C1197222DC59AB009D18A3 /* UICTViewCellCycle.m */; };
 		14C1197822DC5A5A009D18A3 /* postImage.png in Resources */ = {isa = PBXBuildFile; fileRef = 14C1197722DC5A59009D18A3 /* postImage.png */; };
@@ -857,6 +858,8 @@
 		14B6B34C22B2233A0047E094 /* PKChannelListRootModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PKChannelListRootModel.h; sourceTree = "<group>"; };
 		14B6B34E22B230340047E094 /* LoginViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
 		14B6B34F22B230350047E094 /* LoginViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
+		14B7CF6B2383D2F200AEF7BC /* UIImageView+Tmp.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIImageView+Tmp.h"; sourceTree = "<group>"; };
+		14B7CF6C2383D2F200AEF7BC /* UIImageView+Tmp.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+Tmp.m"; sourceTree = "<group>"; };
 		14C1197122DC59AB009D18A3 /* ScrollViewCycleController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScrollViewCycleController.m; sourceTree = "<group>"; };
 		14C1197222DC59AB009D18A3 /* UICTViewCellCycle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UICTViewCellCycle.m; sourceTree = "<group>"; };
 		14C1197322DC59AB009D18A3 /* UICTViewCellCycle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UICTViewCellCycle.h; sourceTree = "<group>"; };
@@ -2217,6 +2220,8 @@
 				140A2BFC226977FA000ED121 /* AppGlobleConfig.m */,
 				513646B520860332005A20E7 /* MainViewController.h */,
 				513646B620860332005A20E7 /* MainViewController.m */,
+				5189413E209C27E000A687E1 /* TestViewController.h */,
+				5189413F209C27E000A687E1 /* TestViewController.m */,
 				516F8560215DF8F2008E62B3 /* SuspendButton.h */,
 				516F8561215DF8F4008E62B3 /* SuspendButton.m */,
 				142A76D52226708D0016D3DA /* BNSliderControlView.h */,
@@ -2230,6 +2235,8 @@
 				14F6382923630AC900D0EBF0 /* NSObject+Tmp.h */,
 				14F6382A23630AC900D0EBF0 /* NSObject+Tmp.m */,
 				149BE1502341923F00D74E7C /* NSString+Helper.swift */,
+				14B7CF6B2383D2F200AEF7BC /* UIImageView+Tmp.h */,
+				14B7CF6C2383D2F200AEF7BC /* UIImageView+Tmp.m */,
 				513646A82086031D005A20E7 /* Assets.xcassets */,
 				5169DF232088254300B025C3 /* Public.xcassets */,
 				5136492420860655005A20E7 /* Resources */,
@@ -2456,8 +2463,6 @@
 				14E42CE32200040D00606AD0 /* BNRightViewController.m */,
 				14E42CED2200040E00606AD0 /* BNSecondViewController.h */,
 				14E42CE22200040D00606AD0 /* BNSecondViewController.m */,
-				5189413E209C27E000A687E1 /* TestViewController.h */,
-				5189413F209C27E000A687E1 /* TestViewController.m */,
 				14403E6723322314005DB45B /* LineDashViewController.h */,
 				14403E6823322314005DB45B /* LineDashViewController.m */,
 				145C913723347B4400849E9D /* AppIconChangeController.h */,
@@ -3608,6 +3613,7 @@
 				51862E6820BB94E40080BD4E /* EOCEmployeeFinance.m in Sources */,
 				5175C93C20C13DF3009EA86E /* Teacher.m in Sources */,
 				51698C6121376F9E0069C2B2 /* UncaughtExceptionHandler.m in Sources */,
+				14B7CF6D2383D2F200AEF7BC /* UIImageView+Tmp.m in Sources */,
 				51A4A0092182AF9D00BA9923 /* SortViewController.m in Sources */,
 				141080AB22D2E7D10011344E /* AnimationController11.m in Sources */,
 				515C67E42137C55700D5EA94 /* BHotCityCell.m in Sources */,

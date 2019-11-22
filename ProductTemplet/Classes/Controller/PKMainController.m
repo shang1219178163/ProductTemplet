@@ -139,7 +139,7 @@
 //                    DDLog(@"_%@_%@_%@_",customID, NSStringFromCoordinate(coordinate), @(regions.firstObject.fenceStatus));
                 }];
             } else {
-//                [MBProgressHUD showToastWithTips:kMsg_LocationFailed inView:self.navigationController.view];
+//                [MBProgressHUD showToastWithTips:kLocationFailed inView:self.navigationController.view];
                 [self showAlertTitle:@"error" msg:location.description];
             
             }

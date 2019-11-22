@@ -131,10 +131,10 @@
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     if (indexPath.row % 2 == 0) {
-        [NSNotificationCenter.defaultCenter postNotificationName:kNotiPost_logOut object:@"aaa"];
+        [NSNotificationCenter.defaultCenter postNotificationName:kNotiPostNameLogOut object:@"aaa"];
 
     } else {
-        [NSNotificationCenter.defaultCenter postNotificationName:kNotiPost_backgroudUploadLocation object:@"bbb"];
+        [NSNotificationCenter.defaultCenter postNotificationName:kNotiPostNameBackgroudUploadLocation object:@"bbb"];
 
     }
     

@@ -52,7 +52,7 @@ NSString * const APIRequestURLTouchcChannelstream(NSString *ID){
     
     NSString *token = [NSUserDefaults objectForKey:@"token"];
     NSNumber *tokenTimeout = [NSUserDefaults objectForKey:@"tokenTimeout"];
-    NSString *cookieStr = [NSHTTPCookieStorage cookieDesWithToken:token tokenTimeout:tokenTimeout];
+    NSString *cookieStr = [NSHTTPCookieStorage cookieDesWithToken:token timeout:tokenTimeout];
     [request setValue:cookieStr forHTTPHeaderField:@"Set-Cookie"];
     
     [NSURLSession sendAsynRequest:request handler:completionHandler];
@@ -74,7 +74,7 @@ NSString * const APIRequestURLTouchcChannelstream(NSString *ID){
 //+ (NSString *)cookieDesWithToken:(NSString *)token tokenTimeout:(NSNumber *)tokenTimeout{
 //    
 //    NSDate *expiresDate = [NSDate dateWithTimeIntervalSinceNow:tokenTimeout.integerValue];
-//    NSString *expires = [NSDateFormatter stringFromDate:expiresDate format:kFormatDate_Six];
+//    NSString *expires = [NSDateFormatter stringFromDate:expiresDate format:kFormatDateSix];
 //    
 //    NSString *cookieStr = @"";
 //    cookieStr = [cookieStr stringByAppendingFormat:@"token=%@;", token];

@@ -41,7 +41,7 @@
     
 //    UIWindow * keyWindow = [UIApplication sharedApplication].keyWindow;
 //    MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:keyWindow animated:animated];
-//    hud.label.text = NSLocalizedString(kMsg_NetWorkRequesting, @"HUD loading title");
+//    hud.label.text = NSLocalizedString(kNetWorkRequesting, @"HUD loading title");
 //    
 //    [hud hideAnimated:YES afterDelay:3];
 

@@ -71,7 +71,7 @@
 #pragma mark -funtions
 
 - (void)requestStreamInfo{
-    [SVProgressHUD showWithStatus:kMsg_NetWorkRequesting];
+    [SVProgressHUD showWithStatus:kNetWorkRequesting];
     
     PKDeviceInfoModel * deviceModel = self.obj;
     PKChannelInfoModel * channelModel = self.objOne;

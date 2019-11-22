@@ -59,7 +59,7 @@
 
 - (void)requestDeviceList{
     
-    [SVProgressHUD showWithStatus:kMsg_NetWorkRequesting];
+    [SVProgressHUD showWithStatus:kNetWorkRequesting];
     [self.deviceListApi requestWithSuccessBlock:^(NNRequstManager * _Nonnull manager, id _Nullable responseObject, NSError * _Nullable error) {
         DDLog(@"%@", [(NSDictionary *)responseObject jsonString]);
         
@@ -82,7 +82,7 @@
 }
 
 - (void)requestLogout{
-    [SVProgressHUD showWithStatus:kMsg_NetWorkRequesting];
+    [SVProgressHUD showWithStatus:kNetWorkRequesting];
     [self.userLogoutApi requestWithSuccessBlock:^(NNRequstManager * _Nonnull manager, id _Nullable responseObject, NSError * _Nullable error) {
         DDLog(@"%@", responseObject);
         [SVProgressHUD dismiss];
@@ -97,7 +97,7 @@
 
 - (void)requestSeverinfo{
     
-    [SVProgressHUD showWithStatus:kMsg_NetWorkRequesting];
+    [SVProgressHUD showWithStatus:kNetWorkRequesting];
 
     [self.userInfoApi requestWithSuccessBlock:^(NNRequstManager * _Nonnull manager, id _Nullable responseObject, NSError * _Nullable error) {
         DDLog(@"%@", responseObject);

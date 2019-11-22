@@ -22,8 +22,8 @@
     NSArray *temp1 = @[@3, @2, @2, @1];
     NSArray *temp2 = @[@3, @4, @5];
 //    输出两个数组:( 5, 1, 2, 3, 4 ), ( 3, 2, 2, 1, 3, 4, 5 )。
-    NSArray * list_unionDist = [@[temp1, temp2] valueForKeyPath:kArrs_unionDist_list];
-    NSArray * list_union = [[@[temp1, temp2] valueForKeyPath:kArrs_union_list] copy];
+    NSArray * list_unionDist = [@[temp1, temp2] valueForKeyPath:kArrsUnionDist_list];
+    NSArray * list_union = [[@[temp1, temp2] valueForKeyPath:kArrsUnion_list] copy];
     NSLog(@"/n%@",list_unionDist);
     NSLog(@"/n%@",list_union);
 }

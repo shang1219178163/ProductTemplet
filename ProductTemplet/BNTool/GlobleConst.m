@@ -93,7 +93,7 @@ NSString * const kOrderObject_dray          = @"板车";
 
 #pragma mark - -好友/司机
 
-NSString * const kMsg_friendAdd          = @"好友申请已发送,等待对方同意。";
+NSString * const kfriendAdd          = @"好友申请已发送,等待对方同意。";
 
 
 #pragma mark - -数据录入

@@ -49,7 +49,7 @@
 
 - (void)requestLogin{
 
-    [SVProgressHUD showWithStatus:kMsg_NetWorkRequesting];
+    [SVProgressHUD showWithStatus:kNetWorkRequesting];
     [self.userLoginApi requestWithSuccessBlock:^(NNRequstManager * _Nonnull manager, id _Nullable responseObject, NSError * _Nullable error) {
         DDLog(@"%@", responseObject);
         if (![responseObject isKindOfClass:NSDictionary.class]) {

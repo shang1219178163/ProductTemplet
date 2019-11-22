@@ -10,6 +10,7 @@
 #import "WHKNetInfoFeedModel.h"
 #import "NSArray+Tmp.h"
 #import "NSDictionary+Tmp.h"
+#import "UIImageView+Tmp.h"
 
 @interface TestViewController ()
 
@@ -185,7 +186,7 @@
 }
 
 -(NSArray<UITableViewRowAction *> *)tableView:(UITableView *)tableView editActionsForRowAtIndexPath:(NSIndexPath *)indexPath{
-    UITableViewRowAction *actionDelete = [UITableViewRowAction rowActionWithStyle:UITableViewRowActionStyleDestructive title:kActionTitle_Delete handler:^(UITableViewRowAction *action, NSIndexPath *indexPath){
+    UITableViewRowAction *actionDelete = [UITableViewRowAction rowActionWithStyle:UITableViewRowActionStyleDestructive title:kTitleDelete handler:^(UITableViewRowAction *action, NSIndexPath *indexPath){
         DDLog(@"点击了%@",action.title);
         //        [self handleMsgDeleteWithIndexPath:indexPath];
         //网络删除成功之后,再删除本地,刷新列表
@@ -226,7 +227,7 @@
     for (NSInteger i = 0; i < 5; i++) {
         WHKNetInfoFeedModel * model = [[WHKNetInfoFeedModel alloc]init];
         model.category = [NSString stringWithFormat:@"name_%@", @(i)];
-        model.vendor = [NSDateFormatter stringFromDate:NSDate.date format:kFormatDate];
+        model.vendor = [NSDateFormatter stringFromDate:NSDate.date fmt:kFormatDate];
         if (i == 1) {
             model.category = nil;
         }

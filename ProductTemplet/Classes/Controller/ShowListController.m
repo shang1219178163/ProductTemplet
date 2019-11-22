@@ -45,7 +45,7 @@
         
         _plainView.blockEditActionsForRow = ^NSArray *(UITableView *tableView, NSIndexPath *indexPath) {
             @strongify(self);
-            UITableViewRowAction *actionDelete = [UITableViewRowAction rowActionWithStyle:UITableViewRowActionStyleDestructive title:kActionTitle_Delete handler:^(UITableViewRowAction *action, NSIndexPath *indexPath){
+            UITableViewRowAction *actionDelete = [UITableViewRowAction rowActionWithStyle:UITableViewRowActionStyleDestructive title:kTitleDelete handler:^(UITableViewRowAction *action, NSIndexPath *indexPath){
                 DDLog(@"点击了%@",action.title);
          
                 

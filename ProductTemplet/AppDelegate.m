@@ -107,13 +107,13 @@
                           };
     if ([dic.allKeys containsObject:@(UIApplication.sharedApplication.backgroundRefreshStatus)]) {
         NSString * message = dic[@(UIApplication.sharedApplication.backgroundRefreshStatus)];
-        [UIAlertController showSheetTitle:@"" msg:message actionTitles:@[kActionTitle_Sure] handler:nil];
+        [UIAlertController showSheetTitle:@"" msg:message actionTitles:@[kTitleSure] handler:nil];
         return;
     }
     
     self.locationTracker = [[LocationTracker alloc]init];
     [self.locationTracker startLocationTracking];
-    self.locationTimer = [NSTimer scheduledTimerWithTimeInterval:kTimer_Interval
+    self.locationTimer = [NSTimer scheduledTimerWithTimeInterval:kTimerInterval
                                                           target:self
                                                         selector:@selector(updateLocation)
                                                         userInfo:nil

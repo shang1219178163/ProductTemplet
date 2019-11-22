@@ -312,7 +312,7 @@
 
 -(void)logOut{
     dispatch_async(dispatch_get_main_queue(), ^{
-        [NSNotificationCenter.defaultCenter postNotificationName:kNotiPost_logOut object:nil userInfo:nil];
+        [NSNotificationCenter.defaultCenter postNotificationName:kNotiPostNameLogOut object:nil userInfo:nil];
         
     });
 }

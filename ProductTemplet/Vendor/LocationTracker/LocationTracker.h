@@ -10,22 +10,19 @@
 #import <CoreLocation/CoreLocation.h>
 #import "LocationShareModel.h"
 
-#define kTimer_Interval  60*20
-#define kTimer_Interval_Foreground  60*5
+#define kTimerInterval  60*20
+#define kTimerInterval_Foreground  60*5
 
-//#define kTimer_Interval  30
-//#define kTimer_Interval_Foreground  30
+#define kLocationDuration  5
+#define kLocationAccuracy  2000
 
-#define kLocation_Duration  5
-#define kLocation_Accuracy  2000
+#define keyLocationLatitude   @"keyLocationLatitude"
+#define keyLocationLongitude  @"keyLocationLongitude"
+#define keyLocationAccuracy   @"keyLocationAccuracy"
+#define keyLocationTimeStamp  @"keyLocationTimeStamp"
 
-#define kLocation_latitude   @"kLocation_latitude"
-#define kLocation_longitude  @"kLocation_longitude"
-#define kLocation_accuracy   @"kLocation_accuracy"
-#define kLocation_timeStamp  @"kLocation_timeStamp"
-
-#define kNoti_locationOld @"kNoti_locationOld"
-#define kNoti_locationNew @"kNoti_locationNew"
+#define kNotiPostNameLocationOld @"kNotiPostNameLocationOld"
+#define kNotiPostNameLocationNew @"kNotiPostNameLocationNew"
 
 @interface LocationTracker : NSObject <CLLocationManagerDelegate>
 

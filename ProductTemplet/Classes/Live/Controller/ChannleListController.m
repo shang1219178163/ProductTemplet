@@ -50,7 +50,7 @@
 #pragma mark -funtions
 
 - (void)requestChannelList{
-    [SVProgressHUD showWithStatus:kMsg_NetWorkRequesting];
+    [SVProgressHUD showWithStatus:kNetWorkRequesting];
 
     PKDeviceInfoModel * deviceModel = self.obj;
     self.channelListApi.ID = deviceModel.ID;
