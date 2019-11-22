@@ -37,8 +37,13 @@
 //        make.edges.equalTo(self.view).insets(UIEdgeInsetsMake(15, 15, 15, 15));
 //    }];
     
-    
+    UIImageView *imgView = [[UIImageView alloc]initWithFrame:CGRectMake(10, 10, 100, 100)];
+    imgView.image = [UIImage imageNamed:@"parkingOne"];
+    [self.view addSubview:imgView];
 
+    [imgView showImageEnlarge];
+    
+    [self.view getViewLayer];
 }
 
 - (void)handleActionBtn:(UIBarButtonItem *)sender{
