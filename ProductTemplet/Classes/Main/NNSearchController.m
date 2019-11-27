@@ -37,7 +37,7 @@
 
     self.searchVC.searchBar.showsCancelButton = TRUE;
     UIButton *btn = self.searchVC.searchBar.cancellBtn;
-    [btn setTitle:@"11111" forState:UIControlStateNormal];
+    [btn setTitle:@"取消" forState:UIControlStateNormal];
     DDLog(@"%@", btn);
 }
 
@@ -49,7 +49,7 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     UITableViewCell * cell = [UITableViewCell cellWithTableView:tableView];
-    cell.labelLeft.text = [NSString stringWithFormat:@"%@", @(indexPath.row)];
+    cell.textLabel.text = [NSString stringWithFormat:@"%@", @(indexPath.row)];
     [cell getViewLayer];
     return cell;
 }

@@ -31,7 +31,7 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     UITableViewCell * cell = [UITableViewCell cellWithTableView:tableView];
-    cell.labelLeft.text = [NSString stringWithFormat:@"%@_%@", @(indexPath.section), @(indexPath.row)];
+    cell.textLabel.text = [NSString stringWithFormat:@"%@_%@", @(indexPath.section), @(indexPath.row)];
     [cell getViewLayer];
     return cell;
 }
