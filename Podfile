@@ -49,9 +49,9 @@
    
    pod 'UMengAnalytics-NO-IDFA'
    
-   pod 'AMapSearch-NO-IDFA'
-   pod 'AMapLocation-NO-IDFA'
-   pod 'AMapNavi-NO-IDFA'
+#   pod 'AMapSearch-NO-IDFA'
+#   pod 'AMapLocation-NO-IDFA'
+#   pod 'AMapNavi-NO-IDFA'
    
    # 主模块(必须)
 #   pod 'mob_sharesdk'

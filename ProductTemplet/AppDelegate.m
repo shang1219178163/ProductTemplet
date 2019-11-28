@@ -8,19 +8,14 @@
 
 #import "AppDelegate.h"
 
-//#import "UIApplication+Helper.h"
-//#import "UIApplication+Other.h"
 #import "NNCategoryPro.h"
-#import "BNMapManager.h"
 
 #import "ZYSliderViewController.h"
-#import "LocationTracker.h"
 #import "FileShareController.h"
 #import "ProductTemplet-Swift.h"
 
 @interface AppDelegate ()
 /// 后台定时定位
-@property(nonatomic, strong) LocationTracker *locationTracker;
 @property(nonatomic, strong) NSTimer *locationTimer;
 /// app间文件共享
 @property(nonatomic, strong) FileShareController * fileController;
@@ -84,8 +79,8 @@
 - (void)setupThridSDKWithOptions:(NSDictionary *)launchOptions{
     [UIApplication setupIQKeyboardManager];
 
-    //高德地图
-    AMapServices.sharedServices.apiKey = kGDMapKey;
+//高德地图
+//    AMapServices.sharedServices.apiKey = kGDMapKey;
 //微信支付
 //    [WXApi registerApp:kAppID_WX];
 //社交分享
@@ -97,61 +92,6 @@
     // 后台定位
 //    [self startBackgroudUploadLocation];
 }
-
-- (void)startBackgroudUploadLocation{
-    [UIApplication registerAPNsWithDelegate:self];
-    
-    NSDictionary *dic = @{
-                          @(UIBackgroundRefreshStatusDenied): @"The app doesn't work without the Background App Refresh enabled. To turn it on, go to Settings > General > Background App Refresh",
-                          @(UIBackgroundRefreshStatusRestricted): @"The functions of this app are limited because the Background App Refresh is disable."
-                          };
-    if ([dic.allKeys containsObject:@(UIApplication.sharedApplication.backgroundRefreshStatus)]) {
-        NSString * message = dic[@(UIApplication.sharedApplication.backgroundRefreshStatus)];
-        [UIAlertController showSheetTitle:@"" msg:message actionTitles:@[kTitleSure] handler:nil];
-        return;
-    }
-    
-    self.locationTracker = [[LocationTracker alloc]init];
-    [self.locationTracker startLocationTracking];
-    self.locationTimer = [NSTimer scheduledTimerWithTimeInterval:kTimerInterval
-                                                          target:self
-                                                        selector:@selector(updateLocation)
-                                                        userInfo:nil
-                                                         repeats:YES];
-}
-
--(void)updateLocation {
-    NSLog(@"updateLocation");
-    [self.locationTracker updateLocationToServer];
-}
-
-//- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-//    // Override point for customization after application launch.
-//    self.window = [[UIWindow alloc] initWithFrame:UIScreen.mainScreen.bounds];
-//    UIViewController * controller = [NSClassFromString(@"MainViewController") new];
-////    controller = [NSClassFromString(@"BNTableViewController") new];
-////    controller = [NSClassFromString(@"CircleViewController") new];
-////    controller = [NSClassFromString(@"SphereViewController") new];
-////    controller = [NSClassFromString(@"PickerViewController") new];
-////    controller = [NSClassFromString(@"SectionListViewController") new];
-//    controller = [NSClassFromString(@"BNUserLoginController") new];
-////    controller = [NSClassFromString(@"BNLearnMasonryController") new];
-//    controller = [NSClassFromString(@"TestViewController") new];
-//
-//    UINavigationController * mainNav = [[UINavigationController alloc]initWithRootViewController:controller];
-//    self.window.rootViewController = mainNav;
-//
-//    self.window.backgroundColor = UIColor.whiteColor;
-//    [self.window makeKeyAndVisible];
-///*
-//    if (DEBUG) InstallUncaughtExceptionHandler();
-//    NSString * controlName = @"BNHomeViewController";
-//    [UIApplication setupRootControllerName:controlName];
-// */
-//    [UIApplication setupAppearance];
-//
-//    return YES;
-//}
 
 - (void)applicationWillResignActive:(UIApplication *)application {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.

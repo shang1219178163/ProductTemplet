@@ -107,10 +107,8 @@
     }];
 
     self.dataList = @[
-                      @[@"PKMainController", @"高德地图轨迹回溯",],
                       @[@"SystemAboutController", @"系统相关",],
                       @[@"NNSearchController", @"复合搜索🔍",],
-                      @[@"TrackRecordsController", @"后台二十四小时定时定位",],
                       @[@"RuntimeController", @"字符串映射研究",],
                       @[@"LoginViewController", @"直播拉流",],
                       @[@"AnimationListController", @"动画研究",],
