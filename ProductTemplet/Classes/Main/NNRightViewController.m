@@ -6,13 +6,13 @@
 //  Copyright © 2016年 zY. All rights reserved.
 //
 
-#import "BNRightViewController.h"
+#import "NNRightViewController.h"
 
-@interface BNRightViewController ()
+@interface NNRightViewController ()
 
 @end
 
-@implementation BNRightViewController
+@implementation NNRightViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];

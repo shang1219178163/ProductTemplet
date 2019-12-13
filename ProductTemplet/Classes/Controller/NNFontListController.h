@@ -1,5 +1,5 @@
 //
-//  FontListController.h
+//  NNFontListController.h
 //  ProductTemplet
 //
 //  Created by dev on 2018/12/10.
@@ -10,7 +10,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface FontListController : UIViewController
+@interface NNFontListController : UIViewController
 
 @end
 

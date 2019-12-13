@@ -34,8 +34,8 @@
     [UIApplication setupAppearanceDefault:false];
     
     UIViewController * controller = UICtrFromString(@"HomeViewController");
-    UIViewController * controllerLeft = UICtrFromString(@"BNLeftViewController");
-    UIViewController * controllerRight = UICtrFromString(@"BNRightViewController");
+    UIViewController * controllerLeft = UICtrFromString(@"NNLeftViewController");
+    UIViewController * controllerRight = UICtrFromString(@"NNRightViewController");
 
     ZYSliderViewController * rootVC = [[ZYSliderViewController alloc]initWithMainViewController:controller leftViewController:controllerLeft rightViewController:controllerRight];
     

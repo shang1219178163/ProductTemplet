@@ -1,5 +1,5 @@
 //
-//  BNSecondViewController.h
+//  NNSecondViewController.h
 //  
 //
 //  Created by BIN on 2018/3/14.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface BNSecondViewController : UIViewController
+@interface NNSecondViewController : UIViewController
 
 @end

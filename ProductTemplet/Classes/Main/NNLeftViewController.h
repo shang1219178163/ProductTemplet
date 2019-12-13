@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface BNLeftViewController : UIViewController
+@interface NNLeftViewController : UIViewController
 
 @end

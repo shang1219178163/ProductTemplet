@@ -1,5 +1,5 @@
 //
-//  BNCenterViewController.h
+//  NNCenterViewController.h
 //  ProductTemplet
 //
 //  Created by BIN on 2018/5/21.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface BNCenterViewController : UIViewController
+@interface NNCenterViewController : UIViewController
 
 @end

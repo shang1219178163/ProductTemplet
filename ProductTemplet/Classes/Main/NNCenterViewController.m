@@ -1,15 +1,15 @@
 
 //
-//  BNCenterViewController.m
+//  NNCenterViewController.m
 //  ProductTemplet
 //
 //  Created by BIN on 2018/5/21.
 //  Copyright © 2018年 BN. All rights reserved.
 //
 
-#import "BNCenterViewController.h"
+#import "NNCenterViewController.h"
 
-@interface BNCenterViewController ()<UISearchBarDelegate>
+@interface NNCenterViewController ()<UISearchBarDelegate>
 
 @property (nonatomic, strong) UISearchBar *searchBar;
 
@@ -18,84 +18,12 @@
 
 @end
 
-@implementation BNCenterViewController
+@implementation NNCenterViewController
 
--(NSArray *)filterList{
-    if (!_filterList) {
-        _filterList = @[
-                        @{
-                            kItem_header:   @"时间",
-//                            kItem_footer:   @"footer_0",
-                            kItem_obj:   @[          @"天数",
-                                    
-                                    ],
-                            kItem_objSeleted:   @[          @(YES),
-                                    
-                                    ].mutableCopy,
-                            
-                            },
-                            @{
-                                kItem_header:   @"栏位",
-//                                kItem_footer:   @"footer_1",
-                                kItem_obj:   @[              @"栏位",
-                                        
-                                        ],
-                                kItem_objSeleted:   @[              @(YES),
-
-                                        ].mutableCopy,
-                                
-                                },
-                            @{
-                                kItem_header:   @"性别",
-//                                kItem_footer:   @"footer_2",
-                                kItem_obj:   @[              @"母猪",
-                                        
-                                        ],
-                                kItem_objSeleted:   @[              @(YES),
-
-                                        ].mutableCopy,
-                                
-                                },
-                            @{
-                                kItem_header:   @"状态",
-//                                kItem_footer:   @"footer_2",
-                                kItem_obj:   @[              @"后备", @"妊娠", @"哺乳",
-                                        @"返情空怀", @"B超鉴定空怀", @"流产空怀",
-                                        @"断奶空怀",
-                                        
-                                        ],
-                                kItem_objSeleted:   @[              @(YES),@(NO),@(NO),
-                                        @(NO),@(NO),@(NO),
-                                        @(NO),
-                                        
-                                        ].mutableCopy,
-                                
-                                },
-        
-                        ];
-    }
-    return _filterList;
-}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    self.tbView.backgroundColor = UIColor.whiteColor;
-//    [self.view addSubview:self.tableView];
-    [self.view addSubview:self.plainView];
-
-    self.view.backgroundColor = UIColor.yellowColor;
-    
-//    [self createBarItemTitle:@"Tap" imgName:nil isLeft:NO isHidden:NO handler:^(id obj, UIButton * item, NSInteger idx) {
-//        NNFilterView * view = [[NNFilterView alloc]init];
-//        view.dataList = self.filterList;
-//        //            view.direction = @1;
-//        [view show];
-//        view.block = ^(NNFilterView *view, NSIndexPath *indexPath, NSInteger idx) {
-//            DDLog(@"%@,%@",@(indexPath.section),@(indexPath.row));
-//        };
-//    }];
-    
     [self createBarItem:@"筛选" isLeft:false handler:^(id obj, UIView *item, NSInteger idx) {
         NNFilterView * view = [[NNFilterView alloc]init];
         view.dataList = self.filterList;
@@ -105,7 +33,12 @@
             DDLog(@"%@,%@",@(indexPath.section),@(indexPath.row));
         };
     }];
-
+    
+    
+    self.tbView.backgroundColor = UIColor.whiteColor;
+//    [self.view addSubview:self.tableView];
+    [self.view addSubview:self.plainView];
+    
     self.dataList = @[
                       @[@"SystemAboutController", @"系统相关",],
                       @[@"NNSearchController", @"复合搜索🔍",],
@@ -237,7 +170,7 @@
 - (NNTablePlainView *)plainView{
     if (!_plainView) {
         _plainView = [[NNTablePlainView alloc]initWithFrame:self.view.bounds];
-        _plainView.tableView.rowHeight = 70;
+        _plainView.tableView.rowHeight = 60;
         
         @weakify(self);
         _plainView.blockCellForRow = ^UITableViewCell *(UITableView *tableView, NSIndexPath *indexPath) {
@@ -247,12 +180,16 @@
             static NSString * identifier = @"UITableViewCell1";
             //    UITableViewOneCell * cell = [UITableViewOneCell cellWithTableView:tableView];
             UITableViewCell * cell = [UITableViewCell cellWithTableView:tableView identifier:identifier style:UITableViewCellStyleSubtitle];
-            cell.textLabel.text = list[1];
             cell.textLabel.textColor = UIColor.themeColor;
+            cell.textLabel.font = [UIFont systemFontOfSize:13];
             
-            cell.detailTextLabel.text = list[0];
             cell.detailTextLabel.textColor = UIColor.grayColor;
-            cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+            cell.detailTextLabel.font = [UIFont systemFontOfSize:11];
+               cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+            
+            cell.textLabel.text = list[1];
+            cell.detailTextLabel.text = list[0];
+   
             return cell;
         };
         
@@ -265,6 +202,64 @@
         };
     }
     return _plainView;
+}
+
+
+-(NSArray *)filterList{
+    if (!_filterList) {
+        _filterList = @[
+                        @{
+                            kItem_header:   @"时间",
+//                            kItem_footer:   @"footer_0",
+                            kItem_obj:   @[          @"天数",
+                                    
+                                    ],
+                            kItem_objSeleted:   @[          @(YES),
+                                    
+                                    ].mutableCopy,
+                            
+                            },
+                            @{
+                                kItem_header:   @"栏位",
+//                                kItem_footer:   @"footer_1",
+                                kItem_obj:   @[              @"栏位",
+                                        
+                                        ],
+                                kItem_objSeleted:   @[              @(YES),
+
+                                        ].mutableCopy,
+                                
+                                },
+                            @{
+                                kItem_header:   @"性别",
+//                                kItem_footer:   @"footer_2",
+                                kItem_obj:   @[              @"母猪",
+                                        
+                                        ],
+                                kItem_objSeleted:   @[              @(YES),
+
+                                        ].mutableCopy,
+                                
+                                },
+                            @{
+                                kItem_header:   @"状态",
+//                                kItem_footer:   @"footer_2",
+                                kItem_obj:   @[              @"后备", @"妊娠", @"哺乳",
+                                        @"返情空怀", @"B超鉴定空怀", @"流产空怀",
+                                        @"断奶空怀",
+                                        
+                                        ],
+                                kItem_objSeleted:   @[              @(YES),@(NO),@(NO),
+                                        @(NO),@(NO),@(NO),
+                                        @(NO),
+                                        
+                                        ].mutableCopy,
+                                
+                                },
+        
+                        ];
+    }
+    return _filterList;
 }
 
 @end

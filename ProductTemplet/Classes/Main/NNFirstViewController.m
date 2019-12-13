@@ -1,12 +1,12 @@
 //
-//  BNFirstViewController.m
+//  NNFirstViewController.m
 //  
 //
 //  Created by BIN on 2018/3/14.
 //  Copyright © 2018年 SHANG. All rights reserved.
 //
 
-#import "BNFirstViewController.h"
+#import "NNFirstViewController.h"
 
 #import "UIViewController+ZYSliderViewController.h"
 #import "ZYSliderViewController.h"
@@ -18,7 +18,7 @@
 
 #import "FactoryDetailInfoModel.h"
 
-@interface BNFirstViewController ()<SDCycleScrollViewDelegate>
+@interface NNFirstViewController ()<SDCycleScrollViewDelegate>
 
 @property (nonatomic, strong) NNBtnView * btnView;
 @property (nonatomic, strong) NNMenuView * menuView;
@@ -30,7 +30,7 @@
 
 @end
 
-@implementation BNFirstViewController
+@implementation NNFirstViewController
 
 -(NNBtnView *)btnView{
     if (!_btnView) {

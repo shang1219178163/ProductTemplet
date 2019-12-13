@@ -1,12 +1,12 @@
 //
-//  BNFourthViewController.m
+//  NNFourthViewController.m
 //  
 //
 //  Created by BIN on 2018/3/14.
 //  Copyright © 2018年 SHANG. All rights reserved.
 //
 
-#import "BNFourthViewController.h"
+#import "NNFourthViewController.h"
 
 #import "ZYSliderViewController.h"
 
@@ -19,7 +19,7 @@
 #import "NNCheckVersApi.h"
 #import "NNRootAppInfoModel.h"
 
-@interface BNFourthViewController ()
+@interface NNFourthViewController ()
 
 @property (nonatomic, strong) UIImageView *imgView;
 @property (nonatomic, strong) UIView *sliderView;
@@ -33,7 +33,7 @@
 
 @end
 
-@implementation BNFourthViewController
+@implementation NNFourthViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -65,11 +65,11 @@
 //        UITabBarItem *tabBarItem = [UITabBarItem createItem:@"title" image:@"Item_third_H" selectedImage:@"Item_first_H"];
 //        tabBarController.viewControllers.firstObject.tabBarItem = tabBarItem;
 
-        NSArray *list = @[@[@"BNFirstViewController",@"首页",@"Item_third_N",@"Item_third_H",@"0",],
-                          @[@"BNSecondViewController",@"圈子",@"Item_second_N",@"Item_second_H",@"11",],
-                          @[@"BNCenterViewController",@"总览",@"Item_center_N",@"Item_center_H",@"10",],
-                          @[@"BNThirdViewController",@"消息",@"Item_third_N",@"Item_third_H",@"12",],
-                          @[@"BNFourthViewController",@"我的",@"Item_fourth_N",@"Item_fourth_H",@"13",],
+        NSArray *list = @[@[@"NNFirstViewController",@"首页",@"Item_third_N",@"Item_third_H",@"0",],
+                          @[@"NNSecondViewController",@"圈子",@"Item_second_N",@"Item_second_H",@"11",],
+                          @[@"NNCenterViewController",@"总览",@"Item_center_N",@"Item_center_H",@"10",],
+                          @[@"NNThirdViewController",@"消息",@"Item_third_N",@"Item_third_H",@"12",],
+                          @[@"NNFourthViewController",@"我的",@"Item_fourth_N",@"Item_fourth_H",@"13",],
                           
                           ];
         [tabBarController reloadTabarItems:list];

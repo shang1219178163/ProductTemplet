@@ -1,19 +1,19 @@
 //
-//  BNSecondViewController.m
+//  NNSecondViewController.m
 //  
 //
 //  Created by BIN on 2018/3/14.
 //  Copyright © 2018年 SHANG. All rights reserved.
 //
 
-#import "BNSecondViewController.h"
+#import "NNSecondViewController.h"
 
 
-@interface BNSecondViewController ()
+@interface NNSecondViewController ()
 
 @end
 
-@implementation BNSecondViewController
+@implementation NNSecondViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];

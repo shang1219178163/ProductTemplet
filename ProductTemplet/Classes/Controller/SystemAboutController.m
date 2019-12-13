@@ -10,7 +10,7 @@
 
 @interface SystemAboutController ()
 
-@property (nonatomic, strong) NNTablePlainView * plainView;
+@property (nonatomic, strong) NNTablePlainView *plainView;
 
 @end
 
@@ -24,7 +24,7 @@
     
     self.dataList = @[
                       @[@"AudioSoundController", @"iOS 系统铃声大全",],
-                      @[@"FontListController", @"iOS 系统字体大全",],
+                      @[@"NNFontListController", @"iOS 系统字体大全",],
                       @[@"FileShareController", @"app之间文件共享",],
                       @[@"AppIconChangeController", @"app图标更换",],
                       @[@"TextFromSpeechController", @"语音转文字",],
@@ -37,14 +37,15 @@
                       @[@"SnapshotViewController", @"屏幕截图分享/反馈",],
                       ].mutableCopy;
         
-        self.plainView.list = self.dataList;
-        [self.plainView.tableView reloadData];
+        
+    self.plainView.list = self.dataList;
+    [self.plainView.tableView reloadData];
         
 }
 - (void)viewDidLayoutSubviews{
     [super viewDidLayoutSubviews];
     
-//    self.plainView.frame = self.view.bounds;
+    self.plainView.frame = self.view.bounds;
 }
 
 -(void)viewWillAppear:(BOOL)animated{
@@ -57,7 +58,7 @@
 - (NNTablePlainView *)plainView{
     if (!_plainView) {
         _plainView = [[NNTablePlainView alloc]initWithFrame:self.view.bounds];
-        _plainView.tableView.rowHeight = 70;
+        _plainView.tableView.rowHeight = 60;
         
         @weakify(self);
         _plainView.blockCellForRow = ^UITableViewCell *(UITableView *tableView, NSIndexPath *indexPath) {
@@ -67,12 +68,15 @@
             static NSString * identifier = @"UITableViewCell1";
             //    UITableViewOneCell * cell = [UITableViewOneCell cellWithTableView:tableView];
             UITableViewCell * cell = [UITableViewCell cellWithTableView:tableView identifier:identifier style:UITableViewCellStyleSubtitle];
-            cell.textLabel.text = list[1];
             cell.textLabel.textColor = UIColor.themeColor;
+            cell.textLabel.font = [UIFont systemFontOfSize:13];
             
-            cell.detailTextLabel.text = list[0];
             cell.detailTextLabel.textColor = UIColor.grayColor;
-            cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+            cell.detailTextLabel.font = [UIFont systemFontOfSize:11];
+               cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+            
+            cell.textLabel.text = list[1];
+            cell.detailTextLabel.text = list[0];
             return cell;
         };
         

@@ -1,5 +1,5 @@
 //
-//  BNFourthViewController.h
+//  NNFirstViewController.h
 //  
 //
 //  Created by BIN on 2018/3/14.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface BNFourthViewController : UIViewController
+@interface NNFirstViewController : UIViewController
 
 @end

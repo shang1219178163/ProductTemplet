@@ -6,17 +6,17 @@
 //  Copyright © 2016年 zY. All rights reserved.
 //
 
-#import "BNLeftViewController.h"
+#import "NNLeftViewController.h"
 #import "UIViewController+ZYSliderViewController.h"
 #import "ZYSliderViewController.h"
 
-@interface BNLeftViewController () <UITableViewDelegate,UITableViewDataSource>
+@interface NNLeftViewController () <UITableViewDelegate,UITableViewDataSource>
 
 @property (nonatomic, strong) NSArray *dataSource;
 
 @end
 
-@implementation BNLeftViewController
+@implementation NNLeftViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];

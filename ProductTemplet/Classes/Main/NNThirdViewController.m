@@ -6,14 +6,14 @@
 //  Copyright © 2018年 SHANG. All rights reserved.
 //
 
-#import "BNThirdViewController.h"
+#import "NNThirdViewController.h"
 #import "NNCheckVersApi.h"
 
-@interface BNThirdViewController ()
+@interface NNThirdViewController ()
 
 @end
 
-@implementation BNThirdViewController
+@implementation NNThirdViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];

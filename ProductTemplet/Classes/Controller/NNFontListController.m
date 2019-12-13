@@ -1,25 +1,25 @@
 //
-//  FontListController.m
+//  NNFontListController.m
 //  ProductTemplet
 //
 //  Created by dev on 2018/12/10.
 //  Copyright © 2018年 BN. All rights reserved.
 //
 
-#import "FontListController.h"
+#import "NNFontListController.h"
 
-@interface FontListController ()
+@interface NNFontListController ()
 
 @property (strong, nonatomic) NSMutableArray *fontList;
 
 @end
 
-@implementation FontListController
+@implementation NNFontListController
 
 - (void)viewDidLoad{
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
-    
+    self.tbView.rowHeight = 50;
     [self.view addSubview:self.tbView];
     
 }
@@ -63,7 +63,7 @@
         _fontList = [NSMutableArray array];
         
         for (id familyName in UIFont.familyNames) {
-            NSLog(@"family: %@", familyName);
+//            NSLog(@"family: %@", familyName);
             NSMutableDictionary *family = [NSMutableDictionary dictionary];
             [family setObject:familyName forKey:@"name"];
             NSArray *fontNames = [UIFont fontNamesForFamilyName:familyName];
