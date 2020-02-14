@@ -43,8 +43,9 @@
 
 + (NSDictionary *)paramsFromOrigin:(NSDictionary *)params{
     NSMutableDictionary * mdic = [NSMutableDictionary dictionaryWithDictionary:params];
-    if ([NSUserDefaults.standardUserDefaults objectForKey:@"token"]) {
-        [mdic setObject:[NSUserDefaults objectForKey:@"token"] forKey:@"token"];
+    NSString *token = [NSUserDefaults.standardUserDefaults objectForKey:@"token"];
+    if (token.length > 0) {
+        [mdic setObject:token forKey:@"token"];
     }
     return mdic.copy;
 }
@@ -55,38 +56,29 @@
     return [self startRequest];
 }
 
-- (NSURLSessionTask *)requestWithBlock:(NNRequestBlock)block{
-    self.requestBlock = block;
-    return [self startRequest];
-}
-
 - (NSURLSessionTask *)startRequest{
-    NSURLSessionTask * task = nil;
+    NSURLSessionTask *task = nil;
 
     if (![self.child validateParams]) {
-        NSError * error = [NSError errorWithMessage:@"validateParams参数校验失败" code:NNRequestCodeParamsError obj:nil];
+        NSError *error = [NSError errorWithMessage:@"validateParams参数校验失败" code:NNRequestCodeParamsError obj:nil];
         if (self.delegate && [self.delegate conformsToProtocol:@protocol(NNRequestManagerProtocol)]) {
             [self.delegate manager:self successDic:nil failError:error];
         }
         if (self.failureBlock) {
             self.failureBlock(self, nil, error);
         }
-        if (self.requestBlock) {
-            self.requestBlock(self, nil, error);
-        }
         return task;
     }
     
     if ([self.child respondsToSelector:@selector(jsonFromCache)] && self.child.jsonFromCache) {
         NSDictionary *cacheDic = self.child.jsonFromCache;
+        [self printLog:cacheDic isSend:false];
+        
         if (self.delegate && [self.delegate conformsToProtocol:@protocol(NNRequestManagerProtocol)]) {
             [self.delegate manager:self successDic:cacheDic failError:nil];
         }
         if (self.successBlock) {
             self.successBlock(self, cacheDic, nil);
-        }
-        if (self.requestBlock) {
-            self.requestBlock(self, cacheDic, nil);
         }
         return task;
     }
@@ -99,7 +91,9 @@
     //请求日志
     NSString *urlString = [NNAPIConfi.serviceUrl stringByAppendingPathComponent:self.child.requestURI];
     NSDictionary *params = [NNRequstManager paramsFromOrigin:self.child.requestParams];
-    [NNLog logRequestInfoWithURI:urlString params:params];
+    
+    [self printLog:params isSend:true];
+    
     id token = [NSUserDefaults objectForKey:@"token"];
     if (token) {
         [NNRequstAgent.shared setValue:token forHTTPHeaderField:@"Authorization"];
@@ -243,18 +237,14 @@
         return;
     }
     //请求结果日志
-    NSString * urlString = [NNAPIConfi.serviceUrl stringByAppendingString:self.child.requestURI];
-    [NNLog logResponseInfoWithURI:urlString responseJSON:jsonDic];
-    
+    [self printLog:jsonDic isSend:false];
+
 //    DDLog(@"delegate:%@",self.delegate);
     if (self.delegate && [self.delegate conformsToProtocol:@protocol(NNRequestManagerProtocol)]) {
         [self.delegate manager:self successDic:jsonDic failError:nil];
     }
     if (self.successBlock) {
         self.successBlock(self, jsonDic, nil);
-    }
-    if (self.requestBlock) {
-        self.requestBlock(self, jsonDic, nil);
     }
     //缓存数据
     if ([self.child respondsToSelector:@selector(saveJsonOfCache:)]) {
@@ -294,6 +284,18 @@
     }
 }
 
+
+#pragma mark - funtions
+
+- (void)printLog:(NSDictionary *)dic isSend:(BOOL)isSend{
+    NSString *urlString = [NSString stringWithFormat:@"%@%@",NNAPIConfi.serviceUrl, [self.child requestURI]];
+    if (isSend) {
+        [NNLog logRequestInfoWithURI:urlString params:dic];
+    } else {
+        [NNLog logResponseInfoWithURI:urlString responseJSON:dic];
+    }
+}
+
 #pragma mark - -lazy
 
 -(NSDictionary *)errorDic{
@@ -314,5 +316,7 @@
     }
     return _errorDic;
 }
+
+
 
 @end

@@ -81,8 +81,6 @@ typedef void(^NNRequestBlock)(NNRequstManager *manager, id _Nullable responseObj
 
 - (NSURLSessionTask *)requestWithSuccessBlock:(NNRequestBlock)successBlock failedBlock:(NNRequestBlock)failureBlock;
 
-- (NSURLSessionTask *)requestWithBlock:(NNRequestBlock)block;
-
 - (void)cancelAllRequest;
 
 @end
