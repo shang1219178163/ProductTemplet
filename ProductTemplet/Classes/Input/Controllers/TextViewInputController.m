@@ -72,6 +72,8 @@
 
 -(void)scrollViewDidScroll:(UIScrollView *)scrollView{
 //    [self.xTextView resignFirstResponder];
+    
+    
 }
 
 -(UITextView *)xTextView{

@@ -19,6 +19,8 @@
 
 @protocol NNCycleScrollViewDelegate <NSObject>
 - (void)didSelectedIndex:(NSInteger)index;
+@optional
+- (UICollectionViewCell *)cellForItem:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath;
 
 @end
 
@@ -33,6 +35,7 @@
 @property (nonatomic, assign) BOOL isAutoScroll;
 /// 点击代码块回调
 @property (nonatomic, copy) void(^blockDidSelectedIndex)(NSInteger index);
+@property (nonatomic, copy) UICollectionViewCell *(^blockCellForItem)(UICollectionView *collectionView, NSIndexPath *indexPath);
 
 /**为图片数组赋值*/
 - (void)setImageArray:(NSArray *)imageArray;

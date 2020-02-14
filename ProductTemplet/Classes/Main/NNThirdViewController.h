@@ -10,4 +10,6 @@
 
 @interface NNThirdViewController : UIViewController
 
+@property(nonatomic, strong) NSString *name;
+
 @end

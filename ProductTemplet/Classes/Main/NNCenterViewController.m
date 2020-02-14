@@ -40,6 +40,7 @@
     [self.view addSubview:self.plainView];
     
     self.dataList = @[
+                      @[@"NNTagViewController", @"TagView",],
                       @[@"SystemAboutController", @"系统相关",],
                       @[@"NNSearchController", @"复合搜索🔍",],
                       @[@"RuntimeController", @"字符串映射研究",],

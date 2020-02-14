@@ -6,7 +6,6 @@
 //  Copyright © 2019 BN. All rights reserved.
 //
 
-#import <AppKit/AppKit.h>
 
 
 #import "NNThirdViewController.h"

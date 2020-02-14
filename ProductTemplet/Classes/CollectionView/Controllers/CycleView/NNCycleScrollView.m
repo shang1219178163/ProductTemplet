@@ -93,6 +93,7 @@
     }
     _imageArray = imageArray;
     _pageControl.numberOfPages = _imageArray.count;
+    _pageControl.hidden = _imageArray.count == 1;
     if (_imageArray.count > 1) {
         _ctView.scrollEnabled = YES;
         [self setIsAutoScroll:_isAutoScroll];
@@ -110,7 +111,7 @@
 
 #pragma mark - Private Menthod
 - (void)automaticScroll{
-    if (_imageArray.count == 0) return;
+    if (_imageArray.count == 0 || _imageArray.count == 1) return;
     int currentIndex = [self currentIndex];
     int targetIndex = currentIndex + 1;
     NSIndexPath *indexPath = [NSIndexPath indexPathForItem:targetIndex inSection:0];
@@ -158,17 +159,32 @@
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath{
+    if (self.delegate && [self.delegate cellForItem:collectionView cellForItemAtIndexPath:indexPath]) {
+        return [self.delegate cellForItem:collectionView cellForItemAtIndexPath:indexPath];
+    }
+    
+    if (self.blockCellForItem && self.blockCellForItem(collectionView, indexPath)) {
+        return self.blockCellForItem(collectionView, indexPath);
+    }
+    
     UICTViewCellOne *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"UICTViewCellOne" forIndexPath:indexPath];
     cell.label.hidden = true;
     
     NSInteger currentIndex = [self dataSourceIndexForCurrentIndex:indexPath.item];
     id obj = self.imageArray[currentIndex];
+
     if ([obj isKindOfClass:[UIImage class]]) {
         cell.imgView.image = obj;
         
     } else if ([obj isKindOfClass:[NSString class]]){
-        [cell.imgView loadImage:obj defaultImg:@"tmp"];
-        
+        if ([obj hasPrefix:@"http"]) {
+            [cell.imgView loadImage:obj defaultImg:@"tmp"];
+
+        } else {
+            cell.label.hidden = false;
+            cell.imgView.hidden = true;
+            cell.label.text = obj;
+        }
     }
     return cell;
 }

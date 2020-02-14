@@ -132,6 +132,9 @@
 		14A86A852355AFC700AD9BC1 /* NNSearchResultController.m in Sources */ = {isa = PBXBuildFile; fileRef = 14A86A812355AFC600AD9BC1 /* NNSearchResultController.m */; };
 		14A86A862355AFC700AD9BC1 /* NNSearchController.m in Sources */ = {isa = PBXBuildFile; fileRef = 14A86A822355AFC600AD9BC1 /* NNSearchController.m */; };
 		14A95771231125F10045140F /* NNScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 14A95770231125F10045140F /* NNScrollView.m */; };
+		14ADE27E23CEC65A00037B0B /* NNTagViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 14ADE27D23CEC65A00037B0B /* NNTagViewController.m */; };
+		14ADE28123CEC66800037B0B /* XGTagView.m in Sources */ = {isa = PBXBuildFile; fileRef = 14ADE28023CEC66800037B0B /* XGTagView.m */; };
+		14ADE28423CEE09D00037B0B /* NNTagView.m in Sources */ = {isa = PBXBuildFile; fileRef = 14ADE28323CEE09C00037B0B /* NNTagView.m */; };
 		14B14BAD234C171B004B7BF9 /* SearchTitleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 14B14BAC234C171B004B7BF9 /* SearchTitleViewController.m */; };
 		14B14BB3234C2C8F004B7BF9 /* UIApplication+Tmp.m in Sources */ = {isa = PBXBuildFile; fileRef = 14B14BB2234C2C8F004B7BF9 /* UIApplication+Tmp.m */; };
 		14B6B33522B0F8760047E094 /* PKSeverinfoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 14B6B33422B0F8760047E094 /* PKSeverinfoModel.m */; };
@@ -145,6 +148,7 @@
 		14B6B34D22B2233B0047E094 /* PKChannelListRootModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 14B6B34B22B2233A0047E094 /* PKChannelListRootModel.m */; };
 		14B6B35022B230350047E094 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 14B6B34F22B230350047E094 /* LoginViewController.m */; };
 		14B7CF6D2383D2F200AEF7BC /* UIImageView+Tmp.m in Sources */ = {isa = PBXBuildFile; fileRef = 14B7CF6C2383D2F200AEF7BC /* UIImageView+Tmp.m */; };
+		14BEBF5123B597BA0058C20A /* NNThirdViewController+Helper.m in Sources */ = {isa = PBXBuildFile; fileRef = 14BEBF5023B597BA0058C20A /* NNThirdViewController+Helper.m */; };
 		14C1197522DC59AC009D18A3 /* ScrollViewCycleController.m in Sources */ = {isa = PBXBuildFile; fileRef = 14C1197122DC59AB009D18A3 /* ScrollViewCycleController.m */; };
 		14C1197622DC59AC009D18A3 /* UICTViewCellCycle.m in Sources */ = {isa = PBXBuildFile; fileRef = 14C1197222DC59AB009D18A3 /* UICTViewCellCycle.m */; };
 		14C1197822DC5A5A009D18A3 /* postImage.png in Resources */ = {isa = PBXBuildFile; fileRef = 14C1197722DC5A59009D18A3 /* postImage.png */; };
@@ -722,6 +726,12 @@
 		14A86A822355AFC600AD9BC1 /* NNSearchController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NNSearchController.m; sourceTree = "<group>"; };
 		14A9576F231125F10045140F /* NNScrollView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NNScrollView.h; sourceTree = "<group>"; };
 		14A95770231125F10045140F /* NNScrollView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NNScrollView.m; sourceTree = "<group>"; };
+		14ADE27C23CEC65A00037B0B /* NNTagViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NNTagViewController.h; sourceTree = "<group>"; };
+		14ADE27D23CEC65A00037B0B /* NNTagViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NNTagViewController.m; sourceTree = "<group>"; };
+		14ADE27F23CEC66800037B0B /* XGTagView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XGTagView.h; sourceTree = "<group>"; };
+		14ADE28023CEC66800037B0B /* XGTagView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XGTagView.m; sourceTree = "<group>"; };
+		14ADE28223CEE09C00037B0B /* NNTagView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NNTagView.h; sourceTree = "<group>"; };
+		14ADE28323CEE09C00037B0B /* NNTagView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NNTagView.m; sourceTree = "<group>"; };
 		14B14BAB234C171B004B7BF9 /* SearchTitleViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SearchTitleViewController.h; sourceTree = "<group>"; };
 		14B14BAC234C171B004B7BF9 /* SearchTitleViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SearchTitleViewController.m; sourceTree = "<group>"; };
 		14B14BB1234C2C8F004B7BF9 /* UIApplication+Tmp.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIApplication+Tmp.h"; sourceTree = "<group>"; };
@@ -748,6 +758,8 @@
 		14B6B34F22B230350047E094 /* LoginViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 		14B7CF6B2383D2F200AEF7BC /* UIImageView+Tmp.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIImageView+Tmp.h"; sourceTree = "<group>"; };
 		14B7CF6C2383D2F200AEF7BC /* UIImageView+Tmp.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+Tmp.m"; sourceTree = "<group>"; };
+		14BEBF4F23B597BA0058C20A /* NNThirdViewController+Helper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NNThirdViewController+Helper.h"; sourceTree = "<group>"; };
+		14BEBF5023B597BA0058C20A /* NNThirdViewController+Helper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NNThirdViewController+Helper.m"; sourceTree = "<group>"; };
 		14C1197122DC59AB009D18A3 /* ScrollViewCycleController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScrollViewCycleController.m; sourceTree = "<group>"; };
 		14C1197222DC59AB009D18A3 /* UICTViewCellCycle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UICTViewCellCycle.m; sourceTree = "<group>"; };
 		14C1197322DC59AB009D18A3 /* UICTViewCellCycle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UICTViewCellCycle.h; sourceTree = "<group>"; };
@@ -2189,6 +2201,12 @@
 				1419DAE2227005FF00F4BB5C /* NSObject+Bind.m */,
 				14F25F4C23599AB000D05998 /* UIBarButtonItem+Block.h */,
 				14F25F4D23599AB000D05998 /* UIBarButtonItem+Block.m */,
+				14ADE27C23CEC65A00037B0B /* NNTagViewController.h */,
+				14ADE27D23CEC65A00037B0B /* NNTagViewController.m */,
+				14ADE27F23CEC66800037B0B /* XGTagView.h */,
+				14ADE28023CEC66800037B0B /* XGTagView.m */,
+				14ADE28223CEE09C00037B0B /* NNTagView.h */,
+				14ADE28323CEE09C00037B0B /* NNTagView.m */,
 				14F25F522359A14800D05998 /* UIView+Tmp.h */,
 				14F25F532359A14800D05998 /* UIView+Tmp.m */,
 			);
@@ -2208,6 +2226,8 @@
 				14E42CE72200040E00606AD0 /* NNFirstViewController.m */,
 				14E42CF02200040F00606AD0 /* NNThirdViewController.h */,
 				14E42CEA2200040E00606AD0 /* NNThirdViewController.m */,
+				14BEBF4F23B597BA0058C20A /* NNThirdViewController+Helper.h */,
+				14BEBF5023B597BA0058C20A /* NNThirdViewController+Helper.m */,
 				14E42CDD2200040C00606AD0 /* NNFourthViewController.h */,
 				14E42CEC2200040E00606AD0 /* NNFourthViewController.m */,
 				14E42CDF2200040C00606AD0 /* NNLeftViewController.h */,
@@ -3107,6 +3127,7 @@
 				147ABB5822DED1A500A5C4EC /* BNCollectionDataController.m in Sources */,
 				51698C4221376F9E0069C2B2 /* Utilities.m in Sources */,
 				51698C892137C0800069C2B2 /* WHKUserDataModel.m in Sources */,
+				14ADE28123CEC66800037B0B /* XGTagView.m in Sources */,
 				149F88A722B37A1B00EAB4C2 /* BNPwdModifyView.m in Sources */,
 				141080B022D2E7D10011344E /* DriftAnimationController.m in Sources */,
 				14B6B35022B230350047E094 /* LoginViewController.m in Sources */,
@@ -3255,6 +3276,7 @@
 				14E42CF82200040F00606AD0 /* NNThirdViewController.m in Sources */,
 				14E42D152200042800606AD0 /* BNLanguage.m in Sources */,
 				14E42CF62200040F00606AD0 /* NNLeftViewController.m in Sources */,
+				14BEBF5123B597BA0058C20A /* NNThirdViewController+Helper.m in Sources */,
 				149111D7227308640078A7BB /* NNRequstManager.m in Sources */,
 				146B8187225C74860004A249 /* SubTabBarController.m in Sources */,
 				515CC97A20B6AAF2004AE27C /* AACrosshair.m in Sources */,
@@ -3306,6 +3328,7 @@
 				14C11AB622DC7FF8009D18A3 /* CTViewListController.m in Sources */,
 				515CC98020B6AAF2004AE27C /* AATitle.m in Sources */,
 				147AB8B822DDD76D00A5C4EC /* FileShareController.m in Sources */,
+				14ADE27E23CEC65A00037B0B /* NNTagViewController.m in Sources */,
 				1401BE822276D18C0078A722 /* NNCheckVersApi.m in Sources */,
 				1421D5D021F3177700635582 /* NNWalletView.m in Sources */,
 				515CC97E20B6AAF2004AE27C /* AAStyle.m in Sources */,
@@ -3393,6 +3416,7 @@
 				14107FB422CDF9490011344E /* UITextField+Util.m in Sources */,
 				5175C93920C13DE1009EA86E /* Student.m in Sources */,
 				513646B720860332005A20E7 /* MainViewController.m in Sources */,
+				14ADE28423CEE09D00037B0B /* NNTagView.m in Sources */,
 				14B6B34122B1FE8A0047E094 /* DeviceListController.m in Sources */,
 				5169699B20BCED4000BAA53D /* LHService.m in Sources */,
 				1421D5CD21F307F700635582 /* CustomViewController.m in Sources */,

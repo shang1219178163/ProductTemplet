@@ -8,9 +8,18 @@
 
 #import "NNThirdViewController+Helper.h"
 
-#import <AppKit/AppKit.h>
-
-
 @implementation NNThirdViewController (Helper)
+
++ (void)initialize{
+    if (self == [self class]) {
+        DDLog(@"%@", @"NNThirdViewController")
+    }
+}
+
+
++ (void)load{
+    DDLog(@"%@", @"NNThirdViewController")
+
+}
 
 @end
