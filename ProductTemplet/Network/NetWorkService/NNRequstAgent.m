@@ -108,26 +108,35 @@
     }
     NSURLSessionTask *sessionTask = [self.sessionManager POST:URL parameters:parameters constructingBodyWithBlock:^(id<AFMultipartFormData>  _Nonnull formData) {
         
-        for (NSUInteger i = 0; i < images.count; i++) {
-            NNUploadModel * model = BNUploadModelFromParam(images, i, fileNames[i]);
-            [formData appendPartWithFileData:model.data
-                                        name:model.name
-                                    fileName:model.fileName
-                                    mimeType:model.mimeType];
-            DDLog(@"formData________image%@->%@->%@->%luk", @(i), model.name, model.fileName, model.data.length/1024);
-        }
+        [NNRequstAgent uploadFileFormData:formData parameters:parameters];
+//        [images enumerateObjectsUsingBlock:^(UIImage * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+//            NSData *data = [obj compressToFileSize:1024*1024];
+//            NSString *fileName = [NSDateFormatter stringFromDate:NSDate.date fmt:@"yyyyMMddHHmmss"];
+//            NSString *imageType = [UIImage contentTypeForImageData:data];
+//            fileName = [fileName stringByAppendingFormat:@".%@", imageType];
+//
+//            NSString *mimeType = [NSString stringWithFormat:@"image/%@", imageType];
+//            [formData appendPartWithFileData:data
+//                                        name:@"file"
+//                                    fileName:fileName
+//                                    mimeType:mimeType];
+//            DDLog(@"formData上传图片_%@:%@ (fileName:%@_mimeType:%@)", @"file", @([(NSData *)obj length]), fileName, mimeType);
+//        }];
+        
         //add by bin
-        if ([parameters isKindOfClass:[NSString class]]) {
+        if ([parameters isKindOfClass: NSString.class]) {
             NSData *paramData = [parameters dataUsingEncoding:NSUTF8StringEncoding];
             [formData appendPartWithFormData:paramData
-                                        name:@"data"];
+                                        name:@"file"];
             
 //            DDLog(@"formData________字符串");
-        } else if ([parameters isKindOfClass:[NSData class]]){
+        } else if ([parameters isKindOfClass: NSData.class]){
             [formData appendPartWithFormData:parameters
-                                        name:@"data"];
+                                        name:@"file"];
             
 //            DDLog(@"formData________字符串");
+        } else if ([parameters isKindOfClass: NSDictionary.class]){
+            [NNRequstAgent uploadFileFormData:formData parameters:parameters];
         }
         
     } progress:^(NSProgress * _Nonnull uploadProgress) {
@@ -196,6 +205,49 @@
     [sessionTask resume];
     return sessionTask;
 }
+
+#pragma mark - funtions
+
++ (void)uploadFileFormData:(id <AFMultipartFormData>)formData parameters:(id)parameters {
+    if ([parameters isKindOfClass: NSDictionary.class]) {
+        [((NSDictionary *)parameters) enumerateKeysAndObjectsUsingBlock:^(NSString * _Nonnull key, id  _Nonnull obj, BOOL * _Nonnull stop) {
+            if ([obj isKindOfClass: NSString.class]) {
+                NSData *paramData = [obj dataUsingEncoding:NSUTF8StringEncoding];
+                [formData appendPartWithFormData:paramData name:key];
+                DDLog(@"formData上传文字_%@:%@", key, obj);
+
+            } else if ([obj isKindOfClass: NSData.class]){
+                // 默认图片的文件名
+                NSString *fileName = [NSDateFormatter stringFromDate:NSDate.date fmt:@"yyyyMMddHHmmss"];
+                NSString *imageType = [UIImage contentTypeForImageData:obj];
+                fileName = [fileName stringByAppendingFormat:@".%@", imageType];
+
+                NSString *mimeType = [NSString stringWithFormat:@"image/%@", imageType];
+                [formData appendPartWithFileData:obj
+                                            name:@"file"
+                                        fileName:fileName
+                                        mimeType:mimeType];
+                DDLog(@"formData上传图片_%@:%@ (fileName:%@_mimeType:%@)", key, @([(NSData *)obj length]), fileName, mimeType);
+            }
+        }];
+    } else if ([parameters isKindOfClass: NSArray.class]) {
+        [(NSArray *)parameters enumerateObjectsUsingBlock:^(id _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+            NSData *data = [obj isKindOfClass: NSData.class] ? obj : [obj compressToFileSize:1024*1024];
+            NSString *fileName = [NSDateFormatter stringFromDate:NSDate.date fmt:@"yyyyMMddHHmmss"];
+            NSString *imageType = [UIImage contentTypeForImageData:data];
+            fileName = [fileName stringByAppendingFormat:@".%@", imageType];
+
+            NSString *mimeType = [NSString stringWithFormat:@"image/%@", imageType];
+            [formData appendPartWithFileData:data
+                                        name:@"file"
+                                    fileName:fileName
+                                    mimeType:mimeType];
+            DDLog(@"formData上传图片_%@:%@ (fileName:%@_mimeType:%@)", @"file", @([(NSData *)obj length]), fileName, mimeType);
+        }];
+    }
+
+}
+
 
 
 /**

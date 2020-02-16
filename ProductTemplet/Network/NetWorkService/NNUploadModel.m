@@ -10,7 +10,7 @@
 
 @implementation NNUploadModel
 
-NNUploadModel *BNUploadModelFromParam(NSArray<UIImage *> *images, NSInteger idx, NSString *fileName){
+NNUploadModel *NNUploadModelFromParam(NSArray<UIImage *> *images, NSInteger idx, NSString *fileName){
     //    NSData *imageData = [Utilities_DM compressImageDataFromImage:image maxFileSize:1024];
     //    NSString * imageType = [Utilities_DM contentTypeForImageData:imageData];
     NSData *imageData = nil;

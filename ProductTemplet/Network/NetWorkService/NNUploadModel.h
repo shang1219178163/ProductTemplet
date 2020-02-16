@@ -17,7 +17,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, strong) NSString *fileName;
 @property (nonatomic, strong) NSString *mimeType;
 
-NNUploadModel *BNUploadModelFromParam(NSArray<UIImage *> *images, NSInteger idx, NSString *fileName);
+NNUploadModel *NNUploadModelFromParam(NSArray<UIImage *> *images, NSInteger idx, NSString *fileName);
 
 @end
 
