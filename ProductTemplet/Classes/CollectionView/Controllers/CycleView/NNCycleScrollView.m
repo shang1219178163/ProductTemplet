@@ -93,7 +93,9 @@
     }
     _imageArray = imageArray;
     _pageControl.numberOfPages = _imageArray.count;
-    _pageControl.hidden = _imageArray.count == 1;
+    if (!_pageControl.isHidden) {
+        _pageControl.hidden = _imageArray.count <= 1;
+    }
     if (_imageArray.count > 1) {
         _ctView.scrollEnabled = YES;
         [self setIsAutoScroll:_isAutoScroll];
