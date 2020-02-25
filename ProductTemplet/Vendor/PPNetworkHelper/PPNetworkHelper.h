@@ -243,6 +243,11 @@ typedef void(^PPNetworkStatus)(PPNetworkStatusType status);
                                            success:(PPHttpRequestSuccess)success
                                            failure:(PPHttpRequestFailed)failure;
 
++ (NSURLSessionTask *)postMultFormDataWithURL:(NSString *)URL
+                                   parameters:(id)parameters
+                                     progress:(PPHttpProgress)progress
+                                      success:(PPHttpRequestSuccess)success
+                                         fail:(PPHttpRequestFailed)fail;
 /**
  表单形式提交数据(add by bin)
 

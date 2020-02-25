@@ -290,6 +290,68 @@ static AFHTTPSessionManager *_sessionManager;
     return sessionTask;
 }
 
++ (NSURLSessionTask *)postMultFormDataWithURL:(NSString *)URL
+                       parameters:(id)parameters
+                         progress:(PPHttpProgress)progress
+                          success:(PPHttpRequestSuccess)success
+                          failure:(PPHttpRequestFailed)failure{
+    __block NSURLSessionDataTask *sessionTask = nil;
+    sessionTask = [_sessionManager POST:URL parameters:parameters constructingBodyWithBlock:^(id<AFMultipartFormData>  _Nonnull formData) {
+        //add by bin
+        if ([parameters isKindOfClass:[NSString class]]) {
+            NSData *paramData = [parameters dataUsingEncoding:NSUTF8StringEncoding];
+            [formData appendPartWithFormData:paramData name:@"file"];
+//            DDLog(@"formData________字符串");
+            
+        } else if ([parameters isKindOfClass:[NSData class]]){
+            [formData appendPartWithFormData:parameters name:@"file"];
+//            DDLog(@"formData________字符串");
+            
+        } else if ([parameters isKindOfClass: NSDictionary.class]) {
+            [((NSDictionary *)parameters) enumerateKeysAndObjectsUsingBlock:^(NSString * _Nonnull key, id  _Nonnull obj, BOOL * _Nonnull stop) {
+                if ([obj isKindOfClass: NSString.class]) {
+                    NSData *paramData = [obj dataUsingEncoding:NSUTF8StringEncoding];
+                    [formData appendPartWithFormData:paramData name:key];
+                    DDLog(@"formData上传文字_%@:%@", key, obj);
+
+                } else if ([obj isKindOfClass: NSData.class]){
+                    // 默认图片的文件名
+                    NSString *fileName = [NSDateFormatter stringFromDate:NSDate.date fmt:@"yyyyMMddHHmmss"];
+                    NSString *imageType = [UIImage contentTypeForImageData:obj];
+                    fileName = [fileName stringByAppendingFormat:@".%@", imageType];
+
+                    NSString *mimeType = [NSString stringWithFormat:@"image/%@", imageType];
+                    
+                    [formData appendPartWithFileData:obj
+                                                name:key
+                                            fileName:fileName
+                                            mimeType:mimeType];
+                    DDLog(@"formData上传图片_%@:%@ (fileName:%@_mimeType:%@)", key, @([(NSData *)obj length]), fileName, mimeType);
+                }
+            }];
+        }
+        
+    } progress:^(NSProgress * _Nonnull uploadProgress) {
+        //上传进度
+        dispatch_sync(dispatch_get_main_queue(), ^{
+            progress ? progress(uploadProgress) : nil;
+        });
+    } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+         if (_isOpenLog) {PPLog(@"responseObject = %@",[self jsonToString:responseObject]);}
+         [self.allSessionTask removeObject:task];
+         success ? success(responseObject) : nil;
+        
+    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+        if (_isOpenLog) {PPLog(@"error = %@",error);}
+        [self.allSessionTask removeObject:task];
+        failure ? failure(error) : nil;
+        
+    }];
+    
+    sessionTask ? [self.allSessionTask addObject:sessionTask] : nil ;
+    return sessionTask;
+}
+
 #pragma mark - -表单形式提交数据
 + (NSURLSessionTask *)FormDataWithURL:(NSString *)URL
                            parameters:(id)parameters
