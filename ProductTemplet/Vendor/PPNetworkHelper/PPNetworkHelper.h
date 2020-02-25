@@ -243,6 +243,7 @@ typedef void(^PPNetworkStatus)(PPNetworkStatusType status);
                                            success:(PPHttpRequestSuccess)success
                                            failure:(PPHttpRequestFailed)failure;
 
+/// parameters字典包含data
 + (NSURLSessionTask *)postMultFormDataWithURL:(NSString *)URL
                                    parameters:(id)parameters
                                      progress:(PPHttpProgress)progress
