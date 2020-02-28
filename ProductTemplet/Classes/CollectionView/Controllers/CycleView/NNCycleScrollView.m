@@ -161,7 +161,7 @@
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath{
-    if (self.delegate && [self.delegate cellForItem:collectionView cellForItemAtIndexPath:indexPath]) {
+    if (self.delegate && [self.delegate respondsToSelector:@selector(cellForItem:cellForItemAtIndexPath:)]) {
         return [self.delegate cellForItem:collectionView cellForItemAtIndexPath:indexPath];
     }
     
