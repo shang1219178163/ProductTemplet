@@ -35,7 +35,7 @@
     }];
     
     self.dataList = @[
-                      @[@"NNCycleViewController", @"循环滚动",],
+                      @[@"NNCycleViewController", @"完美轮播图",],
                       @[@"ScrollHorizontalController", @"水平滚动",],
                       @[@"NNPageScrollViewController", @"多页面菜单",],
                       @[@"NNSlopeShowController", @"倾斜效果",],

@@ -30,7 +30,7 @@
     [self.view addSubview:self.horScrollView];
     //
     NSArray *imageArray = @[[UIImage imageNamed:@"1"], [UIImage imageNamed:@"3"], [UIImage imageNamed:@"2"]];
-    self.verScrollView.imageArray = [imageArray subarrayWithRange:NSMakeRange(0, 1)];
+    self.verScrollView.imageArray = [imageArray subarrayWithRange:NSMakeRange(0, 2)];
     [self.view addSubview:self.verScrollView];
     
     [self.view getViewLayer];
