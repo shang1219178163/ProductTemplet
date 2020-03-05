@@ -70,6 +70,7 @@
 
 + (void)showText:(NSString *)text centerY:(CGFloat)centerY{
     UIView * view = UIApplication.sharedApplication.keyWindow;
+    [MBProgressHUD hideHUDForView:view animated:true];
     MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:view animated:true];
     
     // Set the text mode to show only text.
@@ -82,7 +83,7 @@
 }
 
 + (void)showText:(NSString *)text{
-    UIView * view = UIApplication.sharedApplication.keyWindow;
+    UIView *view = UIApplication.sharedApplication.keyWindow;
     [NNProgressHUD showText:text centerY:view.center.y];
 }
 
