@@ -298,12 +298,12 @@ static AFHTTPSessionManager *_sessionManager;
     __block NSURLSessionDataTask *sessionTask = nil;
     sessionTask = [_sessionManager POST:URL parameters:parameters constructingBodyWithBlock:^(id<AFMultipartFormData>  _Nonnull formData) {
         //add by bin
-        if ([parameters isKindOfClass:[NSString class]]) {
+        if ([parameters isKindOfClass: NSString.class]) {
             NSData *paramData = [parameters dataUsingEncoding:NSUTF8StringEncoding];
             [formData appendPartWithFormData:paramData name:@"file"];
 //            DDLog(@"formData________字符串");
             
-        } else if ([parameters isKindOfClass:[NSData class]]){
+        } else if ([parameters isKindOfClass: NSData.class]){
             [formData appendPartWithFormData:parameters name:@"file"];
 //            DDLog(@"formData________字符串");
             
@@ -321,13 +321,21 @@ static AFHTTPSessionManager *_sessionManager;
                     fileName = [fileName stringByAppendingFormat:@".%@", imageType];
 
                     NSString *mimeType = [NSString stringWithFormat:@"image/%@", imageType];
-                    
+                    DDLog(@"formData上传图片_%@:%@ (fileName:%@_mimeType:%@)", key, @([(NSData *)obj length]), fileName, mimeType);
                     [formData appendPartWithFileData:obj
                                                 name:key
                                             fileName:fileName
                                             mimeType:mimeType];
-                    DDLog(@"formData上传图片_%@:%@ (fileName:%@_mimeType:%@)", key, @([(NSData *)obj length]), fileName, mimeType);
-                }
+                } else if ([obj isKindOfClass: NSURL.class]) {
+                    DDLog(@"formData上传文件_%@: (fileName:%@)", key, obj);
+                    NSError *error = nil;
+                    [formData appendPartWithFileURL:obj
+                                               name:key
+                                              error:&error];
+                    if (!error) {
+                       DDLog(@"error:%@", error.description);
+                   }
+               }
             }];
         }
         
