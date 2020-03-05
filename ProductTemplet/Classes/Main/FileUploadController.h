@@ -13,7 +13,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface FileUploadController : UIViewController<QLPreviewControllerDataSource, QLPreviewControllerDelegate>
 
-@property (nonatomic, copy) NSURL *url;
+@property (nonatomic, copy) NSURL *fileUrl;
+
+@property (nonatomic, assign) BOOL isUpload;
 
 @end
 
