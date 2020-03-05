@@ -84,12 +84,7 @@
     // Do any additional setup after loading the view.
     
     self.view.backgroundColor = UIColor.whiteColor;
-    
-    
-    [self createBarItemTitle:@"next" imgName:nil isLeft:NO isHidden:NO handler:^(id obj, id item, NSInteger idx) {
-        [self goController:@"BNMenuListController" title:@"Menu"];
-        
-    }];
+
     
     [self configureTableView];
     
