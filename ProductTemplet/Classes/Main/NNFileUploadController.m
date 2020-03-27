@@ -1,26 +1,45 @@
 //
-//  FileUploadController.m
+//  NNFileUploadController.m
 //  ProductTemplet
 //
 //  Created by Bin Shang on 2020/3/2.
 //  Copyright © 2020 BN. All rights reserved.
 //
 
-#import "FileUploadController.h"
+#import "NNFileUploadController.h"
 #import <AFNetworking.h>
 #import "NNProgressHUD.h"
 
-@interface FileUploadController ()<UIDocumentPickerDelegate>
+@interface NNFileUploadController ()<UIDocumentPickerDelegate>
 
 @property (nonatomic, strong) UIBarButtonItem *chooseItem;
 @property (nonatomic, strong) UIBarButtonItem *uploadItem;
 @property (nonatomic, strong) UIBarButtonItem *shareItem;
 
-@property (nonatomic, strong) QLPreviewController *preController;
+@property (nonatomic, strong) QLPreviewController *previewVC;
+@property (nonatomic, strong) UIDocumentPickerViewController *docPickVC;
 
 @end
 
-@implementation FileUploadController
+@implementation NNFileUploadController
+
++ (NSArray *)docTypes{
+    NSArray *docTypes = @[@"com.microsoft.word.doc",
+    @"com.microsoft.excel.xls",
+    @"com.microsoft.powerpoint.ppt",
+    @"com.adobe.pdf",
+//    @"public.item",
+//    @"public.image",
+    @"public.content",
+//    @"public.composite-content",
+//    @"public.archive",
+//    @"public.audio",
+//    @"public.movie",
+    @"public.text",
+//    @"public.data",
+    ];
+    return docTypes;
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -32,13 +51,14 @@
     self.shareItem = [[UIBarButtonItem alloc]initWithBarButtonSystemItem:UIBarButtonSystemItemAction target:self action:@selector(handleActionItem:)];
     self.navigationItem.rightBarButtonItems = @[self.uploadItem, self.chooseItem, self.shareItem];
     
-    [self.preController reloadData];
+    [self.previewVC reloadData];
 }
 
 - (void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
     
-    DDLog(@"url_%@", self.fileUrl);
+    DDLog(@"url_%@", self.localFileUrl);
+    self.title = self.isUpload ? @"文件上传" : @"文件下载";
     if (self.isUpload) {
         self.navigationItem.rightBarButtonItems = @[self.uploadItem, self.chooseItem];
     } else {
@@ -48,21 +68,20 @@
 
 - (void)handleActionItem:(UIBarButtonItem *)item {
     if ([item.title isEqualToString:@"选择"]) {
-        [self presentDocumentPicker];
+        [self presentDocPicker];
         
     } else if ([item.title isEqualToString:@"上传"]) {
         [self uploadFile];
         
     } else {
-        [self downloadFile:self.fileUrl.path];
-
+        [self downloadFile:self.localFileUrl.absoluteString];
     }
 }
 
 #pragma mark -UIDocumentPickerViewController
 - (void)documentPicker:(UIDocumentPickerViewController *)controller didPickDocumentAtURL:(NSURL *)url {
-    self.fileUrl = url;
-    [self.preController reloadData];
+    self.localFileUrl = url;
+    [self.previewVC reloadData];
 
     BOOL canAccessingResource = [url startAccessingSecurityScopedResource];
     if(canAccessingResource) {
@@ -85,6 +104,9 @@
     [url stopAccessingSecurityScopedResource];
 }
 
+- (void)documentPickerWasCancelled:(UIDocumentPickerViewController *)controller{
+    [controller setupContentInsetAdjustmentBehavior:false];
+}
 
 #pragma mark - - QLPreviewController
 - (NSInteger)numberOfPreviewItemsInPreviewController:(QLPreviewController *)controller{
@@ -92,8 +114,8 @@
 }
 
 - (id<QLPreviewItem>)previewController:(QLPreviewController *)controller previewItemAtIndex:(NSInteger)index{
-    NSLog(@"%@",self.fileUrl);
-    return self.fileUrl;
+    NSLog(@"%@",self.localFileUrl);
+    return self.localFileUrl;
 }
 
 - (CGRect)previewController:(QLPreviewController *)controller frameForPreviewItem:(id<QLPreviewItem>)item inSourceView:(UIView *__autoreleasing  _Nullable *)view{
@@ -102,30 +124,16 @@
 
 - (void)previewControllerWillDismiss:(QLPreviewController *)controller{
 
-    
 }
 
 #pragma mark -funtions
-- (void)presentDocumentPicker {
-    NSArray *docTypes = @[@"com.microsoft.word.doc",
-    @"com.microsoft.excel.xls",
-    @"com.microsoft.powerpoint.ppt",
-    @"com.adobe.pdf",
-//    @"public.item",
-//    @"public.image",
-    @"public.content",
-//    @"public.composite-content",
-//    @"public.archive",
-//    @"public.audio",
-//    @"public.movie",
-    @"public.text",
-//    @"public.data",
-    ];
-    
-    UIDocumentPickerViewController *documentPicker = [[UIDocumentPickerViewController alloc] initWithDocumentTypes:docTypes inMode:UIDocumentPickerModeImport];
-    documentPicker.delegate = self;
-    documentPicker.modalPresentationStyle = UIModalPresentationFullScreen;
-    [self presentViewController:documentPicker animated:YES completion:nil];
+- (void)presentDocPicker {
+    [self.docPickVC setupContentInsetAdjustmentBehavior:true];
+    [self presentViewController:self.docPickVC animated:YES completion:nil];
+//    UIDocumentPickerViewController *docPickVC = [[UIDocumentPickerViewController alloc] initWithDocumentTypes:docTypes inMode:UIDocumentPickerModeImport];
+//    docPickVC.delegate = self;
+//    docPickVC.modalPresentationStyle = UIModalPresentationFullScreen;
+//    [self presentViewController:docPickVC animated:YES completion:nil];
 }
 
 - (void)uploadFile{
@@ -149,7 +157,7 @@
             //方法三：自动给封装filename、mimeType
 //            [formData appendPartWithFileURL:[NSURL fileURLWithPath:@"/Users/xiaomage/Desktop/placeholder.png"] name:@"file" error:nil];
 //        [formData appendPartWithFileURL:[NSURL fileURLWithPath:@"/Users/xiaomage/Desktop/placeholder.png"] name:@"file" error:nil];
-        [formData appendPartWithFileURL:self.fileUrl name:@"file" error:nil];
+        [formData appendPartWithFileURL:self.localFileUrl name:@"file" error:nil];
 
     } success:^(NSURLSessionDataTask *task, id responseObject) {
         NSLog(@"-------%@", responseObject);
@@ -183,8 +191,8 @@
         NSString *msg = error == nil ? error.description : @"下载成功";
         [NNProgressHUD showText:msg];
         
-        self.fileUrl = filePath;
-        [self.preController reloadData];
+        self.localFileUrl = filePath;
+        [self.previewVC reloadData];
 
     }];
     [downloadTask resume];
@@ -192,9 +200,9 @@
 
 #pragma mark -lazy
 
--(QLPreviewController *)preController{
-    if (!_preController) {
-        _preController = ({
+-(QLPreviewController *)previewVC{
+    if (!_previewVC) {
+        _previewVC = ({
             QLPreviewController *controller = [[QLPreviewController alloc]init];
             controller.edgesForExtendedLayout = UIRectEdgeNone;
             controller.dataSource = self;
@@ -209,8 +217,17 @@
             controller;
         });
     }
-    return _preController;
+    return _previewVC;
     
+}
+
+-(UIDocumentPickerViewController *)docPickVC{
+    if (!_docPickVC) {
+        _docPickVC = [[UIDocumentPickerViewController alloc] initWithDocumentTypes: NNFileUploadController.docTypes inMode:UIDocumentPickerModeImport];
+        _docPickVC.delegate = self;
+        _docPickVC.modalPresentationStyle = UIModalPresentationFullScreen;
+    }
+    return _docPickVC;
 }
 
 @end

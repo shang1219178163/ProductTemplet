@@ -23,20 +23,11 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-//    [self createBarItemTitle:@"Timer" imgName:nil isLeft:NO isHidden:NO handler:^(id obj, id item, NSInteger idx) {
-//        [self goController:@"TimerViewController" title:@"Timer"];
-//    }];
-//
-////    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc]initWithTitle:@"tim" style:UIBarButtonItemStyleDone target:self action:@selector(handleActionBtn:)];
-//
-//    self.dataList = [NSMutableArray arrayWithCapacity:0];
-//    self.dataList = @[@"",@"",@"",].mutableCopy;
-//
-//    [self.view addSubview:self.tbView];
-//
-//    [self.tbView makeConstraints:^(MASConstraintMaker *make) {
-//        make.edges.equalTo(self.view).insets(UIEdgeInsetsMake(15, 15, 15, 15));
-//    }];
+    
+    [self createBarItem:@"Done" isLeft:false handler:^(id  _Nonnull obj, UIView * _Nonnull item, NSInteger idx) {
+        NSString * msg = [NSString stringWithFormat:@"请去-> [设置 - 隐私 - %@ - %@] 打开访问开关", @"相机" ,UIApplication.appName];
+        [UIAlertController showAletTitle:@"" msg:msg handler:nil];
+    }];
     
     UIImageView *imgView = [[UIImageView alloc]initWithFrame:CGRectMake(10, 10, 100, 100)];
     imgView.image = [UIImage imageNamed:@"parkingOne"];

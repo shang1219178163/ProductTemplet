@@ -59,14 +59,13 @@
                 break;
             }
             case AVAuthorizationStatusDenied: {
-                NSString * msg = [NSString stringWithFormat:@"请去-> [设置 - 隐私 - 相机 - %@] 打开访问开关",UIApplication.appName];
-               [UIWindow showToastWithTips:msg place:@1];
-
+                NSString *msg = [NSString stringWithFormat:@"请去-> [设置 - 隐私 - 相机 - %@] 打开访问开关",UIApplication.appName];
+                [UIAlertController showAletTitle:@"" msg:msg handler:nil];
                 break;
             }
             case AVAuthorizationStatusRestricted: {
-                NSString * msg = @"因为系统原因, 无法访问相册";
-               [UIWindow showToastWithTips:msg place:@1];
+                NSString *msg = @"因为系统原因, 无法访问相册";
+               [UIAlertController showAletTitle:@"" msg:msg handler:nil];
                 break;
             }
             default:

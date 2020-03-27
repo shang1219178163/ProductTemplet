@@ -34,7 +34,6 @@
 }
 
 - (void)createControls{
-
     self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc]initWithBarButtonSystemItem:UIBarButtonSystemItemCancel target:self action:@selector(handleActionSenderLeft:)];
     
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc]initWithBarButtonSystemItem:UIBarButtonSystemItemAction target:self action:@selector(handleActionSender:)];
@@ -155,7 +154,6 @@
     _docController.URL = self.url;
 //    _docController.UTI = self.url.getUTI;
     [_docController presentPreviewAnimated:YES];
-    
     return _docController;
 }
 

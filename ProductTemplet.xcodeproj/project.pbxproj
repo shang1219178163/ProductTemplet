@@ -95,6 +95,8 @@
 		14488765224F4D6B00B550AF /* icon_oprationSuccess@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 14488763224F4D6B00B550AF /* icon_oprationSuccess@3x.png */; };
 		144920AA21C7BAA700C3C2F6 /* MoneyDisplayController.m in Sources */ = {isa = PBXBuildFile; fileRef = 144920A921C7BAA700C3C2F6 /* MoneyDisplayController.m */; };
 		144FF41E2311458C007BCBFE /* UICTViewCellTen.m in Sources */ = {isa = PBXBuildFile; fileRef = 144FF41D2311458C007BCBFE /* UICTViewCellTen.m */; };
+		1455107D240D06F9001772F5 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1455107C240D06F9001772F5 /* CloudKit.framework */; };
+		14551080240D0811001772F5 /* NNFileUploadController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1455107F240D0811001772F5 /* NNFileUploadController.m */; };
 		14579BA12294EE83001FEB0C /* WebSocketManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 14579BA02294EE83001FEB0C /* WebSocketManager.m */; };
 		14579BA42294FBBA001FEB0C /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 14579BA22294FBBA001FEB0C /* Reachability.m */; };
 		145C912D2334714B00849E9D /* parkingOne@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 145C912B2334714B00849E9D /* parkingOne@3x.png */; };
@@ -657,6 +659,10 @@
 		144920A921C7BAA700C3C2F6 /* MoneyDisplayController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MoneyDisplayController.m; sourceTree = "<group>"; };
 		144FF41C2311458C007BCBFE /* UICTViewCellTen.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UICTViewCellTen.h; sourceTree = "<group>"; };
 		144FF41D2311458C007BCBFE /* UICTViewCellTen.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UICTViewCellTen.m; sourceTree = "<group>"; };
+		1455107B240D0533001772F5 /* ProductTemplet.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ProductTemplet.entitlements; sourceTree = "<group>"; };
+		1455107C240D06F9001772F5 /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
+		1455107E240D0811001772F5 /* NNFileUploadController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NNFileUploadController.h; sourceTree = "<group>"; };
+		1455107F240D0811001772F5 /* NNFileUploadController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NNFileUploadController.m; sourceTree = "<group>"; };
 		14579B9F2294EE83001FEB0C /* WebSocketManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WebSocketManager.h; sourceTree = "<group>"; };
 		14579BA02294EE83001FEB0C /* WebSocketManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WebSocketManager.m; sourceTree = "<group>"; };
 		14579BA22294FBBA001FEB0C /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
@@ -1361,6 +1367,7 @@
 				518B5B6D2086CB2E002FDD33 /* CoreMotion.framework in Frameworks */,
 				518B5B632086CA5F002FDD33 /* SystemConfiguration.framework in Frameworks */,
 				518B5B692086CAD6002FDD33 /* Foundation.framework in Frameworks */,
+				1455107D240D06F9001772F5 /* CloudKit.framework in Frameworks */,
 				518B5B672086CA75002FDD33 /* Accelerate.framework in Frameworks */,
 				518B5B612086CA59002FDD33 /* CoreText.framework in Frameworks */,
 				518B5B5F2086CA49002FDD33 /* libicucore.tbd in Frameworks */,
@@ -1995,6 +2002,7 @@
 		5136469E2086031D005A20E7 /* ProductTemplet */ = {
 			isa = PBXGroup;
 			children = (
+				1455107B240D0533001772F5 /* ProductTemplet.entitlements */,
 				513649102086055E005A20E7 /* Classes */,
 				51698C7D2137C0430069C2B2 /* Network */,
 				51364CC72086092D005A20E7 /* DataModel */,
@@ -2246,6 +2254,8 @@
 				14A86A822355AFC600AD9BC1 /* NNSearchController.m */,
 				14A86A802355AFC500AD9BC1 /* NNSearchResultController.h */,
 				14A86A812355AFC600AD9BC1 /* NNSearchResultController.m */,
+				1455107E240D0811001772F5 /* NNFileUploadController.h */,
+				1455107F240D0811001772F5 /* NNFileUploadController.m */,
 				14DF58242314C58000906A9D /* BNView.h */,
 				14DF58252314C58000906A9D /* BNView.m */,
 				141E2B8E230637E600466008 /* NSArray+Tmp.h */,
@@ -2703,6 +2713,7 @@
 		FA5A66B59426CEAD1CF3700D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				1455107C240D06F9001772F5 /* CloudKit.framework */,
 				518B5B6C2086CB2E002FDD33 /* CoreMotion.framework */,
 				518B5B6A2086CB03002FDD33 /* CoreGraphics.framework */,
 				518B5B682086CAD6002FDD33 /* Foundation.framework */,
@@ -3154,6 +3165,7 @@
 				14E42CFA2200040F00606AD0 /* NNFourthViewController.m in Sources */,
 				1401BE762276AB960078A722 /* BNStoreManger.m in Sources */,
 				51862E7D20BBA8270080BD4E /* InputValidator.m in Sources */,
+				14551080240D0811001772F5 /* NNFileUploadController.m in Sources */,
 				149111E022730CCF0078A7BB /* NNAPIConfi.m in Sources */,
 				513647C1208604DE005A20E7 /* HZWaitingView.m in Sources */,
 				14A1EA752249FBAA00952911 /* TextFromSpeechController.m in Sources */,
@@ -3540,6 +3552,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = ProductTemplet/ProductTemplet.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = UB99NJ7K8G;
@@ -3678,6 +3691,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = ProductTemplet/ProductTemplet.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = UB99NJ7K8G;
