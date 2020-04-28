@@ -12,7 +12,8 @@
 
 #import "Person.h"
 #import "Car.h"
-#import "NNGloble.h"
+#import <NNGloble/NNGloble.h>
+#import "MJExtension.h"
 
 @interface DBManager()
 

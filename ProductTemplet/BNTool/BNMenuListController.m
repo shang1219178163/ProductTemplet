@@ -9,7 +9,7 @@
 
 #import "BNMenuListController.h"
 
-#import "NNGloble.h"
+#import <NNGloble/NNGloble.h>
 #import "NNBtnView.h"
 #import "NNMenuView.h"
 

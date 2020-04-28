@@ -8,7 +8,7 @@
 
 #import "WHKUserDataModel.h"
 
-#import "NNGloble.h"
+#import <NNGloble/NNGloble.h>
 
 @interface WHKUserDataModel ()
 

@@ -26,7 +26,7 @@
     
     [self createBarItem:@"Done" isLeft:false handler:^(id  _Nonnull obj, UIView * _Nonnull item, NSInteger idx) {
         NSString * msg = [NSString stringWithFormat:@"请去-> [设置 - 隐私 - %@ - %@] 打开访问开关", @"相机" ,UIApplication.appName];
-        [UIAlertController showAletTitle:@"" msg:msg handler:nil];
+        [UIAlertController showAlertTitle:@"" msg:msg actionTitles:@[kTitleKnow] handler:nil];
     }];
     
     UIImageView *imgView = [[UIImageView alloc]initWithFrame:CGRectMake(10, 10, 100, 100)];

@@ -313,7 +313,7 @@ static NSDictionary *_dictPrivacy = nil;
             case PrivacyStatusUnkonwn:
             {
                 NSString * msg = [NSString stringWithFormat:@"请去-> [设置 - 隐私 - %@ - %@] 打开访问开关",UIApplication.dictPrivacy[@(type)],UIApplication.appName];
-                [UIAlertController showAletTitle:@"" msg:msg handler:nil];
+                [UIAlertController showAlertTitle:@"" msg:msg actionTitles:@[kTitleKnow] handler:nil];
             }
                 break;
             default:

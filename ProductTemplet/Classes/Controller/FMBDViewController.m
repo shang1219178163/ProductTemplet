@@ -21,7 +21,7 @@
 #import "Teacher.h"
 #import "Lesson.h"
 
-#import "NNGloble.h"
+#import <NNGloble/NNGloble.h>
 #import "NSObject+Helper.h"
 #import "UIViewController+Helper.h"
 

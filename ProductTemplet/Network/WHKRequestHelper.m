@@ -8,7 +8,7 @@
 
 #import "WHKRequestHelper.h"
 
-#import "NNGloble.h"
+#import <NNGloble/NNGloble.h>
 #import "NSObject+Helper.h"
 #import "NSString+Helper.h"
 

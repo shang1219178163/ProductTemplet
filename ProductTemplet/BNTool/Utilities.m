@@ -8,7 +8,7 @@
 
 #import "Utilities.h"
 
-#import "NNGloble.h"
+#import <NNGloble/NNGloble.h>
 
 #import "AESCrypt.h"
 #import "Utilities_DM.h"
@@ -88,13 +88,13 @@ static NSString *const kACSEncrypt = @"mbqh1Gtpj9L8pJuv";
 //AES加密
 + (NSString *)AESEncryptTheString:(NSString *)inputString{
     
-    inputString = [AESCrypt encrypt:inputString password:kACSEncrypt];
+//    inputString = [AESCrypt encrypt:inputString password:kACSEncrypt];
     return inputString;
 }
 //AES解密
 + (NSString *)AESDencryptTheString:(NSString *)inputString{
     
-    inputString = [AESCrypt decrypt:inputString password:kACSEncrypt];
+//    inputString = [AESCrypt decrypt:inputString password:kACSEncrypt];
     return inputString;
 }
 

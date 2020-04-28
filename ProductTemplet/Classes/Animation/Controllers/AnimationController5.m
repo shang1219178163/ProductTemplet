@@ -25,25 +25,23 @@
     NSLog(@"一个复杂一点的登录动画");
     [self.shapeLayer removeFromSuperlayer];
     
-    UIButton *startButton = ({
-        UIButton *btn = [UIButton buttonWithType:UIButtonTypeSystem];
-        btn.backgroundColor = [UIColor purpleColor];
-        [btn setTitle:@"start" forState:UIControlStateNormal];
-        btn.frame = (CGRect){{0, 0}, {200, 50}};
-        btn.center = self.view.center;
-        
-        [btn addTarget:self action:@selector(startAction:) forControlEvents:UIControlEventTouchUpInside];
-        btn;
-    });
+    UIButton *btn = [UIButton buttonWithType:UIButtonTypeCustom];
+    [btn setTitle:@"start" forState:UIControlStateNormal];
+    btn.backgroundColor = UIColor.redColor;
+    btn.frame = CGRectMake(0, 0, 200, 50);
+//    btn.center = self.view.center;
+    [btn addTarget:self action:@selector(startAction:) forControlEvents:UIControlEventTouchUpInside];
     
-    [self.view addSubview:startButton];
+    [self.view addSubview:btn];
     
-    self.btnLog = startButton;
+    self.btnLog = btn;
     
-    UIImage *image = [UIImage imageNamed:@"Twitter"];
-    startButton.backgroundColor = image.mostColor;
-    startButton.titleLabel.textColor = UIColor.whiteColor;
-    [startButton setTitleColor:UIColor.whiteColor forState:UIControlStateNormal];
+//    UIImage *image = [UIImage imageNamed:@"Twitter"];
+//    btn.backgroundColor = image.mostColor;
+//    btn.titleLabel.textColor = UIColor.whiteColor;
+//    [btn setTitleColor:UIColor.whiteColor forState:UIControlStateNormal];
+    
+    [self.view getViewLayer];
 }
 
 - (void)startAction:(UIButton *)sender {

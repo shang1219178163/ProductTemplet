@@ -10,7 +10,7 @@
 
 #import "YYModel.h"
 #import "MJRefresh.h"
-#import "MJExtension.h"
+//#import "MJExtension.h"
 
 #import "PPNetworkHelper.h"
 #import "WHKRequestHelper.h"

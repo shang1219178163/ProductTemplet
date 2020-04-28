@@ -10,7 +10,7 @@
 
 #import  <MessageUI/MFMailComposeViewController.h>
 
-#import "NNGloble.h"
+#import <NNGloble/NNGloble.h>
 #import "NSData+Helper.h"
 
 @interface BNEmail ()<MFMailComposeViewControllerDelegate>

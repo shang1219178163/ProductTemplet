@@ -8,7 +8,7 @@
 
 #import "CustomViewController.h"
 
-#import "NNGloble.h"
+#import <NNGloble/NNGloble.h>
 #import "NSArray+Helper.h"
 #import "NSString+Helper.h"
 #import "UIView+Helper.h"

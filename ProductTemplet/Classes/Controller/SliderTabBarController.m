@@ -8,7 +8,7 @@
 
 #import "SliderTabBarController.h"
 
-#import "NNGloble.h"
+#import <NNGloble/NNGloble.h>
 #import "NNTabBarViewZero.h"
 
 #import "BNNoti.h"

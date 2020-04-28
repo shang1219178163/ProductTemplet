@@ -25,8 +25,6 @@
 #import <NNCollectionView/NNCollectionView.h>
 #import <NNViewComplex/NNViewComplex.h>
 
-#import <MJExtension/MJExtension.h>
-
 #import "AAGlobalMacro.h"//图表专用
 
 //#define MAS_SHORTHAND

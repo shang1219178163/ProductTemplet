@@ -8,7 +8,7 @@
 
 #import "BNNoti.h"
 
-#import "NNGloble.h"
+#import <NNGloble/NNGloble.h>
 #import "NSObject+Helper.h"
 
 @interface BNNoti ()

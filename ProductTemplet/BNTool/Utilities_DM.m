@@ -8,7 +8,7 @@
 
 #import "Utilities_DM.h"
 
-#import "NNGloble.h"
+#import <NNGloble/NNGloble.h>
 #import <Photos/Photos.h>
 #import "UIApplication+Helper.h"
 #import "UIWindow+Helper.h"
@@ -60,12 +60,12 @@
             }
             case AVAuthorizationStatusDenied: {
                 NSString *msg = [NSString stringWithFormat:@"请去-> [设置 - 隐私 - 相机 - %@] 打开访问开关",UIApplication.appName];
-                [UIAlertController showAletTitle:@"" msg:msg handler:nil];
+                [UIAlertController showAlertTitle:@"" msg:msg actionTitles:@[kTitleKnow] handler:nil];
                 break;
             }
             case AVAuthorizationStatusRestricted: {
                 NSString *msg = @"因为系统原因, 无法访问相册";
-               [UIAlertController showAletTitle:@"" msg:msg handler:nil];
+               [UIAlertController showAlertTitle:@"" msg:msg actionTitles:@[kTitleKnow] handler:nil];
                 break;
             }
             default:

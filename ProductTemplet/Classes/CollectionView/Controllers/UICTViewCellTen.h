@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "NNGloble.h"
+#import <NNGloble/NNGloble.h>
 #import <NNCategoryPro/UICollectionViewCell+AddView.h>
 
 NS_ASSUME_NONNULL_BEGIN

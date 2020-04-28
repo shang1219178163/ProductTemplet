@@ -1,26 +1,24 @@
-# Uncomment the next line to define a global platform for your project
 source 'https://github.com/CocoaPods/Specs.git'
+source 'https://github.com/aliyun/aliyun-specs.git'
 
- platform :ios, '9.0'
- use_frameworks!
- inhibit_all_warnings!
+platform :ios, '9.0'
+use_frameworks!
+inhibit_all_warnings!
 
  def common_pods
-   pod 'AESCrypt-ObjC’
+#   pod 'AESCrypt-ObjC’
    pod 'AFNetworking’
    pod 'Aspects'
    
    pod 'FCUUID'
    pod 'FLAnimatedImage'
    pod 'FMDB'
-   
-   pod 'GTMBase64'
-   
+      
    pod 'IQKeyboardManager'
-   pod 'iCarousel’
+#   pod 'iCarousel’
    
    pod 'JPush'
-   pod 'JZLocationConverter'
+#   pod 'JZLocationConverter'
    
    pod 'KVOController'
    
@@ -38,18 +36,18 @@ source 'https://github.com/CocoaPods/Specs.git'
    pod 'SocketRocket'
    pod 'Toast'
    
-   pod 'UICKeyChainStore'
+#   pod 'UICKeyChainStore'
    
    pod 'YBAttributeTextTapAction'
    pod 'YYCache'
    pod 'YYCategories'
    pod 'YYWebImage’
    pod 'YYModel’
-   pod 'YZPullDownMenu'
+#   pod 'YZPullDownMenu'
    
-   pod 'ZYCornerRadius'
+#   pod 'ZYCornerRadius'
    
-   pod 'UMengAnalytics-NO-IDFA'
+#   pod 'UMengAnalytics-NO-IDFA'
    
 #   pod 'AMapSearch-NO-IDFA'
 #   pod 'AMapLocation-NO-IDFA'

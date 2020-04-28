@@ -20,7 +20,7 @@
 
 #import "BNOperation.h"
 
-#import "NNGloble.h"
+#import <NNGloble/NNGloble.h>
 #import "UIView+Helper.h"
 
 @interface OperationViewController ()
