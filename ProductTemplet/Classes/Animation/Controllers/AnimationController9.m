@@ -24,8 +24,9 @@
     imageView.backgroundColor = UIColor.redColor;
     [self.view addSubview:imageView];
 
-    [imageView addAnimWithImageArr:imageList];
-    
+    UIImage *image = [UIImage imageNamed:@"Googleplus"];
+    UIImage *backImage = [UIImage imageNamed:@"Twitter"];
+    [imageView addFlipAnimtion:image backImage:backImage];
     
 //    [imageView addObserver:self forKeyPath:@"transform" options:NSKeyValueObservingOptionNew context:nil];
 //

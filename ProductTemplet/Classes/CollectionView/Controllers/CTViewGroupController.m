@@ -77,7 +77,7 @@
         case 1:
         {
             NNAlertView * alertView = [[NNAlertView alloc]init];
-            alertView.dataList = [NSArray arrayWithItem:@"测试_" count:3];
+            alertView.dataList = [NSArray repeateValue:@"测试_" count:3];
 
             [alertView show];
             
