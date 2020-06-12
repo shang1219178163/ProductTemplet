@@ -90,6 +90,8 @@
 		142A76D72226708D0016D3DA /* BNSliderControlView.m in Sources */ = {isa = PBXBuildFile; fileRef = 142A76D62226708D0016D3DA /* BNSliderControlView.m */; };
 		142A77102227B30E0016D3DA /* UITableViewPickerCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 142A770F2227B30E0016D3DA /* UITableViewPickerCell.m */; };
 		143331AD2241F1F600436F75 /* AVSpeechViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 143331AC2241F1F600436F75 /* AVSpeechViewController.m */; };
+		143F44AF24920F6C00ED160A /* NSObject+KVO.m in Sources */ = {isa = PBXBuildFile; fileRef = 143F44AE24920F6C00ED160A /* NSObject+KVO.m */; };
+		143F44B224921A8D00ED160A /* KVOViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 143F44B024921A8C00ED160A /* KVOViewController.m */; };
 		14403E6923322314005DB45B /* LineDashViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 14403E6823322314005DB45B /* LineDashViewController.m */; };
 		14488764224F4D6B00B550AF /* icon_oprationSuccess@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 14488762224F4D6A00B550AF /* icon_oprationSuccess@2x.png */; };
 		14488765224F4D6B00B550AF /* icon_oprationSuccess@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 14488763224F4D6B00B550AF /* icon_oprationSuccess@3x.png */; };
@@ -651,6 +653,10 @@
 		142A770F2227B30E0016D3DA /* UITableViewPickerCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UITableViewPickerCell.m; sourceTree = "<group>"; };
 		143331AB2241F1F600436F75 /* AVSpeechViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AVSpeechViewController.h; sourceTree = "<group>"; };
 		143331AC2241F1F600436F75 /* AVSpeechViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AVSpeechViewController.m; sourceTree = "<group>"; };
+		143F44AD24920F6B00ED160A /* NSObject+KVO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+KVO.h"; sourceTree = "<group>"; };
+		143F44AE24920F6C00ED160A /* NSObject+KVO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+KVO.m"; sourceTree = "<group>"; };
+		143F44B024921A8C00ED160A /* KVOViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KVOViewController.m; sourceTree = "<group>"; };
+		143F44B124921A8D00ED160A /* KVOViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KVOViewController.h; sourceTree = "<group>"; };
 		14403E6723322314005DB45B /* LineDashViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LineDashViewController.h; sourceTree = "<group>"; };
 		14403E6823322314005DB45B /* LineDashViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LineDashViewController.m; sourceTree = "<group>"; };
 		14488762224F4D6A00B550AF /* icon_oprationSuccess@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_oprationSuccess@2x.png"; sourceTree = "<group>"; };
@@ -2016,6 +2022,8 @@
 				513646B620860332005A20E7 /* MainViewController.m */,
 				5189413E209C27E000A687E1 /* TestViewController.h */,
 				5189413F209C27E000A687E1 /* TestViewController.m */,
+				143F44B124921A8D00ED160A /* KVOViewController.h */,
+				143F44B024921A8C00ED160A /* KVOViewController.m */,
 				516F8560215DF8F2008E62B3 /* SuspendButton.h */,
 				516F8561215DF8F4008E62B3 /* SuspendButton.m */,
 				142A76D52226708D0016D3DA /* BNSliderControlView.h */,
@@ -2026,6 +2034,8 @@
 				14107FD322D087630011344E /* NNProgressHUD.m */,
 				14E49C8C232780EB0099912E /* UIApplication+Permission.h */,
 				14E49C8D232780EB0099912E /* UIApplication+Permission.m */,
+				143F44AD24920F6B00ED160A /* NSObject+KVO.h */,
+				143F44AE24920F6C00ED160A /* NSObject+KVO.m */,
 				14F6382923630AC900D0EBF0 /* NSObject+Tmp.h */,
 				14F6382A23630AC900D0EBF0 /* NSObject+Tmp.m */,
 				149BE1502341923F00D74E7C /* NSString+Helper.swift */,
@@ -3138,6 +3148,7 @@
 				14E8F74F21F5E1ED004317B5 /* RuntimeController.m in Sources */,
 				51894140209C27E000A687E1 /* TestViewController.m in Sources */,
 				14E49C8E232780EB0099912E /* UIApplication+Permission.m in Sources */,
+				143F44B224921A8D00ED160A /* KVOViewController.m in Sources */,
 				515CC98B20B6AAF2004AE27C /* AAOptions.m in Sources */,
 				515CC97320B6AAF2004AE27C /* AAXAxis.m in Sources */,
 				515CC97F20B6AAF2004AE27C /* AABar.m in Sources */,
@@ -3258,6 +3269,7 @@
 				141080B222D2E7D10011344E /* AnimationController12.m in Sources */,
 				14F08BB123016DDD00B75842 /* WaveController.m in Sources */,
 				147ABB5922DED1A500A5C4EC /* BNCollectionDataModel.m in Sources */,
+				143F44AF24920F6C00ED160A /* NSObject+KVO.m in Sources */,
 				149F88A422B3750F00EAB4C2 /* ResetPwdController.m in Sources */,
 				141080A722D2E7D10011344E /* AnimationController4.m in Sources */,
 				5129425820B424EC009FB70E /* LockCompareController.m in Sources */,

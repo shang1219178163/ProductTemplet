@@ -59,12 +59,12 @@
     }];
 
     //监听
-    [self addObserver:self forKeyPath:keyPath options:NSKeyValueObservingOptionNew|NSKeyValueObservingOptionOld context:NULL];
-//    NSLog(@"%p_%@_%@", self.dict, self.dict, self.kvoController.blockArr);
+    [observer addObserver:self forKeyPath:keyPath options:NSKeyValueObservingOptionNew|NSKeyValueObservingOptionOld context:NULL];
+    NSLog(@"%@_%@_%@", NSStringFromClass(self.class), self.dict, self.target.blockArr);
 }
 
 - (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary<NSKeyValueChangeKey,id> *)change context:(void *)context{
-//    NSLog(@"__%p_%@_%@", self.dict, self.dict, self.kvoController.blockArr);
+    NSLog(@"%@_%@_%@", NSStringFromClass(self.class), self.dict, self.target.blockArr);
     KVOBlock block = self.dict[keyPath];
     if (block) {
         block(keyPath, change);

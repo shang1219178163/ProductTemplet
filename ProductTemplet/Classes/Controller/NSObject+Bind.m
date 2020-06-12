@@ -11,16 +11,25 @@
 
 @implementation NSObject (Bind)
 
-- (void)observeTarget:(id)target keyPath:(NSString *)keyPath onChange:(void(^)(NSString *keyPath, id obj))handler{
-    objc_setAssociatedObject(self, _cmd, handler, OBJC_ASSOCIATION_COPY_NONATOMIC);
+NSString *const runtimeKey = @"runtimeKey";
+
+- (void)observeTarget:(id)target keyPath:(NSString *)keyPath onChange:(void(^)(NSString *keyPath, NSDictionary *change))handler{
+    NSString *key = [NSString stringWithFormat:@"%@,%p,%@", NSStringFromClass(self.class), self, NSStringFromSelector(_cmd)];
+    objc_setAssociatedObject(self, CFBridgingRetain(runtimeKey), handler, OBJC_ASSOCIATION_COPY_NONATOMIC);
     
-    NSKeyValueObservingOptions options = NSKeyValueObservingOptionInitial | NSKeyValueObservingOptionNew;
+    NSLog(@"%@", key);
+
+//    NSKeyValueObservingOptions options = NSKeyValueObservingOptionInitial | NSKeyValueObservingOptionNew;
+    NSKeyValueObservingOptions options = NSKeyValueObservingOptionNew;
     [target addObserver:self forKeyPath:keyPath options:options context:nil];
 }
     
 - (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context{
-    void(^handlder)(NSString *keyPath, id obj) = objc_getAssociatedObject(self, @selector(addActionHandler:forControlEvents:));
-    if (handlder) handlder(keyPath, change[NSKeyValueChangeNewKey]);
+    NSString *key = [NSString stringWithFormat:@"%@,%p,%@", NSStringFromClass(self.class), self, NSStringFromSelector(@selector(observeTarget:keyPath:onChange:))];
+    NSLog(@"%@", key);
+
+    void(^handlder)(NSString *keyPath, NSDictionary *change) = objc_getAssociatedObject(self, CFBridgingRetain(runtimeKey));
+    if (handlder) handlder(keyPath, change);
 
 //    if (self == object) {
 //        if (handlder) handlder(keyPath, change[NSKeyValueChangeNewKey]);
