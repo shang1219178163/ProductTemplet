@@ -46,7 +46,7 @@
 - (void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
     
-//    [self funtionMore];
+    [self funtionMore];
     [self funtionMoreDic];
 
     CFUUIDRef uuid = CFUUIDCreate(NULL);
@@ -82,7 +82,6 @@
 #pragma mark - -UITableView
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     return self.dataList.count;
-    
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -100,7 +99,6 @@
             
             label.text = @"label.textlabel.textlabel.textlabel.textlabel.textlabel.textlabel.textlabel.textlabel.textlabel.textlabel.textlabel.textlabel.textlabel.textlabel.textlabel.textlabel.textlabel.textlabel.textlabel.textlabel.text";
             [label makeConstraints:^(MASConstraintMaker *make) {
-
                 make.top.equalTo(cell.contentView.top).offset(0);
                 make.left.equalTo(cell.contentView.left).offset(0);
                 make.right.equalTo(cell.contentView.right).offset(0);
@@ -187,7 +185,7 @@
 }
 
 
-#pragma mark - - others funtion
+#pragma mark - others funtion
 
 - (NSString *)ramdomText{
     CGFloat length = arc4random()%30 + 5;
@@ -202,12 +200,8 @@
 - (void)funtionMore{
     
     NSArray *list = @[@"1111", @"2222", @"3333", @"4444"];
-    
-    NSArray *listFirst = [list sortedAscending:true];
-    DDLog(@"listFirst_%@", listFirst);
-    
-    NSArray *listSecond = [list sortedAscending:false];
-    DDLog(@"listSecond_%@", listSecond);
+    DDLog(@"listsorted_%@", list.sorted);
+    DDLog(@"listsorted.reversed_%@", list.sorted.reversed);
     
     NSArray *listOne = [list map:^id _Nonnull(id  _Nonnull obj, NSUInteger idx) {
         return [(NSString *)obj substringToIndex:idx];
@@ -225,19 +219,19 @@
         [marr addObject:model];
     }
     
-    NSArray * listTwo = [marr map:^id _Nonnull(id  _Nonnull obj, NSUInteger idx) {
+    NSArray *listTwo = [marr map:^id _Nonnull(WHKNetInfoFeedModel *obj, NSUInteger idx) {
         return [obj valueForKey:@"category"] ? : @"";
     }];
     DDLog(@"listTwo_%@", listTwo);
     
-    NSArray * listThree = [marr map:^id _Nonnull(id  _Nonnull obj, NSUInteger idx) {
+    NSArray *listThree = [marr map:^id _Nonnull(WHKNetInfoFeedModel *obj, NSUInteger idx) {
         [obj setValue:@(idx) forKey:@"category"];
         return obj;
     }];
     DDLog(@"listThree_%@", listThree);
     
-    NSArray *list1 = [list filter:^BOOL(NSObject * _Nonnull obj, NSUInteger idx) {
-        return [(NSString *)obj compare:@"222" options:NSNumericSearch] == NSOrderedDescending;
+    NSArray *list1 = [list filter:^BOOL(NSString *obj, NSUInteger idx) {
+        return [obj compare:@"2222" options:NSNumericSearch] == NSOrderedDescending;
     }];
     DDLog(@"list1_%@", list1);
     
@@ -248,20 +242,19 @@
     }
     
     NSArray *array = @[@24, @17, @85, @13, @9, @54, @76, @45, @5, @63];
-    NSArray *list2 = [array filter:^BOOL(NSObject * _Nonnull obj, NSUInteger idx) {
+    NSArray *list2 = [array filter:^BOOL(id _Nonnull obj, NSUInteger idx) {
         return [(NSNumber *)obj integerValue] > 20;
     }];
     DDLog(@"list2_%@", list2);
     
-    NSArray *list3 = [list filter:^BOOL(NSObject * _Nonnull obj, NSUInteger idx) {
-        return (![(NSString *)obj isEqualToString:@"222"]);
+    NSArray *list3 = [list filter:^BOOL(id _Nonnull obj, NSUInteger idx) {
+        return (![(NSString *)obj isEqualToString:@"2222"]);
     }];
     DDLog(@"list3_%@", list3);
     
     array = @[@1, @3, @5, @7, @9];
     NSNumber * result = [array reduce:^NSNumber * _Nonnull(NSNumber * _Nonnull num1, NSNumber * _Nonnull num2) {
         return @(num1.floatValue * 10 + num2.floatValue);
-
     }];
     DDLog(@"result_%@", result);
     
