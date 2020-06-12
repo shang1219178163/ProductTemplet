@@ -17,7 +17,6 @@ PODS:
   - Aspects (1.4.1)
   - FCUUID (1.3.1):
     - UICKeyChainStore (~> 2.1.0)
-  - FLAnimatedImage (1.0.12)
   - FMDB (2.7.5):
     - FMDB/standard (= 2.7.5)
   - FMDB/standard (2.7.5)
@@ -26,7 +25,6 @@ PODS:
   - JCore (2.2.2)
   - JPush (3.3.0):
     - JCore (< 3.0.0, >= 2.0.0)
-  - KVOController (1.2.0)
   - Masonry (1.1.0)
   - MBProgressHUD (1.2.0)
   - MJExtension (3.2.1)
@@ -87,11 +85,9 @@ DEPENDENCIES:
   - AFNetworking
   - Aspects
   - FCUUID
-  - FLAnimatedImage
   - FMDB
   - IQKeyboardManager
   - JPush
-  - KVOController
   - Masonry
   - MBProgressHUD
   - MJExtension
@@ -119,13 +115,11 @@ SPEC REPOS:
     - AFNetworking
     - Aspects
     - FCUUID
-    - FLAnimatedImage
     - FMDB
     - GTMBase64
     - IQKeyboardManager
     - JCore
     - JPush
-    - KVOController
     - Masonry
     - MBProgressHUD
     - MJExtension
@@ -155,13 +149,11 @@ SPEC CHECKSUMS:
   AFNetworking: b6f891fdfaed196b46c7a83cf209e09697b94057
   Aspects: 7595ba96a6727a58ebcbfc954497fc5d2fdde546
   FCUUID: bb054fc90cd7cd99320f9f6ff8e130fe607fba05
-  FLAnimatedImage: 4a0b56255d9b05f18b6dd7ee06871be5d3b89e31
   FMDB: 2ce00b547f966261cd18927a3ddb07cb6f3db82a
   GTMBase64: f0f91be06a7a20b84c8e4fee30c0430395091d82
   IQKeyboardManager: 3a8b9e603f8b0eeaf5f096a1f2b2cfcf121992ef
   JCore: 2e6690b41b1b59c4a768e0a3187c311911c02ca8
   JPush: 65cd9d8cb050b6d8c95736517d846fac2f53c134
-  KVOController: d72ace34afea42468329623b3379ab3cd1d286b6
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
   MBProgressHUD: 3ee5efcc380f6a79a7cc9b363dd669c5e1ae7406
   MJExtension: 635f2c663dcb1bf76fa4b715b2570a5710aec545
@@ -187,6 +179,6 @@ SPEC CHECKSUMS:
   YYModel: 2a7fdd96aaa4b86a824e26d0c517de8928c04b30
   YYWebImage: 5f7f36aee2ae293f016d418c7d6ba05c4863e928
 
-PODFILE CHECKSUM: ddeb14fa10462fbdb1a02aaafaba249535203b90
+PODFILE CHECKSUM: aa59fc0ffbe740a9b8b7cd3dca84fbfd9442e959
 
 COCOAPODS: 1.9.1

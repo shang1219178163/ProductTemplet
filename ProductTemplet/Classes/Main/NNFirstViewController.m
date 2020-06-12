@@ -7,13 +7,13 @@
 //
 
 #import "NNFirstViewController.h"
+#import <YYCategories.h>
 
 #import "UIViewController+ZYSliderViewController.h"
 #import "ZYSliderViewController.h"
 
 #import "NNSimpleDataModel.h"
 
-#import "KVOController.h"
 #import "SDCycleScrollView.h"
 
 #import "FactoryDetailInfoModel.h"
@@ -233,13 +233,8 @@
 
 - (void)registerForKVO{
     //监听self.tableView.frame
-    [self.KVOController observe:self.btnView.imageView keyPath:@"transform" options:NSKeyValueObservingOptionOld|NSKeyValueObservingOptionNew block:^(id  _Nullable observer, id  _Nonnull object, NSDictionary<NSString *,id> * _Nonnull change) {
-        
-        NSString *keyPath = change[FBKVONotificationKeyPathKey];
-        if(object == self.btnView.imageView && [keyPath isEqualToString:@"transform"]){
-            //            DDLog(@"transform_%@",@(self.btnView.imageView.transform));
-            
-        }
+    [self.btnView.imageView addObserverBlockForKeyPath:@"transform" block:^(id  _Nonnull obj, id  _Nonnull oldVal, id  _Nonnull newVal) {
+        DDLog(@"%@_%@_%@", obj, oldVal, newVal);
     }];
 }
 

@@ -28,11 +28,11 @@
                       @[@"NNSecondViewController", @"圈子", @"Item_second_N", @"Item_second_H",@"11",],
                       @[@"NNCenterViewController", @"总览", @"Item_center_N", @"Item_center_H",@"10",],
                       @[@"NNThirdViewController", @"消息", @"Item_third_N", @"Item_third_H",@"12",],
-//                      @[@"NNFourthViewController", @"我的", @"Item_fourth_N", @"Item_fourth_H",@"13",],
+                      @[@"NNFourthViewController", @"我的", @"Item_fourth_N", @"Item_fourth_H",@"13",],
 //                      @[@"ScrollHorizontalController", @"test", @"Item_fourth_N", @"Item_fourth_H",@"13",],
 //                      @[@"LineDashViewController", @"test", @"Item_fourth_N", @"Item_fourth_H",@"13",],
 //                      @[@"SearchTitleViewController", @"test", @"Item_fourth_N", @"Item_fourth_H",@"13",],
-                      @[@"TestViewController", @"test", @"Item_fourth_N", @"Item_fourth_H",@"13",],
+//                      @[@"TestViewController", @"test", @"Item_fourth_N", @"Item_fourth_H",@"13",],
 //                      @[@"NNFileUploadController", @"test", @"Item_fourth_N", @"Item_fourth_H",@"13",],
 
                       

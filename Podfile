@@ -11,7 +11,6 @@ inhibit_all_warnings!
    pod 'Aspects'
    
    pod 'FCUUID'
-   pod 'FLAnimatedImage'
    pod 'FMDB'
       
    pod 'IQKeyboardManager'
@@ -19,9 +18,7 @@ inhibit_all_warnings!
    
    pod 'JPush'
 #   pod 'JZLocationConverter'
-   
-   pod 'KVOController'
-   
+      
    pod 'MBProgressHUD'
    pod 'MJExtension'
    pod 'MJRefresh'
@@ -39,6 +36,8 @@ inhibit_all_warnings!
 #   pod 'UICKeyChainStore'
    
    pod 'YBAttributeTextTapAction'
+   
+#   pod 'YYKit'
    pod 'YYCache'
    pod 'YYCategories'
    pod 'YYWebImage’

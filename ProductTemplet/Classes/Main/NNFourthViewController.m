@@ -10,7 +10,7 @@
 
 #import "ZYSliderViewController.h"
 
-#import <FLAnimatedImage/FLAnimatedImage.h>
+#import <YYImage/YYImage.h>
 
 #import "BNSliderControlView.h"
 #import "NNPickerView.h"
@@ -172,22 +172,10 @@
 -(void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
     
-    NSString  *filePath = [[NSBundle bundleWithPath:[NSBundle.mainBundle bundlePath]]pathForResource:@"loading" ofType:@"gif"];
-    FLAnimatedImage *image = [FLAnimatedImage animatedImageWithGIFData:[NSData dataWithContentsOfFile:filePath]];
-    FLAnimatedImageView *imgView = [[FLAnimatedImageView alloc] initWithFrame:CGRectMake(10, 10, 40, 40)];
-    imgView.animatedImage = image;
-    
-//    imgView.animationDuration = 0.8;
-//    imgView.animationRepeatCount = 0;
-//    [imgView startAnimating];
-    
-    imgView.backgroundColor = UIColor.redColor;
-    
+    UIImage *image = [YYImage imageNamed:@"loading.gif"];
+    UIImageView *imgView = [[YYAnimatedImageView alloc] initWithImage:image];
+    imgView.frame = CGRectMake(10, 10, 40, 40);
     [self.view addSubview:imgView];
-    
-    DDLog(@"%.2f,%.2f,%.2f,%.2f,",imgView.minY,imgView.minX,imgView.maxY,imgView.maxX);
-
-    [self.view getViewLayer];
     
     [self.api requestWithSuccessBlock:^(NNRequstManager * _Nonnull manager, id responseObject, NSError * _Nullable error) {
         DDLog(@"%@",responseObject);

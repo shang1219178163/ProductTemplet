@@ -82,7 +82,6 @@
 		141080B622D2E7D10011344E /* AnniSuperController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1410809D22D2E7D10011344E /* AnniSuperController.m */; };
 		141080B722D2E7D10011344E /* AnimationListController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1410809E22D2E7D10011344E /* AnimationListController.m */; };
 		1415825722DDB88100643BF6 /* excel.geojson in Resources */ = {isa = PBXBuildFile; fileRef = 1415825622DDB88100643BF6 /* excel.geojson */; };
-		1419DAE3227005FF00F4BB5C /* NSObject+Bind.m in Sources */ = {isa = PBXBuildFile; fileRef = 1419DAE2227005FF00F4BB5C /* NSObject+Bind.m */; };
 		141E2B90230637E700466008 /* NSArray+Tmp.m in Sources */ = {isa = PBXBuildFile; fileRef = 141E2B8F230637E600466008 /* NSArray+Tmp.m */; };
 		1421D5CD21F307F700635582 /* CustomViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1421D5CC21F307F700635582 /* CustomViewController.m */; };
 		1421D5D021F3177700635582 /* NNWalletView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1421D5CF21F3177700635582 /* NNWalletView.m */; };
@@ -90,7 +89,6 @@
 		142A76D72226708D0016D3DA /* BNSliderControlView.m in Sources */ = {isa = PBXBuildFile; fileRef = 142A76D62226708D0016D3DA /* BNSliderControlView.m */; };
 		142A77102227B30E0016D3DA /* UITableViewPickerCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 142A770F2227B30E0016D3DA /* UITableViewPickerCell.m */; };
 		143331AD2241F1F600436F75 /* AVSpeechViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 143331AC2241F1F600436F75 /* AVSpeechViewController.m */; };
-		143F44AF24920F6C00ED160A /* NSObject+KVO.m in Sources */ = {isa = PBXBuildFile; fileRef = 143F44AE24920F6C00ED160A /* NSObject+KVO.m */; };
 		143F44B224921A8D00ED160A /* KVOViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 143F44B024921A8C00ED160A /* KVOViewController.m */; };
 		14403E6923322314005DB45B /* LineDashViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 14403E6823322314005DB45B /* LineDashViewController.m */; };
 		14488764224F4D6B00B550AF /* icon_oprationSuccess@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 14488762224F4D6A00B550AF /* icon_oprationSuccess@2x.png */; };
@@ -638,8 +636,6 @@
 		1410809D22D2E7D10011344E /* AnniSuperController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AnniSuperController.m; sourceTree = "<group>"; };
 		1410809E22D2E7D10011344E /* AnimationListController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AnimationListController.m; sourceTree = "<group>"; };
 		1415825622DDB88100643BF6 /* excel.geojson */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = excel.geojson; sourceTree = "<group>"; };
-		1419DAE1227005FF00F4BB5C /* NSObject+Bind.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSObject+Bind.h"; sourceTree = "<group>"; };
-		1419DAE2227005FF00F4BB5C /* NSObject+Bind.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSObject+Bind.m"; sourceTree = "<group>"; };
 		141E2B8E230637E600466008 /* NSArray+Tmp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+Tmp.h"; sourceTree = "<group>"; };
 		141E2B8F230637E600466008 /* NSArray+Tmp.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+Tmp.m"; sourceTree = "<group>"; };
 		1421D5CB21F307F700635582 /* CustomViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CustomViewController.h; sourceTree = "<group>"; };
@@ -653,8 +649,6 @@
 		142A770F2227B30E0016D3DA /* UITableViewPickerCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UITableViewPickerCell.m; sourceTree = "<group>"; };
 		143331AB2241F1F600436F75 /* AVSpeechViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AVSpeechViewController.h; sourceTree = "<group>"; };
 		143331AC2241F1F600436F75 /* AVSpeechViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AVSpeechViewController.m; sourceTree = "<group>"; };
-		143F44AD24920F6B00ED160A /* NSObject+KVO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+KVO.h"; sourceTree = "<group>"; };
-		143F44AE24920F6C00ED160A /* NSObject+KVO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+KVO.m"; sourceTree = "<group>"; };
 		143F44B024921A8C00ED160A /* KVOViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KVOViewController.m; sourceTree = "<group>"; };
 		143F44B124921A8D00ED160A /* KVOViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KVOViewController.h; sourceTree = "<group>"; };
 		14403E6723322314005DB45B /* LineDashViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LineDashViewController.h; sourceTree = "<group>"; };
@@ -2034,8 +2028,6 @@
 				14107FD322D087630011344E /* NNProgressHUD.m */,
 				14E49C8C232780EB0099912E /* UIApplication+Permission.h */,
 				14E49C8D232780EB0099912E /* UIApplication+Permission.m */,
-				143F44AD24920F6B00ED160A /* NSObject+KVO.h */,
-				143F44AE24920F6C00ED160A /* NSObject+KVO.m */,
 				14F6382923630AC900D0EBF0 /* NSObject+Tmp.h */,
 				14F6382A23630AC900D0EBF0 /* NSObject+Tmp.m */,
 				149BE1502341923F00D74E7C /* NSString+Helper.swift */,
@@ -2215,8 +2207,6 @@
 				1402183B23683A9500B27E4C /* AudioSoundController.m */,
 				142A770E2227B30E0016D3DA /* UITableViewPickerCell.h */,
 				142A770F2227B30E0016D3DA /* UITableViewPickerCell.m */,
-				1419DAE1227005FF00F4BB5C /* NSObject+Bind.h */,
-				1419DAE2227005FF00F4BB5C /* NSObject+Bind.m */,
 				14F25F4C23599AB000D05998 /* UIBarButtonItem+Block.h */,
 				14F25F4D23599AB000D05998 /* UIBarButtonItem+Block.m */,
 				14ADE27C23CEC65A00037B0B /* NNTagViewController.h */,
@@ -3015,11 +3005,9 @@
 				"${BUILT_PRODUCTS_DIR}/AFNetworking/AFNetworking.framework",
 				"${BUILT_PRODUCTS_DIR}/Aspects/Aspects.framework",
 				"${BUILT_PRODUCTS_DIR}/FCUUID/FCUUID.framework",
-				"${BUILT_PRODUCTS_DIR}/FLAnimatedImage/FLAnimatedImage.framework",
 				"${BUILT_PRODUCTS_DIR}/FMDB/FMDB.framework",
 				"${BUILT_PRODUCTS_DIR}/GTMBase64/GTMBase64.framework",
 				"${BUILT_PRODUCTS_DIR}/IQKeyboardManager/IQKeyboardManager.framework",
-				"${BUILT_PRODUCTS_DIR}/KVOController/KVOController.framework",
 				"${BUILT_PRODUCTS_DIR}/MBProgressHUD/MBProgressHUD.framework",
 				"${BUILT_PRODUCTS_DIR}/MJExtension/MJExtension.framework",
 				"${BUILT_PRODUCTS_DIR}/MJRefresh/MJRefresh.framework",
@@ -3050,11 +3038,9 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AFNetworking.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Aspects.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FCUUID.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FLAnimatedImage.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FMDB.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMBase64.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IQKeyboardManager.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/KVOController.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MBProgressHUD.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MJExtension.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MJRefresh.framework",
@@ -3269,7 +3255,6 @@
 				141080B222D2E7D10011344E /* AnimationController12.m in Sources */,
 				14F08BB123016DDD00B75842 /* WaveController.m in Sources */,
 				147ABB5922DED1A500A5C4EC /* BNCollectionDataModel.m in Sources */,
-				143F44AF24920F6C00ED160A /* NSObject+KVO.m in Sources */,
 				149F88A422B3750F00EAB4C2 /* ResetPwdController.m in Sources */,
 				141080A722D2E7D10011344E /* AnimationController4.m in Sources */,
 				5129425820B424EC009FB70E /* LockCompareController.m in Sources */,
@@ -3360,7 +3345,6 @@
 				51AA002321991646002EB259 /* CountDownListController.m in Sources */,
 				517D8B2A20B2E09800DCA731 /* PersonCarsViewController.m in Sources */,
 				141080B722D2E7D10011344E /* AnimationListController.m in Sources */,
-				1419DAE3227005FF00F4BB5C /* NSObject+Bind.m in Sources */,
 				51862E6820BB94E40080BD4E /* EOCEmployeeFinance.m in Sources */,
 				5175C93C20C13DF3009EA86E /* Teacher.m in Sources */,
 				51698C6121376F9E0069C2B2 /* UncaughtExceptionHandler.m in Sources */,
@@ -3621,8 +3605,6 @@
 					"-framework",
 					"\"FCUUID\"",
 					"-framework",
-					"\"FLAnimatedImage\"",
-					"-framework",
 					"\"FMDB\"",
 					"-framework",
 					"\"Foundation\"",
@@ -3630,8 +3612,6 @@
 					"\"GTMBase64\"",
 					"-framework",
 					"\"IQKeyboardManager\"",
-					"-framework",
-					"\"KVOController\"",
 					"-framework",
 					"\"MBProgressHUD\"",
 					"-framework",
@@ -3750,8 +3730,6 @@
 					"-framework",
 					"\"FCUUID\"",
 					"-framework",
-					"\"FLAnimatedImage\"",
-					"-framework",
 					"\"FMDB\"",
 					"-framework",
 					"\"Foundation\"",
@@ -3759,8 +3737,6 @@
 					"\"GTMBase64\"",
 					"-framework",
 					"\"IQKeyboardManager\"",
-					"-framework",
-					"\"KVOController\"",
 					"-framework",
 					"\"MBProgressHUD\"",
 					"-framework",
