@@ -9,6 +9,7 @@
 
 #import "UITextFieldController.h"
 #import "UIView+Tmp.h"
+#import "KVOViewController.h"
 
 @interface UITextFieldController ()
 
@@ -29,11 +30,10 @@
 //    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc]initWithTitle:@"Right" style:UIBarButtonItemStyleDone target:nil action:nil];
     self.navigationItem.rightBarButtonItem = [UIBarButtonItem createItem:@"Right" style:UIBarButtonItemStyleDone];
     [self.navigationItem.rightBarButtonItem addActionBlock:^(UIBarButtonItem * _Nonnull item) {
-        DDLog(@"%@", item);
+        KVOViewController *controller = [[KVOViewController alloc]init];
+        [self.navigationController pushViewController:controller animated:true];
     }];
     
-    
-
     [self.view addSubview:self.textField];
     [self.view addSubview:self.textFieldPwd];
     [self.view addSubview:self.textFieldPwdNew];
@@ -88,7 +88,6 @@
     tap.numberOfTouchesRequired = 1;
     [tap addActionBlock:^(UIGestureRecognizer * _Nonnull reco) {
         DDLog(@"%@", reco);
-
     }];
     
     [self.view addGestureRecognizer:tap];

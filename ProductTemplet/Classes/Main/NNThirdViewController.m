@@ -32,7 +32,7 @@
     
 //    [self addControllerName:@"SliderTabBarController"];
     
-    [self printJiuJiuBiao];
+//    [self printJiuJiuBiao];
 }
 
 - (void)viewWillAppear:(BOOL)animated{

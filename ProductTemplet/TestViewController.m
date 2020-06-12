@@ -209,7 +209,7 @@
     NSArray *listSecond = [list sortedAscending:false];
     DDLog(@"listSecond_%@", listSecond);
     
-    NSArray *listOne = [list map:^NSObject * _Nonnull(NSObject * _Nonnull obj, NSUInteger idx) {
+    NSArray *listOne = [list map:^id _Nonnull(id  _Nonnull obj, NSUInteger idx) {
         return [(NSString *)obj substringToIndex:idx];
     }];
     DDLog(@"listOne_%@", listOne);
@@ -225,12 +225,12 @@
         [marr addObject:model];
     }
     
-    NSArray * listTwo = [marr map:^NSObject * _Nonnull(NSObject * _Nonnull obj, NSUInteger idx) {
+    NSArray * listTwo = [marr map:^id _Nonnull(id  _Nonnull obj, NSUInteger idx) {
         return [obj valueForKey:@"category"] ? : @"";
     }];
     DDLog(@"listTwo_%@", listTwo);
     
-    NSArray * listThree = [marr map:^NSObject * _Nonnull(NSObject * _Nonnull obj, NSUInteger idx) {
+    NSArray * listThree = [marr map:^id _Nonnull(id  _Nonnull obj, NSUInteger idx) {
         [obj setValue:@(idx) forKey:@"category"];
         return obj;
     }];
