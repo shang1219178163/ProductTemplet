@@ -34,7 +34,7 @@
         if (i == 0) {
             model.title = @"伟业工厂伟业工厂伟业工厂";
         }
-        model.number = [NSString getRandomStr:0 to:10];
+        model.number = [@(RandomInteger(0, 10)) stringValue];
         [self.dataList addObject:model];
     }
     
@@ -77,7 +77,6 @@
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-    self.blockObject(self.dataList[indexPath.row], nil, 0);
     
 }
 

@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import "Calculator.h"
+
 @interface NSObject (Calculate)
 
 + (int)zz_makeCalcuclate:(void(^)(Calculator *))block;

@@ -28,7 +28,7 @@
 -(void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
     
-    NSInteger randomIdx = [NSObject getRandomNum:0 to:2];
+    NSInteger randomIdx = RandomInteger(0, 2);
     EOCEmployee * employee = [EOCEmployee employeeWithType:(EOCEmployeeType)randomIdx];
     [employee doADaysWork];
     

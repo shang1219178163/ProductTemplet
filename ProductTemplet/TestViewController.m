@@ -11,10 +11,11 @@
 #import "NSArray+Tmp.h"
 #import "NSDictionary+Tmp.h"
 #import "UIImageView+Tmp.h"
+#import "Person.h"
 
 @interface TestViewController ()
 
-@property (nonatomic, strong) UIScrollView * scrollView;
+@property (nonatomic, strong) UIScrollView *scrollView;
 
 @end
 
@@ -35,7 +36,8 @@
 
     [imgView showImageEnlarge];
     
-    [self.view getViewLayer];
+    [self enumerateModel];
+//    [self.view getViewLayer];
 }
 
 - (void)handleActionBtn:(UIBarButtonItem *)sender{
@@ -309,6 +311,33 @@
 //        2 = 222;
 //    }
     
+}
+
+
+- (void)enumerateModel {
+    Person *model = [[Person alloc]init];
+    model.name = @"sda";
+    model.age = 18;
+
+    NSMutableDictionary *mdic = [NSMutableDictionary dictionary];
+//    [model enumerateIvars:^(Ivar  _Nonnull v, NSString * _Nonnull name, id  _Nullable value) {
+//        DDLog(@"Ivar_%@_%@", name, value);
+//        mdic[name] = value ? : @"";
+//    }];
+
+    [model enumeratePropertys:^(objc_property_t  _Nonnull property, NSString * _Nonnull name, id  _Nullable value) {
+        DDLog(@"Property_%@_%@", name, value);
+        mdic[name] = value ? : @"";
+    }];
+    DDLog(@"mdic_%@", mdic);
+    
+//    [model enumerateMethods:^(Method  _Nonnull method, NSString * _Nonnull name) {
+//        DDLog(@"Method_%@_%@", name, @(idx));
+//    }];
+//    
+//    [model enumerateProtocols:^(Protocol * _Nonnull proto, NSString * _Nonnull name) {
+//        DDLog(@"Protocol_%@_%@", name, @(idx));
+//    }];
 }
 
 - (void)didReceiveMemoryWarning {

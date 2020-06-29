@@ -151,6 +151,9 @@
 		14B6B35022B230350047E094 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 14B6B34F22B230350047E094 /* LoginViewController.m */; };
 		14B7CF6D2383D2F200AEF7BC /* UIImageView+Tmp.m in Sources */ = {isa = PBXBuildFile; fileRef = 14B7CF6C2383D2F200AEF7BC /* UIImageView+Tmp.m */; };
 		14BEBF5123B597BA0058C20A /* NNThirdViewController+Helper.m in Sources */ = {isa = PBXBuildFile; fileRef = 14BEBF5023B597BA0058C20A /* NNThirdViewController+Helper.m */; };
+		14BEDC6B24A8A0330031852F /* NSObject+Calculate.m in Sources */ = {isa = PBXBuildFile; fileRef = 14BEDC6524A8A0320031852F /* NSObject+Calculate.m */; };
+		14BEDC6C24A8A0330031852F /* CalculatorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 14BEDC6624A8A0320031852F /* CalculatorViewController.m */; };
+		14BEDC6D24A8A0330031852F /* Calculator.m in Sources */ = {isa = PBXBuildFile; fileRef = 14BEDC6924A8A0330031852F /* Calculator.m */; };
 		14C1197522DC59AC009D18A3 /* ScrollViewCycleController.m in Sources */ = {isa = PBXBuildFile; fileRef = 14C1197122DC59AB009D18A3 /* ScrollViewCycleController.m */; };
 		14C1197622DC59AC009D18A3 /* UICTViewCellCycle.m in Sources */ = {isa = PBXBuildFile; fileRef = 14C1197222DC59AB009D18A3 /* UICTViewCellCycle.m */; };
 		14C1197822DC5A5A009D18A3 /* postImage.png in Resources */ = {isa = PBXBuildFile; fileRef = 14C1197722DC5A59009D18A3 /* postImage.png */; };
@@ -766,6 +769,12 @@
 		14B7CF6C2383D2F200AEF7BC /* UIImageView+Tmp.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+Tmp.m"; sourceTree = "<group>"; };
 		14BEBF4F23B597BA0058C20A /* NNThirdViewController+Helper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NNThirdViewController+Helper.h"; sourceTree = "<group>"; };
 		14BEBF5023B597BA0058C20A /* NNThirdViewController+Helper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NNThirdViewController+Helper.m"; sourceTree = "<group>"; };
+		14BEDC6524A8A0320031852F /* NSObject+Calculate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+Calculate.m"; sourceTree = "<group>"; };
+		14BEDC6624A8A0320031852F /* CalculatorViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CalculatorViewController.m; sourceTree = "<group>"; };
+		14BEDC6724A8A0320031852F /* CalculatorViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CalculatorViewController.h; sourceTree = "<group>"; };
+		14BEDC6824A8A0330031852F /* Calculator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Calculator.h; sourceTree = "<group>"; };
+		14BEDC6924A8A0330031852F /* Calculator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Calculator.m; sourceTree = "<group>"; };
+		14BEDC6A24A8A0330031852F /* NSObject+Calculate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+Calculate.h"; sourceTree = "<group>"; };
 		14C1197122DC59AB009D18A3 /* ScrollViewCycleController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScrollViewCycleController.m; sourceTree = "<group>"; };
 		14C1197222DC59AB009D18A3 /* UICTViewCellCycle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UICTViewCellCycle.m; sourceTree = "<group>"; };
 		14C1197322DC59AB009D18A3 /* UICTViewCellCycle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UICTViewCellCycle.h; sourceTree = "<group>"; };
@@ -1807,6 +1816,19 @@
 			name = CollectionData;
 			sourceTree = "<group>";
 		};
+		14BEDC6424A8A0120031852F /* ChainProgramming */ = {
+			isa = PBXGroup;
+			children = (
+				14BEDC6724A8A0320031852F /* CalculatorViewController.h */,
+				14BEDC6624A8A0320031852F /* CalculatorViewController.m */,
+				14BEDC6A24A8A0330031852F /* NSObject+Calculate.h */,
+				14BEDC6524A8A0320031852F /* NSObject+Calculate.m */,
+				14BEDC6824A8A0330031852F /* Calculator.h */,
+				14BEDC6924A8A0330031852F /* Calculator.m */,
+			);
+			path = ChainProgramming;
+			sourceTree = "<group>";
+		};
 		14C11A2B22DC7A28009D18A3 /* CollectionView */ = {
 			isa = PBXGroup;
 			children = (
@@ -2099,6 +2121,7 @@
 		513649102086055E005A20E7 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				14BEDC6424A8A0120031852F /* ChainProgramming */,
 				147ABB5322DED19500A5C4EC /* CollectionData */,
 				517D8B1320B2B52300DCA731 /* DBManager */,
 				14F0FE6422B0AD6B00057093 /* Live */,
@@ -3100,6 +3123,7 @@
 				141080A122D2E7D10011344E /* LiveLikeController.m in Sources */,
 				14C11AC022DC872C009D18A3 /* BNDataModel.m in Sources */,
 				14107FAF22CDF9490011344E /* InputViewController.m in Sources */,
+				14BEDC6B24A8A0330031852F /* NSObject+Calculate.m in Sources */,
 				14C11AAA22DC7FF8009D18A3 /* SectionListController.m in Sources */,
 				14E42CDA2200040200606AD0 /* BNUserLoginController.m in Sources */,
 				143331AD2241F1F600436F75 /* AVSpeechViewController.m in Sources */,
@@ -3176,6 +3200,7 @@
 				14F6382B23630AC900D0EBF0 /* NSObject+Tmp.m in Sources */,
 				14C11AAC22DC7FF8009D18A3 /* SectionListOneController.m in Sources */,
 				141080B522D2E7D10011344E /* AnimationController18.m in Sources */,
+				14BEDC6D24A8A0330031852F /* Calculator.m in Sources */,
 				149111E6227542C10078A7BB /* NNUploadModel.m in Sources */,
 				14F0FE5A22B0AA0000057093 /* BNMoidyPwdApi.m in Sources */,
 				51AA00342199295A002EB259 /* CounterListController.m in Sources */,
@@ -3211,6 +3236,7 @@
 				51B9CD1920A0520F0096A540 /* UIViewController+ZYSliderViewController.m in Sources */,
 				1401BE622276A1220078A722 /* NNMemoryCache.m in Sources */,
 				14E42D002200041900606AD0 /* NNSimpleDataModel.m in Sources */,
+				14BEDC6C24A8A0330031852F /* CalculatorViewController.m in Sources */,
 				14E42CF42200040F00606AD0 /* NNCenterViewController.m in Sources */,
 				14C96FC022B399FA0015BA1D /* GroupViewController.m in Sources */,
 				14C1197622DC59AC009D18A3 /* UICTViewCellCycle.m in Sources */,

@@ -56,20 +56,20 @@
         teacher.FLDBID = [NSString stringWithFormat:@"teacher_%zd",i];
 
         teacher.name = [@"tea_name_" stringByAppendingFormat:@"%@",@(i)];
-        teacher.age = [NSString getRandomNum:20 to:50];
+        teacher.age = RandomInteger(20, 50);
         
         Student * stu = [Student new];
         stu.FLDBID = [NSString stringWithFormat:@"stu_%zd",i];
 
         stu.name = @"stu_Li";
-        stu.age = [NSString getRandomNum:15 to:20];
+        stu.age = RandomInteger(15, 20);
 //
 //        NSMutableArray * marr = [NSMutableArray arrayWithCapacity:0];
 //        for (NSInteger j = 0; j < 3 ; j++) {
 //            Lesson * les = [Lesson new];
 //            les.lessonID = [NSString getRandomStr:1000 to:1050];
+//            les.lessonID = [@(RandomInteger(1000, 1050)) stringValue];
 //            les.name = [@"les_name_" stringByAppendingFormat:@"%@",@(j)];
-//            
 //            [marr addObject:les];
 //        }
 //        stu.lessonList = marr;

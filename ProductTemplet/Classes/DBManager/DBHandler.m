@@ -33,7 +33,7 @@
     
     // 1、获取沙盒中数据库的路径
     NSString *path = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES).lastObject;
-    fl_dbName = [fl_dbName validObject] ? fl_dbName : kDB_NAME_DEFAULT;
+    fl_dbName = fl_dbName.isValid ? fl_dbName : kDB_NAME_DEFAULT;
     NSString *filePath = [path stringByAppendingPathComponent:[fl_dbName stringByAppendingString:@".sqlite"]];
     
     // 2、判断 caches 文件夹是否存在.不存在则创建

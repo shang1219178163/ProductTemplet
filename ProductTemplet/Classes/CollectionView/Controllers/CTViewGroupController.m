@@ -245,7 +245,7 @@
     view.title = @"请选择";
     view.tag = tag;
     
-    if([address validObject]) [view actionSelectAddress:address];
+    if(address.isValid) [view actionSelectAddress:address];
     [self.view addSubview:view];
     
     [view show];
@@ -268,7 +268,7 @@
     view.tag = tag;
     
     [self.view addSubview:view];
-    if([address validObject]) [view actionSelectAddress:address];
+    if(address.isValid) [view actionSelectAddress:address];
     
     [view show];
     view.block = ^(UIPickerView *pickerView, NSString *address, NSInteger btnIndex) {

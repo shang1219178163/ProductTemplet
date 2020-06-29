@@ -66,10 +66,10 @@
         NSMutableArray * tmp  = [NSMutableArray array];
         [tmp addObject:[NSString stringWithFormat:@"项目%@",@(i)]];
         [tmp addObjectsFromArray:@[@10000,@0,@"3.4.5.6",@"027641081087",@"1",]];
-        [tmp addObject:@([self getRandomNum:1 to:100])];
-        [tmp addObject:@([self getRandomNum:100 to:10000])];
-        [tmp addObject:@([self getRandomNum:1000 to:1999])];
-        [tmp addObject:@([self getRandomNum:10000000000 to:19999999999])];
+        [tmp addObject:@(RandomInteger(1, 100))];
+        [tmp addObject:@(RandomInteger(100, 10000))];
+        [tmp addObject:@(RandomInteger(1000, 1999))];
+        [tmp addObject:@(RandomInteger(10000000000, 19999999999))];
 
         [marr addObject:tmp];
     }

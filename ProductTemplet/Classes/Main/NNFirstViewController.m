@@ -119,7 +119,7 @@
     for (NSInteger i = 0; i < 1; i++) {
         FactoryDetailInfoModel * model = [[FactoryDetailInfoModel alloc]init];
         model.title = [NSString stringWithFormat:@"随机数据随机数据%@%@",@(i),@(i)];
-        model.number = [NSString getRandomStr:0 to:10];
+        model.number = [@(RandomInteger(0, 20)) stringValue];
         [self.dataList addObject:model];
     }
     

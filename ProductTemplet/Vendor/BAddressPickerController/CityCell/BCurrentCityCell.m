@@ -29,7 +29,7 @@
 }
 
 - (void)setUp{
-    if ([[NSUserDefaults objectForKey:KEY_userCity] validObject]) {
+    if ([NSUserDefaults objectForKey:KEY_userCity]) {
         NSString * city = [NSUserDefaults objectForKey:KEY_userCity];
         NSLog(@"city_%@",city);
         [self.label setHidden:YES];

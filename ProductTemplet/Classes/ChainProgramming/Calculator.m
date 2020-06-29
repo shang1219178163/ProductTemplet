@@ -12,7 +12,7 @@
 
 -(Calculator *(^)(int))add{
     return ^Calculator *(int value){
-        _result+=value;
+        _result += value;
         return self;
     };
 }
