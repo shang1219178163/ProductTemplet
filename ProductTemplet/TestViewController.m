@@ -270,13 +270,14 @@
     DDLog(@"list3_%@", list3);
     
     array = @[@1, @3, @5, @7, @9];
-    NSNumber * result = [array reduce:^NSNumber * _Nonnull(NSNumber * _Nonnull num1, NSNumber * _Nonnull num2) {
-        return @(num1.floatValue * 10 + num2.floatValue);
+    NSNumber * result = [array reduce:@(0) block:^NSNumber * _Nonnull(NSNumber * _Nonnull result, NSNumber * _Nonnull obj) {
+        return @(result.floatValue * 10 + obj.floatValue);
     }];
+    
     DDLog(@"result_%@", result);
     
-    NSNumber * result1 = [array reduce:^NSNumber * _Nonnull(NSNumber * _Nonnull num1, NSNumber * _Nonnull num2) {
-        return @(num1.floatValue + num2.floatValue);
+    NSNumber * result1 = [array reduce:@(0) block:^NSNumber * _Nonnull(NSNumber * _Nonnull result, NSNumber * _Nonnull obj) {
+        return @(result.floatValue + obj.floatValue);
     }];
     DDLog(@"result1_%@", result1);
     
