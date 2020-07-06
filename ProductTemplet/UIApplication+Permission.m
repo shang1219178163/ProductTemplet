@@ -25,8 +25,7 @@ static NSDictionary *_dictPrivacy = nil;
 
 + (NSDictionary *)dictPrivacy{
     if (!_dictPrivacy) {
-        _dictPrivacy = @{
-                         @0 : @"相册",
+        _dictPrivacy = @{@0 : @"相册",
                          @1 : @"相机",
                          @2 : @"媒体资料库",
                          @3 : @"麦克风",
@@ -49,19 +48,19 @@ static NSDictionary *_dictPrivacy = nil;
         case PrivacyTypePhoto: {
             [PHPhotoLibrary requestAuthorization:^(PHAuthorizationStatus status) {
                 if (status == PHAuthorizationStatusAuthorized) {
-                    completion(YES,PrivacyStatusAuthorized, UIApplication.dictPrivacy[@(type)]);
+                    completion(YES, PrivacyStatusAuthorized, UIApplication.dictPrivacy[@(type)]);
                 }
                 else if (status == PHAuthorizationStatusDenied) {
-                    completion(NO,PrivacyStatusDenied,UIApplication.dictPrivacy[@(type)]);
+                    completion(NO, PrivacyStatusDenied, UIApplication.dictPrivacy[@(type)]);
                 }
                 else if (status == PHAuthorizationStatusNotDetermined) {
-                    completion(NO,PrivacyStatusNotDetermined, UIApplication.dictPrivacy[@(type)]);
+                    completion(NO, PrivacyStatusNotDetermined, UIApplication.dictPrivacy[@(type)]);
                 }
                 else if (status == PHAuthorizationStatusRestricted) {
-                    completion(NO,PrivacyStatusRestricted, UIApplication.dictPrivacy[@(type)]);
+                    completion(NO, PrivacyStatusRestricted, UIApplication.dictPrivacy[@(type)]);
                 }
                 else {
-                    completion(NO,PrivacyStatusUnkonwn, UIApplication.dictPrivacy[@(type)]);
+                    completion(NO, PrivacyStatusUnkonwn, UIApplication.dictPrivacy[@(type)]);
                 }
             }];
         }
@@ -70,23 +69,23 @@ static NSDictionary *_dictPrivacy = nil;
             [AVCaptureDevice requestAccessForMediaType:AVMediaTypeVideo completionHandler:^(BOOL granted) {
                 AVAuthorizationStatus status = [AVCaptureDevice authorizationStatusForMediaType:AVMediaTypeVideo];
                 if (granted) {
-                    completion(YES,PrivacyStatusAuthorized, UIApplication.dictPrivacy[@(type)]);
+                    completion(YES, PrivacyStatusAuthorized, UIApplication.dictPrivacy[@(type)]);
                 }
                 else {
                     if (status == AVAuthorizationStatusAuthorized) {
-                        completion(YES,PrivacyStatusAuthorized, UIApplication.dictPrivacy[@(type)]);
+                        completion(YES, PrivacyStatusAuthorized, UIApplication.dictPrivacy[@(type)]);
                     }
                     else if (status == AVAuthorizationStatusDenied) {
-                        completion(NO,PrivacyStatusDenied, UIApplication.dictPrivacy[@(type)]);
+                        completion(NO, PrivacyStatusDenied, UIApplication.dictPrivacy[@(type)]);
                     }
                     else if (status == AVAuthorizationStatusNotDetermined) {
-                        completion(NO,PrivacyStatusNotDetermined, UIApplication.dictPrivacy[@(type)]);
+                        completion(NO, PrivacyStatusNotDetermined, UIApplication.dictPrivacy[@(type)]);
                     }
                     else if (status == AVAuthorizationStatusRestricted) {
-                        completion(NO,PrivacyStatusRestricted, UIApplication.dictPrivacy[@(type)]);
+                        completion(NO, PrivacyStatusRestricted, UIApplication.dictPrivacy[@(type)]);
                     }
                     else {
-                        completion(NO,PrivacyStatusUnkonwn, UIApplication.dictPrivacy[@(type)]);
+                        completion(NO, PrivacyStatusUnkonwn, UIApplication.dictPrivacy[@(type)]);
                     }
                 }
             }];
@@ -96,19 +95,19 @@ static NSDictionary *_dictPrivacy = nil;
             if (@available(iOS 9.3, *)) {
                 [MPMediaLibrary requestAuthorization:^(MPMediaLibraryAuthorizationStatus status) {
                     if (status == MPMediaLibraryAuthorizationStatusAuthorized) {
-                        completion(YES,PrivacyStatusAuthorized, UIApplication.dictPrivacy[@(type)]);
+                        completion(YES, PrivacyStatusAuthorized, UIApplication.dictPrivacy[@(type)]);
                     }
                     else if (status == MPMediaLibraryAuthorizationStatusDenied) {
-                        completion(NO,PrivacyStatusDenied, UIApplication.dictPrivacy[@(type)]);
+                        completion(NO, PrivacyStatusDenied, UIApplication.dictPrivacy[@(type)]);
                     }
                     else if (status == MPMediaLibraryAuthorizationStatusNotDetermined) {
-                        completion(NO,PrivacyStatusNotDetermined, UIApplication.dictPrivacy[@(type)]);
+                        completion(NO, PrivacyStatusNotDetermined, UIApplication.dictPrivacy[@(type)]);
                     }
                     else if (status == MPMediaLibraryAuthorizationStatusRestricted) {
-                        completion(NO,PrivacyStatusRestricted, UIApplication.dictPrivacy[@(type)]);
+                        completion(NO, PrivacyStatusRestricted, UIApplication.dictPrivacy[@(type)]);
                     }
                     else {
-                        completion(NO,PrivacyStatusUnkonwn, UIApplication.dictPrivacy[@(type)]);
+                        completion(NO, PrivacyStatusUnkonwn, UIApplication.dictPrivacy[@(type)]);
                     }
                 }];
             } else {
@@ -121,23 +120,23 @@ static NSDictionary *_dictPrivacy = nil;
             [AVCaptureDevice requestAccessForMediaType:AVMediaTypeAudio completionHandler:^(BOOL granted) {
                 AVAuthorizationStatus status = [AVCaptureDevice authorizationStatusForMediaType:AVMediaTypeAudio];
                 if (granted) {
-                    completion(YES,PrivacyStatusAuthorized, UIApplication.dictPrivacy[@(type)]);
+                    completion(YES, PrivacyStatusAuthorized, UIApplication.dictPrivacy[@(type)]);
                 }
                 else {
                     if (status == AVAuthorizationStatusAuthorized) {
                         completion(YES,PrivacyStatusAuthorized, UIApplication.dictPrivacy[@(type)]);
                     }
                     else if (status == AVAuthorizationStatusDenied) {
-                        completion(NO,PrivacyStatusDenied, UIApplication.dictPrivacy[@(type)]);
+                        completion(NO, PrivacyStatusDenied, UIApplication.dictPrivacy[@(type)]);
                     }
                     else if (status == AVAuthorizationStatusNotDetermined) {
-                        completion(NO,PrivacyStatusNotDetermined, UIApplication.dictPrivacy[@(type)]);
+                        completion(NO, PrivacyStatusNotDetermined, UIApplication.dictPrivacy[@(type)]);
                     }
                     else if (status == AVAuthorizationStatusRestricted) {
-                        completion(NO,PrivacyStatusRestricted, UIApplication.dictPrivacy[@(type)]);
+                        completion(NO, PrivacyStatusRestricted, UIApplication.dictPrivacy[@(type)]);
                     }
                     else {
-                        completion(NO,PrivacyStatusUnkonwn, UIApplication.dictPrivacy[@(type)]);
+                        completion(NO, PrivacyStatusUnkonwn, UIApplication.dictPrivacy[@(type)]);
                     }
                 }
             }];
@@ -148,10 +147,10 @@ static NSDictionary *_dictPrivacy = nil;
                 CBCentralManager *centralManager = [[CBCentralManager alloc] init];
                 CBManagerState state = [centralManager state];
                 if (state == CBManagerStateUnsupported || state == CBManagerStateUnauthorized || state == CBManagerStateUnknown) {
-                    completion(NO,PrivacyStatusDenied, UIApplication.dictPrivacy[@(type)]);
+                    completion(NO, PrivacyStatusDenied, UIApplication.dictPrivacy[@(type)]);
                 }
                 else {
-                    completion(YES,PrivacyStatusAuthorized, UIApplication.dictPrivacy[@(type)]);
+                    completion(YES, PrivacyStatusAuthorized, UIApplication.dictPrivacy[@(type)]);
                 }
             } else {
                 // Fallback on earlier versions
@@ -167,18 +166,17 @@ static NSDictionary *_dictPrivacy = nil;
                 [center requestAuthorizationWithOptions:types completionHandler:^(BOOL granted, NSError * _Nullable error) {
                     if (granted) {
                         [center getNotificationSettingsWithCompletionHandler:^(UNNotificationSettings * _Nonnull settings) {
-                            //
-                            completion(YES,PrivacyStatusAuthorized, UIApplication.dictPrivacy[@(type)]);
-
+                            completion(YES, PrivacyStatusAuthorized, UIApplication.dictPrivacy[@(type)]);
                         }];
                     } else {
-                        [[UIApplication sharedApplication]openURL:[NSURL URLWithString:UIApplicationOpenSettingsURLString] options:@{UIApplicationOpenURLOptionUniversalLinksOnly:@""} completionHandler:^(BOOL success) { }];
+                        [UIApplication.sharedApplication openURL:[NSURL URLWithString:UIApplicationOpenSettingsURLString] options:@{UIApplicationOpenURLOptionUniversalLinksOnly:@""} completionHandler:^(BOOL success) { }];
                     }
                 }];
             } else {
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored"-Wdeprecated-declarations"
-                [[UIApplication sharedApplication] registerUserNotificationSettings:[UIUserNotificationSettings settingsForTypes:UIUserNotificationTypeAlert | UIUserNotificationTypeSound | UIUserNotificationTypeBadge categories:nil]];
+                UIUserNotificationType types = UIUserNotificationTypeAlert | UIUserNotificationTypeSound | UIUserNotificationTypeBadge;
+                [UIApplication.sharedApplication registerUserNotificationSettings:[UIUserNotificationSettings settingsForTypes:types categories:nil]];
             }
 #pragma clang diagnostic pop
         }break;
@@ -187,19 +185,19 @@ static NSDictionary *_dictPrivacy = nil;
             if (@available(iOS 10.0, *)) {
                 [SFSpeechRecognizer requestAuthorization:^(SFSpeechRecognizerAuthorizationStatus status) {
                     if (status == SFSpeechRecognizerAuthorizationStatusAuthorized) {
-                        completion(YES,PrivacyStatusAuthorized, UIApplication.dictPrivacy[@(type)]);
+                        completion(YES, PrivacyStatusAuthorized, UIApplication.dictPrivacy[@(type)]);
                     }
                     else if (status == SFSpeechRecognizerAuthorizationStatusDenied) {
-                        completion(NO,PrivacyStatusDenied, UIApplication.dictPrivacy[@(type)]);
+                        completion(NO, PrivacyStatusDenied, UIApplication.dictPrivacy[@(type)]);
                     }
                     else if (status == SFSpeechRecognizerAuthorizationStatusNotDetermined) {
-                        completion(NO,PrivacyStatusNotDetermined, UIApplication.dictPrivacy[@(type)]);
+                        completion(NO, PrivacyStatusNotDetermined, UIApplication.dictPrivacy[@(type)]);
                     }
                     else if (status == SFSpeechRecognizerAuthorizationStatusRestricted) {
-                        completion(NO,PrivacyStatusRestricted, UIApplication.dictPrivacy[@(type)]);
+                        completion(NO, PrivacyStatusRestricted, UIApplication.dictPrivacy[@(type)]);
                     }
                     else {
-                        completion(NO,PrivacyStatusUnkonwn, UIApplication.dictPrivacy[@(type)]);
+                        completion(NO, PrivacyStatusUnkonwn, UIApplication.dictPrivacy[@(type)]);
                     }
                 }];
             } else {
@@ -213,23 +211,23 @@ static NSDictionary *_dictPrivacy = nil;
             [store requestAccessToEntityType:EKEntityTypeEvent completion:^(BOOL granted, NSError * _Nullable error) {
                 EKAuthorizationStatus status = [EKEventStore  authorizationStatusForEntityType:EKEntityTypeEvent];
                 if (granted) {
-                    completion(YES,PrivacyStatusAuthorized, UIApplication.dictPrivacy[@(type)]);
+                    completion(YES, PrivacyStatusAuthorized, UIApplication.dictPrivacy[@(type)]);
                 }
                 else {
                     if (status == EKAuthorizationStatusAuthorized) {
-                        completion(YES ,PrivacyStatusAuthorized, UIApplication.dictPrivacy[@(type)]);
+                        completion(YES, PrivacyStatusAuthorized, UIApplication.dictPrivacy[@(type)]);
                     }
                     else if (status == EKAuthorizationStatusDenied) {
-                        completion(NO,PrivacyStatusDenied, UIApplication.dictPrivacy[@(type)]);
+                        completion(NO, PrivacyStatusDenied, UIApplication.dictPrivacy[@(type)]);
                     }
                     else if (status == EKAuthorizationStatusNotDetermined) {
-                        completion(NO,PrivacyStatusNotDetermined, UIApplication.dictPrivacy[@(type)]);
+                        completion(NO, PrivacyStatusNotDetermined, UIApplication.dictPrivacy[@(type)]);
                     }
                     else if (status == EKAuthorizationStatusRestricted) {
-                        completion(NO,PrivacyStatusRestricted, UIApplication.dictPrivacy[@(type)]);
+                        completion(NO, PrivacyStatusRestricted, UIApplication.dictPrivacy[@(type)]);
                     }
                     else {
-                        completion(NO,PrivacyStatusUnkonwn, UIApplication.dictPrivacy[@(type)]);
+                        completion(NO, PrivacyStatusUnkonwn, UIApplication.dictPrivacy[@(type)]);
                     }
                 }
             }];
@@ -240,23 +238,23 @@ static NSDictionary *_dictPrivacy = nil;
             [eventStore requestAccessToEntityType:EKEntityTypeReminder completion:^(BOOL granted, NSError * _Nullable error) {
                 EKAuthorizationStatus status = [EKEventStore authorizationStatusForEntityType:EKEntityTypeEvent];
                 if (granted) {
-                    completion(YES,PrivacyStatusAuthorized, UIApplication.dictPrivacy[@(type)]);
+                    completion(YES, PrivacyStatusAuthorized, UIApplication.dictPrivacy[@(type)]);
                 }
                 else {
                     if (status == EKAuthorizationStatusAuthorized) {
-                        completion(YES ,PrivacyStatusAuthorized, UIApplication.dictPrivacy[@(type)]);
+                        completion(YES, PrivacyStatusAuthorized, UIApplication.dictPrivacy[@(type)]);
                     }
                     else if (status == EKAuthorizationStatusDenied) {
-                        completion(NO,PrivacyStatusDenied, UIApplication.dictPrivacy[@(type)]);
+                        completion(NO, PrivacyStatusDenied, UIApplication.dictPrivacy[@(type)]);
                     }
                     else if (status == EKAuthorizationStatusNotDetermined){
-                        completion(NO,PrivacyStatusNotDetermined, UIApplication.dictPrivacy[@(type)]);
+                        completion(NO, PrivacyStatusNotDetermined, UIApplication.dictPrivacy[@(type)]);
                     }
                     else if (status == EKAuthorizationStatusRestricted){
-                        completion(NO,PrivacyStatusRestricted, UIApplication.dictPrivacy[@(type)]);
+                        completion(NO, PrivacyStatusRestricted, UIApplication.dictPrivacy[@(type)]);
                     }
                     else{
-                        completion(NO,PrivacyStatusUnkonwn, UIApplication.dictPrivacy[@(type)]);
+                        completion(NO, PrivacyStatusUnkonwn, UIApplication.dictPrivacy[@(type)]);
                     }
                 }
             }];
@@ -267,23 +265,23 @@ static NSDictionary *_dictPrivacy = nil;
             [contactStore requestAccessForEntityType:CNEntityTypeContacts completionHandler:^(BOOL granted, NSError * _Nullable error) {
                 CNAuthorizationStatus status = [CNContactStore authorizationStatusForEntityType:CNEntityTypeContacts];
                 if (granted) {
-                    completion(YES,PrivacyStatusAuthorized, UIApplication.dictPrivacy[@(type)]);
+                    completion(YES, PrivacyStatusAuthorized, UIApplication.dictPrivacy[@(type)]);
                 }
                 else {
                     if (status == EKAuthorizationStatusAuthorized) {
-                        completion(YES ,PrivacyStatusAuthorized, UIApplication.dictPrivacy[@(type)]);
+                        completion(YES, PrivacyStatusAuthorized, UIApplication.dictPrivacy[@(type)]);
                     }
                     else if (status == CNAuthorizationStatusDenied) {
-                        completion(NO,PrivacyStatusDenied, UIApplication.dictPrivacy[@(type)]);
+                        completion(NO, PrivacyStatusDenied, UIApplication.dictPrivacy[@(type)]);
                     }
                     else if (status == CNAuthorizationStatusRestricted){
-                        completion(NO,PrivacyStatusNotDetermined, UIApplication.dictPrivacy[@(type)]);
+                        completion(NO, PrivacyStatusNotDetermined, UIApplication.dictPrivacy[@(type)]);
                     }
                     else if (status == CNAuthorizationStatusNotDetermined){
-                        completion(NO,PrivacyStatusRestricted, UIApplication.dictPrivacy[@(type)]);
+                        completion(NO, PrivacyStatusRestricted, UIApplication.dictPrivacy[@(type)]);
                     }
                     else{
-                        completion(NO,PrivacyStatusUnkonwn, UIApplication.dictPrivacy[@(type)]);
+                        completion(NO, PrivacyStatusUnkonwn, UIApplication.dictPrivacy[@(type)]);
                     }
                 }
             }];
@@ -304,7 +302,6 @@ static NSDictionary *_dictPrivacy = nil;
             case PrivacyStatusAuthorized:
             {
                 //通过
-
             }
                 break;
             case PrivacyStatusDenied:
@@ -312,7 +309,7 @@ static NSDictionary *_dictPrivacy = nil;
             case PrivacyStatusRestricted:
             case PrivacyStatusUnkonwn:
             {
-                NSString * msg = [NSString stringWithFormat:@"请去-> [设置 - 隐私 - %@ - %@] 打开访问开关",UIApplication.dictPrivacy[@(type)],UIApplication.appName];
+                NSString * msg = [NSString stringWithFormat:@"请去-> [设置 - 隐私 - %@ - %@] 打开访问开关", UIApplication.dictPrivacy[@(type)], UIApplication.appName];
                 [UIAlertController showAlertTitle:@"" msg:msg actionTitles:@[kTitleKnow] handler:nil];
             }
                 break;
