@@ -3,7 +3,7 @@
 //  Location
 //
 //  Created by BIN on 2017/12/22.
-//  Copyright © 2017年 Location. All rights reserved.
+//  Copyright © 2017年 Shang. All rights reserved.
 //
 
 #import "BNNoti.h"
@@ -89,7 +89,7 @@
 }
 
 + (void)registerPushType{
-    if (iOSVer(10.0)) {
+    if (@available(iOS 10.0, *)) {
         UNUserNotificationCenter *center = [UNUserNotificationCenter currentNotificationCenter];
         [center requestAuthorizationWithOptions:(UNAuthorizationOptionBadge | UNAuthorizationOptionSound | UNAuthorizationOptionAlert) completionHandler:^(BOOL granted, NSError * _Nullable error) {
             if (!error) {

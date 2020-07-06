@@ -15,19 +15,22 @@
 
 @implementation NSDictionary(Tmp)
 
-- (NSDictionary<NSObject<NSCopying> *, NSObject *> *)map:(NSObject *(^)(NSObject<NSCopying> *key, NSObject *obj))handler{
-    __block NSMutableDictionary *mdic = [NSMutableDictionary dictionary];
-    [self enumerateKeysAndObjectsUsingBlock:^(NSObject<NSCopying> * _Nonnull key, NSObject * _Nonnull obj, BOOL * _Nonnull stop) {
-        NSObject *blockResult = handler(key, obj) ? : obj;
-        [mdic setObject:blockResult forKey:key];
-    }];
-    return mdic.copy;
-}
+//- (NSDictionary<id, id> *)map:(id (NS_NOESCAPE ^)(id key, id obj))block{
+//    __block NSMutableDictionary *mdic = [NSMutableDictionary dictionary];
+//    [self enumerateKeysAndObjectsUsingBlock:^(NSObject<NSCopying> * _Nonnull key, NSObject * _Nonnull obj, BOOL * _Nonnull stop) {
+//        if (block && block(key, obj)) {
+//            [mdic setObject:obj forKey:key];
+//        }
+//        NSObject *blockResult = block(key, obj) ? : obj;
+//        [mdic setObject:blockResult forKey:key];
+//    }];
+//    return mdic.copy;
+//}
 
-- (nullable NSDictionary<NSObject<NSCopying> *, NSObject *> *)filter:(BOOL(^)(NSObject<NSCopying> *key, NSObject *obj))handler{
+- (NSDictionary *)filter:(BOOL (NS_NOESCAPE ^)(id key, id obj))block{
     __block NSMutableDictionary *mdic = [NSMutableDictionary dictionary];
      [self enumerateKeysAndObjectsUsingBlock:^(id  _Nonnull key, id  _Nonnull obj, BOOL * _Nonnull stop) {
-         if (handler && handler(key, obj) == true) {
+         if (block && block(key, obj) == true) {
              [mdic setObject:obj forKey:key];
          }
      }];

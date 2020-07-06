@@ -10,8 +10,9 @@
 
 @interface UICTViewMainController ()
 
-@property (nonatomic, strong) NSArray * filterList;
-@property (nonatomic, strong) NNTablePlainView * plainView;
+@property (nonatomic, strong) NSArray *filterList;
+@property (nonatomic, strong) NNTablePlainView *plainView;
+@property (nonatomic, strong) NSMutableArray *dataList;
 
 @end
 
@@ -102,14 +103,23 @@
         
         _plainView.blockDidSelectRow = ^(UITableView *tableView, NSIndexPath *indexPath) {
             @strongify(self);
-            NSArray * list = self.dataList[indexPath.row];
-            //    [self goController:list.lastObject title:list.firstObject];
+            NSArray *list = self.dataList[indexPath.row];
 //            UITableViewCell * cell = [tableView cellForRowAtIndexPath:indexPath];
-            [self goController:list[0] title:list[1]];
+            [self pushVC:list[0] title:list[1] animated:true block:^(__kindof UIViewController * _Nonnull vc) {
+                
+            }];
         };
     }
     return _plainView;
 }
+
+- (NSMutableArray *)dataList{
+    if (!_dataList) {
+        _dataList = [NSMutableArray array];
+    }
+    return _dataList;
+}
+
 
 @end
 

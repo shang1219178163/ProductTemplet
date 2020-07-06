@@ -37,7 +37,6 @@
     [self.view addSubview:self.textView];
     
     [self createBarItem:@"播放" isLeft:false handler:^(id obj, UIView *item, NSInteger idx) {
-//        [self goController:@"LivePlayerController" title:@"直播" obj:self.rootModel.EasyDarwin.Body.URL];
         
         NSString * url = self.rootModel.EasyDarwin.Body.URL;
         DDLog(@"%@",url);
@@ -53,10 +52,6 @@
 -(void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
     
-    if (![self.obj isKindOfClass:PKDeviceInfoModel.class] || ![self.objOne isKindOfClass:PKChannelInfoModel.class]) {
-        DDLog(@"error:%@, %@", self.obj, self.objOne);
-        return;
-    }
     [self requestStreamInfo];
 }
 
@@ -73,9 +68,7 @@
 - (void)requestStreamInfo{
     [SVProgressHUD showWithStatus:kNetWorkRequesting];
     
-    PKDeviceInfoModel * deviceModel = self.obj;
-    PKChannelInfoModel * channelModel = self.objOne;
-    self.channelstreamApi.ID = deviceModel.ID;
+    self.channelstreamApi.ID = self.deviceModel.ID;
     [self.channelstreamApi requestWithSuccessBlock:^(NNRequstManager * _Nonnull manager, id _Nullable responseObject, NSError * _Nullable error) {
         //        DDLog(@"%@", responseObject);
         dispatch_async(dispatch_get_global_queue(0, 0), ^{
@@ -94,7 +87,7 @@
         
     }];
     
-    self.touchcChannelstreamApi.ID = deviceModel.ID;
+    self.touchcChannelstreamApi.ID = self.deviceModel.ID;
     [self.touchcChannelstreamApi requestWithSuccessBlock:^(NNRequstManager * _Nonnull manager, id _Nullable responseObject, NSError * _Nullable error) {
         DDLog(@"%@", responseObject);
      

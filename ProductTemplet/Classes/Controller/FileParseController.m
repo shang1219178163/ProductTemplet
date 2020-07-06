@@ -12,6 +12,7 @@
 @interface FileParseController ()
 
 @property(nonatomic, strong) NNTablePlainView *plainView;
+@property (nonatomic, strong) NSMutableArray *dataList;
 
 @end
 
@@ -82,6 +83,14 @@
     }
     return _plainView;
 }
+
+- (NSMutableArray *)dataList{
+    if (!_dataList) {
+        _dataList = [NSMutableArray array];
+    }
+    return _dataList;
+}
+
 
 
 @end

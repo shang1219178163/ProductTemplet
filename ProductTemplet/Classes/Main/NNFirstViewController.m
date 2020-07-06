@@ -27,6 +27,7 @@
 @property (nonatomic, strong) NSArray * elementList;
 
 @property (nonatomic, strong) NSMutableArray * imageList;
+@property (nonatomic, strong) NSMutableArray *dataList;
 
 @end
 
@@ -45,6 +46,13 @@
         });
     }
     return _btnView;
+}
+
+- (NSMutableArray *)dataList{
+    if (!_dataList) {
+        _dataList = [NSMutableArray array];
+    }
+    return _dataList;
 }
 
 -(NSMutableArray *)imageList{
@@ -161,7 +169,7 @@
             
             rect = CGRectMake(x, y, w, h);
             
-            UIView * btnView = [UIView createBtnViewRect:rect imgName:array[1] imgHeight:CGRectGetHeight(rect)/2.0 title:array[0] titleColor:UIColor.blackColor type:@0];
+            UIView *btnView = [[UIView alloc]init];
             btnView.tag = kTAG_VIEW+i+50;
             [backgroudView addSubview:btnView];
             
@@ -175,8 +183,9 @@
             [btnView.layer addSublayer:[btnView createLayerType:@3]];//上线条
             
             [btnView addActionHandler:^(id obj, id item, NSInteger idx) {
-                [self goController:array[2] title:array[0] obj:nil];
-                
+                [self pushVC:array[2] title:array[0] animated:true block:^(__kindof UIViewController * _Nonnull vc) {
+                    
+                }];
             }];
         }
     }
@@ -304,16 +313,17 @@
 }
 
 - (UIView *)createCycleViewRect:(CGRect)rect imageNames:(NSArray *)imageNames{
+    UIView *backgroudView = [[UIView alloc]initWithFrame:rect];
     
-    UIView * backgroudView = [[UIView alloc]initWithFrame:rect];
-    
-    //     本地加载 --- 创建不带标题的图片轮播器
-    SDCycleScrollView *cycleScrollView = [SDCycleScrollView cycleScrollViewWithFrame:rect shouldInfiniteLoop:YES imageNamesGroup:imageNames];
+    //本地加载 --- 创建不带标题的图片轮播器
+    SDCycleScrollView *cycleScrollView = [SDCycleScrollView cycleScrollViewWithFrame:rect
+                                                                  shouldInfiniteLoop:YES
+                                                                     imageNamesGroup:imageNames];
     cycleScrollView.delegate = self;
 //    cycleScrollView.bannerImageViewContentMode = UIViewContentModeScaleAspectFit;
     cycleScrollView.pageControlStyle = SDCycleScrollViewPageContolStyleAnimated;
     cycleScrollView.scrollDirection = UICollectionViewScrollDirectionHorizontal;
-    //         --- 轮播时间间隔，默认1.0秒，可自定义
+    //--- 轮播时间间隔，默认1.0秒，可自定义
     cycleScrollView.autoScrollTimeInterval = 3.0;
     cycleScrollView.backgroundColor = UIColor.blackColor;
     

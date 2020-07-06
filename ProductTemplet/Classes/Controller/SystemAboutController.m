@@ -11,10 +11,12 @@
 @interface SystemAboutController ()
 
 @property (nonatomic, strong) NNTablePlainView *plainView;
+@property (nonatomic, strong) NSMutableArray *dataList;
 
 @end
 
 @implementation SystemAboutController
+
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -83,12 +85,18 @@
         _plainView.blockDidSelectRow = ^(UITableView *tableView, NSIndexPath *indexPath) {
             @strongify(self);
             NSArray * list = self.dataList[indexPath.row];
-            //    [self goController:list.lastObject title:list.firstObject];
             UITableViewCell * cell = [tableView cellForRowAtIndexPath:indexPath];
             [self pushController:list[0] title:list[1] item:cell type:@0];
         };
     }
     return _plainView;
+}
+
+- (NSMutableArray *)dataList{
+    if (!_dataList) {
+        _dataList = [NSMutableArray array];
+    }
+    return _dataList;
 }
 
 

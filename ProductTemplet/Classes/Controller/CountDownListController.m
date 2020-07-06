@@ -7,10 +7,12 @@
 //
 
 #import "CountDownListController.h"
+#import "CounterListController.h"
+#import "CounterListGroupController.h"
 
 @interface CountDownListController ()
 
-@property (nonatomic, assign) BOOL isPlusTime;
+@property (nonatomic, strong) NSMutableArray *dataList;
 
 @end
 
@@ -41,13 +43,26 @@
     switch (sender.tag) {
         case 0:
         {
-            [self goController:@"CounterListController" title:sender.titleLabel.text obj:@(self.isPlusTime)];
+            NSString *title = sender.titleLabel.text;
+            [self pushVC:@"CounterListController"
+                   title:title
+                animated:true
+                   block:^(__kindof UIViewController * _Nonnull vc) {
+                CounterListController *controller = vc;
+                controller.isPlusTime = self.isPlusTime;
+            }];
         }
             break;
         case 1:
         {
-            [self goController:@"CounterListGroupController" title:sender.titleLabel.text obj:@(self.isPlusTime)];
-
+            NSString *title = sender.titleLabel.text;
+            [self pushVC:@"CounterListGroupController"
+                   title:title
+                animated:true
+                   block:^(__kindof UIViewController * _Nonnull vc) {
+                CounterListGroupController *controller = vc;
+                controller.isPlusTime = self.isPlusTime;
+            }];
         }
             break;
         case 2:
@@ -63,6 +78,13 @@
     
 }
 
+#pragma mark -lazy
+- (NSMutableArray *)dataList{
+    if (!_dataList) {
+        _dataList = [NSMutableArray array];
+    }
+    return _dataList;
+}
 
 
 @end

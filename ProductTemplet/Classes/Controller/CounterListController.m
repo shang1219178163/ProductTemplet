@@ -37,11 +37,8 @@
 -(void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
     
-    self.countDown.isPlusTime = self.isPlusTime = [self.obj boolValue];
     self.countDown.dataList = self.dataList = [self dataListWithIsPlus:self.countDown.isPlusTime];
     [self.tbView reloadData];
-    DDLog(@"_%@_%@_%@_",@(self.isPlusTime),@(self.countDown.isPlusTime),self.obj);
-
 }
 
 - (void)dealloc {

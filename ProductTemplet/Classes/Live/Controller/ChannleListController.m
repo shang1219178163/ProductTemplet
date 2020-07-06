@@ -15,6 +15,7 @@
 #import "PKDeviceListRootModel.h"
 #import "PKChannelListRootModel.h"
 
+#import "ChannelSteamController.h"
 #import "BNChannelListApi.h"
 
 @interface ChannleListController ()
@@ -32,17 +33,11 @@
     
     self.plainView.frame = self.view.bounds;
     [self.view addSubview:self.plainView];
-    
-    
 }
 
 -(void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
     
-    if (![self.obj isKindOfClass:PKDeviceInfoModel.class]) {
-        DDLog(@"error:%@", self.obj);
-        return;
-    }
     [self requestChannelList];
     
 }
@@ -52,8 +47,7 @@
 - (void)requestChannelList{
     [SVProgressHUD showWithStatus:kNetWorkRequesting];
 
-    PKDeviceInfoModel * deviceModel = self.obj;
-    self.channelListApi.ID = deviceModel.ID;
+    self.channelListApi.ID = self.deviceModel.ID;
     
     [self.channelListApi requestWithSuccessBlock:^(NNRequstManager * _Nonnull manager, id _Nullable responseObject, NSError * _Nullable error) {
         //        DDLog(@"%@", responseObject);
@@ -61,7 +55,7 @@
         dispatch_async(dispatch_get_global_queue(0, 0), ^{
             DDLog(@"%@", [(NSDictionary *)responseObject jsonString]);
             PKChannelListRootModel *rootModel = [PKChannelListRootModel yy_modelWithJSON:responseObject];
-            self.plainView.list = rootModel.EasyDarwin.Body.Channels;
+            self.plainView.list = rootModel.EasyDarwin.Body.Channels.mutableCopy;
             
             dispatch_async(dispatch_get_main_queue(), ^{
                 [SVProgressHUD dismiss];
@@ -101,8 +95,11 @@
         _plainView.blockDidSelectRow = ^(UITableView *tableView, NSIndexPath *indexPath) {
             @strongify(self);
             PKChannelInfoModel * model = self.plainView.list[indexPath.row];
-            [self goController:@"ChannelSteamController" title:model.Name obj:self.obj objOne:model];
-            
+            ChannelSteamController *controller = [[ChannelSteamController alloc]init];
+            controller.channelModel = model;
+//            controller.deviceModel = model;
+
+            [self.navigationController pushViewController:controller animated:true];
         };
     }
     return _plainView;
@@ -113,7 +110,6 @@
         _channelListApi = [[BNChannelListApi alloc]init];
         _channelListApi.limit = 12;
         _channelListApi.start = 0;
-        
     }
     return _channelListApi;
 }

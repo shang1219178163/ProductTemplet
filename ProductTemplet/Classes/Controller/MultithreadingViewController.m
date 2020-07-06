@@ -12,7 +12,7 @@
 
 @interface MultithreadingViewController ()<UITableViewDataSource,UITableViewDelegate>
 
-
+@property (nonatomic, strong) NSMutableArray *dataList;
 @end
 
 @implementation MultithreadingViewController
@@ -97,8 +97,9 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     NSDictionary * dict = self.dataList[indexPath.row];
-    [self goController:dict[kItem_controller] title:dict[kItem_title]];
-    
+    [self pushVC:dict[kItem_controller] title:dict[kItem_title] animated:true block:^(__kindof UIViewController * _Nonnull vc) {
+        
+    }];
 }
 
 //-(NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section{
@@ -136,6 +137,14 @@
 }
 
 
-#pragma mark - -layz
+
+#pragma mark -lazy
+- (NSMutableArray *)dataList{
+    if (!_dataList) {
+        _dataList = [NSMutableArray array];
+    }
+    return _dataList;
+}
+
 
 @end

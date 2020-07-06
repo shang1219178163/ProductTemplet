@@ -34,8 +34,9 @@
     if (!_phoneCodeView) {
         _phoneCodeView = [[BNPhoneCodeView alloc]initWithFrame:self.view.bounds];
         [_phoneCodeView.btn addActionHandler:^(UIControl * _Nonnull control) {
-            [self goController:@"ResetPwdController" title:@"重置密码"];
-            
+            [self pushVC:@"ResetPwdController" title:@"重置密码" animated:true block:^(__kindof UIViewController * _Nonnull vc) {
+                
+            }];
         } forControlEvents:UIControlEventTouchUpInside];
     }
     return _phoneCodeView;

@@ -89,11 +89,13 @@
 
 - (void)handleActionBtn:(UIBarButtonItem *)sender{
     if ([sender.title isEqualToString:@"Excel"]) {
-        [self goController:@"BNExcelController" title:@""];
-
+        [self pushVC:@"BNExcelController" title:@"" animated:true block:^(__kindof UIViewController * _Nonnull vc) {
+            
+        }];
     }else{
-        [self goController:@"NNShareViewController" title:@""];
-        
+        [self pushVC:@"NNShareViewController" title:@"" animated:true block:^(__kindof UIViewController * _Nonnull vc) {
+            
+        }];
     }
     
 }

@@ -11,6 +11,7 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface CountDownListController : UIViewController
+@property (nonatomic, assign) BOOL isPlusTime;
 
 @end
 

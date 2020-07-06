@@ -7,10 +7,15 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "PKChannelListRootModel.h"
+#import "PKDeviceListRootModel.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
 @interface DeviceListController : UIViewController
+
+@property (nonatomic, strong) PKDeviceInfoModel * deviceModel ;
+@property (nonatomic, strong) PKChannelInfoModel * channelModel ;
 
 @end
 

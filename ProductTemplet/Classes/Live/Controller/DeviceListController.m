@@ -16,7 +16,7 @@
 #import "BNUserInfoApi.h"
 #import "BNDeviceListApi.h"
 #import "BNUserLogoutApi.h"
-
+#import "ChannleListController.h"
 
 @interface DeviceListController ()
 
@@ -115,7 +115,10 @@
     if (!_plainView) {
         _plainView = [[NNTablePlainView alloc]init];
         _plainView.tableView.rowHeight = 70;
+        
+        @weakify(self);
         _plainView.blockCellForRow = ^UITableViewCell *(UITableView *tableView, NSIndexPath *indexPath) {
+            @strongify(self);
             static NSString * identifier = @"cell";
             UITableViewCell * cell = [UITableViewCell cellWithTableView:tableView identifier:identifier style:UITableViewCellStyleSubtitle];
             
@@ -128,9 +131,11 @@
         };
         
         _plainView.blockDidSelectRow = ^(UITableView *tableView, NSIndexPath *indexPath) {
+            @strongify(self);
             PKDeviceInfoModel * model = self.plainView.list[indexPath.row];
-            [self goController:@"ChannleListController" title:@"通道列表" obj:model];
-
+            ChannleListController *controller = [[ChannleListController alloc]init];
+            controller.deviceModel = model;
+            [self.navigationController pushViewController:controller animated:true];
         };
     }
     return _plainView;

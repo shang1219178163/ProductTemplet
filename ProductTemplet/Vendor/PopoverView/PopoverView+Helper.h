@@ -60,10 +60,7 @@
  
  [PopoverView showView:item list:self.popoverlist handler:^(PopoverAction * _Nonnull action, PopoverItemModel * _Nonnull model) {
      DDLog(@"%@", action.title);
-     if (model.controllerName && ![model.controllerName isEqualToString:@""]) {
-        [self goController:model.controllerName title:model.title obj:self.obj];
- 
-     }
+
  }];
  
  */

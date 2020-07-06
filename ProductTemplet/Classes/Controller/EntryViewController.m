@@ -16,6 +16,7 @@
 @property(nonatomic, strong) NSDictionary * dic;
 @property(nonatomic, strong) NNSuspendBtn * suspendBtn;
 @property(nonatomic, strong) NNPickerView * pickerView;
+@property (nonatomic, strong) NSMutableArray *dataList;
 
 @end
 
@@ -72,7 +73,7 @@
     
 
     [self createBarItemTitle:@"Next" imgName:nil isLeft:false isHidden:false handler:^(id obj, UIButton *item, NSInteger idx) {
-        [self goController:@"CustomViewController" title:nil];
+        [self pushVC:@"CustomViewController" title:@"Custom" animated:true block:nil];
     }];
 
 }
@@ -120,11 +121,11 @@
         {
             UITableViewSegmentCell * cell = [UITableViewSegmentCell cellWithTableView:tableView];
             cell.labelLeft.text = value0;
-            cell.segmentCtl.itemList = @[@"one",@"two",@"three",@"four"];
-            DDLog(@"_%p,%@,%ld",cell.segmentCtl,cell.segmentCtl.itemList,cell.segmentCtl.numberOfSegments);
+            cell.segmentCtl.items = @[@"one",@"two",@"three",@"four"];
+            DDLog(@"_%p,%@,%ld",cell.segmentCtl, cell.segmentCtl.items, cell.segmentCtl.numberOfSegments);
             [cell.segmentCtl addActionHandler:^(UIControl * _Nonnull control) {
                 UISegmentedControl *view = control;
-                DDLog(@"_____%ld,%@",view.selectedSegmentIndex,view.itemList);
+                DDLog(@"_____%ld,%@", view.selectedSegmentIndex, view.items);
             } forControlEvents:UIControlEventValueChanged];
             [cell getViewLayer];
             return cell;
@@ -300,6 +301,7 @@
     // Dispose of any resources that can be recreated.
 }
 
+#pragma mark -lazy
 -(NNPickerView *)pickerView{
     if (!_pickerView) {
         _pickerView = [[NNPickerView alloc]initWithFrame:CGRectZero];
@@ -309,6 +311,13 @@
         };
     }
     return _pickerView;
+}
+
+- (NSMutableArray *)dataList{
+    if (!_dataList) {
+        _dataList = [NSMutableArray array];
+    }
+    return _dataList;
 }
 
 

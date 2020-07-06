@@ -16,6 +16,7 @@
 @interface TestViewController ()
 
 @property (nonatomic, strong) UIScrollView *scrollView;
+@property (nonatomic, strong) NSMutableArray *dataList;
 
 @end
 
@@ -41,8 +42,9 @@
 }
 
 - (void)handleActionBtn:(UIBarButtonItem *)sender{
-    [self goController:@"TimerViewController" title:@"Timer"];
-
+    [self pushVC:@"TimerViewController" title:@"Timer" animated:true block:^(__kindof UIViewController * _Nonnull vc) {
+        
+    }];
 }
 
 - (void)viewWillAppear:(BOOL)animated{
@@ -57,6 +59,7 @@
     
     DDLog(@"uniqueIdentifier_%@", uniqueIdentifier);
     
+    DDLog(@"nextResponder_%@", [self.view nextResponder:@"UIViewController"]);
 }
 
 - (void)viewDidAppear:(BOOL)animated {
@@ -186,6 +189,18 @@
     return @[actionDelete];
 }
 
+- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
+    UIResponder *next = self.nextResponder;
+    NSMutableString *prefix = @"--".mutableCopy;
+    NSLog(@"%@", [self class]);
+    
+    while (next != nil) {
+        NSLog(@"%@%@", prefix, next.class);
+        [prefix appendString: @"--"];
+        next = [next nextResponder];
+    }
+}
+
 
 #pragma mark - others funtion
 
@@ -277,35 +292,47 @@
 }
 
 - (void)funtionMoreDic{
-    NSDictionary *dic = @{
-                          @"1": @"111",
-                          @"2": @"222",
-                          @"3": @"222",
-                          @"4": @"444",
-                          };
+    NSDictionary<NSString *, NSString *> *dic = @{
+        @"1": @"111",
+        @"2": @"222",
+        @"3": @"222",
+        @"4": @"444",
+    };
     
-    NSDictionary *dic1 = [dic map:^NSObject * _Nonnull(NSObject<NSCopying> * _Nonnull key, NSObject * _Nonnull obj) {
-        return [NSString stringWithFormat:@"%@_%@", key, obj];
+    NSDictionary *dic1 = [dic map:^NSDictionary * _Nonnull(NSString * _Nonnull key, NSString * _Nonnull obj) {
+        return @{[key stringByAppendingFormat:@"%@", @"_"] : [obj stringByAppendingFormat:@"%@", @"_"],
+        };
     }];
     DDLog(@"dic1_%@",dic1);
-//    2019-08-26 18:54:36.503000+0800【line -303】-[TestViewController funtionMoreDic] dic1_{
-//        3 = 3_222;
-//        1 = 1_111;
-//        4 = 4_444;
-//        2 = 2_222;
+//    2020-07-03 06:20:05.248000+0000【line -305】-[TestViewController funtionMoreDic] dic1_{
+//        2_ = 222_;
+//        4_ = 444_;
+//        1_ = 111_;
+//        3_ = 222_;
 //    }
-    
-    NSDictionary *dic2 = [dic filter:^BOOL(NSObject<NSCopying> * _Nonnull key, NSObject * _Nonnull obj) {
-        return [(NSString *)key isEqualToString:@"2"];
+
+    NSDictionary *dic2 = [dic compactMapValues:^id _Nonnull(NSString * _Nonnull obj) {
+        return [NSString stringWithFormat:@"%@_", obj];
     }];
+
     DDLog(@"dic2_%@",dic2);
+//    2019-08-26 18:54:36.503000+0800【line -303】-[TestViewController funtionMoreDic] dic1_{
+//        3 = 222_;
+//        1 = 111_;
+//        4 = 444_;
+//        2 = 222_;
+//    }
+    NSDictionary *dic3 = [dic filter:^BOOL(NSString * _Nonnull key, NSString * _Nonnull obj) {
+        return [key isEqualToString:@"2"];
+    }];
+    DDLog(@"dic3_%@",dic3);
 //    2019-08-26 18:54:36.504000+0800【line -304】-[TestViewController funtionMoreDic] dic2_{
 //        2 = 222;
 //    }
-    NSDictionary *dic3 = [dic filter:^BOOL(NSObject<NSCopying> * _Nonnull key, NSObject * _Nonnull obj) {
-        return [(NSString *)obj isEqualToString:@"222"];
+    NSDictionary *dic4 = [dic filter:^BOOL(NSString * _Nonnull key, NSString * _Nonnull obj) {
+        return [obj isEqualToString:@"222"];
     }];
-    DDLog(@"dic3_%@",dic3);
+    DDLog(@"dic4_%@",dic4);
 //    2019-08-26 18:54:36.504000+0800【line -305】-[TestViewController funtionMoreDic] dic3_{
 //        3 = 222;
 //        2 = 222;
@@ -343,6 +370,14 @@
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+#pragma mark -lazy
+- (NSMutableArray *)dataList{
+    if (!_dataList) {
+        _dataList = [NSMutableArray array];
+    }
+    return _dataList;
 }
 
 

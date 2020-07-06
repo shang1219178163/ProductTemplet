@@ -212,15 +212,15 @@
     
 }
 - (void)watchCars{
-    [self goController:@"CarViewController" title:@"carList"];
-
+    [self pushVC:@"CarViewController" title:@"carList" animated:true block:^(__kindof UIViewController * _Nonnull vc) {
+        
+    }];
 }
 
 #pragma mark - Getter
 - (NSMutableArray *)dataArray{
     if (!_dataArray) {
         _dataArray = [[NSMutableArray alloc] init];
-        
     }
     return _dataArray;
     

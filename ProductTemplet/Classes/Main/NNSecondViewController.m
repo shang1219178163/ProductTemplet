@@ -27,7 +27,6 @@
 //        [UIApplication.sharedApplication.keyWindow.layer addAnimation:anim forKey:nil];
         [self.navigationController.view.layer addAnimation:anim forKey:nil];
         [self.navigationController pushViewController:controller animated:false];
-//        [self goController:@"CycleLabelViewController" title:@"滚动lab"];
 
     }];
     

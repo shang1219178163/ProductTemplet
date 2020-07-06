@@ -95,14 +95,14 @@ NSString *const kHTTP_URLMiddle = @"i=42&c=entry&do=fengmian&m=android&source=io
     //和后台保持一致必须减一
     NSInteger day = components.weekday - 1;
     if (day == 2 || day == 4 || day == 6) {
-        md5String = [md5String stringByReplacingCharacterIndex:2 withString:@"*"];
-        md5String = [md5String stringByReplacingCharacterIndex:4 withString:@"*"];
-        md5String = [md5String stringByReplacingCharacterIndex:16 withString:@"*"];
+        md5String = [md5String stringByReplacingCharacterIdx:2 withString:@"*"];
+        md5String = [md5String stringByReplacingCharacterIdx:4 withString:@"*"];
+        md5String = [md5String stringByReplacingCharacterIdx:16 withString:@"*"];
         
     } else {
-        md5String = [md5String stringByReplacingCharacterIndex:3 withString:@"*"];
-        md5String = [md5String stringByReplacingCharacterIndex:6 withString:@"*"];
-        md5String = [md5String stringByReplacingCharacterIndex:18 withString:@"*"];
+        md5String = [md5String stringByReplacingCharacterIdx:3 withString:@"*"];
+        md5String = [md5String stringByReplacingCharacterIdx:6 withString:@"*"];
+        md5String = [md5String stringByReplacingCharacterIdx:18 withString:@"*"];
         
     }
 //    DDLog(@"md5String__替换\n%@",md5String);

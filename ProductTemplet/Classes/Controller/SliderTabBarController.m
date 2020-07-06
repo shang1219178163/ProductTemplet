@@ -16,8 +16,9 @@
 
 @interface SliderTabBarController ()<UITableViewDelegate,UITableViewDataSource>
 
-@property (nonatomic, strong) NSArray * itemList;
-@property (nonatomic, strong) NNTabBarViewZero * tabBarView;
+@property (nonatomic, strong) NSArray *itemList;
+@property (nonatomic, strong) NNTabBarViewZero *tabBarView;
+@property (nonatomic, strong) NSMutableArray *dataList;
 
 @end
 
@@ -139,5 +140,15 @@
     }
     
 }
+
+#pragma mark -lazy
+- (NSMutableArray *)dataList{
+    if (!_dataList) {
+        _dataList = [NSMutableArray array];
+    }
+    return _dataList;
+}
+
+
 
 @end

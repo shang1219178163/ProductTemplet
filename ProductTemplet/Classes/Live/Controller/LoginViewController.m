@@ -61,8 +61,9 @@
         [NSUserDefaults synchronize];
         
         [SVProgressHUD dismiss];
-        [self goController:@"DeviceListController" title:@"设备列表" obj:nil];
-        
+        [self pushVC:@"DeviceListController" title:@"设备列表" animated:true block:^(__kindof UIViewController * _Nonnull vc) {
+            
+        }];
     } failedBlock:^(NNRequstManager * _Nonnull manager, id _Nullable responseObject, NSError * _Nullable error) {
         [SVProgressHUD showErrorWithStatus:error.description];
 
@@ -84,8 +85,9 @@
     if (!_userLoginView) {
         _userLoginView = [[BNUserLoginView alloc]initWithFrame:self.view.bounds];
         [_userLoginView.btnPwd addActionHandler:^(UIControl * _Nonnull control) {
-            [self goController:@"ChangePwdController" title:@"修改密码" obj:nil];
-
+            [self pushVC:@"ChangePwdController" title:@"修改密码" animated:true block:^(__kindof UIViewController * _Nonnull vc) {
+                
+            }];
             
         } forControlEvents:UIControlEventTouchUpInside];
         _userLoginView.block = ^(BNUserLoginView * _Nonnull view) {

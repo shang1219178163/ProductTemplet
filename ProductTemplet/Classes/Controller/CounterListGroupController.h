@@ -10,6 +10,7 @@
 
 @interface CounterListGroupController : UIViewController
 
-@property BOOL isPlusTime;
+@property (nonatomic, assign) BOOL isPlusTime;
+
 
 @end

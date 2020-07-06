@@ -113,8 +113,7 @@
         {
             [btn setBackgroundImage:UIImageColor(UIColor.redColor) forState:UIControlStateNormal];
             [btn setTitleColor:UIColor.whiteColor forState:UIControlStateNormal];
-            
-            [btn showLayerColor:UIColor.redColor];
+            btn.layer.cornerRadius = 3;
         }
             break;
         case 7://灰色背景黑色字体无边框

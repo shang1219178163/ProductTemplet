@@ -11,7 +11,7 @@
 #import "FactoryDetailInfoModel.h"
 
 @interface BNFactoryListViewController ()
-
+@property (nonatomic, strong) NSMutableArray *dataList;
 @end
 
 @implementation BNFactoryListViewController
@@ -104,7 +104,6 @@
 }
 
 //-(UIView *)tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section{
-//
 //    return [UIView new];
 //}
 
@@ -113,5 +112,12 @@
     // Dispose of any resources that can be recreated.
 }
 
+#pragma mark -lazy
+- (NSMutableArray *)dataList{
+    if (!_dataList) {
+        _dataList = [NSMutableArray array];
+    }
+    return _dataList;
+}
 
 @end

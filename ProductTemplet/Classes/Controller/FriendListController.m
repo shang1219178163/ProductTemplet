@@ -11,6 +11,7 @@
 #import "NNSimpleDataModel.h"
 
 @interface FriendListController ()
+@property (nonatomic, strong) NSMutableArray *dataList;
 
 @end
 
@@ -97,8 +98,9 @@
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     
     NSString * msg = NSStringFromIndexPath(indexPath);
-    [self goController:@"BNTempViewController" title:@"tmp"];
-    
+    [self pushVC:@"BNTempViewController" title:@"tmp" animated:true block:^(__kindof UIViewController * _Nonnull vc) {
+        
+    }];
 }
 
 -(CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section{
@@ -146,8 +148,14 @@
     // Dispose of any resources that can be recreated.
 }
 
-#pragma mark - - alertView
+#pragma mark -lazy
 
+- (NSMutableArray *)dataList{
+    if (!_dataList) {
+        _dataList = [NSMutableArray array];
+    }
+    return _dataList;
+}
 
 
 @end

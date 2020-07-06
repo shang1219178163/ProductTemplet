@@ -16,10 +16,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface NSDictionary<KeyType, ObjectType>(Tmp)
 
-- (NSDictionary<NSObject<NSCopying> *, NSObject *> *)map:(NSObject *(^)(NSObject<NSCopying> *key, NSObject *obj))handler;
+//- (NSDictionary<KeyType, ObjectType> *)map:(id (NS_NOESCAPE ^)(KeyType key, ObjectType obj))block;
 
-//- (nullable NSDictionary<KeyType, ObjectType> *)filter:(BOOL(^)(KeyType key, ObjectType obj))handler;
-- (nullable NSDictionary<NSObject<NSCopying> *, NSObject *> *)filter:(BOOL(^)(NSObject<NSCopying> *key, NSObject *obj))handler;
+- (NSDictionary<KeyType, ObjectType> *)filter:(BOOL(NS_NOESCAPE ^)(KeyType key, ObjectType obj))block;
 
 //- (NSDictionary *)invert;
 

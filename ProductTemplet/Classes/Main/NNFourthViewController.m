@@ -193,9 +193,6 @@
 -(void)viewDidAppear:(BOOL)animated{
     [super viewDidAppear:animated];
     
-//    [self goController:@"CustomViewController" title:@"Custom"];
-//    [self goController:@"EntryViewController" title:@"录入界面封装"];
-    
 }
 
 - (void)didReceiveMemoryWarning {
@@ -265,7 +262,7 @@
 -(NNSegmentView *)segmentView{
     if (!_segmentView) {
         _segmentView = [[NNSegmentView alloc]initWithFrame: CGRectZero];
-        _segmentView.segmentCtl.itemList = @[@"one",@"two",@"three",@"four"];
+        _segmentView.segmentCtl.items = @[@"one",@"two",@"three",@"four"];
         _segmentView.indicatorHeight = 1;
         _segmentView.type = 2;
         

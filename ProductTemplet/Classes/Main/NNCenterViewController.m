@@ -13,8 +13,9 @@
 
 @property (nonatomic, strong) UISearchBar *searchBar;
 
-@property (nonatomic, strong) NSArray * filterList;
-@property (nonatomic, strong) NNTablePlainView * plainView;
+@property (nonatomic, strong) NSArray *filterList;
+@property (nonatomic, strong) NNTablePlainView *plainView;
+@property (nonatomic, strong) NSMutableArray *dataList;
 
 @end
 
@@ -39,7 +40,7 @@
 //    [self.view addSubview:self.tableView];
     [self.view addSubview:self.plainView];
     
-    self.dataList = @[
+    self.dataList = @[@[@"EntryViewController", @"录入类界面封装",],
                       @[@"NNTagViewController", @"TagView",],
                       @[@"SystemAboutController", @"系统相关",],
                       @[@"NNSearchController", @"复合搜索🔍",],
@@ -53,7 +54,6 @@
                       @[@"MultithreadingViewController", @"Multithreading",],
                       @[@"BlockViewController", @"block循环引用完美解决方案",],
                       @[@"ShowListController", @"通用列表类展示封装", ],
-                      @[@"EntryViewController", @"录入类界面封装",],
                       @[@"CustomViewController", @"View自定义",],
                       @[@"NNTabBarController", @"嵌套TabBar,实现类UITabBarController功能",],
                       @[@"SubTabBarController", @"NNTabBarController子类化",],
@@ -85,6 +85,7 @@
 -(void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
 
+ 
 }
 
 - (void)didReceiveMemoryWarning {
@@ -197,7 +198,6 @@
         _plainView.blockDidSelectRow = ^(UITableView *tableView, NSIndexPath *indexPath) {
             @strongify(self);
             NSArray * list = self.dataList[indexPath.row];
-            //    [self goController:list.lastObject title:list.firstObject];
             UITableViewCell * cell = [tableView cellForRowAtIndexPath:indexPath];
             [self pushController:list[0] title:list[1] item:cell type:@0];
         };
@@ -205,6 +205,12 @@
     return _plainView;
 }
 
+- (NSMutableArray *)dataList{
+    if (!_dataList) {
+        _dataList = [NSMutableArray array];
+    }
+    return _dataList;
+}
 
 -(NSArray *)filterList{
     if (!_filterList) {

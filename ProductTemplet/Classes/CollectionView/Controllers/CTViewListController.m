@@ -17,6 +17,7 @@
 @interface CTViewListController ()<UICollectionViewDataSource,UICollectionViewDelegate,UICollectionViewDelegateFlowLayout>
 
 @property (nonatomic, strong) NSDictionary *dictClass;
+@property (nonatomic, strong) NSMutableArray *dataList;
 
 @end
 
@@ -120,11 +121,14 @@
     
     DDLog(@"%@",@(sender.tag));
     if (sender.tag == 0) {
-        [self goController:@"FileParseController" title:@"文件解析"];
+        [self pushVC:@"FileParseController" title:@"文件解析" animated:true block:^(__kindof UIViewController * _Nonnull vc) {
+            
+        }];
         return;
     }
-    [self goController:@"BNExcelController" title:@"BNExcelController"];
-
+    [self pushVC:@"BNExcelController" title:@"BNExcelController" animated:true block:^(__kindof UIViewController * _Nonnull vc) {
+        
+    }];
 }
 
 - (NSString *)itemAtSection:(NSIndexPath *)indexPath{
@@ -192,7 +196,9 @@
     
     DDLog(@"%@",NSStringFromIndexPath(indexPath));
     NSString * controlleName = [self itemAtSection:indexPath];
-    [self goController:controlleName title:controlleName];
+    [self pushVC:controlleName title:controlleName animated:true block:^(__kindof UIViewController * _Nonnull vc) {
+        
+    }];
 }
 
 //header的size
@@ -224,5 +230,14 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
+#pragma mark -lazy
+- (NSMutableArray *)dataList{
+    if (!_dataList) {
+        _dataList = [NSMutableArray array];
+    }
+    return _dataList;
+}
+
 
 @end

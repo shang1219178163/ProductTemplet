@@ -31,7 +31,6 @@
 -(void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
     
-    self.countDown.isPlusTime = self.isPlusTime = [self.obj boolValue];
     self.countDown.dataList = self.dataListGroup = [self dataListWithIsPlus:self.countDown.isPlusTime];
     
 }

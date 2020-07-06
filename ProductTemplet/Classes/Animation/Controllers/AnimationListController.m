@@ -11,6 +11,7 @@
 #import "AnimationListController.h"
 
 @interface AnimationListController ()<UITableViewDelegate,UITableViewDataSource>
+@property (nonatomic, strong) NSMutableArray *dataList;
 
 @end
 
@@ -63,7 +64,6 @@
     [super viewDidLayoutSubviews];
     
     self.tbView.frame = self.view.bounds;
-//    [self goController:@"AnimationController18" title:@"18"];
 
 }
 
@@ -95,7 +95,6 @@
     cell.detailTextLabel.textColor = UIColor.grayColor;
 
     return cell;
-    
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
@@ -107,6 +106,12 @@
     }
 }
 
-
+#pragma mark -lazy
+- (NSMutableArray *)dataList{
+    if (!_dataList) {
+        _dataList = [NSMutableArray array];
+    }
+    return _dataList;
+}
 
 @end

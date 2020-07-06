@@ -9,5 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @interface CounterListController : UIViewController
-@property BOOL isPlusTime;
+
+@property (nonatomic, assign) BOOL isPlusTime;
+
 @end
