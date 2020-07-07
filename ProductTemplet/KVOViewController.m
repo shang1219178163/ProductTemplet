@@ -23,26 +23,28 @@
 
 @implementation KVOViewController
 
-- (void)dealloc{
-    NSLog(@"%@", NSStringFromSelector(_cmd));
-}
+//- (void)dealloc{
+//    NSLog(@"%@", NSStringFromSelector(_cmd));
+//    [self.person removeObserverBlocks];
+//    [self removeObserverBlocks];
+//}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-    self.person = [[Person alloc] init];
-    self.person.name = @"zhangsan";
+//    self.person = [[Person alloc] init];
+//    self.person.name = @"zhangsan";
 
-    [self.person addObserverBlockForKeyPath:@"name" block:^(id  _Nonnull obj, id  _Nonnull oldVal, id  _Nonnull newVal) {
-        DDLog(@"%@_%@_%@", obj, oldVal, newVal);
-    }];
-    [self addObserverBlockForKeyPath:@"string" block:^(id  _Nonnull obj, id  _Nonnull oldVal, id  _Nonnull newVal) {
-        DDLog(@"%@_%@_%@", obj, oldVal, newVal);
-    }];
+//    [self.person addObserverBlockForKeyPath:@"name" block:^(id  _Nonnull obj, id  _Nonnull oldVal, id  _Nonnull newVal) {
+//        DDLog(@"%@_%@_%@", obj, oldVal, newVal);
+//    }];
+//    [self addObserverBlockForKeyPath:@"string" block:^(id  _Nonnull obj, id  _Nonnull oldVal, id  _Nonnull newVal) {
+//        DDLog(@"%@_%@_%@", obj, oldVal, newVal);
+//    }];
     
-    self.person.name = @"lisi";
-    self.string = @"788";
+//    self.person.name = @"lisi";
+//    self.string = @"788";
 
 }
 

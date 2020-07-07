@@ -14,10 +14,6 @@
 #import "FileShareController.h"
 #import "ProductTemplet-Swift.h"
 
-#ifdef DEBUG
-#import <EchoSDK/ECOClient.h>
-#endif
-
 @interface AppDelegate ()
 /// 后台定时定位
 @property(nonatomic, strong) NSTimer *locationTimer;
@@ -30,9 +26,6 @@
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    #ifdef DEBUG
-        [[ECOClient sharedClient] start];
-    #endif
     // Override point for customization after application launch.
     [self setupThridSDKWithOptions:launchOptions];
     UIColor.themeColor = UIColor.orangeColor;

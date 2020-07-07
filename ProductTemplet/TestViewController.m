@@ -270,22 +270,20 @@
     DDLog(@"list3_%@", list3);
     
     array = @[@1, @3, @5, @7, @9];
-    NSNumber * result = [array reduce:@(0) block:^NSNumber * _Nonnull(NSNumber * _Nonnull result, NSNumber * _Nonnull obj) {
+    NSNumber *result = [array reduce:@(0) block:^NSNumber * _Nonnull(NSNumber * _Nonnull result, NSNumber * _Nonnull obj) {
         return @(result.floatValue * 10 + obj.floatValue);
     }];
-    
     DDLog(@"result_%@", result);
     
-    NSNumber * result1 = [array reduce:@(0) block:^NSNumber * _Nonnull(NSNumber * _Nonnull result, NSNumber * _Nonnull obj) {
+    NSNumber *result1 = [array reduce:@(0) block:^NSNumber * _Nonnull(NSNumber * _Nonnull result, NSNumber * _Nonnull obj) {
         return @(result.floatValue + obj.floatValue);
     }];
     DDLog(@"result1_%@", result1);
-    
-    
-    NSArray * array10 = [NSArray range:0 end:10 step:1];
-    NSArray * array11 = [NSArray range:1 end:11 step:1];
-    NSArray * array12 = [NSArray range:0 end:30 step:5];
-    NSArray * array13 = [NSArray range:-10 end:0 step:1];
+        
+    NSArray *array10 = [NSArray range:0 end:10 step:1];
+    NSArray *array11 = [NSArray range:1 end:11 step:1];
+    NSArray *array12 = [NSArray range:0 end:30 step:5];
+    NSArray *array13 = [NSArray range:-10 end:0 step:1];
     DDLog(@"%@", [array10 componentsJoinedByString:@","]);
     DDLog(@"%@", [array11 componentsJoinedByString:@","]);
     DDLog(@"%@", [array12 componentsJoinedByString:@","]);

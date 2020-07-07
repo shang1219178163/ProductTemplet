@@ -17,6 +17,7 @@
 #import "NSString+Other.h"
 
 static NSString *const kACSEncrypt = @"mbqh1Gtpj9L8pJuv";
+static NSString *const kPlistName_common = @"HuiZhuBang_common.plist";
 
 @interface Utilities ()
 

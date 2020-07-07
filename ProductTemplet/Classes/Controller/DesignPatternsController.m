@@ -33,43 +33,43 @@
 
     self.dataList = @[
                       @{
-                          kItem_title:   @"抽象工厂模式",
-                          kItem_controller:   @"AbstractFactoryController",
+                          kItemTitle:   @"抽象工厂模式",
+                          kItemController:   @"AbstractFactoryController",
                           
                           },
                       @{
-                          kItem_title:   @"Strategy/策略",
-                          kItem_controller:   @"StrategyViewController",
+                          kItemTitle:   @"Strategy/策略",
+                          kItemController:   @"StrategyViewController",
                           
                           },
                       @{
-                          kItem_title:   @"Adapter/适配器",
-                          kItem_controller:   @"AdapterViewController",
+                          kItemTitle:   @"Adapter/适配器",
+                          kItemController:   @"AdapterViewController",
                           
                           },
                       @{
-                          kItem_title:   @"Facade/外观",
-                          kItem_controller:   @"FacadeViewController",
+                          kItemTitle:   @"Facade/外观",
+                          kItemController:   @"FacadeViewController",
                           
                           },
                       @{
-                          kItem_title:   @"Mediator/中介者",
-                          kItem_controller:   @"MediatorViewController",
+                          kItemTitle:   @"Mediator/中介者",
+                          kItemController:   @"MediatorViewController",
                           
                           },
                       @{
-                          kItem_title:   @"Composite/组合",
-                          kItem_controller:   @"CompositeViewController",
+                          kItemTitle:   @"Composite/组合",
+                          kItemController:   @"CompositeViewController",
                           
                           },
                       @{
-                          kItem_title:   @"Flyweight/享元",
-                          kItem_controller:   @"FlyweightViewController",
+                          kItemTitle:   @"Flyweight/享元",
+                          kItemController:   @"FlyweightViewController",
                           
                           },
                       @{
-                          kItem_title:   @"item3",
-                          kItem_controller:   @"",
+                          kItemTitle:   @"item3",
+                          kItemController:   @"",
                           
                           },
                       
@@ -101,16 +101,16 @@
     static NSString * identifer = @"identifer";
     UITableViewOneCell * cell = [UITableViewOneCell cellWithTableView:tableView identifier:identifer style:UITableViewCellStyleSubtitle];
 
-    cell.textLabel.text = dict[kItem_title];
+    cell.textLabel.text = dict[kItemTitle];
     cell.textLabel.textColor = UIColor.themeColor;
-    cell.detailTextLabel.text = dict[kItem_controller];
+    cell.detailTextLabel.text = dict[kItemController];
     return cell;
     
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     NSDictionary * dict = self.dataList[indexPath.row];
-    [self pushVC:dict[kItem_controller] title:dict[kItem_title] animated:true block:^(__kindof UIViewController * _Nonnull vc) {
+    [self pushVC:dict[kItemController] title:dict[kItemTitle] animated:true block:^(__kindof UIViewController * _Nonnull vc) {
         
     }];
 }

@@ -68,8 +68,8 @@ inhibit_all_warnings!
    pod 'NNCollectionView'
    pod 'NNViewComplex'
 
-   pod 'LookinServer', :configurations => ['Debug']
-   pod 'EchoSDK', :configurations => ["Debug"]
+#   pod 'LookinServer', :configurations => ['Debug']
+#   pod 'EchoSDK', :configurations => ["Debug"]
 
  end
 

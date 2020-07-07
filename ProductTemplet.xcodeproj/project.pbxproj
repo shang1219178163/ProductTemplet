@@ -228,7 +228,6 @@
 		14F0FE6322B0AB8400057093 /* BNUserLogoutApi.m in Sources */ = {isa = PBXBuildFile; fileRef = 14F0FE6222B0AB8400057093 /* BNUserLogoutApi.m */; };
 		14F0FE6722B0AD9800057093 /* LiveViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 14F0FE6622B0AD9800057093 /* LiveViewController.m */; };
 		14F0FE6B22B0ADDB00057093 /* BNUserLoginApi.m in Sources */ = {isa = PBXBuildFile; fileRef = 14F0FE6922B0ADDB00057093 /* BNUserLoginApi.m */; };
-		14F25F4E23599AB000D05998 /* UIBarButtonItem+Block.m in Sources */ = {isa = PBXBuildFile; fileRef = 14F25F4D23599AB000D05998 /* UIBarButtonItem+Block.m */; };
 		14F25F542359A14800D05998 /* UIView+Tmp.m in Sources */ = {isa = PBXBuildFile; fileRef = 14F25F532359A14800D05998 /* UIView+Tmp.m */; };
 		14F6382B23630AC900D0EBF0 /* NSObject+Tmp.m in Sources */ = {isa = PBXBuildFile; fileRef = 14F6382A23630AC900D0EBF0 /* NSObject+Tmp.m */; };
 		14F9BF3F22E56167001637B6 /* PhotoDisplayController.m in Sources */ = {isa = PBXBuildFile; fileRef = 14F9BF3E22E56167001637B6 /* PhotoDisplayController.m */; };
@@ -920,8 +919,6 @@
 		14F0FE6622B0AD9800057093 /* LiveViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LiveViewController.m; sourceTree = "<group>"; };
 		14F0FE6922B0ADDB00057093 /* BNUserLoginApi.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BNUserLoginApi.m; sourceTree = "<group>"; };
 		14F0FE6A22B0ADDB00057093 /* BNUserLoginApi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BNUserLoginApi.h; sourceTree = "<group>"; };
-		14F25F4C23599AB000D05998 /* UIBarButtonItem+Block.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIBarButtonItem+Block.h"; sourceTree = "<group>"; };
-		14F25F4D23599AB000D05998 /* UIBarButtonItem+Block.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIBarButtonItem+Block.m"; sourceTree = "<group>"; };
 		14F25F522359A14800D05998 /* UIView+Tmp.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+Tmp.h"; sourceTree = "<group>"; };
 		14F25F532359A14800D05998 /* UIView+Tmp.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+Tmp.m"; sourceTree = "<group>"; };
 		14F6382923630AC900D0EBF0 /* NSObject+Tmp.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSObject+Tmp.h"; sourceTree = "<group>"; };
@@ -2230,8 +2227,6 @@
 				1402183B23683A9500B27E4C /* AudioSoundController.m */,
 				142A770E2227B30E0016D3DA /* UITableViewPickerCell.h */,
 				142A770F2227B30E0016D3DA /* UITableViewPickerCell.m */,
-				14F25F4C23599AB000D05998 /* UIBarButtonItem+Block.h */,
-				14F25F4D23599AB000D05998 /* UIBarButtonItem+Block.m */,
 				14ADE27C23CEC65A00037B0B /* NNTagViewController.h */,
 				14ADE27D23CEC65A00037B0B /* NNTagViewController.m */,
 				14ADE27F23CEC66800037B0B /* XGTagView.h */,
@@ -3027,20 +3022,13 @@
 				"${PODS_ROOT}/Target Support Files/Pods-ProductTemplet/Pods-ProductTemplet-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/AFNetworking/AFNetworking.framework",
 				"${BUILT_PRODUCTS_DIR}/Aspects/Aspects.framework",
-				"${BUILT_PRODUCTS_DIR}/BSBacktraceLogger/BSBacktraceLogger.framework",
-				"${BUILT_PRODUCTS_DIR}/CocoaAsyncSocket/CocoaAsyncSocket.framework",
-				"${BUILT_PRODUCTS_DIR}/EchoSDK/EchoSDK.framework",
-				"${BUILT_PRODUCTS_DIR}/FBRetainCycleDetector/FBRetainCycleDetector.framework",
 				"${BUILT_PRODUCTS_DIR}/FCUUID/FCUUID.framework",
 				"${BUILT_PRODUCTS_DIR}/FMDB/FMDB.framework",
 				"${BUILT_PRODUCTS_DIR}/GTMBase64/GTMBase64.framework",
 				"${BUILT_PRODUCTS_DIR}/IQKeyboardManager/IQKeyboardManager.framework",
-				"${BUILT_PRODUCTS_DIR}/JZLocationConverter/JZLocationConverter.framework",
-				"${PODS_ROOT}/LookinServer/LookinServer.framework",
 				"${BUILT_PRODUCTS_DIR}/MBProgressHUD/MBProgressHUD.framework",
 				"${BUILT_PRODUCTS_DIR}/MJExtension/MJExtension.framework",
 				"${BUILT_PRODUCTS_DIR}/MJRefresh/MJRefresh.framework",
-				"${BUILT_PRODUCTS_DIR}/MLeaksFinder/MLeaksFinder.framework",
 				"${BUILT_PRODUCTS_DIR}/Masonry/Masonry.framework",
 				"${BUILT_PRODUCTS_DIR}/NNCategoryPro/NNCategoryPro.framework",
 				"${BUILT_PRODUCTS_DIR}/NNCollectionView/NNCollectionView.framework",
@@ -3049,7 +3037,6 @@
 				"${BUILT_PRODUCTS_DIR}/NNView/NNView.framework",
 				"${BUILT_PRODUCTS_DIR}/NNViewComplex/NNViewComplex.framework",
 				"${BUILT_PRODUCTS_DIR}/PPNumberButton/PPNumberButton.framework",
-				"${BUILT_PRODUCTS_DIR}/RSSwizzle/RSSwizzle.framework",
 				"${BUILT_PRODUCTS_DIR}/SDCycleScrollView/SDCycleScrollView.framework",
 				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
 				"${BUILT_PRODUCTS_DIR}/SVProgressHUD/SVProgressHUD.framework",
@@ -3063,26 +3050,18 @@
 				"${BUILT_PRODUCTS_DIR}/YYImage/YYImage.framework",
 				"${BUILT_PRODUCTS_DIR}/YYModel/YYModel.framework",
 				"${BUILT_PRODUCTS_DIR}/YYWebImage/YYWebImage.framework",
-				"${BUILT_PRODUCTS_DIR}/fishhook/fishhook.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AFNetworking.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Aspects.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/BSBacktraceLogger.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CocoaAsyncSocket.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/EchoSDK.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBRetainCycleDetector.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FCUUID.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FMDB.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMBase64.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IQKeyboardManager.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/JZLocationConverter.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/LookinServer.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MBProgressHUD.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MJExtension.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MJRefresh.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MLeaksFinder.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Masonry.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/NNCategoryPro.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/NNCollectionView.framework",
@@ -3091,7 +3070,6 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/NNView.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/NNViewComplex.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PPNumberButton.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RSSwizzle.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDCycleScrollView.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SVProgressHUD.framework",
@@ -3105,7 +3083,6 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/YYImage.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/YYModel.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/YYWebImage.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/fishhook.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -3308,7 +3285,6 @@
 				149111D42272FFCC0078A7BB /* NNPageModel.m in Sources */,
 				14B6B34D22B2233B0047E094 /* PKChannelListRootModel.m in Sources */,
 				5162F70A20BFB7CB009A6253 /* GCDViewController.m in Sources */,
-				14F25F4E23599AB000D05998 /* UIBarButtonItem+Block.m in Sources */,
 				51036F5020A17B3B009D8B7B /* WeiboLisController.m in Sources */,
 				14E42D1B2200042800606AD0 /* BNNum.m in Sources */,
 				515CC97B20B6AAF2004AE27C /* AAColumn.m in Sources */,

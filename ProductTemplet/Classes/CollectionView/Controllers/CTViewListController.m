@@ -48,25 +48,25 @@
     
     self.dataList = @[
                       @{
-                          kItem_header:   @"header不同布局",
-                          kItem_footer:   @"footer不同布局",
-                          kItem_obj:   @[
+                          kItemHeader:   @"header不同布局",
+                          kItemFooter:   @"footer不同布局",
+                          kItemObj:   @[
                                   @"CircleViewController",@"SphereViewController",@"PickerViewController",
                                   @"RightViewController",@"CardViewController",@"CardLineViewController"
                                   ],
                           },
                       @{
-                          kItem_header:   @"header功能测试",
-                          kItem_footer:   @"footer功能测试",
-                          kItem_obj:   @[
+                          kItemHeader:   @"header功能测试",
+                          kItemFooter:   @"footer功能测试",
+                          kItemObj:   @[
                                   @"RightViewController",@"TmpViewController",@"NNShareViewController",
                                   @"MainViewController",
                                   ],
                           },
                       @{
-                          kItem_header:   @"header其他",
-                          kItem_footer:   @"footer其他",
-                          kItem_obj:   @[
+                          kItemHeader:   @"header其他",
+                          kItemFooter:   @"footer其他",
+                          kItemObj:   @[
                                   @"ListViewController",@"GroupViewController",@"",
                                   ],
                           },
@@ -132,7 +132,7 @@
 }
 
 - (NSString *)itemAtSection:(NSIndexPath *)indexPath{
-    NSArray * array = self.dataList[indexPath.section][kItem_obj];
+    NSArray * array = self.dataList[indexPath.section][kItemObj];
     NSString * controlleName = array[indexPath.row];
     return controlleName;
 }
@@ -145,7 +145,7 @@
 
 //每个section的item个数
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section{
-    NSArray * array = self.dataList[section][kItem_obj];
+    NSArray * array = self.dataList[section][kItemObj];
     return array.count;
     
 }

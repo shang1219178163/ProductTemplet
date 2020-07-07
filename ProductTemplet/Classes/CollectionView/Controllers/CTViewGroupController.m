@@ -87,9 +87,9 @@
         {
             
             NSDictionary * dic = @{
-//                                   kItem_header:   @"header_0",
-//                                   kItem_footer:   @"footer_0",
-                                   kItem_obj:   @[
+//                                   kItemHeader:   @"header_0",
+//                                   kItemFooter:   @"footer_0",
+                                   kItemObj:   @[
                                            @"去模型_00",
                                            @"去模型_01",
                                            @"去模型_02",],

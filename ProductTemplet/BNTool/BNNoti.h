@@ -13,7 +13,7 @@
 
 #define kNoti_isRemote   @"kNoti_isRemote"
 
-#define kNotiPostNameLocation_UploadCoordinate @"kNotiPostNameLocation_UploadCoordinate"
+#define kNotiNameLocation_UploadCoordinate @"kNotiNameLocation_UploadCoordinate"
 
 @interface BNNoti : NSObject
 

@@ -32,33 +32,33 @@
     
     self.dataList = @[
                       @{
-                          kItem_title:   @"ThreadNormol",
-                          kItem_controller:   @"ThreadNormolController",
+                          kItemTitle:   @"ThreadNormol",
+                          kItemController:   @"ThreadNormolController",
                           
                           },
                       @{
-                          kItem_title:   @"Thread",
-                          kItem_controller:   @"ThreadViewController",
+                          kItemTitle:   @"Thread",
+                          kItemController:   @"ThreadViewController",
                           
                           },
                       @{
-                          kItem_title:   @"ThreadCommunication",
-                          kItem_controller:   @"ThreadCommunicationController",
+                          kItemTitle:   @"ThreadCommunication",
+                          kItemController:   @"ThreadCommunicationController",
                           
                           },
                       @{
-                          kItem_title:   @"GCD",
-                          kItem_controller:   @"GCDViewController",
+                          kItemTitle:   @"GCD",
+                          kItemController:   @"GCDViewController",
                           
                           },
                       @{
-                          kItem_title:   @"Operation",
-                          kItem_controller:   @"OperationViewController",
+                          kItemTitle:   @"Operation",
+                          kItemController:   @"OperationViewController",
                           
                           },
                       @{
-                          kItem_title:   @"item3",
-                          kItem_controller:   @"",
+                          kItemTitle:   @"item3",
+                          kItemController:   @"",
                           
                           },
                       
@@ -88,7 +88,7 @@
     
     UITableViewOneCell * cell = [UITableViewOneCell cellWithTableView:tableView];
     
-    cell.textLabel.text = dict[kItem_title];
+    cell.textLabel.text = dict[kItemTitle];
     cell.textLabel.textColor = UIColor.themeColor;
     
     return cell;
@@ -97,7 +97,7 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     NSDictionary * dict = self.dataList[indexPath.row];
-    [self pushVC:dict[kItem_controller] title:dict[kItem_title] animated:true block:^(__kindof UIViewController * _Nonnull vc) {
+    [self pushVC:dict[kItemController] title:dict[kItemTitle] animated:true block:^(__kindof UIViewController * _Nonnull vc) {
         
     }];
 }

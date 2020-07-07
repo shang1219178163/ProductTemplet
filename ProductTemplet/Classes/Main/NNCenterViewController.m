@@ -215,48 +215,47 @@
 -(NSArray *)filterList{
     if (!_filterList) {
         _filterList = @[
-                        @{
-                            kItem_header:   @"时间",
-//                            kItem_footer:   @"footer_0",
-                            kItem_obj:   @[          @"天数",
+                        @{kItemHeader:   @"时间",
+//                            kItemFooter:   @"footer_0",
+                            kItemObj:   @[          @"天数",
                                     
                                     ],
-                            kItem_objSeleted:   @[          @(YES),
+                            kItemObjSeleted:   @[          @(YES),
                                     
                                     ].mutableCopy,
                             
                             },
                             @{
-                                kItem_header:   @"栏位",
-//                                kItem_footer:   @"footer_1",
-                                kItem_obj:   @[              @"栏位",
+                                kItemHeader:   @"栏位",
+//                                kItemFooter:   @"footer_1",
+                                kItemObj:   @[              @"栏位",
                                         
                                         ],
-                                kItem_objSeleted:   @[              @(YES),
+                                kItemObjSeleted:   @[              @(YES),
 
                                         ].mutableCopy,
                                 
                                 },
                             @{
-                                kItem_header:   @"性别",
-//                                kItem_footer:   @"footer_2",
-                                kItem_obj:   @[              @"母猪",
+                                kItemHeader:   @"性别",
+//                                kItemFooter:   @"footer_2",
+                                kItemObj:   @[              @"母猪",
                                         
                                         ],
-                                kItem_objSeleted:   @[              @(YES),
+                                kItemObjSeleted:   @[              @(YES),
 
                                         ].mutableCopy,
                                 
                                 },
                             @{
-                                kItem_header:   @"状态",
-//                                kItem_footer:   @"footer_2",
-                                kItem_obj:   @[              @"后备", @"妊娠", @"哺乳",
+                                kItemHeader:   @"状态",
+//                                kItemFooter:   @"footer_2",
+                                kItemObj:   @[              @"后备", @"妊娠", @"哺乳",
                                         @"返情空怀", @"B超鉴定空怀", @"流产空怀",
                                         @"断奶空怀",
                                         
                                         ],
-                                kItem_objSeleted:   @[              @(YES),@(NO),@(NO),
+                                kItemObjSeleted:   @[              @(YES),@(NO),@(NO),
                                         @(NO),@(NO),@(NO),
                                         @(NO),
                                         

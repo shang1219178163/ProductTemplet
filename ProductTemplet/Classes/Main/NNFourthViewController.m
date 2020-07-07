@@ -78,7 +78,8 @@
 //    self.imgView.image = [self.imgView.image imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate];
 
     [self.imgView addGestureTap:^(UIGestureRecognizer *sender) {
-        [sender.view imageToSavedPhotosAlbum:^(NSError *error) {
+        UIImageView *imgView = (UIImageView *)sender;
+        [imgView.image saveImageToPhotosAlbum:^(NSError *error) {
             if (error) {
                 DDLog(@"%@",error.description);
             }

@@ -29,7 +29,10 @@
     // Do any additional setup after loading the view.
 //    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc]initWithTitle:@"Right" style:UIBarButtonItemStyleDone target:nil action:nil];
     self.navigationItem.rightBarButtonItem = [UIBarButtonItem createItem:@"Right" style:UIBarButtonItemStyleDone];
+
+    @weakify(self);
     [self.navigationItem.rightBarButtonItem addActionBlock:^(UIBarButtonItem * _Nonnull item) {
+        @strongify(self);
         KVOViewController *controller = [[KVOViewController alloc]init];
         [self.navigationController pushViewController:controller animated:true];
     }];
@@ -64,11 +67,9 @@
     [self.view getViewLayer];
     
     self.textField.identify = @"one";
-    NSDictionary * dic = @{
-                           @"one":   @{
-                                        @"user1":   @"pwd_1",
-                                        @"user2":   @"pwd_2",
-                                        @"user3":   @"pwd_3",
+    NSDictionary * dic = @{@"one":  @{@"user1":   @"pwd_1",
+                                      @"user2":   @"pwd_2",
+                                      @"user3":   @"pwd_3",
                                    },
                            };
 
@@ -194,9 +195,9 @@
 -(NNTextFieldOne *)textFieldPwdNew{
     if (!_textFieldPwdNew) {
         _textFieldPwdNew = ({
-            NNTextFieldOne * textField = [NNTextFieldOne createTextFieldPwdRect:CGRectMake(20, 140, kScreenWidth - 40, 40)
-                                                                          image:[UIImage imageNamed: @"icon_close"]
-                                                                  imageSelected:[UIImage imageNamed: @"icon_open"]];
+            NNTextFieldOne *textField = [NNTextFieldOne createPwdRect:CGRectMake(20, 140, kScreenWidth - 40, 40)
+                                                                image:[UIImage imageNamed:@"icon_close"]
+                                                        imageSelected:[UIImage imageNamed:@"icon_open"]];
             
 //            NNTextFieldOne * textField = [[NNTextFieldOne alloc]initWithFrame:CGRectMake(20, 140, kScreenWidth - 40, 40)];
 //            textField.placeholder = @"  请输入密码";
@@ -259,9 +260,9 @@
 -(UITextField *)textFieldOne{
     if (!_textFieldOne) {
         _textFieldOne = ({
-            UITextField * textField = [UITextField createTextFieldPwdRect:CGRectMake(20, 200, kScreenWidth - 40, 40)
-                                                                          image:[UIImage imageNamed: @"icon_close"]
-                                                                  imageSelected:[UIImage imageNamed: @"icon_open"]];
+            UITextField * textField = [UITextField createPwdRect:CGRectMake(20, 200, kScreenWidth - 40, 40)
+                                                           image:[UIImage imageNamed: @"icon_close"]
+                                                   imageSelected:[UIImage imageNamed: @"icon_open"]];
             
             textField;
         });
