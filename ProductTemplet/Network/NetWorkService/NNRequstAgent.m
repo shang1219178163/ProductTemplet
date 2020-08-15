@@ -51,7 +51,11 @@
     if (![URL containsString:NNAPIConfi.serviceUrl]) {
         URL = [NNAPIConfi.serviceUrl stringByAppendingString:URL];
     }
-    NSURLSessionTask *sessionTask = [self.sessionManager GET:URL parameters:parameters progress:^(NSProgress * _Nonnull uploadProgress) {
+    
+    NSURLSessionTask *sessionTask = [self.sessionManager GET:URL
+                                                  parameters:parameters
+                                                     headers:nil
+                                                    progress:^(NSProgress * _Nonnull uploadProgress) {
 
     } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         NNURLResponse * model = [self modelWithTask:task responseObject:responseObject error:nil];
@@ -74,7 +78,9 @@
                    success:(NNNetworkBlock)success
                    failure:(NNNetworkBlock)failure{
     __block NSURLSessionDataTask *dataTask = nil;
-    dataTask = [self.sessionManager POST:URL parameters:parameters
+    dataTask = [self.sessionManager POST:URL
+                              parameters:parameters
+                                 headers:nil
                                 progress:^(NSProgress * _Nonnull uploadProgress) {
         //上传进度
 //        dispatch_sync(dispatch_get_main_queue(), ^{
@@ -106,7 +112,10 @@
     if (![URL containsString:NNAPIConfi.serviceUrl]) {
         URL = [NNAPIConfi.serviceUrl stringByAppendingString:URL];
     }
-    NSURLSessionTask *sessionTask = [self.sessionManager POST:URL parameters:parameters constructingBodyWithBlock:^(id<AFMultipartFormData>  _Nonnull formData) {
+    NSURLSessionTask *sessionTask = [self.sessionManager POST:URL
+                                                   parameters:parameters
+                                                      headers:nil
+                                    constructingBodyWithBlock:^(id<AFMultipartFormData>  _Nonnull formData) {
         
         [NNRequstAgent uploadFileFormData:formData parameters:parameters];
 //        [images enumerateObjectsUsingBlock:^(UIImage * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
@@ -169,7 +178,10 @@
         URL = [NNAPIConfi.serviceUrl stringByAppendingString:URL];
     }
     
-    NSURLSessionTask *sessionTask = [self.sessionManager PUT:URL parameters:parameters success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+    NSURLSessionTask *sessionTask = [self.sessionManager PUT:URL
+                                                  parameters:parameters
+                                                     headers:nil
+                                                     success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         NNURLResponse * model = [self modelWithTask:task responseObject:responseObject error:nil];
         success ? success(model) : nil;
         
@@ -192,7 +204,10 @@
         URL = [NNAPIConfi.serviceUrl stringByAppendingString:URL];
     }
     
-    NSURLSessionTask *sessionTask = [self.sessionManager DELETE:URL parameters:parameters success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+    NSURLSessionTask *sessionTask = [self.sessionManager DELETE:URL
+                                                     parameters:parameters
+                                                        headers:nil
+                                                        success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         NNURLResponse * model = [self modelWithTask:task responseObject:responseObject error:nil];
         success ? success(model) : nil;
         

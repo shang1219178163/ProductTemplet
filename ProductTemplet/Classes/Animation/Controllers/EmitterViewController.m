@@ -1,6 +1,6 @@
 //
 //  EmitterViewController.m
-//  BN_Animation
+//  NNAnimation
 //
 //  Created by hsf on 2018/10/16.
 //  Copyright © 2018年 世纪阳天. All rights reserved.

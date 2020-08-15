@@ -28,7 +28,7 @@ static NSString *const kPlistName_common = @"HuiZhuBang_common.plist";
 @implementation Utilities
 
 + (id)readBoundleDataWithKey:(NSString *)key plistFileName:(NSString *)fileName{
-    NSArray * array = [fileName componentsSeparatedByString:@"."];
+    NSArray *array = [fileName componentsSeparatedByString:@"."];
     NSString *path = [NSBundle.mainBundle pathForResource:array[0] ofType:array[1]];// 找到plist文件
     
     NSDictionary *dict = [[NSDictionary alloc] initWithContentsOfFile:path];// 获取文件列表
@@ -39,26 +39,26 @@ static NSString *const kPlistName_common = @"HuiZhuBang_common.plist";
 
 //sandBox
 + (id)readDataWithKey:(NSString *)key plistFileName:(NSString *)fileName{
-//    NSString * plistPath = [NSHomeDirectory() stringByAppendingFormat:@"/Library/File_Plist/%@",fileName];
-    NSString * filePath = [NSHomeDirectory() stringByAppendingFormat:@"%@%@",kPlistFilePath,fileName];
+//    NSString *plistPath = [NSHomeDirectory() stringByAppendingFormat:@"/Library/File_Plist/%@",fileName];
+    NSString *filePath = [NSHomeDirectory() stringByAppendingFormat:@"%@%@",kPlistFilePath,fileName];
     NSMutableDictionary  *mdict = [NSMutableDictionary dictionaryWithContentsOfFile:filePath];
     id obj = mdict[key];
     return obj;
 }
 
 + (BOOL)writeData:(id)data plistKey:(NSString *)plistKey plistFileName:(NSString *)fileName{
-//    NSArray * paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+//    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
 //    DDLog(@"%@", paths[0]);
 
     //    NSString * plistPath = [NSHomeDirectory() stringByAppendingFormat:@"/Library/File_Plist/%@",fileName];
-    NSString * plistPath = [NSHomeDirectory() stringByAppendingFormat:@"%@",kPlistFilePath];
+    NSString *plistPath = [NSHomeDirectory() stringByAppendingFormat:@"%@",kPlistFilePath];
     if (![Utilities_DM fileExistAtPath:plistPath]) {
         [Utilities_DM createDirectoryAtPath:plistPath];
     }
     NSString *filePath = [plistPath stringByAppendingPathComponent:kPlistName_common];
 //    DDLog(@"%@\n", filePath);
 
-    NSMutableDictionary  *mdict = [NSMutableDictionary dictionaryWithCapacity:0];
+    NSMutableDictionary *mdict = [NSMutableDictionary dictionaryWithCapacity:0];
     if ([Utilities_DM fileExistAtPath:plistPath]) {
         mdict = [NSMutableDictionary dictionaryWithContentsOfFile:filePath];
         if (!mdict) {
@@ -84,7 +84,6 @@ static NSString *const kPlistName_common = @"HuiZhuBang_common.plist";
 + (NSString *)encodeTheString:(NSString *)inputString{
     
     return inputString;
-    
 }
 //AES加密
 + (NSString *)AESEncryptTheString:(NSString *)inputString{
@@ -103,7 +102,6 @@ static NSString *const kPlistName_common = @"HuiZhuBang_common.plist";
 - (id)AES128_EncryptParameters:(id)parameters collection:(id)collection{
     
     parameters = [NSString AES128Encrypt:parameters key:kPwdKey_AES];
-    
     return parameters ;
 }
 

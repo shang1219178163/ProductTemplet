@@ -92,7 +92,10 @@
     AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
     manager.responseSerializer = [AFJSONResponseSerializer serializer];
     NSString *url = [NSString stringWithFormat:@"%s","http://v3.wufazhuce.com:8000/api/channel/movie/more/0?platform=ios&version=v4.0.1"];
-    [manager GET:url parameters:nil progress:^(NSProgress * _Nonnull uploadProgress) {
+    [manager GET:url
+      parameters:nil
+         headers:nil
+        progress:^(NSProgress * _Nonnull uploadProgress) {
         
     } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         NSArray *data = responseObject[@"data"];
@@ -118,7 +121,10 @@
     AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
     manager.responseSerializer = [AFJSONResponseSerializer serializer];
     NSString *url1 = [NSString stringWithFormat:@"%s","http://v3.wufazhuce.com:8000/api/channel/movie/more/11380?platform=ios&version=v4.0.1"];
-    [manager GET:url1 parameters:nil progress:^(NSProgress * _Nonnull uploadProgress) {
+    [manager GET:url1
+      parameters:nil
+         headers:nil
+        progress:^(NSProgress * _Nonnull uploadProgress) {
         
     } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         NSArray *data = responseObject[@"data"];
@@ -142,7 +148,10 @@
     AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
     manager.responseSerializer = [AFJSONResponseSerializer serializer];
     NSString *url2 = [NSString stringWithFormat:@"%s","http://v3.wufazhuce.com:8000/api/channel/movie/more/11317?platform=ios&version=v4.0.1"];
-    [manager GET:url2 parameters:nil progress:^(NSProgress * _Nonnull uploadProgress) {
+    [manager GET:url2
+      parameters:nil
+        headers:nil
+        progress:^(NSProgress * _Nonnull uploadProgress) {
         
     } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         NSArray *data = responseObject[@"data"];

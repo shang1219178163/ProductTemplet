@@ -8,6 +8,7 @@
 //
 
 #import "NNCenterViewController.h"
+#import "PopoverViewExampleController.h"
 
 @interface NNCenterViewController ()<UISearchBarDelegate>
 
@@ -25,6 +26,12 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
+    [self createBarItem:@"弹窗" isLeft:true handler:^(id  _Nonnull obj, UIView * _Nonnull item, NSInteger idx) {
+        PopoverViewExampleController *controlller = [[PopoverViewExampleController alloc]init];
+        [self.navigationController pushViewController:controlller animated:true];
+    }];
+    
     [self createBarItem:@"筛选" isLeft:false handler:^(id obj, UIView *item, NSInteger idx) {
         NNFilterView * view = [[NNFilterView alloc]init];
         view.dataList = self.filterList;
@@ -41,6 +48,7 @@
     [self.view addSubview:self.plainView];
     
     self.dataList = @[@[@"EntryViewController", @"录入类界面封装",],
+                      @[@"NNUploadImagesController", @"选择照片",],                      
                       @[@"NNTagViewController", @"TagView",],
                       @[@"SystemAboutController", @"系统相关",],
                       @[@"NNSearchController", @"复合搜索🔍",],
@@ -99,7 +107,7 @@
     
     [UIApplication setupAppearanceSearchbarCancellButton];
     self.searchBar = ({
-        UISearchBar *searchBar = [UISearchBar createRect:CGRectMake(0, 0, kScreenWidth - 100, 30)];
+        UISearchBar *searchBar = [UISearchBar createRect:CGRectMake(0, 0, kScreenWidth - 150, 30)];
         searchBar.placeholder = @"请输入流水号、商品信息或会员信息";
         searchBar.delegate = self;
 //        searchBar.scopeButtonTitles = @[@"111", @"22", @"333"];

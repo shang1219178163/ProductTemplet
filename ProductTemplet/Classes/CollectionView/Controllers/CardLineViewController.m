@@ -11,7 +11,7 @@
 #import "UICTViewLayoutCard.h"
 #import "UICTViewCellOne.h"
 
-@interface CardLineViewController ()<BN_CTViewLayoutCardDelegate,UICollectionViewDataSource,UICollectionViewDelegate,UICollectionViewDelegateFlowLayout>
+@interface CardLineViewController ()<UICTViewLayoutCardDelegate,UICollectionViewDataSource,UICollectionViewDelegate,UICollectionViewDelegateFlowLayout>
 
 @property (nonatomic, strong) UICollectionView *collectionView;
 @property (nonatomic, strong) NSDictionary *dictClass;
@@ -116,16 +116,13 @@
     if (!_dictClass) {
         _dictClass = @{
                        
-                       UICollectionElementKindSectionItem:   @[
+                       UICollectionElementKindSectionItem: @[
                                @"UICTViewCellOne"
                                ],
-                       //                       UICollectionElementKindSectionHeader:   @[
-                       //                                                                 @"UICTReusableViewZero",
-                       //                                                                 ],
-                       //                       UICollectionElementKindSectionHeader:   @[
-                       //                                                                 @"UICTReusableViewZero",
-                       //                                                                 ],
-                       
+//                       UICollectionElementKindSectionHeader: @[@"UICTReusableViewZero",
+//                                                                ],
+//                       UICollectionElementKindSectionHeader: @[@"UICTReusableViewZero",
+//                                                                ],
                        };
         
     }

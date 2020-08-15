@@ -89,6 +89,8 @@
 		142A76D72226708D0016D3DA /* BNSliderControlView.m in Sources */ = {isa = PBXBuildFile; fileRef = 142A76D62226708D0016D3DA /* BNSliderControlView.m */; };
 		142A77102227B30E0016D3DA /* UITableViewPickerCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 142A770F2227B30E0016D3DA /* UITableViewPickerCell.m */; };
 		143331AD2241F1F600436F75 /* AVSpeechViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 143331AC2241F1F600436F75 /* AVSpeechViewController.m */; };
+		1439166924C1516400CBABF0 /* TZImageUploadOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 1439166524C1516300CBABF0 /* TZImageUploadOperation.m */; };
+		1439166A24C1516400CBABF0 /* NNUploadImagesController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1439166624C1516300CBABF0 /* NNUploadImagesController.m */; };
 		143F44B224921A8D00ED160A /* KVOViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 143F44B024921A8C00ED160A /* KVOViewController.m */; };
 		14403E6923322314005DB45B /* LineDashViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 14403E6823322314005DB45B /* LineDashViewController.m */; };
 		14488764224F4D6B00B550AF /* icon_oprationSuccess@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 14488762224F4D6A00B550AF /* icon_oprationSuccess@2x.png */; };
@@ -179,6 +181,8 @@
 		14D40A3322C5BB7B00AF74B9 /* PopoverView+Helper.m in Sources */ = {isa = PBXBuildFile; fileRef = 14D40A2F22C5BB7B00AF74B9 /* PopoverView+Helper.m */; };
 		14DF581F2313D79F00906A9D /* NSDictionary+Tmp.m in Sources */ = {isa = PBXBuildFile; fileRef = 14DF581E2313D79E00906A9D /* NSDictionary+Tmp.m */; };
 		14DF58262314C58000906A9D /* BNView.m in Sources */ = {isa = PBXBuildFile; fileRef = 14DF58252314C58000906A9D /* BNView.m */; };
+		14E2048824E66C550075AB47 /* PopoverViewExampleController.m in Sources */ = {isa = PBXBuildFile; fileRef = 14E2048724E66C550075AB47 /* PopoverViewExampleController.m */; };
+		14E2048A24E66CEE0075AB47 /* PopoverViewMedia.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 14E2048924E66CEE0075AB47 /* PopoverViewMedia.xcassets */; };
 		14E42CD3220003F200606AD0 /* BNOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 14E42CD1220003F200606AD0 /* BNOperation.m */; };
 		14E42CDA2200040200606AD0 /* BNUserLoginController.m in Sources */ = {isa = PBXBuildFile; fileRef = 14E42CD62200040200606AD0 /* BNUserLoginController.m */; };
 		14E42CDB2200040200606AD0 /* BNUserPwdChangeController.m in Sources */ = {isa = PBXBuildFile; fileRef = 14E42CD72200040200606AD0 /* BNUserPwdChangeController.m */; };
@@ -651,6 +655,10 @@
 		142A770F2227B30E0016D3DA /* UITableViewPickerCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UITableViewPickerCell.m; sourceTree = "<group>"; };
 		143331AB2241F1F600436F75 /* AVSpeechViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AVSpeechViewController.h; sourceTree = "<group>"; };
 		143331AC2241F1F600436F75 /* AVSpeechViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AVSpeechViewController.m; sourceTree = "<group>"; };
+		1439166524C1516300CBABF0 /* TZImageUploadOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TZImageUploadOperation.m; sourceTree = "<group>"; };
+		1439166624C1516300CBABF0 /* NNUploadImagesController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NNUploadImagesController.m; sourceTree = "<group>"; };
+		1439166724C1516400CBABF0 /* TZImageUploadOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TZImageUploadOperation.h; sourceTree = "<group>"; };
+		1439166824C1516400CBABF0 /* NNUploadImagesController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NNUploadImagesController.h; sourceTree = "<group>"; };
 		143F44B024921A8C00ED160A /* KVOViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KVOViewController.m; sourceTree = "<group>"; };
 		143F44B124921A8D00ED160A /* KVOViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KVOViewController.h; sourceTree = "<group>"; };
 		14403E6723322314005DB45B /* LineDashViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LineDashViewController.h; sourceTree = "<group>"; };
@@ -823,6 +831,9 @@
 		14DF581E2313D79E00906A9D /* NSDictionary+Tmp.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+Tmp.m"; sourceTree = "<group>"; };
 		14DF58242314C58000906A9D /* BNView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BNView.h; sourceTree = "<group>"; };
 		14DF58252314C58000906A9D /* BNView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BNView.m; sourceTree = "<group>"; };
+		14E2048624E66C550075AB47 /* PopoverViewExampleController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PopoverViewExampleController.h; sourceTree = "<group>"; };
+		14E2048724E66C550075AB47 /* PopoverViewExampleController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PopoverViewExampleController.m; sourceTree = "<group>"; };
+		14E2048924E66CEE0075AB47 /* PopoverViewMedia.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = PopoverViewMedia.xcassets; sourceTree = "<group>"; };
 		14E42CD1220003F200606AD0 /* BNOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BNOperation.m; sourceTree = "<group>"; };
 		14E42CD2220003F200606AD0 /* BNOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BNOperation.h; sourceTree = "<group>"; };
 		14E42CD42200040200606AD0 /* BNUserLoginController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BNUserLoginController.h; sourceTree = "<group>"; };
@@ -1578,6 +1589,17 @@
 			path = Controllers;
 			sourceTree = "<group>";
 		};
+		1439166424C1514300CBABF0 /* PickerVC */ = {
+			isa = PBXGroup;
+			children = (
+				1439166824C1516400CBABF0 /* NNUploadImagesController.h */,
+				1439166624C1516300CBABF0 /* NNUploadImagesController.m */,
+				1439166724C1516400CBABF0 /* TZImageUploadOperation.h */,
+				1439166524C1516300CBABF0 /* TZImageUploadOperation.m */,
+			);
+			path = PickerVC;
+			sourceTree = "<group>";
+		};
 		145C912923346FA000849E9D /* HuiZhuBang */ = {
 			isa = PBXGroup;
 			children = (
@@ -1849,6 +1871,7 @@
 				14D40A2C22C5BB7B00AF74B9 /* PopoverAction.m */,
 				14D40A2B22C5BB7B00AF74B9 /* PopoverView+Helper.h */,
 				14D40A2F22C5BB7B00AF74B9 /* PopoverView+Helper.m */,
+				14E2048924E66CEE0075AB47 /* PopoverViewMedia.xcassets */,
 			);
 			path = PopoverView;
 			sourceTree = "<group>";
@@ -2118,6 +2141,7 @@
 		513649102086055E005A20E7 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				1439166424C1514300CBABF0 /* PickerVC */,
 				14BEDC6424A8A0120031852F /* ChainProgramming */,
 				147ABB5322DED19500A5C4EC /* CollectionData */,
 				517D8B1320B2B52300DCA731 /* DBManager */,
@@ -2246,6 +2270,8 @@
 				14E8692C21C251BA009CE33E /* HomeViewController.m */,
 				14E42CEF2200040F00606AD0 /* NNCenterViewController.h */,
 				14E42CE52200040D00606AD0 /* NNCenterViewController.m */,
+				14E2048624E66C550075AB47 /* PopoverViewExampleController.h */,
+				14E2048724E66C550075AB47 /* PopoverViewExampleController.m */,
 				14E42CEE2200040F00606AD0 /* BNFactoryListViewController.h */,
 				14E42CEB2200040E00606AD0 /* BNFactoryListViewController.m */,
 				14E42CE02200040C00606AD0 /* NNFirstViewController.h */,
@@ -2961,6 +2987,7 @@
 				1410803F22D2E69C0011344E /* am_3@2x.png in Resources */,
 				513649C320860655005A20E7 /* img_imm_recordEmergency.png in Resources */,
 				513649D120860655005A20E7 /* img_remind_farrowing.png in Resources */,
+				14E2048A24E66CEE0075AB47 /* PopoverViewMedia.xcassets in Resources */,
 				513649A720860655005A20E7 /* img_growthStage_four.png in Resources */,
 				1410803A22D2E69C0011344E /* leaf_3@2x.png in Resources */,
 				5136498E20860655005A20E7 /* img_Add_AnimalHouse.png in Resources */,
@@ -3306,6 +3333,7 @@
 				5162F70420BF9D5F009A6253 /* FlowerStateModel.m in Sources */,
 				51954AB520A12DCC00B066C8 /* CycleLabelViewController.m in Sources */,
 				5169699A20BCED4000BAA53D /* LH4SWaiter.m in Sources */,
+				1439166A24C1516400CBABF0 /* NNUploadImagesController.m in Sources */,
 				51AA00332199295A002EB259 /* CounterListGroupController.m in Sources */,
 				518CD32A219D787F003CE348 /* SugerAlertController.m in Sources */,
 				14C11AB722DC7FF8009D18A3 /* CardLineViewController.m in Sources */,
@@ -3392,6 +3420,7 @@
 				510BC9A3208F3B6A00CF48C5 /* SliderTabBarController.m in Sources */,
 				516969A020BCF11600BAA53D /* MediatorViewController.m in Sources */,
 				515C67DF2137C55700D5EA94 /* ChineseToPinyin.m in Sources */,
+				14E2048824E66C550075AB47 /* PopoverViewExampleController.m in Sources */,
 				14D40A3022C5BB7B00AF74B9 /* PopoverAction.m in Sources */,
 				14EAC9392321188800E42D4F /* UICTViewLayoutSlope.m in Sources */,
 				142A77102227B30E0016D3DA /* UITableViewPickerCell.m in Sources */,
@@ -3404,6 +3433,7 @@
 				51364C9D20860822005A20E7 /* PictureController.m in Sources */,
 				14107FB022CDF9490011344E /* CustomKeyboardView.m in Sources */,
 				149111EC2275B7970078A7BB /* NSError+Helper.m in Sources */,
+				1439166924C1516400CBABF0 /* TZImageUploadOperation.m in Sources */,
 				14107FB322CDF9490011344E /* TextViewInputController.m in Sources */,
 				14E42D1C2200042800606AD0 /* BNNoti.m in Sources */,
 				515CC97C20B6AAF2004AE27C /* AAPlotLinesElement.m in Sources */,

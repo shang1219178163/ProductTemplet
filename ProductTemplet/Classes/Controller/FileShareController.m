@@ -1,6 +1,6 @@
 //
 //  FileShareController.m
-//  BN_FileShare
+//  NNFileShare
 //
 //  Created by hsf on 2018/9/13.
 //  Copyright © 2018年 Sera. All rights reserved.

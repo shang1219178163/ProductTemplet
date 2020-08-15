@@ -142,23 +142,26 @@
     [sessionManager.requestSerializer setValue:@"multipart/form-data" forHTTPHeaderField:@"Content-Type"];
     [sessionManager.requestSerializer setValue:@"IOP/iOS" forHTTPHeaderField:@"User-Agent"];
     [sessionManager.requestSerializer setValue:@"3.3.1" forHTTPHeaderField:@"Accept-Version"];
-    
-    [sessionManager POST:@"http://116.62.132.145:8008/iop/ipk/img_upload" parameters:@{@"token" : @"680b2275a2318b076a6c883908bae43e"}
-        constructingBodyWithBlock:^(id<AFMultipartFormData> formData) {
+
+    NSString *url = @"http://116.62.132.145:8008/iop/ipk/img_upload";
+    NSDictionary *params = @{@"token" : @"680b2275a2318b076a6c883908bae43e"};
+    [sessionManager POST:url
+              parameters:params
+                 headers:nil
+constructingBodyWithBlock:^(id<AFMultipartFormData> formData) {
         // 在这个block中设置需要上传的文件
 //            NSData *data = [NSData dataWithContentsOfFile:@"/Users/xiaomage/Desktop/placeholder.png"];
- 
             //方法一
 //            [formData appendPartWithFileData:data name:@"file" fileName:@"test.png" mimeType:@"image/png"];
-
             //方法二：自动给封装filename、mimeType
 //            [formData appendPartWithFileURL:[NSURL fileURLWithPath:@"/Users/xiaomage/Desktop/placeholder.png"] name:@"file" fileName:@"xxx.png" mimeType:@"image/png" error:nil];
-           
             //方法三：自动给封装filename、mimeType
 //            [formData appendPartWithFileURL:[NSURL fileURLWithPath:@"/Users/xiaomage/Desktop/placeholder.png"] name:@"file" error:nil];
 //        [formData appendPartWithFileURL:[NSURL fileURLWithPath:@"/Users/xiaomage/Desktop/placeholder.png"] name:@"file" error:nil];
         [formData appendPartWithFileURL:self.localFileUrl name:@"file" error:nil];
 
+    } progress:^(NSProgress * _Nonnull uploadProgress) {
+        
     } success:^(NSURLSessionDataTask *task, id responseObject) {
         NSLog(@"-------%@", responseObject);
 //        NSDictionary *dic = [NSJSONSerialization JSONObjectWithData:responseObject options:kNilOptions error:nil];
