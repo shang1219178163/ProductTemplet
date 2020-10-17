@@ -309,8 +309,9 @@ static NSDictionary *_dictPrivacy = nil;
             case PrivacyStatusRestricted:
             case PrivacyStatusUnkonwn:
             {
-                NSString * msg = [NSString stringWithFormat:@"请去-> [设置 - 隐私 - %@ - %@] 打开访问开关", UIApplication.dictPrivacy[@(type)], UIApplication.appName];
-                [UIAlertController showAlertTitle:@"" msg:msg actionTitles:@[kTitleKnow] handler:nil];
+                NSString *msg = [NSString stringWithFormat:@"请去-> [设置 - 隐私 - %@ - %@] 打开访问开关", UIApplication.dictPrivacy[@(type)], UIApplication.appName];
+                [UIAlertController alertControllerWithTitle:@"" message:msg preferredStyle:UIAlertControllerStyleAlert]
+                .nn_present(true, nil);
             }
                 break;
             default:

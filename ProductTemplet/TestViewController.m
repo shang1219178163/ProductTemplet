@@ -28,7 +28,7 @@
     
     [self createBarItem:@"Done" isLeft:false handler:^(id  _Nonnull obj, UIView * _Nonnull item, NSInteger idx) {
         NSString * msg = [NSString stringWithFormat:@"请去-> [设置 - 隐私 - %@ - %@] 打开访问开关", @"相机" ,UIApplication.appName];
-        [UIAlertController showAlertTitle:@"" msg:msg actionTitles:@[kTitleKnow] handler:nil];
+        [UIAlertController showAlertTitle:@"" message:msg actionTitles:@[kTitleKnow] handler:nil];
     }];
     
     UIImageView *imgView = [[UIImageView alloc]initWithFrame:CGRectMake(10, 10, 100, 100)];
@@ -65,6 +65,20 @@
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
     [NSNotificationCenter.defaultCenter addObserver:self selector:@selector(userDidTakeScreenshotNotification:) name:UIApplicationUserDidTakeScreenshotNotification object:nil];
+    
+    [UIAlertController alertControllerWithTitle:@"title" message:@"message" preferredStyle:UIAlertControllerStyleAlert]
+    .nn_addAction(@[@"取消", @"确定"], ^(UIAlertAction * _Nonnull action) {
+        NSLog(@"%@", action.title);
+    })
+    .nn_addTextField(@[@"请输入账号", @"请输入密码"], ^(UITextField * _Nonnull textField) {
+        NSLog(@"%@", textField.text);
+    })
+    .nn_present(true, ^{
+        
+    });
+    
+    
+//    [alertVC present:true completion:nil];
 }
 
 - (void)viewDidDisappear:(BOOL)animated {
