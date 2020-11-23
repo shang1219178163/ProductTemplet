@@ -148,7 +148,7 @@
             NSDictionary * dict = @{
                                     kAlert_Title:   @"提示信息",
                                     kAlert_Img:   @"bug",
-//                                    kAlert_Msg:   @"只用了两年时间，天津东边的一片盐碱地，就让创造了蛇口神话的袁庚都为之紧张。……",
+//                                    kAlert_message:   @"只用了两年时间，天津东边的一片盐碱地，就让创造了蛇口神话的袁庚都为之紧张。……",
                                     kAlert_Btns:   @[@"取消",@"确定"],
                                     
                                     };

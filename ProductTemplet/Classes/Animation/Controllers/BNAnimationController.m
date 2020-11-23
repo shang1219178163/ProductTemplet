@@ -23,7 +23,7 @@
     self.edgesForExtendedLayout = UIRectEdgeNone;
     self.view.backgroundColor = UIColor.whiteColor;
     
-    self.title = self.title ?  : self.controllerName;
+    self.title = self.title ?  : self.vcName;
     self.title = @"购物动画";
     
 //    [self circleView];

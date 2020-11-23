@@ -71,7 +71,7 @@
 
 -(NSArray *)btnList {
     if (!_btnList){
-        _btnList = [self.tabBar findSubviews:kUITabBarButton];
+        _btnList = [self.tabBar findSubview:kUITabBarButton];
     }
     return _btnList;
 }

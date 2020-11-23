@@ -20,6 +20,7 @@
     NSInteger location = [NSStringFromClass([self class]) rangeOfString:@"Controller"].location;
     self.title = [NSStringFromClass([self class]) substringToIndex:location];
     
+
 }
 
 - (void)didReceiveMemoryWarning {

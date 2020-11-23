@@ -45,10 +45,6 @@
     DDLog(@"_%d_%d_",NSDate.date.week,NSDate.date.weekday);
 
     DDLog(@"_%@_",NSDate.date.weekdayDes);
-
-    
-    DDLog(@"%@",NSStringFromClass([self.frontVC class]));
-
 }
 
 
