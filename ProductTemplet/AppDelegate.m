@@ -33,11 +33,13 @@
     
     [UIApplication setupAppearanceDefault:false];
     
-    UIViewController * controller = UICtrFromString(@"HomeViewController");
-    UIViewController * controllerLeft = UICtrFromString(@"NNLeftViewController");
-    UIViewController * controllerRight = UICtrFromString(@"NNRightViewController");
+    UIViewController *controller = UICtrFromString(@"HomeViewController");
+    UIViewController *controllerLeft = UICtrFromString(@"NNLeftViewController");
+    UIViewController *controllerRight = UICtrFromString(@"NNRightViewController");
 
-    ZYSliderViewController * rootVC = [[ZYSliderViewController alloc]initWithMainViewController:controller leftViewController:controllerLeft rightViewController:controllerRight];
+    ZYSliderViewController *rootVC = [[ZYSliderViewController alloc]initWithMainViewController:controller
+                                                                            leftViewController:controllerLeft
+                                                                           rightViewController:controllerRight];
     
 //    controller = UICtrFromString(@"WHKGroupViewViewController");
 //    controller = UICtrFromString(@"LiveLikeController");
@@ -73,6 +75,9 @@
     [d isOlderWithVersion:@"3"];
     [NSString dateTime:@"2" isEnd:false];
     
+    NSString *json = NSBundle.mainBundle.infoDictionary.jsonString;
+    DDLog(@"json: %@", json);
+        
     return YES;
 }
 
