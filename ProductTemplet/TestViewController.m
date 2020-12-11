@@ -42,8 +42,8 @@
 }
 
 - (void)handleActionBtn:(UIBarButtonItem *)sender{
-    [self pushVC:@"TimerViewController" title:@"Timer" animated:true block:^(__kindof UIViewController * _Nonnull vc) {
-        
+    [self.navigationController pushVC:@"TimerViewController" animated:true block:^(__kindof UIViewController * _Nonnull vc) {
+        vc.title = @"Timer";
     }];
 }
 
