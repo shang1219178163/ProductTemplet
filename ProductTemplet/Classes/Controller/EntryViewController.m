@@ -71,8 +71,7 @@
 
                       ].mutableCopy;
     
-
-    [self createBarItemTitle:@"Next" imgName:nil isLeft:false isHidden:false handler:^(id obj, UIButton *item, NSInteger idx) {
+    [self createBarItem:@"Next" isLeft:NO handler:^(id  _Nonnull obj, UIView * _Nonnull item, NSInteger idx) {
         [self.navigationController pushVC:@"CustomViewController" animated:true block:nil];
     }];
 

@@ -47,7 +47,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-//    [self createBarItemTitle:@"right" imageName:nil isLeft:NO isHidden:NO handler:^(id obj, id item, NSInteger idx) {
+//    [self createBarItem:@"right" isLeft:NO handler:^(id  _Nonnull obj, UIView * _Nonnull item, NSInteger idx) {
 //        MBProgressHUD * hud = [MBProgressHUD showHUDAddedToView:nil animated:NO];
 //        [hud hideAnimated:YES afterDelay:1];
 //

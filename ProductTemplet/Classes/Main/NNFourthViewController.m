@@ -41,7 +41,8 @@
     
 //    [self addControllerName:@"FontListController"];
 //    [self addControllerName:@"FriendListController"];
-    [self createBarItemTitle:nil imgName:@"Item_fourth_H" isLeft:NO isHidden:NO handler:^(id obj, UIButton *item, NSInteger idx) {
+    
+    [self createBarItem:@"Item_fourth_H" isLeft:NO handler:^(id  _Nonnull obj, UIView * _Nonnull item, NSInteger idx) {
         [self.pickerView show];
 
     }];

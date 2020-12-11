@@ -19,8 +19,8 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-    [self createBarItemTitle:@"label" imgName:nil isLeft:NO isHidden:NO handler:^(id obj, id item, NSInteger idx) {
-        
+    [self createBarItem:@"label" isLeft:NO handler:^(id  _Nonnull obj, UIView * _Nonnull item, NSInteger idx) {
+
         UIViewController * controller = [NSClassFromString(@"CycleLabelViewController") new];
 
         CATransition *anim = [CATransition animDuration:0.5 functionName:kCAMediaTimingFunctionEaseIn type:kCATransitionFade subType:kCATransitionFromRight];

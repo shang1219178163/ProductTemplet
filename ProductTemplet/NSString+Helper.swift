@@ -61,16 +61,16 @@ public extension String{
     }
  
     /// 大于version
-    func isNewer(version: String) -> Bool {
-        return (self as NSString).isNewer(version:version)
+    func isNewer(value: String) -> Bool {
+        return (self as NSString).isNewer(value:value)
     }
     /// 等于version
-    func isSame(version: String) -> Bool {
-        return (self as NSString).isSame(version:version)
+    func isSame(value: String) -> Bool {
+        return (self as NSString).isSame(value:value)
     }
     /// 小于version
-    func isOlder(version: String) -> Bool {
-        return (self as NSString).isOlder(version:version)
+    func isOlder(value: String) -> Bool {
+        return (self as NSString).isOlder(value:value)
     }
     
     
@@ -156,16 +156,16 @@ public extension Substring {
     }
     
     /// 大于version
-    @objc func isNewer(version: String) -> Bool {
-        return compare(version, options: .numeric) == .orderedDescending
+    @objc func isNewer(value: String) -> Bool {
+        return compare(value, options: .numeric) == .orderedDescending
     }
     /// 等于version
-    func isSame(version: String) -> Bool {
-        return compare(version, options: .numeric) == .orderedSame
+    func isSame(value: String) -> Bool {
+        return compare(value, options: .numeric) == .orderedSame
     }
     /// 小于version
-    func isOlder(version: String) -> Bool {
-        return compare(version, options: .numeric) == .orderedAscending
+    func isOlder(value: String) -> Bool {
+        return compare(value, options: .numeric) == .orderedAscending
     }
    
     /// isEnd 为真,秒追加为:59,为假 :00

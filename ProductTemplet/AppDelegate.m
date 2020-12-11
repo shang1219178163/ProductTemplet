@@ -70,9 +70,9 @@
 
     NSString * d = @(1.595).toString;
     
-    [d isNewerWithVersion:@"1.3."];
-    [d isSameWithVersion:@"2"];
-    [d isOlderWithVersion:@"3"];
+    [d isNewerWithValue:@"1.3."];
+    [d isSameWithValue:@"2"];
+    [d isOlderWithValue:@"3"];
     [NSString dateTime:@"2" isEnd:false];
     
     NSString *json = NSBundle.mainBundle.infoDictionary.jsonString;
