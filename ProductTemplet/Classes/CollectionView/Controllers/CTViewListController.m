@@ -121,13 +121,15 @@
     
     DDLog(@"%@",@(sender.tag));
     if (sender.tag == 0) {
-        [self pushVC:@"FileParseController" title:@"文件解析" animated:true block:^(__kindof UIViewController * _Nonnull vc) {
-            
+        [self.navigationController pushVC:@"FileParseController" animated:true block:^(__kindof UIViewController * _Nonnull vc) {
+            vc.title = @"文件解析";
+
         }];
         return;
     }
-    [self pushVC:@"BNExcelController" title:@"BNExcelController" animated:true block:^(__kindof UIViewController * _Nonnull vc) {
-        
+    [self.navigationController pushVC:@"BNExcelController" animated:true block:^(__kindof UIViewController * _Nonnull vc) {
+        vc.title = @"BNExcelController";
+
     }];
 }
 
@@ -196,8 +198,8 @@
     
     DDLog(@"%@",NSStringFromIndexPath(indexPath));
     NSString * controlleName = [self itemAtSection:indexPath];
-    [self pushVC:controlleName title:controlleName animated:true block:^(__kindof UIViewController * _Nonnull vc) {
-        
+    [self.navigationController pushVC:controlleName animated:true block:^(__kindof UIViewController * _Nonnull vc) {
+        vc.title = controlleName;
     }];
 }
 

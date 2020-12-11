@@ -177,8 +177,8 @@
                 PKDeviceListRootModel *model = [PKDeviceListRootModel yy_modelWithJSON:responseObject];
                 DDLog(@"%@", model);
                 self.devicesRootModel = model;
-                [self pushVC:@"DeviceListController" title:@"设备列表" animated:true block:^(__kindof UIViewController * _Nonnull vc) {
-                    
+                [self.navigationController pushVC:@"DeviceListController" animated:true block:^(__kindof UIViewController * _Nonnull vc) {
+                    vc.title = @"设备列表";
                 }];
             } failedBlock:^(NNRequstManager * _Nonnull manager, id _Nullable responseObject, NSError * _Nullable error) {
                 DDLog(@"%@", error);

@@ -183,8 +183,8 @@
             [btnView.layer addSublayer:[btnView createLayerType:@3]];//上线条
             
             [btnView addActionHandler:^(id obj, id item, NSInteger idx) {
-                [self pushVC:array[2] title:array[0] animated:true block:^(__kindof UIViewController * _Nonnull vc) {
-                    
+                [self.navigationController pushVC:array[2] animated:true block:^(__kindof UIViewController * _Nonnull vc) {
+                    vc.title = array[0];
                 }];
             }];
         }

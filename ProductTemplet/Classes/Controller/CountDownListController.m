@@ -44,10 +44,10 @@
         case 0:
         {
             NSString *title = sender.titleLabel.text;
-            [self pushVC:@"CounterListController"
-                   title:title
+            [self.navigationController pushVC:@"CounterListController"
                 animated:true
                    block:^(__kindof UIViewController * _Nonnull vc) {
+                vc.title = title;
                 CounterListController *controller = vc;
                 controller.isPlusTime = self.isPlusTime;
             }];
@@ -56,10 +56,11 @@
         case 1:
         {
             NSString *title = sender.titleLabel.text;
-            [self pushVC:@"CounterListGroupController"
-                   title:title
+            [self.navigationController pushVC:@"CounterListGroupController"
                 animated:true
                    block:^(__kindof UIViewController * _Nonnull vc) {
+                vc.title = title;
+
                 CounterListGroupController *controller = vc;
                 controller.isPlusTime = self.isPlusTime;
             }];

@@ -98,8 +98,8 @@
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     
     NSString * msg = NSStringFromIndexPath(indexPath);
-    [self pushVC:@"BNTempViewController" title:@"tmp" animated:true block:^(__kindof UIViewController * _Nonnull vc) {
-        
+    [self.navigationController pushVC:@"BNTempViewController" animated:true block:^(__kindof UIViewController * _Nonnull vc) {
+        vc.title = @"tmp";
     }];
 }
 

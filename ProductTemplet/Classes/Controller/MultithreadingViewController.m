@@ -97,8 +97,8 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     NSDictionary * dict = self.dataList[indexPath.row];
-    [self pushVC:dict[kItemController] title:dict[kItemTitle] animated:true block:^(__kindof UIViewController * _Nonnull vc) {
-        
+    [self.navigationController pushVC:dict[kItemController] animated:true block:^(__kindof UIViewController * _Nonnull vc) {
+        vc.title = dict[kItemTitle];
     }];
 }
 

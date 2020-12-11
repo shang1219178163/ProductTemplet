@@ -73,7 +73,7 @@
     
 
     [self createBarItemTitle:@"Next" imgName:nil isLeft:false isHidden:false handler:^(id obj, UIButton *item, NSInteger idx) {
-        [self pushVC:@"CustomViewController" title:@"Custom" animated:true block:nil];
+        [self.navigationController pushVC:@"CustomViewController" animated:true block:nil];
     }];
 
 }

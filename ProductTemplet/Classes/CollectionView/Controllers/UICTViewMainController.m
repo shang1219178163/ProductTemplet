@@ -105,8 +105,8 @@
             @strongify(self);
             NSArray *list = self.dataList[indexPath.row];
 //            UITableViewCell * cell = [tableView cellForRowAtIndexPath:indexPath];
-            [self pushVC:list[0] title:list[1] animated:true block:^(__kindof UIViewController * _Nonnull vc) {
-                
+            [self.navigationController pushVC:list[0] animated:true block:^(__kindof UIViewController * _Nonnull vc) {
+                vc.title = list[1];
             }];
         };
     }
