@@ -16,7 +16,7 @@ inhibit_all_warnings!
    pod 'IQKeyboardManager'
 #   pod 'iCarousel’
    
-   pod 'JPush'
+#   pod 'JPush'
 #   pod 'JZLocationConverter'
       
    pod 'MBProgressHUD'
