@@ -95,12 +95,10 @@
         hours = -hours;
         minutes = -minutes;
         seconds = -seconds;
-    }
-    else{
+    } else {
         if (hours <= 0 && minutes <= 0 && seconds <= 0) return @"活动已经结束！";
-        
     }
-    NSString * daysInfo = days > 0 ? [[@(days) stringValue] stringByAppendingString:@"天"] : @"";
+    NSString *daysInfo = days > 0 ? [[@(days) stringValue] stringByAppendingString:@"天"] : @"";
     return [NSString stringWithFormat:@"%@ %@小时 %@分 %@秒", daysInfo,@(hours),@(minutes),@(seconds)];
 }
 
@@ -108,7 +106,7 @@
  *  主动销毁定时器
  */
 -(void)destoryTimer{
-    [NSTimer destoryTimer:self.timer];
+    self.timer = nil;
 
 }
 

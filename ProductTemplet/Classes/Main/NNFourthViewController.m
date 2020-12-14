@@ -247,7 +247,7 @@
             label.text = @"个数";
             [view addSubview:label];
             
-            UISlider *slider = [UISlider createRect:CGRectMake(0, 0, CGRectGetWidth(view.frame) - CGRectGetWidth(label.frame), CGRectGetHeight(view.frame)) value:70 minValue:10 maxValue:110];
+            UISlider *slider = [UISlider createRect:CGRectMake(0, 0, CGRectGetWidth(view.frame) - CGRectGetWidth(label.frame), CGRectGetHeight(view.frame)) minValue:10 maxValue:110];
             slider.autoresizingMask = UIViewAutoresizingFlexibleWidth|UIViewAutoresizingFlexibleHeight;
             [slider addActionHandler:^(UIControl * _Nonnull obj) {
                 UISlider * sender = (UISlider *)obj;

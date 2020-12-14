@@ -49,7 +49,7 @@
  
     
     CGRect rect = CGRectMake(20, 20, kScreenWidth - 40, 40);
-    UISegmentedControl *control = [UISegmentedControl createRect:rect items:@[@"昨天", @"今天", @"明天"] selectedIndex:1 type:@2];
+    UISegmentedControl *control = [UISegmentedControl createRect:rect items:@[@"昨天", @"今天", @"明天"] type:@2];
     [self.view addSubview: control];
 }
 

@@ -19,8 +19,7 @@
 @implementation TimerViewController
 
 -(void)dealloc{
-    [NSTimer stopTimer:_timer];
-    
+    [_timer destroy];
 }
 
 - (void)viewDidLoad {
