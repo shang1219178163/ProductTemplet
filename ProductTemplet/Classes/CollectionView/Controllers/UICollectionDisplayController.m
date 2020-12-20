@@ -10,6 +10,7 @@
 
 @interface UICollectionDisplayController ()<UICollectionViewDataSource,UICollectionViewDelegate,UICollectionViewDelegateFlowLayout>
 
+@property (nonatomic, strong) UICollectionView *ctView;
 
 @end
 
@@ -123,6 +124,23 @@
 
 #pragma mark -funtions
 
+- (UICollectionView *)ctView{
+    if (!_ctView) {
+        _ctView = ({
+            UICollectionView *view = [[UICollectionView alloc]initWithFrame:self.view.bounds
+                                                       collectionViewLayout:UICollectionView.layoutDefault];
+            view.backgroundColor = UIColor.whiteColor;
+            view.showsVerticalScrollIndicator = false;
+            view.showsHorizontalScrollIndicator = false;
+            view.scrollsToTop = false;
+            view.pagingEnabled = true;
+            [view registerClass:UICollectionViewCell.class forCellWithReuseIdentifier:@"UICollectionViewCell"];
+
+            view;
+        });
+    }
+    return _ctView;
+}
 
 @end
 

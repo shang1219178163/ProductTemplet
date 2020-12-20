@@ -16,6 +16,7 @@
 
 @interface CTViewListController ()<UICollectionViewDataSource,UICollectionViewDelegate,UICollectionViewDelegateFlowLayout>
 
+@property (nonatomic, strong) UICollectionView *ctView;
 @property (nonatomic, strong) NSDictionary *dictClass;
 @property (nonatomic, strong) NSMutableArray *dataList;
 
@@ -241,5 +242,22 @@
     return _dataList;
 }
 
+- (UICollectionView *)ctView{
+    if (!_ctView) {
+        _ctView = ({
+            UICollectionView *view = [[UICollectionView alloc]initWithFrame:self.view.bounds
+                                                       collectionViewLayout:UICollectionView.layoutDefault];
+            view.backgroundColor = UIColor.whiteColor;
+            view.showsVerticalScrollIndicator = false;
+            view.showsHorizontalScrollIndicator = false;
+            view.scrollsToTop = false;
+            view.pagingEnabled = true;
+            [view registerClass:UICollectionViewCell.class forCellWithReuseIdentifier:@"UICollectionViewCell"];
+
+            view;
+        });
+    }
+    return _ctView;
+}
 
 @end
