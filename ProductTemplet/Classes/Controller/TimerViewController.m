@@ -7,6 +7,7 @@
 //
 
 #import "TimerViewController.h"
+#import <NNCategoryPro/NNCategoryPro.h>
 
 
 @interface TimerViewController ()
@@ -59,12 +60,11 @@
 -(UISwitch *)switchCtl{
     if (!_switchCtl) {
         _switchCtl = ({
-            UISwitch * view = [UISwitch createRect:CGRectZero isOn:false];
+            UISwitch * view = [UISwitch createRect:CGRectZero];
             view.onTintColor = UIColor.randomColor;
             view.tintColor = UIColor.randomColor;
             view.thumbTintColor = UIColor.randomColor;
-            [view addActionHandler:^(UIControl * _Nonnull control) {
-                UISwitch *sender = (UISwitch *)control;
+            [view addActionHandler:^(UISwitch * _Nonnull sender) {
                 DDLog(@"开关状态_%@", @(sender.isOn));
                 
             } forControlEvents:UIControlEventValueChanged];

@@ -36,7 +36,7 @@
         
         NSString *image = idx == 3 ? @"bug.png" : nil;
         UIButton *view = [self createBtnRect:CGRectZero title:obj image:image type:@(idx)];
-        [view addActionHandler:^(UIControl * _Nonnull control) {
+        [view addActionHandler:^(UIButton * _Nonnull sender) {
             
         } forControlEvents:UIControlEventTouchUpInside];
         [self.view addSubview:view];

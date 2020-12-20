@@ -106,7 +106,7 @@
             [btn setTitleColor:UIColor.themeColor forState:UIControlStateNormal];
             //    btn.titleLabel.adjustsFontSizeToFitWidth = YES;
             btn.titleLabel.font = [UIFont systemFontOfSize:15];
-            [btn addActionHandler:^(UIControl * _Nonnull control) {
+            [btn addActionHandler:^(UIButton * _Nonnull sender) {
                 self.timer.fireDate = NSDate.date;
                 
             } forControlEvents:UIControlEventTouchUpInside];

@@ -45,8 +45,8 @@
     CGRect rect = CGRectMake(20, 20, kScreenWidth - 20*2, 0);
     UIView * containView = [UIView createViewRect:rect elements:self.itemList numberOfRow:4 viewHeight:30 padding:10];
     [containView.subviews enumerateObjectsUsingBlock:^(__kindof UIButton * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
-        [obj addActionHandler:^(UIControl * _Nonnull control) {
-            [self handleActionBtn:(UIButton *)control];
+        [obj addActionHandler:^(UIButton * _Nonnull sender) {
+            [self handleActionBtn:sender];
 
         } forControlEvents:UIControlEventTouchUpInside];
     }];

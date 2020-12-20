@@ -140,17 +140,16 @@
         [_btn setTitleColor:UIColor.themeColor forState:UIControlStateNormal];
 
         @weakify(self);
-        [_btn addActionHandler:^(UIControl * _Nonnull control) {
+        [_btn addActionHandler:^(UIButton * _Nonnull sender) {
             @strongify(self);
-            UIButton * view = (UIButton *)control;
-            view.selected = !view.isSelected;
+            sender.selected = !sender.isSelected;
 
-            if (view.isSelected == false) {
-                [view setTitle:@"Pause" forState:UIControlStateNormal];
+            if (sender.isSelected == false) {
+                [sender setTitle:@"Pause" forState:UIControlStateNormal];
                 [self.speechSynthesizer continueSpeaking];
                 
             } else {
-                [view setTitle:@"Play" forState:UIControlStateNormal];
+                [sender setTitle:@"Play" forState:UIControlStateNormal];
                 [self.speechSynthesizer pauseSpeakingAtBoundary:AVSpeechBoundaryImmediate];
             }
             

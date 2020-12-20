@@ -66,16 +66,16 @@
     [super viewDidAppear:animated];
     [NSNotificationCenter.defaultCenter addObserver:self selector:@selector(userDidTakeScreenshotNotification:) name:UIApplicationUserDidTakeScreenshotNotification object:nil];
     
-    [UIAlertController alertControllerWithTitle:@"title" message:@"message" preferredStyle:UIAlertControllerStyleAlert]
-    .nn_addAction(@[@"取消", @"确定"], ^(UIAlertAction * _Nonnull action) {
-        NSLog(@"%@", action.title);
-    })
-    .nn_addTextField(@[@"请输入账号", @"请输入密码"], ^(UITextField * _Nonnull textField) {
-        NSLog(@"%@", textField.text);
-    })
-    .nn_present(true, ^{
-        
-    });
+//    [UIAlertController alertControllerWithTitle:@"title" message:@"message" preferredStyle:UIAlertControllerStyleAlert]
+//    .nn_addAction(@[@"取消", @"确定"], ^(UIAlertAction * _Nonnull action) {
+//        NSLog(@"%@", action.title);
+//    })
+//    .nn_addTextField(@[@"请输入账号", @"请输入密码"], ^(UITextField * _Nonnull textField) {
+//        NSLog(@"%@", textField.text);
+//    })
+//    .nn_present(true, ^{
+//
+//    });
     
     
 //    [alertVC present:true completion:nil];
@@ -91,8 +91,8 @@
     UIImage *snapshotImage = [UIImage snapshotImageWithView:window];
     // TODO: 将screenshotImage进行分享，可以调用友盟SDK或自己集成第三方SDK实现，这里就不做演示了
     UIButton *btn = [window showFeedbackView:snapshotImage title:@"求助反馈"];
-    [btn addActionHandler:^(UIControl * _Nonnull control) {
-        DDLog(@"%@", control);
+    [btn addActionHandler:^(UIButton * _Nonnull sender) {
+        DDLog(@"%@", sender);
 
     } forControlEvents:UIControlEventTouchUpInside];
     

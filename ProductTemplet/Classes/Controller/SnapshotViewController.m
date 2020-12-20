@@ -36,8 +36,8 @@
     UIImage *snapshotImage = [UIImage snapshotImageWithView:window];
     // TODO: 将screenshotImage进行分享，可以调用友盟SDK或自己集成第三方SDK实现，这里就不做演示了
     UIButton *btn = [window showFeedbackView:snapshotImage title:@"求助反馈"];
-    [btn addActionHandler:^(UIControl * _Nonnull control) {
-        DDLog(@"%@", control);
+    [btn addActionHandler:^(UIButton * _Nonnull sender) {
+        DDLog(@"%@", sender);
         
     } forControlEvents:UIControlEventTouchUpInside];
     

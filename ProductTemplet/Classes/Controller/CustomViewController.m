@@ -117,7 +117,7 @@
 -(NNSearchView *)searchView{
     if (!_searchView) {
         _searchView = [[NNSearchView alloc]initWithFrame:CGRectZero];
-        [_searchView.btn addActionHandler:^(UIControl * _Nonnull control) {
+        [_searchView.btn addActionHandler:^(UIButton * _Nonnull sender) {
             DDLog(@"%@",_searchView.queryStr);
             
         } forControlEvents:UIControlEventTouchUpInside];

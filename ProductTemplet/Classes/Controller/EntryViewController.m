@@ -27,8 +27,8 @@
         _suspendBtn = [[NNSuspendBtn alloc]initWithFrame:CGRectMake(kScreenWidth - 60, 80, 60, 60)];
         _suspendBtn.insets = UIEdgeInsetsMake(40, 60, 80, 100);
         _suspendBtn.parController = self;
-        [_suspendBtn addActionHandler:^(UIControl * _Nonnull control) {
-            DDLog(@"%@",@(control.center));
+        [_suspendBtn addActionHandler:^(UIButton * _Nonnull sender) {
+            DDLog(@"%@",@(sender.center));
             
         } forControlEvents:UIControlEventTouchUpInside];
     }
@@ -122,9 +122,8 @@
             cell.labelLeft.text = value0;
             cell.segmentCtl.items = @[@"one",@"two",@"three",@"four"];
             DDLog(@"_%p,%@,%ld",cell.segmentCtl, cell.segmentCtl.items, cell.segmentCtl.numberOfSegments);
-            [cell.segmentCtl addActionHandler:^(UIControl * _Nonnull control) {
-                UISegmentedControl *view = control;
-                DDLog(@"_____%ld,%@", view.selectedSegmentIndex, view.items);
+            [cell.segmentCtl addActionHandler:^(UISegmentedControl * _Nonnull sender) {
+                DDLog(@"_____%ld,%@", sender.selectedSegmentIndex, sender.items);
             } forControlEvents:UIControlEventValueChanged];
             [cell getViewLayer];
             return cell;
@@ -174,9 +173,8 @@
         {
             UITableViewSliderCell * cell = [UITableViewSliderCell cellWithTableView:tableView];
             cell.labelLeft.text = value0;
-            [cell.sliderView.sliderCtl addActionHandler:^(UIControl * _Nonnull control) {
-                UISlider * slider = control;
-                DDLog(@"%@", @(slider.value));
+            [cell.sliderView.sliderCtl addActionHandler:^(UISlider * _Nonnull sender) {
+                DDLog(@"%@", @(sender.value));
             } forControlEvents:UIControlEventValueChanged];
             [cell getViewLayer];
             return cell;
