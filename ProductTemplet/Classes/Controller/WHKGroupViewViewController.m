@@ -45,33 +45,6 @@
     containView.backgroundColor = UIColor.greenColor;
     [self.view addSubview:containView];
     
-    for (UIView * view in containView.subviews) {
-        [view addActionHandler:^(id obj, id item, NSInteger idx) {
-            
-            if ([item isKindOfClass:[UILabel class]]) {
-                UILabel * label = (UILabel *)item;
-                DDLog(@"__%@",@(label.tag));
-                NNRadioView * radioView = [containView viewWithTag:(label.tag - kTAG_LABEL + kTAG_VIEW)];
-                radioView.isSelected = !radioView.isSelected;
-                
-            }
-            else if ([item isKindOfClass:[UIView class]]) {
-                NNRadioView * radioView = item;
-                DDLog(@"__%@",@(radioView.tag));
-                radioView.isSelected = !radioView.isSelected;
-            }
-        }];
-    }
-    
-    //
-//    CGRect rectNew = CGRectMake(20, CGRectGetMidY(self.view.bounds), kScreenWidth - 20*2, 0);
-//    NNGroupView * groupView = [NNGroupView viewRect:rectNew items:self.elementList numberOfRow:2 itemHeight:30 padding:10 selectedList:@[@1,@3,@6]];
-//    [self.view addSubview:groupView];
-//    
-//    groupView.groupBlock = ^(NNGroupView *groupView, NSArray* selectedItems, NSInteger idx, BOOL isOnlyOne) {
-//        DDLog(@"_%@_%@_%@",@(selectedItems.count),@(idx),@(isOnlyOne));
-//    };
-    
     [self.view getViewLayer];
 }
 

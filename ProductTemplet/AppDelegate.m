@@ -62,17 +62,13 @@
 //    UIApplication.tabBarController.selectedIndex = 3;
 //    UIApplication.tabBarController.selectedIndex = 4;
     
-    NSString * a = [NSNumberFormatter fractionDigits:@(1.4988) min:2 max:2 roundingMode:NSNumberFormatterRoundUp];
-    NSString * b = [NSNumberFormatter fractionDigits:@(1.4988) min:2 max:3 roundingMode:NSNumberFormatterRoundUp];
-    NSString * c = [NSNumberFormatter fractionDigits:@(1.4988) min:2 max:3 roundingMode:NSNumberFormatterRoundDown];
-    NSString * e = [NSNumberFormatter fractionDigits:@(.4988) min:2 max:3 roundingMode:NSNumberFormatterRoundDown];
-    NSString * f = [NSNumberFormatter fractionDigits:@(.4) min:2 max:3 roundingMode:NSNumberFormatterRoundDown];
+    NSString *a = [NSNumberFormatter fractionDigits:@(1.4988) min:2 max:2 roundingMode:NSNumberFormatterRoundUp];
+    NSString *b = [NSNumberFormatter fractionDigits:@(1.4988) min:2 max:3 roundingMode:NSNumberFormatterRoundUp];
+    NSString *c = [NSNumberFormatter fractionDigits:@(1.4988) min:2 max:3 roundingMode:NSNumberFormatterRoundDown];
+    NSString *e = [NSNumberFormatter fractionDigits:@(.4988) min:2 max:3 roundingMode:NSNumberFormatterRoundDown];
+    NSString *f = [NSNumberFormatter fractionDigits:@(.4) min:2 max:3 roundingMode:NSNumberFormatterRoundDown];
 
-    NSString * d = @(1.595).toString;
-    
-    [d isNewerWithValue:@"1.3."];
-    [d isSameWithValue:@"2"];
-    [d isOlderWithValue:@"3"];
+    NSString *d = @(1.595).toString;
     [NSString dateTime:@"2" isEnd:false];
     
     NSString *json = NSBundle.mainBundle.infoDictionary.jsonString;

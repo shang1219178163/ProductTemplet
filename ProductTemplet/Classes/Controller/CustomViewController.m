@@ -77,8 +77,6 @@
                 view.frame = rect;
                 [self.view addSubview:view];
             }
-            
-            DDLog(@"_%@_",@([@" 21" isContainBlank]));
         }
             break;
         case 3:
