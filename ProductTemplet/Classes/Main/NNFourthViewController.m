@@ -260,16 +260,15 @@
 }
 
 - (void)requestCheck {
-    [self.api requestWithSuccessBlock:^(NNRequstManager * _Nonnull manager, id responseObject, NSError * _Nullable error) {
-        DDLog(@"%@",responseObject);
-        NNRootAppInfoModel *model = [NNRootAppInfoModel yy_modelWithJSON:responseObject];
+    [self.api requestWithSuccess:^(NNRequstManager * _Nonnull manager, NSDictionary * _Nonnull jsonData) {
+        DDLog(@"%@", jsonData);
+        NNRootAppInfoModel *model = [NNRootAppInfoModel yy_modelWithJSON:jsonData];
 
         [NNCacheManager.shared setObject:model forKey:kCacheKeyUserModel];
         NNRootAppInfoModel *userModel = [NNCacheManager.shared objectForKey:kCacheKeyUserModel];
         DDLog(userModel.description);
-    } failedBlock:^(NNRequstManager * _Nonnull manager, id _Nullable responseObject, NSError * _Nullable error) {
-        DDLog(@"%@",error.message);
-
+    } fail:^(NNRequstManager * _Nonnull manager, NSError * _Nonnull error) {
+        DDLog(@"%@", error.message);
     }];
 }
 

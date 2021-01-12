@@ -46,11 +46,11 @@ NS_ASSUME_NONNULL_BEGIN
  [POST源方法]支持上传多张图片
  @param progress 进度条代码块
  */
-- (NSURLSessionTask *)formDataPostWithURL:(NSString *)URL
-                               parameters:(NSDictionary *)parameters
-                                 progress:(NNProgressBlock _Nullable)progress
-                                  success:(NNNetworkBlock)success
-                                  failure:(NNNetworkBlock)failure;
+- (NSURLSessionTask *)Upload:(NSString *)URL
+                         parameters:(NSDictionary *)parameters
+                           progress:(NNProgressBlock _Nullable)progress
+                            success:(NNNetworkBlock)success
+                            failure:(NNNetworkBlock)failure;
 
 /**
  PUT请求

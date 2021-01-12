@@ -60,52 +60,43 @@
 - (void)requestDeviceList{
     
     [SVProgressHUD showWithStatus:kNetWorkRequesting];
-    [self.deviceListApi requestWithSuccessBlock:^(NNRequstManager * _Nonnull manager, id _Nullable responseObject, NSError * _Nullable error) {
-        DDLog(@"%@", [(NSDictionary *)responseObject jsonString]);
-        
+    [self.deviceListApi requestWithSuccess:^(NNRequstManager * _Nonnull manager, NSDictionary * _Nonnull jsonData) {
         dispatch_async(dispatch_get_global_queue(0, 0), ^{
-            PKDeviceListRootModel *rootModel = [PKDeviceListRootModel yy_modelWithJSON:responseObject];
+            PKDeviceListRootModel *rootModel = [PKDeviceListRootModel yy_modelWithJSON:jsonData];
             self.plainView.list = [rootModel.DeviceList mutableCopy];
 
             dispatch_async(dispatch_get_main_queue(), ^{
                 [SVProgressHUD dismiss];
-
                 [self.plainView.tableView reloadData];
             });
         });
-       
-    } failedBlock:^(NNRequstManager * _Nonnull manager, id _Nullable responseObject, NSError * _Nullable error) {
+    } fail:^(NNRequstManager * _Nonnull manager, NSError * _Nonnull error) {
         DDLog(@"%@", error);
-        
+
     }];
-    
 }
 
 - (void)requestLogout{
     [SVProgressHUD showWithStatus:kNetWorkRequesting];
-    [self.userLogoutApi requestWithSuccessBlock:^(NNRequstManager * _Nonnull manager, id _Nullable responseObject, NSError * _Nullable error) {
-        DDLog(@"%@", responseObject);
+    [self.userLogoutApi requestWithSuccess:^(NNRequstManager * _Nonnull manager, NSDictionary * _Nonnull jsonData) {
+        DDLog(@"%@", jsonData);
         [SVProgressHUD dismiss];
         [self.navigationController popViewControllerAnimated:true];
         
-    } failedBlock:^(NNRequstManager * _Nonnull manager, id _Nullable responseObject, NSError * _Nullable error) {
+    } fail:^(NNRequstManager * _Nonnull manager, NSError * _Nonnull error) {
         DDLog(@"%@", error);
-        
     }];
-    
 }
 
 - (void)requestSeverinfo{
     
     [SVProgressHUD showWithStatus:kNetWorkRequesting];
 
-    [self.userInfoApi requestWithSuccessBlock:^(NNRequstManager * _Nonnull manager, id _Nullable responseObject, NSError * _Nullable error) {
-        DDLog(@"%@", responseObject);
-        
-    } failedBlock:^(NNRequstManager * _Nonnull manager, id _Nullable responseObject, NSError * _Nullable error) {
-        DDLog(@"%@", error);
-        
-    }];
+    [self.userInfoApi requestWithSuccess:^(NNRequstManager * _Nonnull manager, NSDictionary * _Nonnull jsonData) {
+            
+        } fail:^(NNRequstManager * _Nonnull manager, NSError * _Nonnull error) {
+            
+        }];
 }
 
 

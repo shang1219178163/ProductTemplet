@@ -50,12 +50,8 @@
 - (void)requestLogin{
 
     [SVProgressHUD showWithStatus:kNetWorkRequesting];
-    [self.userLoginApi requestWithSuccessBlock:^(NNRequstManager * _Nonnull manager, id _Nullable responseObject, NSError * _Nullable error) {
-        DDLog(@"%@", responseObject);
-        if (![responseObject isKindOfClass:NSDictionary.class]) {
-            return ;
-        }
-        NSDictionary *dic = responseObject;
+    [self.userLoginApi requestWithSuccess:^(NNRequstManager * _Nonnull manager, NSDictionary * _Nonnull jsonData) {
+        NSDictionary *dic = jsonData;
         [NSUserDefaults setObject:dic[@"Token"] forKey:@"token"];
         [NSUserDefaults setObject:dic[@"TokenTimeout"] forKey:@"tokenTimeout"];
         [NSUserDefaults synchronize];
@@ -65,9 +61,8 @@
             vc.title = @"设备列表";
 
         }];
-    } failedBlock:^(NNRequstManager * _Nonnull manager, id _Nullable responseObject, NSError * _Nullable error) {
+    } fail:^(NNRequstManager * _Nonnull manager, NSError * _Nonnull error) {
         [SVProgressHUD showErrorWithStatus:error.description];
-
     }];
 }
 

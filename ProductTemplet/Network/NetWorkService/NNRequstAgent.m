@@ -45,17 +45,10 @@
                parameters:(id)parameters
                   success:(NNNetworkBlock)success
                   failure:(NNNetworkBlock)failure{
-    
-    DDLog(@"requestSerializer.HTTPRequestHeaders_%@",self.sessionManager.requestSerializer.HTTPRequestHeaders);
-    
-    if (![URL containsString:NNAPIConfi.serviceUrl]) {
-        URL = [NNAPIConfi.serviceUrl stringByAppendingString:URL];
-    }
-    
-    NSURLSessionTask *sessionTask = [self.sessionManager GET:URL
-                                                  parameters:parameters
-                                                     headers:nil
-                                                    progress:^(NSProgress * _Nonnull uploadProgress) {
+    NSURLSessionTask *dataTask = [self.sessionManager GET:URL
+                                               parameters:parameters
+                                                  headers:nil
+                                                 progress:^(NSProgress * _Nonnull uploadProgress) {
 
     } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         NNURLResponse * model = [self modelWithTask:task responseObject:responseObject error:nil];
@@ -67,9 +60,9 @@
         
     }];
     // 添加sessionTask
-    self.sessionTaskDic[@(sessionTask.taskIdentifier)] = sessionTask;
-    [sessionTask resume];
-    return sessionTask;
+    self.sessionTaskDic[@(dataTask.taskIdentifier)] = dataTask;
+    [dataTask resume];
+    return dataTask;
 }
 
 #pragma mark - - POST请求
@@ -99,19 +92,13 @@
 }
 
 #pragma mark - 支持上传多张图片
-- (NSURLSessionTask *)formDataPostWithURL:(NSString *)URL
-                               parameters:(NSDictionary *)parameters
-                                 progress:(NNProgressBlock)progress
-                                  success:(NNNetworkBlock)success
-                                  failure:(NNNetworkBlock)failure{
-    
-    if (_isOpenLog) DDLog(@"parameters = %@", [parameters jsonString]);
-
-    if (![URL containsString:NNAPIConfi.serviceUrl]) {
-        URL = [NNAPIConfi.serviceUrl stringByAppendingString:URL];
-    }
+- (NSURLSessionTask *)Upload:(NSString *)URL
+                         parameters:(NSDictionary *)parameters
+                           progress:(NNProgressBlock)progress
+                            success:(NNNetworkBlock)success
+                            failure:(NNNetworkBlock)failure{
     NSURLSessionTask *sessionTask = [self.sessionManager POST:URL
-                                                   parameters:parameters
+                                                   parameters:nil
                                                       headers:nil
                                     constructingBodyWithBlock:^(id<AFMultipartFormData>  _Nonnull formData) {
         
@@ -169,10 +156,6 @@
                parameters:(id)parameters
                   success:(NNNetworkBlock)success
                   failure:(NNNetworkBlock)failure{
-    if (![URL containsString:NNAPIConfi.serviceUrl]) {
-        URL = [NNAPIConfi.serviceUrl stringByAppendingString:URL];
-    }
-    
     NSURLSessionTask *sessionTask = [self.sessionManager PUT:URL
                                                   parameters:parameters
                                                      headers:nil
@@ -195,19 +178,15 @@
                   parameters:(id)parameters
                      success:(NNNetworkBlock)success
                      failure:(NNNetworkBlock)failure{
-    if (![URL containsString:NNAPIConfi.serviceUrl]) {
-        URL = [NNAPIConfi.serviceUrl stringByAppendingString:URL];
-    }
-    
     NSURLSessionTask *sessionTask = [self.sessionManager DELETE:URL
                                                      parameters:parameters
                                                         headers:nil
                                                         success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
-        NNURLResponse * model = [self modelWithTask:task responseObject:responseObject error:nil];
+        NNURLResponse *model = [self modelWithTask:task responseObject:responseObject error:nil];
         success ? success(model) : nil;
         
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
-        NNURLResponse * model = [self modelWithTask:task responseObject:nil error:error];
+        NNURLResponse *model = [self modelWithTask:task responseObject:nil error:error];
         failure ? failure(model) : nil;
     }];
     // 添加sessionTask
@@ -218,34 +197,34 @@
 
 #pragma mark - funtions
 
-+ (void)uploadFileFormData:(id <AFMultipartFormData>)formData parameters:(NSDictionary *)parameters {
-    [parameters enumerateKeysAndObjectsUsingBlock:^(NSString * _Nonnull key, id  _Nonnull obj, BOOL * _Nonnull stop) {
-        if ([obj isKindOfClass: [NSString class]]) {
-            NSData *paramData = [obj dataUsingEncoding:NSUTF8StringEncoding];
-            [formData appendPartWithFormData:paramData name:key];
-            DDLog(@"formData上传文字_%@:%@", key, obj);
-
-        } else if ([obj isKindOfClass: [NSData class]]){
-            // 默认图片的文件名
-            NSString *fileName = [NSDateFormatter stringFromDate:NSDate.date fmt:@"yyyyMMddHHmmss"];
-            NSString *imageType = [UIImage contentTypeForImageData:obj];
-            fileName = [fileName stringByAppendingFormat:@".%@", imageType];
-
-            NSString *mimeType = [NSString stringWithFormat:@"image/%@", imageType];
-            [formData appendPartWithFileData:obj
-                                        name:@"file"
-                                    fileName:fileName
-                                    mimeType:mimeType];
-            DDLog(@"formData上传图片_%@:%@ (fileName:%@_mimeType:%@)", key, @([(NSData *)obj length]), fileName, mimeType);
-        } else if ([obj isKindOfClass: [NSURL class]]){
-            NSError *error;
-            [formData appendPartWithFileURL:obj name:key error:&error];
-            if (error) {
-                DDLog(@"%@", error.debugDescription);
-            }
-        }
-    }];
-}
+//+ (void)uploadFileFormData:(id <AFMultipartFormData>)formData parameters:(NSDictionary *)parameters {
+//    [parameters enumerateKeysAndObjectsUsingBlock:^(NSString * _Nonnull key, id  _Nonnull obj, BOOL * _Nonnull stop) {
+//        if ([obj isKindOfClass: [NSString class]]) {
+//            NSData *paramData = [obj dataUsingEncoding:NSUTF8StringEncoding];
+//            [formData appendPartWithFormData:paramData name:key];
+//            DDLog(@"formData上传文字_%@:%@", key, obj);
+//
+//        } else if ([obj isKindOfClass: [NSData class]]){
+//            // 默认图片的文件名
+//            NSString *fileName = [NSDateFormatter stringFromDate:NSDate.date fmt:@"yyyyMMddHHmmss"];
+//            NSString *imageType = [UIImage contentTypeForImageData:obj];
+//            fileName = [fileName stringByAppendingFormat:@".%@", imageType];
+//
+//            NSString *mimeType = [NSString stringWithFormat:@"image/%@", imageType];
+//            [formData appendPartWithFileData:obj
+//                                        name:@"file"
+//                                    fileName:fileName
+//                                    mimeType:mimeType];
+//            DDLog(@"formData上传图片_%@:%@ (fileName:%@_mimeType:%@)", key, @([(NSData *)obj length]), fileName, mimeType);
+//        } else if ([obj isKindOfClass: [NSURL class]]){
+//            NSError *error;
+//            [formData appendPartWithFileURL:obj name:key error:&error];
+//            if (error) {
+//                DDLog(@"%@", error.debugDescription);
+//            }
+//        }
+//    }];
+//}
 
 
 
@@ -253,17 +232,9 @@
  返回结果模型化处理
  */
 - (NNURLResponse *)modelWithTask:(NSURLSessionDataTask *)task responseObject:(id )responseObject error:(NSError *)error{
-    if (_isOpenLog) {
-        if (error) {
-            DDLog(@"error_%@_",error);
-        } else {
-            DDLog(@"responseObject_%@_",[responseObject jsonString]);
-        }
-    }
-    
     [self.sessionTaskDic removeObjectForKey:@(task.taskIdentifier)];
     
-    NNURLResponse * model = NNURLResponseFromParam(task.currentRequest, task.response, responseObject, error);
+    NNURLResponse *model = NNURLResponseFromParam(task.currentRequest, task.response, responseObject, error);
     return model;
 }
 

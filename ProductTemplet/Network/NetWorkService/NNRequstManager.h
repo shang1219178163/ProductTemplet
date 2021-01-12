@@ -54,32 +54,38 @@ typedef NS_ENUM (NSInteger, NNRequestCode){
 /// 从缓存读取网络结果
 - (NSDictionary *_Nullable)jsonFromCache;
 
+- (BOOL)needLogin;
+
+- (BOOL)printLog;
+
 @end
 
 
 @protocol NNRequestManagerResultDelegate <NSObject>
 
 @required
-- (void)manager:(NNRequstManager *_Nonnull)manager successDic:(NSDictionary *_Nullable)dic failError:(NSError *_Nullable)error;
+- (void)managerAPISuccess:(NNRequstManager *_Nonnull)manager dic:(NSDictionary *_Nonnull)dic;
+- (void)managerAPIFail:(NNRequstManager *_Nonnull)manager error:(NSError *_Nonnull)error;
 
 @end
 
 NS_ASSUME_NONNULL_BEGIN
 
 /// 网络请求结果
-typedef void(^NNRequestBlock)(NNRequstManager *manager, id _Nullable responseObject, NSError *_Nullable error);
+typedef void(^NNRequestSuccessBlock)(NNRequstManager *manager, NSDictionary *jsonData);
+typedef void(^NNRequestFailedBlock)(NNRequstManager *manager, NSError *error);
+
 
 @interface NNRequstManager : NSObject
 
 @property(nonatomic, weak) id<NNRequestManagerProtocol> child;
 @property(nonatomic, weak) id<NNRequestManagerResultDelegate> delegate;
-@property(nonatomic, copy) NNRequestBlock successBlock;
-@property(nonatomic, copy) NNRequestBlock failureBlock;
-@property(nonatomic, copy) NNRequestBlock requestBlock;
+@property(nonatomic, copy) NNRequestSuccessBlock successBlock;
+@property(nonatomic, copy) NNRequestFailedBlock failureBlock;
 
 @property(nonatomic, assign, readonly) BOOL isLoading;
 
-- (NSURLSessionTask *)requestWithSuccessBlock:(NNRequestBlock)successBlock failedBlock:(NNRequestBlock)failureBlock;
+- (NSURLSessionTask *)requestWithSuccess:(NNRequestSuccessBlock)successBlock fail:(NNRequestFailedBlock)failureBlock;
 
 - (void)cancelAllRequest;
 

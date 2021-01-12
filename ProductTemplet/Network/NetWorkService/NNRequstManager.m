@@ -50,7 +50,7 @@
     return mdic.copy;
 }
 
-- (NSURLSessionTask *)requestWithSuccessBlock:(NNRequestBlock)successBlock failedBlock:(NNRequestBlock)failureBlock{
+- (NSURLSessionTask *)requestWithSuccess:(NNRequestSuccessBlock)successBlock fail:(NNRequestFailedBlock)failureBlock{
     self.successBlock = successBlock;
     self.failureBlock = failureBlock;
     return [self startRequest];
@@ -62,10 +62,10 @@
     if (![self.child validateParams]) {
         NSError *error = [NSError errorWithMessage:@"validateParams参数校验失败" code:NNRequestCodeParamsError obj:nil];
         if (self.delegate && [self.delegate conformsToProtocol:@protocol(NNRequestManagerProtocol)]) {
-            [self.delegate manager:self successDic:nil failError:error];
+            [self.delegate managerAPIFail:self error:error];
         }
         if (self.failureBlock) {
-            self.failureBlock(self, nil, error);
+            self.failureBlock(self, error);
         }
         return task;
     }
@@ -75,10 +75,10 @@
         [self printLog:cacheDic isSend:false];
         
         if (self.delegate && [self.delegate conformsToProtocol:@protocol(NNRequestManagerProtocol)]) {
-            [self.delegate manager:self successDic:cacheDic failError:nil];
+            [self.delegate managerAPISuccess:self dic:cacheDic];
         }
         if (self.successBlock) {
-            self.successBlock(self, cacheDic, nil);
+            self.successBlock(self, cacheDic);
         }
         return task;
     }
@@ -89,17 +89,20 @@
     
     self.isLoading = true;
     //请求日志
-    NSString *urlString = [NNAPIConfi.serviceUrl stringByAppendingPathComponent:self.child.requestURI];
+    NSString *urlString = self.child.requestURI;
+    if (![urlString hasPrefix:@"http"]) {
+        urlString = [NNAPIConfi.serviceUrl stringByAppendingString:urlString];
+    }
+
     NSDictionary *params = [NNRequstManager paramsFromOrigin:self.child.requestParams];
-    
     [self printLog:params isSend:true];
     
     id token = [NSUserDefaults objectForKey:@"token"];
     if (token) {
-        [NNRequstAgent.shared setValue:token forHTTPHeaderField:@"Authorization"];
+        [NNRequstAgent.shared setValue:token forHTTPHeaderField:@"token"];
     }
     
-    NSURLSessionTask * task = nil;
+    NSURLSessionTask *task = nil;
     @weakify(self);
     switch (self.child.requestType) {
         case NNRequestTypePost:
@@ -115,12 +118,11 @@
                 [self didFailureOfResponse:response];
                 
             }];
-
         }
             break;
         case NNRequestTypeFormDataPost:
        {
-           task = [NNRequstAgent.shared formDataPostWithURL:urlString parameters:params progress:nil success:^(NNURLResponse * _Nonnull response) {
+           task = [NNRequstAgent.shared Upload:urlString parameters:params progress:nil success:^(NNURLResponse * _Nonnull response) {
                @strongify(self);
                self.isLoading = false;
                [self didSuccessOfResponse:response];
@@ -226,7 +228,6 @@
     if ([jsonDic.allKeys containsObject:@"message"]) {
         message = jsonDic[@"message"];
     }
-    DDLog(@"_%@_%@_", @(code), message);
     
     BOOL isFailCode = [jsonDic.allKeys containsObject:@"code"] && code != 1;
     BOOL isFailStatus = [jsonDic.allKeys containsObject:@"status"] && ![jsonDic[@"status"] isEqualToString:@"success"];
@@ -241,10 +242,10 @@
 
 //    DDLog(@"delegate:%@",self.delegate);
     if (self.delegate && [self.delegate conformsToProtocol:@protocol(NNRequestManagerProtocol)]) {
-        [self.delegate manager:self successDic:jsonDic failError:nil];
+        [self.delegate managerAPISuccess:self dic:jsonDic];
     }
     if (self.successBlock) {
-        self.successBlock(self, jsonDic, nil);
+        self.successBlock(self, jsonDic);
     }
     //缓存数据
     if ([self.child respondsToSelector:@selector(saveJsonOfCache:)]) {
@@ -276,16 +277,13 @@
         }
     }
     
-    NSError * error = model.error ? : model.errorOther;
+    NSError *error = model.error ? : model.errorOther;
     if (self.delegate && [self.delegate conformsToProtocol:@protocol(NNRequestManagerProtocol)]) {
-        [self.delegate manager:self successDic:nil failError:error];
+        [self.delegate managerAPIFail:self error:error];
     }
     
     if (self.failureBlock) {
-        self.failureBlock(self, nil, error);
-    }
-    if (self.requestBlock) {
-        self.requestBlock(self, nil, error);
+        self.failureBlock(self, error);
     }
 }
 
@@ -293,7 +291,13 @@
 #pragma mark - funtions
 
 - (void)printLog:(NSDictionary *)dic isSend:(BOOL)isSend{
-    NSString *urlString = [NSString stringWithFormat:@"%@%@",NNAPIConfi.serviceUrl, [self.child requestURI]];
+    if (!self.child.printLog) {
+        return;
+    }
+    NSString *urlString = [self.child requestURI];
+    if (![urlString hasPrefix:@"http"]) {
+        urlString = [NSString stringWithFormat:@"%@%@", NNAPIConfi.serviceUrl, urlString];
+    }
     if (isSend) {
         [NNLog logRequestInfoWithURI:urlString params:dic];
     } else {

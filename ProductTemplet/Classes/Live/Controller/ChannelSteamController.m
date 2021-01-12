@@ -69,32 +69,30 @@
     [SVProgressHUD showWithStatus:kNetWorkRequesting];
     
     self.channelstreamApi.ID = self.deviceModel.ID;
-    [self.channelstreamApi requestWithSuccessBlock:^(NNRequstManager * _Nonnull manager, id _Nullable responseObject, NSError * _Nullable error) {
-        //        DDLog(@"%@", responseObject);
+    [self.channelstreamApi requestWithSuccess:^(NNRequstManager * _Nonnull manager, NSDictionary * _Nonnull jsonData) {
         dispatch_async(dispatch_get_global_queue(0, 0), ^{
-            DDLog(@"%@", [(NSDictionary *)responseObject jsonString]);
-            PKChannelListRootModel *rootModel = [PKChannelListRootModel yy_modelWithJSON:responseObject];
+            DDLog(@"%@", [jsonData jsonString]);
+            PKChannelListRootModel *rootModel = [PKChannelListRootModel yy_modelWithJSON:jsonData];
             self.rootModel = rootModel;
             dispatch_async(dispatch_get_main_queue(), ^{
                 [SVProgressHUD dismiss];
-                self.textView.text = [(NSDictionary *)responseObject jsonString];
+                self.textView.text = [(NSDictionary *)jsonData jsonString];
 
             });
         });
-        
-    } failedBlock:^(NNRequstManager * _Nonnull manager, id _Nullable responseObject, NSError * _Nullable error) {
+    } fail:^(NNRequstManager * _Nonnull manager, NSError * _Nonnull error) {
         DDLog(@"%@", error);
-        
+
     }];
     
     self.touchcChannelstreamApi.ID = self.deviceModel.ID;
-    [self.touchcChannelstreamApi requestWithSuccessBlock:^(NNRequstManager * _Nonnull manager, id _Nullable responseObject, NSError * _Nullable error) {
-        DDLog(@"%@", responseObject);
-     
-    } failedBlock:^(NNRequstManager * _Nonnull manager, id _Nullable responseObject, NSError * _Nullable error) {
-        DDLog(@"%@", error);
-        
-    }];
+    [self.touchcChannelstreamApi requestWithSuccess:^(NNRequstManager * _Nonnull manager, NSDictionary * _Nonnull jsonData) {
+        DDLog(@"%@", jsonData);
+
+        } fail:^(NNRequstManager * _Nonnull manager, NSError * _Nonnull error) {
+            DDLog(@"%@", error);
+
+        }];
 }
 
 #pragma mark -lazy

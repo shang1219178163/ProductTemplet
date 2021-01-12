@@ -48,26 +48,18 @@
     [SVProgressHUD showWithStatus:kNetWorkRequesting];
 
     self.channelListApi.ID = self.deviceModel.ID;
-    
-    [self.channelListApi requestWithSuccessBlock:^(NNRequstManager * _Nonnull manager, id _Nullable responseObject, NSError * _Nullable error) {
-        //        DDLog(@"%@", responseObject);
-        
+    [self.channelListApi requestWithSuccess:^(NNRequstManager * _Nonnull manager, NSDictionary * _Nonnull jsonData) {
         dispatch_async(dispatch_get_global_queue(0, 0), ^{
-            DDLog(@"%@", [(NSDictionary *)responseObject jsonString]);
-            PKChannelListRootModel *rootModel = [PKChannelListRootModel yy_modelWithJSON:responseObject];
+            PKChannelListRootModel *rootModel = [PKChannelListRootModel yy_modelWithJSON:jsonData];
             self.plainView.list = rootModel.EasyDarwin.Body.Channels.mutableCopy;
             
             dispatch_async(dispatch_get_main_queue(), ^{
                 [SVProgressHUD dismiss];
-
                 [self.plainView.tableView reloadData];
-                
             });
         });
-        
-    } failedBlock:^(NNRequstManager * _Nonnull manager, id _Nullable responseObject, NSError * _Nullable error) {
+    } fail:^(NNRequstManager * _Nonnull manager, NSError * _Nonnull error) {
         DDLog(@"%@", error);
-        
     }];
 }
 
