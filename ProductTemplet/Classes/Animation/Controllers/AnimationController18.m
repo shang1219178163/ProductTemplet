@@ -87,7 +87,7 @@
             [self.containerView addSubview:toView];
         }
 
-        CAShapeLayer * toViewMask = [CAShapeLayer layerPath:bigCircleBP];
+        CAShapeLayer * toViewMask = [CAShapeLayer layerWithPath:bigCircleBP];
         CABasicAnimation *toViewMaskAnim = [CABasicAnimation animKeyPath:@"path" duration:1.5 fromValue:(id)smallCircleBP.CGPath toValue:(id)bigCircleBP.CGPath];
         [toViewMask addAnimation:toViewMaskAnim forKey:@"path"];
         toView.layer.mask = toViewMask;
@@ -97,7 +97,7 @@
         [self.containerView sendSubviewToBack:toView];
 
         //1.把 页面一 加入到视图 同时挪到当前视图后面
-        CAShapeLayer * fromViewMask = [CAShapeLayer layerPath:smallCircleBP];
+        CAShapeLayer * fromViewMask = [CAShapeLayer layerWithPath:smallCircleBP];
         CABasicAnimation *fromViewMaskAnim = [CABasicAnimation animKeyPath:@"path" duration:1.5 fromValue:(id)bigCircleBP.CGPath toValue:(id)smallCircleBP.CGPath];
         [fromViewMask addAnimation:fromViewMaskAnim forKey:@"path"];
         fromView.layer.mask = fromViewMask;

@@ -185,12 +185,11 @@
             UITableViewSwitchCell* cell = [UITableViewSwitchCell cellWithTableView:tableView];
             cell.labelLeft.text = value0;
 //            cell.switchCtrl.on = NO;
-            [cell.switchView.switchCtl addActionHandler:^(id obj, id item, NSInteger idx) {
-                UISwitch *view = item;
-                DDLog(@"_____%@",@(view.isOn));
-                //                DDLog(@"%@,%ld,%ld",item,item.selectedSegmentIndex,idx)
+            [cell.switchView.switchCtl addActionHandler:^(UISwitch * _Nonnull sender) {
+                DDLog(@"_____%@",@(sender.isOn));
                 
-            }];
+            } forControlEvents:UIControlEventValueChanged];
+
 //              [cell getViewLayer];
             return cell;
         }

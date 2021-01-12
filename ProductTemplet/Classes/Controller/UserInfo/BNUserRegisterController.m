@@ -154,10 +154,10 @@
             [btn setTitle:@"获取验证码" forState:UIControlStateNormal];
             [btn setTitleColor:UIColor.themeColor forState:UIControlStateNormal];
             btn.titleLabel.adjustsFontSizeToFitWidth = YES;
-            [btn addActionHandler:^(id obj, id item, NSInteger idx) {
+            [btn addActionHandler:^(UIButton * _Nonnull sender) {
 
                 
-            }];
+            } forControlEvents:UIControlEventTouchUpInside];
             
             btn;
         });
@@ -172,9 +172,9 @@
             [btn setTitle:@"提交" forState:UIControlStateNormal];
             [btn setTitleColor:UIColor.whiteColor forState:UIControlStateNormal];
             [btn setBackgroundImage:UIImageColor(UIColor.themeColor) forState:UIControlStateNormal];
-            [btn addActionHandler:^(id obj, id item, NSInteger idx) {
-                
-            }];
+            [btn addActionHandler:^(UIButton * _Nonnull sender) {
+
+            } forControlEvents:UIControlEventTouchUpInside];
             
             btn;
         });

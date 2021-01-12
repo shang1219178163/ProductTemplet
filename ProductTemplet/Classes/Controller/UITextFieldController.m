@@ -27,9 +27,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    [self setupExtendedLayout];
 //    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc]initWithTitle:@"Right" style:UIBarButtonItemStyleDone target:nil action:nil];
     self.navigationItem.rightBarButtonItem = [UIBarButtonItem createItem:@"Right" style:UIBarButtonItemStyleDone];
-
     @weakify(self);
     [self.navigationItem.rightBarButtonItem addActionBlock:^(UIBarButtonItem * _Nonnull item) {
         @strongify(self);
@@ -42,6 +42,11 @@
     [self.view addSubview:self.textFieldPwdNew];
     [self.view addSubview:self.textFieldOne];
 
+    self.textField.backgroundColor = UIColor.systemGreenColor;
+    self.textFieldPwd.backgroundColor = UIColor.systemOrangeColor;
+    self.textFieldPwdNew.backgroundColor = UIColor.systemYellowColor;
+    self.textFieldOne.backgroundColor = UIColor.systemTealColor;
+
 //    UIImageView *leftView = [[UIImageView alloc]initWithFrame:CGRectMake(0, 0, 40, 40)];
 //    leftView.backgroundColor = UIColor.cyanColor;
 //    self.textField.leftView = leftView;
@@ -51,60 +56,60 @@
 //    rightView.backgroundColor = UIColor.orangeColor;
 //    self.textField.rightView = rightView;
 //    self.textField.rightViewMode = UITextFieldViewModeAlways;
-
-//    [rightView addActionHandler:^(id obj, id item, NSInteger idx) {
-//        UITextField * textField = ((UIView *)item).superview;
+//
+//    [rightView addGestureTap:^(UITapGestureRecognizer * _Nonnull reco) {
+//        UITextField *textField = reco.view.superview;
+//        [textField showHistory];
+//    }];
+//    
+//    [leftView addGestureTap:^(UITapGestureRecognizer * _Nonnull reco) {
+//        UITextField * textField = reco.view.superview;
 //        [textField showHistory];
 //
 //    }];
-    
-//    [leftView addActionHandler:^(id obj, id item, NSInteger idx) {
-//        UITextField * textField = ((UIView *)item).superview;
-//        [textField showHistory];
-//
-//    }];
-    
-    [self.view getViewLayer];
     
     self.textField.identify = @"one";
-    NSDictionary * dic = @{@"one":  @{@"user1":   @"pwd_1",
+    NSDictionary *dic = @{@"one":  @{@"user1":   @"pwd_1",
                                       @"user2":   @"pwd_2",
                                       @"user3":   @"pwd_3",
                                    },
                            };
-
-    [NSUserDefaults.standardUserDefaults setObject:dic forKey:kDeafult_textFieldHistory];
+    [NSUserDefaults.standardUserDefaults setObject:dic forKey:kTextFieldHistory];
     [NSUserDefaults.standardUserDefaults synchronize];
 
-//    [self.textField showHistory];
     [self.textField addObserver:self forKeyPath:@"text" options:NSKeyValueObservingOptionNew context:nil];
-    
-//    [self.view addGestureRecognizer:[UITapGestureRecognizer actionBlock:^(UIGestureRecognizer * _Nonnull reco) {
-//        DDLog(@"%@", reco)
-//
-//    }]];
-    
-    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] init];
-    tap.numberOfTapsRequired = 1;
-    tap.numberOfTouchesRequired = 1;
-    [tap addActionBlock:^(UIGestureRecognizer * _Nonnull reco) {
-        DDLog(@"%@", reco);
-    }];
-    
-    [self.view addGestureRecognizer:tap];
-    
 }
 
 - (void)viewDidLayoutSubviews{
     [super viewDidLayoutSubviews];
     
-//    [self.navigationItem.leftBarButtonItem addActionBlock:^(UIBarButtonItem * _Nonnull item) {
-//        DDLog(@"%@", item);
-//    }];
-//    [self.backBtn addActionHandler:^(UIControl * _Nonnull control) {
-//        DDLog(@"%@", control);
-//
-//    } forControlEvents:UIControlEventTouchUpInside];
+    [self.textField makeConstraints:^(MASConstraintMaker *make) {
+        make.top.equalTo(self.view).offset(80);
+        make.left.equalTo(self.view).offset(10);
+        make.right.equalTo(self.view).offset(-10);
+        make.height.equalTo(35);
+    }];
+    
+    [self.textFieldPwd makeConstraints:^(MASConstraintMaker *make) {
+        make.top.equalTo(self.textField.mas_bottom).offset(10);
+        make.left.equalTo(self.view).offset(10);
+        make.right.equalTo(self.view).offset(-10);
+        make.height.equalTo(35);
+    }];
+    
+    [self.textFieldPwdNew makeConstraints:^(MASConstraintMaker *make) {
+        make.top.equalTo(self.textFieldPwd.mas_bottom).offset(10);
+        make.left.equalTo(self.view).offset(10);
+        make.right.equalTo(self.view).offset(-10);
+        make.height.equalTo(35);
+    }];
+    
+    [self.textFieldOne makeConstraints:^(MASConstraintMaker *make) {
+        make.top.equalTo(self.textFieldPwdNew.mas_bottom).offset(10);
+        make.left.equalTo(self.view).offset(10);
+        make.right.equalTo(self.view).offset(-10);
+        make.height.equalTo(35);
+    }];
 }
 
 -(void)viewWillAppear:(BOOL)animated{
@@ -116,9 +121,8 @@
 #pragma mark -observeValueForKeyPath
 - (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary<NSKeyValueChangeKey,id> *)change context:(void *)context{
     
-    NSDictionary * dic = [NSUserDefaults.standardUserDefaults objectForKey:kDeafult_textFieldHistory];
-    NSDictionary * data = dic[@"one"];
-    
+    NSDictionary *dic = [NSUserDefaults.standardUserDefaults objectForKey:kTextFieldHistory];
+    NSDictionary *data = dic[@"one"];
     self.textFieldPwd.text = data[self.textField.text];
 }
 
@@ -132,7 +136,7 @@
     NSURLSessionDataTask *dataTask = [NSURLSession sendAsynRequest:request handler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
         if (data) {
             NSDictionary *dic = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableLeaves error:nil];
-            DDLog(@"%@",dic.allKeys);
+//            DDLog(@"%@",dic.allKeys);
         }
     }];
     [dataTask resume];
@@ -143,10 +147,9 @@
 - (NNTextFieldOne *)textField{
     if (!_textField) {
         _textField = [[NNTextFieldOne alloc]initWithFrame:CGRectMake(20, 20, kScreenWidth - 40, 40)];
-        _textField.backgroundColor = UIColor.greenColor;
         _textField.clearButtonMode = UITextFieldViewModeAlways;
         [_textField showHistoryWithImage:@"click" handlder:^(NNTextFieldOne * textField, UIImageView * imgView) {
-            NSString * selectorName = CGRectGetHeight(textField.historyTableView.frame) < 5 ? @"showHistory"  :   @"hideHistroy";
+            NSString *selectorName = CGRectGetHeight(textField.historyTableView.frame) < 5 ? @"showHistory"  :   @"hideHistroy";
             SEL selector = NSSelectorFromString(selectorName);
             [textField performSelectorOnMainThread:selector withObject:nil waitUntilDone:NO];
 
@@ -162,8 +165,7 @@
             textField.tag = kTAG_TEXTFIELD+1;
             textField.placeholder = @"  请输入密码";
             
-            textField.backgroundColor = UIColor.greenColor;
-            //            textField.clearsOnBeginEditing = YES;
+//            textField.clearsOnBeginEditing = YES;
             textField.clearButtonMode = UITextFieldViewModeAlways;
             textField.secureTextEntry = YES;
             
@@ -172,8 +174,7 @@
             [btn setImage:UIImageNamed(@"icon_close") forState:UIControlStateNormal];
             [btn setImage:UIImageNamed(@"icon_open") forState:UIControlStateSelected];
             [btn setContentEdgeInsets:UIEdgeInsetsMake(5, 5, 5, 5)];
-            [btn addActionHandler:^(UIControl * _Nonnull control) {
-                UIButton * sender = (UIButton *)control;
+            [btn addActionHandler:^(UIButton * _Nonnull sender) {
                 sender.selected = !sender.selected;
 
                 NSString *tempPwdStr = textField.text;
@@ -198,7 +199,6 @@
             NNTextFieldOne *textField = [NNTextFieldOne createPwdRect:CGRectMake(20, 140, kScreenWidth - 40, 40)
                                                                 image:[UIImage imageNamed:@"icon_close"]
                                                         imageSelected:[UIImage imageNamed:@"icon_open"]];
-            
 //            NNTextFieldOne * textField = [[NNTextFieldOne alloc]initWithFrame:CGRectMake(20, 140, kScreenWidth - 40, 40)];
 //            textField.placeholder = @"  请输入密码";
 //            textField.backgroundColor = UIColor.greenColor;
@@ -243,13 +243,11 @@
 }
 
 - (void)handleActionTapGesture:(UITapGestureRecognizer *)reco{
-    DDLog(@"%@", reco.view);
-    
-    UIImageView * sender = (UIImageView *)reco.view;
+    UIImageView *sender = (UIImageView *)reco.view;
     sender.selected = !sender.selected;
     sender.image = UIImageNamed(sender.selected == false ? @"icon_close" : @"icon_open");
     
-    UITextField * textField = self.textFieldPwdNew;
+    UITextField *textField = self.textFieldPwdNew;
     NSString *tempPwdStr = textField.text;
     textField.text = @""; // 这句代码可以防止切换的时候光标偏移
     textField.secureTextEntry = !sender.selected;
@@ -260,9 +258,9 @@
 -(UITextField *)textFieldOne{
     if (!_textFieldOne) {
         _textFieldOne = ({
-            UITextField * textField = [UITextField createPwdRect:CGRectMake(20, 200, kScreenWidth - 40, 40)
-                                                           image:[UIImage imageNamed: @"icon_close"]
-                                                   imageSelected:[UIImage imageNamed: @"icon_open"]];
+            UITextField *textField = [UITextField createPwdRect:CGRectMake(20, 200, kScreenWidth - 40, 40)
+                                                          image:[UIImage imageNamed:@"icon_close"]
+                                                  imageSelected:[UIImage imageNamed:@"icon_open"]];
             
             textField;
         });

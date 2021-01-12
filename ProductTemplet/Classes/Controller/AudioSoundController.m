@@ -1,5 +1,6 @@
 
 #import "AudioSoundController.h"
+#import <NSString+Helper.h>
 
 @implementation AudioSoundController
 
@@ -31,7 +32,7 @@
     UITableViewCell *cell = [UITableViewCell cellWithTableView:tableView identifier:identifier style:UITableViewCellStyleSubtitle];
 
     cell.textLabel.text = itemList.firstObject;
-    cell.detailTextLabel.text = [itemList.lastObject deleteWhiteSpaceBeginEnd];
+    cell.detailTextLabel.text = ((NSString *)itemList.lastObject).trimmed;
 
     return cell;
 }

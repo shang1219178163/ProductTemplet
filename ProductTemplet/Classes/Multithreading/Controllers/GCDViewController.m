@@ -35,9 +35,8 @@
     // Do any additional setup after loading the view.
     
     CGRect rect = CGRectMake(20, 20, kScreenWidth - 20*2, 0);
-    UIView * containView = [UIView createViewRect:rect items:self.itemList numberOfRow:2 itemHeight:30 padding:10 type:@0 handler:^(id obj, id item, NSInteger idx) {
-        [self handleActionBtn:item];
-        
+    UIView * containView = [UIView createViewRect:rect items:self.itemList numberOfRow:2 itemHeight:30 padding:10 handler:^(UIButton *sender) {
+        [self handleActionBtn:sender];
     }];
     
     containView.backgroundColor = UIColor.orangeColor;

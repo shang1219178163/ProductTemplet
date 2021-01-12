@@ -76,9 +76,6 @@
 //    .nn_present(true, ^{
 //
 //    });
-    
-    
-//    [alertVC present:true completion:nil];
 }
 
 - (void)viewDidDisappear:(BOOL)animated {
@@ -232,7 +229,7 @@
     
     NSArray *list = @[@"1111", @"2222", @"3333", @"4444"];
     DDLog(@"listsorted_%@", list.sorted);
-    DDLog(@"listsorted.reversed_%@", list.sorted.reversed);
+    DDLog(@"listsorted.reversed_%@", list.reversed);
     
     NSArray *listOne = [list map:^id _Nonnull(id  _Nonnull obj, NSUInteger idx) {
         return [(NSString *)obj substringToIndex:idx];
@@ -284,12 +281,12 @@
     DDLog(@"list3_%@", list3);
     
     array = @[@1, @3, @5, @7, @9];
-    NSNumber *result = [array reduce:@(0) block:^NSNumber * _Nonnull(NSNumber * _Nonnull result, NSNumber * _Nonnull obj) {
+    NSNumber *result = [array reduce:@(0) transform:^NSNumber * _Nonnull(NSNumber * _Nonnull result, NSNumber * _Nonnull obj) {
         return @(result.floatValue * 10 + obj.floatValue);
     }];
     DDLog(@"result_%@", result);
     
-    NSNumber *result1 = [array reduce:@(0) block:^NSNumber * _Nonnull(NSNumber * _Nonnull result, NSNumber * _Nonnull obj) {
+    NSNumber *result1 = [array reduce:@(0) transform:^NSNumber * _Nonnull(NSNumber * _Nonnull result, NSNumber * _Nonnull obj) {
         return @(result.floatValue + obj.floatValue);
     }];
     DDLog(@"result1_%@", result1);

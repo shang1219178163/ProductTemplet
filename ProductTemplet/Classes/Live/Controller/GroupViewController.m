@@ -85,7 +85,7 @@
             break;
         case 2://白色背景灰色字体无边框
         {
-            [btn setTitleColor:UIColor.titleSubColor forState:UIControlStateNormal];
+            [btn setTitleColor:UIColor.titleColor9 forState:UIControlStateNormal];
         }
             break;
         case 3://地图定位按钮一类

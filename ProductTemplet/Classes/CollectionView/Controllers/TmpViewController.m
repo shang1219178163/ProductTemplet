@@ -41,7 +41,7 @@
     
     [self.view getViewLayer];
     
-    [self.view addActionHandler:^(id obj, id item, NSInteger idx) {
+    [self.view addGestureTap:^(UITapGestureRecognizer * _Nonnull reco) {
         DDLog(@"addActionHandler");
         
     }];
@@ -64,14 +64,18 @@
     [self.view addSubview:fromView];
     
     [CATransaction flush];
-    [fromView addActionHandler:^(id obj, id item, NSInteger idx) {
+    
+    @weakify(fromView)
+    [fromView addGestureTap:^(UITapGestureRecognizer * _Nonnull reco) {
+        @strongify(fromView);
         [UIView transitionFromView:fromView toView:toView duration:0.4f options:UIViewAnimationOptionTransitionFlipFromLeft completion:NULL];
         
 //        [self updateBtnFrameIsOpen:YES];
         
     }];
-    
-    [toView addActionHandler:^(id obj, id item, NSInteger idx) {
+    @weakify(toView)
+    [toView addGestureTap:^(UITapGestureRecognizer * _Nonnull reco) {
+        @strongify(toView);
         [UIView transitionFromView:toView toView:fromView duration:0.4f options:UIViewAnimationOptionTransitionFlipFromRight completion:NULL];
 //        [self updateBtnFrameIsOpen:NO];
 

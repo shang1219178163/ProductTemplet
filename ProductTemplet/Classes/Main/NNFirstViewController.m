@@ -169,20 +169,18 @@
             
             rect = CGRectMake(x, y, w, h);
             
-            UIView *btnView = [[UIView alloc]init];
-            btnView.tag = kTAG_VIEW+i+50;
-            [backgroudView addSubview:btnView];
+            UIView *sender = [[UIView alloc]init];
+            sender.tag = kTAG_VIEW+i+50;
+            [backgroudView addSubview:sender];
             
             if (i < rowCount) {
-                [btnView.layer addSublayer:[btnView createLayerType:@0]];//上线条
-                
+                [sender.layer addSublayer:[sender createLayerType:@0]];//上线条
             }
-    
             
-            [btnView.layer addSublayer:[btnView createLayerType:@2]];//上线条
-            [btnView.layer addSublayer:[btnView createLayerType:@3]];//上线条
+            [sender.layer addSublayer:[sender createLayerType:@2]];//上线条
+            [sender.layer addSublayer:[sender createLayerType:@3]];//上线条
             
-            [btnView addActionHandler:^(id obj, id item, NSInteger idx) {
+            [sender addGestureTap:^(UITapGestureRecognizer * _Nonnull reco) {
                 [self.navigationController pushVC:array[2] animated:true block:^(__kindof UIViewController * _Nonnull vc) {
                     vc.title = array[0];
                 }];

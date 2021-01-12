@@ -51,7 +51,7 @@
     [self.view addSubview:self.imgView];
     
     @weakify(self)
-    [self.imgView addActionHandler:^(id obj, id item, NSInteger idx) {
+    [self.imgView addGestureTap:^(UITapGestureRecognizer * _Nonnull reco) {
         @strongify(self)
         self.imgView.tintColor = UIColor.randomColor;
         self.imgView.image = [self.imgView.image imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate];
@@ -125,18 +125,26 @@
 //    [btn setBackgroundImage:UIImageNamed(@"Item_first_H") forState:UIControlStateHighlighted];
     [btn setTitle:@"按钮点击事件" forState:UIControlStateNormal];
     [btn setTitleColor:UIColor.themeColor forState:UIControlStateNormal];
-    [self.view addSubview:btn];
-    [btn addActionHandler:^(UIControl * _Nonnull obj) {
-        DDLog(btn.titleLabel.text)
+    btn.titleLabel.numberOfLines = 0;
+    [btn addActionHandler:^(UIButton * _Nonnull sender) {
+        DDLog(sender.titleLabel.text)
         
     } forControlEvents:UIControlEventTouchUpInside];
-    btn.titleLabel.numberOfLines = 0;
-
+    [self.view addSubview:btn];
+        
     
-    NSMutableAttributedString * attStr_N = [btn.titleLabel setContent:@"钮点击事" attDic:AttributeDict(@5)];
-    NSMutableAttributedString * attStr_H = [btn.titleLabel setContent:@"钮点击事" attDic:AttributeDict(@2)];
-    [btn setAttributedTitle:attStr_N forState:UIControlStateNormal];
-    [btn setAttributedTitle:attStr_H forState:UIControlStateHighlighted];
+    NSMutableAttributedString *attStrN = @"正常显示"
+    .matt
+    .color(UIColor.systemBlueColor);
+    
+    NSMutableAttributedString *attStrH = @"高亮显示"
+    .matt
+    .color(UIColor.systemRedColor)
+    .bgColor(UIColor.systemOrangeColor)
+    .underline(NSUnderlineStyleSingle, UIColor.systemGreenColor);
+    
+    [btn setAttributedTitle:attStrN forState:UIControlStateNormal];
+    [btn setAttributedTitle:attStrH forState:UIControlStateHighlighted];
     
     UILabel * label = [[UILabel alloc]init];
     label.frame = CGRectMake(btn.maxX+20, btn.minY, 100, 100);
@@ -162,6 +170,13 @@
     self.sliderControlView.frame = CGRectMake(kX_GAP, CGRectGetMaxY(self.label.frame), kScreenWidth - kX_GAP*2, 40);
     [self.view addSubview:self.sliderControlView];
     
+    
+    UIImage *image = [YYImage imageNamed:@"loading.gif"];
+    UIImageView *imgViewLoading = [[YYAnimatedImageView alloc] initWithImage:image];
+    imgViewLoading.frame = CGRectMake(10, 10, 40, 40);
+    [self.view addSubview:imgViewLoading];
+    
+    
 //    [self.view getViewLayer];
     
     [NSUserDefaults.standardUserDefaults setObject:@"nil" forKey:@"1111"];
@@ -174,22 +189,10 @@
 -(void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
     
-    UIImage *image = [YYImage imageNamed:@"loading.gif"];
-    UIImageView *imgView = [[YYAnimatedImageView alloc] initWithImage:image];
-    imgView.frame = CGRectMake(10, 10, 40, 40);
-    [self.view addSubview:imgView];
-    
-    [self.api requestWithSuccessBlock:^(NNRequstManager * _Nonnull manager, id responseObject, NSError * _Nullable error) {
-        DDLog(@"%@",responseObject);
-        NNRootAppInfoModel *model = [NNRootAppInfoModel yy_modelWithJSON:responseObject];
+    [self test];
+//    [self requestCheck];
 
-        [NNCacheManager.shared setObject:model forKey:kCacheKeyUserModel];
-        NNRootAppInfoModel *userModel = [NNCacheManager.shared objectForKey:kCacheKeyUserModel];
-        DDLog(userModel.description);
-    } failedBlock:^(NNRequstManager * _Nonnull manager, id _Nullable responseObject, NSError * _Nullable error) {
-        DDLog(@"%@",error.message);
-
-    }];
+    [self testAtt];
 }
 
 -(void)viewDidAppear:(BOOL)animated{
@@ -202,6 +205,7 @@
     // Dispose of any resources that can be recreated.
 }
 
+#pragma mark -funtions
 - (void)flashAnimationMask:(UILabel *)label{
     CAGradientLayer *graLayer = CAGradientLayer.layer;
     graLayer.frame = label.bounds;
@@ -225,6 +229,51 @@
     label.layer.mask = graLayer;
 }
 
+- (void)test {
+    NSDictionary *dic = @{
+        @"1": @"微信",
+        @"2": @"支付宝",
+        @"3": @"银商",
+    };
+    
+    NSString *result = [@"1,2,3" mapBySeparator:@"," transform:^NSString *(NSString *obj) {
+        return dic[obj];
+    }];
+    
+    NSString *result1 = [@"1,2,3" mapBySeparator:@"," transform:^NSString *(NSString *obj) {
+        return [@(obj.integerValue + 10) stringValue];
+    }];
+    DDLog(@"%@_%@", result, result1);
+
+
+    id obj = @"3,1,9,6,7,4,5".separatedBy(@",").sorted(@selector(compare:)).reversed.joinedBy(@"|");
+    DDLog(@"%@", obj);
+    
+    id obj1 = @"3,1,9,6,7,4,5".separatedBy(@",").append(@[@"qq", @"ww", @"eee"]).sorted(@selector(compare:)).joinedBy(@"|");
+    DDLog(@"%@", obj1);
+    
+}
+
+- (void)testAtt {
+
+    
+}
+
+- (void)requestCheck {
+    [self.api requestWithSuccessBlock:^(NNRequstManager * _Nonnull manager, id responseObject, NSError * _Nullable error) {
+        DDLog(@"%@",responseObject);
+        NNRootAppInfoModel *model = [NNRootAppInfoModel yy_modelWithJSON:responseObject];
+
+        [NNCacheManager.shared setObject:model forKey:kCacheKeyUserModel];
+        NNRootAppInfoModel *userModel = [NNCacheManager.shared objectForKey:kCacheKeyUserModel];
+        DDLog(userModel.description);
+    } failedBlock:^(NNRequstManager * _Nonnull manager, id _Nullable responseObject, NSError * _Nullable error) {
+        DDLog(@"%@",error.message);
+
+    }];
+}
+
+#pragma mark -lazy
 -(UIImageView *)imgView{
     if (!_imgView) {
         _imgView = ({
@@ -315,7 +364,7 @@
 
 -( NNCheckVersApi *)api{
     if (!_api) {
-        _api = [[ NNCheckVersApi alloc]init];
+        _api = [[NNCheckVersApi alloc]init];
     }
     return _api;
 }

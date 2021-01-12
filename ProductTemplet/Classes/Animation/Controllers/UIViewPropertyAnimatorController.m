@@ -34,7 +34,7 @@
     
     
     @weakify(self);
-    [self.circleView addActionHandler:^(id obj, id item, NSInteger idx) {
+    [self.circleView addGestureTap:^(UITapGestureRecognizer * _Nonnull reco) {
         @strongify(self);
         NSArray * list = @[@"bezierSystemAnimation",@"bezierCustomAnimation1",@"bezierCustomAnimation2",@"dampingSystemAnimation",@"dampingCustomeAnimation",];
         [UIAlertController createSheetTitle:@"请选择"

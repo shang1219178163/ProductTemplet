@@ -214,8 +214,7 @@
             [btn setBackgroundImage:image forState:UIControlStateNormal];
             [btn setContentEdgeInsets:UIEdgeInsetsMake(5, 5, 5, 5)];
             btn.titleLabel.font = [UIFont systemFontOfSize:15];
-            [btn addActionHandler:^(id obj, id item, NSInteger idx) {
-                UIButton * sender = obj;
+            [btn addActionHandler:^(UIButton * _Nonnull sender) {
                 sender.selected = !sender.selected;
                 
                 if (sender.selected == YES) { // 按下去了就是明文
@@ -235,7 +234,7 @@
                     textField.text = tempPwdStr;
                 }
                 
-            }];
+            } forControlEvents:UIControlEventTouchUpInside];
             
             textField.rightView = btn;
             textField.rightViewMode = UITextFieldViewModeAlways;
@@ -253,11 +252,10 @@
             [btn setTitle:@"登录" forState:UIControlStateNormal];
             [btn setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
             [btn setBackgroundImage:[UIImage imageWithColor:UIColor.themeColor] forState:UIControlStateNormal];
-            [btn addActionHandler:^(id obj, id item, NSInteger idx) {
+            [btn addActionHandler:^(UIButton * _Nonnull sender) {
                 [self endEditing:YES];
-                [self startAnimationWithSender:item];
-                
-            }];
+                [self startAnimationWithSender:sender];
+            } forControlEvents:UIControlEventTouchUpInside];
             
             btn;
         });

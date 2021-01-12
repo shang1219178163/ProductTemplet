@@ -148,10 +148,10 @@
             [btn setTitle:@"登录" forState:UIControlStateNormal];
             [btn setTitleColor:UIColor.whiteColor forState:UIControlStateNormal];
             [btn setBackgroundImage:UIImageColor(UIColor.themeColor) forState:UIControlStateNormal];
-            [btn addActionHandler:^(id obj, id item, NSInteger idx) {
+            [btn addActionHandler:^(UIButton * _Nonnull sender) {
 
                 
-            }];
+            } forControlEvents:UIControlEventTouchUpInside];
             
             btn;
         });
@@ -165,11 +165,11 @@
             UIButton *btn = [UIButton buttonWithType:UIButtonTypeCustom];
             [btn setTitle:@"忘记密码?" forState:UIControlStateNormal];
             [btn setTitleColor:UIColor.themeColor forState:UIControlStateNormal];
-            [btn addActionHandler:^(id obj, id item, NSInteger idx) {
+            [btn addActionHandler:^(UIButton * _Nonnull sender) {
                 [self.navigationController pushVC:@"BNUserPwdChangeController" animated:true block:^(__kindof UIViewController * _Nonnull vc) {
                     vc.title = @"修改密码";
                 }];
-            }];
+            } forControlEvents:UIControlEventTouchUpInside];
             btn;
         });
     }
@@ -182,11 +182,11 @@
             UIButton *btn = [UIButton buttonWithType:UIButtonTypeCustom];
             [btn setTitle:@"新用户?点击注册" forState:UIControlStateNormal];
             [btn setTitleColor:UIColor.themeColor forState:UIControlStateNormal];
-            [btn addActionHandler:^(id obj, id item, NSInteger idx) {
+            [btn addActionHandler:^(UIButton * _Nonnull sender) {
                 [self.navigationController pushVC:@"BNUserRegisterController" animated:true block:^(__kindof UIViewController * _Nonnull vc) {
                     vc.title = @"注册";
                 }];
-            }];
+            } forControlEvents:UIControlEventTouchUpInside];
 
             btn;
         });

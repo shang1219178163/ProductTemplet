@@ -39,6 +39,11 @@
     self.imgView.center = self.view.center;
     [self.view addSubview:self.imgView];
     
+    
+    [self.imgView addGestureTap:^(UITapGestureRecognizer * _Nonnull reco) {
+        DDLog(@"%@", @(reco.view.tag));
+    }];
+    
     UIPanGestureRecognizer *pan = [self.imgView addGesturePan:^(id sender) {
         DDLog(@"%@", sender);
 //        UIPanGestureRecognizer *recognizer = sender;
