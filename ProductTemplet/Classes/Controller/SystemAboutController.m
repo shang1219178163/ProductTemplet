@@ -25,6 +25,7 @@
     [self.view addSubview:self.plainView];
     
     self.dataList = @[
+                     @[@"UIRecognizerController", @"手势",],
                       @[@"AudioSoundController", @"iOS 系统铃声大全",],
                       @[@"NNFontListController", @"iOS 系统字体大全",],
                       @[@"FileShareController", @"app之间文件共享",],
