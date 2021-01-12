@@ -20,10 +20,7 @@ public extension String{
         }
         return hash.map { String(format: "%02x", $0) }.joined()
     }
-    /// 是否是"","nil","null"
-    var isValid: Bool {
-        return !["","nil","null"].contains(self);
-    }
+
     /// Int
     var intValue: Int {
         return Int((self as NSString).intValue)
@@ -41,9 +38,24 @@ public extension String{
         return (self as NSString).doubleValue
     }
     
-    func reverse() -> String {
+    /// d字符串翻转
+    var reverse: String {
         return String(self.reversed())
     }
+    /// ->Data
+    var jsonData: Data? {
+        guard let data = self.data(using: .utf8) else { return nil }
+        return data;
+    }
+    
+    /// 字符串->数组/字典
+    var objValue: Any? {
+        guard let data = self.data(using: .utf8),
+        let json = try? JSONSerialization.jsonObject(with: data, options: [])
+            else { return nil }
+        return json
+    }
+    
     /// range转换为NSRange
     func nsRange(from range: Range<String.Index>) -> NSRange {
         return NSRange(range, in: self)
@@ -59,18 +71,26 @@ public extension String{
             else { return nil }
         return from ..< to
     }
- 
+    
+    var trimmed: String {
+        return trimmingCharacters(in: .whitespacesAndNewlines)
+    }
+    
+    func trimmedBy(_ string: String) -> String {
+        return trimmingCharacters(in: CharacterSet(charactersIn: string))
+    }
+    
     /// 大于version
-    func isNewer(value: String) -> Bool {
-        return (self as NSString).isNewer(value:value)
+    func isBig(_ value: String) -> Bool {
+        return (self as NSString).isBig(value)
     }
     /// 等于version
-    func isSame(value: String) -> Bool {
-        return (self as NSString).isSame(value:value)
-    }
+//    func isSame(version: String) -> Bool {
+//        return (self as NSString).isSame(value)
+//    }
     /// 小于version
-    func isOlder(value: String) -> Bool {
-        return (self as NSString).isOlder(value:value)
+    func isSmall(_ value: String) -> Bool {
+        return (self as NSString).isSmall(value)
     }
     
     
@@ -134,8 +154,22 @@ public extension Substring {
 
 
 @objc public extension NSString{
+    var isEmpty: Bool {
+        let tmp = self.trimmingCharacters(in: .whitespacesAndNewlines)
+        let result = ["", "nil", "null"].contains(tmp.lowercased())
+        return result
+    }
+    
     var md5: String {
         return (self as NSString).md5
+    }
+    
+    var trimmed: String {
+        return (self as String).trimmed
+    }
+    
+    func trimmedBy(_ string: String) -> String {
+        return (self as String).trimmedBy(string)
     }
     /// 获取子字符串
     func substring(loc: Int, len: Int) -> String {
@@ -156,17 +190,18 @@ public extension Substring {
     }
     
     /// 大于version
-    @objc func isNewer(value: String) -> Bool {
+    func isBig(_ value: String) -> Bool {
         return compare(value, options: .numeric) == .orderedDescending
     }
-    /// 等于version
-    func isSame(value: String) -> Bool {
-        return compare(value, options: .numeric) == .orderedSame
-    }
+//    /// 等于version
+//    func isSame(version: String) -> Bool {
+//        return compare(version, options: .numeric) == .orderedSame
+//    }
     /// 小于version
-    func isOlder(value: String) -> Bool {
+    func isSmall(_ value: String) -> Bool {
         return compare(value, options: .numeric) == .orderedAscending
     }
+
    
     /// isEnd 为真,秒追加为:59,为假 :00
     static func dateTime(_ time: NSString, isEnd: Bool) -> NSString {
@@ -205,25 +240,26 @@ public extension Substring {
     
     /// (短时间)yyyy-MM-dd
     func toDateShort() -> String{
-        assert(self.length >= 10);
-        return self.substring(to: 10);
+        if length <= 10 {
+            return self as String
+        }
+        return substring(to: 10);
     }
     
     /// 过滤特殊字符集
     func filter(_ string: String) -> String{
         assert(self.length > 0);
         let chartSet = NSCharacterSet(charactersIn: string).inverted;
-        let result = self.addingPercentEncoding(withAllowedCharacters: chartSet)
+        let result = addingPercentEncoding(withAllowedCharacters: chartSet)
         return result!;
     }
     
-    /// 删除首尾空白字符
-    func deleteWhiteSpaceBeginEnd(_ string: String) -> String{
-        assert(self.length > 0);
-        let chartSet = NSCharacterSet.whitespacesAndNewlines;
-        let result = self.trimmingCharacters(in: chartSet)
+    /// 通过集合字符的字母分割字符串
+    func componentsSeparatedByCharactersInString(_ aString: String) -> [String]{
+        let result = self.components(separatedBy: CharacterSet(charactersIn: aString))
         return result;
     }
+    
     /// 取代索引处字符
     func replacingCharacter(_ index: Int) -> String{
         assert(self.length > 0);
