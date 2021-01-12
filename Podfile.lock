@@ -26,7 +26,7 @@ PODS:
   - MBProgressHUD (1.2.0)
   - MJExtension (3.2.2)
   - MJRefresh (3.5.0)
-  - NNCategoryPro (5.0.3):
+  - NNCategoryPro (5.3.0):
     - GTMBase64
     - IQKeyboardManager
     - NNGloble
@@ -41,14 +41,14 @@ PODS:
     - NNCategoryPro
     - NNGloble
     - NNView
-  - NNView (1.7.0):
+  - NNView (1.9.1):
     - Masonry
     - NNCategoryPro
     - NNGloble
     - PPNumberButton
     - SDCycleScrollView
     - TZImagePickerController
-  - NNViewComplex (2.0.0):
+  - NNViewComplex (2.1.0):
     - Masonry
     - NNCategoryPro
     - NNCollectionView
@@ -150,12 +150,12 @@ SPEC CHECKSUMS:
   MBProgressHUD: 3ee5efcc380f6a79a7cc9b363dd669c5e1ae7406
   MJExtension: d9b9c74cbdeb724c1e9ecbb157b318276e62e876
   MJRefresh: 6afc955813966afb08305477dd7a0d9ad5e79a16
-  NNCategoryPro: a9b718822cfce2a4b184bcf5e4801f7b1cca60f9
+  NNCategoryPro: 2bbc2990d1798e798a266bae7eaa551be9fa02f0
   NNCollectionView: f077d2238501c66cd7c88c02e65d5a68453e7dbd
   NNGloble: 292adcd104c1e50d7a10734b01031c7f6c75fcff
   NNTableViewCell: 91cd54cedad673af3089abb23628750301ab074d
-  NNView: c26eaf866e99945bcabdea92eb2a0aa7d46a42c2
-  NNViewComplex: 22575c760262a8219a4a5dad193d7080db0c0467
+  NNView: c9ed79aee48e61c1ae227c42103064d2229b5d82
+  NNViewComplex: 74e7f4d1465a5861e32d7c50ad538e198f48de09
   PPNumberButton: 4442ff64c21d91733057ca1b3dc05fb4df55f2c0
   SDCycleScrollView: a0d74c3384caa72bdfc81470bdbc8c14b3e1fbcf
   SDWebImage: 9169792e9eec3e45bba2a0c02f74bf8bd922d1ee
@@ -171,6 +171,6 @@ SPEC CHECKSUMS:
   YYModel: 2a7fdd96aaa4b86a824e26d0c517de8928c04b30
   YYWebImage: 5f7f36aee2ae293f016d418c7d6ba05c4863e928
 
-PODFILE CHECKSUM: 97039f55e59fd4dae886197bf19cd08b4c0e7610
+PODFILE CHECKSUM: 529580933dee3b87fa999a809ea11a29e84f744a
 
 COCOAPODS: 1.10.0

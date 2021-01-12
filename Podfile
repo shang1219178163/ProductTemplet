@@ -69,6 +69,7 @@ inhibit_all_warnings!
 
 #   pod 'LookinServer', :configurations => ['Debug']
 #   pod 'EchoSDK', :configurations => ["Debug"]
+#  pod 'Reveal-SDK', :configurations => ['Debug']
 
  end
 
@@ -88,6 +89,7 @@ end
 post_install do |installer|
   installer.pods_project.targets.each do |target|
     target.build_configurations.each do |config|
+      config.build_settings['IPHONEOS_DEPLOYMENT_TARGET'] = '9.0'
       config.build_settings['DEBUG_INFORMATION_FORMAT'] = 'dwarf'
 #      config.build_settings['ENABLE_BITCODE'] = 'NO'
     end

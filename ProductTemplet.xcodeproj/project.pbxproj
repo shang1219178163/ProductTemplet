@@ -156,6 +156,7 @@
 		14BEDC6B24A8A0330031852F /* NSObject+Calculate.m in Sources */ = {isa = PBXBuildFile; fileRef = 14BEDC6524A8A0320031852F /* NSObject+Calculate.m */; };
 		14BEDC6C24A8A0330031852F /* CalculatorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 14BEDC6624A8A0320031852F /* CalculatorViewController.m */; };
 		14BEDC6D24A8A0330031852F /* Calculator.m in Sources */ = {isa = PBXBuildFile; fileRef = 14BEDC6924A8A0330031852F /* Calculator.m */; };
+		14C0814F25831BA000D3F360 /* UISearchController+Helper.m in Sources */ = {isa = PBXBuildFile; fileRef = 14C0814E25831BA000D3F360 /* UISearchController+Helper.m */; };
 		14C1197522DC59AC009D18A3 /* ScrollViewCycleController.m in Sources */ = {isa = PBXBuildFile; fileRef = 14C1197122DC59AB009D18A3 /* ScrollViewCycleController.m */; };
 		14C1197622DC59AC009D18A3 /* UICTViewCellCycle.m in Sources */ = {isa = PBXBuildFile; fileRef = 14C1197222DC59AB009D18A3 /* UICTViewCellCycle.m */; };
 		14C1197822DC5A5A009D18A3 /* postImage.png in Resources */ = {isa = PBXBuildFile; fileRef = 14C1197722DC5A59009D18A3 /* postImage.png */; };
@@ -782,6 +783,8 @@
 		14BEDC6824A8A0330031852F /* Calculator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Calculator.h; sourceTree = "<group>"; };
 		14BEDC6924A8A0330031852F /* Calculator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Calculator.m; sourceTree = "<group>"; };
 		14BEDC6A24A8A0330031852F /* NSObject+Calculate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+Calculate.h"; sourceTree = "<group>"; };
+		14C0814D25831BA000D3F360 /* UISearchController+Helper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UISearchController+Helper.h"; sourceTree = "<group>"; };
+		14C0814E25831BA000D3F360 /* UISearchController+Helper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UISearchController+Helper.m"; sourceTree = "<group>"; };
 		14C1197122DC59AB009D18A3 /* ScrollViewCycleController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScrollViewCycleController.m; sourceTree = "<group>"; };
 		14C1197222DC59AB009D18A3 /* UICTViewCellCycle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UICTViewCellCycle.m; sourceTree = "<group>"; };
 		14C1197322DC59AB009D18A3 /* UICTViewCellCycle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UICTViewCellCycle.h; sourceTree = "<group>"; };
@@ -2075,6 +2078,8 @@
 				149BE1502341923F00D74E7C /* NSString+Helper.swift */,
 				14B7CF6B2383D2F200AEF7BC /* UIImageView+Tmp.h */,
 				14B7CF6C2383D2F200AEF7BC /* UIImageView+Tmp.m */,
+				14C0814D25831BA000D3F360 /* UISearchController+Helper.h */,
+				14C0814E25831BA000D3F360 /* UISearchController+Helper.m */,
 				513646A82086031D005A20E7 /* Assets.xcassets */,
 				5169DF232088254300B025C3 /* Public.xcassets */,
 				5136492420860655005A20E7 /* Resources */,
@@ -3435,6 +3440,7 @@
 				149111EC2275B7970078A7BB /* NSError+Helper.m in Sources */,
 				1439166924C1516400CBABF0 /* TZImageUploadOperation.m in Sources */,
 				14107FB322CDF9490011344E /* TextViewInputController.m in Sources */,
+				14C0814F25831BA000D3F360 /* UISearchController+Helper.m in Sources */,
 				14E42D1C2200042800606AD0 /* BNNoti.m in Sources */,
 				515CC97C20B6AAF2004AE27C /* AAPlotLinesElement.m in Sources */,
 				14107FBB22CDF9C80011344E /* KeyboardController.m in Sources */,
