@@ -10,7 +10,7 @@
 
 @implementation NNURLResponse
 
-NNURLResponse *BNURLResponseFromParam(__kindof NSURLRequest *request,__kindof NSURLResponse *response, id _Nullable responseObject, NSError * _Nullable error){
+NNURLResponse *NNURLResponseFromParam(__kindof NSURLRequest *request, __kindof NSURLResponse *response, id _Nullable responseObject, NSError * _Nullable error){
     NNURLResponse * model = [[NNURLResponse alloc]init];
     model.request = request;
     model.response = (NSHTTPURLResponse *)response;

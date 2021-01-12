@@ -120,7 +120,7 @@
             break;
         case NNRequestTypeFormDataPost:
        {
-           task = [NNRequstAgent.shared formDataPostWithURL:urlString parameters:params images:nil fileNames:nil progress:nil success:^(NNURLResponse * _Nonnull response) {
+           task = [NNRequstAgent.shared formDataPostWithURL:urlString parameters:params progress:nil success:^(NNURLResponse * _Nonnull response) {
                @strongify(self);
                self.isLoading = false;
                [self didSuccessOfResponse:response];
