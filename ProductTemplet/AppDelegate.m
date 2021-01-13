@@ -62,19 +62,36 @@
 //    UIApplication.tabBarController.selectedIndex = 3;
 //    UIApplication.tabBarController.selectedIndex = 4;
     
-    NSString *a = [NSNumberFormatter fractionDigits:@(1.4988) min:2 max:2 roundingMode:NSNumberFormatterRoundUp];
-    NSString *b = [NSNumberFormatter fractionDigits:@(1.4988) min:2 max:3 roundingMode:NSNumberFormatterRoundUp];
-    NSString *c = [NSNumberFormatter fractionDigits:@(1.4988) min:2 max:3 roundingMode:NSNumberFormatterRoundDown];
-    NSString *e = [NSNumberFormatter fractionDigits:@(.4988) min:2 max:3 roundingMode:NSNumberFormatterRoundDown];
-    NSString *f = [NSNumberFormatter fractionDigits:@(.4) min:2 max:3 roundingMode:NSNumberFormatterRoundDown];
-
-    NSString *d = @(1.595).toString;
-    [NSString dateTime:@"2" isEnd:false];
+//    NSString *a = [NSNumberFormatter fractionDigits:@(1.4988) min:2 max:2 roundingMode:NSNumberFormatterRoundUp];
+//    NSString *b = [NSNumberFormatter fractionDigits:@(1.4988) min:2 max:3 roundingMode:NSNumberFormatterRoundUp];
+//    NSString *c = [NSNumberFormatter fractionDigits:@(1.4988) min:2 max:3 roundingMode:NSNumberFormatterRoundDown];
+//    NSString *e = [NSNumberFormatter fractionDigits:@(.4988) min:2 max:3 roundingMode:NSNumberFormatterRoundDown];
+//    NSString *f = [NSNumberFormatter fractionDigits:@(.4) min:2 max:3 roundingMode:NSNumberFormatterRoundDown];
+//
+//    NSString *d = @(1.595).toString;
+//    [NSString dateTime:@"2" isEnd:false];
     
-    NSString *json = NSBundle.mainBundle.infoDictionary.jsonString;
-    DDLog(@"json: %@", json);
-        
+//    NSString *json = NSBundle.mainBundle.infoDictionary.jsonString;
+//    DDLog(@"json: %@", json);
+    
+//    NSMutableString *mSt = [NSMutableString string];
+//    mSt.appending(@"000").appendingFormat(@"%@", @"112").replacingOccurrences(@"2", @"3", NSBackwardsSearch);
+////    mSt.append(@"000").appendFormat(@"%@", @"112").replaceOccurrences(@"2", @"3", NSBackwardsSearch);
+//    DDLog(@"mSt: %@", mSt);
+    
+//    NSString *tmp = [self appendFormat:@"%@_%@", @"aaa", @"bbb"];
+//    DDLog(@"tmp: %@", tmp);
+
     return YES;
+}
+
+//- (NSString *)appendFormat:(NSString *)format, ... NS_FORMAT_FUNCTION(1,2) {
+- (NSString *)appendFormat:(NSString *)format, ...{
+    va_list args;
+    va_start(args, format);
+    NSString *appendStr = [[NSString alloc] initWithFormat:format arguments:args];
+    va_end(args);
+    return appendStr;
 }
 
 - (void)setupThridSDKWithOptions:(NSDictionary *)launchOptions{
