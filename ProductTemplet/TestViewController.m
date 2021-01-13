@@ -141,6 +141,7 @@
             for (NSInteger i = 0; i < 3; i++) {
                 UILabel * label = [[UILabel alloc]init];
                 label.text = [self ramdomText];
+                
                 label.textAlignment = NSTextAlignmentLeft;
                 
                 label.numberOfLines = 0;

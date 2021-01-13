@@ -8,19 +8,19 @@
 
 #import "LiveLikeController.h"
 
-#import "BNEmitterView.h"
+#import "NNEmitterView.h"
 
 @interface LiveLikeController ()
 
-@property (nonatomic, strong) BNEmitterView *emitterVeiw;
+@property (nonatomic, strong) NNEmitterView *emitterVeiw;
 
 @end
 
 @implementation LiveLikeController
 
--(BNEmitterView *)emitterVeiw{
+-(NNEmitterView *)emitterVeiw{
     if (!_emitterVeiw) {
-        _emitterVeiw = [[BNEmitterView alloc] initWithFrame:CGRectMake(300, 667.0 - 60 - 400, 80, 400)];
+        _emitterVeiw = [[NNEmitterView alloc] initWithFrame:CGRectMake(300, 667.0 - 60 - 400, 80, 400)];
         
     }
     return _emitterVeiw;

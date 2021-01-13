@@ -89,7 +89,7 @@
 
 - (void)handleActionBtn:(UIBarButtonItem *)sender{
     if ([sender.title isEqualToString:@"Excel"]) {
-        [self.navigationController pushVC:@"BNExcelController" animated:true block:^(__kindof UIViewController * _Nonnull vc) {
+        [self.navigationController pushVC:@"NNExcelController" animated:true block:^(__kindof UIViewController * _Nonnull vc) {
             
         }];
     }else{

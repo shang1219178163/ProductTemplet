@@ -12,7 +12,7 @@
 
 #import <YYImage/YYImage.h>
 
-#import "BNSliderControlView.h"
+#import "NNSliderControlView.h"
 #import "NNPickerView.h"
 
 #import <YYModel/YYModel.h>
@@ -25,7 +25,7 @@
 @property (nonatomic, strong) UIView *sliderView;
 @property (nonatomic, strong) UITabBarItem *tabBarItem;
 @property (nonatomic, strong) NNSegmentView * segmentView;
-@property (nonatomic, strong) BNSliderControlView * sliderControlView;
+@property (nonatomic, strong) NNSliderControlView * sliderControlView;
 @property (nonatomic, strong) NNPickerView * pickerView;
 
 @property (nonatomic, strong) UILabel *label;
@@ -337,9 +337,9 @@
     return _label;
 }
 
--(BNSliderControlView *)sliderControlView{
+-(NNSliderControlView *)sliderControlView{
     if (!_sliderControlView) {
-        _sliderControlView = [[BNSliderControlView alloc]initWithFrame:CGRectZero];
+        _sliderControlView = [[NNSliderControlView alloc]initWithFrame:CGRectZero];
         _sliderControlView.text = @"滑动开始运客";
         _sliderControlView.textFinish = @"操作成功!";
         _sliderControlView.thumbImage = [UIImage imageNamed:@"icon_operation_busy"];

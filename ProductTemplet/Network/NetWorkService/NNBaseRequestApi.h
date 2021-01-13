@@ -7,7 +7,7 @@
 //
 
 #import "NNRequstManager.h"
-#import "BNStoreManger.h"
+#import "NNStoreManger.h"
 #import "NNCacheManager.h"
 #import "NNCacheKey.h"
 #import "NSError+Helper.h"

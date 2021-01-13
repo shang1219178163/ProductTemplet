@@ -9,7 +9,7 @@
 
 #import "SectionListOneController.h"
 
-#import "BNDataModel.h"
+#import "NNDataModel.h"
 
 #import "UICTViewCellOne.h"
 #import "UICTReusableViewZero.h"
@@ -47,7 +47,7 @@
             NSMutableArray * marr = [NSMutableArray arrayWithCapacity:0];
             
             for (NSInteger j = 0; j < 7; j++) {
-                BNDataModel * model = [[BNDataModel alloc]init];
+                NNDataModel * model = [[NNDataModel alloc]init];
                 model.title = [NSString stringWithFormat:@"%@_%@",@(i),@(j)];
                 model.imgName = [NSString stringWithFormat:@"%@",@(j)];
                 
@@ -59,7 +59,7 @@
     }
     else{
         for (NSInteger j = 0; j < 7; j++) {
-            BNDataModel * model = [[BNDataModel alloc]init];
+            NNDataModel * model = [[NNDataModel alloc]init];
             model.title = [NSString stringWithFormat:@"%@_",@(j)];
             model.imgName = [NSString stringWithFormat:@"%@",@(j)];
             
@@ -126,7 +126,7 @@
 //}
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath{
-    BNDataModel * model = [self itemAtIndexPath:indexPath];
+    NNDataModel * model = [self itemAtIndexPath:indexPath];
     
     UICTViewCellOne * view = [UICTViewCellOne viewWithCollectionView:collectionView indexPath:indexPath];
     
@@ -177,7 +177,7 @@
 - (void)collectionView:(UICollectionView *)collectionView moveItemAtIndexPath:(NSIndexPath *)sourceIndexPath toIndexPath:(NSIndexPath*)destinationIndexPath {
 
     NSMutableArray *arraySection = [self arrayAtSection:sourceIndexPath.section];
-    BNDataModel * model = [self itemAtIndexPath:sourceIndexPath];
+    NNDataModel * model = [self itemAtIndexPath:sourceIndexPath];
     
     [arraySection removeObjectAtIndex:sourceIndexPath.row];
     [arraySection insertObject:model atIndex:destinationIndexPath.row];

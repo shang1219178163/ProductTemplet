@@ -128,8 +128,8 @@
         }];
         return;
     }
-    [self.navigationController pushVC:@"BNExcelController" animated:true block:^(__kindof UIViewController * _Nonnull vc) {
-        vc.title = @"BNExcelController";
+    [self.navigationController pushVC:@"NNExcelController" animated:true block:^(__kindof UIViewController * _Nonnull vc) {
+        vc.title = @"NNExcelController";
 
     }];
 }

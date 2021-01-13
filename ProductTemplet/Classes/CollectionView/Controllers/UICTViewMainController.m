@@ -46,7 +46,7 @@
                       @[@"PickerViewController", @"picker效果",],
                       @[@"CardLineViewController", @"卡片信息展示效果",],
                       @[@"CardViewController", @"卡片信息展示效果",],
-                      @[@"BNExcelController", @"Excel视图",],
+                      @[@"NNExcelController", @"Excel视图",],
                       @[@"NNShareViewController", @"分享视图",],
                       @[@"CTViewListController", @"多section效果",],
                       @[@"SectionListOneController", @"可拖拽多section效果",],

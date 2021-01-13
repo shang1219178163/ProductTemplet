@@ -10,7 +10,7 @@
 
 #import "AnimationListController.h"
 
-@interface AnimationListController ()<UITableViewDelegate,UITableViewDataSource>
+@interface AnimationListController ()<UITableViewDataSource, UITableViewDelegate>
 @property (nonatomic, strong) NSMutableArray *dataList;
 
 @end
@@ -47,7 +47,7 @@
                       @[@"AnimationController16", @"金额跳动动画",],
                       @[@"AnimationController17", @"transitionWithView/transitionFromView动画",],
                       @[@"AnimationController18", @"圆形扩散动画",],
-                      @[@"BNAnimationController", @"购物车动画",],
+                      @[@"NNAnimationController", @"购物车动画",],
                       @[@"LiveLikeController", @"点赞动画",],
                       @[@"DriftAnimationController", @"红包雨动画",],
                       @[@"EmitterViewController", @"粒子动画",],

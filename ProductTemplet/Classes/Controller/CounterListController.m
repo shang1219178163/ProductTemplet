@@ -7,12 +7,12 @@
 //
 
 #import "CounterListController.h"
-#import "BNCounter.h"
+#import "NNCounter.h"
 
-@interface CounterListController ()
+@interface CounterListController ()<UITableViewDataSource, UITableViewDelegate>
 
 @property (nonatomic, strong) NSArray *dataList;
-@property (nonatomic, strong) BNCounter *countDown;
+@property (nonatomic, strong) NNCounter *countDown;
 
 @end
 
@@ -24,13 +24,13 @@
 
     [self.view addSubview:self.tbView];
     // 1.初始化 传入当前视图和数据数组
-    self.countDown = [[BNCounter alloc] initWithTable:self.tbView];
+    self.countDown = [[NNCounter alloc] initWithTable:self.tbView];
 
     
-//    DDLog(@"_%p_",BNCounter.shared);
-//    [BNCounter destoryShared];
+//    DDLog(@"_%p_",NNCounter.shared);
+//    [NNCounter destoryShared];
 //    NSInteger a = 9;
-//    DDLog(@"__%p_",BNCounter.shared);
+//    DDLog(@"__%p_",NNCounter.shared);
     
 }
 

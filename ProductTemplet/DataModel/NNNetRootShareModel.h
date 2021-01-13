@@ -4,12 +4,14 @@
 
 #import <Foundation/Foundation.h>
 
-@class NNNetResultShareModel,NNNetInfoShareModel,NNNetShareModel;
+@class NNNetResultShareModel, NNNetInfoShareModel, NNNetShareModel;
 @interface NNNetRootShareModel : NSObject
 
 @property (nonatomic, strong) NNNetResultShareModel *result;
 
 @end
+
+
 @interface NNNetResultShareModel : NSObject
 
 @property (nonatomic, strong) NNNetInfoShareModel *info;
@@ -18,6 +20,7 @@
 
 @end
 
+
 @interface NNNetInfoShareModel : NSObject
 
 @property (nonatomic, copy) NSString *msg;
@@ -25,6 +28,7 @@
 @property (nonatomic, strong) NNNetShareModel *data;
 
 @end
+
 
 @interface NNNetShareModel : NSObject
 

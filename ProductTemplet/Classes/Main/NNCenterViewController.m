@@ -205,9 +205,11 @@
         
         _plainView.blockDidSelectRow = ^(UITableView *tableView, NSIndexPath *indexPath) {
             @strongify(self);
-            NSArray * list = self.dataList[indexPath.row];
-            UITableViewCell * cell = [tableView cellForRowAtIndexPath:indexPath];
-            [self pushController:list[0] title:list[1] item:cell type:@0];
+            NSArray *list = self.dataList[indexPath.row];
+//            UITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
+            [self.navigationController pushVC:list[0] animated:true block:^(__kindof UIViewController * _Nonnull vc) {
+                vc.title = list[1];
+            }];
         };
     }
     return _plainView;
