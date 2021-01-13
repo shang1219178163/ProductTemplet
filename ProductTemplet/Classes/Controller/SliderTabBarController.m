@@ -11,8 +11,6 @@
 #import <NNGloble/NNGloble.h>
 #import "NNTabBarViewZero.h"
 
-#import "BNNoti.h"
-
 
 @interface SliderTabBarController ()<UITableViewDelegate,UITableViewDataSource>
 

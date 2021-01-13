@@ -68,16 +68,7 @@
 //
 //    }];
     
-    self.textField.identify = @"one";
-    NSDictionary *dic = @{@"one":  @{@"user1":   @"pwd_1",
-                                      @"user2":   @"pwd_2",
-                                      @"user3":   @"pwd_3",
-                                   },
-                           };
-    [NSUserDefaults.standardUserDefaults setObject:dic forKey:kTextFieldHistory];
-    [NSUserDefaults.standardUserDefaults synchronize];
 
-    [self.textField addObserver:self forKeyPath:@"text" options:NSKeyValueObservingOptionNew context:nil];
 }
 
 - (void)viewDidLayoutSubviews{
@@ -118,15 +109,6 @@
 //    [self checkVersion];
 }
 
-#pragma mark -observeValueForKeyPath
-- (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary<NSKeyValueChangeKey,id> *)change context:(void *)context{
-    
-    NSDictionary *dic = [NSUserDefaults.standardUserDefaults objectForKey:kTextFieldHistory];
-    NSDictionary *data = dic[@"one"];
-    self.textFieldPwd.text = data[self.textField.text];
-}
-
-
 - (BOOL)checkVersion:(NSString *)appStoreID {
     __block BOOL isUpdate = NO;
     
@@ -148,12 +130,11 @@
     if (!_textField) {
         _textField = [[NNTextFieldOne alloc]initWithFrame:CGRectMake(20, 20, kScreenWidth - 40, 40)];
         _textField.clearButtonMode = UITextFieldViewModeAlways;
-        [_textField showHistoryWithImage:@"click" handlder:^(NNTextFieldOne * textField, UIImageView * imgView) {
-            NSString *selectorName = CGRectGetHeight(textField.historyTableView.frame) < 5 ? @"showHistory"  :   @"hideHistroy";
-            SEL selector = NSSelectorFromString(selectorName);
-            [textField performSelectorOnMainThread:selector withObject:nil waitUntilDone:NO];
-
-        }];
+        
+        _textField.target.list = @[@"111", @"222", @"333", @"444", @"555"].mutableCopy;
+        _textField.target.block = ^(UITextFieldHistoryTarget *tagget) {
+            DDLog(@"%@", tagget.selectedText);
+        };
     }
     return _textField;
 }
