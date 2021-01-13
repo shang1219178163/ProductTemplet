@@ -111,12 +111,13 @@
     if (self.textFieldName == textField) {
         //只有手机号需要空格(需求调整,支持汉字)
         //       return [textField handlePhoneWithReplacementString:string];
-        
     }
     
     if (self.textFieldPwd == textField) {
-        return [textField backToEmptyWithReplacementString:string];
-        
+        if ([string isEqualToString:@""]) {
+            textField.text = @"";
+            return YES;
+        }
     }
     return YES;
 }

@@ -25,7 +25,7 @@
 #import "NSObject+Helper.h"
 #import "UIViewController+Helper.h"
 
-@interface FMBDViewController ()<UITableViewDataSource,UITableViewDelegate>
+@interface FMBDViewController ()<UITableViewDataSource, UITableViewDelegate>
 
 @property(nonatomic,strong) NSMutableArray *dataArray;
 

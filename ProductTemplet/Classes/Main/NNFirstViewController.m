@@ -18,7 +18,7 @@
 
 #import "FactoryDetailInfoModel.h"
 
-@interface NNFirstViewController ()<SDCycleScrollViewDelegate>
+@interface NNFirstViewController ()<UITableViewDataSource, UITableViewDelegate, SDCycleScrollViewDelegate>
 
 @property (nonatomic, strong) NNBtnView * btnView;
 @property (nonatomic, strong) NNMenuView * menuView;

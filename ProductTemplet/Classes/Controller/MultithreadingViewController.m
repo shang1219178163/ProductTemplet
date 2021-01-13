@@ -10,7 +10,7 @@
 
 #import "UIViewController+Helper.h"
 
-@interface MultithreadingViewController ()<UITableViewDataSource,UITableViewDelegate>
+@interface MultithreadingViewController ()<UITableViewDataSource, UITableViewDelegate>
 
 @property (nonatomic, strong) NSMutableArray *dataList;
 @end

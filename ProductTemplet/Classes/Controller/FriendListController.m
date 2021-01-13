@@ -10,7 +10,7 @@
 
 #import "NNSimpleDataModel.h"
 
-@interface FriendListController ()
+@interface FriendListController ()<UITableViewDataSource, UITableViewDelegate>
 @property (nonatomic, strong) NSMutableArray *dataList;
 
 @end

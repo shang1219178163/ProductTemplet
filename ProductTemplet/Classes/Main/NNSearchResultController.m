@@ -8,7 +8,7 @@
 
 #import "NNSearchResultController.h"
 
-@interface NNSearchResultController ()
+@interface NNSearchResultController ()<UITableViewDataSource, UITableViewDelegate>
 
 @end
 

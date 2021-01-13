@@ -2,6 +2,12 @@
 #import "AudioSoundController.h"
 #import <NSString+Helper.h>
 
+
+@interface AudioSoundController ()<UITableViewDataSource, UITableViewDelegate>
+
+@end
+
+
 @implementation AudioSoundController
 
 - (void)viewDidLoad {

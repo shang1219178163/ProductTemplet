@@ -11,12 +11,12 @@
 
 #import "UITableViewPickerCell.h"
 
-@interface EntryViewController ()
+@interface EntryViewController ()<UITableViewDataSource, UITableViewDelegate>
 
 @property(nonatomic, strong) NSDictionary * dic;
 @property(nonatomic, strong) NNSuspendBtn * suspendBtn;
 @property(nonatomic, strong) NNPickerView * pickerView;
-@property (nonatomic, strong) NSMutableArray *dataList;
+@property(nonatomic, strong) NSMutableArray *dataList;
 
 @end
 
@@ -37,11 +37,9 @@
 
 -(NSDictionary *)dic{
     if (!_dic) {
-        _dic = @{
-                 @1 :   @"分类一",
-                 @2 :   @"分类二",
-                 @3 :   @"分类三",
-                 
+        _dic = @{@1:    @"分类一",
+                 @2:    @"分类二",
+                 @3:    @"分类三",
                  };
     }
     return _dic;
@@ -54,8 +52,7 @@
 
     [self.view addSubview: self.suspendBtn];
     
-    self.dataList = @[
-                      @[@"*起止时间:", @"108", @"60.0", @"", @"recharge", ],
+    self.dataList = @[@[@"*起止时间:", @"108", @"60.0", @"", @"recharge", ],
                       @[@"*商品名称:", @"1", @"60.0", @"", @"cardName", ],
                       @[@"*商品数量:", @"105", @"60.0", @"", @"validEndTime", ],
                       @[@"*上架时间:", @"102", @"60.0", @"", @"balance", ],
@@ -75,6 +72,11 @@
         [self.navigationController pushVC:@"CustomViewController" animated:true block:nil];
     }];
 
+}
+
+- (void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+    
 }
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
@@ -97,7 +99,7 @@
     switch ([itemList[1] integerValue]) {
         case 1:
         {
-            UITableViewOneCell * cell = [UITableViewOneCell cellWithTableView:tableView];
+            UITableViewOneCell *cell = [UITableViewOneCell cellWithTableView:tableView];
             cell.labelLeft.text = value0;
             cell.labelRight.text = value4;
             cell.imgViewRight.hidden = false;
@@ -109,7 +111,7 @@
             break;
         case 102:
         {
-            UITableViewDatePickerCell * cell = [UITableViewDatePickerCell cellWithTableView:tableView];
+            UITableViewDatePickerCell *cell = [UITableViewDatePickerCell cellWithTableView:tableView];
             cell.labelLeft.text = value0;
             [cell getViewLayer];
             return cell;
@@ -118,12 +120,13 @@
             break;
         case 104:
         {
-            UITableViewSegmentCell * cell = [UITableViewSegmentCell cellWithTableView:tableView];
+            UITableViewSegmentCell *cell = [UITableViewSegmentCell cellWithTableView:tableView];
             cell.labelLeft.text = value0;
             cell.segmentCtl.items = @[@"one",@"two",@"three",@"four"];
             DDLog(@"_%p,%@,%ld",cell.segmentCtl, cell.segmentCtl.items, cell.segmentCtl.numberOfSegments);
             [cell.segmentCtl addActionHandler:^(UISegmentedControl * _Nonnull sender) {
                 DDLog(@"_____%ld,%@", sender.selectedSegmentIndex, sender.items);
+                
             } forControlEvents:UIControlEventValueChanged];
             [cell getViewLayer];
             return cell;
@@ -131,7 +134,7 @@
             break;
         case 105:
         {
-            UITableViewStepCell * cell = [UITableViewStepCell cellWithTableView:tableView];
+            UITableViewStepCell *cell = [UITableViewStepCell cellWithTableView:tableView];
             cell.labelLeft.text = value0;
 
             [cell getViewLayer];
@@ -140,7 +143,7 @@
             break;
         case 106:
         {
-            UITableViewTextFieldCell * cell = [UITableViewTextFieldCell cellWithTableView:tableView];
+            UITableViewTextFieldCell *cell = [UITableViewTextFieldCell cellWithTableView:tableView];
             cell.labelLeft.text = value0;
 
             [cell getViewLayer];
@@ -149,7 +152,7 @@
             break;
         case 107:
         {
-            UITableViewTextViewCell * cell = [UITableViewTextViewCell cellWithTableView:tableView];
+            UITableViewTextViewCell *cell = [UITableViewTextViewCell cellWithTableView:tableView];
             cell.labelLeft.text = value0;
 //            cell.type = @1;
             cell.textView.placeHolderTextView.text = @"最多140字";
@@ -160,7 +163,7 @@
             break;
         case 108:
         {
-            UITableViewDateRangeCell * cell = [UITableViewDateRangeCell cellWithTableView:tableView];
+            UITableViewDateRangeCell *cell = [UITableViewDateRangeCell cellWithTableView:tableView];
             cell.dateRangeView.labelLeft.text = value0;
             cell.dateRangeView.block = ^(NNDateRangeView *view) {
                 DDLog(@"%@至%@",view.dateStart,view.dateEnd);
@@ -171,7 +174,7 @@
             break;
         case 109:
         {
-            UITableViewSliderCell * cell = [UITableViewSliderCell cellWithTableView:tableView];
+            UITableViewSliderCell *cell = [UITableViewSliderCell cellWithTableView:tableView];
             cell.labelLeft.text = value0;
             [cell.sliderView.sliderCtl addActionHandler:^(UISlider * _Nonnull sender) {
                 DDLog(@"%@", @(sender.value));
@@ -182,7 +185,7 @@
             break;
         case 110:
         {
-            UITableViewSwitchCell* cell = [UITableViewSwitchCell cellWithTableView:tableView];
+            UITableViewSwitchCell *cell = [UITableViewSwitchCell cellWithTableView:tableView];
             cell.labelLeft.text = value0;
 //            cell.switchCtrl.on = NO;
             [cell.switchView.switchCtl addActionHandler:^(UISwitch * _Nonnull sender) {
@@ -196,16 +199,18 @@
             break;
         case 111:
         {
-            UITableViewSheetCell* cell = [UITableViewSheetCell cellWithTableView:tableView];
+            UITableViewSheetCell *cell = [UITableViewSheetCell cellWithTableView:tableView];
             cell.sheetView.labelLeft.text = value0;
-
+            [cell.sheetView.alertCtrl addActionTitles:@[@"北京", @"上海", @"广州", @"深圳"] handler:^(UIAlertController * _Nonnull vc, UIAlertAction * _Nonnull action) {
+                DDLog(@"%@", action.title);
+            }];
             [cell getViewLayer];
             return cell;
         }
             break;
         case 112:
         {
-            UITableViewPickerViewCell* cell = [UITableViewPickerViewCell cellWithTableView:tableView];
+            UITableViewPickerViewCell *cell = [UITableViewPickerViewCell cellWithTableView:tableView];
             cell.chooseView.labelLeft.text = value0;
             
             @weakify(cell);
@@ -220,7 +225,7 @@
             break;
         case 113:
         {
-            UITableViewPickerCell* cell = [UITableViewPickerCell cellWithTableView:tableView];
+            UITableViewPickerCell *cell = [UITableViewPickerCell cellWithTableView:tableView];
 //            cell.labelLeft.text = value0;
             
             [cell addGestureTap:^(UIGestureRecognizer *sender) {
@@ -234,23 +239,20 @@
             break;
         case 200:
         {
-            
-            UITableViewPickerListCell * cell = [UITableViewPickerListCell cellWithTableView:tableView];
+            UITableViewPickerListCell *cell = [UITableViewPickerListCell cellWithTableView:tableView];
             cell.labelLeft.text = value0;
             cell.dic = self.dic;
             
-              [cell getViewLayer];
+            [cell getViewLayer];
             return cell;
         }
             break;
         case 201:
         {
-            
-            UITableViewAddressPickerCell * cell = [UITableViewAddressPickerCell cellWithTableView:tableView];
+            UITableViewAddressPickerCell *cell = [UITableViewAddressPickerCell cellWithTableView:tableView];
             cell.labelLeft.text = value0;
-
             
-              [cell getViewLayer];
+            [cell getViewLayer];
             return cell;
         }
             break;
@@ -258,11 +260,7 @@
         default:
             break;
     }
-    UITableViewCellDefault * cell = [UITableViewCellDefault cellWithTableView:tableView];
-    cell.defaultView.labelLeft.text = value0;
-    cell.defaultView.labelRight.text = value4;
-    cell.defaultView.imgViewRight.hidden = false;
-    [cell getViewLayer];
+    UITableViewCell *cell = [UITableViewCell cellWithTableView:tableView];
     return cell;
 }
 
@@ -288,7 +286,7 @@
 
 //- (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath{
 //
-//    UICTViewCellOne * cell = [UICTViewCellOne viewWithCollectionView:collectionView indexPath:indexPath];//
+//    UICTViewCellOne *cell = [UICTViewCellOne viewWithCollectionView:collectionView indexPath:indexPath];//
 //    return cell;
 //}
 

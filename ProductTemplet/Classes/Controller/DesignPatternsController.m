@@ -10,7 +10,7 @@
 
 #import "UIViewController+Helper.h"
 
-@interface DesignPatternsController ()<UITableViewDataSource,UITableViewDelegate>
+@interface DesignPatternsController ()<UITableViewDataSource, UITableViewDelegate>
 
 @property (nonatomic, strong) NSMutableArray *dataList;
 

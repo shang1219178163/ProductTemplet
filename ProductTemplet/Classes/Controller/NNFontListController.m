@@ -8,7 +8,7 @@
 
 #import "NNFontListController.h"
 
-@interface NNFontListController ()
+@interface NNFontListController ()<UITableViewDataSource, UITableViewDelegate>
 
 @property (strong, nonatomic) NSMutableArray *fontList;
 
