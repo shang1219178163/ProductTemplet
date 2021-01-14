@@ -18,6 +18,7 @@
 @property (strong, nonatomic) NNTextFieldOne *textFieldPwd;
 @property (strong, nonatomic) NNTextFieldOne *textFieldPwdNew;
 @property (strong, nonatomic) UITextField *textFieldOne;
+@property (nonatomic, strong) UIButton *button;
 
 @end
 
@@ -41,6 +42,7 @@
     [self.view addSubview:self.textFieldPwd];
     [self.view addSubview:self.textFieldPwdNew];
     [self.view addSubview:self.textFieldOne];
+    [self.view addSubview:self.button];
 
     self.textField.backgroundColor = UIColor.systemGreenColor;
     self.textFieldPwd.backgroundColor = UIColor.systemOrangeColor;
@@ -101,6 +103,13 @@
         make.right.equalTo(self.view).offset(-10);
         make.height.equalTo(35);
     }];
+    
+    [self.button makeConstraints:^(MASConstraintMaker *make) {
+        make.top.equalTo(self.textFieldOne.mas_bottom).offset(10);
+        make.left.equalTo(self.view).offset(10);
+        make.height.equalTo(35);
+        make.width.equalTo(60);
+    }];
 }
 
 -(void)viewWillAppear:(BOOL)animated{
@@ -132,8 +141,8 @@
         _textField.clearButtonMode = UITextFieldViewModeAlways;
         
         _textField.target.list = @[@"111", @"222", @"333", @"444", @"555"].mutableCopy;
-        _textField.target.block = ^(UITextFieldHistoryTarget *tagget) {
-            DDLog(@"%@", tagget.selectedText);
+        _textField.target.block = ^(NNHistoryTarget *target) {
+            DDLog(@"%@", target.selectedText);
         };
     }
     return _textField;
@@ -249,5 +258,27 @@
     return _textFieldOne;
 }
 
+- (UIButton *)button{
+    if (!_button) {
+        _button = ({
+            UIButton *sender = [UIButton buttonWithType:UIButtonTypeCustom];
+            [sender setTitle:@"下拉列表" forState:UIControlStateNormal];
+            [sender setTitleColor:UIColor.systemBlueColor forState:UIControlStateNormal];
+//            [sender setTitleColor:UIColor.systemBlueColor forState:UIControlStateSelected];
+            sender.titleLabel.font = [UIFont systemFontOfSize:15];
+            
+            sender.titleLabel.adjustsFontSizeToFitWidth = YES;
+            sender.imageView.contentMode = UIViewContentModeScaleAspectFit;
+            sender;
+        });
+                
+        _button.target.hiddenClearButton = true;
+        _button.target.list = @[@"北京", @"上海", @"广州", @"深圳", @"西安"].mutableCopy;
+        _button.target.block = ^(NNMenuTarget *tagget) {
+            DDLog(@"%@", tagget.selectedText);
+        };
+    }
+    return _button;
+}
 
 @end
