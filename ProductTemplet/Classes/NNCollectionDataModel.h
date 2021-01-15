@@ -1,5 +1,5 @@
 //
-//  BNCollectionDataModel.h
+//  NNCollectionDataModel.h
 //  NNCollectionData
 //
 //  Created by hsf on 2018/8/2.
@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface BNCollectionDataModel : NSObject
+@interface NNCollectionDataModel : NSObject
 
 @property (nonatomic, strong) NSMutableArray *list;
 @property (nonatomic, strong) NSMutableArray *array;

@@ -6,24 +6,24 @@
 //  Copyright © 2018年 BN. All rights reserved.
 //
 
-#import "BNCollectionDataController.h"
+#import "NNCollectionDataController.h"
 
-#import "BNCollectionDataModel.h"
+#import "NNCollectionDataModel.h"
 
-@interface BNCollectionDataController ()
+@interface NNCollectionDataController ()
 
 @property (nonatomic, strong) NSMutableArray *list;
 @property (nonatomic, strong) NSMutableArray *actionList;
 
-@property (nonatomic, strong) BNCollectionDataModel *dataModel;
+@property (nonatomic, strong) NNCollectionDataModel *dataModel;
 
 @end
 
-@implementation BNCollectionDataController
+@implementation NNCollectionDataController
 
--(BNCollectionDataModel *)dataModel{
+-(NNCollectionDataModel *)dataModel{
     if (!_dataModel) {
-        _dataModel = [[BNCollectionDataModel alloc]init];
+        _dataModel = [[NNCollectionDataModel alloc]init];
     }
     return _dataModel;
 }
