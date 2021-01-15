@@ -41,10 +41,6 @@
     
     NSDecimalNumber * number = [@"0.35".decNumer decimalNumberByAdding:@"0.15".decNumer];
     DDLog(@"_%@_",number);
-
-    DDLog(@"_%d_%d_",NSDate.date.week,NSDate.date.weekday);
-
-    DDLog(@"_%@_",NSDate.date.weekdayDes);
 }
 
 
