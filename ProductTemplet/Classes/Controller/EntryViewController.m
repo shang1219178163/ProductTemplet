@@ -128,7 +128,7 @@
                 DDLog(@"_____%ld,%@", sender.selectedSegmentIndex, sender.items);
                 
             } forControlEvents:UIControlEventValueChanged];
-            [cell getViewLayer];
+//            [cell getViewLayer];
             return cell;
         }
             break;

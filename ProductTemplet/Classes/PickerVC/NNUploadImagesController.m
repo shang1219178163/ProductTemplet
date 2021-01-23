@@ -159,7 +159,7 @@
     imagePickerVc.allowCrop = self.allowCrop;
     imagePickerVc.needCircleCrop = self.needCircleCrop;
     // 设置竖屏下的裁剪尺寸
-    NSInteger left = 30;
+//    NSInteger left = 30;
 //    NSInteger widthHeight = self.view.tz_width - 2 * left;
 //    NSInteger top = (self.view.tz_height - widthHeight) / 2;
 //    imagePickerVc.cropRect = CGRectMake(left, top, widthHeight, widthHeight);

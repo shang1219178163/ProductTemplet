@@ -49,4 +49,5 @@
     NSMutableDictionary *keychainQuery = [self getKeychainQuery:service];
     SecItemDelete((__bridge_retained CFDictionaryRef)keychainQuery);
 }
+
 @end

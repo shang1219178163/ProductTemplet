@@ -127,7 +127,7 @@
     NSURLSessionDataTask *dataTask = [NSURLSession sendAsynRequest:request handler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
         if (data) {
             NSDictionary *dic = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableLeaves error:nil];
-//            DDLog(@"%@",dic.allKeys);
+            DDLog(@"%@", dic.allKeys);
         }
     }];
     [dataTask resume];

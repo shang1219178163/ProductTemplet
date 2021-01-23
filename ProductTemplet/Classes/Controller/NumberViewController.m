@@ -36,11 +36,12 @@
     
     CGFloat money = 123456.78401;
     money = 0.123456;
-    NSNumber * num = @(money);
+    NSNumber *num = @(money);
+    DDLog(@"_%@_", num);
+
     
-    
-    NSDecimalNumber * number = [@"0.35".decNumer decimalNumberByAdding:@"0.15".decNumer];
-    DDLog(@"_%@_",number);
+    NSDecimalNumber *number = [@"0.35".decNumer decimalNumberByAdding:@"0.15".decNumer];
+    DDLog(@"_%@_", number);
 }
 
 

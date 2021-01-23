@@ -37,9 +37,9 @@
     UIViewController *controllerLeft = UICtrFromString(@"NNLeftViewController");
     UIViewController *controllerRight = UICtrFromString(@"NNRightViewController");
 
-    ZYSliderViewController *rootVC = [[ZYSliderViewController alloc]initWithMainViewController:controller
-                                                                            leftViewController:controllerLeft
-                                                                           rightViewController:controllerRight];
+//    ZYSliderViewController *rootVC = [[ZYSliderViewController alloc]initWithMainViewController:controller
+//                                                                            leftViewController:controllerLeft
+//                                                                           rightViewController:controllerRight];
     
 //    controller = UICtrFromString(@"WHKGroupViewViewController");
 //    controller = UICtrFromString(@"LiveLikeController");

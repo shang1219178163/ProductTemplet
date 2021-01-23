@@ -314,7 +314,7 @@
         return @{[key stringByAppendingFormat:@"%@", @"_"] : [obj stringByAppendingFormat:@"%@", @"_"],
         };
     }];
-    DDLog(@"dic1_%@",dic1);
+    DDLog(@"dic1_%@", dic1);
 //    2020-07-03 06:20:05.248000+0000【line -305】-[TestViewController funtionMoreDic] dic1_{
 //        2_ = 222_;
 //        4_ = 444_;
