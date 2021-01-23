@@ -191,7 +191,7 @@ constructingBodyWithBlock:^(id<AFMultipartFormData> formData) {
         NSLog(@"File downloaded to: %@", filePath);
 //        NSLog(@"File downloaded toresponse: %@", response);
 
-        NSString *msg = error == nil ? error.description : @"下载成功";
+        NSString *msg = error != nil ? error.description : @"下载成功";
         [NNProgressHUD showText:msg];
         
         self.localFileUrl = filePath;

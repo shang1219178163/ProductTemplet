@@ -109,14 +109,14 @@
 
 - (UIButton *)btnCode{
     if (!_btnCode) {
-        _btnCode = [UIButton createRect:CGRectZero title:@"验证码" image:nil type:@4];
+        _btnCode = [UIButton createRect:CGRectZero title:@"验证码" type:NNButtonTypeTitleTheme];
     }
     return _btnCode;
 }
 
 - (UIButton *)btn{
     if (!_btn) {
-        _btn = [UIButton createRect:CGRectZero title:@"确定" image:nil type:@1];
+        _btn = [UIButton createRect:CGRectZero title:@"确定" type:NNButtonTypeTitleWhiteAndBackgroudTheme];
     }
     return _btn;
 }

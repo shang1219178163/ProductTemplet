@@ -77,28 +77,28 @@
           didFinishWithResult:(MFMailComposeResult)result
                         error:(NSError*)error;
 {
-    NSString *msg;
+    NSString *message;
     
     switch (result)
     {
         case MFMailComposeResultCancelled:
-            msg = @"邮件发送取消";
+            message = @"邮件发送取消";
             break;
         case MFMailComposeResultSaved:
-            msg = @"邮件保存成功";
+            message = @"邮件保存成功";
 
             break;
         case MFMailComposeResultSent:
-            msg = @"邮件发送成功";
+            message = @"邮件发送成功";
 
             break;
         case MFMailComposeResultFailed:
-            msg = @"邮件发送失败";
+            message = @"邮件发送失败";
             break;
         default:
             break;
     }
-    
+    DDLog(@"message: %@", message);
 
     [self dismissViewControllerAnimated:YES completion:^{
         

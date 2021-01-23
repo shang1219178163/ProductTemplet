@@ -65,6 +65,7 @@
 }
 
 - (UIButton *)createBtnRect:(CGRect)rect title:(NSString *)title image:(NSString *)image type:(NSNumber *)type{
+    assert([UIImage imageNamed:image]);
     UIButton * btn = [UIButton buttonWithType:UIButtonTypeSystem];
     btn.autoresizingMask = UIViewAutoresizingFlexibleWidth|UIViewAutoresizingFlexibleHeight;
     

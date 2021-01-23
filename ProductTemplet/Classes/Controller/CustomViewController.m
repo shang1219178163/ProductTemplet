@@ -50,12 +50,12 @@
     switch (idx) {
         case 0:
         {
-            NSArray * list = [NSArray arrayItemPrefix:@"item_" startIndex:0 count:16 type:@0];
+            NSArray *list = [NSArray arrayItemPrefix:@"item_" startIndex:0 count:16];
             self.itemsView.frame = CGRectMake(20, 20, kScreenWidth - 40, kScreenWidth - 40);
             self.itemsView.items = list;
             //    [self.view addSubview: self.itemsView];
             
-            self.itemsView.items = list = [NSArray arrayItemPrefix:@"item_" startIndex:0 count:12 type:@0];;
+            self.itemsView.items = list = [NSArray arrayItemPrefix:@"item_" startIndex:0 count:12];;
 
         }
             break;
@@ -115,8 +115,10 @@
 -(NNSearchView *)searchView{
     if (!_searchView) {
         _searchView = [[NNSearchView alloc]initWithFrame:CGRectZero];
+        @weakify(self);
         [_searchView.btn addActionHandler:^(UIButton * _Nonnull sender) {
-            DDLog(@"%@",_searchView.queryStr);
+            @strongify(self);
+            DDLog(@"%@", _searchView.queryStr);
             
         } forControlEvents:UIControlEventTouchUpInside];
     }

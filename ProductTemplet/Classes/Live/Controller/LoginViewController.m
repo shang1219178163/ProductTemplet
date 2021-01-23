@@ -80,7 +80,9 @@
 -(BNUserLoginView *)userLoginView{
     if (!_userLoginView) {
         _userLoginView = [[BNUserLoginView alloc]initWithFrame:self.view.bounds];
-        [_userLoginView.btnPwd addActionHandler:^(UIButton * _Nonnull control) {
+        @weakify(self);
+        [_userLoginView.btnPwd addActionHandler:^(UIButton * _Nonnull sender) {
+            @strongify(self);
             [self.navigationController pushVC:@"ChangePwdController" animated:true block:^(__kindof UIViewController * _Nonnull vc) {
                 vc.title = @"修改密码";
             }];

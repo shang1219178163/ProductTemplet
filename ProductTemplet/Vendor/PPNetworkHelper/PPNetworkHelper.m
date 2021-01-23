@@ -13,7 +13,7 @@
 #import "AFNetworking.h"
 #import "AFNetworkActivityIndicatorManager.h"
 
-#import "Utilities_DM.h"
+#import "UtilitiesDM.h"
 
 #ifdef DEBUG
 #define PPLog(...) printf("[%s] %s [第%d行]: %s\n", __TIME__ ,__PRETTY_FUNCTION__ ,__LINE__, [[NSString stringWithFormat:__VA_ARGS__] UTF8String])
@@ -125,7 +125,7 @@ static AFHTTPSessionManager *_sessionManager;
     //读取缓存
     responseCache!=nil ? responseCache([PPNetworkCache httpCacheForURL:URL parameters:parameters]) : nil;
     
-    NSURLSessionTask *sessionTask = [_sessionManager GET:URL
+    NSURLSessionTask *task = [_sessionManager GET:URL
                                               parameters:parameters
                                                  headers:nil
                                                 progress:^(NSProgress * _Nonnull uploadProgress) {
@@ -145,10 +145,10 @@ static AFHTTPSessionManager *_sessionManager;
         failure ? failure(error) : nil;
         
     }];
-    // 添加sessionTask到数组
-    sessionTask ? [self.allSessionTask addObject:sessionTask] : nil ;
+    // 添加task到数组
+    task ? [self.allSessionTask addObject:task] : nil ;
     
-    return sessionTask;
+    return task;
 }
 
 #pragma mark - POST请求自动缓存
@@ -160,7 +160,7 @@ static AFHTTPSessionManager *_sessionManager;
     //读取缓存
     responseCache!=nil ? responseCache([PPNetworkCache httpCacheForURL:URL parameters:parameters]) : nil;
     
-    NSURLSessionTask *sessionTask = [_sessionManager POST:URL
+    NSURLSessionTask *task = [_sessionManager POST:URL
                                                parameters:parameters
                                                   headers:nil
                                                  progress:^(NSProgress * _Nonnull uploadProgress) {
@@ -181,228 +181,54 @@ static AFHTTPSessionManager *_sessionManager;
         
     }];
     
-    // 添加最新的sessionTask到数组
-    sessionTask ? [self.allSessionTask addObject:sessionTask] : nil ;
-    return sessionTask;
+    // 添加最新的task到数组
+    task ? [self.allSessionTask addObject:task] : nil ;
+    return task;
 }
 
-#pragma mark - 上传文件
-+ (NSURLSessionTask *)uploadFileWithURL:(NSString *)URL
-                             parameters:(id)parameters
-                                   name:(NSString *)name
-                               filePath:(NSString *)filePath
-                               progress:(PPHttpProgress)progress
-                                success:(PPHttpRequestSuccess)success
-                                failure:(PPHttpRequestFailed)failure {
-    
-    NSURLSessionTask *sessionTask = [_sessionManager POST:URL
-                                               parameters:parameters
-                                                  headers:nil
-                                constructingBodyWithBlock:^(id<AFMultipartFormData>  _Nonnull formData) {
-        NSError *error = nil;
-        [formData appendPartWithFileURL:[NSURL URLWithString:filePath] name:name error:&error];
-        (failure && error) ? failure(error) : nil;
-    } progress:^(NSProgress * _Nonnull uploadProgress) {
-        //上传进度
-        dispatch_sync(dispatch_get_main_queue(), ^{
-            progress ? progress(uploadProgress) : nil;
-        });
-    } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
-        
-        if (_isOpenLog) {PPLog(@"responseObject = %@",[self jsonToString:responseObject]);}
-        [self.allSessionTask removeObject:task];
-        success ? success(responseObject) : nil;
-        
-    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
-        
-        if (_isOpenLog) {PPLog(@"error = %@",error);}
-        [self.allSessionTask removeObject:task];
-        failure ? failure(error) : nil;
-    }];
-    
-    // 添加sessionTask到数组
-    sessionTask ? [self.allSessionTask addObject:sessionTask] : nil ;
-    
-    return sessionTask;
-}
-
-#pragma mark - 上传多张图片
-+ (NSURLSessionTask *)uploadImagesWithURL:(NSString *)URL
-                               parameters:(id)parameters
-                                     name:(NSString *)name
-                                   images:(NSArray<UIImage *> *)images
-                                fileNames:(NSArray<NSString *> *)fileNames
-                               imageScale:(CGFloat)imageScale
-                                imageType:(NSString *)imageType
-                                 progress:(PPHttpProgress)progress
-                                  success:(PPHttpRequestSuccess)success
-                                  failure:(PPHttpRequestFailed)failure {
-    NSURLSessionTask *sessionTask = [_sessionManager POST:URL
-                                               parameters:nil
-                                                  headers:nil
-                                constructingBodyWithBlock:^(id<AFMultipartFormData>  _Nonnull formData) {
-        
-        for (NSUInteger i = 0; i < images.count; i++) {
-            // 图片经过等比压缩后得到的二进制文件
-//            NSData *imageData = UIImageJPEGRepresentation(images[i], imageScale ?: 0.5f);
-//            UIImage * imageCompress = [Utilities_DM compressImage:images[i] maxFileSize:kFileSize_image];
-//            NSData *imageData = UIImageJPEGRepresentation(imageCompress, 1.0);
-
-            NSData *imageData = [Utilities_DM compressImageDataFromImage:images[i] maxFileSize:kFileSize_image];
-            NSString * imageType = [Utilities_DM contentTypeForImageData:imageData];
-            
-            // 默认图片的文件名, 若fileNames为nil就使用
-            NSDateFormatter *formatter = [NSDateFormatter dateFormat:@"yyyyMMddHHmmss"];
-            NSString *str = [formatter stringFromDate:NSDate.date];
-            NSString *imageFileName = NSStringFormat(@"%@%ld.%@",str,(unsigned long)i,imageType?:@"jpg");
-            
-            NSString * name = [NSString stringWithFormat:@"image%@",@(i+1)];//add by bin
-            if (fileNames) {
-                name = fileNames[i];
-            }
-            [formData appendPartWithFileData:imageData
-                                        name:name
-                                    fileName:fileNames ? NSStringFormat(@"%@.%@",fileNames[i],imageType?:@"jpg") : imageFileName
-                                    mimeType:NSStringFormat(@"image/%@",imageType ?: @"jpg")];
-            DDLog(@"formData________image%@->%@->%@->%luk",@(i),name,imageFileName,[imageData length]/1024);
-        }
-        //add by bin
-        if ([parameters isKindOfClass:[NSString class]]) {
-            NSData *parametersData = [parameters dataUsingEncoding:NSUTF8StringEncoding];
-            [formData appendPartWithFormData:parametersData name:@"data"];
-            
-            DDLog(@"formData________字符串");
-        } else if([parameters isKindOfClass:[NSData class]]){
-            [formData appendPartWithFormData:parameters name:@"data"];
-            
-            DDLog(@"formData________字符串");
-        }
-        
-    } progress:^(NSProgress * _Nonnull uploadProgress) {
-        //上传进度
-        dispatch_sync(dispatch_get_main_queue(), ^{
-            progress ? progress(uploadProgress) : nil;
-        });
-    } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
-        
-        if (_isOpenLog) {PPLog(@"responseObject = %@",[self jsonToString:responseObject]);}
-        [self.allSessionTask removeObject:task];
-        success ? success(responseObject) : nil;
-        
-    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
-        
-        if (_isOpenLog) {PPLog(@"error = %@",error);}
-        [self.allSessionTask removeObject:task];
-        failure ? failure(error) : nil;
-    }];
-    
-    // 添加sessionTask到数组
-    sessionTask ? [self.allSessionTask addObject:sessionTask] : nil ;
-    
-    return sessionTask;
-}
-
-+ (NSURLSessionTask *)postMultFormDataWithURL:(NSString *)URL
-                       parameters:(id)parameters
-                         progress:(PPHttpProgress)progress
-                          success:(PPHttpRequestSuccess)success
-                          failure:(PPHttpRequestFailed)failure{
-    __block NSURLSessionDataTask *sessionTask = nil;
-    sessionTask = [_sessionManager POST:URL
-                             parameters:parameters
-                                headers:nil
-              constructingBodyWithBlock:^(id<AFMultipartFormData>  _Nonnull formData) {
-        //add by bin
-        if ([parameters isKindOfClass: NSString.class]) {
-            NSData *paramData = [parameters dataUsingEncoding:NSUTF8StringEncoding];
-            [formData appendPartWithFormData:paramData name:@"file"];
-//            DDLog(@"formData________字符串");
-            
-        } else if ([parameters isKindOfClass: NSData.class]){
-            [formData appendPartWithFormData:parameters name:@"file"];
-//            DDLog(@"formData________字符串");
-            
-        } else if ([parameters isKindOfClass: NSDictionary.class]) {
-            [((NSDictionary *)parameters) enumerateKeysAndObjectsUsingBlock:^(NSString * _Nonnull key, id  _Nonnull obj, BOOL * _Nonnull stop) {
-                if ([obj isKindOfClass: NSString.class]) {
-                    NSData *paramData = [obj dataUsingEncoding:NSUTF8StringEncoding];
-                    [formData appendPartWithFormData:paramData name:key];
-                    DDLog(@"formData上传文字_%@:%@", key, obj);
-
-                } else if ([obj isKindOfClass: NSData.class]){
-                    // 默认图片的文件名
-                    NSString *fileName = [NSDateFormatter stringFromDate:NSDate.date fmt:@"yyyyMMddHHmmss"];
-                    NSString *imageType = [UIImage contentTypeForImageData:obj];
-                    fileName = [fileName stringByAppendingFormat:@".%@", imageType];
-
-                    NSString *mimeType = [NSString stringWithFormat:@"image/%@", imageType];
-                    DDLog(@"formData上传图片_%@:%@ (fileName:%@_mimeType:%@)", key, @([(NSData *)obj length]), fileName, mimeType);
-                    [formData appendPartWithFileData:obj
-                                                name:key
-                                            fileName:fileName
-                                            mimeType:mimeType];
-                } else if ([obj isKindOfClass: NSURL.class]) {
-                    DDLog(@"formData上传文件_%@: (fileName:%@)", key, obj);
-                    NSError *error = nil;
-                    [formData appendPartWithFileURL:obj
-                                               name:key
-                                              error:&error];
-                    if (!error) {
-                       DDLog(@"error:%@", error.description);
-                   }
-               }
-            }];
-        }
-        
-    } progress:^(NSProgress * _Nonnull uploadProgress) {
-        //上传进度
-        dispatch_sync(dispatch_get_main_queue(), ^{
-            progress ? progress(uploadProgress) : nil;
-        });
-    } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
-         if (_isOpenLog) {PPLog(@"responseObject = %@",[self jsonToString:responseObject]);}
-         [self.allSessionTask removeObject:task];
-         success ? success(responseObject) : nil;
-        
-    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
-        if (_isOpenLog) {PPLog(@"error = %@",error);}
-        [self.allSessionTask removeObject:task];
-        failure ? failure(error) : nil;
-        
-    }];
-    
-    sessionTask ? [self.allSessionTask addObject:sessionTask] : nil ;
-    return sessionTask;
-}
-
-#pragma mark - -表单形式提交数据
+#pragma mark -表单形式提交数据
 + (NSURLSessionTask *)FormDataWithURL:(NSString *)URL
-                           parameters:(id)parameters
+                           parameters:(NSDictionary *)parameters
+                             progress:(PPHttpProgress)progress
                               success:(PPHttpRequestSuccess)success
                               failure:(PPHttpRequestFailed)failure {
-    NSURLSessionTask *sessionTask = [_sessionManager POST:URL
+    NSURLSessionTask *task = [_sessionManager POST:URL
                                                parameters:nil
                                                   headers:nil
                                 constructingBodyWithBlock:^(id<AFMultipartFormData>  _Nonnull formData) {
-        
-        //add by bin
-        if ([parameters isKindOfClass:[NSString class]]) {
-            //aes128加密
-            NSData *parametersData = [parameters dataUsingEncoding:NSUTF8StringEncoding];
-            [formData appendPartWithFormData:parametersData name:@"data"];
-            
-        } else if([parameters isKindOfClass:[NSData class]]){
-            [formData appendPartWithFormData:parameters name:@"data"];
-            
-        } else {
-            NSAssert([parameters isKindOfClass:[NSString class]] || [parameters isKindOfClass:[NSData class]], @"parameters目前只支持NSString和NSData格式");
-        }
+        [parameters enumerateKeysAndObjectsUsingBlock:^(NSString * _Nonnull key, id  _Nonnull obj, BOOL * _Nonnull stop) {
+            if ([obj isKindOfClass: NSString.class]) {
+                NSData *paramData = [obj dataUsingEncoding:NSUTF8StringEncoding];
+                [formData appendPartWithFormData:paramData name:key];
+                DDLog(@"formData上传文字_%@:%@", key, obj);
+
+            } else if ([obj isKindOfClass: NSData.class]){
+                // 默认图片的文件名
+                NSString *fileName = [NSDateFormatter stringFromDate:NSDate.date fmt:@"yyyyMMddHHmmss"];
+                NSString *imageType = [UIImage contentTypeForImageData:obj];
+                fileName = [fileName stringByAppendingFormat:@".%@", imageType];
+
+                NSString *mimeType = [NSString stringWithFormat:@"image/%@", imageType];
+                DDLog(@"formData上传图片_%@:%@ (fileName:%@_mimeType:%@)", key, @([(NSData *)obj length]), fileName, mimeType);
+                [formData appendPartWithFileData:obj
+                                            name:key
+                                        fileName:fileName
+                                        mimeType:mimeType];
+            } else if ([obj isKindOfClass: NSURL.class]) {
+                DDLog(@"formData上传文件_%@: (fileName:%@)", key, obj);
+                NSError *error = nil;
+                [formData appendPartWithFileURL:obj name:key error:&error];
+                if (!error) {
+                   DDLog(@"error:%@", error.description);
+               }
+           }
+        }];
         
     } progress:^(NSProgress * _Nonnull uploadProgress) {
         //上传进度
-//        dispatch_sync(dispatch_get_main_queue(), ^{
-//            progress ? progress(uploadProgress) : nil;
-//        });
+        dispatch_sync(dispatch_get_main_queue(), ^{
+            progress ? progress(uploadProgress) : nil;
+        });
     } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         
         if (_isOpenLog) {PPLog(@"responseObject = %@",[self jsonToString:responseObject]);}
@@ -417,9 +243,9 @@ static AFHTTPSessionManager *_sessionManager;
         failure ? failure(error) : nil;
     }];
     
-    // 添加sessionTask到数组
-    sessionTask ? [self.allSessionTask addObject:sessionTask] : nil ;
-    return sessionTask;
+    // 添加task到数组
+    task ? [self.allSessionTask addObject:task] : nil ;
+    return task;
 }
 
 #pragma mark - 下载文件
@@ -429,7 +255,10 @@ static AFHTTPSessionManager *_sessionManager;
                               success:(void(^)(NSString *))success
                               failure:(PPHttpRequestFailed)failure {
     NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:URL]];
-    __block NSURLSessionDownloadTask *downloadTask = [_sessionManager downloadTaskWithRequest:request progress:^(NSProgress * _Nonnull downloadProgress) {
+    
+    __block NSURLSessionDownloadTask *task = nil;
+    task = [_sessionManager downloadTaskWithRequest:request
+                                           progress:^(NSProgress * _Nonnull downloadProgress) {
         //下载进度
         dispatch_sync(dispatch_get_main_queue(), ^{
             progress ? progress(downloadProgress) : nil;
@@ -448,17 +277,17 @@ static AFHTTPSessionManager *_sessionManager;
         
     } completionHandler:^(NSURLResponse * _Nonnull response, NSURL * _Nullable filePath, NSError * _Nullable error) {
         
-        [self.allSessionTask removeObject:downloadTask];
+        [self.allSessionTask removeObject:task];
         if(failure && error) {failure(error) ; return ;};
         success ? success(filePath.absoluteString /** NSURL->NSString*/) : nil;
         
     }];
     //开始下载
-    [downloadTask resume];
-    // 添加sessionTask到数组
-    downloadTask ? [self.allSessionTask addObject:downloadTask] : nil ;
+    [task resume];
+    // 添加task到数组
+    task ? [self.allSessionTask addObject:task] : nil ;
     
-    return downloadTask;
+    return task;
 }
 
 /**

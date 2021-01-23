@@ -33,7 +33,9 @@
 - (BNPhoneCodeView *)phoneCodeView{
     if (!_phoneCodeView) {
         _phoneCodeView = [[BNPhoneCodeView alloc]initWithFrame:self.view.bounds];
+        @weakify(self);
         [_phoneCodeView.btn addActionHandler:^(UIButton * _Nonnull sender) {
+            @strongify(self);
             [self.navigationController pushVC:@"ResetPwdController" animated:true block:^(__kindof UIViewController * _Nonnull vc) {
                 vc.title = @"重置密码";
             }];

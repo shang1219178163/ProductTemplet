@@ -17,8 +17,6 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-        
-    NSArray * imageList = @[@"Googleplus",@"Twitter",];
     
     UIImageView * imageView = [[UIImageView alloc]initWithFrame:CGRectMake(20, 20, 100, 100)];
     imageView.backgroundColor = UIColor.redColor;
@@ -44,9 +42,8 @@
 #pragma mark - -CAAnimation
 - (void)animationDidStart:(CAAnimation *)anim{
     if ([anim isKindOfClass:[CABasicAnimation class]]) {
-        CABasicAnimation * anim = (CABasicAnimation *)anim;
-        
-        NSLog(@"%@",anim.byValue);
+        CABasicAnimation *anim = (CABasicAnimation *)anim;
+        NSLog(@"%@", anim.byValue);
     }
     
 }

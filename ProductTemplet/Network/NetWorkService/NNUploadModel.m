@@ -11,8 +11,8 @@
 @implementation NNUploadModel
 
 NNUploadModel *NNUploadModelFromParam(NSArray<UIImage *> *images, NSInteger idx, NSString *fileName){
-    //    NSData *imageData = [Utilities_DM compressImageDataFromImage:image maxFileSize:1024];
-    //    NSString * imageType = [Utilities_DM contentTypeForImageData:imageData];
+    //    NSData *imageData = [UtilitiesDM compressImageDataFromImage:image maxFileSize:1024];
+    //    NSString * imageType = [UtilitiesDM contentTypeForImageData:imageData];
     NSData *imageData = nil;
     NSString * imageType = @"jpg";
     // 默认图片的文件名, 若fileNames为nil就使用

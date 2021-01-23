@@ -7,7 +7,7 @@
 //
 
 #import "WHKGroupViewViewController.h"
-
+#import <NNGloble/NNGloble.h>
 
 @interface WHKGroupViewViewController ()
 
@@ -53,7 +53,7 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (UIView *)createViewWithRectNew:(CGRect)rect elements:(NSArray *)elements numberOfRow:(NSInteger)numberOfRow viewHeight:(CGFloat)viewHeight padding:(CGFloat)padding{
+- (UIView *)createViewRect:(CGRect)rect elements:(NSArray *)elements numberOfRow:(NSInteger)numberOfRow viewHeight:(CGFloat)viewHeight padding:(CGFloat)padding{
     
     //    CGFloat padding = 15;
     //    CGFloat viewHeight = 30;
@@ -71,72 +71,28 @@
         CGFloat x = (w + padding) * (i % numberOfRow);
         CGFloat y = (h + padding) * (i / numberOfRow);
         
-        NSString * title = elements[i];
+        NSString *title = elements[i];
         CGRect btnRect = CGRectMake(x, y, w, h);
-//        UIButton * btn = [UIButton createRect:btnRect title:title image:nil+i type:@0];
+//        UIButton *btn = [UIButton createRect:btnRect title:title image:nil+i type:@0];
 //
-        NSDictionary * dict = @{
-                                kRadio_title : title,
-                                kRadio_imageN : @"img_cir_normal.png",
-                                kRadio_imageH : @"img_cir_Selected.png",
-
-                                kRadio_textColorH : UIColor.redColor,
-                                kRadio_textColorN : UIColor.blackColor,
-                                
-                                };
-        NNRadioView * view = [[NNRadioView alloc]initWithFrame:btnRect attDict:dict isSelected:YES];
+        NNButton *view = [[NNButton alloc]initWithFrame:CGRectZero];
+        [view setTitle:title forState:UIControlStateNormal];
+        view.titleLabel.adjustsFontSizeToFitWidth = YES;
+        view.imageView.contentMode = UIViewContentModeScaleAspectFit;
+        [view setImage:[UIImage imageNamed:@"icon_selected_no_default"] forState:UIControlStateNormal];
+        [view setImage:[UIImage imageNamed:@"icon_selected_yes_green"] forState:UIControlStateSelected];
+        
+        view.frame = btnRect;
+        view.selected = true;
         view.tag = kTAG_VIEW + i;
+        [view addActionHandler:^(UIButton * _Nonnull sender) {
+            sender.selected = !sender.isSelected;
+
+        } forControlEvents:UIControlEventTouchUpInside];
         
         [backgroudView addSubview:view];
-        view.block = ^(NNRadioView *radioView, UIView *itemView, BOOL isSelected) {
-            DDLog(@"_%@_%@",@(itemView.tag),@(isSelected));
-        };
-        
     }
     return backgroudView;
 }
-
-- (UIView *)createViewRect:(CGRect)rect elements:(NSArray *)elements numberOfRow:(NSInteger)numberOfRow viewHeight:(CGFloat)viewHeight padding:(CGFloat)padding{
-    
-    //    CGFloat padding = 15;
-    //    CGFloat viewHeight = 30;
-    //    NSInteger numberOfRow = 4;
-    NSInteger rowCount = elements.count % numberOfRow == 0 ? elements.count/numberOfRow : elements.count/numberOfRow + 1;
-    //
-    UIView * backgroudView = [[UIView alloc]initWithFrame:CGRectMake(CGRectGetMinX(rect), CGRectGetMinY(rect), CGRectGetWidth(rect), rowCount * viewHeight + (rowCount - 1) * padding)];
-    backgroudView.backgroundColor = UIColor.greenColor;
-    
-    CGSize viewSize = CGSizeMake((CGRectGetWidth(backgroudView.frame) - (numberOfRow-1)*padding)/numberOfRow, viewHeight);
-    for (NSInteger i = 0; i < elements.count; i++) {
-        
-        CGFloat w = viewSize.width;
-        CGFloat h = viewSize.height;
-        CGFloat x = (w + padding) * (i % numberOfRow);
-        CGFloat y = (h + padding) * (i / numberOfRow);
-        
-        NSString * title = elements[i];
-        CGRect btnRect = CGRectMake(x, y, w, h);
-        //        UIButton * btn = [UIButton createRect:btnRect title:title image:nil type:@0];
-        
-        NSDictionary * dict = @{
-                                kRadio_imageH : @"img_select_H",
-                                kRadio_imageN : @"img_select_N",
-                                };
-        CGRect radioViewRect = CGRectMake(x, y, 30, 30);
-        NNRadioView * radioView = [[NNRadioView alloc]initWithFrame:radioViewRect attDict:dict isSelected:false];
-        radioView.isSelected = i%2 == 0 ? YES : NO;
-        radioView.tag = kTAG_VIEW + i;
-        CGRect labelRect = CGRectMake(x+30, y, w-30, 30);
-        UILabel * label = [UILabel createRect:labelRect type:@2];
-        label.text = title;
-        label.tag = kTAG_LABEL+i;
-        label.textAlignment = NSTextAlignmentCenter;
-        [backgroudView addSubview:radioView];
-        [backgroudView addSubview:label];
-        
-    }
-    return backgroudView;
-}
-
 
 @end

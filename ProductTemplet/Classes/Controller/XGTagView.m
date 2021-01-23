@@ -18,7 +18,7 @@
  *
  *  @return
  */
-- (instancetype)initWithFrame:(CGRect)frame tagArray:(NSArray*)tagArray{
+- (instancetype)initWithFrame:(CGRect)frame tagArray:(NSArray *)tagArray{
     
     self = [super initWithFrame:frame];
     if (self) {

@@ -118,12 +118,10 @@
 - (void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
     
-    [self.tbView reloadData];
     
 }
 
 - (void)bindData{
-    
     for (NSInteger i = 0; i < 1; i++) {
         FactoryDetailInfoModel * model = [[FactoryDetailInfoModel alloc]init];
         model.title = [NSString stringWithFormat:@"随机数据随机数据%@%@",@(i),@(i)];
@@ -137,11 +135,10 @@
 
 - (void)configureTableView{
     [self.view addSubview:self.tbView];
-    
+    [self.tbView reloadData];
+
     self.tbView.sectionFooterHeight = kScreenWidth;
-    //    self.tableView.sectionHeaderHeight = CGRectGetHeight(self.view.bounds) - self.tableView.sectionFooterHeight - self.tableView.rowHeight;
     self.tbView.sectionHeaderHeight = kScreenHeight - kStatusBarHeight - kNaviBarHeight - kTabBarHeight - self.tbView.sectionFooterHeight - self.tbView.rowHeight;
-    
 }
 
 - (UIView *)getViewWithHeight:(CGFloat)height isHeader:(BOOL)isHeader{
@@ -149,18 +146,18 @@
     NSInteger rowCount = 3;
     CGSize viewSize = CGSizeMake(kScreenWidth/rowCount, kScreenWidth/rowCount);
     
-    UIView * backgroudView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, kScreenWidth,  viewSize.height* self.elementList.count/rowCount)];
+    UIView *backgroudView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, kScreenWidth,  viewSize.height* self.elementList.count/rowCount)];
     backgroudView.backgroundColor = UIColor.whiteColor;
     
     if (isHeader) {
-        UIView * cycleView = [self createCycleViewRect:CGRectMake(0, 0, kScreenWidth, height) imageNames:self.imageList];
+        UIView *cycleView = [self createCycleViewRect:CGRectMake(0, 0, kScreenWidth, height) imageNames:self.imageList];
         [backgroudView addSubview:cycleView];
         
     } else {
         CGRect rect = CGRectZero;
         //    按钮
         for (NSInteger i = 0; i < self.elementList.count; i++) {
-            NSArray * array = self.elementList[i];
+            NSArray *array = self.elementList[i];
 
             CGFloat x = CGRectGetWidth(backgroudView.frame) / rowCount * ( i % rowCount);
             CGFloat y =  (i / rowCount) * viewSize.height;
@@ -170,6 +167,7 @@
             rect = CGRectMake(x, y, w, h);
             
             UIView *sender = [[UIView alloc]init];
+            sender.frame = rect;
             sender.tag = kTAG_VIEW+i+50;
             [backgroudView addSubview:sender];
             
@@ -191,15 +189,16 @@
 }
 
 - (void)configureMenuList{
-    NSArray * menuList = [NSArray arrayItemPrefix:@"工厂_" startIndex:1 count:10 type:@0];
+    NSArray *menuList = [NSArray arrayItemPrefix:@"工厂_" startIndex:1 count:10];
     
     self.navigationItem.titleView = self.btnView;
     
     self.btnView.label.text = [menuList firstObject];
     self.btnView.label.textColor = UIColor.whiteColor;
+    @weakify(self);
     self.btnView.block = ^(NNBtnView *view) {
+        @strongify(self);
         [self handleActionBtnView:view];
-        
     };
     
     NNMenuView * menuView = [[NNMenuView alloc]initWithFrame:CGRectMake(0, 0, kScreenWidth, 0.0)];
@@ -218,10 +217,7 @@
     };
     
     self.menuView = menuView;
-    
     [self.navigationItem.titleView getViewLayer];
-    
-    
 }
 
 #pragma mark - -BINBtnView

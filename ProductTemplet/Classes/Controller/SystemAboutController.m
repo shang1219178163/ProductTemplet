@@ -36,7 +36,7 @@
                       @[@"TextViewController", @"UITextView",],
                       @[@"KeyboardController",@"Keyboard自定义",],
                       @[@"FileParseController", @"json文件解析",],
-                      @[@"BNCollectionDataController", @"集合属性KVO监听",],
+                      @[@"NNCollectionDataController", @"集合属性KVO监听",],
                       @[@"SnapshotViewController", @"屏幕截图分享/反馈",],
                       ].mutableCopy;
         
@@ -85,9 +85,10 @@
         
         _plainView.blockDidSelectRow = ^(UITableView *tableView, NSIndexPath *indexPath) {
             @strongify(self);
-            NSArray * list = self.dataList[indexPath.row];
-            UITableViewCell * cell = [tableView cellForRowAtIndexPath:indexPath];
-            [self pushController:list[0] title:list[1] item:cell type:@0];
+            NSArray *list = self.dataList[indexPath.row];
+            
+            UIViewController *vc = [[NSClassFromString(list[1]) alloc]init];
+            [self.navigationController pushViewController:vc animated:true];
         };
     }
     return _plainView;

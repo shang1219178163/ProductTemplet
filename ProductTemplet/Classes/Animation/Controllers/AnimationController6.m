@@ -62,7 +62,7 @@
     //layer
     CGRect rect = CGRectMake(10, 10, 115, 115);
     CGPathRef path = [UIBezierPath bezierPathWithOvalInRect:(CGRect){{0, 0}, rect.size}].CGPath; //设置绘制路径
-    CAShapeLayer *shapeLayer = [CAShapeLayer layerRect:rect path:path strokeEnd:0.5 fillColor:UIColor.clearColor strokeColor:UIColor.redColor lineWidth:1];
+    CAShapeLayer *shapeLayer = [CAShapeLayer layerWithRect:rect path:path strokeEnd:0.5 fillColor:UIColor.clearColor strokeColor:UIColor.redColor lineWidth:1];
     shapeLayer.strokeColor = imgView.image.mostColor.CGColor;
     shapeLayer.position = imgView.center;
     //以subLayer的形式添加给self.view
@@ -70,7 +70,7 @@
     
     //layerBack
     UIColor * colorBack = [UIColor colorWithWhite:0.8 alpha:0.5];
-    CAShapeLayer *shapeLayerBack = [CAShapeLayer layerRect:rect path:path strokeEnd:1 fillColor:UIColor.clearColor strokeColor:colorBack lineWidth:2];
+    CAShapeLayer *shapeLayerBack = [CAShapeLayer layerWithRect:rect path:path strokeEnd:1 fillColor:UIColor.clearColor strokeColor:colorBack lineWidth:2];
     shapeLayerBack.position = imgView.center;
     [self.view.layer insertSublayer:shapeLayerBack below:shapeLayer];
 

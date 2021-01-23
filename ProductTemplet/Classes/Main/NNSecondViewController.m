@@ -23,7 +23,10 @@
 
         UIViewController * controller = [NSClassFromString(@"CycleLabelViewController") new];
 
-        CATransition *anim = [CATransition animDuration:0.5 functionName:kCAMediaTimingFunctionEaseIn type:kCATransitionFade subType:kCATransitionFromRight];
+        CATransition *anim = [CATransition animateWithDuration:0.5
+                                                  functionName:kCAMediaTimingFunctionEaseIn
+                                                          type:kCATransitionFade
+                                                       subType:kCATransitionFromRight];
 //        [UIApplication.sharedApplication.keyWindow.layer addAnimation:anim forKey:nil];
         [self.navigationController.view.layer addAnimation:anim forKey:nil];
         [self.navigationController pushViewController:controller animated:false];
@@ -31,7 +34,7 @@
     }];
     
     
-    UIViewController * controller = [NSClassFromString(@"FriendListController") new];
+    UIViewController *controller = [NSClassFromString(@"FriendListController") new];
     [self addControllerVC:controller];
 }
 
@@ -43,7 +46,6 @@
 //    hud.label.text = NSLocalizedString(kNetWorkRequesting, @"HUD loading title");
 //    
 //    [hud hideAnimated:YES afterDelay:3];
-
 }
 
 - (void)didReceiveMemoryWarning {

@@ -193,12 +193,12 @@
 
 //点击item方法
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
-    UICTViewCellZero *cell = (UICTViewCellZero *)[collectionView cellForItemAtIndexPath:indexPath];
+//    UICTViewCellZero *cell = (UICTViewCellZero *)[collectionView cellForItemAtIndexPath:indexPath];
 //    NSString *msg = cell.label.text;
     //    DDLog(@"%@",msg);
     
-    DDLog(@"%@",NSStringFromIndexPath(indexPath));
-    NSString * controlleName = [self itemAtSection:indexPath];
+    DDLog(@"%@", NSStringFromIndexPath(indexPath));
+    NSString *controlleName = [self itemAtSection:indexPath];
     [self.navigationController pushVC:controlleName animated:true block:^(__kindof UIViewController * _Nonnull vc) {
         vc.title = controlleName;
     }];

@@ -274,7 +274,7 @@
     view.block = ^(UIPickerView *pickerView, NSString *address, NSInteger btnIndex) {
         NSLog(@"BINPickerViewNew_%@_%ld",address,(long)btnIndex);
         if (btnIndex == 1) {
-            NSIndexPath * indexPath = [NSIndexPath indexPathForRow:2 inSection:0];
+//            NSIndexPath *indexPath = [NSIndexPath indexPathForRow:2 inSection:0];
             self.address = address;
         }
     };

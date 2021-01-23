@@ -7,15 +7,14 @@
 //
 
 #import "NNFourthViewController.h"
+#import <Masonry/Masonry.h>
+#import <YYImage/YYImage.h>
+#import <YYModel/YYModel.h>
 
 #import "ZYSliderViewController.h"
 
-#import <YYImage/YYImage.h>
-
 #import "NNSliderControlView.h"
 #import "NNPickerView.h"
-
-#import <YYModel/YYModel.h>
 #import "NNCheckVersApi.h"
 #import "NNRootAppInfoModel.h"
 
@@ -29,7 +28,7 @@
 @property (nonatomic, strong) NNPickerView * pickerView;
 
 @property (nonatomic, strong) UILabel *label;
-@property (nonatomic, strong)  NNCheckVersApi *api;
+@property (nonatomic, strong) NNCheckVersApi *api;
 
 @end
 
@@ -42,51 +41,38 @@
 //    [self addControllerName:@"FontListController"];
 //    [self addControllerName:@"FriendListController"];
     
-    [self createBarItem:@"Item_fourth_H" isLeft:NO handler:^(id  _Nonnull obj, UIView * _Nonnull item, NSInteger idx) {
+    [self createBarItem:@"Show" isLeft:NO handler:^(id  _Nonnull obj, UIView * _Nonnull item, NSInteger idx) {
         [self.pickerView show];
 
     }];
-    
-    
-    [self.view addSubview:self.imgView];
-    
-    @weakify(self)
-    [self.imgView addGestureTap:^(UITapGestureRecognizer * _Nonnull reco) {
-        @strongify(self)
-        self.imgView.tintColor = UIColor.randomColor;
-        self.imgView.image = [self.imgView.image imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate];
-
-        UIColor.themeColor = self.imgView.tintColor;
-        
-        ZYSliderViewController * rootVC = UIApplication.rootController;
-        UITabBarController * tabBarController = rootVC.mainViewController;
-        tabBarController.tabBar.tintColor = UIColor.themeColor;
-        
-        
-//        UITabBarItem *tabBarItem = [UITabBarItem createItem:@"title" image:@"Item_third_H" selectedImage:@"Item_first_H"];
-//        tabBarController.viewControllers.firstObject.tabBarItem = tabBarItem;
-
-        NSArray *list = @[@[@"NNFirstViewController",@"首页",@"Item_third_N",@"Item_third_H",@"0",],
-                          @[@"NNSecondViewController",@"圈子",@"Item_second_N",@"Item_second_H",@"11",],
-                          @[@"NNCenterViewController",@"总览",@"Item_center_N",@"Item_center_H",@"10",],
-                          @[@"NNThirdViewController",@"消息",@"Item_third_N",@"Item_third_H",@"12",],
-                          @[@"NNFourthViewController",@"我的",@"Item_fourth_N",@"Item_fourth_H",@"13",],
-                          
-                          ];
-        [tabBarController reloadTabarItems:list];
-        self.sliderView.backgroundColor = UIColor.themeColor;
-    }];
+//    @weakify(self)
+//    [self.imgView addGestureTap:^(UITapGestureRecognizer * _Nonnull reco) {
+//        @strongify(self)
+//        self.imgView.tintColor = UIColor.randomColor;
+//        self.imgView.image = [self.imgView.image imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate];
+//
+//        UIColor.themeColor = self.imgView.tintColor;
+//
+//        ZYSliderViewController *rootVC = UIApplication.rootController;
+//        UITabBarController *tabBarController = rootVC.mainViewController;
+//        tabBarController.tabBar.tintColor = UIColor.themeColor;
+//
+//
+////        UITabBarItem *tabBarItem = [UITabBarItem createItem:@"title" image:@"Item_third_H" selectedImage:@"Item_first_H"];
+////        tabBarController.viewControllers.firstObject.tabBarItem = tabBarItem;
+//
+//        NSArray *list = @[@[@"NNFirstViewController",@"首页",@"Item_third_N",@"Item_third_H",@"0",],
+//                          @[@"NNSecondViewController",@"圈子",@"Item_second_N",@"Item_second_H",@"11",],
+//                          @[@"NNCenterViewController",@"总览",@"Item_center_N",@"Item_center_H",@"10",],
+//                          @[@"NNThirdViewController",@"消息",@"Item_third_N",@"Item_third_H",@"12",],
+//                          @[@"NNFourthViewController",@"我的",@"Item_fourth_N",@"Item_fourth_H",@"13",],
+//
+//                          ];
+//        [tabBarController reloadTabarItems:list];
+//        self.sliderView.backgroundColor = UIColor.themeColor;
+//    }];
 //    self.imgView.image = [self.imgView.image imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate];
 
-    [self.imgView addGestureTap:^(UIGestureRecognizer *sender) {
-        UIImageView *imgView = (UIImageView *)sender;
-        [imgView.image saveImageToPhotosAlbum:^(NSError *error) {
-            if (error) {
-                DDLog(@"%@",error.description);
-            }
-            DDLog(@"保存图像成功!");
-        }];
-    }];
     
     [self.view addSubview:self.sliderView];
     self.sliderView.layer.borderColor = UIColor.blueColor.CGColor;
@@ -94,19 +80,18 @@
     
     CGRect rect = CGRectMake(UIScreen.width/2.0, 20, 100, 100);
     UIImageView *imgView = ({
-        UIImageView *view = [UIImageView createRect:rect type:@0];
+        UIImageView *view = [UIImageView createRect:rect];
         view.image = [UIImage imageNamed:@"Item_first_N"];
         view.tag = 100;
         view;
     });
-    
+    imgView.tintColor = UIColor.themeColor;
     [self.view addSubview:imgView];
     
-    imgView.tintColor = UIColor.themeColor;
 
     CGRect rect1 = CGRectMake(UIScreen.width/2.0 + 120, 20, 100, 100);
     UIImageView *imgView1 = ({
-        UIImageView *view = [UIImageView createRect:rect1 type:@0];
+        UIImageView *view = [UIImageView createRect:rect1];
         view.image = [UIImage imageNamed:@"Item_first_H"];
         view.tag = 101;
         view;
@@ -118,7 +103,7 @@
 //    imgView1.image = [imgView1.image imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate];
 
     
-    UIButton * btn = [UIButton buttonWithType:UIButtonTypeCustom];
+    UIButton *btn = [UIButton buttonWithType:UIButtonTypeCustom];
     btn.frame = CGRectMake(20, CGRectGetMaxY(self.imgView.frame) + 20, 150, 100);
     
 //    [btn setBackgroundImage:UIImageNamed(@"Item_first_N") forState:UIControlStateNormal];
@@ -146,7 +131,7 @@
     [btn setAttributedTitle:attStrN forState:UIControlStateNormal];
     [btn setAttributedTitle:attStrH forState:UIControlStateHighlighted];
     
-    UILabel * label = [[UILabel alloc]init];
+    UILabel *label = [[UILabel alloc]init];
     label.frame = CGRectMake(btn.maxX+20, btn.minY, 100, 100);
     label.text = @"这是一串富文本";
 //    label.numberOfLines = label.text.length;
@@ -176,15 +161,15 @@
     imgViewLoading.frame = CGRectMake(10, 10, 40, 40);
     [self.view addSubview:imgViewLoading];
     
-    
 //    [self.view getViewLayer];
-    
     [NSUserDefaults.standardUserDefaults setObject:@"nil" forKey:@"1111"];
     [NSUserDefaults.standardUserDefaults setObject:nil forKey:@"1111"];
 
 //    DDLog(@"%@", NSHomeDirectory())
     
+    
 }
+
 
 -(void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
@@ -193,6 +178,8 @@
 //    [self requestCheck];
 
     [self testAtt];
+    
+    [self testChain];
 }
 
 -(void)viewDidAppear:(BOOL)animated{
@@ -252,12 +239,47 @@
     id obj1 = @"3,1,9,6,7,4,5".separatedBy(@",").append(@[@"qq", @"ww", @"eee"]).sorted(@selector(compare:)).joinedBy(@"|");
     DDLog(@"%@", obj1);
     
+//    NSString *bTime = @"2020-01-13 09:43:50";
+//    NSString *eTime = @"2020-02-13 09:43:50";
+//    
+//    NSDate *startDate = [NSDateFormatter dateFromString:bTime fmt:kDateFormatDay];
+//    NSDate *endDate = [NSDateFormatter dateFromString:eTime fmt:kDateFormatDay];
+//    NSArray *days = [NSDateFormatter betweenDaysWithDate:startDate toDate:endDate block:^(NSDateComponents * _Nonnull comps, NSDate * _Nonnull date) {
+////        DDLog(@"%@", date);
+//    }];
+//    DDLog(@"%@", days);
 }
 
 - (void)testAtt {
-
+    [UIView animateWithDuration:0 animations:^{
+            
+    }];
     
 }
+
+- (void)testChain {
+    NSMutableDictionary *mdic = @{
+        @"1" : @"a",
+        @"2" : @"b",
+        @"3" : @"c",
+        @"4" : @"d",
+        @"5" : @"e",
+        @"6" : @"f",
+        @"7" : @"g",
+        @"8" : @"h",
+        
+    }.mutableCopy;
+    
+    NSMutableDictionary *tmp = mdic.addEntries(@{@"111": @"zzz"});
+    NSMutableDictionary *tmp1 = mdic.setObjectForKey(@"1", @"aaa");
+    NSMutableDictionary *tmp2 = mdic.removeObjectForKey(@"2");
+    NSMutableDictionary *tmp3 = mdic.removeObjectsForKeys(@[@"3", @"4", @"5",]);
+    DDLog(@"tmp: %@", tmp);
+    DDLog(@"tmp1: %@", tmp1);
+    DDLog(@"tmp2: %@", tmp2);
+    DDLog(@"tmp3: %@", tmp3);
+}
+
 
 - (void)requestCheck {
     [self.api requestWithSuccess:^(NNRequstManager * _Nonnull manager, NSDictionary * _Nonnull jsonData) {
@@ -280,6 +302,15 @@
             view.image = [UIImage imageNamed:@"bug.png"];
             view;
         });
+        [_imgView addGestureTap:^(UIGestureRecognizer *sender) {
+            UIImageView *imgView = (UIImageView *)sender.view;
+            [imgView.image saveImageToPhotosAlbum:^(NSError *error) {
+                if (error) {
+                    DDLog(@"%@",error.description);
+                }
+                DDLog(@"保存图像成功!");
+            }];
+        }];
     }
     return _imgView;
 }
@@ -287,18 +318,17 @@
 -(UIView *)sliderView{
     if (!_sliderView) {
         _sliderView = ({
-            UIView *view = [[UIView alloc] initWithFrame:CGRectMake(0, 240, CGRectGetWidth(self.view.frame), 100)];
+            UIView *view = [[UIView alloc] initWithFrame:CGRectMake(20, 240, CGRectGetWidth(self.view.frame) - 40, 50)];
             view.autoresizingMask = UIViewAutoresizingFlexibleWidth;
             
-            UILabel * label = [[UILabel alloc]initWithFrame:CGRectMake(CGRectGetWidth(view.frame) - 80, 0, 80, CGRectGetHeight(view.frame))];
+            UILabel *label = [[UILabel alloc]initWithFrame:CGRectMake(CGRectGetWidth(view.frame) - 80, 0, 80, CGRectGetHeight(view.frame))];
             label.autoresizingMask = UIViewAutoresizingFlexibleWidth|UIViewAutoresizingFlexibleHeight;
             label.text = @"个数";
             [view addSubview:label];
             
             UISlider *slider = [UISlider createRect:CGRectMake(0, 0, CGRectGetWidth(view.frame) - CGRectGetWidth(label.frame), CGRectGetHeight(view.frame)) minValue:10 maxValue:110];
             slider.autoresizingMask = UIViewAutoresizingFlexibleWidth|UIViewAutoresizingFlexibleHeight;
-            [slider addActionHandler:^(UIControl * _Nonnull obj) {
-                UISlider * sender = (UISlider *)obj;
+            [slider addActionHandler:^(UISlider * _Nonnull sender) {
                 label.text = [@"个数" stringByAppendingFormat:@"(%@)",@(sender.value)];
                 
             } forControlEvents:UIControlEventValueChanged];
@@ -367,6 +397,7 @@
     }
     return _api;
 }
+
 
 
 @end

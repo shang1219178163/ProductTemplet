@@ -32,7 +32,7 @@
         NSMutableArray * marr = @[@"111",@"222",@"333",@"444",].mutableCopy;
         _plainView.list = marr;
         
-        @weakify(self);
+//        @weakify(self);
         _plainView.blockCellForRow = ^UITableViewCell * _Nonnull(UITableView * _Nonnull tableView, NSIndexPath * _Nonnull indexPath) {
             UITableViewSegmentCell * cell = [UITableViewSegmentCell cellWithTableView:tableView];
             cell.labelLeft.text = marr[indexPath.row];
@@ -44,22 +44,20 @@
         };
         
         _plainView.blockEditActionsForRow = ^NSArray *(UITableView *tableView, NSIndexPath *indexPath) {
-            @strongify(self);
+//            @strongify(self);
             UITableViewRowAction *actionDelete = [UITableViewRowAction rowActionWithStyle:UITableViewRowActionStyleDestructive title:kTitleDelete handler:^(UITableViewRowAction *action, NSIndexPath *indexPath){
-                DDLog(@"点击了%@",action.title);
-         
+                DDLog(@"点击了%@", action.title);
                 
             }];
             return @[actionDelete];
         };
         _plainView.tableView.mj_header = [MJRefreshNormalHeader headerWithRefreshingBlock:^{
-            @strongify(self);
+//            @strongify(self);
       
         }];
         // 上拉刷新
         _plainView.tableView.mj_footer = [MJRefreshBackNormalFooter footerWithRefreshingBlock:^{
-            @strongify(self);
-      
+//            @strongify(self);
 
         }];
     }

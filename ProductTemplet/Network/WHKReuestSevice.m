@@ -13,98 +13,21 @@
 
 @implementation WHKReuestSevice
 
-/*
- 配置好PPNetworkHelper各项请求参数,封装成一个公共方法,给以上方法调用,
- 相比在项目中单个分散的使用PPNetworkHelper/其他网络框架请求,可大大降低耦合度,方便维护
- 在项目的后期, 你可以在公共请求方法内任意更换其他的网络请求工具,切换成本小
- */
-
-/**
- *  上传单/多张图片
- *
- *  @param URL        请求地址
- *  @param parameters 请求参数
- *  @param images     图片数组
- *  @param fileNames  图片文件名数组, 可以为nil, 数组内的文件名默认为当前日期时间"yyyyMMddHHmmss"
- *  @param success    请求成功的回调
- *  @param failure    请求失败的回调
- *
- *  @return 返回的对象可取消请求,调用cancel方法
- */
-+ (NSURLSessionTask *)uploadImagesWithURL:(NSString *)URL
-                               parameters:(id)parameters
-                                   images:(NSArray<UIImage *> *)images
-                                   fileNames:(NSArray<NSString *> *)fileNames
-                                  success:(PPHttpRequestSuccess)success
-                                  failure:(PPHttpRequestFailed)failure {
-    // 在请求之前你可以统一配置你请求的相关参数 ,设置请求头, 请求参数的格式, 返回数据的格式....这样你就不需要每次请求都要设置一遍相关参数
-    // 设置请求头
-    NSString * name = @"image";
-    CGFloat imageScale = 1.0;
-    NSString * imageType = @"jpeg";
-
-    return [PPNetworkHelper uploadImagesWithURL:URL parameters:parameters name:name images:images fileNames:fileNames imageScale:imageScale imageType:imageType progress:^(NSProgress *progress) {
-        //上传进度
-    } success:^(id responseObject) {
-        success(responseObject);
-        
-    } failure:^(NSError *error) {
-        failure(error);
-        
-    }];
-}
-
-+ (NSURLSessionTask *)uploadImagesWithURL:(NSString *)URL
-                               parameters:(id)parameters
-                                   images:(NSArray<UIImage *> *)images
-                                fileNames:(NSArray<NSString *> *)fileNames
-                                 progressRate:(PPHttpProgress)progressRate
-                                  success:(PPHttpRequestSuccess)success
-                                  failure:(PPHttpRequestFailed)failure {
-    // 在请求之前你可以统一配置你请求的相关参数 ,设置请求头, 请求参数的格式, 返回数据的格式....这样你就不需要每次请求都要设置一遍相关参数
-    // 设置请求头
-    NSString * name = @"image";
-    CGFloat imageScale = 1.0;
-    NSString * imageType = @"jpeg";
-    
-    return [PPNetworkHelper uploadImagesWithURL:URL parameters:parameters name:name images:images fileNames:fileNames imageScale:imageScale imageType:imageType progress:^(NSProgress *progress) {
-        progressRate(progress);//上传进度
-        
-    } success:^(id responseObject) {
-        success(responseObject);
-        
-    } failure:^(NSError *error) {
-        failure(error);
-        
-    }];
-}
-
-/**
- 表单形式提交数据(add by bin)
- 
- @param URL  请求地址
- @param parameters 请求参数
- @param success 请求成功的回调
- @param failure 请求失败的回调
- @return 返回的对象可取消请求,调用cancel方法
- */
 + (NSURLSessionTask *)formDataWithURL:(NSString *)URL
-                           parameters:(id)parameters
+                           parameters:(NSDictionary *)parameters
+                             progress:(PPHttpProgress)progress
                               success:(PPHttpRequestSuccess)success
                               failure:(PPHttpRequestFailed)failure{
-    
     [PPNetworkHelper setRequestSerializer:PPRequestSerializerJSON];
     [PPNetworkHelper setResponseSerializer:PPResponseSerializerJSON];
 //    [PPNetworkHelper setValue:@"gzip" forHTTPHeaderField:@"Content-Encoding"];
     [PPNetworkHelper setValue:@"zh-cn" forHTTPHeaderField:@"langue"];
-
-    return [PPNetworkHelper FormDataWithURL:URL parameters:parameters success:^(id responseObject) {
-        success(responseObject);
-
-    } failure:^(NSError *error) {
-        failure(error);
-
-    }];
+    
+    return [PPNetworkHelper FormDataWithURL:URL
+                                 parameters:parameters
+                                   progress:progress
+                                    success:success
+                                    failure:failure];
 }
 
 + (void)recognizeCardWithParameters:(id)parameters

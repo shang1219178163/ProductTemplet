@@ -20,7 +20,7 @@ NS_ASSUME_NONNULL_BEGIN
  *
  *  @return
  */
-- (instancetype)initWithFrame:(CGRect)frame tagArray:(NSMutableArray*)tagArray;
+- (instancetype)initWithFrame:(CGRect)frame tagArray:(NSArray *)tagArray;
 
 // 标签数组
 @property (nonatomic,retain) NSArray* tagArray;

@@ -276,7 +276,9 @@
         _itemsView.numberOfRow = 4;
         NSArray * items = @[@"修改密码",@"重启服务",@"用户信息",@"设备列表",@"通道列表",@"通道流",];
         _itemsView.items = items;
+        @weakify(self);
         _itemsView.block = ^(NNItemsView * _Nonnull itemsView, UIButton * _Nonnull btn) {
+            @strongify(self);
             [self getInfoWithIndex:btn.tag];
             
         };

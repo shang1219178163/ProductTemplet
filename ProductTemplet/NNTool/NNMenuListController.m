@@ -61,15 +61,16 @@
 }
 
 - (void)configureMenuList{
-    NSArray * menuList = [NSArray arrayItemPrefix:@"工厂_" startIndex:1 count:10 type:@0];
+    NSArray * menuList = [NSArray arrayItemPrefix:@"工厂_" startIndex:1 count:10];
     
     self.navigationItem.titleView = self.btnView;
     
     self.btnView.label.text = [menuList firstObject];
     self.btnView.label.textColor = UIColor.whiteColor;
+    @weakify(self);
     self.btnView.block = ^(NNBtnView *view) {
+        @strongify(self);
         [self handleActionBtnView:view];
-        
     };
     
     NNMenuView * menuView = [[NNMenuView alloc]initWithFrame:CGRectMake(0, 0, kScreenWidth, 0.0)];

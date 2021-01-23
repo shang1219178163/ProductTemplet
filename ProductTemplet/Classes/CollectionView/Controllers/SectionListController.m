@@ -152,11 +152,9 @@
 
 //点击item方法
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
-    UICTViewCellTwo *cell = (UICTViewCellTwo *)[collectionView cellForItemAtIndexPath:indexPath];
-    NSString *msg = cell.label.text;
-    //    DDLog(@"%@",msg);
-    
-    DDLog(@"%@",indexPath);
+//    UICTViewCellTwo *cell = (UICTViewCellTwo *)[collectionView cellForItemAtIndexPath:indexPath];
+//    NSString *msg = cell.label.text;    
+    DDLog(@"%@", indexPath);
 }
 
 //header的size

@@ -107,7 +107,7 @@
 
     NSArray * animations = @[scaleAnim, rotationAnim];
     //组合动画
-    CAAnimationGroup *groupAnnim = [CAAnimationGroup animList:animations duration:1 autoreverses:NO repeatCount:MAXFLOAT];
+//    CAAnimationGroup *groupAnnim = [CAAnimationGroup animList:animations duration:1 autoreverses:NO repeatCount:MAXFLOAT];
 //    [layer addAnimation:groupAnnim forKey:@"groupAnnimation"];
     
     [layer getLayer];

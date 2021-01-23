@@ -12,7 +12,7 @@
 #import "NNRootAppInfoModel.h"
 #import "NSBundle+Language.h"
 #import "Utilities.h"
-#import "Utilities_DM.h"
+#import "UtilitiesDM.h"
 
 #import "BNFileHandler.h"
 #import "BNMenuListController.h"

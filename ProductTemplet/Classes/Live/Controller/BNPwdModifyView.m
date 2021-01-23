@@ -95,7 +95,7 @@
 
 - (UIButton *)btn{
     if (!_btn) {
-        _btn = [UIButton createRect:CGRectZero title:@"确定" image:nil type:@1];
+        _btn = [UIButton createRect:CGRectZero title:@"确定" type:NNButtonTypeTitleBlack];
     }
     return _btn;
 }

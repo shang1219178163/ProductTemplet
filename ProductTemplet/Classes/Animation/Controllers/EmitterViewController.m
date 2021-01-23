@@ -24,9 +24,8 @@
     self.view.backgroundColor = UIColor.cyanColor;
     self.view.backgroundColor = UIColor.blackColor;
     
-    CAEmitterLayer *emitterLayer = [CAEmitterLayer layerRect:self.view.layer.bounds imgList:nil type:@2];
+    CAEmitterLayer *emitterLayer = [CAEmitterLayer layerDownWithRect:self.view.layer.bounds images:nil];
     [self.view.layer addSublayer:emitterLayer];
-    
     return;
     
 //    CGSize emitterSize = CGSizeMake(self.view.bounds.size.width, 0);//发射器大小，因为emitterShape设置成线性所以高度可以设置成0，

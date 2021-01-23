@@ -196,70 +196,18 @@ typedef void(^PPNetworkStatus)(PPNetworkStatusType status);
                             failure:(PPHttpRequestFailed)failure;
 
 /**
- *  上传文件
- *
- *  @param URL        请求地址
- *  @param parameters 请求参数
- *  @param name       文件对应服务器上的字段
- *  @param filePath   文件本地的沙盒路径
- *  @param progress   上传进度信息
- *  @param success    请求成功的回调
- *  @param failure    请求失败的回调
- *
- *  @return 返回的对象可取消请求,调用cancel方法
- */
-+ (__kindof NSURLSessionTask *)uploadFileWithURL:(NSString *)URL
-                                      parameters:(id)parameters
-                                            name:(NSString *)name
-                                        filePath:(NSString *)filePath
-                                        progress:(PPHttpProgress)progress
-                                         success:(PPHttpRequestSuccess)success
-                                         failure:(PPHttpRequestFailed)failure;
-
-/**
- *  上传单/多张图片
- *
- *  @param URL        请求地址
- *  @param parameters 请求参数
- *  @param name       图片对应服务器上的字段
- *  @param images     图片数组
- *  @param fileNames  图片文件名数组, 可以为nil, 数组内的文件名默认为当前日期时间"yyyyMMddHHmmss"
- *  @param imageScale 图片文件压缩比 范围 (0.f ~ 1.f)
- *  @param imageType  图片文件的类型,例:png、jpg(默认类型)....
- *  @param progress   上传进度信息
- *  @param success    请求成功的回调
- *  @param failure    请求失败的回调
- *
- *  @return 返回的对象可取消请求,调用cancel方法
- */
-+ (__kindof NSURLSessionTask *)uploadImagesWithURL:(NSString *)URL
-                                        parameters:(id)parameters
-                                              name:(NSString *)name
-                                            images:(NSArray<UIImage *> *)images
-                                         fileNames:(NSArray<NSString *> *)fileNames
-                                        imageScale:(CGFloat)imageScale
-                                         imageType:(NSString *)imageType
-                                          progress:(PPHttpProgress)progress
-                                           success:(PPHttpRequestSuccess)success
-                                           failure:(PPHttpRequestFailed)failure;
-
-/// parameters字典包含data
-+ (NSURLSessionTask *)postMultFormDataWithURL:(NSString *)URL
-                                   parameters:(id)parameters
-                                     progress:(PPHttpProgress)progress
-                                      success:(PPHttpRequestSuccess)success
-                                         fail:(PPHttpRequestFailed)fail;
-/**
  表单形式提交数据(add by bin)
 
  @param URL  请求地址
  @param parameters 请求参数
+ @param progress   上传进度信息
  @param success 请求成功的回调
  @param failure 请求失败的回调
  @return 返回的对象可取消请求,调用cancel方法
  */
 + (NSURLSessionTask *)FormDataWithURL:(NSString *)URL
-                           parameters:(id)parameters
+                           parameters:(NSDictionary *)parameters
+                             progress:(PPHttpProgress)progress
                               success:(PPHttpRequestSuccess)success
                               failure:(PPHttpRequestFailed)failure;
 
