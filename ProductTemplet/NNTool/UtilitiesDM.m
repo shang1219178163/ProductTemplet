@@ -1,19 +1,19 @@
 //
-//  Utilities_DM.m
+//  UtilitiesDM.m
 //  
 //
 //  Created by BIN on 2017/12/13.
 //  Copyright © 2017年 SHANG. All rights reserved.
 //
 
-#import "Utilities_DM.h"
+#import "UtilitiesDM.h"
 
 #import <NNGloble/NNGloble.h>
 #import <Photos/Photos.h>
 #import "UIApplication+Helper.h"
 #import "UIWindow+Helper.h"
 
-@implementation Utilities_DM
+@implementation UtilitiesDM
 
 + (BOOL)hasAccessRightOfPhotosLibrary{
     PHAuthorizationStatus status = [PHPhotoLibrary authorizationStatus];

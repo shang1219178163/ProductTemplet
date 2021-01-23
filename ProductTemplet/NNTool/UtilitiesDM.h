@@ -1,12 +1,12 @@
 //
-//  Utilities_DM.h
+//  UtilitiesDM.h
 //  
 //
 //  Created by BIN on 2017/12/13.
 //  Copyright © 2017年 SHANG. All rights reserved.
 //
 
-//Utilities_DM
+//UtilitiesDM
 
 /**
  多媒体方法基地,视频,图片等
@@ -15,7 +15,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface Utilities_DM : NSObject
+@interface UtilitiesDM : NSObject
 
 + (BOOL)hasAccessRightOfPhotosLibrary;
 

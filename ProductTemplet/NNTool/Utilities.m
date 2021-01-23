@@ -11,7 +11,7 @@
 #import <NNGloble/NNGloble.h>
 
 //#import "AESCrypt.h"
-#import "Utilities_DM.h"
+#import "UtilitiesDM.h"
 
 #import "NSData+Helper.h"
 #import "NSString+Other.h"
@@ -52,14 +52,14 @@ static NSString *const kPlistName_common = @"HuiZhuBang_common.plist";
 
     //    NSString * plistPath = [NSHomeDirectory() stringByAppendingFormat:@"/Library/File_Plist/%@",fileName];
     NSString *plistPath = [NSHomeDirectory() stringByAppendingFormat:@"%@",kPlistFilePath];
-    if (![Utilities_DM fileExistAtPath:plistPath]) {
-        [Utilities_DM createDirectoryAtPath:plistPath];
+    if (![UtilitiesDM fileExistAtPath:plistPath]) {
+        [UtilitiesDM createDirectoryAtPath:plistPath];
     }
     NSString *filePath = [plistPath stringByAppendingPathComponent:kPlistName_common];
 //    DDLog(@"%@\n", filePath);
 
     NSMutableDictionary *mdict = [NSMutableDictionary dictionaryWithCapacity:0];
-    if ([Utilities_DM fileExistAtPath:plistPath]) {
+    if ([UtilitiesDM fileExistAtPath:plistPath]) {
         mdict = [NSMutableDictionary dictionaryWithContentsOfFile:filePath];
         if (!mdict) {
             mdict = [NSMutableDictionary dictionaryWithCapacity:0];
