@@ -15,20 +15,20 @@
 #import <UIKit/UIKit.h>
 #import <Foundation/Foundation.h>
 
-#import "AppGlobleConfig.h"
-
-
 #import <NNGloble/NNGloble.h>
 #import <NNCategoryPro/NNCategoryPro.h>
-#import <NNView/NNView.h>
-#import <NNTableViewCell/NNTableViewCell.h>
-#import <NNCollectionView/NNCollectionView.h>
-#import <NNViewComplex/NNViewComplex.h>
+
+#import "AppGlobleConfig.h"
 
 #import "AAGlobalMacro.h"//图表专用
 
-//#define MAS_SHORTHAND
-//#define MAS_SHORTHAND_GLOBALS
+#define MAS_SHORTHAND
+#define MAS_SHORTHAND_GLOBALS
 #import "Masonry.h"
+
+#import "NNView.h"
+#import "NNTableViewCell.h"
+#import "NNCollectionView.h"
+#import "NNViewComplex.h"
 
 #endif /* PrefixHeader_pch */
