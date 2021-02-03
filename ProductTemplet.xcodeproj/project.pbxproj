@@ -97,6 +97,146 @@
 		14488765224F4D6B00B550AF /* icon_oprationSuccess@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 14488763224F4D6B00B550AF /* icon_oprationSuccess@3x.png */; };
 		144920AA21C7BAA700C3C2F6 /* MoneyDisplayController.m in Sources */ = {isa = PBXBuildFile; fileRef = 144920A921C7BAA700C3C2F6 /* MoneyDisplayController.m */; };
 		144FF41E2311458C007BCBFE /* UICTViewCellTen.m in Sources */ = {isa = PBXBuildFile; fileRef = 144FF41D2311458C007BCBFE /* UICTViewCellTen.m */; };
+		145375D725CAA44B00CB6578 /* UICTViewLayoutExcel.m in Sources */ = {isa = PBXBuildFile; fileRef = 145375C725CAA44A00CB6578 /* UICTViewLayoutExcel.m */; };
+		145375D825CAA44B00CB6578 /* NNCycleCTView.m in Sources */ = {isa = PBXBuildFile; fileRef = 145375CA25CAA44A00CB6578 /* NNCycleCTView.m */; };
+		145375D925CAA44B00CB6578 /* NNTextFieldOne.m in Sources */ = {isa = PBXBuildFile; fileRef = 145375CB25CAA44A00CB6578 /* NNTextFieldOne.m */; };
+		145375DA25CAA44B00CB6578 /* UICTViewCellExcel.m in Sources */ = {isa = PBXBuildFile; fileRef = 145375CC25CAA44A00CB6578 /* UICTViewCellExcel.m */; };
+		145375DB25CAA44B00CB6578 /* UIExcelView.m in Sources */ = {isa = PBXBuildFile; fileRef = 145375D025CAA44A00CB6578 /* UIExcelView.m */; };
+		145375DC25CAA44B00CB6578 /* NNCTView.m in Sources */ = {isa = PBXBuildFile; fileRef = 145375D225CAA44A00CB6578 /* NNCTView.m */; };
+		145375DD25CAA44B00CB6578 /* NNShareView.m in Sources */ = {isa = PBXBuildFile; fileRef = 145375D325CAA44A00CB6578 /* NNShareView.m */; };
+		145375DE25CAA44B00CB6578 /* Media.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 145375D625CAA44A00CB6578 /* Media.xcassets */; };
+		1453764B25CAA47800CB6578 /* NNTurnView.m in Sources */ = {isa = PBXBuildFile; fileRef = 145375E725CAA47300CB6578 /* NNTurnView.m */; };
+		1453764C25CAA47800CB6578 /* NNTablePlainView.m in Sources */ = {isa = PBXBuildFile; fileRef = 145375E925CAA47300CB6578 /* NNTablePlainView.m */; };
+		1453764D25CAA47800CB6578 /* NNStarRateView.m in Sources */ = {isa = PBXBuildFile; fileRef = 145375EA25CAA47300CB6578 /* NNStarRateView.m */; };
+		1453764E25CAA47800CB6578 /* NNTabBarViewZero.m in Sources */ = {isa = PBXBuildFile; fileRef = 145375EB25CAA47300CB6578 /* NNTabBarViewZero.m */; };
+		1453764F25CAA47800CB6578 /* NNPickerListView.m in Sources */ = {isa = PBXBuildFile; fileRef = 145375EE25CAA47300CB6578 /* NNPickerListView.m */; };
+		1453765025CAA47800CB6578 /* NNWebView.m in Sources */ = {isa = PBXBuildFile; fileRef = 145375EF25CAA47300CB6578 /* NNWebView.m */; };
+		1453765125CAA47800CB6578 /* NNGuideView.m in Sources */ = {isa = PBXBuildFile; fileRef = 145375F025CAA47300CB6578 /* NNGuideView.m */; };
+		1453765225CAA47800CB6578 /* NNDateRangeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 145375F125CAA47300CB6578 /* NNDateRangeView.m */; };
+		1453765325CAA47800CB6578 /* NNPairLabelView.m in Sources */ = {isa = PBXBuildFile; fileRef = 145375F225CAA47300CB6578 /* NNPairLabelView.m */; };
+		1453765425CAA47800CB6578 /* NNFilterView.m in Sources */ = {isa = PBXBuildFile; fileRef = 145375F325CAA47300CB6578 /* NNFilterView.m */; };
+		1453765525CAA47800CB6578 /* NNSuspendBtn.m in Sources */ = {isa = PBXBuildFile; fileRef = 145375F425CAA47300CB6578 /* NNSuspendBtn.m */; };
+		1453765625CAA47800CB6578 /* NNShoppingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 145375F625CAA47400CB6578 /* NNShoppingView.m */; };
+		1453765725CAA47800CB6578 /* NNCircle.m in Sources */ = {isa = PBXBuildFile; fileRef = 145375F825CAA47400CB6578 /* NNCircle.m */; };
+		1453765825CAA47800CB6578 /* NNPickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 145375F925CAA47400CB6578 /* NNPickerView.m */; };
+		1453765925CAA47800CB6578 /* NNAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 145375FA25CAA47400CB6578 /* NNAlertView.m */; };
+		1453765A25CAA47800CB6578 /* NNAddPictureVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 1453760025CAA47400CB6578 /* NNAddPictureVC.m */; };
+		1453765B25CAA47800CB6578 /* NNListChooseView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1453760125CAA47400CB6578 /* NNListChooseView.m */; };
+		1453765C25CAA47800CB6578 /* NNPhotosView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1453760225CAA47400CB6578 /* NNPhotosView.m */; };
+		1453765D25CAA47800CB6578 /* NNSearchView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1453760425CAA47400CB6578 /* NNSearchView.m */; };
+		1453765E25CAA47800CB6578 /* NNAddCardView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1453760525CAA47400CB6578 /* NNAddCardView.m */; };
+		1453765F25CAA47800CB6578 /* NNFoldHeaderFooterView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1453760625CAA47400CB6578 /* NNFoldHeaderFooterView.m */; };
+		1453766025CAA47800CB6578 /* NNSwitchView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1453760825CAA47500CB6578 /* NNSwitchView.m */; };
+		1453766125CAA47800CB6578 /* NNHeaderFooterView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1453760A25CAA47500CB6578 /* NNHeaderFooterView.m */; };
+		1453766225CAA47800CB6578 /* NNDatePicker.m in Sources */ = {isa = PBXBuildFile; fileRef = 1453760C25CAA47500CB6578 /* NNDatePicker.m */; };
+		1453766325CAA47800CB6578 /* NNAlertViewOne.m in Sources */ = {isa = PBXBuildFile; fileRef = 1453761025CAA47500CB6578 /* NNAlertViewOne.m */; };
+		1453766425CAA47800CB6578 /* Media.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1453761225CAA47500CB6578 /* Media.xcassets */; };
+		1453766525CAA47800CB6578 /* area.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1453761325CAA47500CB6578 /* area.plist */; };
+		1453766625CAA47800CB6578 /* NNBtnView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1453761525CAA47500CB6578 /* NNBtnView.m */; };
+		1453766725CAA47800CB6578 /* NNMenuView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1453761625CAA47500CB6578 /* NNMenuView.m */; };
+		1453766825CAA47800CB6578 /* NNMonthView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1453761825CAA47500CB6578 /* NNMonthView.m */; };
+		1453766925CAA47800CB6578 /* NNPickerViewAddress.m in Sources */ = {isa = PBXBuildFile; fileRef = 1453761925CAA47500CB6578 /* NNPickerViewAddress.m */; };
+		1453766A25CAA47800CB6578 /* NNTabBarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1453761A25CAA47500CB6578 /* NNTabBarView.m */; };
+		1453766B25CAA47800CB6578 /* NNStarsView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1453761B25CAA47500CB6578 /* NNStarsView.m */; };
+		1453766C25CAA47800CB6578 /* NNGroupViewZero.m in Sources */ = {isa = PBXBuildFile; fileRef = 1453761C25CAA47500CB6578 /* NNGroupViewZero.m */; };
+		1453766D25CAA47800CB6578 /* NNCellDefaultView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1453762225CAA47600CB6578 /* NNCellDefaultView.m */; };
+		1453766E25CAA47800CB6578 /* NNRefreshHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 1453762825CAA47600CB6578 /* NNRefreshHeader.m */; };
+		1453766F25CAA47800CB6578 /* NNTopSheetView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1453762925CAA47600CB6578 /* NNTopSheetView.m */; };
+		1453767025CAA47800CB6578 /* NNSuspendButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 1453762C25CAA47600CB6578 /* NNSuspendButton.m */; };
+		1453767125CAA47800CB6578 /* NNAlertViewTwo.m in Sources */ = {isa = PBXBuildFile; fileRef = 1453762D25CAA47600CB6578 /* NNAlertViewTwo.m */; };
+		1453767225CAA47800CB6578 /* NNGroupView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1453762E25CAA47600CB6578 /* NNGroupView.m */; };
+		1453767325CAA47800CB6578 /* NNSliderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1453762F25CAA47600CB6578 /* NNSliderView.m */; };
+		1453767425CAA47800CB6578 /* NNGView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1453763025CAA47700CB6578 /* NNGView.m */; };
+		1453767525CAA47800CB6578 /* NNAddPictureView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1453763125CAA47700CB6578 /* NNAddPictureView.m */; };
+		1453767625CAA47800CB6578 /* NNLeftMenuView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1453763325CAA47700CB6578 /* NNLeftMenuView.m */; };
+		1453767725CAA47800CB6578 /* NNItemsView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1453763425CAA47700CB6578 /* NNItemsView.m */; };
+		1453767825CAA47800CB6578 /* NNExtendView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1453763625CAA47700CB6578 /* NNExtendView.m */; };
+		1453767925CAA47800CB6578 /* NNImgLabelView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1453763825CAA47700CB6578 /* NNImgLabelView.m */; };
+		1453767A25CAA47800CB6578 /* NNUserView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1453763C25CAA47700CB6578 /* NNUserView.m */; };
+		1453767B25CAA47800CB6578 /* NNSheetView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1453764125CAA47700CB6578 /* NNSheetView.m */; };
+		1453767C25CAA47800CB6578 /* NNCycleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1453764225CAA47700CB6578 /* NNCycleView.m */; };
+		1453767D25CAA47800CB6578 /* NNRotationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1453764525CAA47800CB6578 /* NNRotationView.m */; };
+		1453767E25CAA47800CB6578 /* NNSegmentView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1453764725CAA47800CB6578 /* NNSegmentView.m */; };
+		1453767F25CAA47800CB6578 /* NNLabView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1453764825CAA47800CB6578 /* NNLabView.m */; };
+		145376F325CAA49600CB6578 /* UITableViewFortyFiveCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1453768225CAA49000CB6578 /* UITableViewFortyFiveCell.m */; };
+		145376F425CAA49600CB6578 /* UITableViewFiftyTwoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1453768525CAA49000CB6578 /* UITableViewFiftyTwoCell.m */; };
+		145376F525CAA49600CB6578 /* UITableViewSliderCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1453768A25CAA49000CB6578 /* UITableViewSliderCell.m */; };
+		145376F625CAA49600CB6578 /* UITableViewFiftyNineCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1453768B25CAA49000CB6578 /* UITableViewFiftyNineCell.m */; };
+		145376F725CAA49600CB6578 /* UITableViewElevenCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1453768C25CAA49000CB6578 /* UITableViewElevenCell.m */; };
+		145376F825CAA49600CB6578 /* UITableViewSenventySevenCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1453768D25CAA49000CB6578 /* UITableViewSenventySevenCell.m */; };
+		145376F925CAA49600CB6578 /* UITableViewFortyThreeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1453768E25CAA49000CB6578 /* UITableViewFortyThreeCell.m */; };
+		145376FA25CAA49600CB6578 /* UITableViewStepCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1453768F25CAA49000CB6578 /* UITableViewStepCell.m */; };
+		145376FB25CAA49600CB6578 /* UITableViewSixCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1453769225CAA49100CB6578 /* UITableViewSixCell.m */; };
+		145376FC25CAA49600CB6578 /* UITableViewFourteenCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1453769325CAA49100CB6578 /* UITableViewFourteenCell.m */; };
+		145376FD25CAA49600CB6578 /* UITableViewAddressPickerCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1453769425CAA49100CB6578 /* UITableViewAddressPickerCell.m */; };
+		145376FE25CAA49600CB6578 /* UITableViewSixtyEightCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1453769625CAA49100CB6578 /* UITableViewSixtyEightCell.m */; };
+		145376FF25CAA49600CB6578 /* UITableHeaderFooterViewTwo.m in Sources */ = {isa = PBXBuildFile; fileRef = 1453769725CAA49100CB6578 /* UITableHeaderFooterViewTwo.m */; };
+		1453770025CAA49600CB6578 /* UITableViewFiftyOneCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1453769925CAA49100CB6578 /* UITableViewFiftyOneCell.m */; };
+		1453770125CAA49600CB6578 /* UITableViewCycleViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1453769A25CAA49100CB6578 /* UITableViewCycleViewCell.m */; };
+		1453770225CAA49600CB6578 /* UITableViewFiftySevenCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1453769F25CAA49100CB6578 /* UITableViewFiftySevenCell.m */; };
+		1453770325CAA49600CB6578 /* UITableHeaderFooterViewZero.m in Sources */ = {isa = PBXBuildFile; fileRef = 145376A125CAA49100CB6578 /* UITableHeaderFooterViewZero.m */; };
+		1453770425CAA49600CB6578 /* UITableViewSixtyOneCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 145376A225CAA49100CB6578 /* UITableViewSixtyOneCell.m */; };
+		1453770525CAA49600CB6578 /* UITableViewSenventyThreeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 145376A325CAA49200CB6578 /* UITableViewSenventyThreeCell.m */; };
+		1453770625CAA49600CB6578 /* UITableViewEightyTwoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 145376A525CAA49200CB6578 /* UITableViewEightyTwoCell.m */; };
+		1453770725CAA49600CB6578 /* UITableViewSeventyCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 145376AA25CAA49200CB6578 /* UITableViewSeventyCell.m */; };
+		1453770825CAA49600CB6578 /* UITableViewEightyEightCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 145376AC25CAA49200CB6578 /* UITableViewEightyEightCell.m */; };
+		1453770925CAA49600CB6578 /* UITableViewSheetCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 145376AD25CAA49200CB6578 /* UITableViewSheetCell.m */; };
+		1453770A25CAA49600CB6578 /* UITableViewFiftyCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 145376AF25CAA49200CB6578 /* UITableViewFiftyCell.m */; };
+		1453770B25CAA49600CB6578 /* UITableViewCellDefault.m in Sources */ = {isa = PBXBuildFile; fileRef = 145376B125CAA49200CB6578 /* UITableViewCellDefault.m */; };
+		1453770C25CAA49600CB6578 /* UITableViewThirtyEightCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 145376B325CAA49200CB6578 /* UITableViewThirtyEightCell.m */; };
+		1453770D25CAA49600CB6578 /* UITableViewSenventySixCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 145376B725CAA49300CB6578 /* UITableViewSenventySixCell.m */; };
+		1453770E25CAA49600CB6578 /* UITableViewFortyCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 145376BB25CAA49300CB6578 /* UITableViewFortyCell.m */; };
+		1453770F25CAA49600CB6578 /* UITableViewPickerListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 145376BD25CAA49300CB6578 /* UITableViewPickerListCell.m */; };
+		1453771025CAA49600CB6578 /* UITableViewFourCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 145376C125CAA49300CB6578 /* UITableViewFourCell.m */; };
+		1453771125CAA49600CB6578 /* UITableViewSixtyFourCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 145376C225CAA49300CB6578 /* UITableViewSixtyFourCell.m */; };
+		1453771225CAA49600CB6578 /* UITableViewBankCardCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 145376C525CAA49300CB6578 /* UITableViewBankCardCell.m */; };
+		1453771325CAA49600CB6578 /* UITableViewFiveCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 145376C825CAA49300CB6578 /* UITableViewFiveCell.m */; };
+		1453771425CAA49600CB6578 /* UITableViewSixtyNineCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 145376CB25CAA49400CB6578 /* UITableViewSixtyNineCell.m */; };
+		1453771525CAA49600CB6578 /* UITableViewEightCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 145376CC25CAA49400CB6578 /* UITableViewEightCell.m */; };
+		1453771625CAA49600CB6578 /* UITableViewSegmentCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 145376CD25CAA49400CB6578 /* UITableViewSegmentCell.m */; };
+		1453771725CAA49600CB6578 /* UITableViewOneCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 145376D125CAA49400CB6578 /* UITableViewOneCell.m */; };
+		1453771825CAA49600CB6578 /* UITableViewSevenCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 145376D225CAA49400CB6578 /* UITableViewSevenCell.m */; };
+		1453771925CAA49600CB6578 /* UITableViewTextViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 145376D325CAA49400CB6578 /* UITableViewTextViewCell.m */; };
+		1453771A25CAA49600CB6578 /* UITableViewDatePickerCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 145376D425CAA49400CB6578 /* UITableViewDatePickerCell.m */; };
+		1453771B25CAA49600CB6578 /* UITableViewSeventeenCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 145376D625CAA49400CB6578 /* UITableViewSeventeenCell.m */; };
+		1453771C25CAA49600CB6578 /* UITableViewSixtySevenCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 145376D725CAA49400CB6578 /* UITableViewSixtySevenCell.m */; };
+		1453771D25CAA49600CB6578 /* UITableViewPickerViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 145376DA25CAA49400CB6578 /* UITableViewPickerViewCell.m */; };
+		1453771E25CAA49600CB6578 /* UITableViewEightyCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 145376DB25CAA49400CB6578 /* UITableViewEightyCell.m */; };
+		1453771F25CAA49600CB6578 /* UITableViewSenventyFourCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 145376DE25CAA49500CB6578 /* UITableViewSenventyFourCell.m */; };
+		1453772025CAA49600CB6578 /* UITableViewDateRangeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 145376DF25CAA49500CB6578 /* UITableViewDateRangeCell.m */; };
+		1453772125CAA49600CB6578 /* UITableViewSixtyFiveCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 145376E025CAA49500CB6578 /* UITableViewSixtyFiveCell.m */; };
+		1453772225CAA49600CB6578 /* UITableHeaderFooterViewOne.m in Sources */ = {isa = PBXBuildFile; fileRef = 145376E125CAA49500CB6578 /* UITableHeaderFooterViewOne.m */; };
+		1453772325CAA49600CB6578 /* UITableViewTextFieldCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 145376E225CAA49500CB6578 /* UITableViewTextFieldCell.m */; };
+		1453772425CAA49600CB6578 /* UITableViewEightyFiveCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 145376E625CAA49500CB6578 /* UITableViewEightyFiveCell.m */; };
+		1453772525CAA49600CB6578 /* UITableViewFifteenCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 145376E725CAA49500CB6578 /* UITableViewFifteenCell.m */; };
+		1453772625CAA49600CB6578 /* UITableViewFortyFourCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 145376EB25CAA49500CB6578 /* UITableViewFortyFourCell.m */; };
+		1453772725CAA49600CB6578 /* UITableViewSixteenCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 145376EC25CAA49500CB6578 /* UITableViewSixteenCell.m */; };
+		1453772825CAA49600CB6578 /* UITableViewNinetyOneCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 145376ED25CAA49500CB6578 /* UITableViewNinetyOneCell.m */; };
+		1453772925CAA49600CB6578 /* UITableViewSenventyTwoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 145376EF25CAA49500CB6578 /* UITableViewSenventyTwoCell.m */; };
+		1453772A25CAA49600CB6578 /* UITableViewFiftyEightCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 145376F125CAA49600CB6578 /* UITableViewFiftyEightCell.m */; };
+		1453772B25CAA49600CB6578 /* UITableViewAchivementCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 145376F225CAA49600CB6578 /* UITableViewAchivementCell.m */; };
+		1453775925CAA4AB00CB6578 /* UICTReusableViewOne.m in Sources */ = {isa = PBXBuildFile; fileRef = 1453772E25CAA4A800CB6578 /* UICTReusableViewOne.m */; };
+		1453775A25CAA4AB00CB6578 /* UICTViewCellTwo.m in Sources */ = {isa = PBXBuildFile; fileRef = 1453772F25CAA4A800CB6578 /* UICTViewCellTwo.m */; };
+		1453775B25CAA4AB00CB6578 /* UICTViewCellOne.m in Sources */ = {isa = PBXBuildFile; fileRef = 1453773025CAA4A800CB6578 /* UICTViewCellOne.m */; };
+		1453775C25CAA4AB00CB6578 /* UICTViewLayoutFive.m in Sources */ = {isa = PBXBuildFile; fileRef = 1453773325CAA4A800CB6578 /* UICTViewLayoutFive.m */; };
+		1453775D25CAA4AB00CB6578 /* UICTViewCellFour.m in Sources */ = {isa = PBXBuildFile; fileRef = 1453773925CAA4A900CB6578 /* UICTViewCellFour.m */; };
+		1453775E25CAA4AB00CB6578 /* UICTViewCellEight.m in Sources */ = {isa = PBXBuildFile; fileRef = 1453773C25CAA4A900CB6578 /* UICTViewCellEight.m */; };
+		1453775F25CAA4AB00CB6578 /* UICTViewCellZero.m in Sources */ = {isa = PBXBuildFile; fileRef = 1453773D25CAA4A900CB6578 /* UICTViewCellZero.m */; };
+		1453776025CAA4AB00CB6578 /* UICTViewLayoutSphere.m in Sources */ = {isa = PBXBuildFile; fileRef = 1453773E25CAA4A900CB6578 /* UICTViewLayoutSphere.m */; };
+		1453776125CAA4AB00CB6578 /* UICTViewCellSeven.m in Sources */ = {isa = PBXBuildFile; fileRef = 1453773F25CAA4A900CB6578 /* UICTViewCellSeven.m */; };
+		1453776225CAA4AB00CB6578 /* UICTViewCellFive.m in Sources */ = {isa = PBXBuildFile; fileRef = 1453774025CAA4A900CB6578 /* UICTViewCellFive.m */; };
+		1453776325CAA4AB00CB6578 /* UICTViewLayoutCircle.m in Sources */ = {isa = PBXBuildFile; fileRef = 1453774225CAA4A900CB6578 /* UICTViewLayoutCircle.m */; };
+		1453776425CAA4AB00CB6578 /* UICTReusableViewTwo.m in Sources */ = {isa = PBXBuildFile; fileRef = 1453774525CAA4AA00CB6578 /* UICTReusableViewTwo.m */; };
+		1453776525CAA4AB00CB6578 /* UICTViewLayoutZero.m in Sources */ = {isa = PBXBuildFile; fileRef = 1453774725CAA4AA00CB6578 /* UICTViewLayoutZero.m */; };
+		1453776625CAA4AB00CB6578 /* UICTReusableViewZero.m in Sources */ = {isa = PBXBuildFile; fileRef = 1453774925CAA4AA00CB6578 /* UICTReusableViewZero.m */; };
+		1453776725CAA4AB00CB6578 /* UICTViewLayoutCard.m in Sources */ = {isa = PBXBuildFile; fileRef = 1453774F25CAA4AA00CB6578 /* UICTViewLayoutCard.m */; };
+		1453776825CAA4AB00CB6578 /* UICTReusableViewFour.m in Sources */ = {isa = PBXBuildFile; fileRef = 1453775025CAA4AA00CB6578 /* UICTReusableViewFour.m */; };
+		1453776925CAA4AB00CB6578 /* UICTViewCellThree.m in Sources */ = {isa = PBXBuildFile; fileRef = 1453775225CAA4AA00CB6578 /* UICTViewCellThree.m */; };
+		1453776A25CAA4AB00CB6578 /* UICTViewLayoutPicker.m in Sources */ = {isa = PBXBuildFile; fileRef = 1453775325CAA4AA00CB6578 /* UICTViewLayoutPicker.m */; };
+		1453776B25CAA4AB00CB6578 /* UICTReusableViewThree.m in Sources */ = {isa = PBXBuildFile; fileRef = 1453775525CAA4AA00CB6578 /* UICTReusableViewThree.m */; };
+		1453776C25CAA4AB00CB6578 /* UICTViewCellSix.m in Sources */ = {isa = PBXBuildFile; fileRef = 1453775625CAA4AB00CB6578 /* UICTViewCellSix.m */; };
+		1453776D25CAA4AB00CB6578 /* UICTViewLayoutOne.m in Sources */ = {isa = PBXBuildFile; fileRef = 1453775725CAA4AB00CB6578 /* UICTViewLayoutOne.m */; };
+		145377AA25CAA68100CB6578 /* UITableViewSwitchCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 145377A925CAA68100CB6578 /* UITableViewSwitchCell.m */; };
 		1455107D240D06F9001772F5 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1455107C240D06F9001772F5 /* CloudKit.framework */; };
 		14551080240D0811001772F5 /* NNFileUploadController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1455107F240D0811001772F5 /* NNFileUploadController.m */; };
 		14579BA12294EE83001FEB0C /* WebSocketManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 14579BA02294EE83001FEB0C /* WebSocketManager.m */; };
@@ -111,8 +251,8 @@
 		146B8187225C74860004A249 /* SubTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 146B8186225C74860004A249 /* SubTabBarController.m */; };
 		147900392306BB5A00FC4825 /* SnapshotViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 147900382306BB5A00FC4825 /* SnapshotViewController.m */; };
 		147AB8B822DDD76D00A5C4EC /* FileShareController.m in Sources */ = {isa = PBXBuildFile; fileRef = 147AB8B722DDD76D00A5C4EC /* FileShareController.m */; };
-		147ABB5822DED1A500A5C4EC /* BNCollectionDataController.m in Sources */ = {isa = PBXBuildFile; fileRef = 147ABB5422DED1A500A5C4EC /* BNCollectionDataController.m */; };
-		147ABB5922DED1A500A5C4EC /* BNCollectionDataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 147ABB5522DED1A500A5C4EC /* BNCollectionDataModel.m */; };
+		147ABB5822DED1A500A5C4EC /* NNCollectionDataController.m in Sources */ = {isa = PBXBuildFile; fileRef = 147ABB5422DED1A500A5C4EC /* NNCollectionDataController.m */; };
+		147ABB5922DED1A500A5C4EC /* NNCollectionDataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 147ABB5522DED1A500A5C4EC /* NNCollectionDataModel.m */; };
 		147B971F21EF005B000F5294 /* UICollectionDisplayController.m in Sources */ = {isa = PBXBuildFile; fileRef = 147B971E21EF005B000F5294 /* UICollectionDisplayController.m */; };
 		149111D42272FFCC0078A7BB /* NNPageModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 149111D32272FFCC0078A7BB /* NNPageModel.m */; };
 		149111D7227308640078A7BB /* NNRequstManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 149111D6227308640078A7BB /* NNRequstManager.m */; };
@@ -136,6 +276,8 @@
 		14A86A852355AFC700AD9BC1 /* NNSearchResultController.m in Sources */ = {isa = PBXBuildFile; fileRef = 14A86A812355AFC600AD9BC1 /* NNSearchResultController.m */; };
 		14A86A862355AFC700AD9BC1 /* NNSearchController.m in Sources */ = {isa = PBXBuildFile; fileRef = 14A86A822355AFC600AD9BC1 /* NNSearchController.m */; };
 		14A95771231125F10045140F /* NNScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 14A95770231125F10045140F /* NNScrollView.m */; };
+		14ACBA4C25BFAF27002F61AA /* UIDevice-Orientation.m in Sources */ = {isa = PBXBuildFile; fileRef = 14ACBA4825BFAF27002F61AA /* UIDevice-Orientation.m */; };
+		14ACBA4D25BFAF27002F61AA /* UIDevice-Hardware.m in Sources */ = {isa = PBXBuildFile; fileRef = 14ACBA4925BFAF27002F61AA /* UIDevice-Hardware.m */; };
 		14ADE27E23CEC65A00037B0B /* NNTagViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 14ADE27D23CEC65A00037B0B /* NNTagViewController.m */; };
 		14ADE28123CEC66800037B0B /* XGTagView.m in Sources */ = {isa = PBXBuildFile; fileRef = 14ADE28023CEC66800037B0B /* XGTagView.m */; };
 		14ADE28423CEE09D00037B0B /* NNTagView.m in Sources */ = {isa = PBXBuildFile; fileRef = 14ADE28323CEE09C00037B0B /* NNTagView.m */; };
@@ -176,6 +318,7 @@
 		14C11ABD22DC813E009D18A3 /* UICTViewMainController.m in Sources */ = {isa = PBXBuildFile; fileRef = 14C11ABC22DC813E009D18A3 /* UICTViewMainController.m */; };
 		14C11AC022DC872C009D18A3 /* NNDataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 14C11ABF22DC872C009D18A3 /* NNDataModel.m */; };
 		14C96FC022B399FA0015BA1D /* GroupViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 14C96FBF22B399FA0015BA1D /* GroupViewController.m */; };
+		14CF392725B9668E00FBDBF7 /* NNButtonDispalyController.m in Sources */ = {isa = PBXBuildFile; fileRef = 14CF392625B9668E00FBDBF7 /* NNButtonDispalyController.m */; };
 		14D40A3022C5BB7B00AF74B9 /* PopoverAction.m in Sources */ = {isa = PBXBuildFile; fileRef = 14D40A2C22C5BB7B00AF74B9 /* PopoverAction.m */; };
 		14D40A3122C5BB7B00AF74B9 /* PopoverView.m in Sources */ = {isa = PBXBuildFile; fileRef = 14D40A2D22C5BB7B00AF74B9 /* PopoverView.m */; };
 		14D40A3222C5BB7B00AF74B9 /* PopoverViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 14D40A2E22C5BB7B00AF74B9 /* PopoverViewCell.m */; };
@@ -220,6 +363,7 @@
 		14EAC94B2321DA8300E42D4F /* NNPageInfoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 14EAC9472321DA8200E42D4F /* NNPageInfoModel.m */; };
 		14EAC94C2321DA8300E42D4F /* NNPageScrollViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 14EAC9482321DA8200E42D4F /* NNPageScrollViewController.m */; };
 		14EAC94D2321DA8300E42D4F /* UICTViewLayoutPage.m in Sources */ = {isa = PBXBuildFile; fileRef = 14EAC9492321DA8300E42D4F /* UICTViewLayoutPage.m */; };
+		14EFF3FD25BA58AC00D82359 /* NNButtonGroupView.m in Sources */ = {isa = PBXBuildFile; fileRef = 14EFF3FC25BA58AC00D82359 /* NNButtonGroupView.m */; };
 		14F08BAE23016D9C00B75842 /* WaterView.m in Sources */ = {isa = PBXBuildFile; fileRef = 14F08BAC23016D9C00B75842 /* WaterView.m */; };
 		14F08BB123016DDD00B75842 /* WaveController.m in Sources */ = {isa = PBXBuildFile; fileRef = 14F08BB023016DDD00B75842 /* WaveController.m */; };
 		14F0FE4E22B0A6E400057093 /* BNUserInfoApi.m in Sources */ = {isa = PBXBuildFile; fileRef = 14F0FE4D22B0A6E400057093 /* BNUserInfoApi.m */; };
@@ -352,7 +496,7 @@
 		513649DF20860655005A20E7 /* img_update.png in Resources */ = {isa = PBXBuildFile; fileRef = 5136498120860655005A20E7 /* img_update.png */; };
 		513649E020860655005A20E7 /* img_warning_exception.png in Resources */ = {isa = PBXBuildFile; fileRef = 5136498220860655005A20E7 /* img_warning_exception.png */; };
 		51364C9D20860822005A20E7 /* PictureController.m in Sources */ = {isa = PBXBuildFile; fileRef = 51364C7420860821005A20E7 /* PictureController.m */; };
-		51364CA020860822005A20E7 /* Utilities_DM.m in Sources */ = {isa = PBXBuildFile; fileRef = 51364C7A20860821005A20E7 /* Utilities_DM.m */; };
+		51364CA020860822005A20E7 /* UtilitiesDM.m in Sources */ = {isa = PBXBuildFile; fileRef = 51364C7A20860821005A20E7 /* UtilitiesDM.m */; };
 		515C67DD2137C55700D5EA94 /* BAddressPickerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 515C67C72137C55700D5EA94 /* BAddressPickerController.m */; };
 		515C67DE2137C55700D5EA94 /* cities.plist in Resources */ = {isa = PBXBuildFile; fileRef = 515C67C82137C55700D5EA94 /* cities.plist */; };
 		515C67DF2137C55700D5EA94 /* ChineseToPinyin.m in Sources */ = {isa = PBXBuildFile; fileRef = 515C67CA2137C55700D5EA94 /* ChineseToPinyin.m */; };
@@ -667,6 +811,287 @@
 		144920A921C7BAA700C3C2F6 /* MoneyDisplayController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MoneyDisplayController.m; sourceTree = "<group>"; };
 		144FF41C2311458C007BCBFE /* UICTViewCellTen.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UICTViewCellTen.h; sourceTree = "<group>"; };
 		144FF41D2311458C007BCBFE /* UICTViewCellTen.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UICTViewCellTen.m; sourceTree = "<group>"; };
+		145375C625CAA44A00CB6578 /* NNTextFieldOne.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NNTextFieldOne.h; sourceTree = "<group>"; };
+		145375C725CAA44A00CB6578 /* UICTViewLayoutExcel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UICTViewLayoutExcel.m; sourceTree = "<group>"; };
+		145375C825CAA44A00CB6578 /* UIExcelView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIExcelView.h; sourceTree = "<group>"; };
+		145375C925CAA44A00CB6578 /* NNCycleCTView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NNCycleCTView.h; sourceTree = "<group>"; };
+		145375CA25CAA44A00CB6578 /* NNCycleCTView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NNCycleCTView.m; sourceTree = "<group>"; };
+		145375CB25CAA44A00CB6578 /* NNTextFieldOne.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NNTextFieldOne.m; sourceTree = "<group>"; };
+		145375CC25CAA44A00CB6578 /* UICTViewCellExcel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UICTViewCellExcel.m; sourceTree = "<group>"; };
+		145375CD25CAA44A00CB6578 /* NNCTView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NNCTView.h; sourceTree = "<group>"; };
+		145375CE25CAA44A00CB6578 /* UICTViewLayoutExcel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UICTViewLayoutExcel.h; sourceTree = "<group>"; };
+		145375CF25CAA44A00CB6578 /* NNShareView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NNShareView.h; sourceTree = "<group>"; };
+		145375D025CAA44A00CB6578 /* UIExcelView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIExcelView.m; sourceTree = "<group>"; };
+		145375D125CAA44A00CB6578 /* NNViewComplex.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NNViewComplex.h; sourceTree = "<group>"; };
+		145375D225CAA44A00CB6578 /* NNCTView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NNCTView.m; sourceTree = "<group>"; };
+		145375D325CAA44A00CB6578 /* NNShareView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NNShareView.m; sourceTree = "<group>"; };
+		145375D425CAA44A00CB6578 /* UICTViewCellExcel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UICTViewCellExcel.h; sourceTree = "<group>"; };
+		145375D625CAA44A00CB6578 /* Media.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Media.xcassets; sourceTree = "<group>"; };
+		145375E125CAA47200CB6578 /* NNSwitchView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NNSwitchView.h; sourceTree = "<group>"; };
+		145375E225CAA47200CB6578 /* NNSuspendBtn.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NNSuspendBtn.h; sourceTree = "<group>"; };
+		145375E325CAA47200CB6578 /* NNAlertViewOne.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NNAlertViewOne.h; sourceTree = "<group>"; };
+		145375E425CAA47200CB6578 /* NNGuideView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NNGuideView.h; sourceTree = "<group>"; };
+		145375E525CAA47300CB6578 /* NNAddPictureView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NNAddPictureView.h; sourceTree = "<group>"; };
+		145375E625CAA47300CB6578 /* NNMenuView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NNMenuView.h; sourceTree = "<group>"; };
+		145375E725CAA47300CB6578 /* NNTurnView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NNTurnView.m; sourceTree = "<group>"; };
+		145375E825CAA47300CB6578 /* NNSliderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NNSliderView.h; sourceTree = "<group>"; };
+		145375E925CAA47300CB6578 /* NNTablePlainView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NNTablePlainView.m; sourceTree = "<group>"; };
+		145375EA25CAA47300CB6578 /* NNStarRateView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NNStarRateView.m; sourceTree = "<group>"; };
+		145375EB25CAA47300CB6578 /* NNTabBarViewZero.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NNTabBarViewZero.m; sourceTree = "<group>"; };
+		145375EC25CAA47300CB6578 /* NNMonthView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NNMonthView.h; sourceTree = "<group>"; };
+		145375ED25CAA47300CB6578 /* NNAddCardView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NNAddCardView.h; sourceTree = "<group>"; };
+		145375EE25CAA47300CB6578 /* NNPickerListView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NNPickerListView.m; sourceTree = "<group>"; };
+		145375EF25CAA47300CB6578 /* NNWebView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NNWebView.m; sourceTree = "<group>"; };
+		145375F025CAA47300CB6578 /* NNGuideView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NNGuideView.m; sourceTree = "<group>"; };
+		145375F125CAA47300CB6578 /* NNDateRangeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NNDateRangeView.m; sourceTree = "<group>"; };
+		145375F225CAA47300CB6578 /* NNPairLabelView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NNPairLabelView.m; sourceTree = "<group>"; };
+		145375F325CAA47300CB6578 /* NNFilterView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NNFilterView.m; sourceTree = "<group>"; };
+		145375F425CAA47300CB6578 /* NNSuspendBtn.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NNSuspendBtn.m; sourceTree = "<group>"; };
+		145375F525CAA47300CB6578 /* NNSuspendButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NNSuspendButton.h; sourceTree = "<group>"; };
+		145375F625CAA47400CB6578 /* NNShoppingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NNShoppingView.m; sourceTree = "<group>"; };
+		145375F725CAA47400CB6578 /* NNPickerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NNPickerView.h; sourceTree = "<group>"; };
+		145375F825CAA47400CB6578 /* NNCircle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NNCircle.m; sourceTree = "<group>"; };
+		145375F925CAA47400CB6578 /* NNPickerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NNPickerView.m; sourceTree = "<group>"; };
+		145375FA25CAA47400CB6578 /* NNAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NNAlertView.m; sourceTree = "<group>"; };
+		145375FB25CAA47400CB6578 /* NNSheetView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NNSheetView.h; sourceTree = "<group>"; };
+		145375FC25CAA47400CB6578 /* NNDatePicker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NNDatePicker.h; sourceTree = "<group>"; };
+		145375FD25CAA47400CB6578 /* NNTurnView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NNTurnView.h; sourceTree = "<group>"; };
+		145375FE25CAA47400CB6578 /* NNView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NNView.h; sourceTree = "<group>"; };
+		145375FF25CAA47400CB6578 /* NNHeaderFooterView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NNHeaderFooterView.h; sourceTree = "<group>"; };
+		1453760025CAA47400CB6578 /* NNAddPictureVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NNAddPictureVC.m; sourceTree = "<group>"; };
+		1453760125CAA47400CB6578 /* NNListChooseView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NNListChooseView.m; sourceTree = "<group>"; };
+		1453760225CAA47400CB6578 /* NNPhotosView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NNPhotosView.m; sourceTree = "<group>"; };
+		1453760325CAA47400CB6578 /* NNTabBarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NNTabBarView.h; sourceTree = "<group>"; };
+		1453760425CAA47400CB6578 /* NNSearchView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NNSearchView.m; sourceTree = "<group>"; };
+		1453760525CAA47400CB6578 /* NNAddCardView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NNAddCardView.m; sourceTree = "<group>"; };
+		1453760625CAA47400CB6578 /* NNFoldHeaderFooterView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NNFoldHeaderFooterView.m; sourceTree = "<group>"; };
+		1453760725CAA47500CB6578 /* NNWebView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NNWebView.h; sourceTree = "<group>"; };
+		1453760825CAA47500CB6578 /* NNSwitchView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NNSwitchView.m; sourceTree = "<group>"; };
+		1453760925CAA47500CB6578 /* NNAlertViewTwo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NNAlertViewTwo.h; sourceTree = "<group>"; };
+		1453760A25CAA47500CB6578 /* NNHeaderFooterView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NNHeaderFooterView.m; sourceTree = "<group>"; };
+		1453760B25CAA47500CB6578 /* NNGView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NNGView.h; sourceTree = "<group>"; };
+		1453760C25CAA47500CB6578 /* NNDatePicker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NNDatePicker.m; sourceTree = "<group>"; };
+		1453760D25CAA47500CB6578 /* NNTablePlainView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NNTablePlainView.h; sourceTree = "<group>"; };
+		1453760E25CAA47500CB6578 /* NNStarRateView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NNStarRateView.h; sourceTree = "<group>"; };
+		1453760F25CAA47500CB6578 /* NNLeftMenuView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NNLeftMenuView.h; sourceTree = "<group>"; };
+		1453761025CAA47500CB6578 /* NNAlertViewOne.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NNAlertViewOne.m; sourceTree = "<group>"; };
+		1453761225CAA47500CB6578 /* Media.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Media.xcassets; sourceTree = "<group>"; };
+		1453761325CAA47500CB6578 /* area.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = area.plist; sourceTree = "<group>"; };
+		1453761425CAA47500CB6578 /* NNGroupViewZero.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NNGroupViewZero.h; sourceTree = "<group>"; };
+		1453761525CAA47500CB6578 /* NNBtnView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NNBtnView.m; sourceTree = "<group>"; };
+		1453761625CAA47500CB6578 /* NNMenuView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NNMenuView.m; sourceTree = "<group>"; };
+		1453761725CAA47500CB6578 /* NNUserView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NNUserView.h; sourceTree = "<group>"; };
+		1453761825CAA47500CB6578 /* NNMonthView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NNMonthView.m; sourceTree = "<group>"; };
+		1453761925CAA47500CB6578 /* NNPickerViewAddress.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NNPickerViewAddress.m; sourceTree = "<group>"; };
+		1453761A25CAA47500CB6578 /* NNTabBarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NNTabBarView.m; sourceTree = "<group>"; };
+		1453761B25CAA47500CB6578 /* NNStarsView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NNStarsView.m; sourceTree = "<group>"; };
+		1453761C25CAA47500CB6578 /* NNGroupViewZero.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NNGroupViewZero.m; sourceTree = "<group>"; };
+		1453761D25CAA47600CB6578 /* NNSegmentView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NNSegmentView.h; sourceTree = "<group>"; };
+		1453761E25CAA47600CB6578 /* NNRefreshHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NNRefreshHeader.h; sourceTree = "<group>"; };
+		1453761F25CAA47600CB6578 /* NNRotationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NNRotationView.h; sourceTree = "<group>"; };
+		1453762025CAA47600CB6578 /* NNGroupView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NNGroupView.h; sourceTree = "<group>"; };
+		1453762125CAA47600CB6578 /* NNDateRangeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NNDateRangeView.h; sourceTree = "<group>"; };
+		1453762225CAA47600CB6578 /* NNCellDefaultView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NNCellDefaultView.m; sourceTree = "<group>"; };
+		1453762325CAA47600CB6578 /* NNPickerListView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NNPickerListView.h; sourceTree = "<group>"; };
+		1453762425CAA47600CB6578 /* NNExtendView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NNExtendView.h; sourceTree = "<group>"; };
+		1453762525CAA47600CB6578 /* NNImgLabelView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NNImgLabelView.h; sourceTree = "<group>"; };
+		1453762625CAA47600CB6578 /* NNStarsView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NNStarsView.h; sourceTree = "<group>"; };
+		1453762725CAA47600CB6578 /* NNCircle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NNCircle.h; sourceTree = "<group>"; };
+		1453762825CAA47600CB6578 /* NNRefreshHeader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NNRefreshHeader.m; sourceTree = "<group>"; };
+		1453762925CAA47600CB6578 /* NNTopSheetView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NNTopSheetView.m; sourceTree = "<group>"; };
+		1453762A25CAA47600CB6578 /* NNListChooseView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NNListChooseView.h; sourceTree = "<group>"; };
+		1453762B25CAA47600CB6578 /* NNPairLabelView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NNPairLabelView.h; sourceTree = "<group>"; };
+		1453762C25CAA47600CB6578 /* NNSuspendButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NNSuspendButton.m; sourceTree = "<group>"; };
+		1453762D25CAA47600CB6578 /* NNAlertViewTwo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NNAlertViewTwo.m; sourceTree = "<group>"; };
+		1453762E25CAA47600CB6578 /* NNGroupView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NNGroupView.m; sourceTree = "<group>"; };
+		1453762F25CAA47600CB6578 /* NNSliderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NNSliderView.m; sourceTree = "<group>"; };
+		1453763025CAA47700CB6578 /* NNGView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NNGView.m; sourceTree = "<group>"; };
+		1453763125CAA47700CB6578 /* NNAddPictureView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NNAddPictureView.m; sourceTree = "<group>"; };
+		1453763225CAA47700CB6578 /* NNTabBarViewZero.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NNTabBarViewZero.h; sourceTree = "<group>"; };
+		1453763325CAA47700CB6578 /* NNLeftMenuView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NNLeftMenuView.m; sourceTree = "<group>"; };
+		1453763425CAA47700CB6578 /* NNItemsView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NNItemsView.m; sourceTree = "<group>"; };
+		1453763525CAA47700CB6578 /* NNTopSheetView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NNTopSheetView.h; sourceTree = "<group>"; };
+		1453763625CAA47700CB6578 /* NNExtendView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NNExtendView.m; sourceTree = "<group>"; };
+		1453763725CAA47700CB6578 /* NNPickerViewAddress.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NNPickerViewAddress.h; sourceTree = "<group>"; };
+		1453763825CAA47700CB6578 /* NNImgLabelView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NNImgLabelView.m; sourceTree = "<group>"; };
+		1453763925CAA47700CB6578 /* NNCycleView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NNCycleView.h; sourceTree = "<group>"; };
+		1453763A25CAA47700CB6578 /* NNAddPictureVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NNAddPictureVC.h; sourceTree = "<group>"; };
+		1453763B25CAA47700CB6578 /* NNPhotosView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NNPhotosView.h; sourceTree = "<group>"; };
+		1453763C25CAA47700CB6578 /* NNUserView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NNUserView.m; sourceTree = "<group>"; };
+		1453763D25CAA47700CB6578 /* NNFilterView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NNFilterView.h; sourceTree = "<group>"; };
+		1453763E25CAA47700CB6578 /* NNCellDefaultView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NNCellDefaultView.h; sourceTree = "<group>"; };
+		1453763F25CAA47700CB6578 /* NNShoppingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NNShoppingView.h; sourceTree = "<group>"; };
+		1453764025CAA47700CB6578 /* NNLabView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NNLabView.h; sourceTree = "<group>"; };
+		1453764125CAA47700CB6578 /* NNSheetView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NNSheetView.m; sourceTree = "<group>"; };
+		1453764225CAA47700CB6578 /* NNCycleView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NNCycleView.m; sourceTree = "<group>"; };
+		1453764325CAA47800CB6578 /* NNSearchView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NNSearchView.h; sourceTree = "<group>"; };
+		1453764425CAA47800CB6578 /* NNAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NNAlertView.h; sourceTree = "<group>"; };
+		1453764525CAA47800CB6578 /* NNRotationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NNRotationView.m; sourceTree = "<group>"; };
+		1453764625CAA47800CB6578 /* NNBtnView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NNBtnView.h; sourceTree = "<group>"; };
+		1453764725CAA47800CB6578 /* NNSegmentView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NNSegmentView.m; sourceTree = "<group>"; };
+		1453764825CAA47800CB6578 /* NNLabView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NNLabView.m; sourceTree = "<group>"; };
+		1453764925CAA47800CB6578 /* NNItemsView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NNItemsView.h; sourceTree = "<group>"; };
+		1453764A25CAA47800CB6578 /* NNFoldHeaderFooterView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NNFoldHeaderFooterView.h; sourceTree = "<group>"; };
+		1453768225CAA49000CB6578 /* UITableViewFortyFiveCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UITableViewFortyFiveCell.m; sourceTree = "<group>"; };
+		1453768325CAA49000CB6578 /* UITableViewStepCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UITableViewStepCell.h; sourceTree = "<group>"; };
+		1453768425CAA49000CB6578 /* UITableViewCellDefault.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UITableViewCellDefault.h; sourceTree = "<group>"; };
+		1453768525CAA49000CB6578 /* UITableViewFiftyTwoCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UITableViewFiftyTwoCell.m; sourceTree = "<group>"; };
+		1453768625CAA49000CB6578 /* UITableViewSwitchCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UITableViewSwitchCell.h; sourceTree = "<group>"; };
+		1453768725CAA49000CB6578 /* UITableViewFortyCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UITableViewFortyCell.h; sourceTree = "<group>"; };
+		1453768825CAA49000CB6578 /* UITableViewSeventeenCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UITableViewSeventeenCell.h; sourceTree = "<group>"; };
+		1453768925CAA49000CB6578 /* UITableViewSenventyTwoCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UITableViewSenventyTwoCell.h; sourceTree = "<group>"; };
+		1453768A25CAA49000CB6578 /* UITableViewSliderCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UITableViewSliderCell.m; sourceTree = "<group>"; };
+		1453768B25CAA49000CB6578 /* UITableViewFiftyNineCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UITableViewFiftyNineCell.m; sourceTree = "<group>"; };
+		1453768C25CAA49000CB6578 /* UITableViewElevenCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UITableViewElevenCell.m; sourceTree = "<group>"; };
+		1453768D25CAA49000CB6578 /* UITableViewSenventySevenCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UITableViewSenventySevenCell.m; sourceTree = "<group>"; };
+		1453768E25CAA49000CB6578 /* UITableViewFortyThreeCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UITableViewFortyThreeCell.m; sourceTree = "<group>"; };
+		1453768F25CAA49000CB6578 /* UITableViewStepCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UITableViewStepCell.m; sourceTree = "<group>"; };
+		1453769025CAA49000CB6578 /* UITableViewSenventyThreeCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UITableViewSenventyThreeCell.h; sourceTree = "<group>"; };
+		1453769125CAA49000CB6578 /* UITableViewEightyCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UITableViewEightyCell.h; sourceTree = "<group>"; };
+		1453769225CAA49100CB6578 /* UITableViewSixCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UITableViewSixCell.m; sourceTree = "<group>"; };
+		1453769325CAA49100CB6578 /* UITableViewFourteenCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UITableViewFourteenCell.m; sourceTree = "<group>"; };
+		1453769425CAA49100CB6578 /* UITableViewAddressPickerCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UITableViewAddressPickerCell.m; sourceTree = "<group>"; };
+		1453769525CAA49100CB6578 /* UITableViewEightyFiveCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UITableViewEightyFiveCell.h; sourceTree = "<group>"; };
+		1453769625CAA49100CB6578 /* UITableViewSixtyEightCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UITableViewSixtyEightCell.m; sourceTree = "<group>"; };
+		1453769725CAA49100CB6578 /* UITableHeaderFooterViewTwo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UITableHeaderFooterViewTwo.m; sourceTree = "<group>"; };
+		1453769825CAA49100CB6578 /* UITableViewPickerListCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UITableViewPickerListCell.h; sourceTree = "<group>"; };
+		1453769925CAA49100CB6578 /* UITableViewFiftyOneCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UITableViewFiftyOneCell.m; sourceTree = "<group>"; };
+		1453769A25CAA49100CB6578 /* UITableViewCycleViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UITableViewCycleViewCell.m; sourceTree = "<group>"; };
+		1453769B25CAA49100CB6578 /* UITableViewElevenCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UITableViewElevenCell.h; sourceTree = "<group>"; };
+		1453769C25CAA49100CB6578 /* UITableViewFiftyEightCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UITableViewFiftyEightCell.h; sourceTree = "<group>"; };
+		1453769D25CAA49100CB6578 /* UITableViewFiftyCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UITableViewFiftyCell.h; sourceTree = "<group>"; };
+		1453769E25CAA49100CB6578 /* UITableViewSliderCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UITableViewSliderCell.h; sourceTree = "<group>"; };
+		1453769F25CAA49100CB6578 /* UITableViewFiftySevenCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UITableViewFiftySevenCell.m; sourceTree = "<group>"; };
+		145376A025CAA49100CB6578 /* UITableViewSheetCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UITableViewSheetCell.h; sourceTree = "<group>"; };
+		145376A125CAA49100CB6578 /* UITableHeaderFooterViewZero.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UITableHeaderFooterViewZero.m; sourceTree = "<group>"; };
+		145376A225CAA49100CB6578 /* UITableViewSixtyOneCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UITableViewSixtyOneCell.m; sourceTree = "<group>"; };
+		145376A325CAA49200CB6578 /* UITableViewSenventyThreeCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UITableViewSenventyThreeCell.m; sourceTree = "<group>"; };
+		145376A425CAA49200CB6578 /* UITableViewSixtyFourCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UITableViewSixtyFourCell.h; sourceTree = "<group>"; };
+		145376A525CAA49200CB6578 /* UITableViewEightyTwoCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UITableViewEightyTwoCell.m; sourceTree = "<group>"; };
+		145376A625CAA49200CB6578 /* UITableViewSixtyFiveCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UITableViewSixtyFiveCell.h; sourceTree = "<group>"; };
+		145376A725CAA49200CB6578 /* UITableViewFifteenCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UITableViewFifteenCell.h; sourceTree = "<group>"; };
+		145376A825CAA49200CB6578 /* UITableHeaderFooterViewTwo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UITableHeaderFooterViewTwo.h; sourceTree = "<group>"; };
+		145376A925CAA49200CB6578 /* UITableViewEightyEightCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UITableViewEightyEightCell.h; sourceTree = "<group>"; };
+		145376AA25CAA49200CB6578 /* UITableViewSeventyCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UITableViewSeventyCell.m; sourceTree = "<group>"; };
+		145376AB25CAA49200CB6578 /* UITableViewDatePickerCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UITableViewDatePickerCell.h; sourceTree = "<group>"; };
+		145376AC25CAA49200CB6578 /* UITableViewEightyEightCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UITableViewEightyEightCell.m; sourceTree = "<group>"; };
+		145376AD25CAA49200CB6578 /* UITableViewSheetCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UITableViewSheetCell.m; sourceTree = "<group>"; };
+		145376AE25CAA49200CB6578 /* UITableViewSenventyFourCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UITableViewSenventyFourCell.h; sourceTree = "<group>"; };
+		145376AF25CAA49200CB6578 /* UITableViewFiftyCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UITableViewFiftyCell.m; sourceTree = "<group>"; };
+		145376B025CAA49200CB6578 /* UITableViewFourCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UITableViewFourCell.h; sourceTree = "<group>"; };
+		145376B125CAA49200CB6578 /* UITableViewCellDefault.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UITableViewCellDefault.m; sourceTree = "<group>"; };
+		145376B225CAA49200CB6578 /* UITableViewFiftyNineCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UITableViewFiftyNineCell.h; sourceTree = "<group>"; };
+		145376B325CAA49200CB6578 /* UITableViewThirtyEightCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UITableViewThirtyEightCell.m; sourceTree = "<group>"; };
+		145376B425CAA49200CB6578 /* UITableViewOneCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UITableViewOneCell.h; sourceTree = "<group>"; };
+		145376B525CAA49300CB6578 /* UITableViewPickerViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UITableViewPickerViewCell.h; sourceTree = "<group>"; };
+		145376B625CAA49300CB6578 /* NNTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NNTableViewCell.h; sourceTree = "<group>"; };
+		145376B725CAA49300CB6578 /* UITableViewSenventySixCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UITableViewSenventySixCell.m; sourceTree = "<group>"; };
+		145376B825CAA49300CB6578 /* UITableViewAddressPickerCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UITableViewAddressPickerCell.h; sourceTree = "<group>"; };
+		145376B925CAA49300CB6578 /* UITableHeaderFooterViewOne.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UITableHeaderFooterViewOne.h; sourceTree = "<group>"; };
+		145376BA25CAA49300CB6578 /* UITableHeaderFooterViewZero.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UITableHeaderFooterViewZero.h; sourceTree = "<group>"; };
+		145376BB25CAA49300CB6578 /* UITableViewFortyCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UITableViewFortyCell.m; sourceTree = "<group>"; };
+		145376BC25CAA49300CB6578 /* UITableViewSenventySevenCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UITableViewSenventySevenCell.h; sourceTree = "<group>"; };
+		145376BD25CAA49300CB6578 /* UITableViewPickerListCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UITableViewPickerListCell.m; sourceTree = "<group>"; };
+		145376BE25CAA49300CB6578 /* UITableViewSixtyNineCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UITableViewSixtyNineCell.h; sourceTree = "<group>"; };
+		145376BF25CAA49300CB6578 /* UITableViewSeventyCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UITableViewSeventyCell.h; sourceTree = "<group>"; };
+		145376C025CAA49300CB6578 /* UITableViewSixtyOneCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UITableViewSixtyOneCell.h; sourceTree = "<group>"; };
+		145376C125CAA49300CB6578 /* UITableViewFourCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UITableViewFourCell.m; sourceTree = "<group>"; };
+		145376C225CAA49300CB6578 /* UITableViewSixtyFourCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UITableViewSixtyFourCell.m; sourceTree = "<group>"; };
+		145376C325CAA49300CB6578 /* UITableViewFortyFiveCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UITableViewFortyFiveCell.h; sourceTree = "<group>"; };
+		145376C425CAA49300CB6578 /* UITableViewFortyFourCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UITableViewFortyFourCell.h; sourceTree = "<group>"; };
+		145376C525CAA49300CB6578 /* UITableViewBankCardCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UITableViewBankCardCell.m; sourceTree = "<group>"; };
+		145376C625CAA49300CB6578 /* UITableViewEightyTwoCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UITableViewEightyTwoCell.h; sourceTree = "<group>"; };
+		145376C725CAA49300CB6578 /* UITableViewFiveCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UITableViewFiveCell.h; sourceTree = "<group>"; };
+		145376C825CAA49300CB6578 /* UITableViewFiveCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UITableViewFiveCell.m; sourceTree = "<group>"; };
+		145376C925CAA49400CB6578 /* UITableViewFortyThreeCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UITableViewFortyThreeCell.h; sourceTree = "<group>"; };
+		145376CA25CAA49400CB6578 /* UITableViewSixCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UITableViewSixCell.h; sourceTree = "<group>"; };
+		145376CB25CAA49400CB6578 /* UITableViewSixtyNineCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UITableViewSixtyNineCell.m; sourceTree = "<group>"; };
+		145376CC25CAA49400CB6578 /* UITableViewEightCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UITableViewEightCell.m; sourceTree = "<group>"; };
+		145376CD25CAA49400CB6578 /* UITableViewSegmentCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UITableViewSegmentCell.m; sourceTree = "<group>"; };
+		145376CE25CAA49400CB6578 /* UITableViewSenventySixCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UITableViewSenventySixCell.h; sourceTree = "<group>"; };
+		145376CF25CAA49400CB6578 /* UITableViewEightCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UITableViewEightCell.h; sourceTree = "<group>"; };
+		145376D025CAA49400CB6578 /* UITableViewAchivementCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UITableViewAchivementCell.h; sourceTree = "<group>"; };
+		145376D125CAA49400CB6578 /* UITableViewOneCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UITableViewOneCell.m; sourceTree = "<group>"; };
+		145376D225CAA49400CB6578 /* UITableViewSevenCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UITableViewSevenCell.m; sourceTree = "<group>"; };
+		145376D325CAA49400CB6578 /* UITableViewTextViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UITableViewTextViewCell.m; sourceTree = "<group>"; };
+		145376D425CAA49400CB6578 /* UITableViewDatePickerCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UITableViewDatePickerCell.m; sourceTree = "<group>"; };
+		145376D525CAA49400CB6578 /* UITableViewDateRangeCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UITableViewDateRangeCell.h; sourceTree = "<group>"; };
+		145376D625CAA49400CB6578 /* UITableViewSeventeenCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UITableViewSeventeenCell.m; sourceTree = "<group>"; };
+		145376D725CAA49400CB6578 /* UITableViewSixtySevenCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UITableViewSixtySevenCell.m; sourceTree = "<group>"; };
+		145376D825CAA49400CB6578 /* UITableViewCycleViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UITableViewCycleViewCell.h; sourceTree = "<group>"; };
+		145376D925CAA49400CB6578 /* UITableViewNinetyOneCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UITableViewNinetyOneCell.h; sourceTree = "<group>"; };
+		145376DA25CAA49400CB6578 /* UITableViewPickerViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UITableViewPickerViewCell.m; sourceTree = "<group>"; };
+		145376DB25CAA49400CB6578 /* UITableViewEightyCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UITableViewEightyCell.m; sourceTree = "<group>"; };
+		145376DC25CAA49500CB6578 /* UITableViewSegmentCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UITableViewSegmentCell.h; sourceTree = "<group>"; };
+		145376DD25CAA49500CB6578 /* UITableViewFiftySevenCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UITableViewFiftySevenCell.h; sourceTree = "<group>"; };
+		145376DE25CAA49500CB6578 /* UITableViewSenventyFourCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UITableViewSenventyFourCell.m; sourceTree = "<group>"; };
+		145376DF25CAA49500CB6578 /* UITableViewDateRangeCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UITableViewDateRangeCell.m; sourceTree = "<group>"; };
+		145376E025CAA49500CB6578 /* UITableViewSixtyFiveCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UITableViewSixtyFiveCell.m; sourceTree = "<group>"; };
+		145376E125CAA49500CB6578 /* UITableHeaderFooterViewOne.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UITableHeaderFooterViewOne.m; sourceTree = "<group>"; };
+		145376E225CAA49500CB6578 /* UITableViewTextFieldCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UITableViewTextFieldCell.m; sourceTree = "<group>"; };
+		145376E325CAA49500CB6578 /* UITableViewSixteenCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UITableViewSixteenCell.h; sourceTree = "<group>"; };
+		145376E425CAA49500CB6578 /* UITableViewFiftyTwoCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UITableViewFiftyTwoCell.h; sourceTree = "<group>"; };
+		145376E525CAA49500CB6578 /* UITableViewSevenCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UITableViewSevenCell.h; sourceTree = "<group>"; };
+		145376E625CAA49500CB6578 /* UITableViewEightyFiveCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UITableViewEightyFiveCell.m; sourceTree = "<group>"; };
+		145376E725CAA49500CB6578 /* UITableViewFifteenCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UITableViewFifteenCell.m; sourceTree = "<group>"; };
+		145376E825CAA49500CB6578 /* UITableViewSixtySevenCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UITableViewSixtySevenCell.h; sourceTree = "<group>"; };
+		145376E925CAA49500CB6578 /* UITableViewFourteenCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UITableViewFourteenCell.h; sourceTree = "<group>"; };
+		145376EA25CAA49500CB6578 /* UITableViewFiftyOneCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UITableViewFiftyOneCell.h; sourceTree = "<group>"; };
+		145376EB25CAA49500CB6578 /* UITableViewFortyFourCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UITableViewFortyFourCell.m; sourceTree = "<group>"; };
+		145376EC25CAA49500CB6578 /* UITableViewSixteenCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UITableViewSixteenCell.m; sourceTree = "<group>"; };
+		145376ED25CAA49500CB6578 /* UITableViewNinetyOneCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UITableViewNinetyOneCell.m; sourceTree = "<group>"; };
+		145376EE25CAA49500CB6578 /* UITableViewSixtyEightCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UITableViewSixtyEightCell.h; sourceTree = "<group>"; };
+		145376EF25CAA49500CB6578 /* UITableViewSenventyTwoCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UITableViewSenventyTwoCell.m; sourceTree = "<group>"; };
+		145376F025CAA49600CB6578 /* UITableViewBankCardCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UITableViewBankCardCell.h; sourceTree = "<group>"; };
+		145376F125CAA49600CB6578 /* UITableViewFiftyEightCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UITableViewFiftyEightCell.m; sourceTree = "<group>"; };
+		145376F225CAA49600CB6578 /* UITableViewAchivementCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UITableViewAchivementCell.m; sourceTree = "<group>"; };
+		1453772E25CAA4A800CB6578 /* UICTReusableViewOne.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UICTReusableViewOne.m; sourceTree = "<group>"; };
+		1453772F25CAA4A800CB6578 /* UICTViewCellTwo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UICTViewCellTwo.m; sourceTree = "<group>"; };
+		1453773025CAA4A800CB6578 /* UICTViewCellOne.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UICTViewCellOne.m; sourceTree = "<group>"; };
+		1453773125CAA4A800CB6578 /* UICTReusableViewTwo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UICTReusableViewTwo.h; sourceTree = "<group>"; };
+		1453773225CAA4A800CB6578 /* UICTViewLayoutCard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UICTViewLayoutCard.h; sourceTree = "<group>"; };
+		1453773325CAA4A800CB6578 /* UICTViewLayoutFive.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UICTViewLayoutFive.m; sourceTree = "<group>"; };
+		1453773425CAA4A800CB6578 /* UICTViewCellThree.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UICTViewCellThree.h; sourceTree = "<group>"; };
+		1453773525CAA4A800CB6578 /* UICTViewCellEight.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UICTViewCellEight.h; sourceTree = "<group>"; };
+		1453773625CAA4A900CB6578 /* UICTViewCellFive.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UICTViewCellFive.h; sourceTree = "<group>"; };
+		1453773725CAA4A900CB6578 /* UICTViewLayoutFive.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UICTViewLayoutFive.h; sourceTree = "<group>"; };
+		1453773825CAA4A900CB6578 /* UICTReusableViewOne.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UICTReusableViewOne.h; sourceTree = "<group>"; };
+		1453773925CAA4A900CB6578 /* UICTViewCellFour.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UICTViewCellFour.m; sourceTree = "<group>"; };
+		1453773A25CAA4A900CB6578 /* UICTViewCellOne.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UICTViewCellOne.h; sourceTree = "<group>"; };
+		1453773B25CAA4A900CB6578 /* UICTReusableViewFour.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UICTReusableViewFour.h; sourceTree = "<group>"; };
+		1453773C25CAA4A900CB6578 /* UICTViewCellEight.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UICTViewCellEight.m; sourceTree = "<group>"; };
+		1453773D25CAA4A900CB6578 /* UICTViewCellZero.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UICTViewCellZero.m; sourceTree = "<group>"; };
+		1453773E25CAA4A900CB6578 /* UICTViewLayoutSphere.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UICTViewLayoutSphere.m; sourceTree = "<group>"; };
+		1453773F25CAA4A900CB6578 /* UICTViewCellSeven.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UICTViewCellSeven.m; sourceTree = "<group>"; };
+		1453774025CAA4A900CB6578 /* UICTViewCellFive.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UICTViewCellFive.m; sourceTree = "<group>"; };
+		1453774125CAA4A900CB6578 /* UICTViewLayoutSphere.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UICTViewLayoutSphere.h; sourceTree = "<group>"; };
+		1453774225CAA4A900CB6578 /* UICTViewLayoutCircle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UICTViewLayoutCircle.m; sourceTree = "<group>"; };
+		1453774325CAA4A900CB6578 /* UICTViewCellTwo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UICTViewCellTwo.h; sourceTree = "<group>"; };
+		1453774425CAA4A900CB6578 /* UICTViewCellZero.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UICTViewCellZero.h; sourceTree = "<group>"; };
+		1453774525CAA4AA00CB6578 /* UICTReusableViewTwo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UICTReusableViewTwo.m; sourceTree = "<group>"; };
+		1453774625CAA4AA00CB6578 /* UICTViewLayoutCircle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UICTViewLayoutCircle.h; sourceTree = "<group>"; };
+		1453774725CAA4AA00CB6578 /* UICTViewLayoutZero.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UICTViewLayoutZero.m; sourceTree = "<group>"; };
+		1453774825CAA4AA00CB6578 /* UICTViewCellFour.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UICTViewCellFour.h; sourceTree = "<group>"; };
+		1453774925CAA4AA00CB6578 /* UICTReusableViewZero.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UICTReusableViewZero.m; sourceTree = "<group>"; };
+		1453774A25CAA4AA00CB6578 /* UICTViewLayoutPicker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UICTViewLayoutPicker.h; sourceTree = "<group>"; };
+		1453774B25CAA4AA00CB6578 /* UICTViewLayoutZero.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UICTViewLayoutZero.h; sourceTree = "<group>"; };
+		1453774C25CAA4AA00CB6578 /* UICTViewCellSeven.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UICTViewCellSeven.h; sourceTree = "<group>"; };
+		1453774D25CAA4AA00CB6578 /* UICTReusableViewZero.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UICTReusableViewZero.h; sourceTree = "<group>"; };
+		1453774E25CAA4AA00CB6578 /* UICTReusableViewThree.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UICTReusableViewThree.h; sourceTree = "<group>"; };
+		1453774F25CAA4AA00CB6578 /* UICTViewLayoutCard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UICTViewLayoutCard.m; sourceTree = "<group>"; };
+		1453775025CAA4AA00CB6578 /* UICTReusableViewFour.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UICTReusableViewFour.m; sourceTree = "<group>"; };
+		1453775125CAA4AA00CB6578 /* UICTViewLayoutOne.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UICTViewLayoutOne.h; sourceTree = "<group>"; };
+		1453775225CAA4AA00CB6578 /* UICTViewCellThree.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UICTViewCellThree.m; sourceTree = "<group>"; };
+		1453775325CAA4AA00CB6578 /* UICTViewLayoutPicker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UICTViewLayoutPicker.m; sourceTree = "<group>"; };
+		1453775425CAA4AA00CB6578 /* NNCollectionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NNCollectionView.h; sourceTree = "<group>"; };
+		1453775525CAA4AA00CB6578 /* UICTReusableViewThree.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UICTReusableViewThree.m; sourceTree = "<group>"; };
+		1453775625CAA4AB00CB6578 /* UICTViewCellSix.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UICTViewCellSix.m; sourceTree = "<group>"; };
+		1453775725CAA4AB00CB6578 /* UICTViewLayoutOne.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UICTViewLayoutOne.m; sourceTree = "<group>"; };
+		1453775825CAA4AB00CB6578 /* UICTViewCellSix.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UICTViewCellSix.h; sourceTree = "<group>"; };
+		145377A925CAA68100CB6578 /* UITableViewSwitchCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UITableViewSwitchCell.m; sourceTree = "<group>"; };
+		145377AC25CAA6DE00CB6578 /* UITableViewThirtyEightCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UITableViewThirtyEightCell.h; sourceTree = "<group>"; };
+		145377AD25CAA70400CB6578 /* UITableViewTextFieldCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UITableViewTextFieldCell.h; sourceTree = "<group>"; };
+		145377AE25CAA70400CB6578 /* UITableViewTextViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UITableViewTextViewCell.h; sourceTree = "<group>"; };
 		1455107B240D0533001772F5 /* ProductTemplet.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ProductTemplet.entitlements; sourceTree = "<group>"; };
 		1455107C240D06F9001772F5 /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
 		1455107E240D0811001772F5 /* NNFileUploadController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NNFileUploadController.h; sourceTree = "<group>"; };
@@ -690,10 +1115,10 @@
 		147900382306BB5A00FC4825 /* SnapshotViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SnapshotViewController.m; sourceTree = "<group>"; };
 		147AB8B622DDD76D00A5C4EC /* FileShareController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FileShareController.h; sourceTree = "<group>"; };
 		147AB8B722DDD76D00A5C4EC /* FileShareController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FileShareController.m; sourceTree = "<group>"; };
-		147ABB5422DED1A500A5C4EC /* BNCollectionDataController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BNCollectionDataController.m; sourceTree = "<group>"; };
-		147ABB5522DED1A500A5C4EC /* BNCollectionDataModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BNCollectionDataModel.m; sourceTree = "<group>"; };
-		147ABB5622DED1A500A5C4EC /* BNCollectionDataController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BNCollectionDataController.h; sourceTree = "<group>"; };
-		147ABB5722DED1A500A5C4EC /* BNCollectionDataModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BNCollectionDataModel.h; sourceTree = "<group>"; };
+		147ABB5422DED1A500A5C4EC /* NNCollectionDataController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NNCollectionDataController.m; sourceTree = "<group>"; };
+		147ABB5522DED1A500A5C4EC /* NNCollectionDataModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NNCollectionDataModel.m; sourceTree = "<group>"; };
+		147ABB5622DED1A500A5C4EC /* NNCollectionDataController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NNCollectionDataController.h; sourceTree = "<group>"; };
+		147ABB5722DED1A500A5C4EC /* NNCollectionDataModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NNCollectionDataModel.h; sourceTree = "<group>"; };
 		147B971D21EF005B000F5294 /* UICollectionDisplayController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UICollectionDisplayController.h; sourceTree = "<group>"; };
 		147B971E21EF005B000F5294 /* UICollectionDisplayController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UICollectionDisplayController.m; sourceTree = "<group>"; };
 		149111D22272FFCC0078A7BB /* NNPageModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NNPageModel.h; sourceTree = "<group>"; };
@@ -740,6 +1165,10 @@
 		14A86A822355AFC600AD9BC1 /* NNSearchController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NNSearchController.m; sourceTree = "<group>"; };
 		14A9576F231125F10045140F /* NNScrollView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NNScrollView.h; sourceTree = "<group>"; };
 		14A95770231125F10045140F /* NNScrollView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NNScrollView.m; sourceTree = "<group>"; };
+		14ACBA4825BFAF27002F61AA /* UIDevice-Orientation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIDevice-Orientation.m"; sourceTree = "<group>"; };
+		14ACBA4925BFAF27002F61AA /* UIDevice-Hardware.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIDevice-Hardware.m"; sourceTree = "<group>"; };
+		14ACBA4A25BFAF27002F61AA /* UIDevice-Hardware.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIDevice-Hardware.h"; sourceTree = "<group>"; };
+		14ACBA4B25BFAF27002F61AA /* UIDevice-Orientation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIDevice-Orientation.h"; sourceTree = "<group>"; };
 		14ADE27C23CEC65A00037B0B /* NNTagViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NNTagViewController.h; sourceTree = "<group>"; };
 		14ADE27D23CEC65A00037B0B /* NNTagViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NNTagViewController.m; sourceTree = "<group>"; };
 		14ADE27F23CEC66800037B0B /* XGTagView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XGTagView.h; sourceTree = "<group>"; };
@@ -819,6 +1248,8 @@
 		14C11ABF22DC872C009D18A3 /* NNDataModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NNDataModel.m; sourceTree = "<group>"; };
 		14C96FBE22B399FA0015BA1D /* GroupViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GroupViewController.h; sourceTree = "<group>"; };
 		14C96FBF22B399FA0015BA1D /* GroupViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GroupViewController.m; sourceTree = "<group>"; };
+		14CF392525B9668E00FBDBF7 /* NNButtonDispalyController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NNButtonDispalyController.h; sourceTree = "<group>"; };
+		14CF392625B9668E00FBDBF7 /* NNButtonDispalyController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NNButtonDispalyController.m; sourceTree = "<group>"; };
 		14D40A2822C5BB7B00AF74B9 /* PopoverView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PopoverView.h; sourceTree = "<group>"; };
 		14D40A2922C5BB7B00AF74B9 /* PopoverViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PopoverViewCell.h; sourceTree = "<group>"; };
 		14D40A2A22C5BB7B00AF74B9 /* PopoverAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PopoverAction.h; sourceTree = "<group>"; };
@@ -904,6 +1335,8 @@
 		14EAC9472321DA8200E42D4F /* NNPageInfoModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NNPageInfoModel.m; sourceTree = "<group>"; };
 		14EAC9482321DA8200E42D4F /* NNPageScrollViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NNPageScrollViewController.m; sourceTree = "<group>"; };
 		14EAC9492321DA8300E42D4F /* UICTViewLayoutPage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UICTViewLayoutPage.m; sourceTree = "<group>"; };
+		14EFF3FB25BA58AC00D82359 /* NNButtonGroupView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NNButtonGroupView.h; sourceTree = "<group>"; };
+		14EFF3FC25BA58AC00D82359 /* NNButtonGroupView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NNButtonGroupView.m; sourceTree = "<group>"; };
 		14F08BAC23016D9C00B75842 /* WaterView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WaterView.m; sourceTree = "<group>"; };
 		14F08BAD23016D9C00B75842 /* WaterView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WaterView.h; sourceTree = "<group>"; };
 		14F08BAF23016DDD00B75842 /* WaveController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WaveController.h; sourceTree = "<group>"; };
@@ -1073,8 +1506,8 @@
 		513649E320860683005A20E7 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		51364C7320860821005A20E7 /* PictureController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PictureController.h; sourceTree = "<group>"; };
 		51364C7420860821005A20E7 /* PictureController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PictureController.m; sourceTree = "<group>"; };
-		51364C7920860821005A20E7 /* Utilities_DM.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Utilities_DM.h; sourceTree = "<group>"; };
-		51364C7A20860821005A20E7 /* Utilities_DM.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Utilities_DM.m; sourceTree = "<group>"; };
+		51364C7920860821005A20E7 /* UtilitiesDM.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UtilitiesDM.h; sourceTree = "<group>"; };
+		51364C7A20860821005A20E7 /* UtilitiesDM.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UtilitiesDM.m; sourceTree = "<group>"; };
 		515C67C72137C55700D5EA94 /* BAddressPickerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BAddressPickerController.m; sourceTree = "<group>"; };
 		515C67C82137C55700D5EA94 /* cities.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = cities.plist; sourceTree = "<group>"; };
 		515C67CA2137C55700D5EA94 /* ChineseToPinyin.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChineseToPinyin.m; sourceTree = "<group>"; };
@@ -1594,6 +2027,331 @@
 			path = PickerVC;
 			sourceTree = "<group>";
 		};
+		145373C025CA9E9C00CB6578 /* NNTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				145376B625CAA49300CB6578 /* NNTableViewCell.h */,
+				145376B925CAA49300CB6578 /* UITableHeaderFooterViewOne.h */,
+				145376E125CAA49500CB6578 /* UITableHeaderFooterViewOne.m */,
+				145376A825CAA49200CB6578 /* UITableHeaderFooterViewTwo.h */,
+				1453769725CAA49100CB6578 /* UITableHeaderFooterViewTwo.m */,
+				145376BA25CAA49300CB6578 /* UITableHeaderFooterViewZero.h */,
+				145376A125CAA49100CB6578 /* UITableHeaderFooterViewZero.m */,
+				145376D025CAA49400CB6578 /* UITableViewAchivementCell.h */,
+				145376F225CAA49600CB6578 /* UITableViewAchivementCell.m */,
+				145376B825CAA49300CB6578 /* UITableViewAddressPickerCell.h */,
+				1453769425CAA49100CB6578 /* UITableViewAddressPickerCell.m */,
+				145376F025CAA49600CB6578 /* UITableViewBankCardCell.h */,
+				145376C525CAA49300CB6578 /* UITableViewBankCardCell.m */,
+				1453768425CAA49000CB6578 /* UITableViewCellDefault.h */,
+				145376B125CAA49200CB6578 /* UITableViewCellDefault.m */,
+				145376D825CAA49400CB6578 /* UITableViewCycleViewCell.h */,
+				1453769A25CAA49100CB6578 /* UITableViewCycleViewCell.m */,
+				145376AB25CAA49200CB6578 /* UITableViewDatePickerCell.h */,
+				145376D425CAA49400CB6578 /* UITableViewDatePickerCell.m */,
+				145376D525CAA49400CB6578 /* UITableViewDateRangeCell.h */,
+				145376DF25CAA49500CB6578 /* UITableViewDateRangeCell.m */,
+				145376CF25CAA49400CB6578 /* UITableViewEightCell.h */,
+				145376CC25CAA49400CB6578 /* UITableViewEightCell.m */,
+				1453769125CAA49000CB6578 /* UITableViewEightyCell.h */,
+				145376DB25CAA49400CB6578 /* UITableViewEightyCell.m */,
+				145376A925CAA49200CB6578 /* UITableViewEightyEightCell.h */,
+				145376AC25CAA49200CB6578 /* UITableViewEightyEightCell.m */,
+				1453769525CAA49100CB6578 /* UITableViewEightyFiveCell.h */,
+				145376E625CAA49500CB6578 /* UITableViewEightyFiveCell.m */,
+				145376C625CAA49300CB6578 /* UITableViewEightyTwoCell.h */,
+				145376A525CAA49200CB6578 /* UITableViewEightyTwoCell.m */,
+				1453769B25CAA49100CB6578 /* UITableViewElevenCell.h */,
+				1453768C25CAA49000CB6578 /* UITableViewElevenCell.m */,
+				145376A725CAA49200CB6578 /* UITableViewFifteenCell.h */,
+				145376E725CAA49500CB6578 /* UITableViewFifteenCell.m */,
+				1453769D25CAA49100CB6578 /* UITableViewFiftyCell.h */,
+				145376AF25CAA49200CB6578 /* UITableViewFiftyCell.m */,
+				1453769C25CAA49100CB6578 /* UITableViewFiftyEightCell.h */,
+				145376F125CAA49600CB6578 /* UITableViewFiftyEightCell.m */,
+				145376B225CAA49200CB6578 /* UITableViewFiftyNineCell.h */,
+				1453768B25CAA49000CB6578 /* UITableViewFiftyNineCell.m */,
+				145376EA25CAA49500CB6578 /* UITableViewFiftyOneCell.h */,
+				1453769925CAA49100CB6578 /* UITableViewFiftyOneCell.m */,
+				145376DD25CAA49500CB6578 /* UITableViewFiftySevenCell.h */,
+				1453769F25CAA49100CB6578 /* UITableViewFiftySevenCell.m */,
+				145376E425CAA49500CB6578 /* UITableViewFiftyTwoCell.h */,
+				1453768525CAA49000CB6578 /* UITableViewFiftyTwoCell.m */,
+				145376C725CAA49300CB6578 /* UITableViewFiveCell.h */,
+				145376C825CAA49300CB6578 /* UITableViewFiveCell.m */,
+				1453768725CAA49000CB6578 /* UITableViewFortyCell.h */,
+				145376BB25CAA49300CB6578 /* UITableViewFortyCell.m */,
+				145376C325CAA49300CB6578 /* UITableViewFortyFiveCell.h */,
+				1453768225CAA49000CB6578 /* UITableViewFortyFiveCell.m */,
+				145376C425CAA49300CB6578 /* UITableViewFortyFourCell.h */,
+				145376EB25CAA49500CB6578 /* UITableViewFortyFourCell.m */,
+				145376C925CAA49400CB6578 /* UITableViewFortyThreeCell.h */,
+				1453768E25CAA49000CB6578 /* UITableViewFortyThreeCell.m */,
+				145376B025CAA49200CB6578 /* UITableViewFourCell.h */,
+				145376C125CAA49300CB6578 /* UITableViewFourCell.m */,
+				145376E925CAA49500CB6578 /* UITableViewFourteenCell.h */,
+				1453769325CAA49100CB6578 /* UITableViewFourteenCell.m */,
+				145376D925CAA49400CB6578 /* UITableViewNinetyOneCell.h */,
+				145376ED25CAA49500CB6578 /* UITableViewNinetyOneCell.m */,
+				145376B425CAA49200CB6578 /* UITableViewOneCell.h */,
+				145376D125CAA49400CB6578 /* UITableViewOneCell.m */,
+				1453769825CAA49100CB6578 /* UITableViewPickerListCell.h */,
+				145376BD25CAA49300CB6578 /* UITableViewPickerListCell.m */,
+				145376B525CAA49300CB6578 /* UITableViewPickerViewCell.h */,
+				145376DA25CAA49400CB6578 /* UITableViewPickerViewCell.m */,
+				145376DC25CAA49500CB6578 /* UITableViewSegmentCell.h */,
+				145376CD25CAA49400CB6578 /* UITableViewSegmentCell.m */,
+				145376AE25CAA49200CB6578 /* UITableViewSenventyFourCell.h */,
+				145376DE25CAA49500CB6578 /* UITableViewSenventyFourCell.m */,
+				145376BC25CAA49300CB6578 /* UITableViewSenventySevenCell.h */,
+				1453768D25CAA49000CB6578 /* UITableViewSenventySevenCell.m */,
+				145376CE25CAA49400CB6578 /* UITableViewSenventySixCell.h */,
+				145376B725CAA49300CB6578 /* UITableViewSenventySixCell.m */,
+				1453769025CAA49000CB6578 /* UITableViewSenventyThreeCell.h */,
+				145376A325CAA49200CB6578 /* UITableViewSenventyThreeCell.m */,
+				1453768925CAA49000CB6578 /* UITableViewSenventyTwoCell.h */,
+				145376EF25CAA49500CB6578 /* UITableViewSenventyTwoCell.m */,
+				145376E525CAA49500CB6578 /* UITableViewSevenCell.h */,
+				145376D225CAA49400CB6578 /* UITableViewSevenCell.m */,
+				1453768825CAA49000CB6578 /* UITableViewSeventeenCell.h */,
+				145376D625CAA49400CB6578 /* UITableViewSeventeenCell.m */,
+				145376BF25CAA49300CB6578 /* UITableViewSeventyCell.h */,
+				145376AA25CAA49200CB6578 /* UITableViewSeventyCell.m */,
+				145376A025CAA49100CB6578 /* UITableViewSheetCell.h */,
+				145376AD25CAA49200CB6578 /* UITableViewSheetCell.m */,
+				145376CA25CAA49400CB6578 /* UITableViewSixCell.h */,
+				1453769225CAA49100CB6578 /* UITableViewSixCell.m */,
+				145376E325CAA49500CB6578 /* UITableViewSixteenCell.h */,
+				145376EC25CAA49500CB6578 /* UITableViewSixteenCell.m */,
+				145376EE25CAA49500CB6578 /* UITableViewSixtyEightCell.h */,
+				1453769625CAA49100CB6578 /* UITableViewSixtyEightCell.m */,
+				145376A625CAA49200CB6578 /* UITableViewSixtyFiveCell.h */,
+				145376E025CAA49500CB6578 /* UITableViewSixtyFiveCell.m */,
+				145376A425CAA49200CB6578 /* UITableViewSixtyFourCell.h */,
+				145376C225CAA49300CB6578 /* UITableViewSixtyFourCell.m */,
+				145376BE25CAA49300CB6578 /* UITableViewSixtyNineCell.h */,
+				145376CB25CAA49400CB6578 /* UITableViewSixtyNineCell.m */,
+				145376C025CAA49300CB6578 /* UITableViewSixtyOneCell.h */,
+				145376A225CAA49100CB6578 /* UITableViewSixtyOneCell.m */,
+				145376E825CAA49500CB6578 /* UITableViewSixtySevenCell.h */,
+				145376D725CAA49400CB6578 /* UITableViewSixtySevenCell.m */,
+				1453769E25CAA49100CB6578 /* UITableViewSliderCell.h */,
+				1453768A25CAA49000CB6578 /* UITableViewSliderCell.m */,
+				1453768325CAA49000CB6578 /* UITableViewStepCell.h */,
+				1453768F25CAA49000CB6578 /* UITableViewStepCell.m */,
+				1453768625CAA49000CB6578 /* UITableViewSwitchCell.h */,
+				145377A925CAA68100CB6578 /* UITableViewSwitchCell.m */,
+				145377AD25CAA70400CB6578 /* UITableViewTextFieldCell.h */,
+				145376E225CAA49500CB6578 /* UITableViewTextFieldCell.m */,
+				145377AE25CAA70400CB6578 /* UITableViewTextViewCell.h */,
+				145376D325CAA49400CB6578 /* UITableViewTextViewCell.m */,
+				145376B325CAA49200CB6578 /* UITableViewThirtyEightCell.m */,
+				145377AC25CAA6DE00CB6578 /* UITableViewThirtyEightCell.h */,
+			);
+			path = NNTableViewCell;
+			sourceTree = "<group>";
+		};
+		1453744A25CA9E9D00CB6578 /* NNView */ = {
+			isa = PBXGroup;
+			children = (
+				145375ED25CAA47300CB6578 /* NNAddCardView.h */,
+				1453760525CAA47400CB6578 /* NNAddCardView.m */,
+				1453763A25CAA47700CB6578 /* NNAddPictureVC.h */,
+				1453760025CAA47400CB6578 /* NNAddPictureVC.m */,
+				145375E525CAA47300CB6578 /* NNAddPictureView.h */,
+				1453763125CAA47700CB6578 /* NNAddPictureView.m */,
+				1453764425CAA47800CB6578 /* NNAlertView.h */,
+				145375FA25CAA47400CB6578 /* NNAlertView.m */,
+				145375E325CAA47200CB6578 /* NNAlertViewOne.h */,
+				1453761025CAA47500CB6578 /* NNAlertViewOne.m */,
+				1453760925CAA47500CB6578 /* NNAlertViewTwo.h */,
+				1453762D25CAA47600CB6578 /* NNAlertViewTwo.m */,
+				1453764625CAA47800CB6578 /* NNBtnView.h */,
+				1453761525CAA47500CB6578 /* NNBtnView.m */,
+				1453763E25CAA47700CB6578 /* NNCellDefaultView.h */,
+				1453762225CAA47600CB6578 /* NNCellDefaultView.m */,
+				1453762725CAA47600CB6578 /* NNCircle.h */,
+				145375F825CAA47400CB6578 /* NNCircle.m */,
+				1453763925CAA47700CB6578 /* NNCycleView.h */,
+				1453764225CAA47700CB6578 /* NNCycleView.m */,
+				145375FC25CAA47400CB6578 /* NNDatePicker.h */,
+				1453760C25CAA47500CB6578 /* NNDatePicker.m */,
+				1453762125CAA47600CB6578 /* NNDateRangeView.h */,
+				145375F125CAA47300CB6578 /* NNDateRangeView.m */,
+				1453762425CAA47600CB6578 /* NNExtendView.h */,
+				1453763625CAA47700CB6578 /* NNExtendView.m */,
+				1453763D25CAA47700CB6578 /* NNFilterView.h */,
+				145375F325CAA47300CB6578 /* NNFilterView.m */,
+				1453764A25CAA47800CB6578 /* NNFoldHeaderFooterView.h */,
+				1453760625CAA47400CB6578 /* NNFoldHeaderFooterView.m */,
+				1453762025CAA47600CB6578 /* NNGroupView.h */,
+				1453762E25CAA47600CB6578 /* NNGroupView.m */,
+				1453761425CAA47500CB6578 /* NNGroupViewZero.h */,
+				1453761C25CAA47500CB6578 /* NNGroupViewZero.m */,
+				145375E425CAA47200CB6578 /* NNGuideView.h */,
+				145375F025CAA47300CB6578 /* NNGuideView.m */,
+				1453760B25CAA47500CB6578 /* NNGView.h */,
+				1453763025CAA47700CB6578 /* NNGView.m */,
+				145375FF25CAA47400CB6578 /* NNHeaderFooterView.h */,
+				1453760A25CAA47500CB6578 /* NNHeaderFooterView.m */,
+				1453762525CAA47600CB6578 /* NNImgLabelView.h */,
+				1453763825CAA47700CB6578 /* NNImgLabelView.m */,
+				1453764925CAA47800CB6578 /* NNItemsView.h */,
+				1453763425CAA47700CB6578 /* NNItemsView.m */,
+				1453764025CAA47700CB6578 /* NNLabView.h */,
+				1453764825CAA47800CB6578 /* NNLabView.m */,
+				1453760F25CAA47500CB6578 /* NNLeftMenuView.h */,
+				1453763325CAA47700CB6578 /* NNLeftMenuView.m */,
+				1453762A25CAA47600CB6578 /* NNListChooseView.h */,
+				1453760125CAA47400CB6578 /* NNListChooseView.m */,
+				145375E625CAA47300CB6578 /* NNMenuView.h */,
+				1453761625CAA47500CB6578 /* NNMenuView.m */,
+				145375EC25CAA47300CB6578 /* NNMonthView.h */,
+				1453761825CAA47500CB6578 /* NNMonthView.m */,
+				1453762B25CAA47600CB6578 /* NNPairLabelView.h */,
+				145375F225CAA47300CB6578 /* NNPairLabelView.m */,
+				1453763B25CAA47700CB6578 /* NNPhotosView.h */,
+				1453760225CAA47400CB6578 /* NNPhotosView.m */,
+				1453762325CAA47600CB6578 /* NNPickerListView.h */,
+				145375EE25CAA47300CB6578 /* NNPickerListView.m */,
+				145375F725CAA47400CB6578 /* NNPickerView.h */,
+				145375F925CAA47400CB6578 /* NNPickerView.m */,
+				1453763725CAA47700CB6578 /* NNPickerViewAddress.h */,
+				1453761925CAA47500CB6578 /* NNPickerViewAddress.m */,
+				1453761E25CAA47600CB6578 /* NNRefreshHeader.h */,
+				1453762825CAA47600CB6578 /* NNRefreshHeader.m */,
+				1453761F25CAA47600CB6578 /* NNRotationView.h */,
+				1453764525CAA47800CB6578 /* NNRotationView.m */,
+				1453764325CAA47800CB6578 /* NNSearchView.h */,
+				1453760425CAA47400CB6578 /* NNSearchView.m */,
+				1453761D25CAA47600CB6578 /* NNSegmentView.h */,
+				1453764725CAA47800CB6578 /* NNSegmentView.m */,
+				145375FB25CAA47400CB6578 /* NNSheetView.h */,
+				1453764125CAA47700CB6578 /* NNSheetView.m */,
+				1453763F25CAA47700CB6578 /* NNShoppingView.h */,
+				145375F625CAA47400CB6578 /* NNShoppingView.m */,
+				145375E825CAA47300CB6578 /* NNSliderView.h */,
+				1453762F25CAA47600CB6578 /* NNSliderView.m */,
+				1453760E25CAA47500CB6578 /* NNStarRateView.h */,
+				145375EA25CAA47300CB6578 /* NNStarRateView.m */,
+				1453762625CAA47600CB6578 /* NNStarsView.h */,
+				1453761B25CAA47500CB6578 /* NNStarsView.m */,
+				145375E225CAA47200CB6578 /* NNSuspendBtn.h */,
+				145375F425CAA47300CB6578 /* NNSuspendBtn.m */,
+				145375F525CAA47300CB6578 /* NNSuspendButton.h */,
+				1453762C25CAA47600CB6578 /* NNSuspendButton.m */,
+				145375E125CAA47200CB6578 /* NNSwitchView.h */,
+				1453760825CAA47500CB6578 /* NNSwitchView.m */,
+				1453760325CAA47400CB6578 /* NNTabBarView.h */,
+				1453761A25CAA47500CB6578 /* NNTabBarView.m */,
+				1453763225CAA47700CB6578 /* NNTabBarViewZero.h */,
+				145375EB25CAA47300CB6578 /* NNTabBarViewZero.m */,
+				1453760D25CAA47500CB6578 /* NNTablePlainView.h */,
+				145375E925CAA47300CB6578 /* NNTablePlainView.m */,
+				1453763525CAA47700CB6578 /* NNTopSheetView.h */,
+				1453762925CAA47600CB6578 /* NNTopSheetView.m */,
+				145375FD25CAA47400CB6578 /* NNTurnView.h */,
+				145375E725CAA47300CB6578 /* NNTurnView.m */,
+				1453761725CAA47500CB6578 /* NNUserView.h */,
+				1453763C25CAA47700CB6578 /* NNUserView.m */,
+				145375FE25CAA47400CB6578 /* NNView.h */,
+				1453760725CAA47500CB6578 /* NNWebView.h */,
+				145375EF25CAA47300CB6578 /* NNWebView.m */,
+				1453761125CAA47500CB6578 /* Resources */,
+			);
+			path = NNView;
+			sourceTree = "<group>";
+		};
+		145374B525CA9E9D00CB6578 /* NNCollectionView */ = {
+			isa = PBXGroup;
+			children = (
+				1453775425CAA4AA00CB6578 /* NNCollectionView.h */,
+				1453773B25CAA4A900CB6578 /* UICTReusableViewFour.h */,
+				1453775025CAA4AA00CB6578 /* UICTReusableViewFour.m */,
+				1453773825CAA4A900CB6578 /* UICTReusableViewOne.h */,
+				1453772E25CAA4A800CB6578 /* UICTReusableViewOne.m */,
+				1453774E25CAA4AA00CB6578 /* UICTReusableViewThree.h */,
+				1453775525CAA4AA00CB6578 /* UICTReusableViewThree.m */,
+				1453773125CAA4A800CB6578 /* UICTReusableViewTwo.h */,
+				1453774525CAA4AA00CB6578 /* UICTReusableViewTwo.m */,
+				1453774D25CAA4AA00CB6578 /* UICTReusableViewZero.h */,
+				1453774925CAA4AA00CB6578 /* UICTReusableViewZero.m */,
+				1453773525CAA4A800CB6578 /* UICTViewCellEight.h */,
+				1453773C25CAA4A900CB6578 /* UICTViewCellEight.m */,
+				1453773625CAA4A900CB6578 /* UICTViewCellFive.h */,
+				1453774025CAA4A900CB6578 /* UICTViewCellFive.m */,
+				1453774825CAA4AA00CB6578 /* UICTViewCellFour.h */,
+				1453773925CAA4A900CB6578 /* UICTViewCellFour.m */,
+				1453773A25CAA4A900CB6578 /* UICTViewCellOne.h */,
+				1453773025CAA4A800CB6578 /* UICTViewCellOne.m */,
+				1453774C25CAA4AA00CB6578 /* UICTViewCellSeven.h */,
+				1453773F25CAA4A900CB6578 /* UICTViewCellSeven.m */,
+				1453775825CAA4AB00CB6578 /* UICTViewCellSix.h */,
+				1453775625CAA4AB00CB6578 /* UICTViewCellSix.m */,
+				1453773425CAA4A800CB6578 /* UICTViewCellThree.h */,
+				1453775225CAA4AA00CB6578 /* UICTViewCellThree.m */,
+				1453774325CAA4A900CB6578 /* UICTViewCellTwo.h */,
+				1453772F25CAA4A800CB6578 /* UICTViewCellTwo.m */,
+				1453774425CAA4A900CB6578 /* UICTViewCellZero.h */,
+				1453773D25CAA4A900CB6578 /* UICTViewCellZero.m */,
+				1453773225CAA4A800CB6578 /* UICTViewLayoutCard.h */,
+				1453774F25CAA4AA00CB6578 /* UICTViewLayoutCard.m */,
+				1453774625CAA4AA00CB6578 /* UICTViewLayoutCircle.h */,
+				1453774225CAA4A900CB6578 /* UICTViewLayoutCircle.m */,
+				1453773725CAA4A900CB6578 /* UICTViewLayoutFive.h */,
+				1453773325CAA4A800CB6578 /* UICTViewLayoutFive.m */,
+				1453775125CAA4AA00CB6578 /* UICTViewLayoutOne.h */,
+				1453775725CAA4AB00CB6578 /* UICTViewLayoutOne.m */,
+				1453774A25CAA4AA00CB6578 /* UICTViewLayoutPicker.h */,
+				1453775325CAA4AA00CB6578 /* UICTViewLayoutPicker.m */,
+				1453774125CAA4A900CB6578 /* UICTViewLayoutSphere.h */,
+				1453773E25CAA4A900CB6578 /* UICTViewLayoutSphere.m */,
+				1453774B25CAA4AA00CB6578 /* UICTViewLayoutZero.h */,
+				1453774725CAA4AA00CB6578 /* UICTViewLayoutZero.m */,
+			);
+			path = NNCollectionView;
+			sourceTree = "<group>";
+		};
+		145374E125CA9E9E00CB6578 /* NNViewComplex */ = {
+			isa = PBXGroup;
+			children = (
+				145375D525CAA44A00CB6578 /* Resources */,
+				145375CD25CAA44A00CB6578 /* NNCTView.h */,
+				145375D225CAA44A00CB6578 /* NNCTView.m */,
+				145375C925CAA44A00CB6578 /* NNCycleCTView.h */,
+				145375CA25CAA44A00CB6578 /* NNCycleCTView.m */,
+				145375CF25CAA44A00CB6578 /* NNShareView.h */,
+				145375D325CAA44A00CB6578 /* NNShareView.m */,
+				145375C625CAA44A00CB6578 /* NNTextFieldOne.h */,
+				145375CB25CAA44A00CB6578 /* NNTextFieldOne.m */,
+				145375D125CAA44A00CB6578 /* NNViewComplex.h */,
+				145375D425CAA44A00CB6578 /* UICTViewCellExcel.h */,
+				145375CC25CAA44A00CB6578 /* UICTViewCellExcel.m */,
+				145375CE25CAA44A00CB6578 /* UICTViewLayoutExcel.h */,
+				145375C725CAA44A00CB6578 /* UICTViewLayoutExcel.m */,
+				145375C825CAA44A00CB6578 /* UIExcelView.h */,
+				145375D025CAA44A00CB6578 /* UIExcelView.m */,
+			);
+			path = NNViewComplex;
+			sourceTree = "<group>";
+		};
+		145375D525CAA44A00CB6578 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				145375D625CAA44A00CB6578 /* Media.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		1453761125CAA47500CB6578 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				1453761225CAA47500CB6578 /* Media.xcassets */,
+				1453761325CAA47500CB6578 /* area.plist */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 		145C912923346FA000849E9D /* HuiZhuBang */ = {
 			isa = PBXGroup;
 			children = (
@@ -1821,12 +2579,23 @@
 		147ABB5322DED19500A5C4EC /* CollectionData */ = {
 			isa = PBXGroup;
 			children = (
-				147ABB5622DED1A500A5C4EC /* BNCollectionDataController.h */,
-				147ABB5422DED1A500A5C4EC /* BNCollectionDataController.m */,
-				147ABB5722DED1A500A5C4EC /* BNCollectionDataModel.h */,
-				147ABB5522DED1A500A5C4EC /* BNCollectionDataModel.m */,
+				147ABB5622DED1A500A5C4EC /* NNCollectionDataController.h */,
+				147ABB5422DED1A500A5C4EC /* NNCollectionDataController.m */,
+				147ABB5722DED1A500A5C4EC /* NNCollectionDataModel.h */,
+				147ABB5522DED1A500A5C4EC /* NNCollectionDataModel.m */,
 			);
 			name = CollectionData;
+			sourceTree = "<group>";
+		};
+		14ACBA4725BFAF1B002F61AA /* UIDevice */ = {
+			isa = PBXGroup;
+			children = (
+				14ACBA4A25BFAF27002F61AA /* UIDevice-Hardware.h */,
+				14ACBA4925BFAF27002F61AA /* UIDevice-Hardware.m */,
+				14ACBA4B25BFAF27002F61AA /* UIDevice-Orientation.h */,
+				14ACBA4825BFAF27002F61AA /* UIDevice-Orientation.m */,
+			);
+			path = UIDevice;
 			sourceTree = "<group>";
 		};
 		14BEDC6424A8A0120031852F /* ChainProgramming */ = {
@@ -2044,6 +2813,10 @@
 				51364CC72086092D005A20E7 /* DataModel */,
 				51364BDD20860821005A20E7 /* NNTool */,
 				513646EB208604DD005A20E7 /* Vendor */,
+				145374B525CA9E9D00CB6578 /* NNCollectionView */,
+				145373C025CA9E9C00CB6578 /* NNTableViewCell */,
+				1453744A25CA9E9D00CB6578 /* NNView */,
+				145374E125CA9E9E00CB6578 /* NNViewComplex */,
 				5136469F2086031D005A20E7 /* AppDelegate.h */,
 				513646A02086031D005A20E7 /* AppDelegate.m */,
 				140A2BFB226976EC000ED121 /* AppGlobleConfig.h */,
@@ -2071,6 +2844,10 @@
 				14B7CF6C2383D2F200AEF7BC /* UIImageView+Tmp.m */,
 				14C0814D25831BA000D3F360 /* UISearchController+Helper.h */,
 				14C0814E25831BA000D3F360 /* UISearchController+Helper.m */,
+				14CF392525B9668E00FBDBF7 /* NNButtonDispalyController.h */,
+				14CF392625B9668E00FBDBF7 /* NNButtonDispalyController.m */,
+				14EFF3FB25BA58AC00D82359 /* NNButtonGroupView.h */,
+				14EFF3FC25BA58AC00D82359 /* NNButtonGroupView.m */,
 				513646A82086031D005A20E7 /* Assets.xcassets */,
 				5169DF232088254300B025C3 /* Public.xcassets */,
 				5136492420860655005A20E7 /* Resources */,
@@ -2090,6 +2867,7 @@
 		513646EB208604DD005A20E7 /* Vendor */ = {
 			isa = PBXGroup;
 			children = (
+				14ACBA4725BFAF1B002F61AA /* UIDevice */,
 				14F08BAB23016D8600B75842 /* WaterView */,
 				14D40A2722C5BB7B00AF74B9 /* PopoverView */,
 				515C67C62137C55700D5EA94 /* BAddressPickerController */,
@@ -2349,8 +3127,8 @@
 				51698BA921376F930069C2B2 /* Utilities.m */,
 				51364C7320860821005A20E7 /* PictureController.h */,
 				51364C7420860821005A20E7 /* PictureController.m */,
-				51364C7920860821005A20E7 /* Utilities_DM.h */,
-				51364C7A20860821005A20E7 /* Utilities_DM.m */,
+				51364C7920860821005A20E7 /* UtilitiesDM.h */,
+				51364C7A20860821005A20E7 /* UtilitiesDM.m */,
 			);
 			path = NNTool;
 			sourceTree = "<group>";
@@ -2855,6 +3633,7 @@
 				1410804122D2E69C0011344E /* am_5@2x.png in Resources */,
 				513649B320860655005A20E7 /* img_home_dataEntry_147.png in Resources */,
 				1410804C22D2E69C0011344E /* heart.png in Resources */,
+				1453766525CAA47800CB6578 /* area.plist in Resources */,
 				145C913523347AE600849E9D /* parkingWang@3x.png in Resources */,
 				513649C920860655005A20E7 /* img_popAddBatch@2x.png in Resources */,
 				51900DD921895B9B0038A178 /* img_home_immune_147.png in Resources */,
@@ -2878,6 +3657,7 @@
 				513649C620860655005A20E7 /* img_NFC.png in Resources */,
 				1410804622D2E69C0011344E /* am_4@2x.png in Resources */,
 				5136498A20860655005A20E7 /* img_Add_AnimalBatch.png in Resources */,
+				1453766425CAA47800CB6578 /* Media.xcassets in Resources */,
 				513649A120860655005A20E7 /* img_dynamicState.png in Resources */,
 				1410804822D2E69C0011344E /* fire.png in Resources */,
 				513649C420860655005A20E7 /* img_imm_recordGeneral.png in Resources */,
@@ -2969,6 +3749,7 @@
 				1410804922D2E69C0011344E /* spark.png in Resources */,
 				513649A620860655005A20E7 /* img_feed_N.png in Resources */,
 				513649E020860655005A20E7 /* img_warning_exception.png in Resources */,
+				145375DE25CAA44B00CB6578 /* Media.xcassets in Resources */,
 				515CC96B20B6AAF2004AE27C /* AAHighchartsLib.js in Resources */,
 				1410804D22D2E69C0011344E /* smoke.png in Resources */,
 				515CC96F20B6AAF2004AE27C /* AAChartView.html in Resources */,
@@ -3048,11 +3829,7 @@
 				"${BUILT_PRODUCTS_DIR}/MJRefresh/MJRefresh.framework",
 				"${BUILT_PRODUCTS_DIR}/Masonry/Masonry.framework",
 				"${BUILT_PRODUCTS_DIR}/NNCategoryPro/NNCategoryPro.framework",
-				"${BUILT_PRODUCTS_DIR}/NNCollectionView/NNCollectionView.framework",
 				"${BUILT_PRODUCTS_DIR}/NNGloble/NNGloble.framework",
-				"${BUILT_PRODUCTS_DIR}/NNTableViewCell/NNTableViewCell.framework",
-				"${BUILT_PRODUCTS_DIR}/NNView/NNView.framework",
-				"${BUILT_PRODUCTS_DIR}/NNViewComplex/NNViewComplex.framework",
 				"${BUILT_PRODUCTS_DIR}/PPNumberButton/PPNumberButton.framework",
 				"${BUILT_PRODUCTS_DIR}/SDCycleScrollView/SDCycleScrollView.framework",
 				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
@@ -3081,11 +3858,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MJRefresh.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Masonry.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/NNCategoryPro.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/NNCollectionView.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/NNGloble.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/NNTableViewCell.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/NNView.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/NNViewComplex.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PPNumberButton.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDCycleScrollView.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
@@ -3131,6 +3904,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1453775B25CAA4AB00CB6578 /* UICTViewCellOne.m in Sources */,
 				14F9BF4222E56332001637B6 /* UICTViewLayoutPhoto.m in Sources */,
 				141080A122D2E7D10011344E /* LiveLikeController.m in Sources */,
 				14C11AC022DC872C009D18A3 /* NNDataModel.m in Sources */,
@@ -3140,9 +3914,14 @@
 				14E42CDA2200040200606AD0 /* NNUserLoginController.m in Sources */,
 				143331AD2241F1F600436F75 /* AVSpeechViewController.m in Sources */,
 				1402183D23683A9600B27E4C /* AudioSoundController.m in Sources */,
+				1453772625CAA49600CB6578 /* UITableViewFortyFourCell.m in Sources */,
+				1453767925CAA47800CB6578 /* NNImgLabelView.m in Sources */,
 				149B5508225AD3C5002B1039 /* NNTabBarController.m in Sources */,
 				141080AF22D2E7D10011344E /* CommonAnimationController.m in Sources */,
+				145375D825CAA44B00CB6578 /* NNCycleCTView.m in Sources */,
 				149111DA227308E30078A7BB /* NNRequstAgent.m in Sources */,
+				1453770525CAA49600CB6578 /* UITableViewSenventyThreeCell.m in Sources */,
+				1453772225CAA49600CB6578 /* UITableHeaderFooterViewOne.m in Sources */,
 				515C67E62137C55700D5EA94 /* BRecentCityCell.m in Sources */,
 				145C913923347B4400849E9D /* AppIconChangeController.m in Sources */,
 				14E42D172200042800606AD0 /* GlobleConst.m in Sources */,
@@ -3151,13 +3930,24 @@
 				14E42D1A2200042800606AD0 /* NNFileHandler.m in Sources */,
 				515CC98220B6AAF2004AE27C /* AAAnimation.m in Sources */,
 				14C11AAD22DC7FF8009D18A3 /* CardViewController.m in Sources */,
+				1453770625CAA49600CB6578 /* UITableViewEightyTwoCell.m in Sources */,
 				149F88B022B386F300EAB4C2 /* ChangePwdController.m in Sources */,
 				515CC98920B6AAF2004AE27C /* AAChartView.m in Sources */,
+				1453775D25CAA4AB00CB6578 /* UICTViewCellFour.m in Sources */,
 				14E42D142200042800606AD0 /* NNAccountTool.m in Sources */,
 				513647C0208604DE005A20E7 /* HZPhotoItem.m in Sources */,
+				1453771E25CAA49600CB6578 /* UITableViewEightyCell.m in Sources */,
+				145375D925CAA44B00CB6578 /* NNTextFieldOne.m in Sources */,
+				1453766B25CAA47800CB6578 /* NNStarsView.m in Sources */,
+				1453772A25CAA49600CB6578 /* UITableViewFiftyEightCell.m in Sources */,
+				1453765B25CAA47800CB6578 /* NNListChooseView.m in Sources */,
+				145375DB25CAA44B00CB6578 /* UIExcelView.m in Sources */,
 				51862E7320BB9FA70080BD4E /* StrategyFinancy.m in Sources */,
 				14E42CDB2200040200606AD0 /* NNUserPwdChangeController.m in Sources */,
-				147ABB5822DED1A500A5C4EC /* BNCollectionDataController.m in Sources */,
+				1453767025CAA47800CB6578 /* NNSuspendButton.m in Sources */,
+				147ABB5822DED1A500A5C4EC /* NNCollectionDataController.m in Sources */,
+				1453766125CAA47800CB6578 /* NNHeaderFooterView.m in Sources */,
+				1453765025CAA47800CB6578 /* NNWebView.m in Sources */,
 				51698C4221376F9E0069C2B2 /* Utilities.m in Sources */,
 				51698C892137C0800069C2B2 /* WHKUserDataModel.m in Sources */,
 				14ADE28123CEC66800037B0B /* XGTagView.m in Sources */,
@@ -3165,11 +3955,15 @@
 				141080B022D2E7D10011344E /* DriftAnimationController.m in Sources */,
 				14B6B35022B230350047E094 /* LoginViewController.m in Sources */,
 				517D8B1F20B2C4C100DCA731 /* DBManager.m in Sources */,
+				1453771825CAA49600CB6578 /* UITableViewSevenCell.m in Sources */,
 				515CC98520B6AAF2004AE27C /* AASpline.m in Sources */,
 				149F889F22B34C5600EAB4C2 /* PKLivePlayerController.m in Sources */,
 				14E8F74F21F5E1ED004317B5 /* RuntimeController.m in Sources */,
 				51894140209C27E000A687E1 /* TestViewController.m in Sources */,
 				14E49C8E232780EB0099912E /* UIApplication+Permission.m in Sources */,
+				145376F825CAA49600CB6578 /* UITableViewSenventySevenCell.m in Sources */,
+				1453772325CAA49600CB6578 /* UITableViewTextFieldCell.m in Sources */,
+				1453766C25CAA47800CB6578 /* NNGroupViewZero.m in Sources */,
 				143F44B224921A8D00ED160A /* KVOViewController.m in Sources */,
 				515CC98B20B6AAF2004AE27C /* AAOptions.m in Sources */,
 				515CC97320B6AAF2004AE27C /* AAXAxis.m in Sources */,
@@ -3185,14 +3979,21 @@
 				141080B322D2E7D10011344E /* AnimationController7.m in Sources */,
 				51862E6B20BB979A0080BD4E /* AbstractFactoryController.m in Sources */,
 				14107FB522CDF9490011344E /* IDCardKeyboardViewController.m in Sources */,
+				1453776B25CAA4AB00CB6578 /* UICTReusableViewThree.m in Sources */,
 				14E42CFA2200040F00606AD0 /* NNFourthViewController.m in Sources */,
 				1401BE762276AB960078A722 /* NNStoreManger.m in Sources */,
+				1453765F25CAA47800CB6578 /* NNFoldHeaderFooterView.m in Sources */,
 				51862E7D20BBA8270080BD4E /* InputValidator.m in Sources */,
+				1453776625CAA4AB00CB6578 /* UICTReusableViewZero.m in Sources */,
 				14551080240D0811001772F5 /* NNFileUploadController.m in Sources */,
 				149111E022730CCF0078A7BB /* NNAPIConfi.m in Sources */,
 				513647C1208604DE005A20E7 /* HZWaitingView.m in Sources */,
 				14A1EA752249FBAA00952911 /* TextFromSpeechController.m in Sources */,
 				51862E7A20BBA1B50080BD4E /* StrategyFinancyAlipay.m in Sources */,
+				1453764E25CAA47800CB6578 /* NNTabBarViewZero.m in Sources */,
+				145376FC25CAA49600CB6578 /* UITableViewFourteenCell.m in Sources */,
+				145376FE25CAA49600CB6578 /* UITableViewSixtyEightCell.m in Sources */,
+				1453776125CAA4AB00CB6578 /* UICTViewCellSeven.m in Sources */,
 				14DF581F2313D79F00906A9D /* NSDictionary+Tmp.m in Sources */,
 				513647BD208604DE005A20E7 /* HZPhotoBrowser.m in Sources */,
 				518CD32D219D78B6003CE348 /* NNActionSheet.m in Sources */,
@@ -3201,34 +4002,48 @@
 				5162F6F720BF9604009A6253 /* ThreadCommunicationController.m in Sources */,
 				515C67E22137C55700D5EA94 /* LNSearchManager.m in Sources */,
 				51862E8020BBA8800080BD4E /* NumberInputValidator.m in Sources */,
+				1453767C25CAA47800CB6578 /* NNCycleView.m in Sources */,
 				515CC97120B6AAF2004AE27C /* AALabels.m in Sources */,
 				515CC97520B6AAF2004AE27C /* AADataLabels.m in Sources */,
+				1453765225CAA47800CB6578 /* NNDateRangeView.m in Sources */,
 				517D8B1220B2B36E00DCA731 /* FMBDViewController.m in Sources */,
+				1453770D25CAA49600CB6578 /* UITableViewSenventySixCell.m in Sources */,
 				517D8B2420B2C66800DCA731 /* Car.m in Sources */,
+				1453767825CAA47800CB6578 /* NNExtendView.m in Sources */,
 				515C67E52137C55700D5EA94 /* BCurrentCityCell.m in Sources */,
 				14C1197522DC59AC009D18A3 /* ScrollViewCycleController.m in Sources */,
+				1453767D25CAA47800CB6578 /* NNRotationView.m in Sources */,
 				14F0FE6722B0AD9800057093 /* LiveViewController.m in Sources */,
 				14F6382B23630AC900D0EBF0 /* NSObject+Tmp.m in Sources */,
 				14C11AAC22DC7FF8009D18A3 /* SectionListOneController.m in Sources */,
 				141080B522D2E7D10011344E /* AnimationController18.m in Sources */,
 				14BEDC6D24A8A0330031852F /* Calculator.m in Sources */,
 				149111E6227542C10078A7BB /* NNUploadModel.m in Sources */,
+				1453767B25CAA47800CB6578 /* NNSheetView.m in Sources */,
 				14F0FE5A22B0AA0000057093 /* BNMoidyPwdApi.m in Sources */,
 				51AA00342199295A002EB259 /* CounterListController.m in Sources */,
 				5185FDDC21A248E900FFA730 /* MutiRequestController.m in Sources */,
+				1453764C25CAA47800CB6578 /* NNTablePlainView.m in Sources */,
 				14EAC93C2321188800E42D4F /* InspirationModel.m in Sources */,
 				14F08BAE23016D9C00B75842 /* WaterView.m in Sources */,
+				1453765825CAA47800CB6578 /* NNPickerView.m in Sources */,
+				1453767725CAA47800CB6578 /* NNItemsView.m in Sources */,
 				14E42CF92200040F00606AD0 /* NNFactoryListViewController.m in Sources */,
 				51258C1A215E38FD009CDEE3 /* NSBundle+Language.m in Sources */,
 				14EAC94A2321DA8300E42D4F /* UICTViewCellPage.m in Sources */,
 				51A4A1272182FB7900BA9923 /* EntryViewController.m in Sources */,
+				1453771D25CAA49600CB6578 /* UITableViewPickerViewCell.m in Sources */,
+				1453776C25CAA4AB00CB6578 /* UICTViewCellSix.m in Sources */,
 				51698C862137C0440069C2B2 /* WHKReuestSevice.m in Sources */,
+				1453775F25CAA4AB00CB6578 /* UICTViewCellZero.m in Sources */,
 				14C11AB222DC7FF8009D18A3 /* FileParseController.m in Sources */,
 				515CC98C20B6AAF2004AE27C /* AASeriesElement.m in Sources */,
+				145376F425CAA49600CB6578 /* UITableViewFiftyTwoCell.m in Sources */,
 				515CC97920B6AAF2004AE27C /* AAYAxis.m in Sources */,
 				517D8B2B20B2E09800DCA731 /* CarViewController.m in Sources */,
 				51862E8620BBA9400080BD4E /* CustomTextField.m in Sources */,
 				517D8B2E20B2E0A200DCA731 /* FMViewController.m in Sources */,
+				1453770A25CAA49600CB6578 /* UITableViewFiftyCell.m in Sources */,
 				515CC97820B6AAF2004AE27C /* AASubtitle.m in Sources */,
 				5168C8E521A6401F00850687 /* NumberViewController.m in Sources */,
 				513647DF208604DE005A20E7 /* PPNetworkCache.m in Sources */,
@@ -3236,13 +4051,21 @@
 				147900392306BB5A00FC4825 /* SnapshotViewController.m in Sources */,
 				513647C2208604DE005A20E7 /* PhotoMainViewController.m in Sources */,
 				1404FADC21DF40D700122E22 /* RecognizerController.m in Sources */,
+				1453767625CAA47800CB6578 /* NNLeftMenuView.m in Sources */,
+				1453775A25CAA4AB00CB6578 /* UICTViewCellTwo.m in Sources */,
 				516969B320BCFCFF00BAA53D /* CompositeViewController.m in Sources */,
+				1453766925CAA47800CB6578 /* NNPickerViewAddress.m in Sources */,
 				515CC98820B6AAF2004AE27C /* AAChart.m in Sources */,
+				1453771125CAA49600CB6578 /* UITableViewSixtyFourCell.m in Sources */,
 				51698C4B21376F9E0069C2B2 /* KeychainTool.m in Sources */,
 				149F88AD22B37AB900EAB4C2 /* BNUserLoginView.m in Sources */,
 				51B9CD1820A0520F0096A540 /* ZYSliderViewController.m in Sources */,
+				1453771525CAA49600CB6578 /* UITableViewEightCell.m in Sources */,
+				1453765D25CAA47800CB6578 /* NNSearchView.m in Sources */,
 				14C11AB422DC7FF8009D18A3 /* PickerViewController.m in Sources */,
+				1453766725CAA47800CB6578 /* NNMenuView.m in Sources */,
 				518CD324219D5A24003CE348 /* UIViewPropertyAnimatorController.m in Sources */,
+				1453771025CAA49600CB6578 /* UITableViewFourCell.m in Sources */,
 				14F0FE5722B0A83200057093 /* APIRequestURL.m in Sources */,
 				51B9CD1920A0520F0096A540 /* UIViewController+ZYSliderViewController.m in Sources */,
 				1401BE622276A1220078A722 /* NNMemoryCache.m in Sources */,
@@ -3254,48 +4077,74 @@
 				149111E92275B34E0078A7BB /* NNLog.m in Sources */,
 				141080A022D2E7D10011344E /* AnimationController8.m in Sources */,
 				147B971F21EF005B000F5294 /* UICollectionDisplayController.m in Sources */,
+				1453771425CAA49600CB6578 /* UITableViewSixtyNineCell.m in Sources */,
 				5162F70120BF9D10009A6253 /* FlowerView.m in Sources */,
+				1453772025CAA49600CB6578 /* UITableViewDateRangeCell.m in Sources */,
 				5162F70D20BFB934009A6253 /* OperationViewController.m in Sources */,
+				1453775C25CAA4AB00CB6578 /* UICTViewLayoutFive.m in Sources */,
+				1453767325CAA47800CB6578 /* NNSliderView.m in Sources */,
 				14E42CF72200040F00606AD0 /* ScrollHorizontalController.m in Sources */,
+				1453771625CAA49600CB6578 /* UITableViewSegmentCell.m in Sources */,
 				14E42D162200042800606AD0 /* NNMenuListController.m in Sources */,
 				515CC97D20B6AAF2004AE27C /* AAOptions3d.m in Sources */,
+				1453765E25CAA47800CB6578 /* NNAddCardView.m in Sources */,
+				1453764B25CAA47800CB6578 /* NNTurnView.m in Sources */,
 				513646AF2086031D005A20E7 /* main.m in Sources */,
 				1401BE6F2276A50E0078A722 /* NNCacheKey.m in Sources */,
 				14B6B33522B0F8760047E094 /* PKSeverinfoModel.m in Sources */,
+				1453767125CAA47800CB6578 /* NNAlertViewTwo.m in Sources */,
 				515CC98120B6AAF2004AE27C /* AAArea.m in Sources */,
 				1401BE652276A1370078A722 /* NNDiskCache.m in Sources */,
 				14E42CD3220003F200606AD0 /* NNOperation.m in Sources */,
+				1453766625CAA47800CB6578 /* NNBtnView.m in Sources */,
+				1453772925CAA49600CB6578 /* UITableViewSenventyTwoCell.m in Sources */,
 				14C11ABA22DC7FF8009D18A3 /* NNShareViewController.m in Sources */,
+				1453771F25CAA49600CB6578 /* UITableViewSenventyFourCell.m in Sources */,
 				51AA0037219929C3002EB259 /* NNCounter.m in Sources */,
+				1453770025CAA49600CB6578 /* UITableViewFiftyOneCell.m in Sources */,
 				D7EDEAB221BDF5930048CCDA /* NNFontListController.m in Sources */,
 				51BB931820B5013600EB43A1 /* DBEntity.m in Sources */,
 				1410805222D2E69C0011344E /* NNEmitterView.m in Sources */,
+				1453766E25CAA47800CB6578 /* NNRefreshHeader.m in Sources */,
 				14E42CF32200040F00606AD0 /* NNRightViewController.m in Sources */,
 				14F0FE6322B0AB8400057093 /* BNUserLogoutApi.m in Sources */,
 				14EAC9302320FDFE00E42D4F /* NNCycleScrollView.m in Sources */,
+				1453772425CAA49600CB6578 /* UITableViewEightyFiveCell.m in Sources */,
+				145377AA25CAA68100CB6578 /* UITableViewSwitchCell.m in Sources */,
+				1453770C25CAA49600CB6578 /* UITableViewThirtyEightCell.m in Sources */,
+				1453770B25CAA49600CB6578 /* UITableViewCellDefault.m in Sources */,
+				1453765925CAA47800CB6578 /* NNAlertView.m in Sources */,
 				51698C4021376F9E0069C2B2 /* BINAccountTool.m in Sources */,
+				1453765A25CAA47800CB6578 /* NNAddPictureVC.m in Sources */,
 				51862E7020BB9E810080BD4E /* StrategyViewController.m in Sources */,
 				141080A322D2E7D10011344E /* AnimationController14.m in Sources */,
+				1453766025CAA47800CB6578 /* NNSwitchView.m in Sources */,
 				51A4A00C2182E1AB00BA9923 /* BlockViewController.m in Sources */,
 				14107FB122CDF9490011344E /* KeyboardCoverTextFieldViewController.m in Sources */,
+				1453776925CAA4AB00CB6578 /* UICTViewCellThree.m in Sources */,
 				515CC97020B6AAF2004AE27C /* AAAreaspline.m in Sources */,
 				5186F1C421A3A95500663707 /* ShowListController.m in Sources */,
 				51698C842137C0440069C2B2 /* WHKRequestHelper.m in Sources */,
 				141080A522D2E7D10011344E /* AnimationController6.m in Sources */,
+				145376FB25CAA49600CB6578 /* UITableViewSixCell.m in Sources */,
 				516F8562215DF8F5008E62B3 /* SuspendButton.m in Sources */,
 				515C67E12137C55700D5EA94 /* LNLocationGeocoder.m in Sources */,
 				5167E22F21A7AA7D006650F3 /* UITextFieldController.m in Sources */,
 				513647BE208604DE005A20E7 /* HZPhotoBrowserView.m in Sources */,
 				149F88AA22B37A4700EAB4C2 /* BNPhoneCodeView.m in Sources */,
+				1453771925CAA49600CB6578 /* UITableViewTextViewCell.m in Sources */,
+				1453771B25CAA49600CB6578 /* UITableViewSeventeenCell.m in Sources */,
 				51900DD7218953C20038A178 /* NotificationTreadController.m in Sources */,
 				1410805122D2E69C0011344E /* NNAppStoreProgress.m in Sources */,
 				141080B222D2E7D10011344E /* AnimationController12.m in Sources */,
 				14F08BB123016DDD00B75842 /* WaveController.m in Sources */,
-				147ABB5922DED1A500A5C4EC /* BNCollectionDataModel.m in Sources */,
+				147ABB5922DED1A500A5C4EC /* NNCollectionDataModel.m in Sources */,
 				149F88A422B3750F00EAB4C2 /* ResetPwdController.m in Sources */,
 				141080A722D2E7D10011344E /* AnimationController4.m in Sources */,
 				5129425820B424EC009FB70E /* LockCompareController.m in Sources */,
+				1453772B25CAA49600CB6578 /* UITableViewAchivementCell.m in Sources */,
 				14F25F542359A14800D05998 /* UIView+Tmp.m in Sources */,
+				1453770825CAA49600CB6578 /* UITableViewEightyEightCell.m in Sources */,
 				51862E8320BBA8B90080BD4E /* AlphaInputValidator.m in Sources */,
 				512E43452137DDBD00272986 /* WHKGroupViewViewController.m in Sources */,
 				149111D42272FFCC0078A7BB /* NNPageModel.m in Sources */,
@@ -3308,73 +4157,112 @@
 				14579BA12294EE83001FEB0C /* WebSocketManager.m in Sources */,
 				149F888D22B23CC200EAB4C2 /* BNTouchcChannelstreamApi.m in Sources */,
 				14E42CF82200040F00606AD0 /* NNThirdViewController.m in Sources */,
+				14ACBA4C25BFAF27002F61AA /* UIDevice-Orientation.m in Sources */,
 				14E42D152200042800606AD0 /* NNLanguage.m in Sources */,
 				14E42CF62200040F00606AD0 /* NNLeftViewController.m in Sources */,
 				14BEBF5123B597BA0058C20A /* NNThirdViewController+Helper.m in Sources */,
 				149111D7227308640078A7BB /* NNRequstManager.m in Sources */,
+				1453766A25CAA47800CB6578 /* NNTabBarView.m in Sources */,
 				146B8187225C74860004A249 /* SubTabBarController.m in Sources */,
+				1453766F25CAA47800CB6578 /* NNTopSheetView.m in Sources */,
 				515CC97A20B6AAF2004AE27C /* AACrosshair.m in Sources */,
 				515CC97720B6AAF2004AE27C /* AATooltip.m in Sources */,
+				1453767225CAA47800CB6578 /* NNGroupView.m in Sources */,
+				14EFF3FD25BA58AC00D82359 /* NNButtonGroupView.m in Sources */,
 				14E42CFF2200041900606AD0 /* NNNetRootShareModel.m in Sources */,
 				51234B32215E326400F45FD2 /* WHKNetInfoFeedModel.m in Sources */,
+				1453765325CAA47800CB6578 /* NNPairLabelView.m in Sources */,
+				145375DA25CAA44B00CB6578 /* UICTViewCellExcel.m in Sources */,
 				51862E5F20BB94810080BD4E /* EOCEmployee.m in Sources */,
 				5162F70420BF9D5F009A6253 /* FlowerStateModel.m in Sources */,
+				1453767425CAA47800CB6578 /* NNGView.m in Sources */,
 				51954AB520A12DCC00B066C8 /* CycleLabelViewController.m in Sources */,
 				5169699A20BCED4000BAA53D /* LH4SWaiter.m in Sources */,
 				1439166A24C1516400CBABF0 /* NNUploadImagesController.m in Sources */,
 				51AA00332199295A002EB259 /* CounterListGroupController.m in Sources */,
 				518CD32A219D787F003CE348 /* SugerAlertController.m in Sources */,
+				1453776225CAA4AB00CB6578 /* UICTViewCellFive.m in Sources */,
 				14C11AB722DC7FF8009D18A3 /* CardLineViewController.m in Sources */,
+				1453771325CAA49600CB6578 /* UITableViewFiveCell.m in Sources */,
 				14C11AB322DC7FF8009D18A3 /* CircleViewController.m in Sources */,
 				5162F6F120BF9110009A6253 /* ThreadViewController.m in Sources */,
 				515CC97220B6AAF2004AE27C /* AASeries.m in Sources */,
 				517D8B2520B2C66800DCA731 /* Person.m in Sources */,
+				1453770225CAA49600CB6578 /* UITableViewFiftySevenCell.m in Sources */,
+				1453765725CAA47800CB6578 /* NNCircle.m in Sources */,
 				141080B122D2E7D10011344E /* AnimationController15.m in Sources */,
 				141080A622D2E7D10011344E /* AnimationController9.m in Sources */,
 				515CC98320B6AAF2004AE27C /* AALegend.m in Sources */,
+				1453771A25CAA49600CB6578 /* UITableViewDatePickerCell.m in Sources */,
+				145376FA25CAA49600CB6578 /* UITableViewStepCell.m in Sources */,
+				1453770925CAA49600CB6578 /* UITableViewSheetCell.m in Sources */,
 				515CC97620B6AAF2004AE27C /* AALine.m in Sources */,
 				14579BA42294FBBA001FEB0C /* Reachability.m in Sources */,
 				515CC97420B6AAF2004AE27C /* AAPlotOptions.m in Sources */,
+				1453772525CAA49600CB6578 /* UITableViewFifteenCell.m in Sources */,
 				516969AC20BCF9A800BAA53D /* AbstractMediator.m in Sources */,
 				51862E7620BBA1110080BD4E /* StrategyFinancyYouLi.m in Sources */,
+				1453766225CAA47800CB6578 /* NNDatePicker.m in Sources */,
 				14B14BB3234C2C8F004B7BF9 /* UIApplication+Tmp.m in Sources */,
 				141E2B90230637E700466008 /* NSArray+Tmp.m in Sources */,
 				515CC98A20B6AAF2004AE27C /* AAChartModel.m in Sources */,
 				51B9CCFC209FE2B00096A540 /* TimerViewController.m in Sources */,
 				51A4354921ABECAE000D9840 /* TextViewController.m in Sources */,
+				1453770725CAA49600CB6578 /* UITableViewSeventyCell.m in Sources */,
+				1453770125CAA49600CB6578 /* UITableViewCycleViewCell.m in Sources */,
+				145376F325CAA49600CB6578 /* UITableViewFortyFiveCell.m in Sources */,
 				5175C93620C122B1009EA86E /* DBHandler.m in Sources */,
 				14A95771231125F10045140F /* NNScrollView.m in Sources */,
 				1401BE7C2276CBD90078A722 /* NNBaseRequestApi.m in Sources */,
 				14C11AB822DC7FF8009D18A3 /* SphereViewController.m in Sources */,
 				515CC98720B6AAF2004AE27C /* AAPie.m in Sources */,
 				14B6B33B22B1F2400047E094 /* BNChannelListApi.m in Sources */,
+				1453767E25CAA47800CB6578 /* NNSegmentView.m in Sources */,
+				145375DC25CAA44B00CB6578 /* NNCTView.m in Sources */,
 				14C11AB922DC7FF8009D18A3 /* NNExcelController.m in Sources */,
+				1453776825CAA4AB00CB6578 /* UICTReusableViewFour.m in Sources */,
 				14E42CDC2200040200606AD0 /* NNUserRegisterController.m in Sources */,
 				513647E0208604DE005A20E7 /* PPNetworkHelper.m in Sources */,
+				1453771225CAA49600CB6578 /* UITableViewBankCardCell.m in Sources */,
 				516969B720BCFD4000BAA53D /* CompanyComponent.m in Sources */,
 				516CCFD3219BFC5E007D3F80 /* KVC_Controller.m in Sources */,
+				145376F625CAA49600CB6578 /* UITableViewFiftyNineCell.m in Sources */,
 				14E8692D21C251BA009CE33E /* HomeViewController.m in Sources */,
 				516969AD20BCF9A800BAA53D /* Buyer.m in Sources */,
 				51862E6520BB94D40080BD4E /* EOCEmployeeDesigner.m in Sources */,
+				145376FF25CAA49600CB6578 /* UITableHeaderFooterViewTwo.m in Sources */,
 				1402184023683B9900B27E4C /* SystemAboutController.m in Sources */,
 				14107FB222CDF9490011344E /* CustomKeyboardViewController.m in Sources */,
+				1453770F25CAA49600CB6578 /* UITableViewPickerListCell.m in Sources */,
 				5167FF1520F5C0EC004A810C /* PulsingHaloLayer.m in Sources */,
+				1453770425CAA49600CB6578 /* UITableViewSixtyOneCell.m in Sources */,
+				1453770325CAA49600CB6578 /* UITableHeaderFooterViewZero.m in Sources */,
+				1453776025CAA4AB00CB6578 /* UICTViewLayoutSphere.m in Sources */,
 				144920AA21C7BAA700C3C2F6 /* MoneyDisplayController.m in Sources */,
 				14C11AB622DC7FF8009D18A3 /* CTViewListController.m in Sources */,
 				515CC98020B6AAF2004AE27C /* AATitle.m in Sources */,
+				1453770E25CAA49600CB6578 /* UITableViewFortyCell.m in Sources */,
 				147AB8B822DDD76D00A5C4EC /* FileShareController.m in Sources */,
+				1453764F25CAA47800CB6578 /* NNPickerListView.m in Sources */,
 				14ADE27E23CEC65A00037B0B /* NNTagViewController.m in Sources */,
+				1453767525CAA47800CB6578 /* NNAddPictureView.m in Sources */,
 				1401BE822276D18C0078A722 /* NNCheckVersApi.m in Sources */,
 				1421D5D021F3177700635582 /* NNWalletView.m in Sources */,
+				1453765425CAA47800CB6578 /* NNFilterView.m in Sources */,
 				515CC97E20B6AAF2004AE27C /* AAStyle.m in Sources */,
 				510BC99B208F2F0400CF48C5 /* FriendListController.m in Sources */,
 				14B6B33E22B1F4FE0047E094 /* BNChannelstreamApi.m in Sources */,
 				14D40A3122C5BB7B00AF74B9 /* PopoverView.m in Sources */,
+				14CF392725B9668E00FBDBF7 /* NNButtonDispalyController.m in Sources */,
 				14EAC92F2320FDFE00E42D4F /* NNCycleViewController.m in Sources */,
+				145376F725CAA49600CB6578 /* UITableViewElevenCell.m in Sources */,
 				14D40A3222C5BB7B00AF74B9 /* PopoverViewCell.m in Sources */,
+				145376F925CAA49600CB6578 /* UITableViewFortyThreeCell.m in Sources */,
+				1453776725CAA4AB00CB6578 /* UICTViewLayoutCard.m in Sources */,
 				51698C4321376F9E0069C2B2 /* AddressPickerDemo.m in Sources */,
 				14B6B33822B1F2180047E094 /* BNDeviceListApi.m in Sources */,
 				14F0FE6B22B0ADDB00057093 /* BNUserLoginApi.m in Sources */,
+				1453772125CAA49600CB6578 /* UITableViewSixtyFiveCell.m in Sources */,
 				5169698E20BCED2200BAA53D /* FacadeViewController.m in Sources */,
 				14EAC93A2321188800E42D4F /* NNSlopeShowController.m in Sources */,
 				5162F6F420BF9337009A6253 /* ThreadNormolController.m in Sources */,
@@ -3382,6 +4270,7 @@
 				517D8B2A20B2E09800DCA731 /* PersonCarsViewController.m in Sources */,
 				141080B722D2E7D10011344E /* AnimationListController.m in Sources */,
 				51862E6820BB94E40080BD4E /* EOCEmployeeFinance.m in Sources */,
+				1453776325CAA4AB00CB6578 /* UICTViewLayoutCircle.m in Sources */,
 				5175C93C20C13DF3009EA86E /* Teacher.m in Sources */,
 				51698C6121376F9E0069C2B2 /* UncaughtExceptionHandler.m in Sources */,
 				14B7CF6D2383D2F200AEF7BC /* UIImageView+Tmp.m in Sources */,
@@ -3394,51 +4283,71 @@
 				51862E6220BB94C40080BD4E /* EOCEmployeeDeveloper.m in Sources */,
 				14F0FE6022B0AA6A00057093 /* BNRestartApi.m in Sources */,
 				141080A822D2E7D10011344E /* AnimationController10.m in Sources */,
+				1453775E25CAA4AB00CB6578 /* UICTViewCellEight.m in Sources */,
 				515CC98420B6AAF2004AE27C /* AAMarker.m in Sources */,
 				14EAC93B2321188800E42D4F /* UICTViewCellInspiration.m in Sources */,
 				14B14BAD234C171B004B7BF9 /* SearchTitleViewController.m in Sources */,
 				149BE1512341923F00D74E7C /* NSString+Helper.swift in Sources */,
+				1453765625CAA47800CB6578 /* NNShoppingView.m in Sources */,
 				141080A922D2E7D10011344E /* AnimationController2.m in Sources */,
+				1453765525CAA47800CB6578 /* NNSuspendBtn.m in Sources */,
+				145376F525CAA49600CB6578 /* UITableViewSliderCell.m in Sources */,
 				5169699920BCED4000BAA53D /* LHSales.m in Sources */,
+				1453765C25CAA47800CB6578 /* NNPhotosView.m in Sources */,
 				1401BE6C2276A4980078A722 /* NNCacheManager.m in Sources */,
+				1453772725CAA49600CB6578 /* UITableViewSixteenCell.m in Sources */,
 				149111E322753BF10078A7BB /* NNURLResponse.m in Sources */,
 				516969BA20BCFD9B00BAA53D /* CompanyLeaf.m in Sources */,
 				1404FAE521DF4A5F00122E22 /* UIRecognizerController.m in Sources */,
+				1453767A25CAA47800CB6578 /* NNUserView.m in Sources */,
 				515C67DD2137C55700D5EA94 /* BAddressPickerController.m in Sources */,
 				510BC9A3208F3B6A00CF48C5 /* SliderTabBarController.m in Sources */,
 				516969A020BCF11600BAA53D /* MediatorViewController.m in Sources */,
 				515C67DF2137C55700D5EA94 /* ChineseToPinyin.m in Sources */,
 				14E2048824E66C550075AB47 /* PopoverViewExampleController.m in Sources */,
 				14D40A3022C5BB7B00AF74B9 /* PopoverAction.m in Sources */,
+				145375D725CAA44B00CB6578 /* UICTViewLayoutExcel.m in Sources */,
 				14EAC9392321188800E42D4F /* UICTViewLayoutSlope.m in Sources */,
 				142A77102227B30E0016D3DA /* UITableViewPickerCell.m in Sources */,
 				51862E5020BB908E0080BD4E /* DesignPatternsController.m in Sources */,
 				516969AE20BCF9A800BAA53D /* Seller.m in Sources */,
+				1453772825CAA49600CB6578 /* UITableViewNinetyOneCell.m in Sources */,
 				141080A422D2E7D10011344E /* AnimationController16.m in Sources */,
 				14C11AB122DC7FF8009D18A3 /* CTViewGroupController.m in Sources */,
+				145376FD25CAA49600CB6578 /* UITableViewAddressPickerCell.m in Sources */,
 				515C67E02137C55700D5EA94 /* LNLocationManager.m in Sources */,
+				1453764D25CAA47800CB6578 /* NNStarRateView.m in Sources */,
+				1453776A25CAA4AB00CB6578 /* UICTViewLayoutPicker.m in Sources */,
+				1453766D25CAA47800CB6578 /* NNCellDefaultView.m in Sources */,
 				140A2BFD226977FB000ED121 /* AppGlobleConfig.m in Sources */,
+				1453766325CAA47800CB6578 /* NNAlertViewOne.m in Sources */,
 				51364C9D20860822005A20E7 /* PictureController.m in Sources */,
 				14107FB022CDF9490011344E /* CustomKeyboardView.m in Sources */,
 				149111EC2275B7970078A7BB /* NSError+Helper.m in Sources */,
 				1439166924C1516400CBABF0 /* TZImageUploadOperation.m in Sources */,
+				1453766825CAA47800CB6578 /* NNMonthView.m in Sources */,
 				14107FB322CDF9490011344E /* TextViewInputController.m in Sources */,
+				1453775925CAA4AB00CB6578 /* UICTReusableViewOne.m in Sources */,
 				14C0814F25831BA000D3F360 /* UISearchController+Helper.m in Sources */,
 				515CC97C20B6AAF2004AE27C /* AAPlotLinesElement.m in Sources */,
 				14107FBB22CDF9C80011344E /* KeyboardController.m in Sources */,
 				141080AA22D2E7D10011344E /* AnimationController1.m in Sources */,
 				516969AF20BCF9A800BAA53D /* AbstractClient.m in Sources */,
 				14E42CF22200040F00606AD0 /* NNSecondViewController.m in Sources */,
-				51364CA020860822005A20E7 /* Utilities_DM.m in Sources */,
+				51364CA020860822005A20E7 /* UtilitiesDM.m in Sources */,
 				141080AE22D2E7D10011344E /* NNAnimationController.m in Sources */,
 				14EAC94D2321DA8300E42D4F /* UICTViewLayoutPage.m in Sources */,
 				5175C93F20C13E30009EA86E /* Lesson.m in Sources */,
 				141080B622D2E7D10011344E /* AnniSuperController.m in Sources */,
+				1453776D25CAA4AB00CB6578 /* UICTViewLayoutOne.m in Sources */,
 				14C11ABD22DC813E009D18A3 /* UICTViewMainController.m in Sources */,
 				141080B422D2E7D10011344E /* EmitterViewController.m in Sources */,
+				1453771C25CAA49600CB6578 /* UITableViewSixtySevenCell.m in Sources */,
 				515CC98620B6AAF2004AE27C /* AAItemStyle.m in Sources */,
 				141080AC22D2E7D10011344E /* AnimationController17.m in Sources */,
+				145375DD25CAA44B00CB6578 /* NNShareView.m in Sources */,
 				14EAC94B2321DA8300E42D4F /* NNPageInfoModel.m in Sources */,
+				14ACBA4D25BFAF27002F61AA /* UIDevice-Hardware.m in Sources */,
 				14107FD422D087630011344E /* NNProgressHUD.m in Sources */,
 				141080AD22D2E7D10011344E /* AnimationController13.m in Sources */,
 				14EAC94C2321DA8300E42D4F /* NNPageScrollViewController.m in Sources */,
@@ -3450,15 +4359,20 @@
 				14C11AA922DC7FF8009D18A3 /* TmpViewController.m in Sources */,
 				14E42CF52200040F00606AD0 /* NNFirstViewController.m in Sources */,
 				14107FB422CDF9490011344E /* UITextField+Util.m in Sources */,
+				1453771725CAA49600CB6578 /* UITableViewOneCell.m in Sources */,
+				1453767F25CAA47800CB6578 /* NNLabView.m in Sources */,
 				5175C93920C13DE1009EA86E /* Student.m in Sources */,
 				513646B720860332005A20E7 /* MainViewController.m in Sources */,
 				14ADE28423CEE09D00037B0B /* NNTagView.m in Sources */,
 				14B6B34122B1FE8A0047E094 /* DeviceListController.m in Sources */,
+				1453776425CAA4AB00CB6578 /* UICTReusableViewTwo.m in Sources */,
+				1453776525CAA4AB00CB6578 /* UICTViewLayoutZero.m in Sources */,
 				5169699B20BCED4000BAA53D /* LHService.m in Sources */,
 				1421D5CD21F307F700635582 /* CustomViewController.m in Sources */,
 				518B5B432086C8FE002FDD33 /* FactoryDetailInfoModel.m in Sources */,
 				5162F70720BF9D6E009A6253 /* FlyweightView.m in Sources */,
 				14A86A852355AFC700AD9BC1 /* NNSearchResultController.m in Sources */,
+				1453765125CAA47800CB6578 /* NNGuideView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
