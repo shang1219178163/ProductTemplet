@@ -1,18 +1,17 @@
 
+//
+//  UICTViewCellOne.m
+//  
+//
+//  Created by BIN on 2018/4/13.
+//  Copyright © 2018年 SHANG. All rights reserved.
+//
 
-//
-//  UICTViewCellTen.m
-//  ProductTemplet
-//
-//  Created by Bin Shang on 2019/8/24.
-//  Copyright © 2019 BN. All rights reserved.
-//
-
-#import "UICTViewCellTen.h"
+#import "UICTViewCellOne.h"
 #import <NNCategoryPro/NNCategoryPro.h>
 #import "Masonry.h"
 
-@implementation UICTViewCellTen
+@implementation UICTViewCellOne
 
 - (id)initWithFrame:(CGRect)frame{
     self = [super initWithFrame:frame];
@@ -32,17 +31,18 @@
     return self;
 }
 
+
 -(void)layoutSubviews{
     [super layoutSubviews];
-    
-    if (self.label.hidden == true){
+
+    if (!self.label.text || self.label.hidden == true){
         [self.imgView makeConstraints:^(MASConstraintMaker *make) {
             make.edges.equalTo(self.contentView);
         }];
         return;
     }
     
-    if (self.imgView.hidden == true){
+    if (!self.imgView.image || self.imgView.hidden == true){
         [self.label makeConstraints:^(MASConstraintMaker *make) {
             make.edges.equalTo(self.contentView);
         }];
@@ -61,7 +61,7 @@
                 make.left.right.equalTo(self.contentView);
                 make.bottom.equalTo(self.contentView).offset(-kH_LABEL);
             }];
-            
+
             [self.label makeConstraints:^(MASConstraintMaker *make) {
                 make.top.equalTo(self.imgView.bottom);
                 make.left.right.equalTo(self.contentView);
@@ -74,7 +74,7 @@
                 make.left.bottom.equalTo(self.contentView);
                 make.width.equalTo(self.contentView.sizeHeight);
             }];
-            
+
             [self.label makeConstraints:^(MASConstraintMaker *make) {
                 make.top.equalTo(self.contentView);
                 make.left.equalTo(self.imgView.right).offset(5);
@@ -86,47 +86,6 @@
 }
 
 
-//-(void)layoutSubviews{
-//    [super layoutSubviews];
-//
-//
-//    self.imgView.hidden = (self.contentView.sizeWidth == self.contentView.sizeHeight);
-//    if (self.contentView.sizeWidth == self.contentView.sizeHeight) {
-//        [self.label makeConstraints:^(MASConstraintMaker *make) {
-//            make.edges.equalTo(self.contentView);
-//        }];
-//    }
-//    else{
-//        if (self.contentView.sizeWidth < self.contentView.sizeHeight) {
-//            [self.imgView makeConstraints:^(MASConstraintMaker *make) {
-//                make.top.equalTo(self.contentView);
-//                make.left.right.equalTo(self.contentView);
-//                make.bottom.equalTo(self.contentView).offset(-kH_LABEL);
-//            }];
-//
-//            [self.label makeConstraints:^(MASConstraintMaker *make) {
-//                make.top.equalTo(self.imgView.bottom);
-//                make.left.right.equalTo(self.contentView);
-//                make.bottom.equalTo(self.contentView);
-//            }];
-//        }
-//        else{
-//            [self.imgView makeConstraints:^(MASConstraintMaker *make) {
-//                make.top.equalTo(self.contentView);
-//                make.left.bottom.equalTo(self.contentView);
-//                make.width.equalTo(self.contentView.sizeHeight);
-//            }];
-//
-//            [self.label makeConstraints:^(MASConstraintMaker *make) {
-//                make.top.equalTo(self.contentView);
-//                make.left.equalTo(self.imgView.right).offset(5);
-//                make.right.equalTo(self.contentView);
-//                make.bottom.equalTo(self.contentView);
-//            }];
-//        }
-//    }
-//}
-
 //-(void)drawRect:(CGRect)rect{
 //    [super drawRect:rect];
 //
@@ -137,4 +96,3 @@
 #pragma mark - -layz
 
 @end
-

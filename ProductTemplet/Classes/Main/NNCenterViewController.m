@@ -53,6 +53,7 @@
                       @[@"SystemAboutController", @"系统相关",],
                       @[@"NNSearchController", @"复合搜索🔍",],
                       @[@"RuntimeController", @"字符串映射研究",],
+                      @[@"NNButtonDispalyController", @"NNButtonDispaly",],                      
                       @[@"LoginViewController", @"直播拉流",],
                       @[@"AnimationListController", @"动画研究",],
                       @[@"UICTViewMainController", @"CollectionView封装",],
