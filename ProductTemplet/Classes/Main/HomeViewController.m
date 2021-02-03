@@ -8,7 +8,7 @@
 
 #import "HomeViewController.h"
 
-#import "NNCategoryPro.h"
+#import <NNCategoryPro/NNCategoryPro.h>
 
 @interface HomeViewController ()<UITabBarControllerDelegate>
 

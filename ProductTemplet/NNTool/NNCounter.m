@@ -7,7 +7,7 @@
 //
 
 #import "NNCounter.h"
-#import "NNCategoryPro.h"
+#import <NNCategoryPro/NNCategoryPro.h>
 
 @implementation NNCounter 
 

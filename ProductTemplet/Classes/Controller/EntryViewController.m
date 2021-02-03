@@ -9,6 +9,7 @@
 #import "EntryViewController.h"
 #import "NNSuspendBtn.h"
 
+#import "NNTableViewCell.h"
 #import "UITableViewPickerCell.h"
 
 @interface EntryViewController ()<UITableViewDataSource, UITableViewDelegate>

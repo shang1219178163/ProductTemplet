@@ -8,7 +8,7 @@
 
 #import "UIViewPropertyAnimatorController.h"
 
-#import "NNCategoryPro.h"
+#import <NNCategoryPro/NNCategoryPro.h>
 
 #import "UIAlertController+Helper.h"
 

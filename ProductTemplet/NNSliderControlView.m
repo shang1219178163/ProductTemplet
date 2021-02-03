@@ -103,18 +103,6 @@
         self.labFront.frame = CGRectMake(0, 0, CGRectGetWidth(frame), CGRectGetHeight(frame));
         self.labBack.frame = CGRectMake(0, 0, CGRectGetWidth(frame), CGRectGetHeight(self.imgView.frame));
         self.cornerRadius = CGRectGetHeight(frame)/2.0;
-        
-//        CGRect rectImgView = self.imgView.frame;
-//        rectImgView.size = CGSizeMake(CGRectGetHeight(frame)+15, CGRectGetHeight(frame));
-//        self.imgView.frame = rectImgView;
-//
-//        self.labFront.frame = CGRectMake(0, 0, CGRectGetWidth(frame), CGRectGetHeight(frame));
-//
-//        CGRect rectLabBack = self.labBack.frame;
-//        rectLabBack.size = CGSizeMake(CGRectGetWidth(frame) + CGRectGetWidth(self.imgView.frame), CGRectGetHeight(frame));
-//        self.labBack.frame = rectLabBack;
-//
-//        self.cornerRadius = CGRectGetHeight(self.frame)/2.0;
     }
 }
 

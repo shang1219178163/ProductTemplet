@@ -10,6 +10,7 @@
 #import "UITextFieldController.h"
 #import "UIView+Tmp.h"
 #import "KVOViewController.h"
+#import <NNCategoryPro/NNCategoryPro.h>
 
 @interface UITextFieldController ()
 
@@ -272,10 +273,10 @@
             sender;
         });
                 
-        _button.target.hiddenClearButton = true;
-        _button.target.list = @[@"北京", @"上海", @"广州", @"深圳", @"西安"].mutableCopy;
-        _button.target.block = ^(NNMenuTarget *tagget) {
-            DDLog(@"%@", tagget.selectedText);
+        _button.menuTarget.hiddenClearButton = true;
+        _button.menuTarget.list = @[@"北京", @"上海", @"广州", @"深圳", @"西安"].mutableCopy;
+        _button.menuTarget.block = ^(NNButtonMenuTarget *menuTarget) {
+            DDLog(@"%@", menuTarget.selectedText);
         };
     }
     return _button;

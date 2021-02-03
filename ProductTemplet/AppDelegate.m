@@ -8,7 +8,7 @@
 
 #import "AppDelegate.h"
 
-#import "NNCategoryPro.h"
+#import <NNCategoryPro/NNCategoryPro.h>
 
 #import "ZYSliderViewController.h"
 #import "FileShareController.h"

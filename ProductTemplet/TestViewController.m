@@ -104,7 +104,7 @@
     switch (indexPath.row) {
         case 0:
         {
-            UITableViewZeroCell *cell = [UITableViewZeroCell cellWithTableView:tableView];
+            UITableViewCell *cell = [UITableViewCell cellWithTableView:tableView];
             //    cell.imgView.image = [UIImage imageNamed:@"bug.png"];
             //    cell.label.text = [NSString stringWithFormat:@"row_%@",@(indexPath.row)];
             
@@ -175,10 +175,9 @@
             break;
         case 2:
         {
-            UITableViewTwoCell *cell = [UITableViewTwoCell cellWithTableView:tableView];
+            UITableViewCell *cell = [UITableViewCell cellWithTableView:tableView];
             [cell getViewLayer];
             return cell;
-
         }
             break;
         default:
