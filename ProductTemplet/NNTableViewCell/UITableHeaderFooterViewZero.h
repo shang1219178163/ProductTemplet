@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "UITableViewHeaderFooterView+AddView.h"
+#import "UITableViewHeaderFooterView+Helper.h"
  
 /**
  指示器 标题     子标题

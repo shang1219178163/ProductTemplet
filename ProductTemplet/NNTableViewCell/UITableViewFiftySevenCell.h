@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "UITableViewCell+AddView.h"
+#import "UITableViewCell+Helper.h"
 
 /**
  |+文字+箭头

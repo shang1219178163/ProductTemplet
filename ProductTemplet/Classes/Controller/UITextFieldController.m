@@ -141,8 +141,8 @@
         _textField = [[NNTextFieldOne alloc]initWithFrame:CGRectMake(20, 20, kScreenWidth - 40, 40)];
         _textField.clearButtonMode = UITextFieldViewModeAlways;
         
-        _textField.target.list = @[@"111", @"222", @"333", @"444", @"555"].mutableCopy;
-        _textField.target.block = ^(NNHistoryTarget *target) {
+        _textField.menuTarget.list = @[@"111", @"222", @"333", @"444", @"555"].mutableCopy;
+        _textField.menuTarget.block = ^(NNTextFieldMenuTarget *target) {
             DDLog(@"%@", target.selectedText);
         };
     }

@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-#import "UITableViewCell+AddView.h"
+#import "UITableViewCell+Helper.h"
 
 /**
  图片+文字+文字(圆角)+图片

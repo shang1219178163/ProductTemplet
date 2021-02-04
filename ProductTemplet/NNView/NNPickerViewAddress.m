@@ -202,9 +202,9 @@
 }
 
 -(void)confirm{
-    NSInteger provinceIndex = [self.pickerView selectedRowInComponent: kComponent_0];
-    NSInteger cityIndex = [self.pickerView selectedRowInComponent: kComponent_1];
-    NSInteger districtIndex = [self.pickerView selectedRowInComponent: kComponent_2];
+    NSInteger provinceIndex = [self.pickerView selectedRowInComponent: kComponent0];
+    NSInteger cityIndex = [self.pickerView selectedRowInComponent: kComponent1];
+    NSInteger districtIndex = [self.pickerView selectedRowInComponent: kComponent2];
     
     NSString *provinceStr = self.province[provinceIndex];
     NSString *cityStr = self.city[cityIndex];
@@ -234,10 +234,10 @@
 }
 
 - (NSInteger)pickerView:(UIPickerView *)pickerView numberOfRowsInComponent:(NSInteger)component{
-    if (component == kComponent_0) {
+    if (component == kComponent0) {
         return self.province.count;
     }
-    else if (component == kComponent_1) {
+    else if (component == kComponent1) {
         return self.city.count;
     }
     else {
@@ -248,10 +248,10 @@
 #pragma mark- Picker Delegate Methods
 
 - (NSString *)pickerView:(UIPickerView *)pickerView titleForRow:(NSInteger)row forComponent:(NSInteger)component{
-    if (component == kComponent_0) {
+    if (component == kComponent0) {
         return self.province[row];
     }
-    else if (component == kComponent_1) {
+    else if (component == kComponent1) {
         return self.city[row];
     }
     else {
@@ -260,7 +260,7 @@
 }
 
 - (void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component{
-    if (component == kComponent_0) {
+    if (component == kComponent0) {
         self.selectedProvince = self.province[row];
         NSDictionary *tmp = [NSDictionary dictionaryWithDictionary: self.areaDic[[@(row) stringValue]]];
         NSDictionary *dic = [NSDictionary dictionaryWithDictionary:tmp[self.selectedProvince]];
@@ -288,13 +288,13 @@
         
         NSDictionary *cityDic = dic[sortedArray[0]];
         self.district = [[NSArray alloc] initWithArray:cityDic[self.city[0]]];
-        [self.pickerView selectRow: 0 inComponent: kComponent_1 animated: YES];
-        [self.pickerView selectRow: 0 inComponent: kComponent_2 animated: YES];
-        [self.pickerView reloadComponent: kComponent_1];
-        [self.pickerView reloadComponent: kComponent_2];
+        [self.pickerView selectRow: 0 inComponent: kComponent1 animated: YES];
+        [self.pickerView selectRow: 0 inComponent: kComponent2 animated: YES];
+        [self.pickerView reloadComponent: kComponent1];
+        [self.pickerView reloadComponent: kComponent2];
         
     }
-    else if (component == kComponent_1) {
+    else if (component == kComponent1) {
         NSString *provinceIndex = [NSString stringWithFormat: @"%lu", (unsigned long)[self.province indexOfObject:self.selectedProvince]];
         NSDictionary *tmp = [NSDictionary dictionaryWithDictionary: self.areaDic[provinceIndex]];
         NSDictionary *dic = [NSDictionary dictionaryWithDictionary: tmp[self.selectedProvince]];
@@ -315,8 +315,8 @@
         NSArray *cityKeyArray = [cityDic allKeys];
         
         self.district = [NSArray arrayWithArray: cityDic[cityKeyArray[0]]];
-        [self.pickerView selectRow:0 inComponent: kComponent_2 animated: YES];
-        [self.pickerView reloadComponent: kComponent_2];
+        [self.pickerView selectRow:0 inComponent: kComponent2 animated: YES];
+        [self.pickerView reloadComponent: kComponent2];
     }
 }
 
@@ -333,11 +333,11 @@
     labTitle.textAlignment = NSTextAlignmentCenter;
     labTitle.backgroundColor = UIColor.clearColor;
     labTitle.font = [UIFont systemFontOfSize:14];
-    if (component == kComponent_0) {
+    if (component == kComponent0) {
         labTitle.text = self.province[row];
         
     }
-    else if (component == kComponent_1) {
+    else if (component == kComponent1) {
         labTitle.text = self.city[row];
         
     }

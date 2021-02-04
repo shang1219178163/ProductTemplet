@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-#import "UITableViewCell+AddView.h"
+#import "UITableViewCell+Helper.h"
 #import "NNCellDefaultView.h"
 
 NS_ASSUME_NONNULL_BEGIN

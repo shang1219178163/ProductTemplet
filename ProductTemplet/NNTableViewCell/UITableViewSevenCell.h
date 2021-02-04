@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 
 #import "UIView+Helper.h"
-#import "UITableViewCell+AddView.h"
+#import "UITableViewCell+Helper.h"
 
 /**
  文字+文字+文字

@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-#import "UITableViewCell+AddView.h"
+#import "UITableViewCell+Helper.h"
 
 /**
  图像+姓名+已结N单

@@ -40,11 +40,11 @@
         [self.topScrollView addSubview:self.slideView];
         CGFloat itemWidth = CGRectGetWidth(self.slideView.frame);
         CGFloat contentSizeWidth =  _items.count <= kCount_Item ? CGRectGetWidth(self.frame) : itemWidth *  _items.count;
-        self.topScrollView.contentSize = CGSizeMake(contentSizeWidth, kH_topView);
+        self.topScrollView.contentSize = CGSizeMake(contentSizeWidth, kH_TopView);
         
         //scrollView
         [self addSubview:self.scrollView];
-        self.scrollView.contentSize = CGSizeMake(CGRectGetWidth(self.frame) *  _items.count, CGRectGetHeight(self.frame) - kH_topView);
+        self.scrollView.contentSize = CGSizeMake(CGRectGetWidth(self.frame) *  _items.count, CGRectGetHeight(self.frame) - kH_TopView);
         
     }
     return self;
@@ -111,7 +111,7 @@
     [self changeBackColorWithPage:pageNumber];
     
     NSInteger tabviewTag = pageNumber % 2;
-    CGRect tableNewFrame = CGRectMake(pageNumber * CGRectGetWidth(self.frame), 0, CGRectGetWidth(self.frame), CGRectGetHeight(self.frame) - kH_topView);
+    CGRect tableNewFrame = CGRectMake(pageNumber * CGRectGetWidth(self.frame), 0, CGRectGetWidth(self.frame), CGRectGetHeight(self.frame) - kH_TopView);
     
     UITableView *reuseTableView = _scrollTableViews[tabviewTag];
     reuseTableView.frame = tableNewFrame;
@@ -168,20 +168,20 @@
     if (!_topScrollView) {
         CGFloat itemWidth = CGRectGetWidth(self.slideView.frame);
         
-        _topScrollView = [[UIScrollView alloc] initWithFrame:CGRectMake(0, 0, CGRectGetWidth(self.frame), kH_topView)];
+        _topScrollView = [[UIScrollView alloc] initWithFrame:CGRectMake(0, 0, CGRectGetWidth(self.frame), kH_TopView)];
         _topScrollView.showsHorizontalScrollIndicator = NO;
         _topScrollView.showsVerticalScrollIndicator = YES;
         _topScrollView.bounces = NO;
         _topScrollView.delegate = self;
         
         CGFloat contentSizeWidth =  _items.count <= kCount_Item ? CGRectGetWidth(self.frame) : itemWidth *  _items.count;
-        _topScrollView.contentSize = CGSizeMake(contentSizeWidth, kH_topView);
+        _topScrollView.contentSize = CGSizeMake(contentSizeWidth, kH_TopView);
         
         for (int i = 0; i <  _items.count; i ++) {
-            UIView *view = [[UIView alloc] initWithFrame:CGRectMake(i * itemWidth, 0, itemWidth, kH_topView)];
+            UIView *view = [[UIView alloc] initWithFrame:CGRectMake(i * itemWidth, 0, itemWidth, kH_TopView)];
             view.backgroundColor = i % 2 == 0 ? UIColor.lightGrayColor : UIColor.grayColor;
             
-            UIButton * button = [self createBtnRect:CGRectMake(0, 0, itemWidth, kH_topView) title:_items[i] tag:i];
+            UIButton * button = [self createBtnRect:CGRectMake(0, 0, itemWidth, kH_TopView) title:_items[i] tag:i];
             [view addSubview:button];
             
             [_itemViews addObject:view];
@@ -195,7 +195,7 @@
 -(UIView *)slideView{
     if (!_slideView) {
         CGFloat itemWidth = CGRectGetWidth(self.frame) / kCount_Item;
-        _slideView = [[UIView alloc] initWithFrame:CGRectMake(0, kH_topView - kH_slideView, itemWidth, kH_slideView)];
+        _slideView = [[UIView alloc] initWithFrame:CGRectMake(0, kH_TopView - kH_SlideView, itemWidth, kH_SlideView)];
         _slideView.backgroundColor = UIColor.redColor;
         
     }
@@ -204,14 +204,14 @@
 
 -(UIScrollView *)scrollView{
     if (!_scrollView) {
-        _scrollView = [[UIScrollView alloc] initWithFrame:CGRectMake(0, kH_topView, CGRectGetWidth(self.frame), CGRectGetHeight(self.frame) - kH_topView)];
+        _scrollView = [[UIScrollView alloc] initWithFrame:CGRectMake(0, kH_TopView, CGRectGetWidth(self.frame), CGRectGetHeight(self.frame) - kH_TopView)];
         _scrollView.backgroundColor = UIColor.whiteColor;
         _scrollView.pagingEnabled = YES;
         _scrollView.delegate = self;
         
         //创建2个tableview左右滑动的时候互相复用
         for (NSInteger i = 0; i < 2; i ++) {
-            UITableView *tableView = [[UITableView alloc] initWithFrame:CGRectMake(i * CGRectGetWidth(self.frame), 0, CGRectGetWidth(self.frame), CGRectGetHeight(self.frame) - kH_topView)];
+            UITableView *tableView = [[UITableView alloc] initWithFrame:CGRectMake(i * CGRectGetWidth(self.frame), 0, CGRectGetWidth(self.frame), CGRectGetHeight(self.frame) - kH_TopView)];
             //        tableView.delegate = self;
             //        tableView.dataSource = self;
             tableView.tag = i;

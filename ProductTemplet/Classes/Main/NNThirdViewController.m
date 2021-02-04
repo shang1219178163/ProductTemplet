@@ -9,6 +9,7 @@
 #import "NNThirdViewController.h"
 #import "NNCheckVersApi.h"
 
+
 @interface NNThirdViewController ()
 
 @end
@@ -38,6 +39,30 @@
 - (void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
     
+    NSArray *array = @[@"1", @"2", @"3", @"4", ];
+    NSArray *array1 = @[@"3", @"4", @"5", @"6", ];
+
+    NSArray *a = [array intersectionWithArray:array1];
+    NSArray *b = [array relativeComplementWithArray:array1];
+    NSArray *c = [array unionWithArray:array1];
+    NSArray *d = [array differenceWithArray:array1];
+    DDLog(@"%@ %@ %@ %@", a, b, c, d);
+    
+    
+    NSDictionary *dictionary = @{@"a" : @"aaa",
+                                 @"b" : @"bbb",
+                                 @"c" : @"ccc",
+                                 @"d" : @"ddd",
+    };
+    NSDictionary *dictionary1 = @{@"c" : @"ccc1",
+                                  @"d" : @"ddd1",
+                                  @"e" : @"eee",
+                                  @"f" : @"fff",
+    };
+    NSDictionary *dic1 = [dictionary merge:dictionary1 block:^id _Nonnull(id  _Nonnull key, id  _Nonnull oldVal, id  _Nullable newVal) {
+        return oldVal;
+    }];
+    DDLog(@"%@", dic1);
 }
 
 - (void)didReceiveMemoryWarning {

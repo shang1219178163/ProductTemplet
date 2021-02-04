@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-#import "UITableViewCell+AddView.h"
+#import "UITableViewCell+Helper.h"
 
 /**
  批次号:20141105-1105 输入框

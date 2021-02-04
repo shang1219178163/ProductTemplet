@@ -8,7 +8,7 @@
 
 
 #import <UIKit/UIKit.h>
-#import "UITableViewHeaderFooterView+AddView.h"
+#import "UITableViewHeaderFooterView+Helper.h"
  
 /**
  文字(宽度自适应)+文字+文字

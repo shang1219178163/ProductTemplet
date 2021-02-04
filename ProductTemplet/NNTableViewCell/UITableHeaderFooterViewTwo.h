@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "UITableViewHeaderFooterView+AddView.h"
+#import "UITableViewHeaderFooterView+Helper.h"
 
 /** 
  图片+文字+按钮

@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-#import "UITableViewCell+AddView.h"
+#import "UITableViewCell+Helper.h"
 #import "NNListChooseView.h"
 
 @interface UITableViewPickerViewCell : UITableViewCell

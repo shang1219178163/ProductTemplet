@@ -23,7 +23,7 @@
     if (!_segmentCtrl) {
         /*********************************************************************/
         _segmentCtrl = [[UISegmentedControl alloc] initWithItems:_items];
-        _segmentCtrl.frame = CGRectMake(0, 0, CGRectGetWidth(self.frame), kH_topView);
+        _segmentCtrl.frame = CGRectMake(0, 0, CGRectGetWidth(self.frame), kH_TopView);
         _segmentCtrl.backgroundColor = UIColor.whiteColor;
 //        _segmentCtrl.tintColor = UIColor.cyanColor;
         _segmentCtrl.tintColor = UIColor.themeColor;
@@ -73,7 +73,7 @@
  
         //scrollView
         [self addSubview:self.scrollView];
-        self.scrollView.contentSize = CGSizeMake(CGRectGetWidth(self.frame) *  _items.count, CGRectGetHeight(self.frame) - kH_topView);
+        self.scrollView.contentSize = CGSizeMake(CGRectGetWidth(self.frame) *  _items.count, CGRectGetHeight(self.frame) - kH_TopView);
         
         self.tableView = [self.scrollTableViews firstObject];
     }
@@ -118,7 +118,7 @@
 -(void)updateTableWithPageNumber:(NSUInteger)pageNumber{
     
     NSInteger tabviewTag = pageNumber % 2;
-    CGRect tableNewFrame = CGRectMake(pageNumber * CGRectGetWidth(self.frame), 0, CGRectGetWidth(self.frame), CGRectGetHeight(self.frame) - kH_topView);
+    CGRect tableNewFrame = CGRectMake(pageNumber * CGRectGetWidth(self.frame), 0, CGRectGetWidth(self.frame), CGRectGetHeight(self.frame) - kH_TopView);
     
     UITableView *reuseTableView = _scrollTableViews[tabviewTag];
     reuseTableView.frame = tableNewFrame;
@@ -142,14 +142,14 @@
 #pragma mark - -layz
 -(UIScrollView *)scrollView{
     if (!_scrollView) {
-        _scrollView = [[UIScrollView alloc] initWithFrame:CGRectMake(0, kH_topView, CGRectGetWidth(self.frame), CGRectGetHeight(self.frame) - kH_topView)];
+        _scrollView = [[UIScrollView alloc] initWithFrame:CGRectMake(0, kH_TopView, CGRectGetWidth(self.frame), CGRectGetHeight(self.frame) - kH_TopView)];
         _scrollView.backgroundColor = UIColor.whiteColor;
         _scrollView.pagingEnabled = YES;
         _scrollView.delegate = self;
         
         //创建2个tableview左右滑动的时候互相复用
         for (NSInteger i = 0; i < 2; i ++) {
-            UITableView *tableView = [[UITableView alloc] initWithFrame:CGRectMake(i * CGRectGetWidth(self.frame), 0, CGRectGetWidth(self.frame), CGRectGetHeight(self.frame) - kH_topView)];
+            UITableView *tableView = [[UITableView alloc] initWithFrame:CGRectMake(i * CGRectGetWidth(self.frame), 0, CGRectGetWidth(self.frame), CGRectGetHeight(self.frame) - kH_TopView)];
             tableView.separatorStyle = UITableViewCellSeparatorStyleSingleLine;
             tableView.backgroundColor = UIColor.backgroudColor;
             tableView.estimatedRowHeight = 0.0;

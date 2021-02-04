@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import <NNGloble/NNGloble.h>
-#import "UITableViewCell+AddView.h"
+#import "UITableViewCell+Helper.h"
 
 /**
  文字+textField+textField+textField
