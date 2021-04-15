@@ -40,7 +40,7 @@
         };
         
         _plainView.blockDidSelectRow = ^(UITableView * _Nonnull tableView, NSIndexPath * _Nonnull indexPath) {
-            DDLog(@"223")
+            DDLog(@"223");
         };
         
         _plainView.blockEditActionsForRow = ^NSArray *(UITableView *tableView, NSIndexPath *indexPath) {

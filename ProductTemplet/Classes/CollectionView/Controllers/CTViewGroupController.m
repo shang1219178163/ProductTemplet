@@ -102,7 +102,7 @@
 
             [alertView show];
             alertView.block = ^(NNAlertViewOne *view, NSIndexPath *indexPath) {
-                DDLog(@"%@,%@",@(indexPath.section),@(indexPath.row))
+                DDLog(@"%@,%@",@(indexPath.section), @(indexPath.row));
             };
             
         }
@@ -116,7 +116,7 @@
             alertView.items = @[@"取消",@"确定"];
             [alertView show];
             alertView.block = ^(NNAlertViewTwo *view, NSInteger idx) {
-                DDLog(@"%@",@(idx))
+                DDLog(@"%@",@(idx));
             };
             [alertView getViewLayer];
             
@@ -129,7 +129,7 @@
 //            view.direction = @1;
             [view show];
             view.block = ^(NNFilterView *view, NSIndexPath *indexPath, NSInteger idx) {
-                DDLog(@"%@,%@",@(indexPath.section),@(indexPath.row))
+                DDLog(@"%@,%@",@(indexPath.section),@(indexPath.row));
             };
         }
             break;

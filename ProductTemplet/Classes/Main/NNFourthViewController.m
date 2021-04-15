@@ -112,7 +112,7 @@
     [btn setTitleColor:UIColor.themeColor forState:UIControlStateNormal];
     btn.titleLabel.numberOfLines = 0;
     [btn addActionHandler:^(UIButton * _Nonnull sender) {
-        DDLog(sender.titleLabel.text)
+        DDLog(@"name: %@", sender.titleLabel.text);
         
     } forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:btn];
@@ -288,7 +288,7 @@
 
         [NNCacheManager.shared setObject:model forKey:kCacheKeyUserModel];
         NNRootAppInfoModel *userModel = [NNCacheManager.shared objectForKey:kCacheKeyUserModel];
-        DDLog(userModel.description);
+        DDLog(@"userModel.description: %@", userModel.description);
     } fail:^(NNRequstManager * _Nonnull manager, NSError * _Nonnull error) {
         DDLog(@"%@", error.message);
     }];

@@ -12,13 +12,13 @@
 
 + (void)initialize{
     if (self == [self class]) {
-        DDLog(@"%@", @"NNThirdViewController")
+        DDLog(@"%@", @"NNThirdViewController");
     }
 }
 
 
 + (void)load{
-    DDLog(@"%@", @"NNThirdViewController")
+    DDLog(@"%@", @"NNThirdViewController");
 
 }
 

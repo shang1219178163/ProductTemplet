@@ -32,7 +32,7 @@
  
 - (void)handleActionGesture:(UITapGestureRecognizer *)recognizer{
     
-    DDLog(@"%@", @(recognizer.view.tag))
+    DDLog(@"%@", @(recognizer.view.tag));
     UIView * fromView = recognizer.view.tag % 2 == 0 ? self.imgView : self.imgView1;
     UIView * toView = recognizer.view.tag % 2 == 0 ? self.imgView1 : self.imgView;
     [UIView transitionFromView:fromView toView:toView duration:0.5 options:UIViewAnimationOptionTransitionCrossDissolve completion:^(BOOL finished) {

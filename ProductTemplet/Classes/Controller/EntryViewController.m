@@ -301,7 +301,7 @@
     if (!_pickerView) {
         _pickerView = [[NNPickerView alloc]initWithFrame:CGRectZero];
         _pickerView.block = ^(UIPickerView *pickerView, NSInteger btnIndex) {
-           DDLog(@"_%@_",@(btnIndex))
+            DDLog(@"_%@_",@(btnIndex));
             
         };
     }

@@ -40,8 +40,8 @@ NSString * const APIRequestURLTouchcChannelstream(NSString *ID){
 
 + (void)requestUrl:(NSString *)url method:(NSString *)method completionHandler:(void (^)(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error))completionHandler{
     
-    DDLog(@"======request info=======")
-    DDLog(@"%@",url)
+    DDLog(@"======request info=======");
+    DDLog(@"%@",url);
     
     NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:[NSURL URLWithString:url] cachePolicy:NSURLRequestReloadIgnoringCacheData timeoutInterval:6];
     
