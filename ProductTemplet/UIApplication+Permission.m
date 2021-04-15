@@ -311,7 +311,7 @@ static NSDictionary *_dictPrivacy = nil;
             {
                 NSString *msg = [NSString stringWithFormat:@"请去-> [设置 - 隐私 - %@ - %@] 打开访问开关", UIApplication.dictPrivacy[@(type)], UIApplication.appName];
                 [UIAlertController alertControllerWithTitle:@"" message:msg preferredStyle:UIAlertControllerStyleAlert]
-                .nn_present(true, nil);
+                .present(true, nil);
             }
                 break;
             default:

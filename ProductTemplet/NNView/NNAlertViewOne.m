@@ -173,8 +173,8 @@ static CGFloat kH_title = 45;
     
     if (dataList.count == 0) {
         [UIAlertController alertControllerWithTitle:@"" message:@"数组元素不能为空!" preferredStyle:UIAlertControllerStyleAlert]
-        .nn_addAction(@[kTitleKnow], nil)
-        .nn_present(true, nil);
+        .addAction(@[kTitleKnow], nil)
+        .present(true, nil);
         return;
     }
     
@@ -213,8 +213,8 @@ static CGFloat kH_title = 45;
         NSArray * array = [[self.dataList firstObject]firstObject][kItemObj];
         if (array.count == 0) {
             [UIAlertController alertControllerWithTitle:@"" message:@"暂无数据!" preferredStyle:UIAlertControllerStyleAlert]
-            .nn_addAction(@[kTitleKnow], nil)
-            .nn_present(true, nil);
+            .addAction(@[kTitleKnow], nil)
+            .present(true, nil);
             return;
         }
     }

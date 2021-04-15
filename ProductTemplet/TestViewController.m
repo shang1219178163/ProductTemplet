@@ -26,10 +26,12 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-    [self createBarItem:@"Done" isLeft:false handler:^(id  _Nonnull obj, UIView * _Nonnull item, NSInteger idx) {
-        NSString * msg = [NSString stringWithFormat:@"请去-> [设置 - 隐私 - %@ - %@] 打开访问开关", @"相机" ,UIApplication.appName];
-        [UIAlertController showAlertTitle:@"" message:msg actionTitles:@[kTitleKnow] handler:nil];
+    NSArray *list = [@[@"登录", @"设置", @"定时器",] map:^id _Nonnull(NSString * obj, NSUInteger idx) {
+        UIBarButtonItem *item = [[UIBarButtonItem alloc]initWithTitle:obj style:UIBarButtonItemStylePlain target:self action:@selector(handleActionItem:)];
+        item.tag = idx;
+        return item;
     }];
+    self.navigationItem.rightBarButtonItems = list;
     
     UIImageView *imgView = [[UIImageView alloc]initWithFrame:CGRectMake(10, 10, 100, 100)];
     imgView.image = [UIImage imageNamed:@"parkingOne"];
@@ -41,41 +43,23 @@
 //    [self.view getViewLayer];
 }
 
-- (void)handleActionBtn:(UIBarButtonItem *)sender{
-    [self.navigationController pushVC:@"TimerViewController" animated:true block:^(__kindof UIViewController * _Nonnull vc) {
-        vc.title = @"Timer";
-    }];
-}
-
 - (void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
     
     [self funtionMore];
     [self funtionMoreDic];
 
-    CFUUIDRef uuid = CFUUIDCreate(NULL);
-    CFStringRef uuidStr = CFUUIDCreateString(NULL, uuid);
-    NSString *uniqueIdentifier = [NSString stringWithFormat:@"%@", uuidStr];
-    
-    DDLog(@"uniqueIdentifier_%@", uniqueIdentifier);
-    
-    DDLog(@"nextResponder_%@", [self.view nextResponder:@"UIViewController"]);
+//    CFUUIDRef uuid = CFUUIDCreate(NULL);
+//    CFStringRef uuidStr = CFUUIDCreateString(NULL, uuid);
+//    NSString *uniqueIdentifier = [NSString stringWithFormat:@"%@", uuidStr];
+//    DDLog(@"uniqueIdentifier_%@", uniqueIdentifier);
+//    DDLog(@"nextResponder_%@", [self.view nextResponder:@"UIViewController"]);
 }
 
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
     [NSNotificationCenter.defaultCenter addObserver:self selector:@selector(userDidTakeScreenshotNotification:) name:UIApplicationUserDidTakeScreenshotNotification object:nil];
-    
-//    [UIAlertController alertControllerWithTitle:@"title" message:@"message" preferredStyle:UIAlertControllerStyleAlert]
-//    .nn_addAction(@[@"取消", @"确定"], ^(UIAlertAction * _Nonnull action) {
-//        NSLog(@"%@", action.title);
-//    })
-//    .nn_addTextField(@[@"请输入账号", @"请输入密码"], ^(UITextField * _Nonnull textField) {
-//        NSLog(@"%@", textField.text);
-//    })
-//    .nn_present(true, ^{
-//
-//    });
+
 }
 
 - (void)viewDidDisappear:(BOOL)animated {
@@ -214,6 +198,45 @@
 
 
 #pragma mark - others funtion
+
+- (void)handleActionItem:(UITabBarItem *)sender {
+
+    switch (sender.tag) {
+        case 0:
+        {
+            [UIAlertController alertControllerWithTitle:@"title" message:@"message" preferredStyle:UIAlertControllerStyleAlert]
+//            .addAction(@[@"取消", @"确定"], ^(UIAlertAction * _Nonnull action) {
+//                NSLog(@"%@", action.title);
+//            })
+//            .addTextField(@[@"请输入账号", @"请输入密码"], ^(UITextField * _Nonnull textField) {
+//                NSLog(@"%@", textField.text);
+//            })
+            .present(true, ^{
+        
+            });
+        }
+            break;
+        case 1:
+        {
+            NSString *message = [NSString stringWithFormat:@"请去-> [设置 - 隐私 - %@ - %@] 打开访问开关", @"相机" ,UIApplication.appName];
+            [UIAlertController showAlertTitle:@"" message:message actionTitles:@[kTitleKnow] handler:nil];
+        }
+            break;
+            
+        case 2:
+        {
+            [self.navigationController pushVC:@"TimerViewController" animated:true block:^(__kindof UIViewController * _Nonnull vc) {
+                vc.title = @"Timer";
+            }];
+        }
+            break;
+
+        default:
+            break;
+    }
+    
+}
+
 
 - (NSString *)ramdomText{
     CGFloat length = arc4random()%30 + 5;
