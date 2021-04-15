@@ -205,12 +205,12 @@
         case 0:
         {
             [UIAlertController alertControllerWithTitle:@"title" message:@"message" preferredStyle:UIAlertControllerStyleAlert]
-//            .addAction(@[@"取消", @"确定"], ^(UIAlertAction * _Nonnull action) {
-//                NSLog(@"%@", action.title);
-//            })
-//            .addTextField(@[@"请输入账号", @"请输入密码"], ^(UITextField * _Nonnull textField) {
-//                NSLog(@"%@", textField.text);
-//            })
+            .addAction(@[@"取消", @"确定"], ^(UIAlertAction * _Nonnull action) {
+                NSLog(@"%@", action.title);
+            })
+            .addTextField(@[@"请输入账号", @"请输入密码"], ^(UITextField * _Nonnull textField) {
+                NSLog(@"%@", textField.text);
+            })
             .present(true, ^{
         
             });
