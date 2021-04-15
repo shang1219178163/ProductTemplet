@@ -81,6 +81,26 @@
     
 //    NSString *tmp = [self appendFormat:@"%@_%@", @"aaa", @"bbb"];
 //    DDLog(@"tmp: %@", tmp);
+    
+    NSNumber *min = @(0.6767);
+    NSNumber *max = @(123456789.6767);
+    
+    NSNumber *phone = @(18729742695);
+    NSNumber *IDCard = @(4392260032488908);
+    NSNumber *bankCard = @(610431198903080651);
+   
+    NSNumberFormatter *fmtNone = [NSNumberFormatter numberStyle:NSNumberFormatterNoStyle];
+    fmtNone.group(@" ", 4);
+
+    NSString *a =  [fmtNone stringFromNumber:phone];
+    NSString *b =  [fmtNone stringFromNumber:IDCard];
+    NSString *c =  [fmtNone stringFromNumber:bankCard];
+    DDLog(@": %@ %@ %@", a, b, c);
+    
+    NSNumberFormatter *fmt = [NSNumberFormatter numberStyle:NSNumberFormatterCurrencyStyle];
+    NSString *e =  [fmt stringFromNumber:min];
+    NSString *f =  [fmt stringFromNumber:max];
+    DDLog(@": %@ %@", e, f);
 
     return YES;
 }
