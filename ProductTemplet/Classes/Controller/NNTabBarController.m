@@ -43,7 +43,7 @@
     [self addObserver:self forKeyPath:@"selectedIndex" options:NSKeyValueObservingOptionNew context:nil];
     [self addObserver:self forKeyPath:@"selectedViewController" options:NSKeyValueObservingOptionNew context:nil];
 
-    self.viewControllers = UICtlrListFromList(list, false);
+//    self.viewControllers = UICtlrListFromList(list, false);
     
     self.selectedIndex = [self.viewControllers containsObject:self.selectedViewController] ? [self.viewControllers indexOfObject:self.selectedViewController] : 0;
     

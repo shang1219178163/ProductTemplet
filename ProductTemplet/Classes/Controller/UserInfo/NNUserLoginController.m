@@ -166,9 +166,10 @@
             [btn setTitle:@"忘记密码?" forState:UIControlStateNormal];
             [btn setTitleColor:UIColor.themeColor forState:UIControlStateNormal];
             [btn addActionHandler:^(UIButton * _Nonnull sender) {
-                [self.navigationController pushVC:@"NNUserPwdChangeController" animated:true block:^(__kindof UIViewController * _Nonnull vc) {
-                    vc.title = @"修改密码";
-                }];
+                
+                UIViewController *vc = [[NSClassFromString(@"NNUserPwdChangeController") alloc]init];
+                vc.title = @"修改密码";
+                [self.navigationController pushViewController:vc animated:true];
             } forControlEvents:UIControlEventTouchUpInside];
             btn;
         });
@@ -183,9 +184,10 @@
             [btn setTitle:@"新用户?点击注册" forState:UIControlStateNormal];
             [btn setTitleColor:UIColor.themeColor forState:UIControlStateNormal];
             [btn addActionHandler:^(UIButton * _Nonnull sender) {
-                [self.navigationController pushVC:@"BNUserRegisterController" animated:true block:^(__kindof UIViewController * _Nonnull vc) {
-                    vc.title = @"注册";
-                }];
+
+                UIViewController *vc = [[NSClassFromString(@"BNUserRegisterController") alloc]init];
+                vc.title = @"注册";
+                [self.navigationController pushViewController:vc animated:true];
             } forControlEvents:UIControlEventTouchUpInside];
 
             btn;

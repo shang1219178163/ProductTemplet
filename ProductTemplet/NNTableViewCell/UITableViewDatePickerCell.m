@@ -8,7 +8,7 @@
 
 #import "UITableViewDatePickerCell.h"
 #import <NNGloble/NNGloble.h>
-#import "NSDateFormatter+Helper.h"
+#import "NSDate+Helper.h"
 #import "UIView+Helper.h"
 #import "UITextField+Helper.h"
 #import "NSString+Helper.h"
@@ -32,7 +32,7 @@
         [self.contentView addSubview:self.labelLeft];
         [self.contentView addSubview:self.textField];
         
-        self.textField.text = [[NSDateFormatter stringFromDate:NSDate.date fmt:kFormatDate] substringToIndex:10];
+        self.textField.text = [[NSDateFormatter stringFromDate:NSDate.date fmt:kDateFormat] substringToIndex:10];
         self.textField.placeholder = @"请选择";
         self.textField.textAlignment = NSTextAlignmentCenter;
         
@@ -98,7 +98,7 @@
             view.title = @"请选择时间";
             view.block = ^(UIDatePicker *datePicker, NSInteger btnIndex) {
                 
-                NSString * dateStr = [NSDateFormatter stringFromDate:datePicker.date fmt:kFormatDate];
+                NSString * dateStr = [NSDateFormatter stringFromDate:datePicker.date fmt:kDateFormat];
                 DDLog(@"dateStr_%@_%ld",dateStr,btnIndex);
                 if (btnIndex == 1) {
                     self.textField.text = [dateStr substringToIndex:10];

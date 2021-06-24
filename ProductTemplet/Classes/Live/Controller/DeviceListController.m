@@ -38,12 +38,12 @@
     self.plainView.frame = self.view.bounds;
     [self.view addSubview:self.plainView];
     
-    [self createBarItem:@"注销" isLeft:true handler:^(id obj, UIView *item, NSInteger idx) {
+    [self createBarItem:@"注销" isLeft:true handler:^(UIButton *sender) {
         [self requestLogout];
         
     }];
     
-    [self createBarItem:@"用户信息" isLeft:false handler:^(id obj, UIView *item, NSInteger idx) {
+    [self createBarItem:@"用户信息" isLeft:false handler:^(UIButton *sender) {
         [self requestSeverinfo];
         
     }];

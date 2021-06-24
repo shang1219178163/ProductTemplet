@@ -25,7 +25,7 @@
     //    [self.view addSubview:self.tableView];
     [self.view addSubview:self.plainView];
     
-    [self createBarItem:@"个人中心" isLeft:false handler:^(id obj, UIView *item, NSInteger idx) {
+    [self createBarItem:@"个人中心" isLeft:false handler:^(UIButton *sender) {
         NNFilterView * view = [[NNFilterView alloc]init];
         view.dataList = self.filterList;
         //            view.direction = @1;
@@ -105,9 +105,9 @@
             @strongify(self);
             NSArray *list = self.dataList[indexPath.row];
 //            UITableViewCell * cell = [tableView cellForRowAtIndexPath:indexPath];
-            [self.navigationController pushVC:list[0] animated:true block:^(__kindof UIViewController * _Nonnull vc) {
-                vc.title = list[1];
-            }];
+            UIViewController *vc = [[NSClassFromString(list[0]) alloc]init];
+            vc.title = list[1];
+            [self.navigationController pushViewController:vc animated:true];
         };
     }
     return _plainView;

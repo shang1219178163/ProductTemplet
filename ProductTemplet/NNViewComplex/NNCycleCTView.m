@@ -101,7 +101,7 @@
     
     id image = self.imgList[indexPath.row];
 
-    UICTViewCellSeven * view = [UICTViewCellSeven viewWithCollectionView:collectionView indexPath:indexPath];
+    UICTViewCellSeven * view = [UICTViewCellSeven dequeueReusableCell:collectionView indexPath:indexPath];
     [view.imgView loadImage:image defaultImg:kIMG_defaultFailed];
     view.label.text = NSStringFromIndexPath(indexPath);
     

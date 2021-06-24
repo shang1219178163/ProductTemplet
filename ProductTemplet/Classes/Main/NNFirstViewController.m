@@ -103,7 +103,10 @@
     [self bindData];
     
     self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(showLeftAction)];
-    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemCompose target:self action:@selector(showRightAction)];
+    UIBarButtonItem *itemCompose = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemCompose target:self action:@selector(showRightAction)];
+    
+    UIBarButtonItem *itemButton = [[UIBarButtonItem alloc] initWithTitle:@"Button" style:UIBarButtonItemStylePlain target:self action:@selector(showRightAction)];
+    self.navigationItem.rightBarButtonItems = @[itemCompose, itemButton];
 }
 
 - (void)showLeftAction{
@@ -112,7 +115,10 @@
 
 - (void)showRightAction{
     [[self sliderViewController] showRight];
+    
+    DDLog(@"_cmd: %@", NSStringFromSelector(_cmd));
 }
+
 
 
 - (void)viewWillAppear:(BOOL)animated{
@@ -172,16 +178,16 @@
             [backgroudView addSubview:sender];
             
             if (i < rowCount) {
-                [sender.layer addSublayer:[sender createLayerType:@0]];//上线条
+//                [sender.layer addSublayer:[sender createLayerType:@0]];//上线条
             }
             
-            [sender.layer addSublayer:[sender createLayerType:@2]];//上线条
-            [sender.layer addSublayer:[sender createLayerType:@3]];//上线条
+//            [sender.layer addSublayer:[sender createLayerType:@2]];//上线条
+//            [sender.layer addSublayer:[sender createLayerType:@3]];//上线条
             
             [sender addGestureTap:^(UITapGestureRecognizer * _Nonnull reco) {
-                [self.navigationController pushVC:array[2] animated:true block:^(__kindof UIViewController * _Nonnull vc) {
-                    vc.title = array[0];
-                }];
+                UIViewController *vc = [[NSClassFromString(array[2]) alloc]init];
+                vc.title = array[0];
+                [self.navigationController pushViewController:vc animated:true];
             }];
         }
     }

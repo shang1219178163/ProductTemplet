@@ -85,6 +85,8 @@
 		141E2B90230637E700466008 /* NSArray+Tmp.m in Sources */ = {isa = PBXBuildFile; fileRef = 141E2B8F230637E600466008 /* NSArray+Tmp.m */; };
 		1421D5CD21F307F700635582 /* CustomViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1421D5CC21F307F700635582 /* CustomViewController.m */; };
 		1421D5D021F3177700635582 /* NNWalletView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1421D5CF21F3177700635582 /* NNWalletView.m */; };
+		14224038268412170080DFB7 /* NNAnimationObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 14224037268412170080DFB7 /* NNAnimationObject.m */; };
+		1422403B268413800080DFB7 /* NNRootAppInfoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 14224039268413800080DFB7 /* NNRootAppInfoModel.m */; };
 		142A76D022263F080016D3DA /* icon_operation_busy@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 142A76CE22263F080016D3DA /* icon_operation_busy@2x.png */; };
 		142A76D72226708D0016D3DA /* NNSliderControlView.m in Sources */ = {isa = PBXBuildFile; fileRef = 142A76D62226708D0016D3DA /* NNSliderControlView.m */; };
 		142A77102227B30E0016D3DA /* UITableViewPickerCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 142A770F2227B30E0016D3DA /* UITableViewPickerCell.m */; };
@@ -790,6 +792,10 @@
 		1421D5CC21F307F700635582 /* CustomViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CustomViewController.m; sourceTree = "<group>"; };
 		1421D5CE21F3177700635582 /* NNWalletView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NNWalletView.h; sourceTree = "<group>"; };
 		1421D5CF21F3177700635582 /* NNWalletView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NNWalletView.m; sourceTree = "<group>"; };
+		14224036268412170080DFB7 /* NNAnimationObject.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NNAnimationObject.h; sourceTree = "<group>"; };
+		14224037268412170080DFB7 /* NNAnimationObject.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NNAnimationObject.m; sourceTree = "<group>"; };
+		14224039268413800080DFB7 /* NNRootAppInfoModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NNRootAppInfoModel.m; sourceTree = "<group>"; };
+		1422403A268413800080DFB7 /* NNRootAppInfoModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NNRootAppInfoModel.h; sourceTree = "<group>"; };
 		142A76CE22263F080016D3DA /* icon_operation_busy@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_operation_busy@2x.png"; sourceTree = "<group>"; };
 		142A76D52226708D0016D3DA /* NNSliderControlView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NNSliderControlView.h; sourceTree = "<group>"; };
 		142A76D62226708D0016D3DA /* NNSliderControlView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NNSliderControlView.m; sourceTree = "<group>"; };
@@ -2848,14 +2854,12 @@
 				14CF392625B9668E00FBDBF7 /* NNButtonDispalyController.m */,
 				14EFF3FB25BA58AC00D82359 /* NNButtonGroupView.h */,
 				14EFF3FC25BA58AC00D82359 /* NNButtonGroupView.m */,
-				513646A82086031D005A20E7 /* Assets.xcassets */,
-				5169DF232088254300B025C3 /* Public.xcassets */,
+				14224036268412170080DFB7 /* NNAnimationObject.h */,
+				14224037268412170080DFB7 /* NNAnimationObject.m */,
+				1422403A268413800080DFB7 /* NNRootAppInfoModel.h */,
+				14224039268413800080DFB7 /* NNRootAppInfoModel.m */,
 				5136492420860655005A20E7 /* Resources */,
 				513646AD2086031D005A20E7 /* Info.plist */,
-				14E793C321D62E0B003230C8 /* bug.png */,
-				1404FAF821E0A1BA00122E22 /* Skull.jpg */,
-				14C1197722DC5A59009D18A3 /* postImage.png */,
-				142A76CE22263F080016D3DA /* icon_operation_busy@2x.png */,
 				1402183923683A7A00B27E4C /* sound.plist */,
 				513646AE2086031D005A20E7 /* main.m */,
 				513649E320860683005A20E7 /* PrefixHeader.pch */,
@@ -3087,6 +3091,12 @@
 		5136492420860655005A20E7 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				513646A82086031D005A20E7 /* Assets.xcassets */,
+				5169DF232088254300B025C3 /* Public.xcassets */,
+				14E793C321D62E0B003230C8 /* bug.png */,
+				1404FAF821E0A1BA00122E22 /* Skull.jpg */,
+				14C1197722DC5A59009D18A3 /* postImage.png */,
+				142A76CE22263F080016D3DA /* icon_operation_busy@2x.png */,
 				145C912A2334713600849E9D /* AppIconChange */,
 				145C912923346FA000849E9D /* HuiZhuBang */,
 				1415825622DDB88100643BF6 /* excel.geojson */,
@@ -4143,6 +4153,7 @@
 				141080A722D2E7D10011344E /* AnimationController4.m in Sources */,
 				5129425820B424EC009FB70E /* LockCompareController.m in Sources */,
 				1453772B25CAA49600CB6578 /* UITableViewAchivementCell.m in Sources */,
+				14224038268412170080DFB7 /* NNAnimationObject.m in Sources */,
 				14F25F542359A14800D05998 /* UIView+Tmp.m in Sources */,
 				1453770825CAA49600CB6578 /* UITableViewEightyEightCell.m in Sources */,
 				51862E8320BBA8B90080BD4E /* AlphaInputValidator.m in Sources */,
@@ -4279,6 +4290,7 @@
 				515C67E42137C55700D5EA94 /* BHotCityCell.m in Sources */,
 				14B6B34A22B1FFE40047E094 /* PKDeviceListRootModel.m in Sources */,
 				513647BF208604DE005A20E7 /* HZPhotoGroup.m in Sources */,
+				1422403B268413800080DFB7 /* NNRootAppInfoModel.m in Sources */,
 				14E42D182200042800606AD0 /* NNEmail.m in Sources */,
 				51862E6220BB94C40080BD4E /* EOCEmployeeDeveloper.m in Sources */,
 				14F0FE6022B0AA6A00057093 /* BNRestartApi.m in Sources */,
@@ -4427,7 +4439,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -4476,7 +4488,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
@@ -4526,7 +4538,7 @@
 					"\"$(SRCROOT)/ProductTemplet/Tool/PayTool/AppPayWX\"",
 				);
 				INFOPLIST_FILE = ProductTemplet/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
@@ -4651,7 +4663,7 @@
 					"\"$(SRCROOT)/ProductTemplet/Tool/PayTool/AppPayWX\"",
 				);
 				INFOPLIST_FILE = ProductTemplet/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",

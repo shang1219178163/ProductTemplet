@@ -69,8 +69,11 @@
 
                       ].mutableCopy;
     
-    [self createBarItem:@"Next" isLeft:NO handler:^(id  _Nonnull obj, UIView * _Nonnull item, NSInteger idx) {
-        [self.navigationController pushVC:@"CustomViewController" animated:true block:nil];
+    [self createBarItem:@"Next" isLeft:NO handler:^(UIButton *sender) {
+
+        UIViewController *vc = [[NSClassFromString(@"CustomViewController") alloc]init];
+        vc.title = @"CustomViewController";
+        [self.navigationController pushViewController:vc animated:true];
     }];
 
 }
@@ -287,7 +290,7 @@
 
 //- (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath{
 //
-//    UICTViewCellOne *cell = [UICTViewCellOne viewWithCollectionView:collectionView indexPath:indexPath];//
+//    UICTViewCellOne *cell = [UICTViewCellOne dequeueReusableCell:collectionView indexPath:indexPath];//
 //    return cell;
 //}
 

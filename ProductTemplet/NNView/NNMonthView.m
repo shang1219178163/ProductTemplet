@@ -48,7 +48,12 @@
         NSString * text = change[NSKeyValueChangeNewKey];
         if (text && [text containsString:@"月"]) {
             NSArray * textTaps = [text componentsSeparatedByString:@"月"];
-            NSAttributedString * attString = [NSAttributedString getAttString:text textTaps:textTaps font:17 tapFont:36 color:UIColor.whiteColor tapColor:UIColor.whiteColor alignment:NSTextAlignmentCenter];
+            NSAttributedString * attString = [NSAttributedString getAttString:text
+                                                                     textTaps:textTaps
+                                                                         font:17
+                                                                        color:UIColor.whiteColor
+                                                                     tapColor:UIColor.whiteColor
+                                                                    alignment:NSTextAlignmentCenter];
             self.labMonth.attributedText = attString;
         }
     }

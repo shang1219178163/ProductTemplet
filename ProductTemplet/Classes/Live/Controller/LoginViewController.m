@@ -57,10 +57,10 @@
         [NSUserDefaults synchronize];
         
         [SVProgressHUD dismiss];
-        [self.navigationController pushVC:@"DeviceListController" animated:true block:^(__kindof UIViewController * _Nonnull vc) {
-            vc.title = @"设备列表";
 
-        }];
+        UIViewController *vc = [[NSClassFromString(@"DeviceListController") alloc]init];
+        vc.title = @"设备列表";
+        [self.navigationController pushViewController:vc animated:true];
     } fail:^(NNRequstManager * _Nonnull manager, NSError * _Nonnull error) {
         [SVProgressHUD showErrorWithStatus:error.description];
     }];
@@ -83,10 +83,9 @@
         @weakify(self);
         [_userLoginView.btnPwd addActionHandler:^(UIButton * _Nonnull sender) {
             @strongify(self);
-            [self.navigationController pushVC:@"ChangePwdController" animated:true block:^(__kindof UIViewController * _Nonnull vc) {
-                vc.title = @"修改密码";
-            }];
-            
+            UIViewController *vc = [[NSClassFromString(@"ChangePwdController") alloc]init];
+            vc.title = @"修改密码";
+            [self.navigationController pushViewController:vc animated:true];
         } forControlEvents:UIControlEventTouchUpInside];
         _userLoginView.block = ^(BNUserLoginView * _Nonnull view) {
             DDLog(@"登录!");

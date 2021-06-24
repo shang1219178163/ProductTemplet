@@ -8,7 +8,7 @@
 
 #import "EmitterViewController.h"
 
-#import "CAEmitterLayer+Helper.h"
+#import "CALayer+Helper.h"
 #import "UIColor+Helper.h"
 
 @interface EmitterViewController ()

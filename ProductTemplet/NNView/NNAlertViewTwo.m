@@ -116,8 +116,8 @@ NSString * const kAlert_Btns = @"kAlert_Btns";
         rectItem = CGRectMake(CGRectGetMaxX(rectItem), CGRectGetMaxY(self.labelSub.frame) + kY_GAP, maxSize.width/_items.count, kH_title);
         btn.frame = rectItem;
    
-        [btn.layer addSublayer:[btn createLayerType:@0]];
-        [btn.layer addSublayer:[btn createLayerType:@3]];
+//        [btn.layer addSublayer:[btn createLayerType:@0]];
+//        [btn.layer addSublayer:[btn createLayerType:@3]];
     }
     
     CGRect rect = self.containView.frame;

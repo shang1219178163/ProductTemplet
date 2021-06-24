@@ -74,7 +74,7 @@
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath{
     
-    UICTViewCellOne * cell = [UICTViewCellOne viewWithCollectionView:collectionView indexPath:indexPath];
+    UICTViewCellOne * cell = [UICTViewCellOne dequeueReusableCell:collectionView indexPath:indexPath];
     cell.label.text = NSStringFromIndexPath(indexPath);
     
     cell.backgroundColor = [UIColor cyanColor];

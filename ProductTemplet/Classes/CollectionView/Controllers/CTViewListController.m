@@ -122,16 +122,15 @@
     
     DDLog(@"%@",@(sender.tag));
     if (sender.tag == 0) {
-        [self.navigationController pushVC:@"FileParseController" animated:true block:^(__kindof UIViewController * _Nonnull vc) {
-            vc.title = @"文件解析";
-
-        }];
+        UIViewController *vc = [[NSClassFromString(@"FileParseController") alloc]init];
+        vc.title = @"文件解析";
+        [self.navigationController pushViewController:vc animated:true];
         return;
     }
-    [self.navigationController pushVC:@"NNExcelController" animated:true block:^(__kindof UIViewController * _Nonnull vc) {
-        vc.title = @"NNExcelController";
-
-    }];
+    
+    UIViewController *vc = [[NSClassFromString(@"NNExcelController") alloc]init];
+    vc.title = @"NNExcelController";
+    [self.navigationController pushViewController:vc animated:true];
 }
 
 - (NSString *)itemAtSection:(NSIndexPath *)indexPath{
@@ -184,7 +183,7 @@
 
     }
     
-    UICTViewCellZero * cell = [UICTViewCellZero viewWithCollectionView:collectionView indexPath:indexPath];
+    UICTViewCellZero * cell = [UICTViewCellZero dequeueReusableCell:collectionView indexPath:indexPath];
     cell.label.text =  [NSStringFromIndexPath(indexPath) stringByAppendingString:name];
     cell.label.textAlignment = NSTextAlignmentLeft;
     
@@ -198,10 +197,10 @@
     //    DDLog(@"%@",msg);
     
     DDLog(@"%@", NSStringFromIndexPath(indexPath));
-    NSString *controlleName = [self itemAtSection:indexPath];
-    [self.navigationController pushVC:controlleName animated:true block:^(__kindof UIViewController * _Nonnull vc) {
-        vc.title = controlleName;
-    }];
+    NSString *vcName = [self itemAtSection:indexPath];
+    UIViewController *vc = [[NSClassFromString(vcName) alloc]init];
+    vc.title = vcName;
+    [self.navigationController pushViewController:vc animated:true];
 }
 
 //header的size
@@ -215,7 +214,7 @@
 }
 
 - (UICollectionReusableView *)collectionView:(UICollectionView *)collectionView viewForSupplementaryElementOfKind:(NSString *)kind atIndexPath:(NSIndexPath *)indexPath{
-    UICTReusableViewZero * view = [UICTReusableViewZero viewWithCollectionView:collectionView indexPath:indexPath kind:kind];
+    UICTReusableViewZero * view = [UICTReusableViewZero dequeueSupplementaryView:collectionView indexPath:indexPath kind:kind];
 
     view.imgView.image = [UIImage imageNamed:@"bug"];
     

@@ -103,7 +103,7 @@ static NSString * const kShareTitle = @"kShareTitle";
     NSArray *arraySection = self.dataList[indexPath.section];
     NSDictionary *dict = arraySection[indexPath.item];
     
-    UICTViewCellOne * cell = [UICTViewCellOne viewWithCollectionView:collectionView indexPath:indexPath];
+    UICTViewCellOne * cell = [UICTViewCellOne dequeueReusableCell:collectionView indexPath:indexPath];
     cell.label.text = NSStringFromIndexPath(indexPath);
 
 //    cell.imgView.image = [UIImage imageNamed:dict[kShareIcon]];
@@ -149,7 +149,7 @@ static NSString * const kShareTitle = @"kShareTitle";
 }
 
 - (UICollectionReusableView *)collectionView:(UICollectionView *)collectionView viewForSupplementaryElementOfKind:(NSString *)kind atIndexPath:(NSIndexPath *)indexPath{
-    UICTReusableViewZero * view = [UICTReusableViewZero viewWithCollectionView:collectionView indexPath:indexPath kind:kind];
+    UICTReusableViewZero * view = [UICTReusableViewZero dequeueSupplementaryView:collectionView indexPath:indexPath kind:kind];
     NSString * titleHeader = [NSString stringWithFormat:@"HeaderView_%@",@(indexPath.section)];
     NSString * titleFooter = [NSString stringWithFormat:@"FooterView_%@",@(indexPath.section)];
     view.label.text = [kind isEqualToString:UICollectionElementKindSectionHeader]  ? titleHeader: titleFooter;

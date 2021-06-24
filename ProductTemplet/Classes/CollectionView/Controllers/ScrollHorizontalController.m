@@ -91,7 +91,7 @@
 //        NSLog(@"cell为空,创建cell");
 //        cell = [[UICollectionViewCell alloc] init];
 //    }
-    UICollectionViewCell *cell = [UICollectionViewCell viewWithCollectionView:collectionView indexPath:indexPath];
+    UICollectionViewCell *cell = [UICollectionViewCell dequeueReusableCell:collectionView indexPath:indexPath];
     cell.backgroundColor = [UIColor randomColor];
     return cell;
 }
@@ -192,9 +192,9 @@
             @weakify(view);
             view.blockCellForItem = ^UICollectionViewCell * _Nullable(UICollectionView * _Nonnull collectionView, NSIndexPath * _Nonnull indexPath) {
                 @strongify(view);
-//                UICollectionViewCell *cell = [UICollectionViewCell viewWithCollectionView:collectionView indexPath:indexPath];
-                UICTViewCellOne *cell = [UICTViewCellOne viewWithCollectionView:collectionView indexPath:indexPath];
-//                UICTViewCellTen *cell = [UICTViewCellTen viewWithCollectionView:collectionView indexPath:indexPath];
+//                UICollectionViewCell *cell = [UICollectionViewCell dequeueReusableCell:collectionView indexPath:indexPath];
+                UICTViewCellOne *cell = [UICTViewCellOne dequeueReusableCell:collectionView indexPath:indexPath];
+//                UICTViewCellTen *cell = [UICTViewCellTen dequeueReusableCell:collectionView indexPath:indexPath];
                 BOOL isSame = [view.selectIndexPath compare: indexPath] == NSOrderedSame;
                 cell.label.textColor = isSame == true ? view.selectedColor : UIColor.grayColor;
 
@@ -235,10 +235,10 @@
 
             view.list = @[@"1", @"2", @"3", @"4", @"5", @"6",].mutableCopy;
             view.blockCellForItem = ^UICollectionViewCell * _Nullable(UICollectionView * _Nonnull collectionView, NSIndexPath * _Nonnull indexPath) {
-//                UICollectionViewCell *cell = [UICollectionViewCell viewWithCollectionView:collectionView indexPath:indexPath];
+//                UICollectionViewCell *cell = [UICollectionViewCell dequeueReusableCell:collectionView indexPath:indexPath];
 //                cell.contentView.backgroundColor = UIColor.randomColor;
-                UICTViewCellOne *cell = [UICTViewCellOne viewWithCollectionView:collectionView indexPath:indexPath];
-//                UICTViewCellTen *cell = [UICTViewCellTen viewWithCollectionView:collectionView indexPath:indexPath];
+                UICTViewCellOne *cell = [UICTViewCellOne dequeueReusableCell:collectionView indexPath:indexPath];
+//                UICTViewCellTen *cell = [UICTViewCellTen dequeueReusableCell:collectionView indexPath:indexPath];
 
                 cell.label.text = [NSString stringWithFormat:@"标题%@", @(indexPath.row)];
                 cell.imgView.image = [UIImage imageNamed:@"bug.png"];

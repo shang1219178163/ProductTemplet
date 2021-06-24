@@ -22,7 +22,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-    [UIApplication setupAppearanceSearchbarCancellButton];
+//    [UIApplication setupAppearanceSearchbarCancellButton];
     self.searchBar = ({
         UISearchBar *searchBar = [UISearchBar createRect:CGRectMake(0, 0, kScreenWidth - 100, 30)];
         searchBar.placeholder = @"请输入流水号、商品信息或会员信息";        
@@ -49,7 +49,8 @@
  
     
     CGRect rect = CGRectMake(20, 20, kScreenWidth - 40, 40);
-    UISegmentedControl *control = [UISegmentedControl createRect:rect items:@[@"昨天", @"今天", @"明天"] type:@2];
+    UISegmentedControl *control = [[UISegmentedControl alloc]initWithItems: @[@"昨天", @"今天", @"明天"]];
+    control.frame = rect;
     [self.view addSubview: control];
 }
 

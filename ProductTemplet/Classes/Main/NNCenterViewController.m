@@ -27,12 +27,12 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-    [self createBarItem:@"弹窗" isLeft:true handler:^(id  _Nonnull obj, UIView * _Nonnull item, NSInteger idx) {
+    [self createBarItem:@"弹窗" isLeft:true handler:^(UIButton *sender) {
         PopoverViewExampleController *controlller = [[PopoverViewExampleController alloc]init];
         [self.navigationController pushViewController:controlller animated:true];
     }];
     
-    [self createBarItem:@"筛选" isLeft:false handler:^(id obj, UIView *item, NSInteger idx) {
+    [self createBarItem:@"筛选" isLeft:false handler:^(UIButton *sender) {
         NNFilterView * view = [[NNFilterView alloc]init];
         view.dataList = self.filterList;
         //            view.direction = @1;
@@ -106,7 +106,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-    [UIApplication setupAppearanceSearchbarCancellButton];
+//    [UIApplication setupAppearanceSearchbarCancellButton];
     self.searchBar = ({
         UISearchBar *searchBar = [UISearchBar createRect:CGRectMake(0, 0, kScreenWidth - 150, 30)];
         searchBar.placeholder = @"请输入流水号、商品信息或会员信息";
@@ -208,9 +208,10 @@
             @strongify(self);
             NSArray *list = self.dataList[indexPath.row];
 //            UITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
-            [self.navigationController pushVC:list[0] animated:true block:^(__kindof UIViewController * _Nonnull vc) {
-                vc.title = list[1];
-            }];
+            
+            UIViewController *vc = [[NSClassFromString(list[0]) alloc]init];
+            vc.title = list[1];
+            [self.navigationController pushViewController:vc animated:true];
         };
     }
     return _plainView;
@@ -228,16 +229,11 @@
         _filterList = @[
                         @{kItemHeader:   @"时间",
 //                            kItemFooter:   @"footer_0",
-                            kItemObj:   @[          @"天数",
-                                    
-                                    ],
-                            kItemObjSeleted:   @[          @(YES),
-                                    
-                                    ].mutableCopy,
+                            kItemObj:   @[          @"天数",],
+                            kItemObjSeleted:   @[          @(YES),].mutableCopy,
                             
                             },
-                            @{
-                                kItemHeader:   @"栏位",
+                            @{kItemHeader:   @"栏位",
 //                                kItemFooter:   @"footer_1",
                                 kItemObj:   @[              @"栏位",
                                         

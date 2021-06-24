@@ -60,7 +60,9 @@
 -(UISwitch *)switchCtl{
     if (!_switchCtl) {
         _switchCtl = ({
-            UISwitch * view = [UISwitch createRect:CGRectZero];
+            UISwitch *view = [[UISwitch alloc]init];
+            view.autoresizingMask = UIViewAutoresizingFlexibleWidth|UIViewAutoresizingFlexibleHeight;
+            view.on = false;
             view.onTintColor = UIColor.randomColor;
             view.tintColor = UIColor.randomColor;
             view.thumbTintColor = UIColor.randomColor;

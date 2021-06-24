@@ -4,6 +4,7 @@ source 'https://github.com/aliyun/aliyun-specs.git'
 platform :ios, '9.0'
 use_frameworks!
 inhibit_all_warnings!
+#install! 'cocoapods', generate_multiple_pod_projects: true
 
  def common_pods
 #   pod 'AESCrypt-ObjC’

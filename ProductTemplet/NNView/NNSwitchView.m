@@ -83,7 +83,9 @@
 
 - (UISwitch *)switchCtl{
     if (!_switchCtl) {
-        _switchCtl = [UISwitch createRect:CGRectZero];
+        _switchCtl = [[UISwitch alloc]init];
+        _switchCtl.autoresizingMask = UIViewAutoresizingFlexibleWidth|UIViewAutoresizingFlexibleHeight;
+        _switchCtl.on = false;
     }
     return _switchCtl;
 }

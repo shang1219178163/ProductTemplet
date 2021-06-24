@@ -55,7 +55,7 @@
     
     [self.view addSubview:self.itemsView];
 
-    [self createBarItem:@"登录" isLeft:true handler:^(id obj, UIView *item, NSInteger idx) {
+    [self createBarItem:@"登录" isLeft:true handler:^(UIButton *sender) {
         [self.userLoginApi requestWithSuccess:^(NNRequstManager * _Nonnull manager, NSDictionary * _Nonnull jsonData) {
             NSDictionary *dic = jsonData;
             [NSUserDefaults setObject:dic[@"Token"] forKey:@"token"];
@@ -66,7 +66,7 @@
         }];
     }];
     
-    [self createBarItem:@"注销" isLeft:false handler:^(id obj, UIView *item, NSInteger idx) {
+    [self createBarItem:@"注销" isLeft:false handler:^(UIButton *sender) {
         [self.userLogoutApi requestWithSuccess:^(NNRequstManager * _Nonnull manager, NSDictionary * _Nonnull jsonData) {
                 
             } fail:^(NNRequstManager * _Nonnull manager, NSError * _Nonnull error) {
@@ -159,9 +159,10 @@
                 PKDeviceListRootModel *model = [PKDeviceListRootModel yy_modelWithJSON:jsonData];
                 DDLog(@"%@", model);
                 self.devicesRootModel = model;
-                [self.navigationController pushVC:@"DeviceListController" animated:true block:^(__kindof UIViewController * _Nonnull vc) {
-                    vc.title = @"设备列表";
-                }];
+                
+                UIViewController *vc = [[NSClassFromString(@"DeviceListController") alloc]init];
+                vc.title = @"设备列表";
+                [self.navigationController pushViewController:vc animated:true];
             } fail:^(NNRequstManager * _Nonnull manager, NSError * _Nonnull error) {
                 
             }];

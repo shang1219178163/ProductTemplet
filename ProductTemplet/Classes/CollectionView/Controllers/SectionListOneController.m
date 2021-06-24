@@ -128,7 +128,7 @@
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath{
     NNDataModel * model = [self itemAtIndexPath:indexPath];
     
-    UICTViewCellOne * view = [UICTViewCellOne viewWithCollectionView:collectionView indexPath:indexPath];
+    UICTViewCellOne * view = [UICTViewCellOne dequeueReusableCell:collectionView indexPath:indexPath];
     
     view.label.text = model.title;
 //    view.label.text = NSStringFromIndexPath(indexPath);
@@ -159,7 +159,7 @@
 //}
 
 - (UICollectionReusableView *)collectionView:(UICollectionView *)collectionView viewForSupplementaryElementOfKind:(NSString *)kind atIndexPath:(NSIndexPath *)indexPath{
-    UICTReusableViewZero * view = [UICTReusableViewZero viewWithCollectionView:collectionView indexPath:indexPath kind:kind];
+    UICTReusableViewZero * view = [UICTReusableViewZero dequeueSupplementaryView:collectionView indexPath:indexPath kind:kind];
     view.label.text = [kind isEqualToString:UICollectionElementKindSectionHeader]  ? @"headerView": @"footerView";
     view.label.backgroundColor = [kind isEqualToString:UICollectionElementKindSectionHeader]  ? [UIColor greenColor] : [UIColor yellowColor];
     return view;

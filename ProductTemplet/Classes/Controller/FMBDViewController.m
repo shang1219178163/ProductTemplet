@@ -212,9 +212,9 @@
     
 }
 - (void)watchCars{
-    [self.navigationController pushVC:@"CarViewController" animated:true block:^(__kindof UIViewController * _Nonnull vc) {
-        vc.title = @"carList";
-    }];
+    UIViewController *vc = [[NSClassFromString(@"DeviceLCarViewControlleristController") alloc]init];
+    vc.title = @"CarView";
+    [self.navigationController pushViewController:vc animated:true];
 }
 
 #pragma mark - Getter

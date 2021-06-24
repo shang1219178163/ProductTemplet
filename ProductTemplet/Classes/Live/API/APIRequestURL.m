@@ -74,7 +74,7 @@ NSString * const APIRequestURLTouchcChannelstream(NSString *ID){
 //+ (NSString *)cookieDesWithToken:(NSString *)token tokenTimeout:(NSNumber *)tokenTimeout{
 //    
 //    NSDate *expiresDate = [NSDate dateWithTimeIntervalSinceNow:tokenTimeout.integerValue];
-//    NSString *expires = [NSDateFormatter stringFromDate:expiresDate format:kFormatDateSix];
+//    NSString *expires = [NSDateFormatter stringFromDate:expiresDate format:kDateFormatSix];
 //    
 //    NSString *cookieStr = @"";
 //    cookieStr = [cookieStr stringByAppendingFormat:@"token=%@;", token];

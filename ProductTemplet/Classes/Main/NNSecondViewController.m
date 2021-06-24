@@ -19,7 +19,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-    [self createBarItem:@"label" isLeft:NO handler:^(id  _Nonnull obj, UIView * _Nonnull item, NSInteger idx) {
+    [self createBarItem:@"label" isLeft:NO handler:^(UIButton *sender) {
 
         UIViewController * controller = [NSClassFromString(@"CycleLabelViewController") new];
 

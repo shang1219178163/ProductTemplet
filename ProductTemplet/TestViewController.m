@@ -225,9 +225,9 @@
             
         case 2:
         {
-            [self.navigationController pushVC:@"TimerViewController" animated:true block:^(__kindof UIViewController * _Nonnull vc) {
-                vc.title = @"Timer";
-            }];
+            UIViewController *vc = [[NSClassFromString(@"TimerViewController") alloc]init];
+            vc.title = @"Timer";
+            [self.navigationController pushViewController:vc animated:true];
         }
             break;
 
@@ -263,7 +263,7 @@
     for (NSInteger i = 0; i < 5; i++) {
         WHKNetInfoFeedModel * model = [[WHKNetInfoFeedModel alloc]init];
         model.category = [NSString stringWithFormat:@"name_%@", @(i)];
-        model.vendor = [NSDateFormatter stringFromDate:NSDate.date fmt:kFormatDate];
+        model.vendor = [NSDateFormatter stringFromDate:NSDate.date fmt:kDateFormat];
         if (i == 1) {
             model.category = nil;
         }

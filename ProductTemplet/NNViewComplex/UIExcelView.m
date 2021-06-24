@@ -117,7 +117,7 @@ static NSString * const kTips = @"👈左滑查看更多信息";
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath{
     
     NSArray *array = self.dataList[indexPath.section];
-    UICTViewCellExcel *cell = [UICTViewCellExcel viewWithCollectionView:collectionView indexPath:indexPath];
+    UICTViewCellExcel *cell = [UICTViewCellExcel dequeueReusableCell:collectionView indexPath:indexPath];
     //设置单元行颜色的间隔的控制
     if (indexPath.section == 0) {//整个报表最上面的那行
 //        if (indexPath.section == 0 || indexPath.row == 0) {//整个报表最上面的那行

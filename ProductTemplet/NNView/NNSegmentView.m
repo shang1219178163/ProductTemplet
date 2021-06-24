@@ -91,7 +91,9 @@
 
 -(UISegmentedControl *)segmentCtl{
     if (!_segmentCtl) {
-        _segmentCtl = [UISegmentedControl createRect:CGRectZero items:@[@"item0",@"item1",@"item2"] type:@2];
+        _segmentCtl = [[UISegmentedControl alloc]initWithItems:@[@"item0",@"item1",@"item2"]];
+        _segmentCtl.tintColor = UIColor.whiteColor;
+        _segmentCtl.backgroundColor = UIColor.whiteColor;
         @weakify(self)
         [_segmentCtl addActionHandler:^(UIControl * _Nonnull obj) {
             @strongify(self)

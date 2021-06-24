@@ -36,7 +36,7 @@
     
     [self.view addSubview:self.textView];
     
-    [self createBarItem:@"播放" isLeft:false handler:^(id obj, UIView *item, NSInteger idx) {
+    [self createBarItem:@"播放" isLeft:false handler:^(UIButton *sender) {
         
         NSString * url = self.rootModel.EasyDarwin.Body.URL;
         DDLog(@"%@",url);

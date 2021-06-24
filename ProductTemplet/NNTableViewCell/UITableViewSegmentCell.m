@@ -126,7 +126,7 @@
 
 -(UISegmentedControl *)segmentCtl{
     if (!_segmentCtl) {
-        _segmentCtl = [UISegmentedControl createRect:CGRectZero items:@[@"是",@"否"] type:@0];
+        _segmentCtl = [[UISegmentedControl alloc]initWithItems:@[@"是",@"否"]];
         _segmentCtl.selectedSegmentIndex = 0;
         
     }

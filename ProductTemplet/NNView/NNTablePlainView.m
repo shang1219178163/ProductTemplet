@@ -102,7 +102,12 @@
             
             NSString * colorStr = [NSString stringWithFormat:@" '%@' ",inputString];
             NSString * allStr = [NSString stringWithFormat:@"没有找到与%@相关的记录",colorStr];
-            self.label.attributedText = [NSAttributedString getAttString:allStr textTaps:@[colorStr] font:16 tapFont:16 color:UIColor.blackColor tapColor:UIColor.redColor alignment:NSTextAlignmentCenter];
+            self.label.attributedText = [NSAttributedString getAttString:allStr
+                                                                textTaps:@[colorStr]
+                                                                    font:16
+                                                                   color:UIColor.blackColor
+                                                                tapColor:UIColor.redColor
+                                                               alignment:NSTextAlignmentCenter];
             
             //            self.label.text = allStr;
             //            self.label.textAlignment = NSTextAlignmentCenter;

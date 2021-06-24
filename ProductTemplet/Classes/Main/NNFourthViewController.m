@@ -41,10 +41,14 @@
 //    [self addControllerName:@"FontListController"];
 //    [self addControllerName:@"FriendListController"];
     
-    [self createBarItem:@"Show" isLeft:NO handler:^(id  _Nonnull obj, UIView * _Nonnull item, NSInteger idx) {
+    [self createBarItem:@"Show" isLeft:NO handler:^(UIButton *sender) {
         [self.pickerView show];
 
     }];
+    
+    
+
+    
 //    @weakify(self)
 //    [self.imgView addGestureTap:^(UITapGestureRecognizer * _Nonnull reco) {
 //        @strongify(self)
@@ -180,6 +184,19 @@
     [self testAtt];
     
     [self testChain];
+    
+    asyncUI(^id _Nonnull{
+        NSString *value = @"111";
+        return value;
+    }, ^(id value) {
+        DDLog(@"value: %@", value);
+    });
+    
+    dispatch_queue_t queue = dispatch_queue_create("me.tutuge.test.gcd", DISPATCH_QUEUE_SERIAL);
+    dispatch_apply(3, queue, ^(size_t i) {
+        DDLog(@"size_t: %@", @(i));
+    });
+    
 }
 
 -(void)viewDidAppear:(BOOL)animated{

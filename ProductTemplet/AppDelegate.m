@@ -27,36 +27,33 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
-    [self setupThridSDKWithOptions:launchOptions];
+//    [self setupThridSDKWithOptions:launchOptions];
     UIColor.themeColor = UIColor.orangeColor;
     UIColor.themeColor = UIColorHexValue(0x0082e0);
+    [UIApplication setupAppearance:UIColor.whiteColor barTintColor:UIColor.themeColor];
     
-    [UIApplication setupAppearanceDefault:false];
-    
-    UIViewController *controller = UICtrFromString(@"HomeViewController");
-    UIViewController *controllerLeft = UICtrFromString(@"NNLeftViewController");
-    UIViewController *controllerRight = UICtrFromString(@"NNRightViewController");
+    UIViewController *controller = UIControllerFromString(@"HomeViewController");
+    UIViewController *controllerLeft = UIControllerFromString(@"NNLeftViewController");
+    UIViewController *controllerRight = UIControllerFromString(@"NNRightViewController");
 
 //    ZYSliderViewController *rootVC = [[ZYSliderViewController alloc]initWithMainViewController:controller
 //                                                                            leftViewController:controllerLeft
 //                                                                           rightViewController:controllerRight];
     
-//    controller = UICtrFromString(@"WHKGroupViewViewController");
-//    controller = UICtrFromString(@"LiveLikeController");
-//    controller = UICtrFromString(@"SortViewController");
-//    controller = UICtrFromString(@"FriendListController");
-    controller = UICtrFromString(@"HomeViewController");
-//    controller = UICtrFromString(@"TestViewController");
-    
-//    [UIApplication setupRootController:rootVC isAdjust:NO];
-    [UIApplication setupRootController:controller isAdjust:NO];
+//    controller = UIControllerFromString(@"WHKGroupViewViewController");
+//    controller = UIControllerFromString(@"LiveLikeController");
+//    controller = UIControllerFromString(@"SortViewController");
+//    controller = UIControllerFromString(@"FriendListController");
+    controller = UIControllerFromString(@"HomeViewController");
+//    controller = UIControllerFromString(@"TestViewController");
+    UIApplication.rootController = UIControllerFromString(@"HomeViewController");;
 
-//    controller = UICtrFromString(@"LoginViewController");
-//    controller = UICtrFromString(@"GroupViewController");
+//    controller = UIControllerFromString(@"LoginViewController");
+//    controller = UIControllerFromString(@"GroupViewController");
 //    [UIApplication setupRootController:controller isAdjust:true];
 
-//    [UIApplication setupRootController:UICtrFromString(@"RecognizerController") isAdjust:YES];
-//    [UIApplication setupRootController:UICtrFromString(@"UIRecognizerController") isAdjust:YES];
+//    [UIApplication setupRootController:UIControllerFromString(@"RecognizerController") isAdjust:YES];
+//    [UIApplication setupRootController:UIControllerFromString(@"UIRecognizerController") isAdjust:YES];
     
     //因为左右侧滑栏失效
 //    UIApplication.tabBarController.selectedIndex = 3;
@@ -200,6 +197,113 @@
         _navController = [[UINavigationController alloc] initWithRootViewController:self.fileController];
     }
     return _navController;
+}
+
+
++ (void)changeAppearance:(UIColor *)tintColor barTintColor:(UIColor *)barTintColor{
+    
+    UINavigationBar.appearance.tintColor = tintColor;
+    UINavigationBar.appearance.barTintColor = barTintColor;
+//    [UINavigationBar.appearance setBackgroundImage:UIImageColor(barTintColor) forBarMetrics:UIBarMetricsDefault];
+//    [UINavigationBar.appearance setShadowImage:UIImageColor(barTintColor)];
+    UINavigationBar.appearance.titleTextAttributes = @{NSForegroundColorAttributeName: tintColor,};
+    return;
+
+    NSDictionary *attDic = @{NSForegroundColorAttributeName: UIColor.blackColor,};
+    UIBarButtonItem *speacilItem = [UIBarButtonItem appearanceWhenContainedInInstancesOfClasses:@[UIImagePickerController.class, UIDocumentPickerViewController.class]];
+    [speacilItem setTitleTextAttributes:attDic forState:UIControlStateNormal];
+
+//    [UIBarButtonItem.appearance setTitleTextAttributes:@{NSForegroundColorAttributeName: UIColor.whiteColor,} forState: UIControlStateNormal];
+//    [UIBarButtonItem appearanceWhenContainedInInstancesOfClasses: @[UISearchBar.class]];
+    
+    
+    UIButton *speacilButton = [UIButton appearanceWhenContainedInInstancesOfClasses:@[UINavigationBar.class, ]];
+    [speacilButton setTitleColor:tintColor forState:UIControlStateNormal];
+    speacilButton.titleLabel.adjustsFontSizeToFitWidth = true;
+    speacilButton.imageView.contentMode = UIViewContentModeScaleAspectFit;
+    speacilButton.exclusiveTouch = true;
+    speacilButton.adjustsImageWhenHighlighted = false;
+    
+    
+    [UIButton.appearance setTitleColor:UIColor.blackColor forState:UIControlStateNormal];
+    UIButton.appearance.titleLabel.adjustsFontSizeToFitWidth = true;
+    UIButton.appearance.imageView.contentMode = UIViewContentModeScaleAspectFit;
+    UIButton.appearance.exclusiveTouch = true;
+    UIButton.appearance.adjustsImageWhenHighlighted = false;
+    
+    
+    UISegmentedControl *speacilSegmentedControl = [UISegmentedControl appearanceWhenContainedInInstancesOfClasses:@[UINavigationBar.class, ]];
+    speacilSegmentedControl.tintColor = tintColor;
+    [speacilSegmentedControl setTitleTextAttributes:@{NSForegroundColorAttributeName: tintColor} forState:UIControlStateNormal];
+    [speacilSegmentedControl setTitleTextAttributes:@{NSForegroundColorAttributeName: barTintColor} forState:UIControlStateSelected];
+
+    UISegmentedControl.appearance.tintColor = tintColor;
+
+    
+    UIScrollView.appearance.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
+    UIScrollView.appearance.keyboardDismissMode = UIScrollViewKeyboardDismissModeOnDrag;
+    UIScrollView.appearance.showsHorizontalScrollIndicator = false;
+    UIScrollView.appearance.exclusiveTouch = true;
+    if (@available(iOS 11.0, *)) {
+        UIScrollView.appearance.contentInsetAdjustmentBehavior = UIScrollViewContentInsetAdjustmentNever;
+    }
+    
+    
+    UITableView.appearance.separatorStyle = UITableViewCellSeparatorStyleSingleLine;
+    UITableView.appearance.separatorInset = UIEdgeInsetsZero;
+    UITableView.appearance.rowHeight = 60;
+    UITableView.appearance.backgroundColor = UIColor.groupTableViewBackgroundColor;
+    if (@available(iOS 11.0, *)) {
+        UITableView.appearance.estimatedRowHeight = 0.0;
+        UITableView.appearance.estimatedSectionHeaderHeight = 0.0;
+        UITableView.appearance.estimatedSectionFooterHeight = 0.0;
+    }
+    
+    
+    UITableViewCell.appearance.layoutMargins = UIEdgeInsetsZero;
+    UITableViewCell.appearance.separatorInset = UIEdgeInsetsZero;
+    UITableViewCell.appearance.selectionStyle = UITableViewCellSelectionStyleNone;
+    UITableViewCell.appearance.backgroundColor = UIColor.whiteColor;
+
+    
+    UICollectionView.appearance.scrollsToTop = false;
+    UICollectionView.appearance.pagingEnabled = false;
+
+    
+    UICollectionViewCell.appearance.layoutMargins = UIEdgeInsetsZero;
+    UICollectionViewCell.appearance.backgroundColor = UIColor.whiteColor;
+    
+    
+    UIImageView.appearance.userInteractionEnabled = true;
+    
+    
+    UILabel.appearance.userInteractionEnabled = true;
+
+    
+    UIPageControl.appearance.pageIndicatorTintColor = barTintColor;
+    UIPageControl.appearance.currentPageIndicatorTintColor = tintColor;
+    UIPageControl.appearance.userInteractionEnabled = true;
+    UIPageControl.appearance.hidesForSinglePage = true;
+    
+    
+    UIProgressView.appearance.progressTintColor = barTintColor;
+    UIProgressView.appearance.trackTintColor = UIColor.clearColor;
+    
+    
+    UIDatePicker.appearance.datePickerMode = UIDatePickerModeDate;
+    UIDatePicker.appearance.locale = [NSLocale localeWithLocaleIdentifier:@"zh_CN"];
+    UIDatePicker.appearance.backgroundColor = UIColor.whiteColor;
+    if (@available(iOS 13.4, *)) {
+        UIDatePicker.appearance.preferredDatePickerStyle = UIDatePickerStyleWheels;
+    }
+    
+    
+    UISlider.appearance.minimumTrackTintColor = tintColor;
+    UISlider.appearance.autoresizingMask = UIViewAutoresizingFlexibleWidth;
+
+
+    UISwitch.appearance.onTintColor = tintColor;
+    UISwitch.appearance.autoresizingMask = UIViewAutoresizingFlexibleWidth;
 }
 
 @end

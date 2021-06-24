@@ -89,13 +89,15 @@
 
 - (void)handleActionBtn:(UIBarButtonItem *)sender{
     if ([sender.title isEqualToString:@"Excel"]) {
-        [self.navigationController pushVC:@"NNExcelController" animated:true block:^(__kindof UIViewController * _Nonnull vc) {
-            
-        }];
-    }else{
-        [self.navigationController pushVC:@"NNShareViewController" animated:true block:^(__kindof UIViewController * _Nonnull vc) {
-            
-        }];
+
+        UIViewController *vc = [[NSClassFromString(@"NNExcelController") alloc]init];
+        vc.title = @"NNExcel";
+        [self.navigationController pushViewController:vc animated:true];
+    } else {
+
+        UIViewController *vc = [[NSClassFromString(@"NNShareViewController") alloc]init];
+        vc.title = @"NNShareView";
+        [self.navigationController pushViewController:vc animated:true];
     }
     
 }
@@ -138,7 +140,7 @@
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath{
     
-    UICTViewCellTwo * cell = [UICTViewCellTwo viewWithCollectionView:collectionView indexPath:indexPath];
+    UICTViewCellTwo * cell = [UICTViewCellTwo dequeueReusableCell:collectionView indexPath:indexPath];
     cell.label.text = NSStringFromIndexPath(indexPath);
     cell.labelSub.text = [NSString stringWithFormat:@"%@,%@",NSStringFromIndexPath(indexPath),@"sub"];
     cell.label.textAlignment = NSTextAlignmentLeft;
@@ -168,7 +170,7 @@
 }
 
 - (UICollectionReusableView *)collectionView:(UICollectionView *)collectionView viewForSupplementaryElementOfKind:(NSString *)kind atIndexPath:(NSIndexPath *)indexPath{
-    UICTReusableViewZero * view = [UICTReusableViewZero viewWithCollectionView:collectionView indexPath:indexPath kind:kind];
+    UICTReusableViewZero * view = [UICTReusableViewZero dequeueSupplementaryView:collectionView indexPath:indexPath kind:kind];
     NSString * titleHeader = [NSString stringWithFormat:@"HeaderView_%@",@(indexPath.section)];
     NSString * titleFooter = [NSString stringWithFormat:@"FooterView_%@",@(indexPath.section)];
     view.label.text = [kind isEqualToString:UICollectionElementKindSectionHeader]  ? titleHeader: titleFooter;

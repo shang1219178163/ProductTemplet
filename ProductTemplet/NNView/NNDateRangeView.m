@@ -9,7 +9,7 @@
 #import "NNDateRangeView.h"
 
 #import <NNGloble/NNGloble.h>
-#import "NSDateFormatter+Helper.h"
+#import "NSDate+Helper.h"
 #import "UIView+Helper.h"
 #import "NSString+Helper.h"
 
@@ -36,7 +36,7 @@
         [self addSubview:self.labEnd];
         [self addSubview:self.labLine];
         
-        self.dateStart = self.dateEnd = [NSDateFormatter stringFromDate:NSDate.date fmt:kFormatDate];
+        self.dateStart = self.dateEnd = [NSDateFormatter stringFromDate:NSDate.date fmt:kDateFormat];
                 
     }
     return self;
@@ -144,7 +144,7 @@
             view.maximumDate = NSDate.distantFuture;
             view.title = @"请选择时间";
             view.block = ^(UIDatePicker *datePicker, NSInteger btnIndex) {
-                NSString * dateStr = [NSDateFormatter stringFromDate:datePicker.date fmt:kFormatDate];
+                NSString * dateStr = [NSDateFormatter stringFromDate:datePicker.date fmt:kDateFormat];
                 self.dateStart = dateStr;
                 if (self.block) {
                     self.block(self);
@@ -164,7 +164,7 @@
             view.maximumDate = NSDate.distantFuture;
             view.title = @"请选择时间";
             view.block = ^(UIDatePicker *datePicker, NSInteger btnIndex) {
-                NSString * dateStr = [NSDateFormatter stringFromDate:datePicker.date fmt:kFormatDate];
+                NSString * dateStr = [NSDateFormatter stringFromDate:datePicker.date fmt:kDateFormat];
                 self.dateEnd = dateStr;
                 if (self.block) {
                     self.block(self);

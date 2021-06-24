@@ -96,10 +96,10 @@
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-    NSDictionary * dict = self.dataList[indexPath.row];
-    [self.navigationController pushVC:dict[kItemController] animated:true block:^(__kindof UIViewController * _Nonnull vc) {
-        vc.title = dict[kItemTitle];
-    }];
+    NSDictionary * dict = self.dataList[indexPath.row];    
+    UIViewController *vc = [[NSClassFromString(dict[kItemController]) alloc]init];
+    vc.title = dict[kItemTitle];
+    [self.navigationController pushViewController:vc animated:true];
 }
 
 //-(NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section{
