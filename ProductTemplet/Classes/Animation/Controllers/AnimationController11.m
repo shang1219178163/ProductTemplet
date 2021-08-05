@@ -21,10 +21,8 @@
     // Do any additional setup after loading the view.
     self.edgesForExtendedLayout = UIRectEdgeNone;
     self.view.backgroundColor = UIColor.whiteColor;
-    self.
-    // Do any additional setup after loading the view.
-    self.edgesForExtendedLayout = UIRectEdgeNone;
-    self.view.backgroundColor = UIColor.whiteColor;title=@"圆形加载动画";
+    
+    self.title=@"圆形加载动画";
     
     //加载动画 范围0-1 可用于下载时显示
     [self animation1:.8];

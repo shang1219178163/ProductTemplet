@@ -194,7 +194,7 @@
             cell.hasAsterisk = [value0 hasPrefix:@"*"];
             cell.labelLeft.text = value0;
             [cell.sliderView.sliderCtl addActionHandler:^(UISlider * _Nonnull sender) {
-                DDLog(@"%@", @(sender.value));
+//                DDLog(@"%@", @(sender.value));
             } forControlEvents:UIControlEventValueChanged];
 
             [cell getViewLayer];
