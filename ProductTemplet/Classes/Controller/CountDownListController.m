@@ -20,8 +20,10 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+
     // Do any additional setup after loading the view.
-    
+    self.edgesForExtendedLayout = UIRectEdgeNone;
+    self.view.backgroundColor = UIColor.whiteColor;  
     self.dataList = @[@"不分组",@"分组",@"时间 -"].mutableCopy;
     
     for (NSInteger i = 0; i < self.dataList.count; i++) {

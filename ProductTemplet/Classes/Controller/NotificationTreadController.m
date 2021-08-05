@@ -22,7 +22,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-        
+    self.edgesForExtendedLayout = UIRectEdgeNone;
+    self.view.backgroundColor = UIColor.whiteColor;    
     NSLog(@"current thread = %@", NSThread.currentThread);
     
     // 初始化

@@ -23,7 +23,9 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+    self.edgesForExtendedLayout = UIRectEdgeNone;
+    self.view.backgroundColor = UIColor.whiteColor;
+// Do any additional setup after loading the view, typically from a nib.
     self.title = @"球体";
     self.edgesForExtendedLayout = NO;
     

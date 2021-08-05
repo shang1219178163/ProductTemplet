@@ -183,7 +183,7 @@
             [view setTitle:@"请选择" forState:UIControlStateNormal];
             view.frame = CGRectMake(0, 0, 150, 35);
             [view setTitleColor:UIColor.whiteColor forState:UIControlStateNormal];
-            [view setImage:UIImageNamed(kIMG_arrowDown) forState:UIControlStateNormal];
+            [view setImage:UIImage.img_arrowDown_black forState:UIControlStateNormal];
             
             view.adjustsImageWhenHighlighted = false;
             

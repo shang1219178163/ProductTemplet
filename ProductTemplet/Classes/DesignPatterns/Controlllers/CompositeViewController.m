@@ -27,6 +27,10 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    self.edgesForExtendedLayout = UIRectEdgeNone;
+    self.view.backgroundColor = UIColor.whiteColor;
+    
     CompanyComponent *root = [[CompanyComponent alloc] initWithCompanyName:@"嘟嘟牛科技有限公司"];
     // 添加一个叶子节点
     [root addCompany:[[CompanyLeaf alloc] initWithCompanyName:@"嘟嘟牛人力资源部"]];

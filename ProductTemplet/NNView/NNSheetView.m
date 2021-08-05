@@ -28,7 +28,7 @@
         self.textField.placeholder = @"请选择";
         self.textField.textAlignment = NSTextAlignmentCenter;
 
-        self.textField.rightView = [self.textField asoryView:kIMG_arrowDown];
+        self.textField.rightView = [self.textField asoryImageView:UIImage.img_arrowDown_black];
         self.textField.rightViewMode = UITextFieldViewModeAlways;
         self.textField.enabled = false;
         

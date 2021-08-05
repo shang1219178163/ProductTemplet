@@ -78,8 +78,8 @@
         //        _numberBtnLeft.delegate = self;
         // 初始化时隐藏减按钮
         //        _numberBtnLeft.decreaseHide = YES;
-        _numberBtnLeft.increaseImage = [UIImage imageNamed:kIMG_elemetInc];
-        _numberBtnLeft.decreaseImage = [UIImage imageNamed:kIMG_elemetDec];
+        _numberBtnLeft.increaseImage = UIImage.img_elemet_increase;
+        _numberBtnLeft.decreaseImage = UIImage.img_elemet_decrease;
         _numberBtnLeft.tag = kTAG_BTN;
     }
     return _numberBtnLeft;
@@ -91,8 +91,8 @@
         //        _numberBtnLeft.delegate = self;
         // 初始化时隐藏减按钮
         //        _numberBtnRight.decreaseHide = YES;
-        _numberBtnRight.increaseImage = [UIImage imageNamed:kIMG_elemetInc];
-        _numberBtnRight.decreaseImage = [UIImage imageNamed:kIMG_elemetDec];
+        _numberBtnRight.increaseImage = UIImage.img_elemet_increase;
+        _numberBtnRight.decreaseImage = UIImage.img_elemet_decrease;
         _numberBtnRight.tag = kTAG_BTN+1;
         
     }

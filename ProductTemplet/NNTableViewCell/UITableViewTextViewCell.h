@@ -16,6 +16,8 @@
  */
 @interface UITableViewTextViewCell : UITableViewCell<UITextViewDelegate>
 
+@property (nonatomic, assign) BOOL hasAsterisk;
+
 @property (nonatomic, assign) NSInteger wordCount;
 @property (nonatomic, strong) NSNumber *type;
 @property (nonatomic, strong) void(^block)(UITableViewTextViewCell *view, UITextView * textView);

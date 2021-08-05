@@ -16,7 +16,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
+    self.edgesForExtendedLayout = UIRectEdgeNone;
+    self.view.backgroundColor = UIColor.whiteColor;
     NSLog(@"shapeLayer基本使用");
     
     [self.view.layer addSublayer:self.shapeLayer];

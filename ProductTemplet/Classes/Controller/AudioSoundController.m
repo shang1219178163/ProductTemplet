@@ -12,7 +12,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
+    self.edgesForExtendedLayout = UIRectEdgeNone;
+    self.view.backgroundColor = UIColor.whiteColor;
     [self.view addSubview:self.tbView];
     
     self.keys = [self.dic.allKeys sortedArrayUsingSelector:@selector(compare:)];

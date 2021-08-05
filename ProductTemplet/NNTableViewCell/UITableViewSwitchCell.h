@@ -15,6 +15,8 @@
  */
 @interface UITableViewSwitchCell : UITableViewCell
 
+@property (nonatomic, assign) BOOL hasAsterisk;
+
 @property (nonatomic, strong) NNSwitchView *switchView;
 
 @end

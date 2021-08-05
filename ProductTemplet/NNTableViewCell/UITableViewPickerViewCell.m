@@ -30,8 +30,9 @@
 
 -(void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary<NSKeyValueChangeKey,id> *)change context:(void *)context{
     if ([keyPath isEqualToString:@"text"]) {
-        self.chooseView.labelLeft.attributedText = [self.chooseView.labelLeft.text toAsterisk];;
-        
+        if (self.hasAsterisk) {
+            [self.labelLeft appendAsteriskPrefix];
+        }
     }
 }
 

@@ -23,6 +23,9 @@
 #pragma mark - Life Cycle
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.edgesForExtendedLayout = UIRectEdgeNone;
+    self.view.backgroundColor = UIColor.whiteColor;
+    
     self.view.backgroundColor = [UIColor lightGrayColor];
     self.navigationItem.title = @"page";
     [self.view addSubview:self.ctView];

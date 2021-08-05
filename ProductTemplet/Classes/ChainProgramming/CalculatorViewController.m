@@ -17,7 +17,11 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+
     // Do any additional setup after loading the view, typically from a nib.
+    self.edgesForExtendedLayout = UIRectEdgeNone;
+    self.view.backgroundColor = UIColor.whiteColor;
+    
     int result =  [NSObject zz_makeCalcuclate:^(Calculator *manager) {
        //在这里面实现存放计算代码
         //5+5

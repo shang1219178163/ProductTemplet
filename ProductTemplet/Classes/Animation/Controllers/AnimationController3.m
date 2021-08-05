@@ -16,7 +16,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
+    self.edgesForExtendedLayout = UIRectEdgeNone;
+    self.view.backgroundColor = UIColor.whiteColor;
     [self.view.layer addSublayer:self.shapeLayer];
 
     NSLog(@"利用CAShapeLayer做一个旋转loading动画");

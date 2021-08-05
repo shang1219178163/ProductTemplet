@@ -31,7 +31,9 @@
 - (void)viewDidLoad {
     
     [super viewDidLoad];
-    //发送语音认证请求(首先要判断设备是否支持语音识别功能)
+    self.edgesForExtendedLayout = UIRectEdgeNone;
+    self.view.backgroundColor = UIColor.whiteColor;
+//发送语音认证请求(首先要判断设备是否支持语音识别功能)
 //    [self requestJurisdiction];
 
     [UIApplication privacy:PrivacyTypeSpeech handler:^(BOOL response, NSString *name) {

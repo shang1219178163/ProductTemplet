@@ -18,7 +18,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
+    self.edgesForExtendedLayout = UIRectEdgeNone;
+    self.view.backgroundColor = UIColor.whiteColor;
     self.title = @"PopoverView";
     
     UIBarButtonItem *backItem = [[UIBarButtonItem alloc]initWithTitle:@"返回" style: UIBarButtonItemStylePlain target:self action:@selector( backBarItemAction:)];

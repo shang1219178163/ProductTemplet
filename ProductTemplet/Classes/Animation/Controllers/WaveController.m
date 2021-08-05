@@ -17,16 +17,20 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+
     // Do any additional setup after loading the view.
-    UIView * containView = ({
+    self.edgesForExtendedLayout = UIRectEdgeNone;
+    self.view.backgroundColor = UIColor.whiteColor;
+    
+    UIView *containView = ({
         UIView *view = [[UIView alloc]initWithFrame:CGRectMake(20, 20, kScreenWidth - 40, 200)];
         view.backgroundColor = UIColor.blueColor;
         
         view;
     });
     [self.view addSubview:containView];
-    self.view.backgroundColor = UIColor.lightGrayColor;
-    WaterView * v = [[WaterView alloc] initWithFrame:CGRectMake(0, 100, kScreenWidth - 40, 100)];
+
+    WaterView *v = [[WaterView alloc] initWithFrame:CGRectMake(0, 100, kScreenWidth - 40, 100)];
     [containView addSubview:v];
 }
 

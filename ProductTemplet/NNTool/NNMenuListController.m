@@ -42,8 +42,10 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+
     // Do any additional setup after loading the view.
-    
+    self.edgesForExtendedLayout = UIRectEdgeNone;
+    self.view.backgroundColor = UIColor.whiteColor;  
     self.view.backgroundColor = UIColor.greenColor;
     
 //    [self configureMenuList];
@@ -61,8 +63,9 @@
 }
 
 - (void)configureMenuList{
-    NSArray * menuList = [NSArray arrayItemPrefix:@"工厂_" startIndex:1 count:10];
-    
+    NSArray *menuList = [NSArray arrayWithCount:9 generator:^id _Nonnull(NSUInteger idx) {
+        return [NSString stringWithFormat:@"工厂__%@", @(idx+1)];
+    }];
     self.navigationItem.titleView = self.btnView;
     
     self.btnView.label.text = [menuList firstObject];

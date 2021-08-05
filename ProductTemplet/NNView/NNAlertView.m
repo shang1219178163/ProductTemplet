@@ -35,8 +35,9 @@
         self.tableView.delegate = self;
         self.tableView.dataSource = self;
         
-        self.dataList = [NSArray arrayItemPrefix:@"工厂_" startIndex:1 count:26];
-
+        self.dataList = [NSArray arrayWithCount:25 generator:^id _Nonnull(NSUInteger idx) {
+            return [NSString stringWithFormat:@"工厂__%@", @(idx+1)];
+        }];
     }
     return self;
 }

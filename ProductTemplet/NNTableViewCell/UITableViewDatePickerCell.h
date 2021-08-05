@@ -16,6 +16,8 @@
  */
 @interface UITableViewDatePickerCell : UITableViewCell
 
+@property (nonatomic, assign) BOOL hasAsterisk;
+
 @property (nonatomic, strong) NNDatePicker * datePicker;
 
 @property (nonatomic, strong) void(^block)(UITableViewDatePickerCell *view, NSString * dateStr);

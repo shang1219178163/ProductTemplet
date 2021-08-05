@@ -68,7 +68,7 @@ inhibit_all_warnings!
    
 #   pod 'LookinServer', :configurations => ['Debug']
 #   pod 'EchoSDK', :configurations => ["Debug"]
-#    pod 'Reveal-SDK', :configurations => ['Debug']
+    pod 'Reveal-SDK', :configurations => ['Debug']
 
  end
 

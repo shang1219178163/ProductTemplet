@@ -33,7 +33,9 @@
 #pragma mark -observe
 -(void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary<NSKeyValueChangeKey,id> *)change context:(void *)context{
     if ([keyPath isEqualToString:@"text"]) {
-        self.sheetView.labelLeft.attributedText = [self.sheetView.labelLeft.text toAsterisk];
+        if (self.hasAsterisk) {
+            [self.sheetView.labelLeft appendAsteriskPrefix];
+        }
     }
 }
 

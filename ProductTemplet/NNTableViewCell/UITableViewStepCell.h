@@ -16,6 +16,8 @@
  */
 @interface UITableViewStepCell : UITableViewCell
 
+@property (nonatomic, assign) BOOL hasAsterisk;
+
 @property (nonatomic, strong) PPNumberButton * ppBtn;
 
 @end

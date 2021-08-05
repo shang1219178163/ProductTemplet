@@ -45,18 +45,21 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+
     // Do any additional setup after loading the view.
+    self.edgesForExtendedLayout = UIRectEdgeNone;
+    self.view.backgroundColor = UIColor.whiteColor;
+    
     NSInteger idx = 3;
     switch (idx) {
         case 0:
         {
-            NSArray *list = [NSArray arrayItemPrefix:@"item_" startIndex:0 count:16];
+            NSArray *list = [NSArray arrayWithCount:12 generator:^id _Nonnull(NSUInteger idx) {
+                return [NSString stringWithFormat:@"item_%@", @(idx)];
+            }];
+
             self.itemsView.frame = CGRectMake(20, 20, kScreenWidth - 40, kScreenWidth - 40);
             self.itemsView.items = list;
-            //    [self.view addSubview: self.itemsView];
-            
-            self.itemsView.items = list = [NSArray arrayItemPrefix:@"item_" startIndex:0 count:12];;
-
         }
             break;
         case 1:
@@ -70,7 +73,7 @@
             self.defaultView.frame = CGRectMake(0, 0, kScreenWidth, 60);
             [self.view addSubview:self.defaultView];
 
-            NSArray * list = @[self.dateRangeView, self.sliderView, self.switchView, self.sheetView, self.chooseView,self.searchView];
+            NSArray *list = @[self.dateRangeView, self.sliderView, self.switchView, self.sheetView, self.chooseView,self.searchView];
             CGRect rect = self.defaultView.frame;
             for (UIView * view in list) {
                 rect = CGRectMake(0, CGRectGetMaxY(rect), kScreenWidth, 60);

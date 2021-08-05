@@ -24,7 +24,9 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+
     // Do any additional setup after loading the view.
+    self.edgesForExtendedLayout = UIRectEdgeNone;
     self.view.backgroundColor = UIColor.whiteColor;
     
     self.circleRadius = 50;
@@ -36,7 +38,7 @@
     @weakify(self);
     [self.circleView addGestureTap:^(UITapGestureRecognizer * _Nonnull reco) {
         @strongify(self);
-        NSArray * list = @[@"bezierSystemAnimation",@"bezierCustomAnimation1",@"bezierCustomAnimation2",@"dampingSystemAnimation",@"dampingCustomeAnimation",];
+        NSArray *list = @[@"bezierSystemAnimation",@"bezierCustomAnimation1",@"bezierCustomAnimation2",@"dampingSystemAnimation",@"dampingCustomeAnimation",];
         [UIAlertController createSheetTitle:@"请选择"
                                     message:@"提示信息"
                                actionTitles:list

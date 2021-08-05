@@ -15,6 +15,8 @@
  */
 @interface UITableViewTextFieldCell : UITableViewCell<UITextFieldDelegate>
 
+@property (nonatomic, assign) BOOL hasAsterisk;
+
 @property (nonatomic, strong) void(^block)(UITableViewTextFieldCell *view, UITextField * textField);
 
 @end

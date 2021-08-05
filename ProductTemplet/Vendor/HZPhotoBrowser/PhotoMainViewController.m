@@ -27,8 +27,11 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+
     // Do any additional setup after loading the view.
     self.edgesForExtendedLayout = UIRectEdgeNone;
+    self.view.backgroundColor = UIColor.whiteColor;
+    
     self.automaticallyAdjustsScrollViewInsets = NO;
     
     self.title = @"图片浏览";

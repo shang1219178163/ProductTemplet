@@ -30,7 +30,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
+    self.edgesForExtendedLayout = UIRectEdgeNone;
+    self.view.backgroundColor = UIColor.whiteColor;
     [self.view addSubview: self.collectionView];
 
     self.dataList = @[@"one", @"two", @"three", @"four", @"five"].mutableCopy;

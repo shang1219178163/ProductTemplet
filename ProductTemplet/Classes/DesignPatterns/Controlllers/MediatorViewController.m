@@ -20,8 +20,10 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+
     // Do any additional setup after loading the view.
-    
+    self.edgesForExtendedLayout = UIRectEdgeNone;
+    self.view.backgroundColor = UIColor.whiteColor;  
     //从前，有家地产中介叫伟恒地产
     MediatorLJ *weihengMdr = [[MediatorLJ alloc] init];
     weihengMdr.name = @"伟恒地产";

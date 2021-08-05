@@ -19,8 +19,10 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+
     // Do any additional setup after loading the view.
-        
+    self.edgesForExtendedLayout = UIRectEdgeNone;
+    self.view.backgroundColor = UIColor.whiteColor;      
     self.dataList = @[@[@"AppIcon", @"默认",],
                       @[@"parkingOne", @"Parking",],
                       @[@"parkingWang", @"停车王",],
@@ -49,21 +51,20 @@
         @weakify(self);
         _plainView.blockCellForRow = ^UITableViewCell *(UITableView *tableView, NSIndexPath *indexPath) {
             @strongify(self);
-            NSArray * list = self.dataList[indexPath.row];
+            NSArray *list = self.dataList[indexPath.row];
             
-            //    UITableViewOneCell * cell = [UITableViewOneCell cellWithTableView:tableView];
-            UITableViewCell * cell = [UITableViewCell cellWithTableView:tableView];
+            UITableViewCell *cell = [UITableViewCell cellWithTableView:tableView];
             cell.imageView.image = [UIImage imageNamed:list[0]];
             cell.textLabel.text = list[1];
             cell.textLabel.textColor = UIColor.themeColor;
-            
+
             [cell getViewLayer];
             return cell;
         };
         
         _plainView.blockDidSelectRow = ^(UITableView *tableView, NSIndexPath *indexPath) {
             @strongify(self);
-            NSArray * list = self.dataList[indexPath.row];
+            NSArray *list = self.dataList[indexPath.row];
             [UIApplication setAppIconWithName:list[0]];
         
         };

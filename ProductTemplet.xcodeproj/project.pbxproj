@@ -82,6 +82,7 @@
 		141080B622D2E7D10011344E /* AnniSuperController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1410809D22D2E7D10011344E /* AnniSuperController.m */; };
 		141080B722D2E7D10011344E /* AnimationListController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1410809E22D2E7D10011344E /* AnimationListController.m */; };
 		1415825722DDB88100643BF6 /* excel.geojson in Resources */ = {isa = PBXBuildFile; fileRef = 1415825622DDB88100643BF6 /* excel.geojson */; };
+		141C1F6C268477C500A120EF /* UINavigationController+HookNew.m in Sources */ = {isa = PBXBuildFile; fileRef = 141C1F6B268477C500A120EF /* UINavigationController+HookNew.m */; };
 		141E2B90230637E700466008 /* NSArray+Tmp.m in Sources */ = {isa = PBXBuildFile; fileRef = 141E2B8F230637E600466008 /* NSArray+Tmp.m */; };
 		1421D5CD21F307F700635582 /* CustomViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1421D5CC21F307F700635582 /* CustomViewController.m */; };
 		1421D5D021F3177700635582 /* NNWalletView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1421D5CF21F3177700635582 /* NNWalletView.m */; };
@@ -786,6 +787,8 @@
 		1410809D22D2E7D10011344E /* AnniSuperController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AnniSuperController.m; sourceTree = "<group>"; };
 		1410809E22D2E7D10011344E /* AnimationListController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AnimationListController.m; sourceTree = "<group>"; };
 		1415825622DDB88100643BF6 /* excel.geojson */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = excel.geojson; sourceTree = "<group>"; };
+		141C1F6A268477C500A120EF /* UINavigationController+HookNew.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UINavigationController+HookNew.h"; sourceTree = "<group>"; };
+		141C1F6B268477C500A120EF /* UINavigationController+HookNew.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationController+HookNew.m"; sourceTree = "<group>"; };
 		141E2B8E230637E600466008 /* NSArray+Tmp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+Tmp.h"; sourceTree = "<group>"; };
 		141E2B8F230637E600466008 /* NSArray+Tmp.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+Tmp.m"; sourceTree = "<group>"; };
 		1421D5CB21F307F700635582 /* CustomViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CustomViewController.h; sourceTree = "<group>"; };
@@ -2850,6 +2853,8 @@
 				14B7CF6C2383D2F200AEF7BC /* UIImageView+Tmp.m */,
 				14C0814D25831BA000D3F360 /* UISearchController+Helper.h */,
 				14C0814E25831BA000D3F360 /* UISearchController+Helper.m */,
+				141C1F6A268477C500A120EF /* UINavigationController+HookNew.h */,
+				141C1F6B268477C500A120EF /* UINavigationController+HookNew.m */,
 				14CF392525B9668E00FBDBF7 /* NNButtonDispalyController.h */,
 				14CF392625B9668E00FBDBF7 /* NNButtonDispalyController.m */,
 				14EFF3FB25BA58AC00D82359 /* NNButtonGroupView.h */,
@@ -4344,6 +4349,7 @@
 				515CC97C20B6AAF2004AE27C /* AAPlotLinesElement.m in Sources */,
 				14107FBB22CDF9C80011344E /* KeyboardController.m in Sources */,
 				141080AA22D2E7D10011344E /* AnimationController1.m in Sources */,
+				141C1F6C268477C500A120EF /* UINavigationController+HookNew.m in Sources */,
 				516969AF20BCF9A800BAA53D /* AbstractClient.m in Sources */,
 				14E42CF22200040F00606AD0 /* NNSecondViewController.m in Sources */,
 				51364CA020860822005A20E7 /* UtilitiesDM.m in Sources */,

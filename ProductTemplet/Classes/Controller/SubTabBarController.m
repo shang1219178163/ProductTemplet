@@ -12,7 +12,8 @@
 
 - (void)viewDidLoad{
     [super viewDidLoad];
-    
+    self.edgesForExtendedLayout = UIRectEdgeNone;
+    self.view.backgroundColor = UIColor.whiteColor;
     NSArray *list = @[
                       @[@"NNFourthViewController",@"我的",@"Item_fourth_N",@"Item_fourth_H",@"13",],
                       @[@"NNFirstViewController",@"首页",@"Item_first_N",@"Item_first_H",@"0",],

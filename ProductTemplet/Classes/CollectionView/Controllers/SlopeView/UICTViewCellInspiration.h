@@ -8,7 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-//@class InspirationModel;
 @interface UICTViewCellInspiration : UICollectionViewCell
 
 @property (nonatomic,strong) UIView *containerview;
@@ -18,6 +17,4 @@
 @property (nonatomic,strong) UILabel *timeAndRoomLabel;
 @property (nonatomic,strong) UILabel *speakerLabel;
 
-//@property (nonatomic,strong) InspirationModel *model;
-//- (void)parallaxOffsetForCollectionBounds:(CGRect)collectionBounds;
 @end

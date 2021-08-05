@@ -354,7 +354,7 @@
 
 -(void)bindData{
     NSString *plistPath = [NSBundle.mainBundle pathForResource:@"area" ofType:@"plist"];
-    if (!plistPath) plistPath = [NSBundleFromParams(self.class, @"BNView") pathForResource:@"area" ofType:@"plist"];    
+    if (!plistPath) plistPath = [NSBundleFromName(@"BNView", @"BNView") pathForResource:@"area" ofType:@"plist"];    
     self.areaDic = [[NSDictionary alloc]initWithContentsOfFile:plistPath];
     
     NSArray *components = [self.areaDic allKeys];

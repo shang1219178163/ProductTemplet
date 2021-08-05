@@ -27,26 +27,29 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
-//    [self setupThridSDKWithOptions:launchOptions];
+//
     UIColor.themeColor = UIColor.orangeColor;
     UIColor.themeColor = UIColorHexValue(0x0082e0);
     [UIApplication setupAppearance:UIColor.whiteColor barTintColor:UIColor.themeColor];
     
-    UIViewController *controller = UIControllerFromString(@"HomeViewController");
-    UIViewController *controllerLeft = UIControllerFromString(@"NNLeftViewController");
-    UIViewController *controllerRight = UIControllerFromString(@"NNRightViewController");
-
-//    ZYSliderViewController *rootVC = [[ZYSliderViewController alloc]initWithMainViewController:controller
-//                                                                            leftViewController:controllerLeft
-//                                                                           rightViewController:controllerRight];
+//    UIViewController *vc = UIControllerFromString(@"HomeViewController");
+//    UIViewController *vcLeft = UIControllerFromString(@"NNLeftViewController");
+//    UIViewController *vcRight = UIControllerFromString(@"NNRightViewController");
+//    ZYSliderViewController *rootVC = [[ZYSliderViewController alloc]initWithMainViewController:vc
+//                                                                            leftViewController:vcLeft
+//                                                                           rightViewController:vcRight];
     
-//    controller = UIControllerFromString(@"WHKGroupViewViewController");
-//    controller = UIControllerFromString(@"LiveLikeController");
-//    controller = UIControllerFromString(@"SortViewController");
-//    controller = UIControllerFromString(@"FriendListController");
-    controller = UIControllerFromString(@"HomeViewController");
-//    controller = UIControllerFromString(@"TestViewController");
+//    vc = UIControllerFromString(@"WHKGroupViewViewController");
+//    vc = UIControllerFromString(@"LiveLikeController");
+//    vc = UIControllerFromString(@"SortViewController");
+//    vc = UIControllerFromString(@"FriendListController");
+//    vc = UIControllerFromString(@"HomeViewController");
+//    vc = UIControllerFromString(@"TestViewController");
     UIApplication.rootController = UIControllerFromString(@"HomeViewController");;
+    
+//    dispatch_async(dispatch_get_global_queue(0, 0), ^{
+//        [self setupThridSDKWithOptions:launchOptions];
+//    })
 
 //    controller = UIControllerFromString(@"LoginViewController");
 //    controller = UIControllerFromString(@"GroupViewController");

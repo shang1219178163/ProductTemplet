@@ -21,8 +21,10 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+
     // Do any additional setup after loading the view.
-    
+    self.edgesForExtendedLayout = UIRectEdgeNone;
+    self.view.backgroundColor = UIColor.whiteColor;  
 //    NSArray *list = @[@"Demo", @"这是一些测试", @"感兴趣", @"Xgao", @"非常喜欢", @"如果这一天真的来临", @"不喜欢", @"从前有座山", ];
     NSArray *list = @[@"感兴趣Xgao非常喜欢", @"这是一些测试", @"感兴趣Xgao非常喜欢", @"如果这一天真的来临", @"不喜欢", @"从前有座山", @"从前有座山",@"不喜欢", @"喜欢", ];
 

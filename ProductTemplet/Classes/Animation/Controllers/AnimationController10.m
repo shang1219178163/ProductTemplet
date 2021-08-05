@@ -18,8 +18,10 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+
     // Do any additional setup after loading the view.
-    
+    self.edgesForExtendedLayout = UIRectEdgeNone;
+    self.view.backgroundColor = UIColor.whiteColor;  
     _imgView=[[UIImageView alloc] init];
     //_testView.image=[UIImage imageNamed:@"WeiboshareImage"];
     _imgView.frame=CGRectMake(0, 200, 100, 100);

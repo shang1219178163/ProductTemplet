@@ -20,8 +20,10 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+
     // Do any additional setup after loading the view.
-    self.tbView.backgroundColor = UIColor.whiteColor;
+    self.edgesForExtendedLayout = UIRectEdgeNone;
+    self.view.backgroundColor = UIColor.whiteColor;
     //    [self.view addSubview:self.tableView];
     [self.view addSubview:self.plainView];
     
@@ -82,19 +84,20 @@
 - (NNTablePlainView *)plainView{
     if (!_plainView) {
         _plainView = [[NNTablePlainView alloc]init];
-        _plainView.tableView.rowHeight = 70;
+        _plainView.tableView.rowHeight = 50;
         
         @weakify(self);
         _plainView.blockCellForRow = ^UITableViewCell *(UITableView *tableView, NSIndexPath *indexPath) {
             @strongify(self);
-            NSArray * list = self.dataList[indexPath.row];
+            NSArray *list = self.dataList[indexPath.row];
             
             static NSString * identifier = @"UITableViewCell1";
             //    UITableViewOneCell * cell = [UITableViewOneCell cellWithTableView:tableView];
-            UITableViewCell * cell = [UITableViewCell cellWithTableView:tableView identifier:identifier style:UITableViewCellStyleSubtitle];
+            UITableViewCell *cell = [UITableViewCell cellWithTableView:tableView identifier:identifier style:UITableViewCellStyleSubtitle];
             cell.textLabel.text = list[1];
             cell.textLabel.textColor = UIColor.themeColor;
-            
+            cell.textLabel.font = [UIFont systemFontOfSize:15];
+
             cell.detailTextLabel.text = list[0];
             cell.detailTextLabel.textColor = UIColor.grayColor;
             cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;

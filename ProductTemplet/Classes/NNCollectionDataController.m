@@ -43,7 +43,8 @@
 
 -(void)viewDidLoad{
     [super viewDidLoad];
-    
+    self.edgesForExtendedLayout = UIRectEdgeNone;
+    self.view.backgroundColor = UIColor.whiteColor;
     [self addObserver:self forKeyPath:@"list" options:0 context:nil];
     [self.dataModel addObserver:self forKeyPath:@"array" options:NSKeyValueObservingOptionNew context:nil];
 

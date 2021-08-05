@@ -12,6 +12,8 @@
 #import "UIView+Helper.h"
 #import "UITextField+Helper.h"
 #import "NSString+Helper.h"
+#import "UILabel+Helper.h"
+
 
 //#define MAS_SHORTHAND
 //#define MAS_SHORTHAND_GLOBALS
@@ -36,7 +38,7 @@
         self.textField.placeholder = @"请选择";
         self.textField.textAlignment = NSTextAlignmentCenter;
         
-        self.textField.rightView = [self.textField asoryView:kIMG_arrowDown];
+        self.textField.rightView = [self.textField asoryImageView:UIImage.img_arrowDown_black];
         self.textField.rightViewMode = UITextFieldViewModeAlways;
         self.textField.enabled = false;
         
@@ -56,7 +58,9 @@
 #pragma mark -observe
 -(void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary<NSKeyValueChangeKey,id> *)change context:(void *)context{
     if ([keyPath isEqualToString:@"text"]) {
-        self.labelLeft.attributedText = [self.labelLeft.text toAsterisk];
+        if (self.hasAsterisk) {
+            [self.labelLeft appendAsteriskPrefix];
+        }
     }
 }
 

@@ -20,8 +20,10 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+
     // Do any additional setup after loading the view.
-    
+    self.edgesForExtendedLayout = UIRectEdgeNone;
+    self.view.backgroundColor = UIColor.whiteColor;  
     [self.view addSubview:self.plainView];
     
     self.dataList = @[
@@ -66,7 +68,7 @@
         @weakify(self);
         _plainView.blockCellForRow = ^UITableViewCell *(UITableView *tableView, NSIndexPath *indexPath) {
             @strongify(self);
-            NSArray * list = self.dataList[indexPath.row];
+            NSArray *list = self.dataList[indexPath.row];
 
             static NSString * identifier = @"UITableViewCell1";
             //    UITableViewOneCell * cell = [UITableViewOneCell cellWithTableView:tableView];

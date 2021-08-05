@@ -16,8 +16,10 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+
     // Do any additional setup after loading the view.
-    
+    self.edgesForExtendedLayout = UIRectEdgeNone;
+    self.view.backgroundColor = UIColor.whiteColor;  
     NSMutableArray *array = @[@24, @17, @85, @13, @9, @54, @76, @45, @5, @63].mutableCopy;
     DDLog(@"1_%@",[self sortBubbleArray:array isAscending:YES]);
     DDLog(@"2_%@",[self sortBubbleArray:array isAscending:NO]);

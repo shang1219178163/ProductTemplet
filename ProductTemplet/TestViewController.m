@@ -24,8 +24,10 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+
     // Do any additional setup after loading the view.
-    
+    self.edgesForExtendedLayout = UIRectEdgeNone;
+    self.view.backgroundColor = UIColor.whiteColor;  
     NSArray *list = [@[@"登录", @"设置", @"定时器",] map:^id _Nonnull(NSString * obj, NSUInteger idx) {
         UIBarButtonItem *item = [[UIBarButtonItem alloc]initWithTitle:obj style:UIBarButtonItemStylePlain target:self action:@selector(handleActionItem:)];
         item.tag = idx;
@@ -152,6 +154,7 @@
                 make.bottom.equalTo(labLast.bottom).offset(15);
                 
             }];
+
             [cell getViewLayer];
             return cell;
 
@@ -160,6 +163,7 @@
         case 2:
         {
             UITableViewCell *cell = [UITableViewCell cellWithTableView:tableView];
+
             [cell getViewLayer];
             return cell;
         }

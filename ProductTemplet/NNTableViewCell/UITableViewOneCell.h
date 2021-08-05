@@ -16,6 +16,8 @@
  */
 @interface UITableViewOneCell : UITableViewCell
 
+@property (nonatomic, assign) BOOL hasAsterisk;
+
 @property (nonatomic, strong) NSNumber * type;//0,labelRight右对齐;1左对齐
 
 @end

@@ -16,7 +16,11 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+
     // Do any additional setup after loading the view.
+    self.edgesForExtendedLayout = UIRectEdgeNone;
+    self.view.backgroundColor = UIColor.whiteColor;
+    
     NSArray *array3 = @[@"JinYiPang", @"JinErPang", @"JinSanPang", @"JinYiPang", @"JinErPang",@"JinZhengEn"];
     NSLog(@"array3 = %@", [array3 valueForKeyPath:@"@distinctUnionOfObjects.self"]);
     

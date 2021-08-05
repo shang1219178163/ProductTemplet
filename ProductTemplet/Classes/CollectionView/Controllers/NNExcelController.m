@@ -21,22 +21,20 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+
     // Do any additional setup after loading the view.
-    self.edgesForExtendedLayout = NO;
+    self.edgesForExtendedLayout = UIRectEdgeNone;
     self.view.backgroundColor = UIColor.whiteColor;
-    self.view.backgroundColor = UIColor.greenColor;
 
     self.title = NSStringFromClass([self class]);
-
 }
 
 -(void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
     
 //    [self.navigationController setupBarClearColor:YES];
-    UIView * barImageView = self.navigationController.navigationBar.subviews.firstObject;
-    barImageView.alpha = 0.0;
-    
+//    UIView * barImageView = self.navigationController.navigationBar.subviews.firstObject;
+//    barImageView.alpha = 0.0;
     
     [self setupInitData];
     
@@ -47,7 +45,7 @@
     [super viewWillDisappear:animated];
 
 //    [self.navigationController setupBarClearColor:NO];
-    UIView * barImageView = self.navigationController.navigationBar.subviews.firstObject;
+    UIView *barImageView = self.navigationController.navigationBar.subviews.firstObject;
     barImageView.alpha = 1;
 }
 

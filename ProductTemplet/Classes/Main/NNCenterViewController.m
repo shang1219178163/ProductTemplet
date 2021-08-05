@@ -25,8 +25,10 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+
     // Do any additional setup after loading the view.
-    
+    self.edgesForExtendedLayout = UIRectEdgeNone;
+    self.view.backgroundColor = UIColor.whiteColor;    
     [self createBarItem:@"弹窗" isLeft:true handler:^(UIButton *sender) {
         PopoverViewExampleController *controlller = [[PopoverViewExampleController alloc]init];
         [self.navigationController pushViewController:controlller animated:true];
@@ -104,7 +106,10 @@
 #pragma mark -funtions
 - (void)setupSearchBar {
     [super viewDidLoad];
+
     // Do any additional setup after loading the view.
+    self.edgesForExtendedLayout = UIRectEdgeNone;
+    self.view.backgroundColor = UIColor.whiteColor;
     
 //    [UIApplication setupAppearanceSearchbarCancellButton];
     self.searchBar = ({
@@ -181,12 +186,12 @@
 - (NNTablePlainView *)plainView{
     if (!_plainView) {
         _plainView = [[NNTablePlainView alloc]initWithFrame:self.view.bounds];
-        _plainView.tableView.rowHeight = 60;
+        _plainView.tableView.rowHeight = 50;
         
         @weakify(self);
         _plainView.blockCellForRow = ^UITableViewCell *(UITableView *tableView, NSIndexPath *indexPath) {
             @strongify(self);
-            NSArray * list = self.dataList[indexPath.row];
+            NSArray *list = self.dataList[indexPath.row];
 
             static NSString * identifier = @"UITableViewCell1";
             //    UITableViewOneCell * cell = [UITableViewOneCell cellWithTableView:tableView];
@@ -227,49 +232,35 @@
 -(NSArray *)filterList{
     if (!_filterList) {
         _filterList = @[
-                        @{kItemHeader:   @"时间",
-//                            kItemFooter:   @"footer_0",
-                            kItemObj:   @[          @"天数",],
-                            kItemObjSeleted:   @[          @(YES),].mutableCopy,
-                            
+                        @{kItemHeader: @"时间",
+//                            kItemFooter: @"footer_0",
+                            kItemObj: @[@"天数",],
+                            kItemObjSeleted: @[ @(YES),].mutableCopy,
                             },
-                            @{kItemHeader:   @"栏位",
-//                                kItemFooter:   @"footer_1",
-                                kItemObj:   @[              @"栏位",
-                                        
-                                        ],
-                                kItemObjSeleted:   @[              @(YES),
-
-                                        ].mutableCopy,
+                            @{kItemHeader: @"栏位",
+//                                kItemFooter: @"footer_1",
+                                kItemObj: @[@"栏位",],
+                                kItemObjSeleted: @[ @(YES), ].mutableCopy,
                                 
                                 },
-                            @{
-                                kItemHeader:   @"性别",
-//                                kItemFooter:   @"footer_2",
-                                kItemObj:   @[              @"母猪",
-                                        
-                                        ],
-                                kItemObjSeleted:   @[              @(YES),
-
-                                        ].mutableCopy,
+                            @{kItemHeader: @"性别",
+//                                kItemFooter: @"footer_2",
+                                kItemObj: @[@"母猪", ],
+                                kItemObjSeleted: @[ @(YES), ].mutableCopy,
                                 
                                 },
-                            @{
-                                kItemHeader:   @"状态",
-//                                kItemFooter:   @"footer_2",
-                                kItemObj:   @[              @"后备", @"妊娠", @"哺乳",
+                            @{kItemHeader: @"状态",
+//                                kItemFooter: @"footer_2",
+                                kItemObj: @[@"后备", @"妊娠", @"哺乳",
                                         @"返情空怀", @"B超鉴定空怀", @"流产空怀",
                                         @"断奶空怀",
                                         
                                         ],
-                                kItemObjSeleted:   @[              @(YES),@(NO),@(NO),
+                                kItemObjSeleted: @[ @(YES),@(NO),@(NO),
                                         @(NO),@(NO),@(NO),
                                         @(NO),
-                                        
                                         ].mutableCopy,
-                                
                                 },
-        
                         ];
     }
     return _filterList;

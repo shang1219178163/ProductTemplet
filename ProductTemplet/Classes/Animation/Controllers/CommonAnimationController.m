@@ -16,9 +16,10 @@
 
 - (void)viewDidLoad{
     [super viewDidLoad];
-    self.title = @"常见动画示例";
+    
     self.edgesForExtendedLayout = UIRectEdgeNone;
-    self.view.backgroundColor = UIColor.cyanColor;
+    self.view.backgroundColor = UIColor.whiteColor;
+    self.title = @"常见动画示例";
     
     UIButton *btn = [[UIButton alloc] initWithFrame:CGRectMake((self.view.bounds.size.width - 100) / 2.0, 50, 100, 40)];
     btn.backgroundColor = [UIColor lightGrayColor];

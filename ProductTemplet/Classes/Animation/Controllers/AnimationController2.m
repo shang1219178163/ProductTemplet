@@ -16,7 +16,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
+    self.edgesForExtendedLayout = UIRectEdgeNone;
+    self.view.backgroundColor = UIColor.whiteColor;
     NSLog(@"CAShapeLayer与贝塞尔曲线");
     [self.view.layer addSublayer:self.shapeLayer];
 

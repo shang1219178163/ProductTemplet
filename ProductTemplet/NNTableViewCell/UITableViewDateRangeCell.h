@@ -16,8 +16,8 @@
  */
 @interface UITableViewDateRangeCell : UITableViewCell<UITextFieldDelegate>
 
-@property (nonatomic, strong) NNDateRangeView * dateRangeView;
+@property (nonatomic, assign) BOOL hasAsterisk;
 
-//@property (nonatomic, strong) void(^block)(UITableViewDateRangeCell *view, NSString * dateStart, NSString * dateEnd, id obj, NSInteger idx);
+@property (nonatomic, strong) NNDateRangeView * dateRangeView;
 
 @end

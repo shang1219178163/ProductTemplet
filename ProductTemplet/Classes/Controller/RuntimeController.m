@@ -23,7 +23,9 @@ bool NNClassAddMethod(NSString *_Nullable cls, NSString *_Nullable name, NSStrin
 #pragma mark -lifecycle
 - (void)viewDidLoad {
     [super viewDidLoad];
-    //添加方法
+    self.edgesForExtendedLayout = UIRectEdgeNone;
+    self.view.backgroundColor = UIColor.whiteColor;
+//添加方法
     Person *p = [[Person alloc]init];
 //    class_addMethod(NSClassFromString(@"Person"), NSSelectorFromString(@"findInSelf:"), class_getMethodImplementation(NSClassFromString(@"ViewController"), NSSelectorFromString(@"addFind:")), "v@:");
     

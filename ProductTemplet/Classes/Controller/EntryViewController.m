@@ -48,7 +48,10 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+
     // Do any additional setup after loading the view.
+    self.edgesForExtendedLayout = UIRectEdgeNone;
+    self.view.backgroundColor = UIColor.whiteColor;
     [self.view addSubview:self.tbView];
 
     [self.view addSubview: self.suspendBtn];
@@ -104,6 +107,7 @@
         case 1:
         {
             UITableViewOneCell *cell = [UITableViewOneCell cellWithTableView:tableView];
+            cell.hasAsterisk = [value0 hasPrefix:@"*"];
             cell.labelLeft.text = value0;
             cell.labelRight.text = value4;
             cell.imgViewRight.hidden = false;
@@ -116,7 +120,9 @@
         case 102:
         {
             UITableViewDatePickerCell *cell = [UITableViewDatePickerCell cellWithTableView:tableView];
+            cell.hasAsterisk = [value0 hasPrefix:@"*"];
             cell.labelLeft.text = value0;
+
             [cell getViewLayer];
             return cell;
             
@@ -125,6 +131,7 @@
         case 104:
         {
             UITableViewSegmentCell *cell = [UITableViewSegmentCell cellWithTableView:tableView];
+            cell.hasAsterisk = [value0 hasPrefix:@"*"];
             cell.labelLeft.text = value0;
             cell.segmentCtl.items = @[@"one",@"two",@"three",@"four"];
             DDLog(@"_%p,%@,%ld",cell.segmentCtl, cell.segmentCtl.items, cell.segmentCtl.numberOfSegments);
@@ -132,13 +139,15 @@
                 DDLog(@"_____%ld,%@", sender.selectedSegmentIndex, sender.items);
                 
             } forControlEvents:UIControlEventValueChanged];
-//            [cell getViewLayer];
+//
+            [cell getViewLayer];
             return cell;
         }
             break;
         case 105:
         {
             UITableViewStepCell *cell = [UITableViewStepCell cellWithTableView:tableView];
+            cell.hasAsterisk = [value0 hasPrefix:@"*"];
             cell.labelLeft.text = value0;
 
             [cell getViewLayer];
@@ -148,6 +157,7 @@
         case 106:
         {
             UITableViewTextFieldCell *cell = [UITableViewTextFieldCell cellWithTableView:tableView];
+            cell.hasAsterisk = [value0 hasPrefix:@"*"];
             cell.labelLeft.text = value0;
 
             [cell getViewLayer];
@@ -157,8 +167,8 @@
         case 107:
         {
             UITableViewTextViewCell *cell = [UITableViewTextViewCell cellWithTableView:tableView];
+            cell.hasAsterisk = [value0 hasPrefix:@"*"];
             cell.labelLeft.text = value0;
-//            cell.type = @1;
             cell.textView.placeHolderTextView.text = @"最多140字";
             
             [cell getViewLayer];
@@ -168,10 +178,12 @@
         case 108:
         {
             UITableViewDateRangeCell *cell = [UITableViewDateRangeCell cellWithTableView:tableView];
+            cell.hasAsterisk = [value0 hasPrefix:@"*"];
             cell.dateRangeView.labelLeft.text = value0;
             cell.dateRangeView.block = ^(NNDateRangeView *view) {
                 DDLog(@"%@至%@",view.dateStart,view.dateEnd);
             };
+
             [cell getViewLayer];
             return cell;
         }
@@ -179,10 +191,12 @@
         case 109:
         {
             UITableViewSliderCell *cell = [UITableViewSliderCell cellWithTableView:tableView];
+            cell.hasAsterisk = [value0 hasPrefix:@"*"];
             cell.labelLeft.text = value0;
             [cell.sliderView.sliderCtl addActionHandler:^(UISlider * _Nonnull sender) {
                 DDLog(@"%@", @(sender.value));
             } forControlEvents:UIControlEventValueChanged];
+
             [cell getViewLayer];
             return cell;
         }
@@ -190,6 +204,7 @@
         case 110:
         {
             UITableViewSwitchCell *cell = [UITableViewSwitchCell cellWithTableView:tableView];
+            cell.hasAsterisk = [value0 hasPrefix:@"*"];
             cell.labelLeft.text = value0;
 //            cell.switchCtrl.on = NO;
             [cell.switchView.switchCtl addActionHandler:^(UISwitch * _Nonnull sender) {
@@ -197,17 +212,19 @@
                 
             } forControlEvents:UIControlEventValueChanged];
 
-//              [cell getViewLayer];
+            [cell getViewLayer];
             return cell;
         }
             break;
         case 111:
         {
             UITableViewSheetCell *cell = [UITableViewSheetCell cellWithTableView:tableView];
+            cell.hasAsterisk = [value0 hasPrefix:@"*"];
             cell.sheetView.labelLeft.text = value0;
             [cell.sheetView.alertCtrl addActionTitles:@[@"北京", @"上海", @"广州", @"深圳"] handler:^(UIAlertController * _Nonnull vc, UIAlertAction * _Nonnull action) {
                 DDLog(@"%@", action.title);
             }];
+
             [cell getViewLayer];
             return cell;
         }
@@ -215,6 +232,7 @@
         case 112:
         {
             UITableViewPickerViewCell *cell = [UITableViewPickerViewCell cellWithTableView:tableView];
+            cell.hasAsterisk = [value0 hasPrefix:@"*"];
             cell.chooseView.labelLeft.text = value0;
             
             @weakify(cell);
@@ -223,6 +241,7 @@
                 cell.chooseView.textField.text = text;
                 
             };
+
             [cell getViewLayer];
             return cell;
         }
@@ -230,13 +249,13 @@
         case 113:
         {
             UITableViewPickerCell *cell = [UITableViewPickerCell cellWithTableView:tableView];
-//            cell.labelLeft.text = value0;
+            cell.labelLeft.text = value0;
             
             [cell addGestureTap:^(UIGestureRecognizer *sender) {
                 [self.pickerView show];
                 
             }];
-       
+
             [cell getViewLayer];
             return cell;
         }

@@ -16,8 +16,10 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+
     // Do any additional setup after loading the view.
-    
+    self.edgesForExtendedLayout = UIRectEdgeNone;
+    self.view.backgroundColor = UIColor.whiteColor;  
 //    数组合并(去重合并:distinctUnionOfArrays.self、直接合并:unionOfArrays.self)
     NSArray *temp1 = @[@3, @2, @2, @1];
     NSArray *temp2 = @[@3, @4, @5];

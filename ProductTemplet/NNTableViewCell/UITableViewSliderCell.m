@@ -29,8 +29,9 @@
 
 -(void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary<NSKeyValueChangeKey,id> *)change context:(void *)context{
     if ([keyPath isEqualToString:@"text"]) {
-        self.sliderView.labelLeft.attributedText = [self.sliderView.labelLeft.text toAsterisk];;
-        
+        if (self.hasAsterisk) {
+            [self.sliderView.labelLeft appendAsteriskPrefix];
+        }
     }
 }
 

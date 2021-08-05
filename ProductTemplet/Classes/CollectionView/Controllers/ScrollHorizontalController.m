@@ -30,7 +30,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
+    self.edgesForExtendedLayout = UIRectEdgeNone;
+    self.view.backgroundColor = UIColor.whiteColor;
     NNScrollView.appearance.selectedColor = UIColor.redColor;
     NNScrollView.appearance.indicatorHeight = 3;
     

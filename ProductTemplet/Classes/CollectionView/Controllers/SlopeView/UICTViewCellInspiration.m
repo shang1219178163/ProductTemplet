@@ -104,7 +104,7 @@
         _containerview = [[UIView alloc]init];
         _containerview.backgroundColor = [UIColor orangeColor];
         _containerview.clipsToBounds = YES;
-        /*图片抗锯齿http://adad184.com/2015/08/31/image-rotate-with-antialiasing/*/
+        //图片抗锯齿http://adad184.com/2015/08/31/image-rotate-with-antialiasing
         _containerview.layer.allowsEdgeAntialiasing = YES;
     }
     return _containerview;

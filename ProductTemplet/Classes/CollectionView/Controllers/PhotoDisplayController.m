@@ -11,7 +11,7 @@
 #import "UICTViewLayoutPhoto.h"
 #import "UICTViewCellOne.h"
 
-@interface PhotoDisplayController ()<UICollectionViewDataSource,UICollectionViewDelegate,UICollectionViewDelegateFlowLayout>
+@interface PhotoDisplayController ()<UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout>
 
 @property (nonatomic, strong) UICollectionView *collectionView;
 @property (nonatomic, strong) NSDictionary *dictClass;
@@ -22,12 +22,13 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+
     // Do any additional setup after loading the view.
+    self.edgesForExtendedLayout = UIRectEdgeNone;
+    self.view.backgroundColor = UIColor.whiteColor;
     self.title = @"圆圈";
     
     [self.view addSubview:self.collectionView];
-    
-    [self.view getViewLayer];
 }
 
 
@@ -73,7 +74,7 @@
 //点击item方法
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
     UICTViewCellOne *cell = (UICTViewCellOne *)[collectionView cellForItemAtIndexPath:indexPath];
-    NSLog(@"%@",cell.label.text);
+    NSLog(@"%@", cell.label.text);
 }
 
 ////header的size
@@ -105,18 +106,9 @@
 #pragma mark -lazy
 -(NSDictionary *)dictClass{
     if (!_dictClass) {
-        _dictClass = @{
-                       
-                       UICollectionElementKindSectionItem:   @[
-                               @"UICTViewCellOne"
-                               ],
-//                       UICollectionElementKindSectionHeader:   @[
-//                                                                 @"UICTReusableViewZero",
-//                                                                 ],
-//                       UICollectionElementKindSectionHeader:   @[
-//                                                                 @"UICTReusableViewZero",
-//                                                                 ],
-                       
+        _dictClass = @{UICollectionElementKindSectionItem: @[@"UICTViewCellOne" ],
+//                       UICollectionElementKindSectionHeader: @[@"UICTReusableViewZero", ],
+//                       UICollectionElementKindSectionHeader: @[ @"UICTReusableViewZero", ],
                        };
         
     }
@@ -129,19 +121,19 @@
             UICTViewLayoutPhoto * layout = [[UICTViewLayoutPhoto alloc]init];
             layout.itemSize = CGSizeMake(90, 100);
 
-            //item水平间距
-            //            layout.minimumLineSpacing = 10;
-            //            //item垂直间距
-            //            layout.minimumInteritemSpacing = 10;
-            //            //item的尺寸
-            //            layout.itemSize = CGSizeMake(90, 100);
-            //            //item的UIEdgeInsets
-            //            layout.sectionInset = UIEdgeInsetsMake(10, 10, 10, 10);
-            //滑动方向,默认垂直
-            //            layout.scrollDirection = UICollectionViewScrollDirectionHorizontal;
-            //sectionView 尺寸
-            //            layout.headerReferenceSize = CGSizeMake(CGRectGetWidth(self.view.bounds), 40);
-            //            layout.footerReferenceSize = CGSizeMake(CGRectGetWidth(self.view.bounds), 20);
+//item水平间距
+//            layout.minimumLineSpacing = 10;
+//            //item垂直间距
+//            layout.minimumInteritemSpacing = 10;
+//            //item的尺寸
+//            layout.itemSize = CGSizeMake(90, 100);
+//            //item的UIEdgeInsets
+//            layout.sectionInset = UIEdgeInsetsMake(10, 10, 10, 10);
+//滑动方向,默认垂直
+//            layout.scrollDirection = UICollectionViewScrollDirectionHorizontal;
+//sectionView 尺寸
+//            layout.headerReferenceSize = CGSizeMake(CGRectGetWidth(self.view.bounds), 40);
+//            layout.footerReferenceSize = CGSizeMake(CGRectGetWidth(self.view.bounds), 20);
             
             UICollectionView *collectionView = [[UICollectionView alloc]initWithFrame:self.view.bounds collectionViewLayout:layout];
             collectionView.backgroundColor = [UIColor whiteColor];

@@ -34,8 +34,9 @@
 
 -(void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary<NSKeyValueChangeKey,id> *)change context:(void *)context{
     if ([keyPath isEqualToString:@"text"]) {
-        self.dateRangeView.labelLeft.attributedText = [self.dateRangeView.labelLeft.text toAsterisk];;
-            
+        if (self.hasAsterisk) {
+            [self.dateRangeView.labelLeft appendAsteriskPrefix];
+        }
     }
 }
 

@@ -20,6 +20,9 @@
 
 -(void)viewDidLoad{
     [super viewDidLoad];
+    self.edgesForExtendedLayout = UIRectEdgeNone;
+    self.view.backgroundColor = UIColor.whiteColor;
+    
     self.tableview.keyboardDismissMode = UIScrollViewKeyboardDismissModeOnDrag;
     self.tableview.delegate = self;
     self.tableview.dataSource = self;

@@ -27,7 +27,6 @@ static CGFloat kH_Top = 64.0;
     self = [super initWithFrame:frame];
     if (self) {
         
-//        self.dataList = [NSArray arrayItemPrefix:@"工厂_" startIndex:1 count:10 type:@0];        
         self.backgroundColor = [UIColor colorWithWhite:0 alpha:0.5];
         self.tableView.frame = CGRectMake(0, kH_Top, kScreenWidth, 0);
         self.tableView.delegate = self;

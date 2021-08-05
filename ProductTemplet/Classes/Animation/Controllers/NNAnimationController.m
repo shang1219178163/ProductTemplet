@@ -19,9 +19,11 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+
     // Do any additional setup after loading the view.
     self.edgesForExtendedLayout = UIRectEdgeNone;
     self.view.backgroundColor = UIColor.whiteColor;
+    
     
     self.title = self.title ?  : self.vcName;
     self.title = @"购物动画";

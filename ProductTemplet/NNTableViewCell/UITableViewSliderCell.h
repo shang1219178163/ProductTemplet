@@ -13,6 +13,8 @@
 
 @interface UITableViewSliderCell : UITableViewCell
 
+@property (nonatomic, assign) BOOL hasAsterisk;
+
 @property (nonatomic, strong) NNSliderView * sliderView;
 
 

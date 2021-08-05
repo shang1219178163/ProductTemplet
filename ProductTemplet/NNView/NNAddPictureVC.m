@@ -53,8 +53,10 @@ NSString *const kPicture_currentVC = @"kPicture_currentVC";
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+
     // Do any additional setup after loading the view.
-    
+    self.edgesForExtendedLayout = UIRectEdgeNone;
+    self.view.backgroundColor = UIColor.whiteColor;  
     self.photoMaxCount = 1;
 }
 

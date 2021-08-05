@@ -32,8 +32,10 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+
     // Do any additional setup after loading the view.
-    
+    self.edgesForExtendedLayout = UIRectEdgeNone;
+    self.view.backgroundColor = UIColor.whiteColor;  
     [self.view addSubview:self.textView];
     
     [self createBarItem:@"播放" isLeft:false handler:^(UIButton *sender) {

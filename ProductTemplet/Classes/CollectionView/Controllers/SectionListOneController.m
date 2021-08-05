@@ -29,8 +29,11 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+
     // Do any additional setup after loading the view.
     self.edgesForExtendedLayout = UIRectEdgeNone;
+    self.view.backgroundColor = UIColor.whiteColor;
+    
     
     self.title = NSStringFromClass([self class]);
     self.view.backgroundColor = [UIColor whiteColor];
@@ -184,12 +187,12 @@
     
 }
 
-- (void)longPressAction:(UILongPressGestureRecognizer *)longPress {
+- (void)longPressAction:(UILongPressGestureRecognizer *)gesture {
     
-    CGPoint point = [longPress locationInView:self.collectionView];
+    CGPoint point = [gesture locationInView:self.collectionView];
     NSIndexPath *indexPath = [self.collectionView indexPathForItemAtPoint:point];
     
-    switch (longPress.state) {
+    switch (gesture.state) {
         case UIGestureRecognizerStateBegan:
         {
             if (!indexPath) {

@@ -33,6 +33,7 @@ PODS:
     - SDWebImage
   - NNGloble (1.9.1)
   - PPNumberButton (0.8.0)
+  - Reveal-SDK (28)
   - SDCycleScrollView (1.82):
     - SDWebImage (>= 5.0.0)
   - SDWebImage (5.10.0):
@@ -69,6 +70,7 @@ DEPENDENCIES:
   - NNCategoryPro
   - NNGloble
   - PPNumberButton
+  - Reveal-SDK
   - SDCycleScrollView
   - SDWebImage
   - SocketRocket
@@ -96,6 +98,7 @@ SPEC REPOS:
     - NNCategoryPro
     - NNGloble
     - PPNumberButton
+    - Reveal-SDK
     - SDCycleScrollView
     - SDWebImage
     - SocketRocket
@@ -124,6 +127,7 @@ SPEC CHECKSUMS:
   NNCategoryPro: 477ad94ea7e02625444d6b4449b0a70477bdb115
   NNGloble: eeb6a8be266b8e670c9a76aa28b08042de580c6b
   PPNumberButton: 4442ff64c21d91733057ca1b3dc05fb4df55f2c0
+  Reveal-SDK: 1a2a678648fc4d277bad71c86d15530424324288
   SDCycleScrollView: a0d74c3384caa72bdfc81470bdbc8c14b3e1fbcf
   SDWebImage: 9169792e9eec3e45bba2a0c02f74bf8bd922d1ee
   SocketRocket: d57c7159b83c3c6655745cd15302aa24b6bae531
@@ -138,6 +142,6 @@ SPEC CHECKSUMS:
   YYModel: 2a7fdd96aaa4b86a824e26d0c517de8928c04b30
   YYWebImage: 5f7f36aee2ae293f016d418c7d6ba05c4863e928
 
-PODFILE CHECKSUM: ccab6f0cf2cfc6d23dc69163b68291890e178205
+PODFILE CHECKSUM: cd51fc6ca2d4b51699b3df824a6cf40a1e4cfe72
 
-COCOAPODS: 1.10.0
+COCOAPODS: 1.10.1

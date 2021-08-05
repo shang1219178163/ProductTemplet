@@ -34,7 +34,7 @@
     [self.contentView addSubview:self.labelLeft];
     [self.contentView addSubview:self.labelLeftSub];
     
-    self.indicatorView.image = [UIImage imageNamed:kIMG_arrowRight];
+    self.indicatorView.image = UIImage.img_arrowRight_gray;
     
     self.labelLeftSub.textAlignment = NSTextAlignmentCenter;
     

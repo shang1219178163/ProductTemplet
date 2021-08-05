@@ -30,10 +30,10 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+
     // Do any additional setup after loading the view.
-    
     self.edgesForExtendedLayout = UIRectEdgeNone;
-    self.view.backgroundColor = UIColor.whiteColor;
+    self.view.backgroundColor = UIColor.whiteColor;  
     
     self.rotaionView.frame = CGRectMake(50, 50, 100, 100);
     [self.view addSubview:self.rotaionView];

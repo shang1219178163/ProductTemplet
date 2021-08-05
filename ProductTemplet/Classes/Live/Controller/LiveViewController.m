@@ -50,7 +50,11 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+
     // Do any additional setup after loading the view.
+    self.edgesForExtendedLayout = UIRectEdgeNone;
+self.view.backgroundColor = UIColor.whiteColor;
+    
     self.title = @"Live";
     
     [self.view addSubview:self.itemsView];

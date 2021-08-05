@@ -27,7 +27,7 @@
         self.textField.placeholder = @"请选择";
         self.textField.textAlignment = NSTextAlignmentCenter;
         
-        self.textField.rightView = [self.textField asoryView:kIMG_arrowDown];
+        self.textField.rightView = [self.textField asoryImageView:UIImage.img_arrowDown_black];
         self.textField.rightViewMode = UITextFieldViewModeAlways;
         self.textField.enabled = false;
 //
@@ -70,7 +70,7 @@
 
 -(UILabel *)labelLeft{
     if (!_labelLeft) {
-        _labelLeft = [self createLabelRect:CGRectZero text:@"修改名称:" font:16 tag:0];
+        _labelLeft = [self createLabelRect:CGRectZero text:@"修改名称:" font:[UIFont systemFontOfSize:16] tag:0];
     }
     return _labelLeft;
 }
@@ -96,10 +96,10 @@
     return _pickerView;
 }
 
-- (UILabel *)createLabelRect:(CGRect)rect text:(NSString *)text font:(CGFloat)font tag:(NSInteger)tag{
+- (UILabel *)createLabelRect:(CGRect)rect text:(NSString *)text font:(UIFont *)font tag:(NSInteger)tag{
     UILabel * view = [[UILabel alloc] initWithFrame:CGRectZero];
     view.autoresizingMask = UIViewAutoresizingFlexibleWidth|UIViewAutoresizingFlexibleHeight;
-    view.font = [UIFont systemFontOfSize:font];
+    view.font = font;
     view.textAlignment = NSTextAlignmentCenter;
     view.userInteractionEnabled = true;
     view.numberOfLines = 1;

@@ -43,7 +43,7 @@
 
 -(UIImage *)imageDefault{
     if (!_imageDefault) {
-        _imageDefault = [UIImage imageNamed:kIMG_pictureDelete];
+        _imageDefault = UIImage.img_pictureDelete;
     }
     return _imageDefault;
 }
@@ -83,11 +83,11 @@
         imgView.tag = kTAG_IMGVIEW+i;
 //        imgView.image = self.itemList[i];
 //        [UIView renderImgView:imgView image:self.itemList[i] imageDefault:kIMG_defaultFailed_S];
-        [imgView loadImage:self.itemList[i] defaultImg:kIMG_defaultFailed_S];
+        [imgView loadImage:self.itemList[i] defaultImg:UIImage.img_failedDefault_S];
 //        imgView.backgroundColor = UIColor.randomColor;
         [self addSubview:imgView];
         
-        UIImage * imageDelete = [UIImage imageNamed:kIMG_pictureDelete];
+        UIImage * imageDelete = UIImage.img_pictureDelete;
         
         CGSize btnSize = CGSizeMake(25, 25);
         UIButton * btn = [UIButton buttonWithType:UIButtonTypeCustom];
@@ -128,8 +128,8 @@
 
 -(void)handleActionTap:(UITapGestureRecognizer *)tap{
     
-    UIImageView * imageView = (UIImageView *)tap.view;
-    if ([imageView.image isEquelImage:kIMG_pictureDelete]) {
+    UIImageView *imageView = (UIImageView *)tap.view;
+    if ([imageView.image isEquelImage:UIImage.img_pictureDelete]) {
         
         if (self.maxCount != 0) {
             [self.attDict setObject:@(self.maxCount) forKey:kPicture_maxCount];

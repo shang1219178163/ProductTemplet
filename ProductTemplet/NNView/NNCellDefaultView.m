@@ -400,7 +400,7 @@
             view.userInteractionEnabled = YES;
             //            imgView.backgroundColor = UIColor.orangeColor;
             view.frame = CGRectMake(self.maxX - kX_GAP - kSizeArrow.width, (self.maxY - kSizeArrow.height)/2.0, kSizeArrow.width, kSizeArrow.height);
-            view.image = [UIImage imageNamed:kIMG_arrowRight];
+            view.image = UIImage.img_arrowRight_gray;
             
             view.hidden = YES;
             view;

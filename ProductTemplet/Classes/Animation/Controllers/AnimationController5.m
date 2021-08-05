@@ -21,7 +21,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
+    self.edgesForExtendedLayout = UIRectEdgeNone;
+    self.view.backgroundColor = UIColor.whiteColor;
     NSLog(@"一个复杂一点的登录动画");
     [self.shapeLayer removeFromSuperlayer];
     

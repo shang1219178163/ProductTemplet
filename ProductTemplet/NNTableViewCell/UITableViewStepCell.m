@@ -41,7 +41,9 @@
 #pragma mark -observe
 -(void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary<NSKeyValueChangeKey,id> *)change context:(void *)context{
     if ([keyPath isEqualToString:@"text"]) {
-        self.labelLeft.attributedText = [self.labelLeft.text toAsterisk];
+        if (self.hasAsterisk) {
+            [self.labelLeft appendAsteriskPrefix];
+        }
     }
 }
 
@@ -81,8 +83,8 @@
         //        _ppBtn.delegate = self;
         // 初始化时隐藏减按钮
         //        _ppBtn.decreaseHide = YES;
-        _ppBtn.increaseImage = [UIImage imageNamed:kIMG_elemetInc];
-        _ppBtn.decreaseImage = [UIImage imageNamed:kIMG_elemetDec];
+        _ppBtn.increaseImage = UIImage.img_elemet_increase;
+        _ppBtn.decreaseImage = UIImage.img_elemet_decrease;
 
         _ppBtn.shakeAnimation = YES;
         _ppBtn.tag = kTAG_BTN;

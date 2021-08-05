@@ -16,8 +16,10 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+
     // Do any additional setup after loading the view.
-    
+    self.edgesForExtendedLayout = UIRectEdgeNone;
+    self.view.backgroundColor = UIColor.whiteColor;  
     UIImageView * imageView = [[UIImageView alloc]initWithFrame:CGRectMake(20, 20, 100, 100)];
     imageView.backgroundColor = UIColor.redColor;
     [self.view addSubview:imageView];

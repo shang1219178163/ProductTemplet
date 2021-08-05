@@ -8,8 +8,8 @@
 /*
 - (NSArray *)popoverlist{
     if (!_popoverlist) {
-        //        NSArray * list = @[@"授权设备", @"认证方式", @"角色权限", @"锁定账号", @"重置密码", @"更新资料", @"删除账号",];
-        NSArray * list = @[
+        //        NSArray *list = @[@"授权设备", @"认证方式", @"角色权限", @"锁定账号", @"重置密码", @"更新资料", @"删除账号",];
+        NSArray *list = @[
                            @{
                                @"index": @"0",
                                @"title": @"授权设备",

@@ -97,7 +97,7 @@
 -(UIImageView *)imgViewRight{
     if (!_imgViewRight) {
         _imgViewRight = [UIImageView createRect:CGRectZero];
-        _imgViewRight.image = [UIImage imageNamed:kIMG_arrowRight];
+        _imgViewRight.image = UIImage.img_arrowRight_gray;
 //        _imgViewRight.hidden = YES;
         
     }

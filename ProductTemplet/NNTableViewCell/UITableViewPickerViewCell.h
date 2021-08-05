@@ -13,6 +13,8 @@
 
 @interface UITableViewPickerViewCell : UITableViewCell
 
+@property (nonatomic, assign) BOOL hasAsterisk;
+
 @property (nonatomic, strong) NNListChooseView *chooseView;
 
 @end

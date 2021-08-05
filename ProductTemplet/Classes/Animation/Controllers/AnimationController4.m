@@ -18,7 +18,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    NSLog(@"把CAShapeLayer设置为蒙版来做动画");
+    self.edgesForExtendedLayout = UIRectEdgeNone;
+    self.view.backgroundColor = UIColor.whiteColor;NSLog(@"把CAShapeLayer设置为蒙版来做动画");
     
   
     [self.view.layer addSublayer:self.shapeLayer];

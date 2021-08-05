@@ -22,8 +22,10 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+
     // Do any additional setup after loading the view.
-    self.view.backgroundColor = [UIColor whiteColor];
+    self.edgesForExtendedLayout = UIRectEdgeNone;
+    self.view.backgroundColor = UIColor.whiteColor; 
     
 #define kTextFieldHeight 40
     self.xTextField.frame = CGRectMake(15, 85, kScreenWidth - 30, kTextFieldHeight);

@@ -17,8 +17,10 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+
     // Do any additional setup after loading the view.
-    
+    self.edgesForExtendedLayout = UIRectEdgeNone;
+    self.view.backgroundColor = UIColor.whiteColor;  
     [self createBarItem:@"label" isLeft:NO handler:^(UIButton *sender) {
 
         UIViewController * controller = [NSClassFromString(@"CycleLabelViewController") new];

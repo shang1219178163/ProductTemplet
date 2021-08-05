@@ -36,8 +36,10 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+
     // Do any additional setup after loading the view.
-    
+    self.edgesForExtendedLayout = UIRectEdgeNone;
+    self.view.backgroundColor = UIColor.whiteColor;  
     self.label.frame = CGRectMake(20, 20, 100, 25);
     [self.view addSubview:self.label];
     

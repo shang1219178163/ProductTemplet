@@ -13,8 +13,8 @@
 
 @interface NNSlopeShowController ()<UICollectionViewDataSource, UICollectionViewDelegate>
 
-@property (nonatomic,strong) UICollectionView *ctView;
 @property (nonatomic,strong) NSMutableArray *list;
+@property (nonatomic,strong) UICollectionView *ctView;
 
 @end
 
@@ -22,36 +22,38 @@
 #pragma mark - Life Cycle
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.view.backgroundColor = [UIColor whiteColor];
+    self.edgesForExtendedLayout = UIRectEdgeNone;
+    self.view.backgroundColor = UIColor.whiteColor;
+    
     [self.view addSubview:self.ctView];
 }
 
+- (void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+}
+
 #pragma mark - UICollectionViewDataSource
+
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section{
     return self.list.count;
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath{
     InspirationModel *model = self.list[indexPath.item];
-    UICTViewCellInspiration *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"NormalCollectionViewCell" forIndexPath:indexPath];
+//    UICTViewCellInspiration *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"UICTViewCellInspiration" forIndexPath:indexPath];
+    UICTViewCellInspiration *cell = [UICTViewCellInspiration dequeueReusableCell:collectionView indexPath:indexPath];
+
 //    cell.model = model;
     
     cell.backImageView.image = [[UIImage imageNamed:model.Background] resizableImageWithCapInsets:UIEdgeInsetsZero resizingMode:UIImageResizingModeStretch];;
     cell.titleLabel.text = model.Title;
-    cell.timeAndRoomLabel.text = [NSString stringWithFormat:@"%@ • %@",model.Time,model.Room];
+    cell.timeAndRoomLabel.text = [NSString stringWithFormat:@"%@ • %@",model.Time, model.Room];
     cell.speakerLabel.text = model.Speaker;
     
 //    [cell parallaxOffsetForCollectionBounds:self.ctView.bounds];
     return cell;
 }
 
-- (void)scrollViewDidScroll:(UIScrollView *)scrollView{
-//    NSArray *cellArray = [self.myCollection visibleCells];
-//    [cellArray enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
-//        NormalCollectionViewCell *cell = obj;
-//        [cell parallaxOffsetForCollectionBounds:self.myCollection.bounds];
-//    }];
-}
 
 #pragma mark - Setter && Getter
 - (UICollectionView *)ctView{
@@ -59,8 +61,10 @@
         UICTViewLayoutSlope *layout = [[UICTViewLayoutSlope alloc]init];
         layout.itemSize = CGSizeMake(CGRectGetWidth(self.view.bounds), 110);
         layout.minimumLineSpacing = 13;
+        
         _ctView = [[UICollectionView alloc]initWithFrame:self.view.bounds collectionViewLayout:layout];
-        [_ctView registerClass:[UICTViewCellInspiration class] forCellWithReuseIdentifier:@"NormalCollectionViewCell"];
+        _ctView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
+        [_ctView registerClass:[UICTViewCellInspiration class] forCellWithReuseIdentifier:@"UICTViewCellInspiration"];
         _ctView.backgroundColor = [UIColor groupTableViewBackgroundColor];
         _ctView.dataSource = self;
         _ctView.delegate = self;
@@ -73,7 +77,7 @@
 - (NSMutableArray *)list{
     if (!_list) {
         _list = [[NSMutableArray alloc]init];
-        NSString *path = [[NSBundle mainBundle] pathForResource:@"Inspirations" ofType:@"plist"];
+        NSString *path = [NSBundle.mainBundle pathForResource:@"Inspirations" ofType:@"plist"];
         NSArray *tmpArray = [NSArray arrayWithContentsOfFile:path];
         [tmpArray enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
             NSDictionary *dict = obj;

@@ -25,8 +25,10 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+
     // Do any additional setup after loading the view.
-    
+    self.edgesForExtendedLayout = UIRectEdgeNone;
+    self.view.backgroundColor = UIColor.whiteColor;  
     [self.containerView exchangeSubviewAtIndex:0 withSubviewAtIndex:1];
     [self.view addSubview:self.containerView];
     DDLog(@"_%p_%p_",self.imgView,self.imgView1);

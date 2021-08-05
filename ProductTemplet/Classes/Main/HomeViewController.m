@@ -19,7 +19,10 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+
     // Do any additional setup after loading the view.
+    self.edgesForExtendedLayout = UIRectEdgeNone;
+    self.view.backgroundColor = UIColor.whiteColor;
 //    self.tabBar.tintColor = UIColor.themeColor;
 //    self.tabBar.barTintColor = UIColor.whiteColor;
 
@@ -50,7 +53,8 @@
         UITabBarItem.KeyImageSelected: @"Item_third_H",
         UITabBarItem.KeyBadgeValue: @"12",},
     @{
-        UITabBarItem.KeyVC: @"NNFourthViewController",
+//        UITabBarItem.KeyVC: @"NNFourthViewController",
+        UITabBarItem.KeyVC: @"UICTViewMainController",
         UITabBarItem.KeyTitle: @"我的",
         UITabBarItem.KeyImage: @"Item_fourth_N",
         UITabBarItem.KeyImageSelected: @"Item_fourth_H",

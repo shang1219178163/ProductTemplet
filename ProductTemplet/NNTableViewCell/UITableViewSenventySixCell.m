@@ -45,7 +45,7 @@
     self.labelLeftSub.lineBreakMode = NSLineBreakByCharWrapping;
     self.labelLeftSub.textColor = UIColor.titleColor9;
   
-    self.imgViewRight.image = [UIImage imageNamed:kIMG_arrowUp];
+    self.imgViewRight.image = UIImage.img_arrowUp_blue;
 }
 
 -(void)layoutSubviews{

@@ -16,8 +16,10 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+
     // Do any additional setup after loading the view.
-    
+    self.edgesForExtendedLayout = UIRectEdgeNone;
+    self.view.backgroundColor = UIColor.whiteColor;  
     @weakify(self);
     self.block = ^(UIViewController * _Nonnull controller, NSString * _Nonnull title) {
         @strongify(self);

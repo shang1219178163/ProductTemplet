@@ -35,11 +35,12 @@
 
 - (void)viewDidLoad{
     [super viewDidLoad];
+
     // Do any additional setup after loading the view.
     self.edgesForExtendedLayout = UIRectEdgeNone;
+    self.view.backgroundColor = UIColor.whiteColor;
     
     self.title = @"group";
-    self.view.backgroundColor = [UIColor cyanColor];
     
     
     CGRect rect = CGRectMake(20, 20, kScreenWidth - 20*2, 0);

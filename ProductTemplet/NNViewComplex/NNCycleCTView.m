@@ -98,13 +98,11 @@
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath{
-    
     id image = self.imgList[indexPath.row];
 
     UICTViewCellSeven * view = [UICTViewCellSeven dequeueReusableCell:collectionView indexPath:indexPath];
-    [view.imgView loadImage:image defaultImg:kIMG_defaultFailed];
+    [view.imgView loadImage:image defaultImg:UIImage.img_failedDefault];
     view.label.text = NSStringFromIndexPath(indexPath);
-    
     return view;
 }
 

@@ -41,7 +41,8 @@ int TimeCount = 0;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
+    self.edgesForExtendedLayout = UIRectEdgeNone;
+    self.view.backgroundColor = UIColor.whiteColor;
     int buttonCount = 5;
     for (int i = 0; i < buttonCount; i++) {
         UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];

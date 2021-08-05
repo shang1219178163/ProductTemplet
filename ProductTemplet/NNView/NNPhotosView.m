@@ -42,7 +42,7 @@
         CGRect imgViewRect = CGRectMake(0, YGap, CGRectGetWidth(window.frame), height);
         imgViewRect = self.frame;
 
-        UIImage * imageDefault = [UIImage imageNamed:kIMG_defaultFailed];
+        UIImage * imageDefault = UIImage.img_failedDefault;
         // 网络加载 --- 创建带标题的图片轮播器(1. SDCycleScrollView的backgroundImageView需要隐藏(圆角图片会出现bug) self.backgroundImageView.hidden = YES;2.    cell.imageView.contentMode = UIViewContentModeScaleAspectFit;)
         SDCycleScrollView *cycleScrollView = [SDCycleScrollView cycleScrollViewWithFrame:imgViewRect delegate:nil placeholderImage:imageDefault];
         cycleScrollView.backgroundColor = UIColor.blackColor;

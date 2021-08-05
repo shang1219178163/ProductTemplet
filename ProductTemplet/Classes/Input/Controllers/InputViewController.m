@@ -17,7 +17,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.view.backgroundColor = [UIColor whiteColor];
+    self.edgesForExtendedLayout = UIRectEdgeNone;
+    self.view.backgroundColor = UIColor.whiteColor;
 #define kTextFieldHeight 40
     self.xTextField.frame = CGRectMake(15, kScreenHeight - kTextFieldHeight, kScreenWidth - 30, kTextFieldHeight);
     self.xTextField.layer.borderColor = UIColor.grayColor.CGColor;

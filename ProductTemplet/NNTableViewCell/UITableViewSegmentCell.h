@@ -15,6 +15,8 @@
  */
 @interface UITableViewSegmentCell : UITableViewCell
 
+@property (nonatomic, assign) BOOL hasAsterisk;
+
 @property (nonatomic, strong) UISegmentedControl *segmentCtl;
 
 

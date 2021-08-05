@@ -18,7 +18,9 @@
 
 - (void)viewDidLoad{
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+    self.edgesForExtendedLayout = UIRectEdgeNone;
+    self.view.backgroundColor = UIColor.whiteColor;
+// Do any additional setup after loading the view, typically from a nib.
     self.tbView.rowHeight = 50;
     [self.view addSubview:self.tbView];
     

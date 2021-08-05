@@ -43,7 +43,11 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+
     // Do any additional setup after loading the view.
+    self.edgesForExtendedLayout = UIRectEdgeNone;
+self.view.backgroundColor = UIColor.whiteColor;
+    
     self.title = @"文件上传";
     
     self.chooseItem = [[UIBarButtonItem alloc]initWithTitle:@"选择" style:UIBarButtonItemStylePlain target:self action:@selector(handleActionItem:)];

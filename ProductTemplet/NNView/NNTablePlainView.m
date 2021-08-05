@@ -104,7 +104,7 @@
             NSString * allStr = [NSString stringWithFormat:@"没有找到与%@相关的记录",colorStr];
             self.label.attributedText = [NSAttributedString getAttString:allStr
                                                                 textTaps:@[colorStr]
-                                                                    font:16
+                                                                    font:[UIFont systemFontOfSize:16]
                                                                    color:UIColor.blackColor
                                                                 tapColor:UIColor.redColor
                                                                alignment:NSTextAlignmentCenter];
