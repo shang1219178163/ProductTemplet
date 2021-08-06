@@ -62,9 +62,7 @@ static NSTimeInterval kDurationCycle = 20;
 }
 
 - (void)start{
-    if (self.list.count == 0) {
-        return;
-    }
+    if (self.list.count == 0) { return; }
     
     [self handleActionTimer];
     

@@ -291,9 +291,7 @@
 #pragma mark - funtions
 
 - (void)printLog:(NSDictionary *)dic isSend:(BOOL)isSend{
-    if (!self.child.printLog) {
-        return;
-    }
+    if (!self.child.printLog) { return; }
     NSString *urlString = [self.child requestURI];
     if (![urlString hasPrefix:@"http"]) {
         urlString = [NSString stringWithFormat:@"%@%@", NNAPIConfi.serviceUrl, urlString];

@@ -58,9 +58,7 @@
     _list = turnArray;
     _index = 1;
     
-    if (_list.count == 0) {
-        return;
-    }
+    if (_list.count == 0) { return; }
     if (_list.count == 1) {
         self.labelOne.text = _list[0];
     } else {

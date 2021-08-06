@@ -28,13 +28,17 @@
 
     // Do any additional setup after loading the view.
     self.edgesForExtendedLayout = UIRectEdgeNone;
-    self.view.backgroundColor = UIColor.whiteColor;    
-    [self createBarItem:@"弹窗" isLeft:true handler:^(UIButton *sender) {
-        PopoverViewExampleController *controlller = [[PopoverViewExampleController alloc]init];
-        [self.navigationController pushViewController:controlller animated:true];
+    self.view.backgroundColor = UIColor.whiteColor;
+    
+    
+    self.navigationItem.leftBarButtonItem = [UIBarButtonItem customViewWithButton:@"弹窗"
+                                                                          handler:^(UIButton * _Nonnull sender) {
+        PopoverViewExampleController *vc = [[PopoverViewExampleController alloc]init];
+        [self.navigationController pushViewController:vc animated:true];
     }];
     
-    [self createBarItem:@"筛选" isLeft:false handler:^(UIButton *sender) {
+    self.navigationItem.rightBarButtonItem = [UIBarButtonItem customViewWithButton:@"筛选"
+                                                                           handler:^(UIButton * _Nonnull sender) {
         NNFilterView * view = [[NNFilterView alloc]init];
         view.dataList = self.filterList;
         //            view.direction = @1;

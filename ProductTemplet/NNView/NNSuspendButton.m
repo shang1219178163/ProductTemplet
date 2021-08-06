@@ -94,9 +94,7 @@ static CGFloat kW_SuspendBtn = 50;
  */
 - (void)handleActionPan:(UIPanGestureRecognizer *)recognizer
 {
-    if (_isLock) {
-        return;
-    }
+    if (_isLock) { return; }
     //移动状态
     UIGestureRecognizerState recState =  recognizer.state;
     
@@ -183,9 +181,7 @@ static CGFloat kW_SuspendBtn = 50;
 /*
 - (void)handleActionPan:(UIPanGestureRecognizer *)recognizer
 {
-    if (_isLock) {
-        return;
-    }
+    if (_isLock) { return; }
     //移动状态
     UIGestureRecognizerState recState =  recognizer.state;
     

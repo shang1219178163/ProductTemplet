@@ -20,24 +20,20 @@
 
     // Do any additional setup after loading the view.
     self.edgesForExtendedLayout = UIRectEdgeNone;
-    self.view.backgroundColor = UIColor.whiteColor;  
-    [self createBarItem:@"label" isLeft:NO handler:^(UIButton *sender) {
-
-        UIViewController * controller = [NSClassFromString(@"CycleLabelViewController") new];
-
-        CATransition *anim = [CATransition animateWithDuration:0.5
-                                                  functionName:kCAMediaTimingFunctionEaseIn
-                                                          type:kCATransitionFade
-                                                       subType:kCATransitionFromRight];
-//        [UIApplication.sharedApplication.keyWindow.layer addAnimation:anim forKey:nil];
-        [self.navigationController.view.layer addAnimation:anim forKey:nil];
-        [self.navigationController pushViewController:controller animated:false];
-
+    self.view.backgroundColor = UIColor.whiteColor;
+    
+    self.navigationItem.rightBarButtonItems = [@[@"one", @"two"] map:^id _Nonnull(id  _Nonnull obj, NSUInteger idx) {
+        return [UIBarButtonItem customViewWithButton:obj
+                                             handler:^(UIButton * _Nonnull sender) {
+            if (idx == 0) {
+                [self jump];
+            }
+            DDLog(@"obj: %@", obj);
+        }];
     }];
     
-    
-    UIViewController *controller = [NSClassFromString(@"FriendListController") new];
-    [self addControllerVC:controller];
+    UIViewController *vc = [NSClassFromString(@"FriendListController") new];
+    [self addControllerVC:vc];
 }
 
 -(void)viewWillAppear:(BOOL)animated{
@@ -55,14 +51,16 @@
     // Dispose of any resources that can be recreated.
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (void)jump {
+    UIViewController *vc = [NSClassFromString(@"CycleLabelViewController") new];
+    CATransition *anim = [CATransition animateWithDuration:0.5
+                                              functionName:kCAMediaTimingFunctionEaseIn
+                                                      type:kCATransitionFade
+                                                   subType:kCATransitionFromRight];
+//        [UIApplication.sharedApplication.keyWindow.layer addAnimation:anim forKey:nil];
+    [self.navigationController.view.layer addAnimation:anim forKey:nil];
+    [self.navigationController pushViewController:vc animated:false];
 }
-*/
+
 
 @end

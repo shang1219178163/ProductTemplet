@@ -43,7 +43,9 @@
 //    [self addControllerName:@"FontListController"];
 //    [self addControllerName:@"FriendListController"];
     
-    [self createBarItem:@"Show" isLeft:NO handler:^(UIButton *sender) {
+    
+    self.navigationItem.rightBarButtonItem = [UIBarButtonItem customViewWithButton:@"Show"
+                                                                           handler:^(UIButton * _Nonnull sender) {
         [self.pickerView show];
 
     }];

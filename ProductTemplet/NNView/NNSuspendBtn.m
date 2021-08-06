@@ -38,9 +38,7 @@
 }
 
 - (void)handleActionPan:(UIPanGestureRecognizer *)recognizer{
-    if (_isLock) {
-        return;
-    }
+    if (_isLock) { return; }
     //移动状态
     switch (recognizer.state) {
         case UIGestureRecognizerStateBegan:

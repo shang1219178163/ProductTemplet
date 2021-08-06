@@ -59,7 +59,9 @@ self.view.backgroundColor = UIColor.whiteColor;
     
     [self.view addSubview:self.itemsView];
 
-    [self createBarItem:@"登录" isLeft:true handler:^(UIButton *sender) {
+    
+    self.navigationItem.leftBarButtonItem = [UIBarButtonItem customViewWithButton:@"登录"
+                                                                          handler:^(UIButton * _Nonnull sender) {
         [self.userLoginApi requestWithSuccess:^(NNRequstManager * _Nonnull manager, NSDictionary * _Nonnull jsonData) {
             NSDictionary *dic = jsonData;
             [NSUserDefaults setObject:dic[@"Token"] forKey:@"token"];
@@ -70,7 +72,8 @@ self.view.backgroundColor = UIColor.whiteColor;
         }];
     }];
     
-    [self createBarItem:@"注销" isLeft:false handler:^(UIButton *sender) {
+    self.navigationItem.rightBarButtonItem = [UIBarButtonItem customViewWithButton:@"注销"
+                                                                           handler:^(UIButton * _Nonnull sender) {
         [self.userLogoutApi requestWithSuccess:^(NNRequstManager * _Nonnull manager, NSDictionary * _Nonnull jsonData) {
                 
             } fail:^(NNRequstManager * _Nonnull manager, NSError * _Nonnull error) {

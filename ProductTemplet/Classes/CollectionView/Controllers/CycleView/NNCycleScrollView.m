@@ -88,9 +88,7 @@
 }
 
 - (void)setImageArray:(NSArray *)imageArray{
-    if (!imageArray || imageArray.count == 0) {
-        return;
-    }
+    if (!imageArray || imageArray.count == 0) { return; }
     _imageArray = imageArray;
     _pageControl.numberOfPages = _imageArray.count;
     if (!_pageControl.isHidden) {

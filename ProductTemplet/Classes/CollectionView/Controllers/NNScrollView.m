@@ -77,9 +77,7 @@
 
 #pragma mark -funtions
 - (void)setupIndicator{
-    if (CGRectEqualToRect(CGRectZero, self.bounds) || self.list.count == 0) {
-        return;
-    }
+    if (CGRectEqualToRect(CGRectZero, self.bounds) || self.list.count == 0) { return; }
     
     switch (self.indicatorType) {
         case 1:

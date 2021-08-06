@@ -222,9 +222,7 @@
 
 // 标签按钮点击事件
 - (void)selectdButton:(UIButton*)btn{
-    if (!self.canSelectedIndex) {
-        return;
-    }
+    if (!self.canSelectedIndex) { return; }
     btn.selected = !btn.selected;
     
     // 检测按钮状态，最少选中一个

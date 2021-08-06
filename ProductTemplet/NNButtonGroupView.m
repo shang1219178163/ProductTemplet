@@ -53,9 +53,7 @@
     CGFloat originX = CGRectGetMinX(self.bounds);
     CGFloat originY = CGRectGetMinY(self.bounds);
     
-    if (width <= 10 || height <= 10) {
-        return;
-    }
+    if (width <= 10 || height <= 10) { return; }
 
     NSInteger rowCount = self.itemList.count % self.numberOfRow == 0 ? self.itemList.count/self.numberOfRow : self.itemList.count/self.numberOfRow + 1;
     CGFloat itemWidth = (width - (self.numberOfRow - 1)*self.padding)/(self.numberOfRow);

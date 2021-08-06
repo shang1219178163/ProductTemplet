@@ -72,8 +72,9 @@
 
                       ].mutableCopy;
     
-    [self createBarItem:@"Next" isLeft:NO handler:^(UIButton *sender) {
-
+    
+    self.navigationItem.rightBarButtonItem = [UIBarButtonItem customViewWithButton:@"Next"
+                                                                           handler:^(UIButton * _Nonnull sender) {
         UIViewController *vc = [[NSClassFromString(@"CustomViewController") alloc]init];
         vc.title = @"CustomViewController";
         [self.navigationController pushViewController:vc animated:true];

@@ -46,13 +46,7 @@
 
     // Do any additional setup after loading the view.
     self.edgesForExtendedLayout = UIRectEdgeNone;
-    self.view.backgroundColor = UIColor.whiteColor;  
-//    [self createBarItem:@"right" isLeft:NO handler:^(UIButton *sender) {
-//        MBProgressHUD * hud = [MBProgressHUD showHUDAddedToView:nil animated:NO];
-//        [hud hideAnimated:YES afterDelay:1];
-//
-//        [hud getViewLayer];
-//    }];
+    self.view.backgroundColor = UIColor.whiteColor;
     
     [self.view addSubview:self.tabBarView];
    

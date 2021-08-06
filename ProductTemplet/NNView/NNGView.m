@@ -97,9 +97,7 @@ NSString * const kGviewItemsSelected = @"kGview_itemsSelected";
 }
 
 - (void)hanleActionView:(UIView *)view isSingle:(BOOL)isSingle{
-    if (isSingle == NO) {
-        return;
-    }
+    if (isSingle == NO) { return; }
     
     if (self.viewList.count == 1) {
         UIButton *sender = [self.viewList firstObject];

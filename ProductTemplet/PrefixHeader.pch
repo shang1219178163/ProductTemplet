@@ -31,4 +31,6 @@
 #import "NNCollectionView.h"
 #import "NNViewComplex.h"
 
+#import "NSObject+Tmp.h"
+
 #endif /* PrefixHeader_pch */

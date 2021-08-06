@@ -107,9 +107,7 @@
 }
 
 - (void)handleActionPan:(UIPanGestureRecognizer *)recognizer{
-    if (_isLock) {
-        return;
-    }
+    if (_isLock) { return; }
     CGPoint translation = [recognizer translationInView:recognizer.view.superview];
     switch (recognizer.state) {
         case UIGestureRecognizerStateBegan:

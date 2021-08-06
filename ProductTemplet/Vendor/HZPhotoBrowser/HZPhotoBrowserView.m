@@ -84,9 +84,7 @@
 {
     
     //图片加载完之后才能响应双击放大
-    if (!self.hasLoadedImage) {
-        return;
-    }
+    if (!self.hasLoadedImage) { return; }
     CGPoint touchPoint = [recognizer locationInView:self];
     if (self.scrollview.zoomScale <= 1.0) {
         

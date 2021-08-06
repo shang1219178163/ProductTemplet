@@ -16,4 +16,11 @@ NS_ASSUME_NONNULL_BEGIN
 
 @end
 
+
+@interface UIViewController (Tmp)
+
+//- (UIView *)createBarItem:(NSString *)obj isLeft:(BOOL)isLeft handler:(void(^)(UIButton *sender))handler;
+
+@end
+
 NS_ASSUME_NONNULL_END

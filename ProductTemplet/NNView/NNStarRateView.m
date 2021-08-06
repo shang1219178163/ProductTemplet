@@ -138,9 +138,7 @@ typedef void(^completeBlock)(CGFloat currentScore);
 
 
 -(void)setCurrentScore:(CGFloat)currentScore {
-    if (_currentScore == currentScore) {
-        return;
-    }
+    if (_currentScore == currentScore) { return; }
     if (currentScore < 0) {
         _currentScore = 0;
     } else if (currentScore > _numberOfStars) {

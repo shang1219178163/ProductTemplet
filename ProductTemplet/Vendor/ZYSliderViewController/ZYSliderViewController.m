@@ -136,9 +136,7 @@ typedef NS_ENUM(NSUInteger, ZYDragDirection){
 
 - (void)setLeftViewController:(UIViewController *)leftViewController
 {
-    if (!leftViewController) {
-        return;
-    }
+    if (!leftViewController) { return; }
     _canShowLeft = YES;
     _leftViewController = leftViewController;
     
@@ -151,9 +149,7 @@ typedef NS_ENUM(NSUInteger, ZYDragDirection){
 
 - (void)setRightViewController:(UIViewController *)rightViewController
 {
-    if (!rightViewController) {
-        return;
-    }
+    if (!rightViewController) { return; }
     _canShowRight = YES;
     _rightViewController = rightViewController;
     

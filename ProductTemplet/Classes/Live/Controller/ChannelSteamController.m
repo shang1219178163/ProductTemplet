@@ -38,8 +38,9 @@
     self.view.backgroundColor = UIColor.whiteColor;  
     [self.view addSubview:self.textView];
     
-    [self createBarItem:@"播放" isLeft:false handler:^(UIButton *sender) {
-        
+    
+    self.navigationItem.rightBarButtonItem = [UIBarButtonItem customViewWithButton:@"播放"
+                                                                           handler:^(UIButton * _Nonnull sender) {        
         NSString * url = self.rootModel.EasyDarwin.Body.URL;
         DDLog(@"%@",url);
         PKLivePlayerController * controller = [[PKLivePlayerController alloc]initWithURL:url];

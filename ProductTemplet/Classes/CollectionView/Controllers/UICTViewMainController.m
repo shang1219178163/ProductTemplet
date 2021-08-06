@@ -27,7 +27,9 @@
     //    [self.view addSubview:self.tableView];
     [self.view addSubview:self.plainView];
     
-    [self createBarItem:@"个人中心" isLeft:false handler:^(UIButton *sender) {
+    
+    self.navigationItem.rightBarButtonItem = [UIBarButtonItem customViewWithButton:@"个人中心"
+                                                                           handler:^(UIButton * _Nonnull sender) {
         NNFilterView * view = [[NNFilterView alloc]init];
         view.dataList = self.filterList;
         //            view.direction = @1;

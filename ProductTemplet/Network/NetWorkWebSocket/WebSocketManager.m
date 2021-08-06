@@ -87,9 +87,7 @@ static NSString * const kWebSocketUrl = @"ws://chat.workerman.net:7272";
     DDLog(@"被关闭连接，code: %ld, reason: %@, wasClean: %d", code, reason, wasClean);
     
     self.connectType = self.isActiveClose == true ? WebSocketDisconnect : WebSocketDefault;
-    if(self.connectType == WebSocketDisconnect){
-        return;
-    }
+    if(self.connectType == WebSocketDisconnect){ return; }
     
     [self pauseHeartBeat]; //断开连接时销毁心跳
     
@@ -122,9 +120,7 @@ static NSString * const kWebSocketUrl = @"ws://chat.workerman.net:7272";
 #pragma mark -NSNotificationCenter
 
 - (void)handleApplicationDidBecomeActive{
-    if (WebSocketManager.shared.connectType == WebSocketConnect) {
-        return;
-    }
+    if (WebSocketManager.shared.connectType == WebSocketConnect) { return; }
     [self connectServer];
 }
 
@@ -158,9 +154,7 @@ static NSString * const kWebSocketUrl = @"ws://chat.workerman.net:7272";
 
 //没有网络的时候开始定时 -- 用于网络检测
 - (void)handleNetWorkTest{
-    if (self.reachable == false) {
-        return;
-    }
+    if (self.reachable == false) { return; }
     //有网络,停止网络检测定时器
     [self pauseNetWorkTest];
     //开始重连
@@ -183,9 +177,7 @@ static NSString * const kWebSocketUrl = @"ws://chat.workerman.net:7272";
 
 //重新连接
 - (void)reConnectServer{
-    if(self.webSocket.readyState == SR_OPEN){
-        return;
-    }
+    if(self.webSocket.readyState == SR_OPEN){ return; }
     
     if(self.reConnectTime > 1024){  //重连10次 2^10 = 1024
         self.reConnectTime = 0;

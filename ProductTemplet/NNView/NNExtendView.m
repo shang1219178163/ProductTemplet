@@ -47,9 +47,7 @@ NSString * const kExtendKey_rectOrigin = @"kExtendKey_rectOrigin";
 
 -(void)setImgList:(NSArray *)imgList{
     _imgList = imgList;
-    if (!_imgList || _isLock) {
-        return;
-    }
+    if (!_imgList || _isLock) { return; }
     
     CGFloat width = CGRectGetWidth(self.frame);
     CGFloat height = CGRectGetHeight(self.frame);
