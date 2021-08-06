@@ -14,16 +14,13 @@
 
 -(void)dealloc{
     [self.chooseView.labelLeft removeObserver:self forKeyPath:@"text" context:nil];
-    
 }
 
 - (instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier{
     self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
     if (self) {
         [self.contentView addSubview:self.chooseView];
-        
         [self.chooseView.labelLeft addObserver:self forKeyPath:@"text" options:NSKeyValueObservingOptionNew context:nil];
-        
     }
     return self;
 }
@@ -52,7 +49,6 @@
     if (!_chooseView) {
         _chooseView = [[NNListChooseView alloc]initWithFrame:self.bounds];
         _chooseView.autoresizingMask = UIViewAutoresizingFlexibleWidth|UIViewAutoresizingFlexibleHeight;
-
     }
     return _chooseView;
 }

@@ -63,9 +63,9 @@
     
     [self.ppBtn makeConstraints:^(MASConstraintMaker *make) {
         make.centerY.equalTo(self.contentView);
-        make.top.equalTo(self.labelLeft);
         make.right.equalTo(self.contentView).offset(-kX_GAP);
         make.width.equalTo(120);
+        make.height.equalTo(35);
     }];
 }
 

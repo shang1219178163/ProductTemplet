@@ -19,11 +19,6 @@
 //#define MAS_SHORTHAND_GLOBALS
 #import "Masonry.h"
 
-
-@interface UITableViewSegmentCell ()
-@property (nonatomic, assign) NSTextAlignment ctlAlignment;
-
-@end
 /**
  文字+segment
  */
@@ -38,7 +33,6 @@
     if (self) {
         [self.contentView addSubview:self.labelLeft];
         [self.contentView addSubview:self.segmentCtl];
-        self.ctlAlignment = NSTextAlignmentRight;
         
         [self.labelLeft addObserver:self forKeyPath:@"text" options: NSKeyValueObservingOptionNew context:nil];
 
@@ -71,51 +65,13 @@
     
     CGFloat width = self.contentView.sizeWidth - self.labelLeft.maxX - kX_GAP;
     CGFloat ctlWidth = width*0.7;
-    switch (self.ctlAlignment) {
-        case NSTextAlignmentLeft:
-        {
-            [self.segmentCtl makeConstraints:^(MASConstraintMaker *make) {
-                make.top.equalTo(self.labelLeft);
-                make.left.equalTo(self.labelLeft.right).offset(kPadding);
-                make.width.equalTo(ctlWidth);
-                make.height.equalTo(self.labelLeft);
-            }];
-        }
-            break;
-
-        case NSTextAlignmentRight:
-        {
-            [self.segmentCtl makeConstraints:^(MASConstraintMaker *make) {
-                make.top.equalTo(self.labelLeft);
-                make.right.equalTo(self.contentView).offset(-kX_GAP);
-                make.width.equalTo(ctlWidth);
-                make.height.equalTo(self.labelLeft);
-            }];
-        }
-            break;
-            
-        case NSTextAlignmentJustified:
-        {
-            [self.segmentCtl makeConstraints:^(MASConstraintMaker *make) {
-                make.top.equalTo(self.labelLeft);
-                make.left.equalTo(self.labelLeft.right).offset(kPadding);
-                make.right.equalTo(self.contentView).offset(-kX_GAP);
-                make.height.equalTo(self.labelLeft);
-            }];
-        }
-            break;
-            
-        default:
-        {
-            [self.segmentCtl makeConstraints:^(MASConstraintMaker *make) {
-                make.top.equalTo(self.labelLeft);
-                make.left.lessThanOrEqualTo(self.labelLeft.right).offset((width - ctlWidth)*0.5);
-                make.width.greaterThanOrEqualTo(ctlWidth);
-                make.height.equalTo(self.labelLeft);
-            }];
-        }
-            break;
-    }
+    
+    [self.segmentCtl makeConstraints:^(MASConstraintMaker *make) {
+        make.centerY.equalTo(self.contentView);
+        make.right.equalTo(self.contentView).offset(-kX_GAP);
+        make.width.equalTo(ctlWidth);
+        make.height.equalTo(30);
+    }];
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {

@@ -59,7 +59,7 @@
     }];
     
     [self.textField makeConstraints:^(MASConstraintMaker *make) {
-        make.top.equalTo(self.labelLeft);
+        make.centerY.equalTo(self);
         make.left.equalTo(self.labelLeft.right).offset(kPadding);
         make.right.equalTo(self).offset(-kX_GAP);
         make.height.equalTo(self.labelLeft);

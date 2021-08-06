@@ -251,7 +251,7 @@
             UITableViewPickerCell *cell = [UITableViewPickerCell cellWithTableView:tableView];
             cell.labelLeft.text = value0;
             
-            [cell addGestureTap:^(UIGestureRecognizer *sender) {
+            [cell.contentView addGestureTap:^(UIGestureRecognizer *sender) {
                 [self.pickerView show];
                 
             }];

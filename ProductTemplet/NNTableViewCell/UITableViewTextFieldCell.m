@@ -57,10 +57,10 @@
     }];
     
      [self.textField makeConstraints:^(MASConstraintMaker *make) {
-        make.top.equalTo(self.labelLeft);
+         make.centerY.equalTo(self.contentView);
          make.left.equalTo(self.labelLeft.right).offset(kPadding);
          make.right.equalTo(self.contentView).offset(-kX_GAP);
-        make.height.equalTo(self.labelLeft);
+         make.height.equalTo(self.labelLeft);
      }];
 }
 

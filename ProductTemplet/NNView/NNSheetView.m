@@ -49,22 +49,22 @@
 -(void)layoutSubviews{
     [super layoutSubviews];
     
-//    [self setupConstraint];
+    [self setupConstraint];
 }
 
 -(void)setupConstraint{
-    [self.labelLeft sizeToFit];
+    CGSize labelLeftSize = [self.labelLeft sizeThatFits:CGSizeMake(CGFLOAT_MAX, 35)];
     [self.labelLeft makeConstraints:^(MASConstraintMaker *make) {
         make.centerY.equalTo(self);
         make.left.equalTo(self).offset(kX_GAP);
-        make.size.equalTo(CGSizeMake(self.labelLeft.sizeWidth, kSizeArrow.height));
+        make.size.equalTo(labelLeftSize);
     }];
     
     [self.textField makeConstraints:^(MASConstraintMaker *make) {
-        make.top.equalTo(self.labelLeft);
+        make.centerY.equalTo(self);
         make.left.equalTo(self.labelLeft.right).offset(kPadding);
         make.right.equalTo(self).offset(-kX_GAP);
-        make.height.equalTo(self.labelLeft);
+        make.height.equalTo(35);
     }];
 }
 
