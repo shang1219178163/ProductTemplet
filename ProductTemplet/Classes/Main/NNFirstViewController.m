@@ -137,6 +137,14 @@
     NSString *b = [@"ooo" padLeft:10 padding:@"*"];
     NSString *c = [@"ooo" padRight:10 padding:@"*"];
     DDLog(@"%@_%@_%@", a, b, c);
+    
+    
+    UIAlertController *alertVC = [UIAlertController alertControllerWithTitle:@"Title"
+                                                                     message:@"message"
+                                                              preferredStyle:UIAlertControllerStyleAlert];
+    [alertVC.view recursionSubView:0 isPrint:true block:^(UIView * _Nonnull) {
+            
+    }];
 }
 
 - (void)bindData{
