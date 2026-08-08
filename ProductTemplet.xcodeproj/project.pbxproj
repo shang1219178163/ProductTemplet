@@ -559,6 +559,7 @@
 		5162F70720BF9D6E009A6253 /* FlyweightView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5162F70620BF9D6D009A6253 /* FlyweightView.m */; };
 		5162F70A20BFB7CB009A6253 /* GCDViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5162F70920BFB7CB009A6253 /* GCDViewController.m */; };
 		5162F70D20BFB934009A6253 /* OperationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5162F70C20BFB934009A6253 /* OperationViewController.m */; };
+		5164D575DAA402D8555C42AC /* UIImage+IconsNames.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CAA0923BB7FA13B7DFD09BB /* UIImage+IconsNames.swift */; };
 		5167E22F21A7AA7D006650F3 /* UITextFieldController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5167E22E21A7AA7D006650F3 /* UITextFieldController.m */; };
 		5167FF1520F5C0EC004A810C /* PulsingHaloLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 5167FF1420F5C0EC004A810C /* PulsingHaloLayer.m */; };
 		5168C8E521A6401F00850687 /* NumberViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5168C8E421A6401F00850687 /* NumberViewController.m */; };
@@ -661,6 +662,7 @@
 		51B9CD1920A0520F0096A540 /* UIViewController+ZYSliderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 51B9CD1620A0520F0096A540 /* UIViewController+ZYSliderViewController.m */; };
 		51B9CD1E20A0631F0096A540 /* img_arrowDown_orange.png in Resources */ = {isa = PBXBuildFile; fileRef = 51B9CD1D20A0631F0096A540 /* img_arrowDown_orange.png */; };
 		51BB931820B5013600EB43A1 /* DBEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = 51BB931720B5013600EB43A1 /* DBEntity.m */; };
+		C40E452A29996D0D92D74CAB /* SystemIconController.m in Sources */ = {isa = PBXBuildFile; fileRef = E3B5A3E5ED414317ED59DF2F /* SystemIconController.m */; };
 		D7EDEAB221BDF5930048CCDA /* NNFontListController.m in Sources */ = {isa = PBXBuildFile; fileRef = D7EDEAB121BDF5930048CCDA /* NNFontListController.m */; };
 		F6E48B295C01C814BB50B948 /* Pods_ProductTemplet.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C34CC0C3E9585460E15F2766 /* Pods_ProductTemplet.framework */; };
 /* End PBXBuildFile section */
@@ -1807,11 +1809,14 @@
 		51B9CD1D20A0631F0096A540 /* img_arrowDown_orange.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = img_arrowDown_orange.png; sourceTree = "<group>"; };
 		51BB931620B5013600EB43A1 /* DBEntity.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DBEntity.h; sourceTree = "<group>"; };
 		51BB931720B5013600EB43A1 /* DBEntity.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DBEntity.m; sourceTree = "<group>"; };
+		801A31A49031F380DF42C69A /* SystemIconController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = SystemIconController.h; sourceTree = "<group>"; };
+		9CAA0923BB7FA13B7DFD09BB /* UIImage+IconsNames.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "UIImage+IconsNames.swift"; sourceTree = "<group>"; };
 		B05B2DDF1BAF1B07A785248B /* Pods-ProductTemplet.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ProductTemplet.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ProductTemplet/Pods-ProductTemplet.debug.xcconfig"; sourceTree = "<group>"; };
 		BDCDB002041AAEC418CA167A /* NNGridMenuView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = NNGridMenuView.m; sourceTree = "<group>"; };
 		C34CC0C3E9585460E15F2766 /* Pods_ProductTemplet.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ProductTemplet.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D7EDEAB021BDF5930048CCDA /* NNFontListController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NNFontListController.h; sourceTree = "<group>"; };
 		D7EDEAB121BDF5930048CCDA /* NNFontListController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NNFontListController.m; sourceTree = "<group>"; };
+		E3B5A3E5ED414317ED59DF2F /* SystemIconController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = SystemIconController.m; sourceTree = "<group>"; };
 		F08A5D79EC660168300AACB6 /* NNGridMenuView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = NNGridMenuView.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -2880,6 +2885,7 @@
 				513649E320860683005A20E7 /* PrefixHeader.pch */,
 				149BE14F2341923D00D74E7C /* ProductTemplet-Bridging-Header.h */,
 				149A6E753027179A0006F822 /* UIImage+Icons.swift */,
+				9CAA0923BB7FA13B7DFD09BB /* UIImage+IconsNames.swift */,
 			);
 			path = ProductTemplet;
 			sourceTree = "<group>";
@@ -3053,6 +3059,8 @@
 				14ADE28323CEE09C00037B0B /* NNTagView.m */,
 				14F25F522359A14800D05998 /* UIView+Tmp.h */,
 				14F25F532359A14800D05998 /* UIView+Tmp.m */,
+				801A31A49031F380DF42C69A /* SystemIconController.h */,
+				E3B5A3E5ED414317ED59DF2F /* SystemIconController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -4403,6 +4411,8 @@
 				14A86A852355AFC700AD9BC1 /* NNSearchResultController.m in Sources */,
 				1453765125CAA47800CB6578 /* NNGuideView.m in Sources */,
 				3BBA499973A02EBB7ADAFE25 /* NNGridMenuView.m in Sources */,
+				C40E452A29996D0D92D74CAB /* SystemIconController.m in Sources */,
+				5164D575DAA402D8555C42AC /* UIImage+IconsNames.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -56,6 +56,7 @@
     self.dataList = @[@[@"EntryViewController", @"录入类界面封装",],
                       @[@"NNUploadImagesController", @"选择照片",],                      
                       @[@"NNTagViewController", @"TagView",],
+                      @[@"SystemIconController", @"系统图标 SF Symbols",],
                       @[@"SystemAboutController", @"系统相关",],
                       @[@"NNSearchController", @"复合搜索🔍",],
                       @[@"RuntimeController", @"字符串映射研究",],
