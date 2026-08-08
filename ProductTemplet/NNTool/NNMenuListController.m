@@ -31,7 +31,7 @@
             NNBtnView * btnView = [[NNBtnView alloc]initWithFrame:CGRectMake(10, 10, kScreenWidth/4.0, 50)];
             btnView.imageView.image = [UIImage imageNamed:@"img_arrowDown_orange.png"];
             btnView.label.text = @"测试数据";
-            btnView.type = @3;
+            btnView.type = NNBtnViewTypeImageRight;
             btnView.adjustsSizeToFitText = YES;
 
             btnView;

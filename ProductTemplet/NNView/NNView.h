@@ -51,6 +51,7 @@
 #import "NNDateRangeView.h"
 #import "NNListChooseView.h"
 #import "NNItemsView.h"
+#import "NNGridMenuView.h"
 #import "NNSearchView.h"
 #import "NNSegmentView.h"
 #import "NNSheetView.h"

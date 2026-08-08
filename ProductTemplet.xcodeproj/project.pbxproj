@@ -383,6 +383,7 @@
 		14F6382B23630AC900D0EBF0 /* NSObject+Tmp.m in Sources */ = {isa = PBXBuildFile; fileRef = 14F6382A23630AC900D0EBF0 /* NSObject+Tmp.m */; };
 		14F9BF3F22E56167001637B6 /* PhotoDisplayController.m in Sources */ = {isa = PBXBuildFile; fileRef = 14F9BF3E22E56167001637B6 /* PhotoDisplayController.m */; };
 		14F9BF4222E56332001637B6 /* UICTViewLayoutPhoto.m in Sources */ = {isa = PBXBuildFile; fileRef = 14F9BF4022E56331001637B6 /* UICTViewLayoutPhoto.m */; };
+		3BBA499973A02EBB7ADAFE25 /* NNGridMenuView.m in Sources */ = {isa = PBXBuildFile; fileRef = BDCDB002041AAEC418CA167A /* NNGridMenuView.m */; };
 		51036F4720A16298009D8B7B /* img_notice.png in Resources */ = {isa = PBXBuildFile; fileRef = 51036F4620A16297009D8B7B /* img_notice.png */; };
 		51036F5020A17B3B009D8B7B /* WeiboLisController.m in Sources */ = {isa = PBXBuildFile; fileRef = 51036F4F20A17B3B009D8B7B /* WeiboLisController.m */; };
 		510BC99B208F2F0400CF48C5 /* FriendListController.m in Sources */ = {isa = PBXBuildFile; fileRef = 510BC99A208F2F0400CF48C5 /* FriendListController.m */; };
@@ -1807,9 +1808,11 @@
 		51BB931620B5013600EB43A1 /* DBEntity.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DBEntity.h; sourceTree = "<group>"; };
 		51BB931720B5013600EB43A1 /* DBEntity.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DBEntity.m; sourceTree = "<group>"; };
 		B05B2DDF1BAF1B07A785248B /* Pods-ProductTemplet.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ProductTemplet.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ProductTemplet/Pods-ProductTemplet.debug.xcconfig"; sourceTree = "<group>"; };
+		BDCDB002041AAEC418CA167A /* NNGridMenuView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = NNGridMenuView.m; sourceTree = "<group>"; };
 		C34CC0C3E9585460E15F2766 /* Pods_ProductTemplet.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ProductTemplet.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D7EDEAB021BDF5930048CCDA /* NNFontListController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NNFontListController.h; sourceTree = "<group>"; };
 		D7EDEAB121BDF5930048CCDA /* NNFontListController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NNFontListController.m; sourceTree = "<group>"; };
+		F08A5D79EC660168300AACB6 /* NNGridMenuView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = NNGridMenuView.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -2271,6 +2274,8 @@
 				1453760725CAA47500CB6578 /* NNWebView.h */,
 				145375EF25CAA47300CB6578 /* NNWebView.m */,
 				1453761125CAA47500CB6578 /* Resources */,
+				F08A5D79EC660168300AACB6 /* NNGridMenuView.h */,
+				BDCDB002041AAEC418CA167A /* NNGridMenuView.m */,
 			);
 			path = NNView;
 			sourceTree = "<group>";
@@ -4397,6 +4402,7 @@
 				5162F70720BF9D6E009A6253 /* FlyweightView.m in Sources */,
 				14A86A852355AFC700AD9BC1 /* NNSearchResultController.m in Sources */,
 				1453765125CAA47800CB6578 /* NNGuideView.m in Sources */,
+				3BBA499973A02EBB7ADAFE25 /* NNGridMenuView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

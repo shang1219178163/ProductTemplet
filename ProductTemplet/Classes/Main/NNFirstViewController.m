@@ -70,13 +70,13 @@
     if (!_elements) {
         _elements = @[
                          @[@"数据录入",@"img_home_dataEntry_147",@"WHKDataEntryViewController", @"",].mutableCopy,
-                         @[@"种猪管理",@"img_home_animamalOrigin_147",@"WHKAnimalOriginViewController", @"",].mutableCopy,
-                         @[@"商品猪管理",@"img_home_animamalSell_147",@"WHKSelAnimalManagerController",@"",].mutableCopy,
+                         @[@"宠物管理",@"img_home_animamalOrigin_147",@"WHKAnimalOriginViewController", @"",].mutableCopy,
+                         @[@"优宠物管理",@"img_home_animamalSell_147",@"WHKSelAnimalManagerController",@"",].mutableCopy,
                          @[@"提醒设定", @"img_home_remind_147",@"WHKRemindViewController",@"",].mutableCopy,
                          @[@"免疫管理",@"img_home_immune_147",@"WHKImmuneViewController",@"",].mutableCopy,
                          @[@"养猪日历",@"img_home_calendar_147",@"WHKCalendarViewController",@"",].mutableCopy,
                          @[@"生产报表",@"img_home_report_147",@"WHKReportViewController",@"",].mutableCopy,
-                         @[@"存栏动态",@"img_home_currentState_147",@"WHKDynamicAnimalsViewController",@"",].mutableCopy,
+                         @[@"宠物动态",@"img_home_currentState_147",@"WHKDynamicAnimalsViewController",@"",].mutableCopy,
                          @[@"更多功能",@"img_home_more_147",@"WHKMoreViewController",@"",].mutableCopy,
                          //                         @[@"高效录入",@"img_home_more_147",@"BNEfficientEntryController",@"",].mutableCopy,
                          
@@ -159,79 +159,46 @@
 - (void)configureTableView{
     [self.view addSubview:self.tbView];
     self.tbView.rowHeight = 60;
+    self.tbView.contentInsetAdjustmentBehavior = UIScrollViewContentInsetAdjustmentNever;
+    self.tbView.contentInset = UIEdgeInsetsZero;
+    self.tbView.scrollIndicatorInsets = UIEdgeInsetsZero;
+    self.tbView.backgroundColor = UIColor.whiteColor;
+    if (@available(iOS 15.0, *)) {
+        // iOS 15+ 默认给 section header 顶部加约 22pt 空白
+        self.tbView.sectionHeaderTopPadding = 0;
+    }
 
-    // Banner + notice row + function grid should fit on screen (old formula made a huge empty header).
-    CGFloat itemSide = floor(kScreenWidth / 3.0);
-    NSInteger gridRows = (self.elements.count + 2) / 3;
-    self.tbView.sectionHeaderHeight = 160;
-    self.tbView.sectionFooterHeight = itemSide * gridRows;
+    // Banner 用 tableHeaderView，避免 sectionHeader 顶部空隙
+    CGFloat bannerH = 160;
+    self.tbView.tableHeaderView = [self createCycleViewRect:CGRectMake(0, 0, kScreenWidth, bannerH) imageNames:self.imageList];
+    self.tbView.sectionHeaderHeight = CGFLOAT_MIN;
+
+    self.tbView.sectionFooterHeight = [NNGridMenuView heightWithItemCount:self.elements.count
+                                                                    width:kScreenWidth
+                                                           numberOfColumn:3];
     [self.tbView reloadData];
-}
-
-- (UIView *)getViewWithHeight:(CGFloat)height isHeader:(BOOL)isHeader{
-    NSInteger colCount = 3;
-    CGFloat itemSide = floor(kScreenWidth / colCount);
-    NSInteger gridRows = (self.elements.count + colCount - 1) / colCount;
-
-    if (isHeader) {
-        UIView *backgroudView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, kScreenWidth, height)];
-        backgroudView.backgroundColor = UIColor.whiteColor;
-        UIView *cycleView = [self createCycleViewRect:backgroudView.bounds imageNames:self.imageList];
-        [backgroudView addSubview:cycleView];
-        return backgroudView;
-    }
-
-    UIView *backgroudView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, kScreenWidth, itemSide * gridRows)];
-    backgroudView.backgroundColor = UIColor.whiteColor;
-
-    for (NSInteger i = 0; i < self.elements.count; i++) {
-        NSArray *array = self.elements[i];
-        CGFloat x = itemSide * (i % colCount);
-        CGFloat y = itemSide * (i / colCount);
-
-        UIView *sender = [[UIView alloc] initWithFrame:CGRectMake(x, y, itemSide, itemSide)];
-        sender.tag = kTAG_VIEW + i + 50;
-        sender.layer.borderWidth = 0.5;
-        sender.layer.borderColor = [UIColor colorWithWhite:0.9 alpha:1].CGColor;
-
-        CGFloat iconSide = 48;
-        UIImageView *icon = [[UIImageView alloc] initWithFrame:CGRectMake((itemSide - iconSide) / 2.0, 18, iconSide, iconSide)];
-        icon.image = [UIImage imageNamed:array[1]];
-        icon.contentMode = UIViewContentModeScaleAspectFit;
-        [sender addSubview:icon];
-
-        UILabel *lab = [[UILabel alloc] initWithFrame:CGRectMake(4, CGRectGetMaxY(icon.frame) + 8, itemSide - 8, 20)];
-        lab.text = array[0];
-        lab.font = [UIFont systemFontOfSize:13];
-        lab.textAlignment = NSTextAlignmentCenter;
-        lab.textColor = UIColor.darkTextColor;
-        lab.adjustsFontSizeToFitWidth = YES;
-        [sender addSubview:lab];
-
-        [sender addGestureTap:^(UITapGestureRecognizer * _Nonnull reco) {
-            UIViewController *vc = [[NSClassFromString(array[2]) alloc] init];
-            if (!vc) { return; }
-            vc.title = array[0];
-            [self.navigationController pushViewController:vc animated:YES];
-        }];
-        [backgroudView addSubview:sender];
-    }
-    return backgroudView;
 }
 
 - (void)configureMenuList{
     NSArray *menuList = [NSArray arrayWithCount:9 generator:^id _Nonnull(NSUInteger idx) {
-        return [NSString stringWithFormat:@"工厂_%@", @(idx + 1)];
+        // idx 为 n（0 基）时，拼 (n+1) 个「选项」
+        NSUInteger n = idx + 1;
+        NSMutableString *text = [NSMutableString string];
+        for (NSUInteger i = 0; i < n; i++) {
+            [text appendString:@"选项"];
+        }
+        return text.copy;
     }];
 
-    self.navigationItem.titleView = self.btnView;
-    
-    self.btnView.label.text = [menuList firstObject];
     self.btnView.label.textColor = UIColor.whiteColor;
+    self.btnView.label.text = [menuList firstObject];
+    [self.btnView sizeToFitContent];
+    self.navigationItem.titleView = self.btnView;
+
     @weakify(self);
     self.btnView.block = ^(NNBtnView *view) {
         @strongify(self);
-        [self handleActionBtnView:view];
+        [self onBtnView:view];
     };
     
     NNMenuView *menuView = [[NNMenuView alloc]initWithFrame:CGRectMake(0, 0, kScreenWidth, 0.0)];
@@ -239,10 +206,14 @@
     menuView.offset = navBottom > 0 ? navBottom : (kStatusBarHeight + kNaviBarHeight);
     menuView.dataList = menuList;
     menuView.block = ^(NNMenuView *view, NSIndexPath *indexPath) {
-        
+        @strongify(self);
         NSString * string = menuList[indexPath.row];
         self.btnView.label.text = string;
-        [self handleActionBtnView:self.btnView];
+        [self.btnView sizeToFitContent];
+        // 导航栏 titleView 以 frame 为准，重设一次才能吃到新宽度
+        self.navigationItem.titleView = nil;
+        self.navigationItem.titleView = self.btnView;
+        [self onBtnView:self.btnView];
         
         [UIView animateWithDuration:kDurationDrop animations:^{
             self.btnView.imageView.transform = view.isShow  ? CGAffineTransformMakeRotation(M_PI) : CGAffineTransformIdentity;
@@ -252,11 +223,10 @@
     };
     
     self.menuView = menuView;
-    [self.btnView invalidateIntrinsicContentSize];
 }
 
 #pragma mark - -BINBtnView
-- (void)handleActionBtnView:(NNBtnView *)sender{
+- (void)onBtnView:(NNBtnView *)sender{
     CGFloat navBottom = CGRectGetMaxY(self.navigationController.navigationBar.frame);
     if (navBottom > 0) {
         self.menuView.offset = navBottom;
@@ -296,23 +266,22 @@
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
-    static NSString *identifier = @"HomeNoticeCell";
-    UITableViewCell *cell = [UITableViewCell cellWithTableView:tableView identifier:identifier style:UITableViewCellStyleSubtitle];
-    cell.selectionStyle = UITableViewCellSelectionStyleNone;
-    cell.imageView.image = [UIImage imageNamed:@"img_notice_One.png"];
-    cell.textLabel.font = [UIFont systemFontOfSize:14];
-    cell.textLabel.textColor = UIColor.darkTextColor;
-    cell.detailTextLabel.font = [UIFont systemFontOfSize:12];
-    cell.detailTextLabel.textColor = UIColor.grayColor;
-
-    if (self.dataList.count > 0) {
-        FactoryDetailInfoModel *model = self.dataList[indexPath.row];
-        cell.textLabel.text = model.title ?: @"通知";
-        cell.detailTextLabel.text = model.number.length ? [NSString stringWithFormat:@"数量 %@", model.number] : @"暂无更多信息";
-    } else {
+    if (self.dataList.count == 0) {
+        UITableViewOneCell *cell = [UITableViewOneCell cellWithTableView:tableView];
         cell.textLabel.text = @"没有符合条件的数据,去看看其他内容吧!";
-        cell.detailTextLabel.text = nil;
+        return cell;
     }
+
+    UITableViewCycleViewCell *cell = [UITableViewCycleViewCell cellWithTableView:tableView];
+    cell.selectionStyle = UITableViewCellSelectionStyleNone;
+    cell.cycleView.list = @[
+        @"昨天，天津发布了新的人才引进政策——“海河英才”行动计划，新政策大幅放宽人才落户条件、自主选择落户地点、简化落户办理程序。",
+        @"在这之前，其实天津也有人才计划，只不过门槛比较高，办理落户的手续也比较复杂，比如本科学历需要在当地缴纳半年社保等。",
+        @"这次放开，说白了就是之前的门槛太高了，可能没有达到预期效果。所以“海河英才”计划有点像之前人才政策的升级版。",
+        @"西安人才计划也搞了两轮，第一轮门槛很高，第二轮降到大学生只要学生证和身份证就能落户。",
+    ];
+    // start after layout; NNCycleView will auto-start when bounds are ready
+    [cell.cycleView start];
     return cell;
 }
 
@@ -322,13 +291,11 @@
 }
 
 -(CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section{
-    return tableView.sectionHeaderHeight;
-    
+    return CGFLOAT_MIN;
 }
 
 -(UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section{
-    UIView * view = [self getViewWithHeight:tableView.sectionHeaderHeight isHeader:YES];
-    return view;
+    return nil;
 }
 
 -(CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section{
@@ -336,7 +303,18 @@
 }
 
 -(UIView *)tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section{
-    UIView * view = [self getViewWithHeight:tableView.sectionFooterHeight isHeader:NO];
+    NNGridMenuView *view = [[NNGridMenuView alloc] initWithFrame:CGRectMake(0, 0, kScreenWidth, tableView.sectionFooterHeight)];
+    view.numberOfColumn = 3;
+    view.items = self.elements;
+    @weakify(self);
+    view.block = ^(NNGridMenuView *grid, NSInteger index, NSArray *item) {
+        @strongify(self);
+        if (item.count < 3) { return; }
+        UIViewController *vc = [[NSClassFromString(item[2]) alloc] init];
+        if (!vc) { return; }
+        vc.title = item[0];
+        [self.navigationController pushViewController:vc animated:YES];
+    };
     return view;
 }
 
@@ -346,8 +324,6 @@
 }
 
 - (UIView *)createCycleViewRect:(CGRect)rect imageNames:(NSArray *)imageNames{
-    UIView *backgroudView = [[UIView alloc]initWithFrame:rect];
-    
     // Remote URLs must use imageURLStringsGroup (imageNamesGroup is for local asset names).
     SDCycleScrollView *cycleScrollView = [SDCycleScrollView cycleScrollViewWithFrame:rect
                                                                               delegate:self
@@ -358,11 +334,9 @@
     cycleScrollView.scrollDirection = UICollectionViewScrollDirectionHorizontal;
     cycleScrollView.autoScrollTimeInterval = 3.0;
     cycleScrollView.backgroundColor = UIColor.blackColor;
-    
-    //    cycleScrollView.layer.borderColor = UIColor.blueColor.CGColor;
-    //    cycleScrollView.layer.borderWidth = 1;
-    [backgroudView addSubview:cycleScrollView];
-    return backgroudView;
+    cycleScrollView.bannerImageViewContentMode = UIViewContentModeScaleAspectFill;
+    cycleScrollView.clipsToBounds = YES;
+    return cycleScrollView;
 }
 
 #pragma mark - SDCycleScrollViewDelegate

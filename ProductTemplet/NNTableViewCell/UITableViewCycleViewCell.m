@@ -27,9 +27,7 @@
 
 -(void)layoutSubviews{
     [super layoutSubviews];
-    
-    self.cycleView.frame = CGRectMake(0, 0, CGRectGetWidth(self.contentView.frame), CGRectGetHeight(self.contentView.frame));
-    
+    self.cycleView.frame = self.contentView.bounds;
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {

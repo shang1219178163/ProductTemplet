@@ -10,11 +10,15 @@
 #import <NNGloble/NNGloble.h>
 #import "NNCategoryPro.h"
 
+@interface NNBtnView ()
+@property (nonatomic, assign) BOOL sizeUpdateScheduled;
+@end
+
 @implementation NNBtnView
 
 -(void)dealloc{
     [self.label removeObserver:self forKeyPath:@"text"];
-    
+    [self.imageView removeObserver:self forKeyPath:@"image"];
 }
 
 + (UIImage *)defaultTriangleImage {
@@ -35,15 +39,22 @@
 -(instancetype)initWithFrame:(CGRect)frame{
     self = [super initWithFrame:frame];
     if (self) {
-        _type = @3;
+        _type = NNBtnViewTypeImageRight;
         _imgSize = CGSizeMake(10, 6);
-        _padding = 3.0;
+        _spacing = 4.0;
+        _maxWidth = 0;
 
         [self addSubview:self.label];
         [self addSubview:self.imageView];
 
         self.imageView.image = [NNBtnView defaultTriangleImage];
         self.imageView.tintColor = UIColor.orangeColor;
+
+        // 调试：查看标题 / 三角形布局范围
+        self.label.layer.borderWidth = 1.0;
+        self.label.layer.borderColor = UIColor.redColor.CGColor;
+        self.imageView.layer.borderWidth = 1.0;
+        self.imageView.layer.borderColor = UIColor.greenColor.CGColor;
         
         [self.label addObserver:self forKeyPath:@"text" options:NSKeyValueObservingOptionNew context:nil];
         [self.imageView addObserver:self forKeyPath:@"image" options:0 context:nil];
@@ -59,72 +70,173 @@
     
 }
 
+- (CGFloat)resolvedMaxWidth {
+    if (_maxWidth > 0) {
+        return _maxWidth;
+    }
+    return UIScreen.mainScreen.bounds.size.width - 160.0;
+}
+
+- (CGFloat)resolvedSpacing {
+    return _spacing > 0 ? _spacing : 4.0;
+}
+
+- (void)setSpacing:(CGFloat)spacing {
+    if (fabs(_spacing - spacing) < 0.01) { return; }
+    _spacing = spacing;
+    if (self.adjustsSizeToFitText) {
+        [self scheduleSizeToFitContent];
+    } else {
+        [self setNeedsLayout];
+    }
+}
+
+- (void)setPadding:(CGFloat)padding {
+    self.spacing = padding;
+}
+
+- (CGFloat)padding {
+    return self.spacing;
+}
+
+- (BOOL)isHorizontalType {
+    return self.type == NNBtnViewTypeImageLeft || self.type == NNBtnViewTypeImageRight;
+}
+
+- (CGSize)resolvedImageSize {
+    if (!CGSizeEqualToSize(CGSizeZero, _imgSize)) {
+        return _imgSize;
+    }
+    if ([self isHorizontalType]) {
+        return CGSizeMake(10, 6);
+    }
+    return CGSizeMake(kH_LABEL_SMALL, kH_LABEL_SMALL);
+}
+
+- (CGFloat)textWidth {
+    NSString *text = self.label.text ?: @"";
+    if (text.length == 0) { return 0; }
+    return ceil([self.label sizeThatFits:CGSizeMake(CGFLOAT_MAX, CGFLOAT_MAX)].width);
+}
+
+- (CGFloat)maxLabelWidth {
+    CGFloat spacing = [self resolvedSpacing];
+    CGSize imgSize = [self resolvedImageSize];
+    CGFloat reserve = [self isHorizontalType] ? (imgSize.width + spacing) : 0;
+    return MAX(0, [self resolvedMaxWidth] - reserve);
+}
+
+- (CGSize)preferredContentSize {
+    CGFloat spacing = [self resolvedSpacing];
+    CGSize imgSize = [self resolvedImageSize];
+    CGFloat labelW = MIN([self textWidth], [self maxLabelWidth]);
+    CGFloat height = CGRectGetHeight(self.bounds) > 1.0 ? CGRectGetHeight(self.bounds) : 36.0;
+    CGFloat width = [self isHorizontalType] ? (labelW + spacing + imgSize.width) : MAX(labelW, imgSize.width);
+    width = MIN(width, [self resolvedMaxWidth]);
+    return CGSizeMake(ceil(width), height);
+}
+
+- (void)setType:(NNBtnViewType)type {
+    if (_type == type) { return; }
+    _type = type;
+    if (self.adjustsSizeToFitText) {
+        [self scheduleSizeToFitContent];
+    } else {
+        [self setNeedsLayout];
+    }
+}
+
+- (void)sizeToFitContent {
+    if (!self.adjustsSizeToFitText) { return; }
+    CGSize size = [self preferredContentSize];
+    if (fabs(CGRectGetWidth(self.bounds) - size.width) < 0.5 &&
+        fabs(CGRectGetHeight(self.bounds) - size.height) < 0.5) {
+        [self setNeedsLayout];
+        return;
+    }
+    // titleView 以 frame 为准，必须写入尺寸；勿在导航栏 layout 同步链路里连环改，由外层/异步调用
+    self.bounds = CGRectMake(0, 0, size.width, size.height);
+    CGRect frame = self.frame;
+    frame.size = size;
+    self.frame = frame;
+    [self invalidateIntrinsicContentSize];
+    [self setNeedsLayout];
+    [self layoutIfNeeded];
+}
+
+- (void)scheduleSizeToFitContent {
+    if (!self.adjustsSizeToFitText || self.sizeUpdateScheduled) { return; }
+    self.sizeUpdateScheduled = YES;
+    __weak typeof(self) weakSelf = self;
+    dispatch_async(dispatch_get_main_queue(), ^{
+        __strong typeof(weakSelf) self = weakSelf;
+        if (!self) { return; }
+        self.sizeUpdateScheduled = NO;
+        [self sizeToFitContent];
+    });
+}
+
 -(void)layoutSubviews{
     [super layoutSubviews];
     
-    CGRect frame = self.frame;
-    CGFloat height = CGRectGetHeight(frame);
-    CGFloat width = CGRectGetWidth(frame);
+    CGFloat height = CGRectGetHeight(self.bounds);
+    CGFloat width = CGRectGetWidth(self.bounds);
+    CGFloat spacing = [self resolvedSpacing];
     
-    if (_padding == 0.0) _padding = 3.0;
-    
-    
-    CGFloat kH_label = kH_LABEL_SMALL;
-    if (CGSizeEqualToSize(CGSizeZero, _imgSize)) {
-        NSInteger t = [_type integerValue];
-        if (t == 1 || t == 3) {
-            // 水平图文：默认小三角尺寸
-            _imgSize = CGSizeMake(10, 6);
-        } else {
-            _imgSize = CGSizeMake(kH_label, kH_label);
-        }
-    }
-    //图文水平
-    CGFloat kW_label_Hor = CGRectGetWidth(frame) - self.imgSize.width - _padding*3;
-    //图文垂直
-    CGFloat kW_label_Ver = CGRectGetWidth(frame) - _padding*2;
-    
+    CGSize imgSize = [self resolvedImageSize];
+    _imgSize = imgSize;
+
     if (!self.imageView.image) {
         self.imageView.image = [NNBtnView defaultTriangleImage];
         if (!self.imageView.tintColor) {
             self.imageView.tintColor = UIColor.orangeColor;
         }
     }
+
+    // 以 maxWidth 为上限；bounds 已由 sizeToFitContent 按内容撑开
+    CGFloat labelW = MIN([self textWidth], [self maxLabelWidth]);
+    if ([self isHorizontalType]) {
+        labelW = MIN(labelW, MAX(0, width - imgSize.width - spacing));
+    } else {
+        labelW = MIN(labelW, MAX(0, width));
+    }
+
+    CGFloat labelH = MAX(ceil(self.label.font.lineHeight), kH_LABEL_SMALL);
+    self.label.lineBreakMode = NSLineBreakByTruncatingTail;
     
-    switch ([self.type integerValue]) {
-        case 0://图上字下
+    switch (self.type) {
+        case NNBtnViewTypeImageTop:
         {
-            self.imageView.frame = CGRectMake((width - _imgSize.width)/2.0, _padding, _imgSize.width, _imgSize.height);
-            self.label.frame = CGRectMake(_padding, CGRectGetMaxY(self.imageView.frame) + _padding, kW_label_Ver, kH_label);
-            
+            self.imageView.frame = CGRectMake((width - imgSize.width)/2.0, spacing, imgSize.width, imgSize.height);
+            self.label.frame = CGRectMake((width - labelW)/2.0, CGRectGetMaxY(self.imageView.frame) + spacing, labelW, labelH);
         }
             break;
-        case 1://图左字右
+        case NNBtnViewTypeImageLeft:
         {
-            self.imageView.frame = CGRectMake(_padding, (height - _imgSize.height)/2.0, _imgSize.width, _imgSize.height);
-            self.label.frame = CGRectMake(CGRectGetMaxX(self.imageView.frame) + _padding, (height - kH_label)/2.0, kW_label_Hor, kH_label);
-            
+            CGFloat contentW = imgSize.width + spacing + labelW;
+            CGFloat startX = (width - contentW) / 2.0;
+            self.imageView.frame = CGRectMake(startX, (height - imgSize.height)/2.0, imgSize.width, imgSize.height);
+            self.label.frame = CGRectMake(CGRectGetMaxX(self.imageView.frame) + spacing, (height - labelH)/2.0, labelW, labelH);
         }
             break;        
-        case 2://图下字上
+        case NNBtnViewTypeImageBottom:
         {
-            self.label.frame = CGRectMake(_padding, _padding, kW_label_Ver, kH_label);
-            self.imageView.frame = CGRectMake((width - _imgSize.width)/2.0, CGRectGetMaxY(self.label.frame) + _padding, _imgSize.width, _imgSize.height);
-            
+            self.label.frame = CGRectMake((width - labelW)/2.0, spacing, labelW, labelH);
+            self.imageView.frame = CGRectMake((width - imgSize.width)/2.0, CGRectGetMaxY(self.label.frame) + spacing, imgSize.width, imgSize.height);
         }
             break;
-        case 3://图右字左
+        case NNBtnViewTypeImageRight:
         {
-            self.label.frame = CGRectMake(_padding, (height - kH_label)/2.0, kW_label_Hor, kH_label);
-            self.imageView.frame = CGRectMake(CGRectGetMaxX(self.label.frame) + _padding, (height - _imgSize.height)/2.0, _imgSize.width, _imgSize.height);
-            
+            CGFloat contentW = labelW + spacing + imgSize.width;
+            CGFloat startX = (width - contentW) / 2.0;
+            self.label.frame = CGRectMake(startX, (height - labelH)/2.0, labelW, labelH);
+            self.imageView.frame = CGRectMake(CGRectGetMaxX(self.label.frame) + spacing, (height - imgSize.height)/2.0, imgSize.width, imgSize.height);
         }
             break;
         default:
         {
-            //图上字下
-            self.imageView.frame = CGRectMake((width - _imgSize.width)/2.0, _padding, _imgSize.width, _imgSize.height);
-            self.label.frame = CGRectMake(_padding, CGRectGetMaxY(self.imageView.frame) + _padding, kW_label_Ver, kH_label);
+            self.imageView.frame = CGRectMake((width - imgSize.width)/2.0, spacing, imgSize.width, imgSize.height);
+            self.label.frame = CGRectMake((width - labelW)/2.0, CGRectGetMaxY(self.imageView.frame) + spacing, labelW, labelH);
         }
             break;
     }
@@ -133,25 +245,28 @@
 #pragma mark - -KVO
 
 -(void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary<NSKeyValueChangeKey,id> *)change context:(void *)context{
-    if ([keyPath isEqualToString:@"text"]) {
-        // Avoid mutating frame while embedded in UINavigationBar (causes Auto Layout storms on iOS 15+).
-        if (!self.adjustsSizeToFitText) { return; }
-        [self invalidateIntrinsicContentSize];
-        [self setNeedsLayout];
+    if ([keyPath isEqualToString:@"text"] || [keyPath isEqualToString:@"image"]) {
+        // 导航栏 layout 同步链路里改 frame 会炸；丢到下一圈 runloop
+        [self scheduleSizeToFitContent];
     }
+}
+
+- (CGSize)sizeThatFits:(CGSize)size {
+    CGSize preferred = [self preferredContentSize];
+    if (size.width > 0) {
+        preferred.width = MIN(preferred.width, size.width);
+    }
+    if (size.height > 0) {
+        preferred.height = MIN(preferred.height, size.height);
+    }
+    return preferred;
 }
 
 - (CGSize)intrinsicContentSize {
     if (!self.adjustsSizeToFitText) {
         return [super intrinsicContentSize];
     }
-    CGFloat height = CGRectGetHeight(self.bounds) > 1.0 ? CGRectGetHeight(self.bounds) : 36.0;
-    CGSize textSize = [self sizeWithText:self.label.text ?: @"" font:self.label.font width:CGFLOAT_MAX];
-    CGFloat padding = _padding > 0 ? _padding : 3.0;
-    BOOL hasImage = self.imageView.image != nil;
-    CGFloat imageWidth = hasImage ? (CGSizeEqualToSize(CGSizeZero, _imgSize) ? 10.0 : _imgSize.width) : 0;
-    CGFloat width = textSize.width + imageWidth + padding * (hasImage ? 3.0 : 2.0);
-    return CGSizeMake(ceil(width), height);
+    return [self preferredContentSize];
 }
 
 #pragma mark - -layz
@@ -163,6 +278,7 @@
             lab.numberOfLines = 1;
             lab.font = [UIFont systemFontOfSize:17];
             lab.textAlignment = NSTextAlignmentCenter;
+            lab.lineBreakMode = NSLineBreakByTruncatingTail;
             lab;
         });
     }
