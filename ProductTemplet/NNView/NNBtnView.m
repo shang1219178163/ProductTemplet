@@ -50,11 +50,11 @@
         self.imageView.image = [NNBtnView defaultTriangleImage];
         self.imageView.tintColor = UIColor.orangeColor;
 
-        // 调试：查看标题 / 三角形布局范围
-        self.label.layer.borderWidth = 1.0;
-        self.label.layer.borderColor = UIColor.redColor.CGColor;
-        self.imageView.layer.borderWidth = 1.0;
-        self.imageView.layer.borderColor = UIColor.greenColor.CGColor;
+//        // 调试：查看标题 / 三角形布局范围
+//        self.label.layer.borderWidth = 1.0;
+//        self.label.layer.borderColor = UIColor.redColor.CGColor;
+//        self.imageView.layer.borderWidth = 1.0;
+//        self.imageView.layer.borderColor = UIColor.greenColor.CGColor;
         
         [self.label addObserver:self forKeyPath:@"text" options:NSKeyValueObservingOptionNew context:nil];
         [self.imageView addObserver:self forKeyPath:@"image" options:0 context:nil];
