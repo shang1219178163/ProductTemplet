@@ -24,7 +24,7 @@
 
 #define MAS_SHORTHAND
 #define MAS_SHORTHAND_GLOBALS
-#import "Masonry.h"
+#import <Masonry/Masonry.h>
 
 #import "NNView.h"
 #import "NNTableViewCell.h"

@@ -17,31 +17,37 @@ PODS:
   - Aspects (1.4.1)
   - FCUUID (1.3.1):
     - UICKeyChainStore (~> 2.1.0)
-  - FMDB (2.7.5):
-    - FMDB/standard (= 2.7.5)
-  - FMDB/standard (2.7.5)
-  - GTMBase64 (1.0.1)
-  - IQKeyboardManager (6.5.6)
+  - FMDB (2.7.12):
+    - FMDB/standard (= 2.7.12)
+  - FMDB/Core (2.7.12)
+  - FMDB/standard (2.7.12):
+    - FMDB/Core
+  - IQKeyboardManager (6.5.19)
   - Masonry (1.1.0)
   - MBProgressHUD (1.2.0)
-  - MJExtension (3.2.2)
-  - MJRefresh (3.5.0)
-  - NNCategoryPro (7.0.1):
-    - GTMBase64
+  - MJExtension (3.4.2)
+  - MJRefresh (3.7.9)
+  - NNCategoryPro (7.10.4):
     - IQKeyboardManager
-    - NNGloble
+    - NNGloble (>= 2.1.0)
     - SDWebImage
-  - NNGloble (1.9.1)
+  - NNGloble (2.2.1)
   - PPNumberButton (0.8.0)
   - SDCycleScrollView (1.82):
     - SDWebImage (>= 5.0.0)
-  - SDWebImage (5.10.0):
-    - SDWebImage/Core (= 5.10.0)
-  - SDWebImage/Core (5.10.0)
-  - SocketRocket (0.5.1)
-  - SVProgressHUD (2.2.5)
-  - Toast (4.0.0)
-  - TZImagePickerController (3.5.8)
+  - SDWebImage (5.21.7):
+    - SDWebImage/Core (= 5.21.7)
+  - SDWebImage/Core (5.21.7)
+  - SocketRocket (0.7.1)
+  - SVProgressHUD (2.3.1):
+    - SVProgressHUD/Core (= 2.3.1)
+  - SVProgressHUD/Core (2.3.1)
+  - Toast (4.1.1)
+  - TZImagePickerController (3.8.12):
+    - TZImagePickerController/Basic (= 3.8.12)
+    - TZImagePickerController/Location (= 3.8.12)
+  - TZImagePickerController/Basic (3.8.12)
+  - TZImagePickerController/Location (3.8.12)
   - UICKeyChainStore (2.1.2)
   - YBAttributeTextTapAction (3.0.3)
   - YYCache (1.0.4)
@@ -87,7 +93,6 @@ SPEC REPOS:
     - Aspects
     - FCUUID
     - FMDB
-    - GTMBase64
     - IQKeyboardManager
     - Masonry
     - MBProgressHUD
@@ -114,22 +119,21 @@ SPEC CHECKSUMS:
   AFNetworking: 3bd23d814e976cd148d7d44c3ab78017b744cd58
   Aspects: 7595ba96a6727a58ebcbfc954497fc5d2fdde546
   FCUUID: bb054fc90cd7cd99320f9f6ff8e130fe607fba05
-  FMDB: 2ce00b547f966261cd18927a3ddb07cb6f3db82a
-  GTMBase64: f0f91be06a7a20b84c8e4fee30c0430395091d82
-  IQKeyboardManager: 2a6e97afdafc7becf0cb17a9a8d795e3a980717f
+  FMDB: 728731dd336af3936ce00f91d9d8495f5718a0e6
+  IQKeyboardManager: c8665b3396bd0b79402b4c573eac345a31c7d485
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
   MBProgressHUD: 3ee5efcc380f6a79a7cc9b363dd669c5e1ae7406
-  MJExtension: d9b9c74cbdeb724c1e9ecbb157b318276e62e876
-  MJRefresh: 6afc955813966afb08305477dd7a0d9ad5e79a16
-  NNCategoryPro: 477ad94ea7e02625444d6b4449b0a70477bdb115
-  NNGloble: eeb6a8be266b8e670c9a76aa28b08042de580c6b
+  MJExtension: e97d164cb411aa9795cf576093a1fa208b4a8dd8
+  MJRefresh: ff9e531227924c84ce459338414550a05d2aea78
+  NNCategoryPro: 4ee4b9d533de343a615efa04879fe573f6ca4218
+  NNGloble: 2fa6ab84754afcfb3a298bb169078918d3d941b0
   PPNumberButton: 4442ff64c21d91733057ca1b3dc05fb4df55f2c0
   SDCycleScrollView: a0d74c3384caa72bdfc81470bdbc8c14b3e1fbcf
-  SDWebImage: 9169792e9eec3e45bba2a0c02f74bf8bd922d1ee
-  SocketRocket: d57c7159b83c3c6655745cd15302aa24b6bae531
-  SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
-  Toast: 91b396c56ee72a5790816f40d3a94dd357abc196
-  TZImagePickerController: 7fd9702897ef8c0b7c951e5463f4bcf398296f9e
+  SDWebImage: e9fc87c1aab89a8ab1bbd74eba378c6f53be8abf
+  SocketRocket: d4aabe649be1e368d1318fdf28a022d714d65748
+  SVProgressHUD: 4837c74bdfe2e51e8821c397825996a8d7de6e22
+  Toast: 1f5ea13423a1e6674c4abdac5be53587ae481c4e
+  TZImagePickerController: 3751b9b850d00802e9f4f7bd8e1365ee5c4f0990
   UICKeyChainStore: 85db518bb1d294366d15ec9b92a416c4e670518f
   YBAttributeTextTapAction: b7e61f0265b5673e7ce7bad7319e8eff9e209a2b
   YYCache: 8105b6638f5e849296c71f331ff83891a4942952
@@ -138,6 +142,6 @@ SPEC CHECKSUMS:
   YYModel: 2a7fdd96aaa4b86a824e26d0c517de8928c04b30
   YYWebImage: 5f7f36aee2ae293f016d418c7d6ba05c4863e928
 
-PODFILE CHECKSUM: 4c3818f6d251b741557f3b8b7241083131e6b924
+PODFILE CHECKSUM: 446c1be7095e56c5f8cb8ea6e432e28590a2b540
 
 COCOAPODS: 1.13.0

@@ -88,10 +88,18 @@ end
 post_install do |installer|
   installer.pods_project.targets.each do |target|
     target.build_configurations.each do |config|
-#      config.build_settings['IPHONEOS_DEPLOYMENT_TARGET'] = '13.0';
+      # Xcode 15+ removed libarclite; pods below iOS 11 fail to link
+      config.build_settings['IPHONEOS_DEPLOYMENT_TARGET'] = '15.6'
       config.build_settings["CODE_SIGNING_ALLOWED"] = false;
 #      config.build_settings['DEBUG_INFORMATION_FORMAT'] = 'dwarf';
       config.build_settings['ENABLE_BITCODE'] = 'NO';
+      if target.name == 'Masonry'
+        defs = config.build_settings['GCC_PREPROCESSOR_DEFINITIONS'] || ['$(inherited)']
+        defs = [defs] unless defs.is_a?(Array)
+        defs << 'MAS_SHORTHAND=1' unless defs.any? { |d| d.to_s.include?('MAS_SHORTHAND') }
+        defs << 'MAS_SHORTHAND_GLOBALS=1' unless defs.any? { |d| d.to_s.include?('MAS_SHORTHAND_GLOBALS') }
+        config.build_settings['GCC_PREPROCESSOR_DEFINITIONS'] = defs
+      end
     end
   end
 end
