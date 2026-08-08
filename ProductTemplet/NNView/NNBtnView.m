@@ -17,11 +17,33 @@
     
 }
 
++ (UIImage *)defaultTriangleImage {
+    CGSize size = CGSizeMake(10, 6);
+    UIGraphicsBeginImageContextWithOptions(size, NO, 0);
+    UIBezierPath *path = [UIBezierPath bezierPath];
+    [path moveToPoint:CGPointMake(0, 1)];
+    [path addLineToPoint:CGPointMake(size.width, 1)];
+    [path addLineToPoint:CGPointMake(size.width * 0.5, size.height)];
+    [path closePath];
+    [[UIColor whiteColor] setFill];
+    [path fill];
+    UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    return [image imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate];
+}
+
 -(instancetype)initWithFrame:(CGRect)frame{
     self = [super initWithFrame:frame];
     if (self) {
+        _type = @3;
+        _imgSize = CGSizeMake(10, 6);
+        _padding = 3.0;
+
         [self addSubview:self.label];
         [self addSubview:self.imageView];
+
+        self.imageView.image = [NNBtnView defaultTriangleImage];
+        self.imageView.tintColor = UIColor.orangeColor;
         
         [self.label addObserver:self forKeyPath:@"text" options:NSKeyValueObservingOptionNew context:nil];
         [self.imageView addObserver:self forKeyPath:@"image" options:0 context:nil];
@@ -49,14 +71,13 @@
     
     CGFloat kH_label = kH_LABEL_SMALL;
     if (CGSizeEqualToSize(CGSizeZero, _imgSize)) {
-        if ([_type integerValue] <= 1) {
-            _imgSize = CGSizeMake(kH_label, kH_label);
-            
+        NSInteger t = [_type integerValue];
+        if (t == 1 || t == 3) {
+            // 水平图文：默认小三角尺寸
+            _imgSize = CGSizeMake(10, 6);
         } else {
-            _imgSize = CGSizeMake(height - _padding*3 - kH_label, height - _padding*3 - kH_label);
-            
+            _imgSize = CGSizeMake(kH_label, kH_label);
         }
-        
     }
     //图文水平
     CGFloat kW_label_Hor = CGRectGetWidth(frame) - self.imgSize.width - _padding*3;
@@ -64,8 +85,10 @@
     CGFloat kW_label_Ver = CGRectGetWidth(frame) - _padding*2;
     
     if (!self.imageView.image) {
-        self.label.frame = CGRectMake(_padding, (CGRectGetHeight(frame) - kH_label)/2.0, CGRectGetWidth(self.frame) - _padding*2, kH_label);
-        return;
+        self.imageView.image = [NNBtnView defaultTriangleImage];
+        if (!self.imageView.tintColor) {
+            self.imageView.tintColor = UIColor.orangeColor;
+        }
     }
     
     switch ([self.type integerValue]) {
@@ -125,8 +148,9 @@
     CGFloat height = CGRectGetHeight(self.bounds) > 1.0 ? CGRectGetHeight(self.bounds) : 36.0;
     CGSize textSize = [self sizeWithText:self.label.text ?: @"" font:self.label.font width:CGFLOAT_MAX];
     CGFloat padding = _padding > 0 ? _padding : 3.0;
-    CGFloat imageWidth = self.imageView.image ? (CGSizeEqualToSize(CGSizeZero, _imgSize) ? 16.0 : _imgSize.width) : 0;
-    CGFloat width = textSize.width + imageWidth + padding * (self.imageView.image ? 3.0 : 2.0);
+    BOOL hasImage = self.imageView.image != nil;
+    CGFloat imageWidth = hasImage ? (CGSizeEqualToSize(CGSizeZero, _imgSize) ? 10.0 : _imgSize.width) : 0;
+    CGFloat width = textSize.width + imageWidth + padding * (hasImage ? 3.0 : 2.0);
     return CGSizeMake(ceil(width), height);
 }
 
@@ -149,7 +173,7 @@
     if (!_imageView) {
         _imageView = ({
             UIImageView * imgView = [[UIImageView alloc]init];
-            imgView.contentMode = UIViewContentModeCenter;
+            imgView.contentMode = UIViewContentModeScaleAspectFit;
             imgView.userInteractionEnabled = YES;
 
             imgView;

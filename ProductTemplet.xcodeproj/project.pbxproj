@@ -267,6 +267,7 @@
 		149111EC2275B7970078A7BB /* NSError+Helper.m in Sources */ = {isa = PBXBuildFile; fileRef = 149111EB2275B7970078A7BB /* NSError+Helper.m */; };
 		1493DAC9231F52A400CB7433 /* CardView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1493DAC8231F52A400CB7433 /* CardView.m */; };
 		149A6E7430270BDF0006F822 /* CHANGELOG.md in Resources */ = {isa = PBXBuildFile; fileRef = 149A6E7330270BDF0006F822 /* CHANGELOG.md */; };
+		149A6E763027179A0006F822 /* UIImage+Icons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 149A6E753027179A0006F822 /* UIImage+Icons.swift */; };
 		149B5508225AD3C5002B1039 /* NNTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 149B5507225AD3C5002B1039 /* NNTabBarController.m */; };
 		149BE1512341923F00D74E7C /* NSString+Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 149BE1502341923F00D74E7C /* NSString+Helper.swift */; };
 		149F888D22B23CC200EAB4C2 /* BNTouchcChannelstreamApi.m in Sources */ = {isa = PBXBuildFile; fileRef = 149F888C22B23CC200EAB4C2 /* BNTouchcChannelstreamApi.m */; };
@@ -1150,6 +1151,7 @@
 		1493DAC7231F52A400CB7433 /* CardView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CardView.h; sourceTree = "<group>"; };
 		1493DAC8231F52A400CB7433 /* CardView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CardView.m; sourceTree = "<group>"; };
 		149A6E7330270BDF0006F822 /* CHANGELOG.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = CHANGELOG.md; sourceTree = "<group>"; };
+		149A6E753027179A0006F822 /* UIImage+Icons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Icons.swift"; sourceTree = "<group>"; };
 		149B5506225AD3C5002B1039 /* NNTabBarController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NNTabBarController.h; sourceTree = "<group>"; };
 		149B5507225AD3C5002B1039 /* NNTabBarController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NNTabBarController.m; sourceTree = "<group>"; };
 		149BE14F2341923D00D74E7C /* ProductTemplet-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ProductTemplet-Bridging-Header.h"; sourceTree = "<group>"; };
@@ -2872,6 +2874,7 @@
 				513646AE2086031D005A20E7 /* main.m */,
 				513649E320860683005A20E7 /* PrefixHeader.pch */,
 				149BE14F2341923D00D74E7C /* ProductTemplet-Bridging-Header.h */,
+				149A6E753027179A0006F822 /* UIImage+Icons.swift */,
 			);
 			path = ProductTemplet;
 			sourceTree = "<group>";
@@ -3937,6 +3940,7 @@
 				141080AF22D2E7D10011344E /* CommonAnimationController.m in Sources */,
 				145375D825CAA44B00CB6578 /* NNCycleCTView.m in Sources */,
 				149111DA227308E30078A7BB /* NNRequstAgent.m in Sources */,
+				149A6E763027179A0006F822 /* UIImage+Icons.swift in Sources */,
 				1453770525CAA49600CB6578 /* UITableViewSenventyThreeCell.m in Sources */,
 				1453772225CAA49600CB6578 /* UITableHeaderFooterViewOne.m in Sources */,
 				515C67E62137C55700D5EA94 /* BRecentCityCell.m in Sources */,

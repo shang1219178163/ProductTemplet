@@ -32,20 +32,21 @@
     UIColor.themeColor = UIColorHexValue(0x0082e0);
     [UIApplication setupAppearance:UIColor.whiteColor barTintColor:UIColor.themeColor];
     
-//    UIViewController *vc = UIControllerFromString(@"HomeViewController");
-//    UIViewController *vcLeft = UIControllerFromString(@"NNLeftViewController");
-//    UIViewController *vcRight = UIControllerFromString(@"NNRightViewController");
-//    ZYSliderViewController *rootVC = [[ZYSliderViewController alloc]initWithMainViewController:vc
-//                                                                            leftViewController:vcLeft
-//                                                                           rightViewController:vcRight];
-    
+    UIViewController *vc = UIControllerFromString(@"HomeViewController");
+    UIViewController *vcLeft = UIControllerFromString(@"NNLeftViewController");
+    UIViewController *vcRight = UIControllerFromString(@"NNRightViewController");
+    ZYSliderViewController *rootVC = [[ZYSliderViewController alloc] initWithMainViewController:vc
+                                                                              leftViewController:vcLeft
+                                                                             rightViewController:vcRight];
+    UIApplication.rootController = rootVC;
+
 //    vc = UIControllerFromString(@"WHKGroupViewViewController");
 //    vc = UIControllerFromString(@"LiveLikeController");
 //    vc = UIControllerFromString(@"SortViewController");
 //    vc = UIControllerFromString(@"FriendListController");
 //    vc = UIControllerFromString(@"HomeViewController");
 //    vc = UIControllerFromString(@"TestViewController");
-    UIApplication.rootController = UIControllerFromString(@"HomeViewController");;
+//    UIApplication.rootController = UIControllerFromString(@"HomeViewController");
     
 //    dispatch_async(dispatch_get_global_queue(0, 0), ^{
 //        [self setupThridSDKWithOptions:launchOptions];

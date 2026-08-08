@@ -12,17 +12,22 @@
 @implementation UIViewController (ZYSliderViewController)
 
 - (ZYSliderViewController *)sliderViewController{
-    UIViewController *viewcontroller = (UIViewController *)self.parentViewController;
+    UIViewController *viewcontroller = self;
     while (viewcontroller) {
         if ([viewcontroller isKindOfClass:[ZYSliderViewController class]]) {
             return (ZYSliderViewController *)viewcontroller;
         }
-        else if (viewcontroller.parentViewController && viewcontroller.parentViewController!= viewcontroller){
-            viewcontroller = (UIViewController *)viewcontroller.parentViewController;
+        UIViewController *parent = viewcontroller.parentViewController;
+        if (parent && parent != viewcontroller) {
+            viewcontroller = parent;
+            continue;
         }
-        else{
-            return nil;
+        // Fallback: root may be the slider when not yet attached as child.
+        UIViewController *root = UIApplication.sharedApplication.delegate.window.rootViewController;
+        if ([root isKindOfClass:[ZYSliderViewController class]]) {
+            return (ZYSliderViewController *)root;
         }
+        return nil;
     }
     return nil;
 }

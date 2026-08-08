@@ -9,6 +9,7 @@
  图片与文字
  type @0,@1,@2,@3 代表图位置上左下右
  adjustsSizeToFitText = yes; 视图随标题长度调整宽度
+ 默认右侧小三角（未设置 imageView.image 时自动使用）
  */
 
  
@@ -25,6 +26,9 @@
 @property (nonatomic, assign) BOOL adjustsSizeToFitText;
 
 @property (nonatomic, copy) void(^block)(NNBtnView *view);
+
+/// 默认下拉小三角（AlwaysTemplate，可用 imageView.tintColor 着色）
++ (UIImage *)defaultTriangleImage;
 
 -(instancetype)initWithFrame:(CGRect)frame;
 

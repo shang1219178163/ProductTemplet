@@ -37,10 +37,10 @@
     if (!_btnView) {
         _btnView = ({
             NNBtnView * btnView = [[NNBtnView alloc]initWithFrame:CGRectMake(0, 0, 120, 36)];
-            btnView.imageView.image = [UIImage imageNamed:@"img_arrowDown_orange.png"];
             btnView.label.text = @"测试数据";
-            btnView.type = @3;
             btnView.adjustsSizeToFitText = YES;
+            // 默认右侧小三角；导航栏标题用白色
+            btnView.imageView.tintColor = UIColor.whiteColor;
             btnView;
         });
     }
@@ -116,13 +116,21 @@
 }
 
 - (void)showLeftAction{
-    [[self sliderViewController] showLeft];
+    ZYSliderViewController *slider = [self sliderViewController];
+    if (!slider) {
+        DDLog(@"sliderViewController is nil — root must be ZYSliderViewController");
+        return;
+    }
+    [slider showLeft];
 }
 
 - (void)showRightAction{
-    [[self sliderViewController] showRight];
-    
-    DDLog(@"_cmd: %@", NSStringFromSelector(_cmd));
+    ZYSliderViewController *slider = [self sliderViewController];
+    if (!slider) {
+        DDLog(@"sliderViewController is nil — root must be ZYSliderViewController");
+        return;
+    }
+    [slider showRight];
 }
 
 
@@ -226,7 +234,9 @@
         [self handleActionBtnView:view];
     };
     
-    NNMenuView * menuView = [[NNMenuView alloc]initWithFrame:CGRectMake(0, 0, kScreenWidth, 0.0)];
+    NNMenuView *menuView = [[NNMenuView alloc]initWithFrame:CGRectMake(0, 0, kScreenWidth, 0.0)];
+    CGFloat navBottom = CGRectGetMaxY(self.navigationController.navigationBar.frame);
+    menuView.offset = navBottom > 0 ? navBottom : (kStatusBarHeight + kNaviBarHeight);
     menuView.dataList = menuList;
     menuView.block = ^(NNMenuView *view, NSIndexPath *indexPath) {
         
@@ -247,6 +257,10 @@
 
 #pragma mark - -BINBtnView
 - (void)handleActionBtnView:(NNBtnView *)sender{
+    CGFloat navBottom = CGRectGetMaxY(self.navigationController.navigationBar.frame);
+    if (navBottom > 0) {
+        self.menuView.offset = navBottom;
+    }
     self.menuView.isShow = CGAffineTransformIsIdentity(sender.imageView.transform) ? YES : NO;
     
     [UIView animateWithDuration:kDurationDrop animations:^{

@@ -11,7 +11,7 @@
 #import <NNGloble/NNGloble.h>
 #import "NNCategoryPro.h"
 
-static CGFloat kH_Top = 64.0;
+static CGFloat const kNNMenuViewDefaultOffset = 64.0;
 
 @interface NNMenuView ()<UITableViewDelegate,UITableViewDataSource>
 
@@ -26,9 +26,9 @@ static CGFloat kH_Top = 64.0;
 -(instancetype)initWithFrame:(CGRect)frame{
     self = [super initWithFrame:frame];
     if (self) {
-        
+        _offset = kNNMenuViewDefaultOffset;
         self.backgroundColor = [UIColor colorWithWhite:0 alpha:0.5];
-        self.tableView.frame = CGRectMake(0, kH_Top, kScreenWidth, 0);
+        self.tableView.frame = CGRectMake(0, self.offset, kScreenWidth, 0);
         self.tableView.delegate = self;
         self.tableView.dataSource = self;
         
@@ -37,6 +37,15 @@ static CGFloat kH_Top = 64.0;
         
     }
     return self;
+}
+
+- (void)setOffset:(CGFloat)offset {
+    _offset = offset;
+    if (_tableView) {
+        CGRect frame = _tableView.frame;
+        frame.origin.y = offset;
+        _tableView.frame = frame;
+    }
 }
 
 -(void)setIsShow:(BOOL)isShow{
@@ -51,8 +60,10 @@ static CGFloat kH_Top = 64.0;
 
 - (void)show{
     UIWindow *window = UIApplication.sharedApplication.keyWindow;
+    CGFloat top = self.offset;
 
-    self.frame = CGRectMake(0, kH_Top, kScreenWidth, kScreenHeight - kH_Top);
+    self.frame = CGRectMake(0, top, kScreenWidth, kScreenHeight - top);
+    self.tableView.frame = CGRectMake(0, top, kScreenWidth, 0);
     [window addSubview:self];
     [window addSubview:self.tableView];
 
@@ -61,6 +72,7 @@ static CGFloat kH_Top = 64.0;
         self.alpha = 1;
         
         CGRect tempFrame = self.tableView.frame;
+        tempFrame.origin.y = top;
         tempFrame.size.height = kScreenHeight/2.0;
         self.tableView.frame = tempFrame;
         
@@ -231,7 +243,7 @@ static CGFloat kH_Top = 64.0;
 //-(UIView *)blackView{
 //    if (!_blackView) {
 //        _blackView = ({
-//            UIView * view = [[UIView alloc]initWithFrame:CGRectMake(0, kH_Top, kScreenWidth, kScreenHeight - kH_Top)];
+//            UIView * view = [[UIView alloc]initWithFrame:CGRectMake(0, self.offset, kScreenWidth, kScreenHeight - self.offset)];
 //            view.backgroundColor = [UIColor colorWithWhite:0 alpha:0.5];
 //
 //            UITapGestureRecognizer * tap = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(handleActionTap:)];
