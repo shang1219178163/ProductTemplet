@@ -57,6 +57,8 @@
                       @[@"NNUploadImagesController", @"选择照片",],                      
                       @[@"NNTagViewController", @"TagView",],
                       @[@"SystemIconController", @"系统图标 SF Symbols",],
+                      @[@"SwiftHigherOrderController", @"Swift 高阶函数",],
+                      @[@"ObjCHigherOrderController", @"ObjC 高阶函数",],
                       @[@"SystemAboutController", @"系统相关",],
                       @[@"NNSearchController", @"复合搜索🔍",],
                       @[@"RuntimeController", @"字符串映射研究",],

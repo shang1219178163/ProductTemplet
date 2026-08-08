@@ -383,6 +383,7 @@
 		14F6382B23630AC900D0EBF0 /* NSObject+Tmp.m in Sources */ = {isa = PBXBuildFile; fileRef = 14F6382A23630AC900D0EBF0 /* NSObject+Tmp.m */; };
 		14F9BF3F22E56167001637B6 /* PhotoDisplayController.m in Sources */ = {isa = PBXBuildFile; fileRef = 14F9BF3E22E56167001637B6 /* PhotoDisplayController.m */; };
 		14F9BF4222E56332001637B6 /* UICTViewLayoutPhoto.m in Sources */ = {isa = PBXBuildFile; fileRef = 14F9BF4022E56331001637B6 /* UICTViewLayoutPhoto.m */; };
+		1910EE3F6D7E63A2D5D8214F /* ObjCHigherOrderController.m in Sources */ = {isa = PBXBuildFile; fileRef = D682956E0945BB474FFAA5CA /* ObjCHigherOrderController.m */; };
 		3BBA499973A02EBB7ADAFE25 /* NNGridMenuView.m in Sources */ = {isa = PBXBuildFile; fileRef = BDCDB002041AAEC418CA167A /* NNGridMenuView.m */; };
 		51036F4720A16298009D8B7B /* img_notice.png in Resources */ = {isa = PBXBuildFile; fileRef = 51036F4620A16297009D8B7B /* img_notice.png */; };
 		51036F5020A17B3B009D8B7B /* WeiboLisController.m in Sources */ = {isa = PBXBuildFile; fileRef = 51036F4F20A17B3B009D8B7B /* WeiboLisController.m */; };
@@ -664,10 +665,13 @@
 		51BB931820B5013600EB43A1 /* DBEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = 51BB931720B5013600EB43A1 /* DBEntity.m */; };
 		C40E452A29996D0D92D74CAB /* SystemIconController.m in Sources */ = {isa = PBXBuildFile; fileRef = E3B5A3E5ED414317ED59DF2F /* SystemIconController.m */; };
 		D7EDEAB221BDF5930048CCDA /* NNFontListController.m in Sources */ = {isa = PBXBuildFile; fileRef = D7EDEAB121BDF5930048CCDA /* NNFontListController.m */; };
+		E216983E907FFFBA4D7D9D08 /* SwiftHigherOrderController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DBF0304169ADECE0A84D1FF /* SwiftHigherOrderController.swift */; };
+		E6B32F487FBE2D5A23C061BD /* HigherOrderFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0029BFA146AB89057C7918E6 /* HigherOrderFunctions.swift */; };
 		F6E48B295C01C814BB50B948 /* Pods_ProductTemplet.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C34CC0C3E9585460E15F2766 /* Pods_ProductTemplet.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0029BFA146AB89057C7918E6 /* HigherOrderFunctions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = HigherOrderFunctions.swift; sourceTree = "<group>"; };
 		1401BE602276A1220078A722 /* NNMemoryCache.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NNMemoryCache.h; sourceTree = "<group>"; };
 		1401BE612276A1220078A722 /* NNMemoryCache.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NNMemoryCache.m; sourceTree = "<group>"; };
 		1401BE632276A1370078A722 /* NNDiskCache.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NNDiskCache.h; sourceTree = "<group>"; };
@@ -1381,6 +1385,7 @@
 		14F9BF3E22E56167001637B6 /* PhotoDisplayController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PhotoDisplayController.m; sourceTree = "<group>"; };
 		14F9BF4022E56331001637B6 /* UICTViewLayoutPhoto.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UICTViewLayoutPhoto.m; sourceTree = "<group>"; };
 		14F9BF4122E56331001637B6 /* UICTViewLayoutPhoto.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UICTViewLayoutPhoto.h; sourceTree = "<group>"; };
+		41E6AD2B5DF180F5E3BE6C3E /* ObjCHigherOrderController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = ObjCHigherOrderController.h; sourceTree = "<group>"; };
 		48DCCC545F7DD72A25BB7579 /* Pods-ProductTemplet.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ProductTemplet.release.xcconfig"; path = "Pods/Target Support Files/Pods-ProductTemplet/Pods-ProductTemplet.release.xcconfig"; sourceTree = "<group>"; };
 		51036F4620A16297009D8B7B /* img_notice.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = img_notice.png; sourceTree = "<group>"; };
 		51036F4E20A17B3B009D8B7B /* WeiboLisController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WeiboLisController.h; sourceTree = "<group>"; };
@@ -1809,11 +1814,13 @@
 		51B9CD1D20A0631F0096A540 /* img_arrowDown_orange.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = img_arrowDown_orange.png; sourceTree = "<group>"; };
 		51BB931620B5013600EB43A1 /* DBEntity.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DBEntity.h; sourceTree = "<group>"; };
 		51BB931720B5013600EB43A1 /* DBEntity.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DBEntity.m; sourceTree = "<group>"; };
+		5DBF0304169ADECE0A84D1FF /* SwiftHigherOrderController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SwiftHigherOrderController.swift; sourceTree = "<group>"; };
 		801A31A49031F380DF42C69A /* SystemIconController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = SystemIconController.h; sourceTree = "<group>"; };
 		9CAA0923BB7FA13B7DFD09BB /* UIImage+IconsNames.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "UIImage+IconsNames.swift"; sourceTree = "<group>"; };
 		B05B2DDF1BAF1B07A785248B /* Pods-ProductTemplet.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ProductTemplet.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ProductTemplet/Pods-ProductTemplet.debug.xcconfig"; sourceTree = "<group>"; };
 		BDCDB002041AAEC418CA167A /* NNGridMenuView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = NNGridMenuView.m; sourceTree = "<group>"; };
 		C34CC0C3E9585460E15F2766 /* Pods_ProductTemplet.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ProductTemplet.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D682956E0945BB474FFAA5CA /* ObjCHigherOrderController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = ObjCHigherOrderController.m; sourceTree = "<group>"; };
 		D7EDEAB021BDF5930048CCDA /* NNFontListController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NNFontListController.h; sourceTree = "<group>"; };
 		D7EDEAB121BDF5930048CCDA /* NNFontListController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NNFontListController.m; sourceTree = "<group>"; };
 		E3B5A3E5ED414317ED59DF2F /* SystemIconController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = SystemIconController.m; sourceTree = "<group>"; };
@@ -2886,6 +2893,7 @@
 				149BE14F2341923D00D74E7C /* ProductTemplet-Bridging-Header.h */,
 				149A6E753027179A0006F822 /* UIImage+Icons.swift */,
 				9CAA0923BB7FA13B7DFD09BB /* UIImage+IconsNames.swift */,
+				0029BFA146AB89057C7918E6 /* HigherOrderFunctions.swift */,
 			);
 			path = ProductTemplet;
 			sourceTree = "<group>";
@@ -3061,6 +3069,9 @@
 				14F25F532359A14800D05998 /* UIView+Tmp.m */,
 				801A31A49031F380DF42C69A /* SystemIconController.h */,
 				E3B5A3E5ED414317ED59DF2F /* SystemIconController.m */,
+				5DBF0304169ADECE0A84D1FF /* SwiftHigherOrderController.swift */,
+				41E6AD2B5DF180F5E3BE6C3E /* ObjCHigherOrderController.h */,
+				D682956E0945BB474FFAA5CA /* ObjCHigherOrderController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -4413,6 +4424,9 @@
 				3BBA499973A02EBB7ADAFE25 /* NNGridMenuView.m in Sources */,
 				C40E452A29996D0D92D74CAB /* SystemIconController.m in Sources */,
 				5164D575DAA402D8555C42AC /* UIImage+IconsNames.swift in Sources */,
+				E6B32F487FBE2D5A23C061BD /* HigherOrderFunctions.swift in Sources */,
+				E216983E907FFFBA4D7D9D08 /* SwiftHigherOrderController.swift in Sources */,
+				1910EE3F6D7E63A2D5D8214F /* ObjCHigherOrderController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
