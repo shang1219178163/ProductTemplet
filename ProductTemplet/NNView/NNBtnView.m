@@ -111,23 +111,23 @@
 
 -(void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary<NSKeyValueChangeKey,id> *)change context:(void *)context{
     if ([keyPath isEqualToString:@"text"]) {
-        
-        CGSize size = [self sizeWithText:self.label.text font:self.label.font width:CGFLOAT_MAX];
-        
-//        [UIView animateWithDuration:0.5 animations:^{
-            //字
-            CGRect rect = self.frame;
-            rect.size.width += (size.width - CGRectGetWidth(self.label.frame));
-            self.frame = rect;
-            
-            CGRect rectLab = self.label.frame;
-            rectLab.size.width = size.width;
-            self.label.frame = rectLab;
-       
-//        }];
-        
+        // Avoid mutating frame while embedded in UINavigationBar (causes Auto Layout storms on iOS 15+).
+        if (!self.adjustsSizeToFitText) { return; }
+        [self invalidateIntrinsicContentSize];
+        [self setNeedsLayout];
     }
+}
 
+- (CGSize)intrinsicContentSize {
+    if (!self.adjustsSizeToFitText) {
+        return [super intrinsicContentSize];
+    }
+    CGFloat height = CGRectGetHeight(self.bounds) > 1.0 ? CGRectGetHeight(self.bounds) : 36.0;
+    CGSize textSize = [self sizeWithText:self.label.text ?: @"" font:self.label.font width:CGFLOAT_MAX];
+    CGFloat padding = _padding > 0 ? _padding : 3.0;
+    CGFloat imageWidth = self.imageView.image ? (CGSizeEqualToSize(CGSizeZero, _imgSize) ? 16.0 : _imgSize.width) : 0;
+    CGFloat width = textSize.width + imageWidth + padding * (self.imageView.image ? 3.0 : 2.0);
+    return CGSizeMake(ceil(width), height);
 }
 
 #pragma mark - -layz

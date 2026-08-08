@@ -36,12 +36,11 @@
 -(NNBtnView *)btnView{
     if (!_btnView) {
         _btnView = ({
-            NNBtnView * btnView = [[NNBtnView alloc]initWithFrame:CGRectMake(10, 10, kScreenWidth/4.0, 50)];
+            NNBtnView * btnView = [[NNBtnView alloc]initWithFrame:CGRectMake(0, 0, 120, 36)];
             btnView.imageView.image = [UIImage imageNamed:@"img_arrowDown_orange.png"];
             btnView.label.text = @"测试数据";
             btnView.type = @3;
             btnView.adjustsSizeToFitText = YES;
-            
             btnView;
         });
     }
@@ -104,11 +103,16 @@
     
     [self bindData];
     
-    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(showLeftAction)];
-    UIBarButtonItem *itemCompose = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemCompose target:self action:@selector(showRightAction)];
-    
-    UIBarButtonItem *itemButton = [[UIBarButtonItem alloc] initWithTitle:@"Button" style:UIBarButtonItemStylePlain target:self action:@selector(showRightAction)];
-    self.navigationItem.rightBarButtonItems = @[itemCompose, itemButton];
+    // Use customView items — system UIBarButtonItem + UIButton appearance proxies
+    // can infinite-loop in UINavigationBar Auto Layout on iOS 15+.
+    self.navigationItem.leftBarButtonItem = [UIBarButtonItem customViewWithButton:@"＋"
+                                                                          handler:^(UIButton * _Nonnull sender) {
+        [self showLeftAction];
+    }];
+    self.navigationItem.rightBarButtonItem = [UIBarButtonItem customViewWithButton:@"更多"
+                                                                            handler:^(UIButton * _Nonnull sender) {
+        [self showRightAction];
+    }];
 }
 
 - (void)showLeftAction{
@@ -125,26 +129,11 @@
 
 - (void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
-    
-    NSArray *array = [NSArray arrayWithCount:9 generator:^id _Nonnull(NSUInteger idx) {
-        return [NSString stringWithFormat:@"item_%@", @(idx)];
-    }];
-    
-    DDLog(@"array: %@", array);
-    
-    
-    NSString *a = [@"ooo" repeating:3];
-    NSString *b = [@"ooo" padLeft:10 padding:@"*"];
-    NSString *c = [@"ooo" padRight:10 padding:@"*"];
-    DDLog(@"%@_%@_%@", a, b, c);
-    
-    
-    UIAlertController *alertVC = [UIAlertController alertControllerWithTitle:@"Title"
-                                                                     message:@"message"
-                                                              preferredStyle:UIAlertControllerStyleAlert];
-    [alertVC.view recursionSubView:0 isPrint:true block:^(UIView * _Nonnull) {
-            
-    }];
+}
+
+- (void)viewDidLayoutSubviews {
+    [super viewDidLayoutSubviews];
+    self.tbView.frame = self.view.bounds;
 }
 
 - (void)bindData{
@@ -245,7 +234,7 @@
     };
     
     self.menuView = menuView;
-    [self.navigationItem.titleView getViewLayer];
+    [self.btnView invalidateIntrinsicContentSize];
 }
 
 #pragma mark - -BINBtnView

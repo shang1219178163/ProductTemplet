@@ -11,8 +11,6 @@
 
 @interface HomeViewController ()<UITabBarControllerDelegate>
 
-@property (nonatomic, strong) NSArray *btnList;
-
 @end
 
 @implementation HomeViewController
@@ -88,12 +86,22 @@
     
     self.delegate = self;
     self.moreNavigationController.navigationBarHidden = YES;
+
+    if (@available(iOS 15.0, *)) {
+        UITabBarAppearance *appearance = self.tabBar.standardAppearance;
+        if (!appearance) {
+            appearance = [[UITabBarAppearance alloc] init];
+            [appearance configureWithOpaqueBackground];
+        }
+        self.tabBar.standardAppearance = appearance;
+        self.tabBar.scrollEdgeAppearance = appearance;
+    }
+    [self.view bringSubviewToFront:self.tabBar];
 }
 
 #pragma mark - UITabBarControllerDelegate
 
-- (BOOL)tabBarController:(UITabBarController*)tabBarController shouldSelectViewController:(UINavigationController*)viewController {
-
+- (BOOL)tabBarController:(UITabBarController *)tabBarController shouldSelectViewController:(UIViewController *)viewController {
 //    /// 特殊处理 - 是否需要登录
 //    BOOL isBaiDuService = [viewController.topViewController isKindOfClass:[MPDiscoveryViewController class]];
 //    if (isBaiDuService) {
@@ -102,25 +110,8 @@
     return YES;
 }
 
--(void)tabBar:(UITabBar *)tabBar didSelectItem:(UITabBarItem *)item{
-//    NSInteger idx = [self.tabBar.items indexOfObject:item];
-//    UIView *view = self.btnList[idx];
-//    [UIView animateWithDuration:0.15 animations:^{
-//        view.transform = CGAffineTransformScale(view.transform, 1.2, 1.2);
-//
-//    } completion:^(BOOL finished) {
-//        view.transform = CGAffineTransformIdentity;
-//
-//    }];
+- (void)tabBarController:(UITabBarController *)tabBarController didSelectViewController:(UIViewController *)viewController {
+    [self.view bringSubviewToFront:self.tabBar];
 }
-
--(NSArray *)btnList {
-    if (!_btnList){
-        _btnList = [self.tabBar findSubview:kUITabBarButton];
-    }
-    return _btnList;
-}
-
-
 
 @end
