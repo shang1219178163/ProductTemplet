@@ -1,7 +1,7 @@
 source 'https://github.com/CocoaPods/Specs.git'
 source 'https://github.com/aliyun/aliyun-specs.git'
 
-platform :ios, '13.0'
+platform :ios, '15.6'
 use_frameworks!
 inhibit_all_warnings!
 #install! 'cocoapods', generate_multiple_pod_projects: true
@@ -68,7 +68,7 @@ inhibit_all_warnings!
    
 #   pod 'LookinServer', :configurations => ['Debug']
 #   pod 'EchoSDK', :configurations => ["Debug"]
-    pod 'Reveal-SDK', :configurations => ['Debug']
+#   pod 'Reveal-SDK', :configurations => ['Debug']
 
  end
 
@@ -88,7 +88,7 @@ end
 post_install do |installer|
   installer.pods_project.targets.each do |target|
     target.build_configurations.each do |config|
-      config.build_settings['IPHONEOS_DEPLOYMENT_TARGET'] = '13.0';
+#      config.build_settings['IPHONEOS_DEPLOYMENT_TARGET'] = '13.0';
       config.build_settings["CODE_SIGNING_ALLOWED"] = false;
 #      config.build_settings['DEBUG_INFORMATION_FORMAT'] = 'dwarf';
       config.build_settings['ENABLE_BITCODE'] = 'NO';
