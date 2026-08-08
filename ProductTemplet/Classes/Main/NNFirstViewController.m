@@ -24,7 +24,7 @@
 @property (nonatomic, strong) NNMenuView * menuView;
 @property (nonatomic, strong) NNTurnView * turnView;
 
-@property (nonatomic, strong) NSArray * elementList;
+@property (nonatomic, strong) NSArray * elements;
 
 @property (nonatomic, strong) NSMutableArray * imageList;
 @property (nonatomic, strong) NSMutableArray *dataList;
@@ -66,9 +66,9 @@
     return _imageList;
 }
 
-- (NSArray *)elementList{
-    if (!_elementList) {
-        _elementList = @[
+- (NSArray *)elements{
+    if (!_elements) {
+        _elements = @[
                          @[@"数据录入",@"img_home_dataEntry_147",@"WHKDataEntryViewController", @"",].mutableCopy,
                          @[@"种猪管理",@"img_home_animamalOrigin_147",@"WHKAnimalOriginViewController", @"",].mutableCopy,
                          @[@"商品猪管理",@"img_home_animamalSell_147",@"WHKSelAnimalManagerController",@"",].mutableCopy,
@@ -82,7 +82,7 @@
                          
                          ];
     }
-    return _elementList;
+    return _elements;
     
 }
 
@@ -150,55 +150,63 @@
 
 - (void)configureTableView{
     [self.view addSubview:self.tbView];
-    [self.tbView reloadData];
+    self.tbView.rowHeight = 60;
 
-    self.tbView.sectionFooterHeight = kScreenWidth;
-    self.tbView.sectionHeaderHeight = kScreenHeight - kStatusBarHeight - kNaviBarHeight - kTabBarHeight - self.tbView.sectionFooterHeight - self.tbView.rowHeight;
+    // Banner + notice row + function grid should fit on screen (old formula made a huge empty header).
+    CGFloat itemSide = floor(kScreenWidth / 3.0);
+    NSInteger gridRows = (self.elements.count + 2) / 3;
+    self.tbView.sectionHeaderHeight = 160;
+    self.tbView.sectionFooterHeight = itemSide * gridRows;
+    [self.tbView reloadData];
 }
 
 - (UIView *)getViewWithHeight:(CGFloat)height isHeader:(BOOL)isHeader{
-    
-    NSInteger rowCount = 3;
-    CGSize viewSize = CGSizeMake(kScreenWidth/rowCount, kScreenWidth/rowCount);
-    
-    UIView *backgroudView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, kScreenWidth,  viewSize.height* self.elementList.count/rowCount)];
-    backgroudView.backgroundColor = UIColor.whiteColor;
-    
-    if (isHeader) {
-        UIView *cycleView = [self createCycleViewRect:CGRectMake(0, 0, kScreenWidth, height) imageNames:self.imageList];
-        [backgroudView addSubview:cycleView];
-        
-    } else {
-        CGRect rect = CGRectZero;
-        //    按钮
-        for (NSInteger i = 0; i < self.elementList.count; i++) {
-            NSArray *array = self.elementList[i];
+    NSInteger colCount = 3;
+    CGFloat itemSide = floor(kScreenWidth / colCount);
+    NSInteger gridRows = (self.elements.count + colCount - 1) / colCount;
 
-            CGFloat x = CGRectGetWidth(backgroudView.frame) / rowCount * ( i % rowCount);
-            CGFloat y =  (i / rowCount) * viewSize.height;
-            CGFloat w = CGRectGetWidth(backgroudView.frame) / rowCount;
-            CGFloat h = viewSize.height;
-            
-            rect = CGRectMake(x, y, w, h);
-            
-            UIView *sender = [[UIView alloc]init];
-            sender.frame = rect;
-            sender.tag = kTAG_VIEW+i+50;
-            [backgroudView addSubview:sender];
-            
-            if (i < rowCount) {
-//                [sender.layer addSublayer:[sender createLayerType:@0]];//上线条
-            }
-            
-//            [sender.layer addSublayer:[sender createLayerType:@2]];//上线条
-//            [sender.layer addSublayer:[sender createLayerType:@3]];//上线条
-            
-            [sender addGestureTap:^(UITapGestureRecognizer * _Nonnull reco) {
-                UIViewController *vc = [[NSClassFromString(array[2]) alloc]init];
-                vc.title = array[0];
-                [self.navigationController pushViewController:vc animated:true];
-            }];
-        }
+    if (isHeader) {
+        UIView *backgroudView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, kScreenWidth, height)];
+        backgroudView.backgroundColor = UIColor.whiteColor;
+        UIView *cycleView = [self createCycleViewRect:backgroudView.bounds imageNames:self.imageList];
+        [backgroudView addSubview:cycleView];
+        return backgroudView;
+    }
+
+    UIView *backgroudView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, kScreenWidth, itemSide * gridRows)];
+    backgroudView.backgroundColor = UIColor.whiteColor;
+
+    for (NSInteger i = 0; i < self.elements.count; i++) {
+        NSArray *array = self.elements[i];
+        CGFloat x = itemSide * (i % colCount);
+        CGFloat y = itemSide * (i / colCount);
+
+        UIView *sender = [[UIView alloc] initWithFrame:CGRectMake(x, y, itemSide, itemSide)];
+        sender.tag = kTAG_VIEW + i + 50;
+        sender.layer.borderWidth = 0.5;
+        sender.layer.borderColor = [UIColor colorWithWhite:0.9 alpha:1].CGColor;
+
+        CGFloat iconSide = 48;
+        UIImageView *icon = [[UIImageView alloc] initWithFrame:CGRectMake((itemSide - iconSide) / 2.0, 18, iconSide, iconSide)];
+        icon.image = [UIImage imageNamed:array[1]];
+        icon.contentMode = UIViewContentModeScaleAspectFit;
+        [sender addSubview:icon];
+
+        UILabel *lab = [[UILabel alloc] initWithFrame:CGRectMake(4, CGRectGetMaxY(icon.frame) + 8, itemSide - 8, 20)];
+        lab.text = array[0];
+        lab.font = [UIFont systemFontOfSize:13];
+        lab.textAlignment = NSTextAlignmentCenter;
+        lab.textColor = UIColor.darkTextColor;
+        lab.adjustsFontSizeToFitWidth = YES;
+        [sender addSubview:lab];
+
+        [sender addGestureTap:^(UITapGestureRecognizer * _Nonnull reco) {
+            UIViewController *vc = [[NSClassFromString(array[2]) alloc] init];
+            if (!vc) { return; }
+            vc.title = array[0];
+            [self.navigationController pushViewController:vc animated:YES];
+        }];
+        [backgroudView addSubview:sender];
     }
     return backgroudView;
 }
@@ -274,24 +282,24 @@
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
-    
+    static NSString *identifier = @"HomeNoticeCell";
+    UITableViewCell *cell = [UITableViewCell cellWithTableView:tableView identifier:identifier style:UITableViewCellStyleSubtitle];
+    cell.selectionStyle = UITableViewCellSelectionStyleNone;
+    cell.imageView.image = [UIImage imageNamed:@"img_notice_One.png"];
+    cell.textLabel.font = [UIFont systemFontOfSize:14];
+    cell.textLabel.textColor = UIColor.darkTextColor;
+    cell.detailTextLabel.font = [UIFont systemFontOfSize:12];
+    cell.detailTextLabel.textColor = UIColor.grayColor;
+
     if (self.dataList.count > 0) {
-        //        UITableViewOneCell * cell = [UITableViewOneCell cellWithTableView:tableView];
-        UITableViewCycleViewCell * cell = [UITableViewCycleViewCell cellWithTableView:tableView];
-        
-        cell.cycleView.list = @[@"昨天，天津发布了新的人才引进政策——“海河英才”行动计划，新政策大幅放宽人才落户条件、自主选择落户地点、简化落户办理程序。",@"在这之前，其实天津也有人才计划，只不过门槛比较高，办理落户的手续也比较复杂，比如本科学历需要在当地缴纳半年社保等。",@"这次放开，说白了就是之前的门槛太高了，可能没有达到预期效果。所以“海河英才”计划有点像之前人才政策的升级版。",@"444444444444",@"555555555",@"西安人才计划也搞了两轮，第一轮门槛很高，第二轮低降到大学生只要学生证和身份证就能落户。后来的效果大家也看到了，西安房子供不应求，房价大涨。天津会不会成为第二个西安呢？",];
-        [cell.cycleView start];
-        
-        [cell getViewLayer];
-        return cell;
+        FactoryDetailInfoModel *model = self.dataList[indexPath.row];
+        cell.textLabel.text = model.title ?: @"通知";
+        cell.detailTextLabel.text = model.number.length ? [NSString stringWithFormat:@"数量 %@", model.number] : @"暂无更多信息";
     } else {
-        UITableViewOneCell * cell = [UITableViewOneCell cellWithTableView:tableView];
-        
         cell.textLabel.text = @"没有符合条件的数据,去看看其他内容吧!";
-        
-        return cell;
+        cell.detailTextLabel.text = nil;
     }
-    return nil;
+    return cell;
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
@@ -326,15 +334,14 @@
 - (UIView *)createCycleViewRect:(CGRect)rect imageNames:(NSArray *)imageNames{
     UIView *backgroudView = [[UIView alloc]initWithFrame:rect];
     
-    //本地加载 --- 创建不带标题的图片轮播器
+    // Remote URLs must use imageURLStringsGroup (imageNamesGroup is for local asset names).
     SDCycleScrollView *cycleScrollView = [SDCycleScrollView cycleScrollViewWithFrame:rect
-                                                                  shouldInfiniteLoop:YES
-                                                                     imageNamesGroup:imageNames];
-    cycleScrollView.delegate = self;
-//    cycleScrollView.bannerImageViewContentMode = UIViewContentModeScaleAspectFit;
+                                                                              delegate:self
+                                                                      placeholderImage:nil];
+    cycleScrollView.infiniteLoop = YES;
+    cycleScrollView.imageURLStringsGroup = imageNames;
     cycleScrollView.pageControlStyle = SDCycleScrollViewPageContolStyleAnimated;
     cycleScrollView.scrollDirection = UICollectionViewScrollDirectionHorizontal;
-    //--- 轮播时间间隔，默认1.0秒，可自定义
     cycleScrollView.autoScrollTimeInterval = 3.0;
     cycleScrollView.backgroundColor = UIColor.blackColor;
     

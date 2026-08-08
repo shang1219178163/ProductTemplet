@@ -77,7 +77,7 @@
 //        tabItemVC.tabBarItem.badgeColor = tabItemVC.tabBarItem.badgeValue > 0 ? UIColor.redColor : UIColor.clearColor;
 
         [tabItemVC reloadTabarItem:title imageName:imageName selectedImageName:selectedImageName];
-        [tabItemVC updateBadgeValue:badgeValue];
+        [tabItemVC updateBadgeValue:(badgeValue.integerValue > 0 ? badgeValue : nil)];
         return tabItemVC;
     }];
 

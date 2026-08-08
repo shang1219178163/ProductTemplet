@@ -41,3 +41,29 @@
 //}
 
 @end
+
+
+@implementation UITabBarItem (TmpBadge)
+
++ (void)load {
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        Method original = class_getInstanceMethod(self, @selector(updateBadgeValue:));
+        Method replacement = class_getInstanceMethod(self, @selector(tmp_updateBadgeValue:));
+        if (original && replacement) {
+            method_exchangeImplementations(original, replacement);
+        }
+    });
+}
+
+- (void)tmp_updateBadgeValue:(NSString *)value {
+    NSInteger count = value.integerValue;
+    if (count > 0) {
+        self.badgeValue = value;
+        self.badgeColor = UIColor.redColor;
+    } else {
+        self.badgeValue = nil;
+    }
+}
+
+@end

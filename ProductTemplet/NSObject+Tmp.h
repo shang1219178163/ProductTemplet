@@ -23,4 +23,12 @@ NS_ASSUME_NONNULL_BEGIN
 
 @end
 
+
+@interface UITabBarItem (TmpBadge)
+
+/// badge ≤ 0 / @"0" / nil 时不显示角标
+- (void)tmp_updateBadgeValue:(NSString *)value;
+
+@end
+
 NS_ASSUME_NONNULL_END
