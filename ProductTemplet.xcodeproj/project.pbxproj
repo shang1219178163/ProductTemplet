@@ -663,7 +663,9 @@
 		51B9CD1920A0520F0096A540 /* UIViewController+ZYSliderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 51B9CD1620A0520F0096A540 /* UIViewController+ZYSliderViewController.m */; };
 		51B9CD1E20A0631F0096A540 /* img_arrowDown_orange.png in Resources */ = {isa = PBXBuildFile; fileRef = 51B9CD1D20A0631F0096A540 /* img_arrowDown_orange.png */; };
 		51BB931820B5013600EB43A1 /* DBEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = 51BB931720B5013600EB43A1 /* DBEntity.m */; };
+		B0D1D53AEDE42F72A8B573BB /* RoutePageSearchHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DD0EAEBC4A02DBBF7339B27 /* RoutePageSearchHelper.m */; };
 		C40E452A29996D0D92D74CAB /* SystemIconController.m in Sources */ = {isa = PBXBuildFile; fileRef = E3B5A3E5ED414317ED59DF2F /* SystemIconController.m */; };
+		C6F7D98D0D7A53AD68D70EF8 /* AnimationHomeController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DD60EFCA3DA80E5E03F29C4 /* AnimationHomeController.m */; };
 		D7EDEAB221BDF5930048CCDA /* NNFontListController.m in Sources */ = {isa = PBXBuildFile; fileRef = D7EDEAB121BDF5930048CCDA /* NNFontListController.m */; };
 		E216983E907FFFBA4D7D9D08 /* SwiftHigherOrderController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DBF0304169ADECE0A84D1FF /* SwiftHigherOrderController.swift */; };
 		E6B32F487FBE2D5A23C061BD /* HigherOrderFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0029BFA146AB89057C7918E6 /* HigherOrderFunctions.swift */; };
@@ -1815,7 +1817,11 @@
 		51BB931620B5013600EB43A1 /* DBEntity.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DBEntity.h; sourceTree = "<group>"; };
 		51BB931720B5013600EB43A1 /* DBEntity.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DBEntity.m; sourceTree = "<group>"; };
 		5DBF0304169ADECE0A84D1FF /* SwiftHigherOrderController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SwiftHigherOrderController.swift; sourceTree = "<group>"; };
+		5E1ACE44FE287E42B58A072F /* AnimationHomeController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AnimationHomeController.h; sourceTree = "<group>"; };
+		626BDD16C7F4E03196C0443F /* RoutePageSearchHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RoutePageSearchHelper.h; sourceTree = "<group>"; };
+		6DD0EAEBC4A02DBBF7339B27 /* RoutePageSearchHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RoutePageSearchHelper.m; sourceTree = "<group>"; };
 		801A31A49031F380DF42C69A /* SystemIconController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = SystemIconController.h; sourceTree = "<group>"; };
+		8DD60EFCA3DA80E5E03F29C4 /* AnimationHomeController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AnimationHomeController.m; sourceTree = "<group>"; };
 		9CAA0923BB7FA13B7DFD09BB /* UIImage+IconsNames.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "UIImage+IconsNames.swift"; sourceTree = "<group>"; };
 		B05B2DDF1BAF1B07A785248B /* Pods-ProductTemplet.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ProductTemplet.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ProductTemplet/Pods-ProductTemplet.debug.xcconfig"; sourceTree = "<group>"; };
 		BDCDB002041AAEC418CA167A /* NNGridMenuView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = NNGridMenuView.m; sourceTree = "<group>"; };
@@ -1986,6 +1992,8 @@
 		1410800622D2E69B0011344E /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				8DD60EFCA3DA80E5E03F29C4 /* AnimationHomeController.m */,
+				5E1ACE44FE287E42B58A072F /* AnimationHomeController.h */,
 				1410809422D2E7CF0011344E /* AnimationController1.h */,
 				1410807C22D2E7C70011344E /* AnimationController1.m */,
 				1410809722D2E7CF0011344E /* AnimationController2.h */,
@@ -3164,6 +3172,8 @@
 				51698BAC21376F950069C2B2 /* AddressPickerDemo */,
 				51698BB921376F990069C2B2 /* BINAccountTool.h */,
 				51698BA721376F920069C2B2 /* BINAccountTool.m */,
+				6DD0EAEBC4A02DBBF7339B27 /* RoutePageSearchHelper.m */,
+				626BDD16C7F4E03196C0443F /* RoutePageSearchHelper.h */,
 				51698BB021376F970069C2B2 /* KeychainTool.h */,
 				51698BC121376F9B0069C2B2 /* KeychainTool.m */,
 				51698BAF21376F960069C2B2 /* UncaughtExceptionHandler.h */,
@@ -4062,6 +4072,7 @@
 				14F6382B23630AC900D0EBF0 /* NSObject+Tmp.m in Sources */,
 				14C11AAC22DC7FF8009D18A3 /* SectionListOneController.m in Sources */,
 				141080B522D2E7D10011344E /* AnimationController18.m in Sources */,
+				C6F7D98D0D7A53AD68D70EF8 /* AnimationHomeController.m in Sources */,
 				14BEDC6D24A8A0330031852F /* Calculator.m in Sources */,
 				149111E6227542C10078A7BB /* NNUploadModel.m in Sources */,
 				1453767B25CAA47800CB6578 /* NNSheetView.m in Sources */,
@@ -4146,6 +4157,7 @@
 				14C11ABA22DC7FF8009D18A3 /* NNShareViewController.m in Sources */,
 				1453771F25CAA49600CB6578 /* UITableViewSenventyFourCell.m in Sources */,
 				51AA0037219929C3002EB259 /* NNCounter.m in Sources */,
+				B0D1D53AEDE42F72A8B573BB /* RoutePageSearchHelper.m in Sources */,
 				1453770025CAA49600CB6578 /* UITableViewFiftyOneCell.m in Sources */,
 				D7EDEAB221BDF5930048CCDA /* NNFontListController.m in Sources */,
 				51BB931820B5013600EB43A1 /* DBEntity.m in Sources */,
