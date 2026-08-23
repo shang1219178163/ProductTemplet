@@ -15,7 +15,7 @@ inhibit_all_warnings!
    pod 'FMDB'
       
    pod 'IQKeyboardManager'
-#   pod 'iCarousel’
+   pod 'iCarousel’
    
 #   pod 'JPush'
 #   pod 'JZLocationConverter'

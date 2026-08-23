@@ -22,6 +22,7 @@ PODS:
   - FMDB/Core (2.7.12)
   - FMDB/standard (2.7.12):
     - FMDB/Core
+  - iCarousel (1.8.3)
   - IQKeyboardManager (6.5.19)
   - Masonry (1.1.0)
   - MBProgressHUD (1.2.0)
@@ -67,6 +68,7 @@ DEPENDENCIES:
   - Aspects
   - FCUUID
   - FMDB
+  - iCarousel
   - IQKeyboardManager
   - Masonry
   - MBProgressHUD
@@ -93,6 +95,7 @@ SPEC REPOS:
     - Aspects
     - FCUUID
     - FMDB
+    - iCarousel
     - IQKeyboardManager
     - Masonry
     - MBProgressHUD
@@ -120,6 +123,7 @@ SPEC CHECKSUMS:
   Aspects: 7595ba96a6727a58ebcbfc954497fc5d2fdde546
   FCUUID: bb054fc90cd7cd99320f9f6ff8e130fe607fba05
   FMDB: 728731dd336af3936ce00f91d9d8495f5718a0e6
+  iCarousel: d782f635afac190c49bb8ee455882284cff8b85f
   IQKeyboardManager: c8665b3396bd0b79402b4c573eac345a31c7d485
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
   MBProgressHUD: 3ee5efcc380f6a79a7cc9b363dd669c5e1ae7406
@@ -142,6 +146,6 @@ SPEC CHECKSUMS:
   YYModel: 2a7fdd96aaa4b86a824e26d0c517de8928c04b30
   YYWebImage: 5f7f36aee2ae293f016d418c7d6ba05c4863e928
 
-PODFILE CHECKSUM: 446c1be7095e56c5f8cb8ea6e432e28590a2b540
+PODFILE CHECKSUM: 3ac15ddc544d40e1a67732444f6aac7daea3c53e
 
 COCOAPODS: 1.13.0

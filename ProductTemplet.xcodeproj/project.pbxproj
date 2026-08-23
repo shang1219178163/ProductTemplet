@@ -661,6 +661,7 @@
 		51AA00342199295A002EB259 /* CounterListController.m in Sources */ = {isa = PBXBuildFile; fileRef = 51AA003121992956002EB259 /* CounterListController.m */; };
 		51AA0037219929C3002EB259 /* NNCounter.m in Sources */ = {isa = PBXBuildFile; fileRef = 51AA0035219929C2002EB259 /* NNCounter.m */; };
 		51B9CCFC209FE2B00096A540 /* TimerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 51B9CCFB209FE2B00096A540 /* TimerViewController.m */; };
+		79DD918067D4815AF3919176 /* ICarouselDemoController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AD84631517C5C6FB6C978CE /* ICarouselDemoController.m */; };
 		51B9CD1820A0520F0096A540 /* ZYSliderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 51B9CD1520A0520F0096A540 /* ZYSliderViewController.m */; };
 		51B9CD1920A0520F0096A540 /* UIViewController+ZYSliderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 51B9CD1620A0520F0096A540 /* UIViewController+ZYSliderViewController.m */; };
 		51B9CD1E20A0631F0096A540 /* img_arrowDown_orange.png in Resources */ = {isa = PBXBuildFile; fileRef = 51B9CD1D20A0631F0096A540 /* img_arrowDown_orange.png */; };
@@ -1810,6 +1811,8 @@
 		51AA0035219929C2002EB259 /* NNCounter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NNCounter.m; sourceTree = "<group>"; };
 		51AA0036219929C3002EB259 /* NNCounter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NNCounter.h; sourceTree = "<group>"; };
 		51B9CCFA209FE2B00096A540 /* TimerViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TimerViewController.h; sourceTree = "<group>"; };
+		5AD84631517C5C6FB6C978CE /* ICarouselDemoController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ICarouselDemoController.m; sourceTree = "<group>"; };
+		D2980A21511863243FBFC48E /* ICarouselDemoController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ICarouselDemoController.h; sourceTree = "<group>"; };
 		51B9CCFB209FE2B00096A540 /* TimerViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TimerViewController.m; sourceTree = "<group>"; };
 		51B9CD1420A0520F0096A540 /* UIViewController+ZYSliderViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+ZYSliderViewController.h"; sourceTree = "<group>"; };
 		51B9CD1520A0520F0096A540 /* ZYSliderViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZYSliderViewController.m; sourceTree = "<group>"; };
@@ -2997,6 +3000,8 @@
 				14C1197222DC59AB009D18A3 /* UICTViewCellCycle.m */,
 				51B9CCFA209FE2B00096A540 /* TimerViewController.h */,
 				51B9CCFB209FE2B00096A540 /* TimerViewController.m */,
+				5AD84631517C5C6FB6C978CE /* ICarouselDemoController.m */,
+				D2980A21511863243FBFC48E /* ICarouselDemoController.h */,
 				510BC999208F2F0400CF48C5 /* FriendListController.h */,
 				510BC99A208F2F0400CF48C5 /* FriendListController.m */,
 				510BC9A1208F3B6A00CF48C5 /* SliderTabBarController.h */,
@@ -3909,6 +3914,7 @@
 				"${BUILT_PRODUCTS_DIR}/YYImage/YYImage.framework",
 				"${BUILT_PRODUCTS_DIR}/YYModel/YYModel.framework",
 				"${BUILT_PRODUCTS_DIR}/YYWebImage/YYWebImage.framework",
+				"${BUILT_PRODUCTS_DIR}/iCarousel/iCarousel.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
@@ -3937,6 +3943,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/YYImage.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/YYModel.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/YYWebImage.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/iCarousel.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -4277,6 +4284,7 @@
 				141E2B90230637E700466008 /* NSArray+Tmp.m in Sources */,
 				515CC98A20B6AAF2004AE27C /* AAChartModel.m in Sources */,
 				51B9CCFC209FE2B00096A540 /* TimerViewController.m in Sources */,
+				79DD918067D4815AF3919176 /* ICarouselDemoController.m in Sources */,
 				51A4354921ABECAE000D9840 /* TextViewController.m in Sources */,
 				1453770725CAA49600CB6578 /* UITableViewSeventyCell.m in Sources */,
 				1453770125CAA49600CB6578 /* UITableViewCycleViewCell.m in Sources */,
