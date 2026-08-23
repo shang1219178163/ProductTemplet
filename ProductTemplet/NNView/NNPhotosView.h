@@ -1,5 +1,5 @@
 //
-//  NNPhotoPreviewView.h
+//  NNPhotosView.h
 //  HuiZhuBang
 //
 //  Created by BIN on 2017/10/19.
@@ -8,15 +8,12 @@
 /**
  点击任意地方,弹出全屏图片展示
  用法
- NNPhotoPreviewView * dispalyView = [[NNPhotoPreviewView alloc]initWithImages:self.images];
+ NNPhotosView * dispalyView = [[NNPhotosView alloc]initWithImages:self.images];
  [dispalyView show];
  */
 #import <UIKit/UIKit.h>
 
-@interface NNPhotoPreviewView : UIView
-
-/// 当前索引（初始化时设置，展示时跳转到该索引，无动画）
-@property (nonatomic, assign) NSInteger index;
+@interface NNPhotosView : UIView
 
 -(instancetype)initWithImages:(NSArray *)images;
 

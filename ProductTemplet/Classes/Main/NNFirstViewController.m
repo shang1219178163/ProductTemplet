@@ -17,6 +17,8 @@
 #import "SDCycleScrollView.h"
 
 #import "FactoryDetailInfoModel.h"
+#import "NNResourceManager.h"
+
 
 @interface NNFirstViewController ()<UITableViewDataSource, UITableViewDelegate, SDCycleScrollViewDelegate>
 
@@ -26,7 +28,7 @@
 
 @property (nonatomic, strong) NSArray * elements;
 
-@property (nonatomic, strong) NSMutableArray * imageList;
+@property (nonatomic, strong) NSArray * imageList;
 @property (nonatomic, strong) NSMutableArray *dataList;
 
 @end
@@ -54,36 +56,30 @@
     return _dataList;
 }
 
--(NSMutableArray *)imageList{
+-(NSArray *)imageList{
     if (!_imageList) {
-        _imageList = [NSMutableArray arrayWithCapacity:0];
-        _imageList = @[
-                       @"https://ss2.baidu.com/-vo3dSag_xI4khGko9WTAnF6hhy/super/whfpf%3D425%2C260%2C50/sign=a4b3d7085dee3d6d2293d48b252b5910/0e2442a7d933c89524cd5cd4d51373f0830200ea.jpg",
-                       @"https://ss0.baidu.com/-Po3dSag_xI4khGko9WTAnF6hhy/super/whfpf%3D425%2C260%2C50/sign=a41eb338dd33c895a62bcb3bb72e47c2/5fdf8db1cb134954a2192ccb524e9258d1094a1e.jpg",
-                       @"http://c.hiphotos.baidu.com/image/w%3D400/sign=c2318ff84334970a4773112fa5c8d1c0/b7fd5266d0160924c1fae5ccd60735fae7cd340d.jpg"
-                       ].mutableCopy;
+        _imageList = NNResourceManager.shared.imageUrls;
     }
     return _imageList;
 }
 
 - (NSArray *)elements{
     if (!_elements) {
-        _elements = @[
-                         @[@"数据录入",@"img_home_dataEntry_147",@"WHKDataEntryViewController", @"",].mutableCopy,
-                         @[@"宠物管理",@"img_home_animamalOrigin_147",@"WHKAnimalOriginViewController", @"",].mutableCopy,
-                         @[@"优宠物管理",@"img_home_animamalSell_147",@"WHKSelAnimalManagerController",@"",].mutableCopy,
-                         @[@"提醒设定", @"img_home_remind_147",@"WHKRemindViewController",@"",].mutableCopy,
-                         @[@"免疫管理",@"img_home_immune_147",@"WHKImmuneViewController",@"",].mutableCopy,
-                         @[@"养猪日历",@"img_home_calendar_147",@"WHKCalendarViewController",@"",].mutableCopy,
-                         @[@"生产报表",@"img_home_report_147",@"WHKReportViewController",@"",].mutableCopy,
-                         @[@"宠物动态",@"img_home_currentState_147",@"WHKDynamicAnimalsViewController",@"",].mutableCopy,
-                         @[@"更多功能",@"img_home_more_147",@"WHKMoreViewController",@"",].mutableCopy,
-                         //                         @[@"高效录入",@"img_home_more_147",@"BNEfficientEntryController",@"",].mutableCopy,
-                         
-                         ];
+        NSArray *imageUrls = NNResourceManager.shared.imageUrls;
+        NSArray *controllerNames = @[
+            @"WHKDataEntryViewController", @"WHKAnimalOriginViewController",
+            @"WHKSelAnimalManagerController", @"WHKRemindViewController",
+            @"WHKImmuneViewController", @"WHKCalendarViewController",
+            @"WHKReportViewController", @"WHKDynamicAnimalsViewController",
+            @"WHKMoreViewController",
+        ];
+        NSMutableArray *list = [NSMutableArray arrayWithCapacity:9];
+        for (NSInteger i = 0; i < 9; i++) {
+            [list addObject:@[@(i).stringValue, imageUrls[i], controllerNames[i], @""].mutableCopy];
+        }
+        _elements = list.copy;
     }
     return _elements;
-    
 }
 
 - (void)viewDidLoad {
@@ -342,8 +338,11 @@
 #pragma mark - SDCycleScrollViewDelegate
 - (void)cycleScrollView:(SDCycleScrollView *)cycleScrollView didSelectItemAtIndex:(NSInteger)index
 {
-    //    NSLog(@"---点击了第%ld张图片", (long)index);
-    
+    NSArray *imageUrls = NNResourceManager.shared.imageUrls;
+    if (imageUrls.count == 0) { return; }
+    NNPhotoPreviewView *displayView = [[NNPhotoPreviewView alloc] initWithImages:imageUrls];
+    displayView.index = index;
+    [displayView show];
 }
 
 // 滚动到第几张图回调

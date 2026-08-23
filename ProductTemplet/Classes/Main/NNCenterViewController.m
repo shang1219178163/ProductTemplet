@@ -136,13 +136,11 @@
         // 放大镜左侧加8间距：把放大镜包进左边距8pt的容器
         UITextField *textField = searchBar.textField;
         UIView *iconView = textField.leftView;
-        NSLog(@"调整前 leftView: %@ frame:%@", iconView, NSStringFromCGRect(iconView.frame));
         if (iconView) {
             UIView *container = [[UIView alloc] initWithFrame:CGRectMake(0, 0, iconView.bounds.size.width + 8, iconView.bounds.size.height)];
             iconView.frame = CGRectMake(8, 0, iconView.bounds.size.width, iconView.bounds.size.height);
             [container addSubview:iconView];
             textField.leftView = container;
-            NSLog(@"调整后 leftView: %@ frame:%@", textField.leftView, NSStringFromCGRect(textField.leftView.frame));
         }
 //        searchBar.scopeButtonTitles = @[@"111", @"22", @"333"];
 //        searchBar.showsScopeBar = true;

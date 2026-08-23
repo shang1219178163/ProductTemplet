@@ -7,6 +7,7 @@
 //
 
 #import "NNGridMenuView.h"
+#import <SDWebImage/UIImageView+WebCache.h>
 
 @implementation NNGridMenuView
 
@@ -73,7 +74,12 @@
 
         CGFloat iconSide = 48;
         UIImageView *icon = [[UIImageView alloc] initWithFrame:CGRectMake((itemSide - iconSide) / 2.0, 18, iconSide, iconSide)];
-        icon.image = [UIImage imageNamed:[NSString stringWithFormat:@"%@", array[1]]];
+        NSString *imageObj = [NSString stringWithFormat:@"%@", array[1]];
+        if ([imageObj hasPrefix:@"http"]) {
+            [icon sd_setImageWithURL:[NSURL URLWithString:imageObj] placeholderImage:nil];
+        } else {
+            icon.image = [UIImage imageNamed:imageObj];
+        }
         icon.contentMode = UIViewContentModeScaleAspectFit;
         [sender addSubview:icon];
 

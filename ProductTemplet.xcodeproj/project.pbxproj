@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		08322C416DE5B5EE1B9FD943 /* NNPhotoPreviewView.m in Sources */ = {isa = PBXBuildFile; fileRef = E63282F6D7AE3BE145614260 /* NNPhotoPreviewView.m */; };
 		1401BE622276A1220078A722 /* NNMemoryCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 1401BE612276A1220078A722 /* NNMemoryCache.m */; };
 		1401BE652276A1370078A722 /* NNDiskCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 1401BE642276A1370078A722 /* NNDiskCache.m */; };
 		1401BE6C2276A4980078A722 /* NNCacheManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 1401BE6B2276A4980078A722 /* NNCacheManager.m */; };
@@ -125,7 +126,6 @@
 		1453765925CAA47800CB6578 /* NNAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 145375FA25CAA47400CB6578 /* NNAlertView.m */; };
 		1453765A25CAA47800CB6578 /* NNAddPictureVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 1453760025CAA47400CB6578 /* NNAddPictureVC.m */; };
 		1453765B25CAA47800CB6578 /* NNListChooseView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1453760125CAA47400CB6578 /* NNListChooseView.m */; };
-		1453765C25CAA47800CB6578 /* NNPhotosView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1453760225CAA47400CB6578 /* NNPhotosView.m */; };
 		1453765D25CAA47800CB6578 /* NNSearchView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1453760425CAA47400CB6578 /* NNSearchView.m */; };
 		1453765E25CAA47800CB6578 /* NNAddCardView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1453760525CAA47400CB6578 /* NNAddCardView.m */; };
 		1453765F25CAA47800CB6578 /* NNFoldHeaderFooterView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1453760625CAA47400CB6578 /* NNFoldHeaderFooterView.m */; };
@@ -368,6 +368,7 @@
 		14EAC94B2321DA8300E42D4F /* NNPageInfoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 14EAC9472321DA8200E42D4F /* NNPageInfoModel.m */; };
 		14EAC94C2321DA8300E42D4F /* NNPageScrollViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 14EAC9482321DA8200E42D4F /* NNPageScrollViewController.m */; };
 		14EAC94D2321DA8300E42D4F /* UICTViewLayoutPage.m in Sources */ = {isa = PBXBuildFile; fileRef = 14EAC9492321DA8300E42D4F /* UICTViewLayoutPage.m */; };
+		14EFC1D5303ABABC0025115A /* NNPhotosView.m in Sources */ = {isa = PBXBuildFile; fileRef = 14EFC1D4303ABABC0025115A /* NNPhotosView.m */; };
 		14EFF3FD25BA58AC00D82359 /* NNButtonGroupView.m in Sources */ = {isa = PBXBuildFile; fileRef = 14EFF3FC25BA58AC00D82359 /* NNButtonGroupView.m */; };
 		14F08BAE23016D9C00B75842 /* WaterView.m in Sources */ = {isa = PBXBuildFile; fileRef = 14F08BAC23016D9C00B75842 /* WaterView.m */; };
 		14F08BB123016DDD00B75842 /* WaveController.m in Sources */ = {isa = PBXBuildFile; fileRef = 14F08BB023016DDD00B75842 /* WaveController.m */; };
@@ -384,6 +385,7 @@
 		14F9BF3F22E56167001637B6 /* PhotoDisplayController.m in Sources */ = {isa = PBXBuildFile; fileRef = 14F9BF3E22E56167001637B6 /* PhotoDisplayController.m */; };
 		14F9BF4222E56332001637B6 /* UICTViewLayoutPhoto.m in Sources */ = {isa = PBXBuildFile; fileRef = 14F9BF4022E56331001637B6 /* UICTViewLayoutPhoto.m */; };
 		1910EE3F6D7E63A2D5D8214F /* ObjCHigherOrderController.m in Sources */ = {isa = PBXBuildFile; fileRef = D682956E0945BB474FFAA5CA /* ObjCHigherOrderController.m */; };
+		1B9F9987FFA39C9F81CA21FD /* NNResourceManager.m in Sources */ = {isa = PBXBuildFile; fileRef = EA06190847AD489A3AEDABC6 /* NNResourceManager.m */; };
 		3BBA499973A02EBB7ADAFE25 /* NNGridMenuView.m in Sources */ = {isa = PBXBuildFile; fileRef = BDCDB002041AAEC418CA167A /* NNGridMenuView.m */; };
 		51036F4720A16298009D8B7B /* img_notice.png in Resources */ = {isa = PBXBuildFile; fileRef = 51036F4620A16297009D8B7B /* img_notice.png */; };
 		51036F5020A17B3B009D8B7B /* WeiboLisController.m in Sources */ = {isa = PBXBuildFile; fileRef = 51036F4F20A17B3B009D8B7B /* WeiboLisController.m */; };
@@ -880,7 +882,6 @@
 		145375FF25CAA47400CB6578 /* NNHeaderFooterView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NNHeaderFooterView.h; sourceTree = "<group>"; };
 		1453760025CAA47400CB6578 /* NNAddPictureVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NNAddPictureVC.m; sourceTree = "<group>"; };
 		1453760125CAA47400CB6578 /* NNListChooseView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NNListChooseView.m; sourceTree = "<group>"; };
-		1453760225CAA47400CB6578 /* NNPhotosView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NNPhotosView.m; sourceTree = "<group>"; };
 		1453760325CAA47400CB6578 /* NNTabBarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NNTabBarView.h; sourceTree = "<group>"; };
 		1453760425CAA47400CB6578 /* NNSearchView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NNSearchView.m; sourceTree = "<group>"; };
 		1453760525CAA47400CB6578 /* NNAddCardView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NNAddCardView.m; sourceTree = "<group>"; };
@@ -936,7 +937,6 @@
 		1453763825CAA47700CB6578 /* NNImgLabelView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NNImgLabelView.m; sourceTree = "<group>"; };
 		1453763925CAA47700CB6578 /* NNCycleView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NNCycleView.h; sourceTree = "<group>"; };
 		1453763A25CAA47700CB6578 /* NNAddPictureVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NNAddPictureVC.h; sourceTree = "<group>"; };
-		1453763B25CAA47700CB6578 /* NNPhotosView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NNPhotosView.h; sourceTree = "<group>"; };
 		1453763C25CAA47700CB6578 /* NNUserView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NNUserView.m; sourceTree = "<group>"; };
 		1453763D25CAA47700CB6578 /* NNFilterView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NNFilterView.h; sourceTree = "<group>"; };
 		1453763E25CAA47700CB6578 /* NNCellDefaultView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NNCellDefaultView.h; sourceTree = "<group>"; };
@@ -1357,6 +1357,8 @@
 		14EAC9472321DA8200E42D4F /* NNPageInfoModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NNPageInfoModel.m; sourceTree = "<group>"; };
 		14EAC9482321DA8200E42D4F /* NNPageScrollViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NNPageScrollViewController.m; sourceTree = "<group>"; };
 		14EAC9492321DA8300E42D4F /* UICTViewLayoutPage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UICTViewLayoutPage.m; sourceTree = "<group>"; };
+		14EFC1D3303ABABC0025115A /* NNPhotosView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NNPhotosView.h; sourceTree = "<group>"; };
+		14EFC1D4303ABABC0025115A /* NNPhotosView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NNPhotosView.m; sourceTree = "<group>"; };
 		14EFF3FB25BA58AC00D82359 /* NNButtonGroupView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NNButtonGroupView.h; sourceTree = "<group>"; };
 		14EFF3FC25BA58AC00D82359 /* NNButtonGroupView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NNButtonGroupView.m; sourceTree = "<group>"; };
 		14F08BAC23016D9C00B75842 /* WaterView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WaterView.m; sourceTree = "<group>"; };
@@ -1826,10 +1828,14 @@
 		B05B2DDF1BAF1B07A785248B /* Pods-ProductTemplet.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ProductTemplet.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ProductTemplet/Pods-ProductTemplet.debug.xcconfig"; sourceTree = "<group>"; };
 		BDCDB002041AAEC418CA167A /* NNGridMenuView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = NNGridMenuView.m; sourceTree = "<group>"; };
 		C34CC0C3E9585460E15F2766 /* Pods_ProductTemplet.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ProductTemplet.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D2618D822E888C97F875106D /* NNResourceManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NNResourceManager.h; sourceTree = "<group>"; };
 		D682956E0945BB474FFAA5CA /* ObjCHigherOrderController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = ObjCHigherOrderController.m; sourceTree = "<group>"; };
+		D689E1FC2F2965B5FBFE3187 /* NNPhotoPreviewView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NNPhotoPreviewView.h; sourceTree = "<group>"; };
 		D7EDEAB021BDF5930048CCDA /* NNFontListController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NNFontListController.h; sourceTree = "<group>"; };
 		D7EDEAB121BDF5930048CCDA /* NNFontListController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NNFontListController.m; sourceTree = "<group>"; };
 		E3B5A3E5ED414317ED59DF2F /* SystemIconController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = SystemIconController.m; sourceTree = "<group>"; };
+		E63282F6D7AE3BE145614260 /* NNPhotoPreviewView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NNPhotoPreviewView.m; sourceTree = "<group>"; };
+		EA06190847AD489A3AEDABC6 /* NNResourceManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NNResourceManager.m; sourceTree = "<group>"; };
 		F08A5D79EC660168300AACB6 /* NNGridMenuView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = NNGridMenuView.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -2246,8 +2252,10 @@
 				1453761825CAA47500CB6578 /* NNMonthView.m */,
 				1453762B25CAA47600CB6578 /* NNPairLabelView.h */,
 				145375F225CAA47300CB6578 /* NNPairLabelView.m */,
-				1453763B25CAA47700CB6578 /* NNPhotosView.h */,
-				1453760225CAA47400CB6578 /* NNPhotosView.m */,
+				14EFC1D3303ABABC0025115A /* NNPhotosView.h */,
+				14EFC1D4303ABABC0025115A /* NNPhotosView.m */,
+				D689E1FC2F2965B5FBFE3187 /* NNPhotoPreviewView.h */,
+				E63282F6D7AE3BE145614260 /* NNPhotoPreviewView.m */,
 				1453762325CAA47600CB6578 /* NNPickerListView.h */,
 				145375EE25CAA47300CB6578 /* NNPickerListView.m */,
 				145375F725CAA47400CB6578 /* NNPickerView.h */,
@@ -3174,6 +3182,8 @@
 				51698BA721376F920069C2B2 /* BINAccountTool.m */,
 				6DD0EAEBC4A02DBBF7339B27 /* RoutePageSearchHelper.m */,
 				626BDD16C7F4E03196C0443F /* RoutePageSearchHelper.h */,
+				EA06190847AD489A3AEDABC6 /* NNResourceManager.m */,
+				D2618D822E888C97F875106D /* NNResourceManager.h */,
 				51698BB021376F970069C2B2 /* KeychainTool.h */,
 				51698BC121376F9B0069C2B2 /* KeychainTool.m */,
 				51698BAF21376F960069C2B2 /* UncaughtExceptionHandler.h */,
@@ -4144,6 +4154,7 @@
 				14E42D162200042800606AD0 /* NNMenuListController.m in Sources */,
 				515CC97D20B6AAF2004AE27C /* AAOptions3d.m in Sources */,
 				1453765E25CAA47800CB6578 /* NNAddCardView.m in Sources */,
+				14EFC1D5303ABABC0025115A /* NNPhotosView.m in Sources */,
 				1453764B25CAA47800CB6578 /* NNTurnView.m in Sources */,
 				513646AF2086031D005A20E7 /* main.m in Sources */,
 				1401BE6F2276A50E0078A722 /* NNCacheKey.m in Sources */,
@@ -4158,6 +4169,7 @@
 				1453771F25CAA49600CB6578 /* UITableViewSenventyFourCell.m in Sources */,
 				51AA0037219929C3002EB259 /* NNCounter.m in Sources */,
 				B0D1D53AEDE42F72A8B573BB /* RoutePageSearchHelper.m in Sources */,
+				1B9F9987FFA39C9F81CA21FD /* NNResourceManager.m in Sources */,
 				1453770025CAA49600CB6578 /* UITableViewFiftyOneCell.m in Sources */,
 				D7EDEAB221BDF5930048CCDA /* NNFontListController.m in Sources */,
 				51BB931820B5013600EB43A1 /* DBEntity.m in Sources */,
@@ -4352,7 +4364,7 @@
 				1453765525CAA47800CB6578 /* NNSuspendBtn.m in Sources */,
 				145376F525CAA49600CB6578 /* UITableViewSliderCell.m in Sources */,
 				5169699920BCED4000BAA53D /* LHSales.m in Sources */,
-				1453765C25CAA47800CB6578 /* NNPhotosView.m in Sources */,
+				08322C416DE5B5EE1B9FD943 /* NNPhotoPreviewView.m in Sources */,
 				1401BE6C2276A4980078A722 /* NNCacheManager.m in Sources */,
 				1453772725CAA49600CB6578 /* UITableViewSixteenCell.m in Sources */,
 				149111E322753BF10078A7BB /* NNURLResponse.m in Sources */,

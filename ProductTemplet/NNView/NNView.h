@@ -32,7 +32,7 @@
 #import "NNMenuView.h"
 #import "NNMonthView.h"
 #import "NNPairLabelView.h"
-#import "NNPhotosView.h"
+#import "NNPhotoPreviewView.h"
 #import "NNPickerView.h"
 #import "NNPickerViewAddress.h"
 #import "NNRefreshHeader.h"
