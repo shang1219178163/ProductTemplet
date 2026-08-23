@@ -33,17 +33,18 @@
         UITabBarItem.KeyImageSelected: @"Item_first_H",
         UITabBarItem.KeyBadgeValue: @"0",},
     @{
-        UITabBarItem.KeyVC: @"NNSecondViewController",
-        UITabBarItem.KeyTitle: @"圈子",
-        UITabBarItem.KeyImage: @"Item_second_N",
-        UITabBarItem.KeyImageSelected: @"Item_second_H",
-        UITabBarItem.KeyBadgeValue: @"11",},
-    @{
         UITabBarItem.KeyVC: @"NNCenterViewController",
         UITabBarItem.KeyTitle: @"总览",
         UITabBarItem.KeyImage: @"Item_center_N",
         UITabBarItem.KeyImageSelected: @"Item_center_H",
         UITabBarItem.KeyBadgeValue: @"10",},
+    @{
+        UITabBarItem.KeyVC: @"NNSecondViewController",
+        UITabBarItem.KeyTitle: @"圈子",
+        UITabBarItem.KeyImage: @"Item_second_N",
+        UITabBarItem.KeyImageSelected: @"Item_second_H",
+        UITabBarItem.KeyBadgeValue: @"11",},
+
     @{
         UITabBarItem.KeyVC: @"NNThirdViewController",
         UITabBarItem.KeyTitle: @"消息",
